@@ -163,6 +163,10 @@ public final class LohenGame implements EventBus.Listener {
     private int stepsThisFrame;
     private float deathTimer;
     private String pendingCinematic = "";
+    /* Chaque cinematique du chapitre est un evenement vecu une fois : ni un
+     * trigger reveille par une reprise, ni un chargement, ne la rejouent. */
+    private final java.util.HashSet<String> cineDone =
+            new java.util.HashSet<String>(16);
     private boolean skipHeld;
     private boolean letterConfirmQueued;
     private String pendingSequence = "";
@@ -293,6 +297,7 @@ public final class LohenGame implements EventBus.Listener {
         letter.loadLetter();
         mode = MODE_MENU;
         menu.openMain();
+        music.play("M21", 2f);          /* 16.09 : le menu a sa boucle */
         stage(listener, "pret", 1f);
         bus.emit(EventBus.LOADING_ENDED, 1f);
         return bootOk;
@@ -335,11 +340,14 @@ public final class LohenGame implements EventBus.Listener {
         state.copyFrom(loaded);
         audio.applyOptions();
         hud.applyOptions();
+        float px = loaded.positionX(), py = loaded.positionY(), pz = loaded.positionZ();
+        float yaw = loaded.yaw();
         quests.restore(state.questNode());
         if (!enterSequence(state.sequence(), false)) {
             return false;
         }
-        lohen.reset(state.positionX(), state.positionY(), state.positionZ(), state.yaw());
+        lohen.reset(px, py, pz, yaw);
+        state.setPosition(px, py, pz);
         mode = MODE_PLAY;
         menu.close();
         bus.emit(EventBus.SAVE_LOADED, state.summary());
@@ -353,11 +361,17 @@ public final class LohenGame implements EventBus.Listener {
             return false;
         }
         state.copyFrom(loaded);
+        /* la position chargee est capturee AVANT enterSequence : ce dernier
+         * recalere state.setPosition() sur Lohen courant, et la reprise
+         * rendrait alors la position d'avant chargement. */
+        float px = loaded.positionX(), py = loaded.positionY(), pz = loaded.positionZ();
+        float yaw = loaded.yaw();
         quests.restore(state.questNode());
         if (!enterSequence(state.sequence(), false)) {
             return false;
         }
-        lohen.reset(state.positionX(), state.positionY(), state.positionZ(), state.yaw());
+        lohen.reset(px, py, pz, yaw);
+        state.setPosition(px, py, pz);
         mode = MODE_PLAY;
         menu.close();
         return true;
@@ -387,13 +401,20 @@ public final class LohenGame implements EventBus.Listener {
             return false;
         }
         world.build(level);
+        /* revenir dans la meme sequence (reprise d'une sauvegarde, etat final
+         * d'une cinematique) ne doit pas rearmer les triggers deja consommes :
+         * sinon le joueur qui saute C01 se le reprendrait en boucle, et une
+         * reprise declencherait a nouveau checkpoint et cinematiques. */
+        boolean sameSequence = seq.equals(sequence);
         sequence = seq;
         state.setSequence(seq);
         npcs.setSequence(seq);
         npcs.loadFromLevel(level);
         clearFigures();
-        for (int i = 0; i < triggerFired.length; i++) {
-            triggerFired[i] = false;
+        if (!sameSequence || fromStart) {
+            for (int i = 0; i < triggerFired.length; i++) {
+                triggerFired[i] = false;
+            }
         }
         currentTrigger = "";
         sinceEvent = 0f;
@@ -409,6 +430,7 @@ public final class LohenGame implements EventBus.Listener {
         state.setPosition(lohen.x, lohen.y, lohen.z);
         state.setAltitude(lohen.y);
         mode = MODE_PLAY;
+        music.play(musicForSequence(seq), 2.5f);
         bus.emit(EventBus.SEQUENCE_CHANGED, seq, level.totalPrimitives());
         bus.emit(EventBus.LEVEL_LOADED, seq);
         return true;
@@ -573,9 +595,17 @@ public final class LohenGame implements EventBus.Listener {
                 int ls = letter.step();
                 if (ls == LetterReader.STEP_NOTEBOOK) {
                     letter.turnPage();
-                } else if (ls == LetterReader.STEP_ROOM_FREE
-                        && letter.notebookPage() < LetterReader.NOTEBOOK_EXTRACTS) {
-                    letter.openNotebook();
+                } else if (ls == LetterReader.STEP_ROOM_FREE) {
+                    if (letter.notebookPage() < LetterReader.NOTEBOOK_EXTRACTS) {
+                        letter.openNotebook();
+                    } else if (letter.scroll() < 1f) {
+                        letter.interactWithLetter();
+                    } else {
+                        /* la lettre est lue : on la plie, on la range, et la
+                         * descente commence (19.11) — 90 s, sans coupure */
+                        letter.storeLetter();
+                        letter.beginDescent();
+                    }
                 } else if (ls != LetterReader.STEP_READING) {
                     letter.interactWithLetter();
                 }
@@ -934,7 +964,9 @@ public final class LohenGame implements EventBus.Listener {
         } else if ("silence".equals(type)) {
             ambience.triggerSilence(t.target);
         } else if ("cinematic".equals(type)) {
-            playCinematic(t.target);
+            if (!cineDone.contains(t.target)) {
+                playCinematic(t.target);
+            }
         } else if ("dialogue".equals(type)) {
             dialogue.start(t.target);
         } else if ("teach".equals(type)) {
@@ -1119,7 +1151,12 @@ public final class LohenGame implements EventBus.Listener {
             return false;
         }
         pendingCinematic = id;
+        if (cineDone.contains(id)) {
+            pendingCinematic = "";
+            return false;
+        }
         if (cine.play(id)) {
+            cineDone.add(id);
             mode = MODE_CINEMATIC;
             lohen.inCinematic = true;
             fsm.beginCinematic();
@@ -1227,6 +1264,18 @@ public final class LohenGame implements EventBus.Listener {
         } else if (EventBus.LETTER_STEP.equals(signal)) {
             if (args != null && args.length > 0 && "STEP_CREDITS".equals(String.valueOf(args[0]))) {
                 mode = MODE_CREDITS;
+                music.play("M20", 3f);      /* 16.08 : la chanteuse, une fois */
+            }
+        } else if (EventBus.LETTER_STARTED.equals(signal)) {
+            music.play("M18", 2f);          /* 19.09 : l'orchestration de la lettre */
+        } else if (EventBus.CINEMATIC_ENDED.equals(signal)) {
+            /* la musique de la sequence reprend, sans coupure seche */
+            if (mode == MODE_PLAY) {
+                music.play(musicForSequence(sequence), 1.5f);
+            }
+        } else if (EventBus.COMBAT_ENTERED.equals(signal)) {
+            if ("S7".equals(sequence)) {
+                music.play("M14", 1f);      /* 12.09 : Anselme, pas de percussio avant P2 */
             }
         }
     }
@@ -1293,6 +1342,35 @@ public final class LohenGame implements EventBus.Listener {
             sinceEvent = 0f;
             bus.emit(EventBus.PACING_HOLE, SequenceAtlas.EVENT_BUG_SECONDS);
         }
+    }
+
+    /**
+     * Le theme de fond d'une sequence (BLOC 16). M08 est un silence voulu :
+     * la bibliotheque n'a pas de musique, c'est ecrit dans le dossier.
+     */
+    public static String musicForSequence(String seq) {
+        if ("S2".equals(seq)) {
+            return "M03";
+        }
+        if ("S3".equals(seq)) {
+            return "M05";
+        }
+        if ("S4".equals(seq)) {
+            return "M04";
+        }
+        if ("S5".equals(seq)) {
+            return "M09";
+        }
+        if ("S6".equals(seq)) {
+            return "M12";
+        }
+        if ("S7".equals(seq)) {
+            return "M13";
+        }
+        if ("S8".equals(seq)) {
+            return "M16";
+        }
+        return "M01";
     }
 
     /** Le verbe actuellement propose : le HUD en tire un glyphe (14.07). */

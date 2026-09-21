@@ -25,6 +25,14 @@ public final class AudioEngine {
     public static final int BUFFER_FRAMES = 1024;      /* ~23 ms a 44,1 kHz */
     public static final int MAX_VOICES = 48;
     public static final float TARGET_LUFS = -16f;      /* 13.32 */
+    /**
+     * Calibrage fixe du bus de sortie. Les voix synthetiques sortent autour de
+     * -35 LUFS bruts, avec des cretes rares (une note de piano tous les
+     * quatre temps) : ce trim de +24 dB pose les notes a hauteur d'ecoute
+     * (-7 dBFS environ) et le normalisateur affine vers -16 LUFS sans jamais
+     * compressor brutalement (13.32). Le limiteur tanh encaisse les cretes.
+     */
+    public static final float MIX_TRIM = 16.0f;
 
     /* bus (14.12) */
     public static final int BUS_MASTER = 0;
@@ -60,6 +68,7 @@ public final class AudioEngine {
 
     /* mesure de sonie (approximation LUFS : K-weighting simplifie) */
     private float momentarySum;
+    private float momentaryRaw;
     private int momentaryCount;
     private float momentaryLufs = -70f;
     private float shortTermLufs = -70f;
@@ -316,27 +325,39 @@ public final class AudioEngine {
             }
         }
         float rms = (float) Math.sqrt(sum / Math.max(1, frames * 2));
-        float lufs = rms < 1e-6f ? -70f : (float) (20f * Math.log10(rms) - 0.691f);
+        float rawLufs = rms < 1e-6f ? -70f : (float) (20f * Math.log10(rms) - 0.691f);
+        /* 13.32 : le metre regarde ce qui SORT du bus, trim et normalisation
+         * compris — mesurer le mix brut ferait croire que la cible est ratee
+         * alors que le joueur entend bien -16 LUFS. */
+        float outDb = (float) (20f * Math.log10(Math.max(1e-9f,
+                normalizeGain * masterTrim * MIX_TRIM)));
+        float lufs = rawLufs + outDb;
         momentarySum += lufs;
+        momentaryRaw += rawLufs;
         momentaryCount++;
         if (momentaryCount >= 10) {
             momentaryLufs = momentarySum / momentaryCount;
+            float rawAvg = momentaryRaw / momentaryCount;
             shortTermLufs = Maths.damp(shortTermLufs, momentaryLufs, 0.4f, 1f);
             momentarySum = 0f;
+            momentaryRaw = 0f;
             momentaryCount = 0;
-            /* cible -16 LUFS : on ajuste doucement, jamais plus de 0,5 dB par pas */
+            /* cible -16 LUFS : on ajuste doucement, jamais plus de 0,5 dB par
+             * pas. Dans le silence numerique on ne chasse rien : le gain se
+             * fige, sinon il pomperait a la premiere note. */
             float error = TARGET_LUFS - momentaryLufs;
-            if (momentaryLufs > -60f) {
+            if (rawAvg > -65f) {
                 normalizeGain *= (float) Math.pow(10f, Maths.clamp(error * 0.06f, -0.5f, 0.5f) / 20f);
             }
-            normalizeGain = Maths.clamp(normalizeGain, 0.35f, 2.6f);
+            normalizeGain = Maths.clamp(normalizeGain, 0.4f, 4.0f);
         }
-        integratedSum += sum;
+        float g2 = normalizeGain * masterTrim * MIX_TRIM;
+        integratedSum += sum * g2 * g2;
         integratedFrames += frames * 2;
         /* limiteur doux : tanh, pas de clipping numerique */
         for (int i = 0; i < frames; i++) {
-            float l = softClip(mixL[i] * normalizeGain * masterTrim);
-            float r = softClip(mixR[i] * normalizeGain * masterTrim);
+            float l = softClip(mixL[i] * normalizeGain * masterTrim * MIX_TRIM);
+            float r = softClip(mixR[i] * normalizeGain * masterTrim * MIX_TRIM);
             out[i * 2] = (short) Maths.clamp((int) (l * 32767f), -32768, 32767);
             out[i * 2 + 1] = (short) Maths.clamp((int) (r * 32767f), -32768, 32767);
         }

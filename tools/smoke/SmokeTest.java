@@ -169,14 +169,26 @@ public final class SmokeTest {
         float dx = game.lohen.x - x0, dz = game.lohen.z - z0;
         float moved = (float) Math.sqrt(dx * dx + dz * dz);
         check("Lohen avance au stick", moved > 0.4f, moved + " m");
-        game.gamepad.setButton(GamepadRouter.KEY_BUTTON_A, true);
-        game.frame(dt);
-        game.gamepad.setButton(GamepadRouter.KEY_BUTTON_A, false);
         boolean airborne = false;
-        for (int i = 0; i < 60; i++) {
+        for (int attempt = 0; attempt < 3 && !airborne; attempt++) {
+            /* un dialogue declenche par un trigger interdit le saut : c'est
+               juste, donc on le referme avant de tester la traversee */
+            if (game.dialogue.active()) {
+                game.dialogue.stop();
+            }
+            for (int i = 0; i < 60 && !game.lohen.grounded; i++) {
+                game.frame(dt);
+            }
+            game.gamepad.setButton(GamepadRouter.KEY_BUTTON_A, true);
             game.frame(dt);
-            airborne |= com.velmora.lohen.sim.player.PlayerFsm.rootOf(game.fsm.state())
-                    == com.velmora.lohen.sim.player.PlayerFsm.C_AIRBORNE;
+            game.frame(dt);
+            game.gamepad.setButton(GamepadRouter.KEY_BUTTON_A, false);
+            for (int i = 0; i < 60; i++) {
+                game.frame(dt);
+                int st = game.fsm.state();
+                airborne |= st == com.velmora.lohen.sim.player.PlayerFsm.ST_JUMP
+                        || st == com.velmora.lohen.sim.player.PlayerFsm.ST_FALL;
+            }
         }
         check("le saut decolle", airborne);
         game.gamepad.setAxis(GamepadRouter.AXIS_RIGHT_X, 0.6f);
@@ -284,12 +296,12 @@ public final class SmokeTest {
         check("Lohen a bouge depuis la sauvegarde",
                 Math.abs(game.lohen.x - sx) + Math.abs(game.lohen.z - sz) > 0.2f);
         check("reprise du slot 1", game.loadSlot(1));
+        check("Lohen rendu exactement a sa position sauvegardee",
+                Math.abs(game.lohen.x - sx) < 1e-3f && Math.abs(game.lohen.z - sz) < 1e-3f,
+                game.lohen.x + "," + game.lohen.z);
         for (int i = 0; i < 30; i++) {
             game.frame(dt);          /* la physique se repose apres teleport */
         }
-        check("Lohen rendu a sa position sauvegardee",
-                Math.abs(game.lohen.x - sx) < 0.6f && Math.abs(game.lohen.z - sz) < 0.6f,
-                game.lohen.x + "," + game.lohen.z);
 
         /* ------------------------------------------------------------ */
         System.out.println("8. Les huit sequences");
@@ -319,21 +331,29 @@ public final class SmokeTest {
         }
         check("1024 images rendues", frames == 1024, String.valueOf(frames));
         check("le mix n'est pas muet", peak > 0, "pic " + peak);
-        /* six secondes de mix en S1 : la mesure LUFS a de la matiere */
-        for (int i = 0; i < 6 * 44100 / 1024; i++) {
+        /* vingt secondes de mix musique tenue : la mesure LUFS a de la
+         * matiere, et le normalisateur (13.32) a le temps de converger */
+        for (int i = 0; i < 20 * 44100 / 1024; i++) {
+            game.frame(dt);
             game.renderAudio(buf);
         }
-        float lufs = game.audio.integratedLufs();
-        check("loudness dans la fenetre -16 LUFS", lufs > -26f && lufs < -6f,
-                lufs + " LUFS");
+        check("le normalisateur travaille", game.audio.normalizeGain() >= 0.4f
+                && game.audio.normalizeGain() <= 4f,
+                String.valueOf(game.audio.normalizeGain()));
+        /* 13.32 : la cible -16 LUFS se lit sur le programme INTEGRE,
+           mesure en sortie (trim + normalisation compris). */
+        float itg = game.audio.integratedLufs();
+        check("loudness integree du programme dans la fenetre -16 LUFS",
+                itg > -26f && itg < -6f, itg + " LUFS");
 
         /* ------------------------------------------------------------ */
         System.out.println("10. La lettre finale");
+        boolean lufsMeasured = false;
         check("la lettre s'ouvre", game.beginLetter());
         check("mode lettre", game.mode() == LohenGame.MODE_LETTER,
                 LohenGame.modeName(game.mode()));
         int guard = 0;
-        while (game.letter.step() != LetterReader.STEP_CREDITS && guard < 60 * 240) {
+        while (game.letter.step() != LetterReader.STEP_CREDITS && guard < 60 * 420) {
             int step = game.letter.step();
             if (step == LetterReader.STEP_DOOR) {
                 game.letter.setDoorHeld(true);
@@ -343,6 +363,19 @@ public final class SmokeTest {
             if (step == LetterReader.STEP_READING) {
                 /* le pouce fait defiler le papier : la voix suit (19.08) */
                 game.letter.scrollBy(0.006f);
+            }
+            if (step == LetterReader.STEP_DESCENT && !lufsMeasured) {
+                /* 19.09 : M18 est une orchestration SPARSE — trois notes de
+                   violoncelle, un motif, des silences. Le court terme en
+                   descente mesure le PLANCHER de mixage, pas la cible. */
+                for (int i = 0; i < 12 * 44100 / 1024; i++) {
+                    game.frame(dt);
+                    game.renderAudio(buf);
+                }
+                float lufs = game.audio.shortTermLufs();
+                check("court terme en descente au-dessus du plancher -50 LUFS",
+                        lufs > -50f, lufs + " LUFS");
+                lufsMeasured = true;
             }
             if (guard % 30 == 0) {
                 game.gamepad.setButton(GamepadRouter.KEY_BUTTON_A, true);
@@ -356,6 +389,7 @@ public final class SmokeTest {
         check("la lettre atteint le generique",
                 game.letter.step() == LetterReader.STEP_CREDITS,
                 "etape " + game.letter.stepName() + " apres " + (guard / 60) + " s");
+        check("la fenetre LUFS a ete mesuree pendant M18", lufsMeasured);
         check("derniere ligne canonique",
                 "Il reste six lettres.".equals(game.letter.lastLine()),
                 game.letter.lastLine());

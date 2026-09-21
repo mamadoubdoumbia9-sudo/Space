@@ -168,6 +168,32 @@ public final class MusicDirector {
         this.engine = engine;
         this.bus = bus;
         this.rng = rng;
+        if (bus != null) {
+            /* 16.04 : les cinematiques et les scenes annoncent leur musique
+             * par MUSIC_CUE. Sans cette ecoute, le cue meurt dans le vide et
+             * le jeu reste muet. */
+            bus.connect(EventBus.MUSIC_CUE, new EventBus.Listener() {
+                @Override
+                public void onEvent(String signal, Object[] args) {
+                    if (args == null || args.length == 0) {
+                        return;
+                    }
+                    String id = String.valueOf(args[0]);
+                    float fade = args.length > 1 && args[1] instanceof Number
+                            ? ((Number) args[1]).floatValue() : 1.5f;
+                    if (id == null || id.length() == 0 || !TRACKS.containsKey(id)) {
+                        return;
+                    }
+                    if (current != null && id.equals(current.id)) {
+                        return;
+                    }
+                    if (nextTrack != null && id.equals(nextTrack.id)) {
+                        return;
+                    }
+                    play(id, fade);
+                }
+            });
+        }
     }
 
     /* ------------------------------------------------------------------ */
