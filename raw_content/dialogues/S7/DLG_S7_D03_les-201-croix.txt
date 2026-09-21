@@ -1,0 +1,132 @@
+===============================================================================
+DLG · S7 · D03 — LE MUR DES 201 CROIX
+28 entrees, toutes S7. LOH 23 · ODI 5. Contribution : 28.
+[OBL] Deuxieme et derniere apparition du mur des noms. Les 200 premieres
+croix sont en S1. La 201e est ici. [OBL] MAREK Esteban n'est jamais barre.
+===============================================================================
+
+--- LE DISPOSITIF [OBL] --------------------------------------------------------------------------
+
+Place de l'Ancienne Halle, altitude 38 m, sous la pluie battante. Un mur
+de 14 m de long couvert de listes manuscrites : les 641 noms, en sept
+colonnes, sur du papier huile cloue au mur. [OBL] C'est le meme document
+que celui de S1, recopie par une autre main.
+
+[OBL] En S1, 200 noms etaient barres d'une croix au crayon gras.
+[OBL] Ici, il y en a 201.
+
+[OBL] LA 201e EST FRAICHE. Le crayon n'a pas encore ete lave par la
+pluie ; il coule. [OBL] Le nom raye est DUVAL Firmin, 61 ans, ligne 502.
+[OBL] Le joueur qui a lu le mur en S1 peut le savoir. 3 % le savent.
+[OBL] Aucun dialogue ne nomme DUVAL Firmin. Il n'existe nulle part
+ailleurs dans le jeu.
+
+[OBL] MAREK ESTEBAN, ligne 337, colonne 4, hauteur 1,42 m : PAS DE
+CROIX. [OBL] Interdit absolu 21.08. [OBL] Job CI `marek-unmarked` :
+verification par hash de la texture, sur les deux instances du mur.
+
+--- § 1 — ODILE, LA FEMME QUI RECOPIE (8 lignes) ------------------------------------------------
+
+ODI = Odile Vanthier, 67 ans. [OBL] C'est la femme du vieux couple qui
+dansait en S6 (point 6). [OBL] ELLE N'EST PAS MORTE. Son mari, si :
+VANTHIER Marc, ligne 389, barre. [OBL] Elle est ligne 388, NON barree.
+[OBL] Le joueur qui a danse a cote d'eux en S6 peut la reconnaitre : le
+modele est le meme, vieilli de trois ans, avec la meme broche.
+[OBL] AUCUN DIALOGUE NE LE SIGNALE. Job CI `odile-unmarked`.
+
+    [S7_ODI_L061]  2,4 s · usee · « Vous cherchez un nom ou vous regardez ? »
+
+    [S7_LOH_L062]  1,6 s · fort · « Je cherche. »
+
+    [S7_ODI_L063]  2,8 s · usee · « Colonne, alors. Ils sont par colonne, pas par lettre. »
+
+    [S7_LOH_L064]  2,0 s · fort · « Pourquoi pas par lettre ? »
+
+    [S7_ODI_L065]  3,0 s · usee · « Parce qu'on les a ecrits dans l'ordre ou on les a appris. »
+        dir : [OBL][NAR] LA STRUCTURE DU MUR EST UNE CHRONOLOGIE DU
+              DEUIL. [OBL] Les premiers noms sont ceux dont les
+              familles ont crie le 15 au matin. Les derniers sont ceux
+              que personne ne reclamait. [OBL] MAREK Esteban est en
+              colonne 4, milieu : quelqu'un l'a reclame, ni tot ni
+              tard. [OBL] On ne saura jamais qui.
+
+    [S7_LOH_L066]  1,8 s · fort · « Vous ecrivez encore ? »
+
+    [S7_ODI_L067]  2,6 s · usee · « Je recopie. Le papier tient deux ans, pas plus. »
+
+    [S7_ODI_L068]  3,2 s · usee · « Ca fait la troisieme fois. La prochaine, ce sera quelqu'un d'autre. »
+        dir : [OBL] elle ne dit pas qu'elle sera morte. Elle dit
+              « quelqu'un d'autre ». [OBL] Regle transverse : personne
+              dans ce jeu ne nomme la mort d'un proche ni la sienne.
+
+--- § 2 — LOHEN DEVANT LE MUR (12 lignes) ------------------------------------------------------
+
+[OBL] RAPPEL CANON : LOHEN NE SAIT PAS BIEN LIRE. [OBL] Il lui faut 47
+secondes pour trouver une colonne. [OBL] Le jeu ne l'aide pas : pas de
+surbrillance, pas de zoom automatique, pas de curseur magnetique. Le
+joueur doit lire lui-meme, a la main, sous la pluie, une texture de 4K.
+
+    [S7_LOH_L069]  2,0 s · bas · « Sept colonnes. »
+    [S7_LOH_L070]  2,4 s · bas · « Quatre-vingt-onze noms par colonne, a peu pres. »
+    [S7_LOH_L071]  1,8 s · bas · « Je commence par la quatre. »
+        dir : [OBL] IL SAIT DEJA OU IL EST. [OBL] Il est venu en S1. Il
+              n'a jamais dit qu'il etait venu. [OBL] Cette ligne est la
+              seule preuve, et elle passe en 1,8 s.
+    [S7_LOH_L072]  2,2 s · bas · « Ligne trente. Ligne quarante. »
+    [S7_LOH_L073]  2,6 s · bas · « Je perds ma place a chaque fois que je cligne. »
+    [S7_LOH_L074]  1,6 s · bas · « Doucement. »
+    [S7_LOH_L075]  2,8 s · bas · « Les lettres bougent quand y'a de la pluie dessus. »
+        dir : [OBL] ce n'est pas une metaphore. La texture a un shader
+              de ruissellement qui deforme reellement les glyphes de
+              2 a 4 px. [OBL] La lecture est objectivement plus
+              difficile qu'en S1. C'est voulu.
+    [S7_LOH_L076]  2,0 s · bas · « La. »
+    [S7_LOH_L077]  1,4 s · bas · « MAREK. »
+        dir : [OBL][NAR] IL LIT LE NOM DE FAMILLE A VOIX HAUTE.
+              [OBL] Il ne lit pas le prenom. [OBL] Direction : neutre,
+              comme on verifie une adresse. [OBL] Pas de musique. La
+              pluie ne baisse pas.
+    [S7_LOH_L078]  2,4 s · bas · « Pas de croix. »
+    [S7_LOH_L079]  2,0 s · bas · « Comme en mars. »
+        dir : [OBL][NAR] IL EST DEJA VENU EN MARS. [OBL] Aujourd'hui
+              est le 11 octobre. [OBL] Il vient donc au moins deux fois
+              par an depuis trois ans verifier qu'un nom n'est pas
+              barre. [OBL] CETTE LIGNE EST LA SEULE INFORMATION SUR
+              CE QU'IL A FAIT PENDANT TROIS ANS. [OBL] 1,4 s. Jamais
+              reprise, jamais developpee, aucun chapitre.
+    [S7_LOH_L080]  2,6 s · bas · « Ca veut rien dire, une croix. »
+        dir : [OBL] il ment. [OBL] Il vient deux fois par an.
+
+--- § 3 — LA 201e CROIX (8 lignes) --------------------------------------------------------------
+
+    [S7_LOH_L081]  2,2 s · bas · « Y'en a une nouvelle. »
+    [S7_LOH_L082]  1,8 s · bas · « Le crayon coule encore. »
+    [S7_LOH_L083]  2,4 s · bas · « C'est d'aujourd'hui. »
+    [S7_LOH_L084]  2,0 s · bas · « Colonne six. »
+    [S7_LOH_L085]  1,6 s · bas · « Je connais pas. »
+        dir : [OBL][NAR] IL NE LIT PAS LE NOM. [OBL] Le joueur, lui,
+              PEUT le lire en s'approchant : DUVAL Firmin. [OBL] Le
+              personnage principal se desinteresse d'un mort que le
+              joueur peut identifier. [OBL] Aucune consequence, aucune
+              ligne, aucun Echo. DUVAL Firmin n'existe pas ailleurs.
+    [S7_LOH_L086]  2,8 s · bas · « Deux cent une sur six cent quarante et une. »
+    [S7_LOH_L087]  2,2 s · bas · « Donc quatre cent quarante personnes que personne a barrees. »
+        dir : [OBL] IL COMPTE JUSTE. [OBL] Un homme qui ne sait pas
+              bien lire calcule de tete, correctement, une soustraction
+              a trois chiffres, sous la pluie. [OBL] Rappel S4 : 20
+              lectures reussies, 14 echecs. Il n'est pas bete. Il n'a
+              pas ete a l'ecole.
+    [S7_LOH_L088]  3,0 s · bas · « Quatre cent quarante personnes que quelqu'un attend encore. »
+        dir : [OBL][NAR] LA LIGNE DU DOCUMENT. [OBL] Il vient de se
+              compter parmi eux sans le dire. [OBL] Direction : plat.
+              [OBL] Puis il s'en va. Aucune musique n'intervient.
+              [OBL] Odile ne le regarde pas partir : elle recopie.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] 201 croix, la 201e fraiche, DUVAL Firmin, inexistant ailleurs
+[ ] MAREK Esteban non barre — CI `marek-unmarked` sur les 2 instances
+[ ] Odile = la danseuse de S6, non barree, jamais signalee — CI `odile-unmarked`
+[ ] Aucun aide a la lecture : pas de zoom, pas de surbrillance
+[ ] L079 : « Comme en mars. » — seule info sur les 3 annees ecoulees
+[ ] L087 : il calcule juste

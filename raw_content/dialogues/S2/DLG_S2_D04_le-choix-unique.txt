@@ -1,0 +1,88 @@
+===============================================================================
+DLG · S2 · D04 — LE CHOIX A UNE SEULE OPTION
+6 lignes · LOH 6 · choix n° 03 du chapitre, le seul de S2
+Reference : INDEX § 7.03. Prop : PN-025 (la veste).
+===============================================================================
+
+--- POURQUOI UN CHOIX A UNE SEULE OPTION ---------------------------------------
+
+Le joueur vient d'apprendre en S1 que les choix ne servent a rien. On lui
+donne maintenant un choix qui ne lui laisse rien a choisir, et c'est le
+seul moment du jeu ou l'interface force la main. L'effet recherche n'est
+pas la frustration : c'est la sensation qu'une main exterieure a decide.
+
+Concretement : le joueur entre dans la cabine, la camera ne bouge pas, le
+jeu ne fait rien. S'il veut sortir, il peut. Mais l'ecoutille de sortie
+est VERROUILLEE tant que la veste n'a pas ete touchee, et il n'y a aucun
+message d'erreur, aucune icone barree, aucun son de refus. La poignee
+bouge et rien ne se passe. Trois ou quatre essais, puis il se retourne.
+
+[OBL] Aucun texte d'aide. Aucun indice lumineux. Aucun prompt « Objectif :
+examiner la veste ». La veste est le seul objet de la piece a pendre de
+travers. C'est assez.
+
+--- LE CHOIX --------------------------------------------------------------------
+
+Declencheur : 12 s passees dans la cabine, ou 2 tentatives de sortie.
+Affichage : une seule ligne d'option, centree, sans numero.
+
+    > CHOIX 03
+      [ ] (Ouvrir la veste.)
+
+[OBL] Pas de crochet numerote. Pas de deuxieme ligne grisee. Pas de
+« [Partir] » barre. Une option, seule, au milieu du noir.
+
+--- LES 6 LIGNES -----------------------------------------------------------------
+
+Les six lignes ci-dessous ne se declenchent PAS toutes. Elles sont
+ordonnees par nombre de tentatives de sortie ratees : 0 tentative = aucune
+ligne, le joueur va droit a la veste. Chaque tentative en declenche une.
+Un joueur tetu peut donc entendre les six. Apres la sixieme, plus rien :
+il peut essayer cent fois, Lohen se tait.
+
+    [S2_LOH_L039]  LOHEN (murm) · 0,8 s · plat · p0,0
+        « Coincee. »
+        dir : 1re tentative. C'est un mensonge. Elle n'est pas coincee.
+
+    [S2_LOH_L040]  LOHEN (murm) · 1,1 s · plat · p0,0
+        « Elle etait ouverte. »
+        dir : 2e tentative. Il le dit sans peur. Il constate.
+
+    [S2_LOH_L041]  LOHEN (murm) · 1,4 s · plat · p0,0
+        « Bon. »
+        dir : 3e. Il ne se retourne pas encore.
+
+    [S2_LOH_L042]  LOHEN (murm) · 1,9 s · bas · p0,0
+        « Y'a rien dans cette piece. »
+        dir : 4e. Deuxieme mensonge, et le joueur le sait maintenant.
+
+    [S2_LOH_L043]  LOHEN (murm) · 2,2 s · bas · p0,0
+        « Y'a rien dans cette piece. »
+        dir : 5e. MEME TEXTE que L042. Prise differente : plus basse,
+              plus rapide. [OBL] C'est volontaire et ce n'est pas un
+              doublon a nettoyer. Le job CI `dup-text` a une whitelist
+              pour cette paire.
+
+    [S2_LOH_L044]  LOHEN (murm) · 1,6 s · casse · p0,0
+        « D'accord. »
+        dir : 6e et derniere. [OBL] C'est la SEULE occurrence de
+              l'emotion `casse` en dehors de S8_LOH_L206. Deux fois dans
+              tout le chapitre, et la premiere est ici, devant une porte,
+              sans temoin, apres cinq refus. Le comedien enregistre cette
+              ligne le meme jour que S8_LOH_L206, a la suite.
+              Il se retourne. La camera ne l'accompagne pas.
+
+--- APRES ------------------------------------------------------------------------
+
+Quand la veste est touchee : perte de controle 1,8 s (D03), puis
+l'ecoutille s'ouvre normalement au prochain essai. Sans bruit, sans
+fanfare. [OBL] Lohen ne commente jamais le fait que la porte s'ouvre
+maintenant. Le joueur fera le lien seul, ou pas.
+
+--- CHECKLIST --------------------------------------------------------------------
+
+[ ] Une seule option, non numerotee, sans option de refus
+[ ] Zero message d'erreur, zero son de refus sur l'ecoutille
+[ ] L042 et L043 : texte identique, prises distinctes, whitelist CI
+[ ] L044 : emotion `casse`, enregistree le meme jour que S8_LOH_L206
+[ ] Aucun commentaire sur l'ouverture de la porte

@@ -1,0 +1,108 @@
+===============================================================================
+  A-346   line_do_not_thank_me_yet
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 346 / 744
+  Partie 3 — MIREILLE VANDECK
+  Categorie : ACTING / DIALOGUE
+  Marqueur   : DIALOGUE S4 · ligne S4_MIR_L037
+  Fichier source  : A_Mireille_Act_line_do_not_thank_me_yet_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : conçu — bloc de plage deplie
+  Identifiant precedent : A-349 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 2.000 s  (60 frames a 30 fps)
+  Type .................. ONE-SHOT
+  Root motion ........... RM-NONE
+  Blend in / out ........ 0.25 s / 0.25 s
+  Couche AnimationTree .. L0+L4
+  Priorite .............. 84 — narratif / interaction (bande 80-94, bareme 0.05)
+  Poids compresse cible . ~92 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      buste (assise ou debout), bras, main valide, main brulee, machoire,
+      blendshapes
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  MIREILLE VANDECK — 58 ans, gardienne de la Bibliotheque des Eaux.
+
+  Elle est ECONOME. Elle a mal partout et elle ne le montre pas. Chaque
+  mouvement est calcule pour depenser le minimum. Elle ne se leve jamais
+  sans raison. Elle ne hausse JAMAIS la voix : quand elle appuie, elle
+  RALENTIT. Gestes signature : M1 elle tourne sa tasse de 90 deg avant de
+  boire, M2 elle cache sa main brulee quand on la regarde. Elle ment une
+  fois.
+
+  Rig et costume :
+      manteau rapiece (14 pieces, 15 apres le clip A-371), lunettes a un
+      seul verre, canne qui est un pied de biche, tasse
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  [NAR] Elle sait deja ce qu'elle va faire. [NAR] Le clip est joue 3 h 04
+  avant que le joueur comprenne. Elle est deja retournee vers ses fiches
+  quand la phrase se termine. Aucun regard d'adieu.
+
+  Ligne de dialogue portee : [S4_MIR_L037]
+  [OBL] Le texte de la ligne vit dans /home/user/dialogues/ et nulle
+        part ailleurs. Cette fiche ne le recopie pas : elle le
+        reference. Job CI `dialogue-single-source`.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Clip ONE-SHOT : pas de contrainte de cyclage. La derniere frame
+  doit poser une silhouette blendable vers les etats de sortie.
+
+  Evenements de timeline :
+      Face : registre `dry` par defaut · aucune elevation de volume, jamais
+      · si la ligne appuie, c'est le DEBIT qui ralentit
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- idle_sitting_desk / idle_standing_cane ; -> ligne suivante, ou
+      idle_listening_sharp
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-346
+===============================================================================

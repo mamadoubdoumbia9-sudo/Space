@@ -1,0 +1,101 @@
+===============================================================================
+  A-671   delivery_reaction_02_refusal
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 671 / 744
+  Partie 9 — PNJ GENERIQUES DU MARCHE SUSPENDU
+  Categorie : ROUTINE DE PNJ
+  Marqueur   : LIVRAISON DE LETTRE · reaction
+  Fichier source  : A_Pnj_Pnj_delivery_reaction_02_refusal_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : conçu — bloc de plage deplie
+  Identifiant precedent : A-674 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 4.000 s  (120 frames a 30 fps)
+  Type .................. ONE-SHOT
+  Root motion ........... RM-NONE
+  Blend in / out ........ 0.30 s / 0.30 s
+  Couche AnimationTree .. L0+L4
+  Priorite .............. 80 — narratif / interaction (bande 80-94, bareme 0.05)
+  Poids compresse cible . ~56 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      squelette generique partage (96 os), compatible 3 morphologies
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  PNJ GENERIQUES DU MARCHE SUSPENDU — 34 habitants, routines simples.
+
+  [ART] Chaque PNJ fait UNE chose et la fait bien. Aucun PNJ ne marche sans
+  but. Aucun PNJ ne fait des allers-retours. Si un habitant se deplace, il
+  porte quelque chose et il va quelque part. [OBL] INTERDIT : les PNJ qui
+  tournent en rond, les PNJ qui parlent seuls, les PNJ qui regardent le
+  joueur en permanence. Apres 50 minutes de ville morte, le joueur doit
+  avoir un CHOC DE VIE.
+
+  Rig et costume :
+      squelette generique partage (96 os), 3 morphologies (mince / moyen /
+      large), 11 tetes interchangeables, 14 tenues, retarget teste
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  il refuse la lettre. Les deux mains se levent a hauteur de poitrine,
+  paumes vers Lohen. Il recule d'un pas. [NAR] Tout le monde ne veut pas
+  savoir.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Clip ONE-SHOT : pas de contrainte de cyclage. La derniere frame
+  doit poser une silhouette blendable vers les etats de sortie.
+
+  Evenements de timeline :
+      SFX(paper_handle) · aucune musique · pas de LookAt prolonge vers le
+      joueur (interdit de la partie 9)
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- hand_over_letter_receive (672) ; -> routine du PNJ
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-671
+===============================================================================

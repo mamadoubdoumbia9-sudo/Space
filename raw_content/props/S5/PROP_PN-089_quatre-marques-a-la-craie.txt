@@ -1,0 +1,86 @@
+===============================================================================
+PN-089 — LES QUATRE MARQUES A LA CRAIE
+===============================================================================
+Asset : DECAL_S5_Marques_Craie · S5, mur de la chambre de chauffe, au-dessus
+du matelas · ~04:12 · prop narratif (decal) · pas d'Echo · 0 tris
+
+§ 1 — CE QU'ON VOIT
+Sur la brique, au-dessus du matelas de Sol, a hauteur de tete allongee,
+quatre marques a la craie blanche.
+Quatre traits verticaux. Pas groupes en paquets de cinq. Juste quatre
+traits, espaces de 4 cm, alignes.
+Ils sont de quatre craies differentes : deux blancs, un legerement jaune,
+un tres pale (une craie presque finie, appuyee fort).
+Ils sont de quatre epaisseurs et de quatre pressions differentes.
+[OBL] Ils n'ont pas ete faits le meme jour. L'usure de la craie est
+differente sur chacun : le premier a presque disparu, il n'en reste qu'une
+ombre poudreuse ; le quatrieme est net.
+Il n'y a rien d'autre sur le mur. Pas de mot, pas de date, pas de dessin.
+Quatre traits.
+
+§ 2 — FICHE TECHNIQUE
+0 tris. Decal 1K, 20 x 14 cm, projete sur la brique.
+[OBL] Les quatre traits sont peints separement dans la texture, avec
+quatre profils d'usure et quatre valeurs d'alpha (0,18 / 0,46 / 0,71 / 0,93).
+[OBL] La craie sur de la brique rugueuse ne fait pas un trait plein : elle
+accroche les aretes et saute les creux. Le decal doit respecter le relief
+de la normal map de la brique en dessous. Utiliser un masque de hauteur.
+C'est le seul moyen que ca ne ressemble pas a un trait de feutre.
+Cout : 0,02 ms.
+[OBL] Visible uniquement a la lampe (PN-009). La chambre est noire sans
+elle.
+
+§ 3 — CE QUE CA DIT
+Quatre.
+[OBL] Le jeu ne dit rien de plus. Aucun personnage, aucun dialogue, aucun
+texte, aucune voix off, aucun indice, jamais, dans aucun des sept chapitres.
+Quatre marques faites a quatre moments differents par un enfant de 13 ans,
+a la tete de son lit.
+Le geste humain : faire un trait a la craie sur le mur au-dessus de sa tete.
+[OBL] Interdiction absolue de proposer une interpretation en jeu, en
+documentation, en artbook ou en communication.
+[ART] Les hypotheses du joueur seront : des annees, des morts, des visites,
+des personnes, des fois ou il a failli partir. Toutes tiennent. Aucune n'est
+verifiable. Le jeu n'en connait pas la reponse non plus : elle n'a pas ete
+ecrite.
+
+§ 4 — ECHO
+NEANT. Geste d'apres, objet d'un vivant, objet d'enfant. Triple.
+
+§ 5 — MISE EN SCENE
+Au-dessus du matelas, a 55 cm du sol — [OBL] hauteur de la tete d'un enfant
+allonge. Pas a hauteur de regard debout.
+Pour les voir, il faut s'approcher du matelas et baisser la lampe.
+[ART] Le joueur se penche vers le lit d'un enfant pour lire son mur.
+Taux de decouverte cible : 41-52 %.
+[OBL] Aucun prompt, aucun LookAt, aucun son, aucune musique, aucune
+reaction. Jamais.
+Sol ne les mentionne pas. [OBL] Aucune option pour demander. Si le joueur
+les regarde pendant que Sol est dans la piece, Sol ne reagit pas.
+
+§ 6 — AUDIO
+NEANT.
+
+§ 7 — INTERDICTIONS
+Interdit de : expliquer · ajouter une cinquieme marque · en ajouter une
+pendant le chapitre · ajouter un mot, une date, un dessin a cote ·
+permettre de demander · faire commenter · en faire un compteur · les
+effacer · les reutiliser ailleurs · les resoudre dans les six lettres
+suivantes · en parler hors du jeu.
+
+§ 8 — LIENS
+PN-036 (les 38 barres gravees sur les seaux, S2) : quelqu'un d'autre
+comptait quelque chose. [OBL] Aucun lien. Jamais relies.
+PN-061 (les 73 encoches du puits a poulie, S3) : un troisieme comptage.
+[OBL] Trois comptages dans le chapitre : 38, 73, 4. Aucun n'est explique.
+Aucun n'est relie aux autres. Aucun n'a de solution.
+PN-087 (le matelas, juste en dessous).
+[THEME] COMPTER. [THEME] CE QU'ON NE SAURA PAS.
+
+§ 9 — DOD
+[ ] 4 traits, 4 craies, 4 alphas (0,18 / 0,46 / 0,71 / 0,93)
+[ ] Accroche sur les aretes de la brique via masque de hauteur
+[ ] A 55 cm du sol, hauteur de tete d'enfant allonge
+[ ] Visible uniquement a la lampe portee
+[ ] Zero prompt, zero son, zero reaction, zero option
+[ ] Aucune explication, dans le jeu ni hors du jeu

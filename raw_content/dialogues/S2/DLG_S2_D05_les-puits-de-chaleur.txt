@@ -1,0 +1,95 @@
+===============================================================================
+DLG · S2 · D05 — LES PUITS DE CHALEUR : PARLER EN COURANT
+12 lignes · LOH 12 · la seule pression temporelle du chapitre
+Reference maitre : 09.11 « on s'y enfonce en 2,4 s. Il faut courir. »
+Anim : LOH-RUN-040..047, LOH-SNK-090 (enfoncement).
+===============================================================================
+
+--- REGLE D'ECRITURE DE LA COURSE -----------------------------------------------
+
+[OBL] Lohen ne crie pas, ne jure pas, ne commente pas le danger. Le
+vocabulaire de la course est un vocabulaire de metier : des directions,
+des distances, des reperes. Un relayeur qui court n'a pas peur, il calcule.
+
+[OBL] Aucune de ces lignes n'est un tutoriel. Aucune ne dit « je dois
+courir » ou « le verre est mou ici ». Le joueur l'a appris de Pallas en
+une phrase (S2_PAL_L003) et il l'apprendra surtout par l'enfoncement.
+
+Les 12 lignes sont pilotees par le systeme de course : elles se declenchent
+sur des seuils (distance restante, Souffle, nombre d'enfoncements subis)
+et ne se repetent pas dans la meme traversee.
+
+--- LES 12 LIGNES ----------------------------------------------------------------
+
+    [S2_LOH_L045]  LOHEN · 0,9 s · essouffle · p0,0
+        « Nord-nord-est. »
+
+    [S2_LOH_L046]  LOHEN · 1,1 s · essouffle · p0,0
+        « Le clocher. Le clocher. »
+
+    [S2_LOH_L047]  LOHEN · 0,7 s · essouffle · p0,0
+        « Plus clair. »
+        dir : declenchee a 4 m d'un puits non encore repere par le
+              joueur. C'est la seule aide du systeme et elle est donnee
+              par un homme, pas par une interface.
+
+    [S2_LOH_L048]  LOHEN · 1,3 s · essouffle · p0,0
+        « Trente metres. »
+
+    [S2_LOH_L049]  LOHEN · 1,0 s · essouffle · p0,0
+        « Douze. »
+
+    [S2_LOH_L050]  LOHEN · 1,6 s · presse · p0,0
+        « Pas la. Pas la. »
+        dir : pendant un enfoncement de moins de 1,2 s (il se rattrape).
+
+    [S2_LOH_L051]  LOHEN · 2,0 s · essouffle · p0,0
+        « Ca tient, ca tient, ca tient. »
+        dir : trois fois, chacune plus courte que la precedente.
+
+    [S2_LOH_L052]  LOHEN · 1,4 s · presse · p0,0
+        « Tire. »
+        dir : pendant un enfoncement de plus de 1,8 s. Il se parle a
+              lui-meme comme a un treuil.
+
+    [S2_LOH_L053]  LOHEN · 1,8 s · essouffle · p0,0
+        « L'ombre. Va a l'ombre. »
+        dir : les zones d'ombre du chalutier sont les zones sures. Le
+              jeu ne l'a jamais dit. Cette ligne est la seule source.
+              Un joueur qui ne l'entend pas terminera quand meme : la
+              lecture visuelle (verre plus sombre = plus dur) suffit.
+
+    [S2_LOH_L054]  LOHEN · 1,2 s · essouffle · p0,0
+        « Bien. »
+        dir : apres avoir atteint une zone sure. Une syllabe de metier.
+              Pas de soulagement, pas de rire nerveux.
+
+    [S2_LOH_L055]  LOHEN · 2,2 s · essouffle · p0,0
+        « Souffle. Trois, deux. »
+        dir : il se compte une recuperation. [OBL] La jauge de Souffle
+              se recharge sur le meme tempo. Le corps et l'UI disent la
+              meme chose en meme temps : l'UI devient inutile. C'est le
+              but (14.01, mode HUD minimal).
+
+    [S2_LOH_L056]  LOHEN · 1,5 s · essouffle · p0,0
+        « Encore une. »
+        dir : declenchee avant le dernier puits de la traversee. Le mot
+              « derniere » est interdit : Lohen ne sait pas que c'est la
+              derniere. Le joueur non plus.
+
+--- ECHEC ------------------------------------------------------------------------
+
+[OBL] Si Lohen s'enfonce completement (2,4 s sans sortir), il ne meurt pas
+spectaculairement : le verre lui monte a la taille, l'ecran ne devient pas
+rouge, il n'y a pas de cri. Fondu de 1,1 s, reprise 9 m en arriere, et un
+plan fixe de 1,4 s sur ses jambes couvertes de poussiere de verre avant
+que le controle revienne. L'echec est moche, court, muet. Aucune ligne de
+dialogue n'accompagne un echec. Jamais, de tout le jeu.
+
+--- CHECKLIST --------------------------------------------------------------------
+
+[ ] Aucun cri, aucun juron, aucune ligne de tutoriel
+[ ] Aucune ligne sur echec
+[ ] L055 : tempo de la ligne = tempo de recharge de la jauge
+[ ] Le mot « derniere » n'apparait pas
+[ ] Une ligne ne se repete pas dans la meme traversee

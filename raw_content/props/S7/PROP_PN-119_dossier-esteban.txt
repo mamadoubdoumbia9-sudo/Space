@@ -1,0 +1,130 @@
+===============================================================================
+PN-119 — LE DOSSIER D'ESTEBAN
+===============================================================================
+Asset : SM_S7_Dossier_Esteban · S7, arriere-boutique de l'atelier, dans un
+tiroir · ~05:34 · PORTEUR D'ECHO E24 + RAMASSABLE (5 des 9) ·
+LOD0 680 tris
+
+§ 1 — CE QU'ON VOIT
+Derriere l'atelier, une arriere-boutique de 3 x 3 m : un bureau, un
+classeur, un lit de camp, un poele.
+Dans le deuxieme tiroir du bureau, sous des factures, une chemise
+cartonnee. [OBL] Le meme modele que PN-068 (la chemise vide de la
+bibliotheque, S4).
+Celle-ci est remplie.
+Sur la couverture, dans le cartouche imprime, ecrit a la main :
+     DOSSIER N° 0 4 1 1
+     NOM  MAREK, Esteban
+     OUVERT LE  22 novembre [l'annee de la Maree]
+     CLOS LE  ________
+[OBL] L'ecriture est celle de Mireille. Main gauche. La meme que PN-077.
+Elle est venue ici. Elle a apporte ca.
+Dedans, il y a : 4 feuillets manuscrits, 2 formulaires imprimes, et une
+enveloppe vide adressee.
+[OBL] Le joueur peut le PRENDRE. Il ne peut pas l'ouvrir.
+[OBL] Le rabat est ferme par une ficelle nouee en huit, et Lohen ne la
+denoue pas. Il prend la chemise, il la met dans sa sacoche, et c'est tout.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 680 (chemise 240 + contenu visible par la tranche 440).
+[OBL] Le contenu est modelise : on voit les tranches des 6 feuillets par le
+cote. Epaisseurs, decalages, un coin corne.
+Le cartouche : texture 4K, police d'imprimerie du projet + ecriture
+manuscrite gauche de Mireille. Lisible a 30 cm.
+[OBL] Le numero 0411 : c'est le 411e dossier. Mireille en a ouvert 411.
+Elle a rempli 22 lignes sur la page ouverte de PN-077.
+[OBL] Coherence : le registre a plusieurs pages ; le volume III contient
+environ 400 noms. Verifier la credibilite.
+[OBL] « CLOS LE » est vide. Le dossier est ouvert depuis 2 ans et 10 mois.
+RAMASSABLE : LOH-ACT-218, 2,8 s. Il le prend a deux mains.
+Consultable par appui long : LOH-ACT-145, 3 s. [OBL] Il le regarde. Il ne
+l'ouvre jamais.
+
+§ 3 — CE QUE CA DIT
+Mireille a ouvert un dossier au nom d'Esteban Marek, le 22 novembre, cinq
+semaines apres la Maree.
+Elle l'a apporte ici, dans l'atelier du Verrier, et l'a laisse dans un
+tiroir.
+[OBL] Pourquoi ici : jamais explique.
+Le geste humain : nouer une ficelle en huit.
+[OBL] Et il n'est pas clos.
+[NAR] Elle a dit a Lohen, il y a une heure et demie : « Je ne vais plus.
+C'est fini. » (MIR-DLG-389). Elle n'a pas ferme le dossier.
+[OBL] Lohen ne l'ouvre pas. Il ne le lit pas. Il ne sait pas bien lire.
+[OBL] Le joueur ne saura JAMAIS ce qu'il y a dedans. Pas dans ce chapitre,
+pas dans les six suivants.
+
+§ 4 — ECHO
+ECHO E24 — « Le tiroir de l'arriere-boutique » — 16 secondes, mode C.
+[OBL] Mode C : aucun visuel. Le son seulement.
+Ce qu'on entend :
+  — un tiroir qu'on ouvre (1 s)
+  — des papiers qu'on pose (3 s)
+  — une ficelle qu'on noue — [OBL] on ENTEND un noeud se faire. Un
+    frottement de fil, deux fois, et un serrage. (5-8 s)
+  — le tiroir qu'on referme (9 s)
+  — et puis, pendant 6 secondes, rien.
+  — a 15 s : une seule respiration. Une inspiration longue, et une
+    expiration.
+  — fin.
+[OBL] C'est Mireille. Le joueur peut le deduire de l'ecriture. Le jeu ne le
+confirme jamais.
+[OBL] Zero musique. Zero voix. Zero mot.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+[OBL] L'arriere-boutique est FACULTATIVE. Une porte au fond de l'atelier,
+fermee mais pas verrouillee. Rien n'y mene. Rien ne la signale.
+Taux de decouverte cible : 54-66 %.
+[OBL] Un joueur sur trois environ terminera le chapitre 1 sans jamais
+savoir que ce dossier existe.
+[OBL] Le tiroir est ferme. Il faut l'ouvrir. LOH-ACT-217, 1,4 s.
+Le dossier est sous des factures. [OBL] Il faut les ecarter : la meme
+animation continue, Lohen deplace les papiers et prend la chemise dessous.
+Il est noir dans l'arriere-boutique. [OBL] Lohen n'a plus de lampe. La
+seule lumiere vient de l'atelier, par la porte, et c'est le reflet du
+lampadaire a gaz sur 300 pieces de verre.
+[ART] Il lit le nom de l'homme qu'il cherche a la lueur de trois cents
+reflets, et il ne peut pas ouvrir le dossier.
+
+§ 6 — AUDIO
+Pendant E24 : cf. § 4. [OBL] Le son du noeud est le sujet technique du prop.
+Il faut enregistrer un vrai noeud de ficelle sur une vraie chemise
+cartonnee, tres pres, au micro de contact si necessaire.
+[OBL] La respiration finale est celle d'une femme de 58 ans. Elle n'est pas
+un sanglot. Elle n'est pas un soupir de soulagement. C'est une respiration.
+Hors Echo : SFX(drawer_wood_dry) pour le tiroir. SFX(paper_shift) pour les
+factures.
+[OBL] Aucune musique, ni pendant ni apres. M23 ne joue pas dans l'atelier.
+
+§ 7 — INTERDICTIONS
+Interdit de : ouvrir le dossier · lire son contenu · en montrer une page ·
+le faire ouvrir par un PNJ · le montrer a Mireille · le montrer a Tallec ·
+confirmer que c'est Mireille qui l'a depose · expliquer pourquoi il est ici
+· clore le dossier · le perdre · le jeter · ajouter un deuxieme dossier ·
+ajouter de la musique · rendre E24 rejouable · faire pleurer dans E24.
+[OBL] Le dossier reste ferme et dans la sacoche jusqu'a la fin du chapitre
+et des six suivants. Il n'est JAMAIS ouvert. C'est definitif.
+
+§ 8 — LIENS
+PN-068 (la chemise vide, S4) : [OBL] meme modele. Celle de la bibliotheque
+n'a jamais ete remplie. Celle-ci l'est. [OBL] Jamais relies.
+PN-069 (le rectangle de poussiere propre, S4) : [OBL] RAPPEL EXPLICITE —
+ce dossier n'a JAMAIS ete pose sur ce casier. Aucun lien. Erreur de canon
+si etabli.
+PN-077, PN-081 (le registre et le certificat de Mireille).
+PN-067 (le tiroir MAQ-MAS, vide) : la fiche d'Esteban n'y est plus.
+[OBL] Elle n'est PAS dans ce dossier. Le dossier de Mireille est autre chose.
+PN-048 (la sacoche : le dossier y rejoint les six lettres et la liste).
+[THEME] CE QU'ON NE SAURA PAS. [THEME] CHERCHER DANS LES OBJETS.
+
+§ 9 — DOD
+[ ] Meme modele de chemise que PN-068
+[ ] Cartouche rempli de la main gauche de Mireille, coherent avec PN-077
+[ ] Dossier n° 0411, ouvert le 22 novembre, CLOS LE vide
+[ ] 6 feuillets visibles par la tranche, un coin corne
+[ ] Ramassable, jamais ouvert, dans les 7 chapitres
+[ ] Arriere-boutique facultative, taux de decouverte 54-66 %
+[ ] E24 : 16 s, son seulement, noeud enregistre reellement, 1 respiration
+[ ] Zero musique, zero voix
+[ ] Aucun lien etabli avec PN-069

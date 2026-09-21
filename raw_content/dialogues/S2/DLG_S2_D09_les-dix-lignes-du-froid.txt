@@ -1,0 +1,106 @@
+===============================================================================
+DLG · S2 · D09 — LES DIX LIGNES DU FROID (cloture du compte de S2)
+10 lignes · LOH 8 / PAL 2 · ids L097 a L106.
+[OBL] Ce document existe pour une raison de comptage declaree : les
+documents D01 a D08 utilisaient les ids L001 a L096 TOUTES FAMILLES
+CONFONDUES, barks compris. Or la regle § 6.00 exclut les barks du total
+de sequence. S2 comptait donc 86 lignes et 10 barks, pas 96 et 10.
+[OBL] Les dix lignes ci-dessous ferment l'ecart. Elles ne sont pas du
+remplissage : elles couvrent le seul trou de rythme mesure de S2, entre
+le puits de chaleur (D05) et l'Echo 05 (D06), soit 3 min 20 sans voix.
+===============================================================================
+
+--- CORRECTION DU COMPTAGE DE S2 [OBL] ---------------------------------------------------------
+
+    Lignes D01-D08 (hors barks) .................. 86
+    D09 (ce document) ............................ 10
+                                                 ----
+                                     TOTAL S2 =   96   [OBL] conforme
+    Barks S2 (hors total) : 10 — ids S2_BK_L006..L011 et L077..L080.
+
+    [OBL] La ventilation annoncee en D08 (« LOH 43 · ECH 43 · BK 10 ·
+    PAL 2 ») additionnait les barks au total. Ventilation exacte :
+      LOH 51 · ECH 43 · PAL 2 = 96, plus 10 barks hors total.
+
+    COMMANDE DE VERIFICATION :
+      tools/count_dialogue.py --seq S2 --expect 96 --studio 95 --barks 10
+    (95 : S2_ECH_L021 est une piste de timeline sans comedien, meme cas
+    declare que S1_ECH_L104.)
+
+--- LE TROU DE RYTHME [OBL] ----------------------------------------------------------------------
+
+[OBL] `tools/pacing_audit.py` (09.40 : un evenement toutes les 45-90 s)
+signale un trou de 3 min 20 sur le chemin principal de S2, entre le
+troisieme puits de chaleur et le declencheur de l'Echo 05.
+
+[OBL] On ne comble PAS ce trou par un evenement. S2 est la sequence du
+vide et du verre : y mettre une decouverte serait une faute.
+[OBL] On le comble par dix lignes de Lohen, tres espacees — une toutes
+les 20 secondes — qui ne racontent rien et ne montrent rien.
+
+[OBL] REGLE DE CES DIX LIGNES : elles portent TOUTES sur la temperature
+et sur le corps. [OBL] Aucune ne parle de la Maree, des disparus,
+d'Esteban, du Phare ou du metier. [OBL] C'est le seul passage du
+chapitre ou Lohen n'a strictement rien dans la tete. Job CI
+`s2-d09-no-topic` : liste de mots interdits appliquee a ces dix ids.
+
+--- LES DIX LIGNES -------------------------------------------------------------------------------
+
+    [S2_LOH_L097]  LOHEN (murm) · 1,2 s · bas · p0,0
+        « J'ai froid aux doigts. »
+
+    [S2_LOH_L098]  LOHEN (murm) · 1,6 s · bas · p0,0
+        « Les deux mains, pareil. »
+        dir : [OBL] l'epaule droite le gene partout SAUF ici : le froid
+              est democratique. [OBL] Jamais dit.
+
+    [S2_LOH_L099]  LOHEN (murm) · 1,4 s · bas · p0,0
+        « Je les mets sous les bras. »
+
+    [S2_LOH_L100]  LOHEN (murm) · 1,8 s · bas · p0,0
+        « Trente secondes. Ca suffit jamais. »
+
+    [S2_PAL_L101]  PALLAS (loin) · 2,0 s · plat · p0,0
+        « Tu marches pas assez vite, c'est pour ca. »
+        dir : [OBL] Pallas est restee a la 12e marche. [OBL] Elle crie
+              depuis 80 m. [OBL] Filtre distance, pas de reverb : sur
+              du verre plat, le son porte et ne revient pas.
+              [OBL] C'est physiquement exact et personne ne le
+              remarquera.
+
+    [S2_LOH_L102]  LOHEN (murm) · 1,3 s · bas · p0,0
+        « Je marche comme je peux. »
+        dir : [OBL] il repond a 80 m, a voix basse. [OBL] ELLE
+              N'ENTEND PAS. [OBL] Aucune reponse ne suit.
+
+    [S2_PAL_L103]  PALLAS (loin) · 1,7 s · plat · p0,0
+        « Quoi ? »
+        dir : [OBL] 3,4 s apres. [OBL] Elle a entendu quelque chose et
+              pas les mots. [OBL] Lohen ne repete pas. [OBL] Le
+              dialogue s'arrete la, definitivement : Pallas ne reparle
+              plus de la sequence.
+
+    [S2_LOH_L104]  LOHEN (murm) · 1,5 s · bas · p0,0
+        « Rien. »
+
+    [S2_LOH_L105]  LOHEN (murm) · 1,9 s · bas · p0,0
+        « Le verre est plus froid que l'air. »
+        dir : [OBL] VRAI : le verre conduit. [OBL] Le shader de givre
+              (VFX V08) apparait sous ses bottes et pas ailleurs.
+              [OBL] Il y a une trace de pas givree derriere lui pendant
+              toute la sequence. Elle s'efface en 40 s. [OBL] Le joueur
+              peut se retourner et voir son propre chemin.
+              [OBL] Aucune ligne ne le signale.
+
+    [S2_LOH_L106]  LOHEN (murm) · 2,2 s · bas · p0,0
+        « Et moi je suis plus froid que le verre, alors ca va. »
+        dir : [OBL][NAR] CE N'EST PAS UNE BLAGUE ET IL NE SOURIT PAS.
+              [OBL] Derniere ligne du document. [OBL] L'Echo 05 se
+              declenche 14 a 40 s plus tard selon le joueur.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] S2 = 96 lignes + 10 barks, ventilation corrigee
+[ ] Dix lignes sur le froid et le corps, aucun autre sujet — CI `s2-d09-no-topic`
+[ ] L101/L103 : Pallas crie de 80 m, sans reverb, n'entend pas la reponse
+[ ] L105 : trace de pas givree reelle, jamais signalee

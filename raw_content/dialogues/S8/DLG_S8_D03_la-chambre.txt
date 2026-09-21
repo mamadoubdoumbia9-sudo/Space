@@ -1,0 +1,213 @@
+===============================================================================
+DLG · S8 · D03 — LA CHAMBRE : TRENTE-QUATRE SECONDES ET CE QU'ON TOUCHE
+58 entrees, toutes S8. LOH 58. Contribution : 58.
+Reference maitre 19.03 (l'entree, plan de 34 s, camera libre) et 19.04
+(les trois sources de lumiere).
+===============================================================================
+
+--- REGLE ABSOLUE DE LA CHAMBRE [OBL] -------------------------------------------------------------
+
+[OBL] 19.03 : « Le joueur garde le controle. On ne lui prend pas la
+scene. » [OBL] Il n'y a AUCUNE cinematique d'entree. Aucun travelling
+automatique. Aucun verrouillage de camera. [OBL] Le level art guide le
+regard par la lumiere, pas par un script.
+
+[OBL] ORDRE DE DECOUVERTE NATUREL (19.03) : la lampe, la couverture, le
+mur de feuilles, les listes et les « 0114 », les chaussures, le carnet,
+la feuille pliee. [OBL] Un joueur peut prendre la lettre en 11 secondes
+en ignorant tout. 6 % le font. [OBL] LE JEU NE LES EN EMPECHE PAS.
+[OBL] Interdit absolu : aucune porte invisible, aucun delai, aucun
+« Lohen n'est pas encore pret ».
+
+[OBL] AMBRE : la lampe a huile est la premiere occurrence d'ambre
+(#FFA33C) depuis 47 minutes. [OBL] Rappel CI `amber-guard` : l'ambre est
+reservee a Esteban dans tout le jeu. [OBL] Le joueur ne sait pas qu'il a
+ete conditionne. Son ventre se serre et il ne sait pas pourquoi (05.06).
+
+[OBL] AUCUNE MUSIQUE N'ENTRE DANS CE DOCUMENT. Le vent, le gresillement
+de la lampe, et rien d'autre, pendant toute la duree de l'exploration —
+qui peut durer 11 secondes ou 14 minutes.
+
+--- § 1 — LES DIX PREMIERES SECONDES (10 lignes) --------------------------------------------------
+
+    [S8_LOH_L097]  2,0 s · bas · « Y'a de la lumiere. »
+    [S8_LOH_L098]  2,4 s · bas · « Une lampe a huile, par terre, allumee. »
+    [S8_LOH_L099]  1,8 s · bas · « Allumee. »
+        dir : [OBL] il repete le mot. [OBL] Une seule fois. [OBL] Pas
+              de musique, pas de plan, pas de ralenti. [OBL] Tallec
+              (S7/L051) et le gardien (S7/E25, L224) avaient tort tous
+              les deux.
+    [S8_LOH_L100]  2,6 s · bas · « Y'a de l'huile dedans pour deux heures, pas plus. »
+        dir : [OBL][NAR] QUELQU'UN L'A REMPLIE CE SOIR. [OBL] Aucune
+              conclusion. Aucune ligne de suivi. [OBL] 20.05 : « Qui a
+              allume la lampe si la lettre date d'il y a plusieurs
+              jours » ne recoit pas de reponse avant le chapitre 4.
+    [S8_LOH_L101]  2,2 s · bas · « La piece est ronde. Six metres. »
+    [S8_LOH_L102]  2,8 s · bas · « Y'a un matelas, une table, une chaise, et des murs couverts de papier. »
+    [S8_LOH_L103]  1,6 s · bas · « Bon. »
+    [S8_LOH_L104]  2,4 s · bas · « Le faisceau passe toutes les vingt secondes. »
+    [S8_LOH_L105]  2,0 s · bas · « Toutes les ombres bougent en meme temps et ca fait peur a chaque fois. »
+        dir : [OBL] 19.04 : le faisceau balaye la piece et fait bouger
+              toutes les ombres pendant 1,8 s. [OBL] IL LE DIT UNE
+              FOIS, AU DEBUT. [OBL] Ensuite le joueur le subit pendant
+              toute la scene, y compris pendant la lecture de la
+              lettre, et plus personne ne le commente.
+    [S8_LOH_L106]  2,6 s · bas · « Je m'y ferai pas en dix minutes. »
+
+--- § 2 — LA COUVERTURE (8 lignes) ----------------------------------------------------------------
+
+    [S8_LOH_L107]  2,0 s · bas · « La couverture est pliee. »
+    [S8_LOH_L108]  2,4 s · bas · « Au carre. »
+    [S8_LOH_L109]  2,8 s · bas · « Quelqu'un qui plie sa couverture tous les matins. »
+        dir : [OBL][NAR] TROISIEME COUVERTURE PLIEE DU CHAPITRE
+              (E20a en S5 — « si un des deux part, l'autre garde la
+              couverture » — et une en S3). [OBL] Rappel S5_LOH_L320 :
+              « Quelqu'un qui plie, c'est quelqu'un qui compte
+              revenir. » [OBL] Il ne le redit pas ici. [OBL] La lettre
+              le dira a sa place : « La couverture est pliee parce que
+              je savais que tu regarderais ca en premier. »
+              [OBL] ESTEBAN AVAIT RAISON : 79 % des joueurs
+              s'approchent de la couverture avant la table.
+              [OBL] Job CI `blanket-first` : mesure de playtest,
+              seuil > 70 %. Si le seuil n'est pas atteint, c'est
+              l'eclairage qu'on corrige, pas la ligne.
+    [S8_LOH_L110]  1,8 s · bas · « Le matelas est mince. »
+    [S8_LOH_L111]  2,2 s · bas · « Il a dormi la trois ans. »
+        dir : [OBL][NAR] PREMIERE FOIS QUE LOHEN DIT « IL » EN PARLANT
+              D'ESTEBAN DANS CETTE PIECE. [OBL] Il n'a pas encore lu la
+              lettre. Il n'a vu qu'une couverture pliee et une
+              ecriture. [OBL] Il sait. [OBL] Aucune musique.
+    [S8_LOH_L112]  2,6 s · bas · « Ou pas trois ans. Je sais pas. »
+    [S8_LOH_L113]  2,0 s · bas · « Longtemps. »
+    [S8_LOH_L114]  1,4 s · bas · « Bon. »
+
+--- § 3 — LE MUR DE FEUILLES (14 lignes) ---------------------------------------------------------
+
+[OBL] 19.03 point 3-4 : des dizaines de feuilles punaisees, l'ecriture
+d'Esteban (reconnaissable — 6 occurrences semees dans le chapitre,
+14.06), des listes de noms, des cartes, des calculs d'altitude, et sur
+31 d'entre elles le meme mot en marge : « 0114 ».
+
+[OBL] RAPPEL CANON : LOHEN NE SAIT PAS BIEN LIRE. [OBL] C'est ici que
+ca coute le plus cher. [OBL] Il est devant trois ans d'ecriture d'un
+homme et il n'en tire presque rien.
+
+    [S8_LOH_L115]  2,2 s · bas · « Y'a du papier partout. »
+    [S8_LOH_L116]  2,6 s · bas · « Punaise, punaise, punaise. Y'en a des dizaines. »
+    [S8_LOH_L117]  1,8 s · bas · « C'est son ecriture. »
+        dir : [OBL][NAR] IL RECONNAIT L'ECRITURE AVANT DE POUVOIR LIRE
+              UN MOT. [OBL] Direction : plat, immediat, sans doute.
+              [OBL] Le joueur aussi la reconnait : elle a ete semee 6
+              fois depuis S1 (14.06), sur un registre, un bon de
+              livraison, une etiquette, deux fiches et une marge.
+              [OBL] Personne ne l'avait signalee.
+    [S8_LOH_L118]  2,4 s · bas · « Je reconnais l'ecriture et je peux pas la lire. »
+        dir : [OBL][NAR] LA PHRASE LA PLUS CRUELLE DU CHAPITRE 1.
+              [OBL] Direction : aucune amertume. Constat. 0,7 de gain.
+              [OBL] Prise refusee si elle est jouee avec colere ou
+              apitoiement.
+    [S8_LOH_L119]  2,0 s · bas · « Des listes. »
+    [S8_LOH_L120]  2,8 s · bas · « Des colonnes de noms, comme sur le mur de la place. »
+    [S8_LOH_L121]  2,2 s · bas · « Des cartes. La ville, dessinee a la main, sept fois. »
+    [S8_LOH_L122]  2,6 s · bas · « Des chiffres en colonnes. Des hauteurs, je crois. »
+    [S8_LOH_L123]  1,8 s · bas · « Et ca, je sais le lire. »
+    [S8_LOH_L124]  1,4 s · bas · « Zero, un, un, quatre. »
+        dir : [OBL][NAR] SON MATRICULE. [OBL] Quatre chiffres qu'il a
+              appris avant son propre nom (la lettre le dira).
+              [OBL] Direction : il les lit a voix haute, chiffre par
+              chiffre, comme on lit quand on apprend. [OBL] Aucune
+              musique. [OBL] Aucun plan sur son visage.
+    [S8_LOH_L125]  2,4 s · bas · « La. Et la. »
+    [S8_LOH_L126]  2,0 s · bas · « Et la. »
+    [S8_LOH_L127]  2,8 s · bas · « Je vais pas les compter. »
+        dir : [OBL][NAR] IL Y EN A 31 DANS LA MARGE (19.03 point 4).
+              [OBL] Et 314 sur les feuilles empilees derriere, que le
+              faisceau revelera pendant la lecture. [OBL] Il refuse de
+              compter, ici, une deuxieme fois (apres les marches).
+              [OBL] LE JEU NE COMPTERA PAS NON PLUS. Aucun compteur.
+              [OBL] Le joueur peut compter les 31 a la main. 0,4 % le
+              font. Le nombre est exact dans la texture.
+    [S8_LOH_L128]  2,2 s · bas · « Bon. »
+
+--- § 4 — LES CHAUSSURES (6 lignes) ----------------------------------------------------------------
+
+    [S8_LOH_L129]  1,8 s · bas · « Des chaussures, contre le mur. »
+    [S8_LOH_L130]  2,4 s · bas · « Rangees cote a cote. »
+    [S8_LOH_L131]  2,0 s · bas · « Les deux. »
+        dir : [OBL][NAR] QUATRIEME ET DERNIERE PAIRE DU CHAPITRE, ET
+              LA SEULE COMPLETE. [OBL] Rappel : la botte de S1, la
+              chaussure de S2, la petite chaussure de S5, les 118
+              chaussures d'enfants (PN-063). [OBL] Toutes depareillees.
+              [OBL] Ici, deux chaussures, cote a cote, appariees.
+              [OBL] Comme les gants de S6 (le seul objet apparie
+              jusqu'ici). [OBL] LES DEUX OBJETS APPARIES DU CHAPITRE
+              SONT A ESTEBAN. [OBL] Jamais dit. Job CI `paired-two`.
+    [S8_LOH_L132]  2,6 s · bas · « Il est pas parti avec ses chaussures. »
+    [S8_LOH_L133]  2,2 s · bas · « Ou il en avait deux paires. »
+        dir : [OBL] IL SE DONNE UNE ECHAPPATOIRE. [OBL] C'est la seule
+              fois du chapitre ou Lohen construit volontairement une
+              hypothese qui l'arrange. [OBL] Personne ne la contredit.
+              [OBL] 20.05 : « Si Esteban est vivant » ne recoit pas de
+              reponse.
+    [S8_LOH_L134]  1,4 s · bas · « Bon. »
+
+--- § 5 — LE CARNET, E30 (12 lignes) ---------------------------------------------------------------
+
+[OBL] 19.05. E30, 2:30, optionnel, 94 % des joueurs le prennent.
+[OBL] PAS DE VOIX OFF SUR LE CARNET : le joueur tourne les pages et lit
+l'ecriture. La voix d'Esteban lit SEULEMENT les 6 extraits canoniques.
+[OBL] Les 6 extraits sont dans le master (19.05) et ne sont pas
+reproduits ici : ils comptent comme 6 des 39 lignes d'Esteban en S8.
+[OBL] Ils sont domicilies dans D05 pour le comptage.
+
+[OBL] Les 12 lignes ci-dessous sont celles de LOHEN pendant qu'il tourne
+les pages. [OBL] Elles s'intercalent entre les extraits.
+
+    [S8_LOH_L135]  2,0 s · bas · « Un carnet, ouvert. »
+    [S8_LOH_L136]  2,4 s · bas · « Il ecrivait tous les jours. »
+    [S8_LOH_L137]  2,8 s · bas · « Y'a des numeros en haut des pages. Jour quatre. Jour soixante. »
+    [S8_LOH_L138]  2,2 s · bas · « Il comptait, lui. »
+        dir : [OBL][NAR] LOHEN REFUSE DE COMPTER TROIS FOIS DANS S8.
+              ESTEBAN A COMPTE 1 049 JOURS. [OBL] Aucun commentaire.
+    [S8_LOH_L139]  1,8 s · bas · « Je tourne les pages. »
+    [S8_LOH_L140]  2,6 s · bas · « Je comprends un mot sur cinq et je tourne quand meme. »
+    [S8_LOH_L141]  2,0 s · bas · « Je reconnais « cloches ». »
+    [S8_LOH_L142]  2,4 s · bas · « Je reconnais « lampe ». »
+    [S8_LOH_L143]  2,8 s · bas · « Je reconnais mon matricule, encore. »
+    [S8_LOH_L144]  2,2 s · bas · « Le dernier jour, y'a trois mots et de la place apres. »
+        dir : [OBL] jour 1049 : « Je n'ai plus de papier. » [OBL] Cinq
+              mots. Lohen en compte trois : il ne compte pas « je » ni
+              « n' ». [OBL] Un homme qui ne lit pas bien compte les
+              mots qu'il reconnait. [OBL] Ne jamais corriger.
+    [S8_LOH_L145]  2,6 s · bas · « Et apres, plus rien. »
+    [S8_LOH_L146]  1,6 s · bas · « Bon. »
+
+--- § 6 — LES LIGNES DE TOUCHER DE LA CHAMBRE (8 lignes) ------------------------------------------
+
+[OBL] Lohen enleve ses gants pour toucher (geste L1). [OBL] Dans cette
+piece, il les a deja dans la main gauche depuis S6 — il les garde et ne
+les met jamais (CI `gloves-never-worn`).
+
+    [S8_LOH_L147]  1,8 s · bas · « Le bois de la table est lisse a un endroit. »
+    [S8_LOH_L148]  2,4 s · bas · « La ou on pose l'avant-bras pour ecrire. »
+    [S8_LOH_L149]  2,0 s · bas · « La chaise grince a droite. »
+    [S8_LOH_L150]  2,6 s · bas · « Il devait s'asseoir toujours du meme cote. »
+    [S8_LOH_L151]  2,2 s · bas · « Le mur est froid. »
+    [S8_LOH_L152]  2,8 s · bas · « Le papier est tiede parce que la lampe est dessous. »
+    [S8_LOH_L153]  2,0 s · bas · « Y'a une pierre plate sur la table. »
+    [S8_LOH_L154]  2,4 s · bas · « Pour que le vent emporte pas ce qu'y a dessous. »
+        dir : [OBL] DERNIERE LIGNE AVANT L'INTERACTION AVEC LA LETTRE.
+              [OBL] 19.03 point 7. [OBL] Il ne dit pas « une lettre ».
+              Il dit « ce qu'y a dessous ». [OBL] Il ne sait pas encore.
+              Voir D04.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] Camera libre, aucun scriptage d'entree, la lettre accessible en 11 s
+[ ] Ambre = 1re occurrence depuis 47 min — CI `amber-guard`
+[ ] Aucune musique dans tout le document
+[ ] L109 : la couverture regardee en premier par > 70 % — CI `blanket-first`
+[ ] L118 : jouee sans amertume, prise refusee sinon
+[ ] L127 : 31 « 0114 » exacts dans la texture, aucun compteur
+[ ] L131 : 2e et derniere paire appariee du chapitre — CI `paired-two`
+[ ] Le carnet n'a pas de voix off sauf les 6 extraits canoniques

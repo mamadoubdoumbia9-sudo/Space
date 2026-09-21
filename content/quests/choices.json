@@ -1,0 +1,1095 @@
+{
+ "total": 38,
+ "rules": {
+  "no_moral_choice": true,
+  "no_reputation_system": true,
+  "no_important_marker": true,
+  "timers": [
+   {
+    "no": 17,
+    "s": 9.4
+   },
+   {
+    "no": 18,
+    "s": 14.2
+   }
+  ],
+  "timer_visual": "perte d'opacite lineaire, jamais de barre ni de rouge",
+  "silence_is_valid": true,
+  "silence_count": 9,
+  "silence_position": "last",
+  "silence_best_branch_count": 6,
+  "not_replayable": true,
+  "single_autosave": true,
+  "change_one_line": 34,
+  "bigger_effects": [
+   4,
+   18,
+   20,
+   34
+  ],
+  "max_options": 3,
+  "total": 38,
+  "expiry": "le silence est joue comme une reponse a part entiere"
+ },
+ "choices": [
+  {
+   "no": 1,
+   "seq": "S1",
+   "doc": "D05",
+   "title": "Repondre a Pallas ou pas",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S1_D05",
+   "choice_id": "S1_D05_C01",
+   "options": [
+    {
+     "index": 1,
+     "text": "Qui les barre ?",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Vous en connaissez combien ?",
+     "silence": false
+    },
+    {
+     "index": 3,
+     "text": "(Ne rien dire et continuer a lire.)",
+     "silence": true
+    }
+   ],
+   "branches": {
+    "1": [
+     "S1_LOH_L066",
+     "S1_PAL_L067"
+    ],
+    "2": [
+     "S1_LOH_L068",
+     "S1_PAL_L069"
+    ],
+    "3": [
+     "S1_PAL_L070",
+     "S1_PAL_L071",
+     "S1_PAL_L072"
+    ]
+   }
+  },
+  {
+   "no": 2,
+   "seq": "S1",
+   "doc": "D05",
+   "title": "Demander la route / la suivre",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S1_D05",
+   "choice_id": "S1_D05_C02",
+   "options": [
+    {
+     "index": 1,
+     "text": "Je sais ce que vous allez dire.",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Dites-le.",
+     "silence": false
+    }
+   ],
+   "branches": {
+    "1": [
+     "S1_LOH_L073",
+     "S1_PAL_L074"
+    ],
+    "2": [
+     "S1_LOH_L075",
+     "S1_PAL_L076",
+     "S1_LOH_L077",
+     "S1_PAL_L078",
+     "S1_LOH_L079",
+     "S1_PAL_L080"
+    ]
+   }
+  },
+  {
+   "no": 3,
+   "seq": "S2",
+   "doc": "D04",
+   "title": "Le choix a une seule option",
+   "timer_s": 0.0,
+   "effect": "aucun (voir 3.02)",
+   "displays_options": true,
+   "scene": "S2_D04",
+   "choice_id": "S2_D04_C03",
+   "options": [],
+   "branches": {}
+  },
+  {
+   "no": 4,
+   "seq": "S3",
+   "doc": "D12",
+   "title": "Prononcer le nom d'Esteban",
+   "timer_s": 0.0,
+   "effect": "1re occurrence du nom",
+   "displays_options": true
+  },
+  {
+   "no": 5,
+   "seq": "S3",
+   "doc": "D12",
+   "title": "Insister aupres de Tallec",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true
+  },
+  {
+   "no": 6,
+   "seq": "S3",
+   "doc": "D12",
+   "title": "Payer Thea ou negocier",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true
+  },
+  {
+   "no": 7,
+   "seq": "S3",
+   "doc": "D12",
+   "title": "Croire Brel ou non",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S3_D12",
+   "choice_id": "S3_D12_C07",
+   "options": [
+    {
+     "index": 1,
+     "text": "Qui te l'a donnee ?",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Elle te va bien.",
+     "silence": false
+    }
+   ],
+   "branches": {
+    "1": [
+     "S3_LOH_L398",
+     "S3_SOL_L399"
+    ],
+    "2": [
+     "S3_LOH_L400",
+     "S3_SOL_L401"
+    ]
+   }
+  },
+  {
+   "no": 8,
+   "seq": "S3",
+   "doc": "D12",
+   "title": "Suivre Sol sur les toits",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S3_D12",
+   "choice_id": "S3_D12_C08",
+   "options": [
+    {
+     "index": 1,
+     "text": "Brel dit qu'il vous a forge votre ancre.",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Garric dort au-dessus du Registre. Vous le savez ?",
+     "silence": false
+    },
+    {
+     "index": 3,
+     "text": "Rien. Je passais.",
+     "silence": false
+    }
+   ],
+   "branches": {
+    "1": [
+     "S3_LOH_L402",
+     "S3_TAL_L403"
+    ],
+    "2": [
+     "S3_LOH_L404",
+     "S3_TAL_L405"
+    ],
+    "3": [
+     "S3_LOH_L406",
+     "S3_TAL_L407",
+     "S3_PAL_L408"
+    ]
+   }
+  },
+  {
+   "no": 9,
+   "seq": "S3",
+   "doc": "D12",
+   "title": "Repondre a Garric",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S3_D12",
+   "choice_id": "S3_D12_C09",
+   "options": [
+    {
+     "index": 1,
+     "text": "Vous montez jusqu'ou ?",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Vous etes venue pour moi ?",
+     "silence": false
+    }
+   ],
+   "branches": {
+    "1": [
+     "S3_LOH_L409",
+     "S3_PAL_L410"
+    ],
+    "2": [
+     "S3_LOH_L411",
+     "S3_PAL_L412",
+     "S3_SOL_L413"
+    ]
+   }
+  },
+  {
+   "no": 10,
+   "seq": "S3",
+   "doc": "D12",
+   "title": "Le refus de la ville (« qui »)",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S3_D12",
+   "choice_id": "S3_D12_C10",
+   "options": [
+    {
+     "index": 1,
+     "text": "Oui.",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Tu me suis depuis tout a l'heure ?",
+     "silence": false
+    },
+    {
+     "index": 3,
+     "text": "Tu peux pas venir.",
+     "silence": false
+    }
+   ],
+   "branches": {
+    "1": [
+     "S3_LOH_L414",
+     "S3_SOL_L415"
+    ],
+    "2": [
+     "S3_LOH_L416",
+     "S3_SOL_L417"
+    ],
+    "3": [
+     "S3_LOH_L418",
+     "S3_SOL_L419"
+    ]
+   }
+  },
+  {
+   "no": 11,
+   "seq": "S3",
+   "doc": "D12",
+   "title": "Lire la lettre a voix haute",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S3_D12",
+   "choice_id": "S3_D12_C11",
+   "options": [
+    {
+     "index": 1,
+     "text": "(Tenir la grille.)",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "(Ne pas la tenir.)",
+     "silence": false
+    }
+   ],
+   "branches": {}
+  },
+  {
+   "no": 12,
+   "seq": "S3",
+   "doc": "D12",
+   "title": "Accepter l'aide de Niels",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S3_D12",
+   "choice_id": "S3_D12_C12",
+   "options": [
+    {
+     "index": 1,
+     "text": "Ca se soigne, d'autres choses ?",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Merci pour tout a l'heure.",
+     "silence": false
+    }
+   ],
+   "branches": {}
+  },
+  {
+   "no": 13,
+   "seq": "S3",
+   "doc": "D12",
+   "title": "Wenna : la question directe",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S3_D12",
+   "choice_id": "S3_D12_C13",
+   "options": [
+    {
+     "index": 1,
+     "text": "Je lui dirai.",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Il ne reviendra pas.",
+     "silence": false
+    }
+   ],
+   "branches": {}
+  },
+  {
+   "no": 14,
+   "seq": "S3",
+   "doc": "D12",
+   "title": "Partir sans saluer",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S3_D12",
+   "choice_id": "S3_D12_C14",
+   "options": [
+    {
+     "index": 1,
+     "text": "(La ressortir et la regarder.)",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "(La laisser.)",
+     "silence": false
+    },
+    {
+     "index": 3,
+     "text": "(La donner a Sol.) » — disponible seulement si Sol est present",
+     "silence": false
+    }
+   ],
+   "branches": {}
+  },
+  {
+   "no": 15,
+   "seq": "S4",
+   "doc": "D10",
+   "title": "Poser la tasse ou non",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true
+  },
+  {
+   "no": 16,
+   "seq": "S4",
+   "doc": "D12",
+   "title": "Demander l'annee du veuvage",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true
+  },
+  {
+   "no": 17,
+   "seq": "S4",
+   "doc": "D10",
+   "title": "La question sur les croix",
+   "timer_s": 9.4,
+   "effect": "replique + ton",
+   "displays_options": true,
+   "scene": "S4_D10",
+   "choice_id": "S4_D10_C17",
+   "options": [
+    {
+     "index": 1,
+     "text": "Huit ans ? Vous avez dit quatre, tout a l'heure.",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Je peux la connaitre ?",
+     "silence": false
+    }
+   ],
+   "branches": {
+    "1": [
+     "S4_LOH_L259",
+     "S4_MIR_L260"
+    ],
+    "2": [
+     "S4_LOH_L261",
+     "S4_MIR_L262",
+     "S4_MIR_L263",
+     "S4_MIR_L264"
+    ]
+   }
+  },
+  {
+   "no": 18,
+   "seq": "S4",
+   "doc": "D10",
+   "title": "Regarder le dos du dossier",
+   "timer_s": 14.2,
+   "effect": "ouvre E18 (4 %)",
+   "displays_options": true,
+   "scene": "S4_D10",
+   "choice_id": "S4_D10_C18",
+   "options": [
+    {
+     "index": 1,
+     "text": "(Retourner la chemise.)",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "(Chercher dans les tiroirs voisins.)",
+     "silence": false
+    },
+    {
+     "index": 3,
+     "text": "(Reposer la chemise.)",
+     "silence": false
+    }
+   ],
+   "branches": {
+    "1": [
+     "S4_LOH_L265",
+     "S4_LOH_L266",
+     "S4_LOH_L267"
+    ],
+    "2": [
+     "S4_LOH_L268",
+     "S4_LOH_L269"
+    ],
+    "3": [
+     "S4_LOH_L270",
+     "S4_LOH_L271",
+     "S4_ECH_L272",
+     "S4_ECH_L273",
+     "S4_ECH_L274",
+     "S4_ECH_L275"
+    ]
+   }
+  },
+  {
+   "no": 19,
+   "seq": "S4",
+   "doc": "D12",
+   "title": "Interrompre Mireille",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S4_D12",
+   "choice_id": "S4_D12_C19",
+   "options": [
+    {
+     "index": 1,
+     "text": "Il est vraiment mauvais.",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Il est tres bon.",
+     "silence": false
+    }
+   ],
+   "branches": {}
+  },
+  {
+   "no": 20,
+   "seq": "S4",
+   "doc": "D12",
+   "title": "La question sur la main",
+   "timer_s": 0.0,
+   "effect": "supprime le geste M2",
+   "displays_options": true,
+   "scene": "S4_D12",
+   "choice_id": "S4_D12_C20",
+   "options": [
+    {
+     "index": 1,
+     "text": "Votre main.",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Vous ecrivez de la gauche.",
+     "silence": false
+    },
+    {
+     "index": 3,
+     "text": "(Ne rien dire, et ne plus regarder.)",
+     "silence": true
+    }
+   ],
+   "branches": {
+    "1": [
+     "S4_LOH_L314",
+     "S4_MIR_L315",
+     "S4_MIR_L316"
+    ],
+    "2": [
+     "S4_LOH_L317",
+     "S4_MIR_L318",
+     "S4_MIR_L319"
+    ],
+    "3": [
+     "S4_LOH_L320"
+    ]
+   }
+  },
+  {
+   "no": 21,
+   "seq": "S4",
+   "doc": "D12",
+   "title": "Rester ou partir",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S4_D12",
+   "choice_id": "S4_D12_C21",
+   "options": [
+    {
+     "index": 1,
+     "text": "Il y en a une ici aussi.",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Qui les barre ?",
+     "silence": false
+    }
+   ],
+   "branches": {}
+  },
+  {
+   "no": 22,
+   "seq": "S4",
+   "doc": "D12",
+   "title": "Redresser la chaise",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S4_D12",
+   "choice_id": "S4_D12_C22",
+   "options": [
+    {
+     "index": 1,
+     "text": "Cette chaise etait a quelqu'un.",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "(Ne rien dire.)",
+     "silence": true
+    }
+   ],
+   "branches": {}
+  },
+  {
+   "no": 23,
+   "seq": "S4",
+   "doc": "D12",
+   "title": "Remercier ou non",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S4_D12",
+   "choice_id": "S4_D12_C23",
+   "options": [
+    {
+     "index": 1,
+     "text": "Je reviendrai.",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Je ne reviendrai pas.",
+     "silence": false
+    },
+    {
+     "index": 3,
+     "text": "Vous allez rester ici ?",
+     "silence": false
+    }
+   ],
+   "branches": {}
+  },
+  {
+   "no": 24,
+   "seq": "S5",
+   "doc": "D05",
+   "title": "« Vieux ou fatigue »",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S5_D05",
+   "choice_id": "S5_D05_C24",
+   "options": [
+    {
+     "index": 1,
+     "text": "Les deux.",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "J'ai vingt-sept ans.",
+     "silence": false
+    },
+    {
+     "index": 3,
+     "text": "(Ne rien dire et accelerer.)",
+     "silence": true
+    }
+   ],
+   "branches": {
+    "1": [
+     "S5_LOH_L165",
+     "S5_SOL_L166"
+    ],
+    "2": [
+     "S5_LOH_L167",
+     "S5_SOL_L168",
+     "S5_SOL_L169"
+    ],
+    "3": [
+     "S5_LOH_L170",
+     "S5_SOL_L171",
+     "S5_SOL_L172",
+     "S5_LOH_L173",
+     "S5_SOL_L174",
+     "S5_LOH_L175",
+     "S5_SOL_L176",
+     "S5_LOH_L177",
+     "S5_SOL_L178"
+    ]
+   }
+  },
+  {
+   "no": 25,
+   "seq": "S5",
+   "doc": "D05",
+   "title": "La piece propre",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S5_D05",
+   "choice_id": "S5_D05_C25",
+   "options": [
+    {
+     "index": 1,
+     "text": "Pourquoi ?",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Moi non plus je n'irais pas.",
+     "silence": false
+    }
+   ],
+   "branches": {
+    "1": [
+     "S5_LOH_L179",
+     "S5_SOL_L180"
+    ],
+    "2": [
+     "S5_LOH_L181",
+     "S5_SOL_L182",
+     "S5_SOL_L183",
+     "S5_LOH_L184",
+     "S5_SOL_L185"
+    ]
+   }
+  },
+  {
+   "no": 26,
+   "seq": "S5",
+   "doc": "D05",
+   "title": "Demander a Sol d'attendre",
+   "timer_s": 0.0,
+   "effect": "ligne en plus en S8",
+   "displays_options": true,
+   "scene": "S5_D05",
+   "choice_id": "S5_D05_C26",
+   "options": [
+    {
+     "index": 1,
+     "text": "Viens quand meme.",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "D'accord.",
+     "silence": false
+    },
+    {
+     "index": 3,
+     "text": "Tu m'attends ?",
+     "silence": false
+    }
+   ],
+   "branches": {
+    "1": [
+     "S5_LOH_L186",
+     "S5_SOL_L187"
+    ],
+    "2": [
+     "S5_LOH_L188",
+     "S5_SOL_L189"
+    ],
+    "3": [
+     "S5_LOH_L190",
+     "S5_SOL_L191",
+     "S5_SOL_L192",
+     "S5_SOL_L193",
+     "S5_LOH_L194",
+     "S5_SOL_L195",
+     "S5_LOH_L196",
+     "S5_SOL_L197",
+     "S5_LOH_L198",
+     "S5_SOL_L199",
+     "S5_LOH_L200"
+    ]
+   }
+  },
+  {
+   "no": 27,
+   "seq": "S5",
+   "doc": "D08",
+   "title": "« Tu manges ou / quand »",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S5_D08",
+   "choice_id": "S5_D08_C27",
+   "options": [
+    {
+     "index": 1,
+     "text": "Tu manges ou ?",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Tu manges quand ?",
+     "silence": false
+    }
+   ],
+   "branches": {}
+  },
+  {
+   "no": 28,
+   "seq": "S5",
+   "doc": "D08",
+   "title": "Le prenom de Sol",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S5_D08",
+   "choice_id": "S5_D08_C28",
+   "options": [
+    {
+     "index": 1,
+     "text": "Sol, c'est un vrai prenom ?",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Qui t'a appele Sol ?",
+     "silence": false
+    },
+    {
+     "index": 3,
+     "text": "(Ne rien demander.)",
+     "silence": true
+    }
+   ],
+   "branches": {}
+  },
+  {
+   "no": 29,
+   "seq": "S5",
+   "doc": "D08",
+   "title": "La grille",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S5_D08",
+   "choice_id": "S5_D08_C29",
+   "options": [
+    {
+     "index": 1,
+     "text": "Qu'est-ce qu'il y a derriere, vraiment ?",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Je reviendrai par ici.",
+     "silence": false
+    }
+   ],
+   "branches": {}
+  },
+  {
+   "no": 30,
+   "seq": "S6",
+   "doc": "D05",
+   "title": "Pourquoi m'as-tu fait venir",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S6_D05",
+   "choice_id": "S6_D05_C30",
+   "options": [
+    {
+     "index": 1,
+     "text": "Pourquoi tu m'as fait venir ?",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Je suis content d'etre venu.",
+     "silence": false
+    }
+   ],
+   "branches": {}
+  },
+  {
+   "no": 31,
+   "seq": "S6",
+   "doc": "D05",
+   "title": "Rester / rentrer / l'heure",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S6_D05",
+   "choice_id": "S6_D05_C31",
+   "options": [
+    {
+     "index": 1,
+     "text": "Tu restes jusqu'a la fin ?",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "On rentre ?",
+     "silence": false
+    },
+    {
+     "index": 3,
+     "text": "Il est quelle heure ?",
+     "silence": false
+    }
+   ],
+   "branches": {}
+  },
+  {
+   "no": 32,
+   "seq": "S6",
+   "doc": "D05",
+   "title": "LE FAUX CHOIX",
+   "timer_s": 0.0,
+   "effect": "AUCUN (voir 3.01)",
+   "displays_options": true,
+   "scene": "S6_D05",
+   "choice_id": "S6_D05_C32",
+   "options": [
+    {
+     "index": 1,
+     "text": "Je t'attends.",
+     "silence": false
+    },
+    {
+     "index": 2,
+     "text": "Je viens avec toi.",
+     "silence": false
+    }
+   ],
+   "branches": {
+    "1": [
+     "S6_LOH_L165",
+     "S6_EST_L166"
+    ],
+    "2": [
+     "S6_LOH_L167",
+     "S6_EST_L168",
+     "S6_LOH_L169",
+     "S6_EST_L170",
+     "S6_EST_L171",
+     "S6_LOH_L172",
+     "S6_EST_L173",
+     "S6_LOH_L174",
+     "S6_EST_L175",
+     "S6_LOH_L176"
+    ]
+   }
+  },
+  {
+   "no": 33,
+   "seq": "S6",
+   "doc": "D05",
+   "title": "Appeler ou non",
+   "timer_s": 0.0,
+   "effect": "replique",
+   "displays_options": true,
+   "scene": "S6_D05",
+   "choice_id": "S6_D05_C33",
+   "options": [
+    {
+     "index": 1,
+     "text": "(L'appeler.)",
+     "silence": true
+    },
+    {
+     "index": 2,
+     "text": "(Ne pas l'appeler.)",
+     "silence": true
+    }
+   ],
+   "branches": {
+    "1": [
+     "S6_LOH_L177",
+     "S6_EST_L178",
+     "S6_LOH_L179",
+     "S6_LOH_L180"
+    ],
+    "2": [
+     "S6_LOH_L181",
+     "S6_LOH_L182",
+     "S6_LOH_L183",
+     "S6_LOH_L184"
+    ]
+   }
+  },
+  {
+   "no": 34,
+   "seq": "S7",
+   "doc": "D05",
+   "title": "Prendre le dossier",
+   "timer_s": 0.0,
+   "effect": "flag chapitre 2",
+   "displays_options": true,
+   "scene": "S7_D05",
+   "choice_id": "S7_D05_C34",
+   "options": [
+    {
+     "index": 1,
+     "text": "(Prendre le dossier.)",
+     "silence": true
+    },
+    {
+     "index": 2,
+     "text": "(Ne pas le prendre.)",
+     "silence": true
+    }
+   ],
+   "branches": {
+    "1": [
+     "S7_LOH_L157",
+     "S7_LOH_L158",
+     "S7_LOH_L159",
+     "S7_LOH_L160"
+    ],
+    "2": [
+     "S7_LOH_L161",
+     "S7_LOH_L162"
+    ]
+   }
+  },
+  {
+   "no": 35,
+   "seq": "S7",
+   "doc": "D05",
+   "title": "Achever le Verrier ou partir",
+   "timer_s": 0.0,
+   "effect": "flag chapitre 2",
+   "displays_options": true,
+   "scene": "S7_D05",
+   "choice_id": "S7_D05_C35",
+   "options": [
+    {
+     "index": 1,
+     "text": "(L'achever.)",
+     "silence": true
+    },
+    {
+     "index": 2,
+     "text": "(Partir.)",
+     "silence": true
+    }
+   ],
+   "branches": {
+    "1": [
+     "S7_LOH_L163",
+     "S7_LOH_L164"
+    ],
+    "2": [
+     "S7_LOH_L165",
+     "S7_LOH_L166",
+     "S7_LOH_L167"
+    ]
+   }
+  },
+  {
+   "no": 36,
+   "seq": "S8",
+   "doc": "D08/D10",
+   "title": "Eteindre la lampe",
+   "timer_s": 0.0,
+   "effect": "flag, 6 lignes",
+   "displays_options": false
+  },
+  {
+   "no": 37,
+   "seq": "S8",
+   "doc": "D07",
+   "title": "Le carnet avant ou apres la lettre",
+   "timer_s": 0.0,
+   "effect": "28 variantes",
+   "displays_options": false
+  },
+  {
+   "no": 38,
+   "seq": "S8",
+   "doc": "D10",
+   "title": "Remonter / tourner les pages / attendre",
+   "timer_s": 0.0,
+   "effect": "lignes rares",
+   "displays_options": false
+  }
+ ]
+}

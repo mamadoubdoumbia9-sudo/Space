@@ -1,0 +1,95 @@
+===============================================================================
+PN-014 — LE LANDAU VIDE
+===============================================================================
+Asset : SM_S1_Landau · S1, milieu du quai est, a 40 m de PN-007 ·
+~00:38 · prop narratif · pas d'Echo · LOD0 3 900 tris
+
+§ 1 — CE QU'ON VOIT
+Un landau de l'epoque, grandes roues a rayons, capote de toile relevee,
+chassis de metal chrome, caisse en osier tresse.
+Il est au MILIEU du chemin, en travers, freine. Le frein a pedale est mis.
+Quelqu'un l'a arrete correctement et l'a laisse la.
+La capote est RELEVEE — elle protege. On ne releve pas une capote pour
+rien : il y avait quelqu'un dedans et il fallait le couvrir.
+Dedans : une couverture. Pas froissee, pas arrachée. REPLIEE. Un rectangle
+net, plie en quatre, pose au fond du landau.
+Trois ans de crachin ont fait pourrir l'osier par le bas. Les roues ont
+rouille en place. La couverture, protegee par la capote, est presque
+intacte : on distingue encore son motif, des petits lievres.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 900. Osier tresse : normal map 4K + geometrie sur les bords
+silhouettes uniquement. Rayons en cartes d'alpha.
+La couverture est un mesh sculpte, pli par pli, PAS une simulation. Le
+pliage doit etre net et intentionnel. [OBL] Aucun cloth solver : un tissu
+plie a la main ne ressemble a rien qu'un solveur produise.
+Motif des lievres : texture 2K dediee, seize lievres, tous identiques
+(c'est un tissu imprime — ils DOIVENT etre identiques).
+Shader `wicker_rot` : gradient d'humidite par hauteur, inverse du normal
+(le bas est plus sombre et plus gonfle).
+Collision : capsule. Non poussable. [OBL] Le landau ne roule jamais.
+Anim : NEANT. Aucune.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a sorti un bebe. Et a plie la couverture avant de partir.
+Le geste humain : PLIER. Dans la panique, on ne plie pas. On plie quand on
+a le temps, ou quand on n'a plus rien d'autre a faire de ses mains.
+La capote relevee et le frein mis disent un adulte competent et calme.
+La couverture pliee dit que ca s'est passe apres. Longtemps apres.
+[NAR] Le landau n'a pas ete abandonne pendant la Maree. Il a ete abandonne
+par quelqu'un qui est revenu, plus tard, et qui a plie la couverture.
+Le jeu ne le dit pas. Le joueur qui pense au fil de fer de PN-007 fait le
+lien : c'est la meme personne. Elle est passee ici, puis la-bas, avec une
+pince.
+
+§ 4 — ECHO
+NEANT. [OBL] Meme regle absolue que PN-007. On ne rejoue pas les enfants.
+Cette interdiction est structurelle, pas artistique : sur les 31 Echos du
+chapitre, aucun ne contient une silhouette de moins de 1,20 m, sauf
+VER-ECH-634 (la fille d'Anselme, S7), qui est l'unique exception du jeu et
+la seule fantome qui regarde Lohen, 1,4 s.
+Faire une deuxieme exception detruirait la premiere.
+
+§ 5 — MISE EN SCENE
+EN TRAVERS DU CHEMIN. Le joueur ne peut pas passer sans contourner. Son
+corps doit devier. [ART] C'est la seule fois de la sequence 1 ou un prop
+impose un changement de trajectoire physique au joueur.
+La camera ne bouge pas. Lohen ne regarde pas. Mais ses pieds contournent.
+Le jeu n'a pas besoin d'autre chose.
+Distance a PN-007 : 40 m, et un virage a 90° entre les deux.
+[OBL] Les deux props ne sont jamais dans le meme cadre, quelle que soit la
+position de camera possible. Verifier au frustum depuis 200 points.
+Lumiere : le landau est le point le plus clair du cadre (chrome + osier
+clair) dans une zone de valeurs sombres. Il attire l'oeil a 30 m.
+
+§ 6 — AUDIO
+SFX(wicker_creak_low) : toutes les 17-26 s, -26 dB, quand le vent passe.
+Le son est PROFOND, pas aigu — un panier lourd.
+[OBL] Aucun grincement de roue. Aucun. La tentation du grincement de roue
+de landau vide est un cliche de film d'horreur et ce jeu n'est pas un film
+d'horreur (17.11). Les roues sont rouillees en place et muettes.
+Aucune musique.
+
+§ 7 — INTERDICTIONS
+Interdit de : le faire rouler, bouger, tourner · grincer des roues ·
+ajouter un jouet, un hochet, un biberon, un chausson · donner un Echo ·
+montrer ou suggerer un enfant · le faire commenter · le placer dans le meme
+cadre que PN-007 · simuler la couverture en cloth · defroisser ou froisser
+la couverture · ajouter un second landau dans le jeu.
+
+§ 8 — LIENS
+PN-007 (la chaise attachee) — le prop jumeau, a 40 m et un virage.
+PN-063 (les chaussures d'enfants, S3). PN-118 (la canne taille enfant, S7).
+VER-ECH-634 (la fille d'Anselme).
+[THEME] LES ENFANTS ABSENTS. [THEME] LES GESTES D'APRES — le pliage, le fil
+de fer : quelqu'un, dans cette ville, est revenu s'occuper des objets.
+Le joueur ne saura jamais qui. (Indice non confirme : Mireille a une main
+brulee et ne parle jamais de l'annee qui a suivi la Maree.)
+
+§ 9 — DOD
+[ ] En travers du chemin, contournement physique obligatoire
+[ ] Frein a pedale mis, capote relevee
+[ ] Couverture sculptee pliee en quatre, 16 lievres identiques
+[ ] Aucun son de roue, aucun mouvement, jamais
+[ ] Test de frustum : 0 cadre contenant PN-007 et PN-014 sur 200 points
+[ ] Point le plus clair du cadre a 30 m sans eclairage artificiel ajoute

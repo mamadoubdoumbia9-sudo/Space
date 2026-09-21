@@ -1,0 +1,194 @@
+===============================================================================
+DLG · S3 · D03 — SOL SUR LES TOITS : « J'AI DIT LES LETTRES. PAS LES MOTS. »
+29 entrees non-BK (SOL 16 · LOH 12 · 1 slot muet L085). Contribution : 29.
+SCENE CANONIQUE 12.12 du document maitre — le texte y est fixe.
+Prop : PN-052 (la veste de relayeur de Sol — commentee par SOL-DLG-472).
+===============================================================================
+
+--- AVERTISSEMENT DE CANON --------------------------------------------------------
+
+[OBL] Les lignes L046, L058, et L059 a L072 reprennent MOT POUR MOT la
+scene 12.12 du document maitre. Elles ne sont ni reecrites, ni allongees,
+ni « ameliorees ». Ce document les dote de leurs ids, durees, emotions et
+directions, et ajoute les 12 lignes d'extension qui n'etaient pas dans
+l'extrait canonique (L073 a L084) : celles-ci sont nouvelles et peuvent
+etre discutees. Les autres, non.
+
+--- CONTEXTE -------------------------------------------------------------------
+
+Un toit de tole, 34 m d'altitude, du linge tendu. Sol tient la sacoche a
+deux mains. Iel est pieds nus. Il y a de la tole chaude et des clous. Le
+jeu ne le commente pas.
+
+[OBL] Aucune musique. M15 « Sol » ne demarre qu'apres L084, et seulement
+si le joueur est reste jusqu'au bout.
+
+--- LA SCENE CANONIQUE (12.12) -----------------------------------------------------
+
+    -- L046 « Zero. Un. Un. Quatre. » et L058 « C'est mon matricule. »
+       sont en D02, fin de poursuite. La scene continue :
+
+    [S3_SOL_L059]  SOL · 1,4 s · plat · p0,5
+        « Je sais lire les chiffres. »
+        dir : iel ne rend pas la sacoche. Iel la tient contre le ventre.
+
+    [S3_LOH_L060]  LOHEN · 0,8 s · sec · p0,8
+        « Bravo. »
+        dir : [OBL] sec, pas moqueur. Lohen est essouffle et il a 27 ans
+              et il vient de courir apres un enfant. Il n'est pas
+              attendrissant ici. C'est important : leur relation ne
+              commence pas bien.
+
+    [S3_SOL_L061]  SOL · 1,1 s · plat · p0,4
+        « Les lettres aussi. »
+        dir : iel lance la sacoche. Lohen la rattrape (LOH-CAT-112,
+              14 frames). [OBL] Le rattrapage n'est JAMAIS rate, quelle
+              que soit l'action du joueur. Aucun QTE.
+
+    [S3_LOH_L062]  LOHEN · 1,2 s · plat · p0,6
+        « Alors tu sais lire. »
+
+    [S3_SOL_L063]  SOL · 1,8 s · sec · p0,7
+        « J'ai dit les lettres. Pas les mots. »
+        dir : [OBL][NAR] La ligne la plus importante de S3. Elle decrit
+              exactement l'etat de Lohen, dite par un enfant qui parle
+              d'iel-meme. Ni l'un ni l'autre ne s'en rend compte. Le
+              joueur, si. [OBL] Aucun personnage ne le soulignera jamais.
+              Aucune musique ne l'appuie.
+
+    [S3_LOH_L064]  LOHEN · 1,6 s · plat · p0,9
+        « C'est pas pareil ? »
+        dir : « (un temps) » du canon = la pause de 0,9 s AVANT cette
+              ligne, pas apres. Le temps est chez Lohen : il encaisse.
+
+    [S3_SOL_L065]  SOL · 0,7 s · plat · p0,4
+        « Non. »
+
+    [S3_SOL_L066]  SOL · 2,6 s · plat · p0,5
+        « T'as des trucs dedans qui datent. Trois ans, quatre ans. »
+        dir : iel se balance d'un pied sur l'autre (SOL-IDL-007).
+              [OBL] Sol a ouvert la sacoche pendant la poursuite. Aucune
+              cinematique ne l'a montre. C'est cette ligne qui l'apprend
+              au joueur, apres coup.
+
+    [S3_SOL_L067]  SOL · 1,3 s · sec · p0,6
+        « T'es un mauvais facteur. »
+
+    [S3_LOH_L068]  LOHEN · 2,4 s · plat · p0,8
+        « Je suis un facteur qui n'a plus d'adresses. »
+
+    [S3_SOL_L069]  SOL · 2,2 s · plat · p0,0
+        « Ca, ici, tout le monde l'est. »
+        dir : [OBL] iel s'arrete de bouger. Completement. L'anim
+              SOL-IDL-004 (immobilite totale) n'est utilisee que trois
+              fois dans le chapitre : ici, en S5 apres le recit des
+              quatre morts, et en S8 devant la porte du Phare.
+              Fin de l'extrait canonique 12.12.
+
+--- L'EXTENSION (nouvelle, 15 lignes) ----------------------------------------------
+
+Le canon s'arrete. La scene, non : le joueur est sur un toit avec un
+enfant et il a le droit de rester. Ces lignes se declenchent s'il ne
+part pas. Elles sont en escalier : chacune attend un silence de 3 s.
+
+    [S3_LOH_L070]  LOHEN · 1,1 s · plat · p0,7
+        « Comment tu t'appelles. »
+
+    [S3_SOL_L071]  SOL · 0,9 s · plat · p0,5
+        « Sol. »
+
+    [S3_LOH_L072]  LOHEN · 1,4 s · plat · p0,6
+        « Sol comment. »
+
+    [S3_SOL_L073]  SOL · 1,2 s · sec · p0,8
+        « Sol. »
+        dir : [OBL] Sol n'a pas de nom de famille dans tout le jeu.
+              Personne ne le lui redemande. Ce n'est pas un mystere a
+              resoudre : c'est une reponse.
+
+    [S3_LOH_L074]  LOHEN · 1,0 s · plat · p0,6
+        « D'accord. »
+
+    [S3_SOL_L075]  SOL · 1,7 s · plat · p0,5
+        « Ta veste elle a un trou a l'epaule. »
+        dir : [NAR] l'epaule DROITE. L'epaule abimee de Lohen. [OBL]
+              Rien n'est jamais explique a ce sujet, dans aucun
+              dialogue, dans aucun document, jamais. Interdit de canon.
+
+    [S3_LOH_L076]  LOHEN · 0,8 s · sec · p0,9
+        « Je sais. »
+        dir : [OBL] il ferme. Le joueur n'a AUCUNE option pour relancer.
+              Il n'y a pas de choix ici. C'est la seule fois de S3 ou
+              une porte se ferme sans que le joueur puisse y toucher.
+
+    [S3_SOL_L077]  SOL · 2,1 s · plat · p0,6
+        « Moi j'en ai une aussi, de veste. Pas de relayeur. Presque. »
+        dir : [OBL] RACCORD PN-052. Iel parle de la veste trop grande
+              qu'iel porte. C'est le debut de SOL-DLG-472.
+
+    [S3_SOL_L078]  SOL · 2,4 s · plat · p0,5
+        « Elle etait a quelqu'un qui en avait une vraie. »
+        dir : SOL-DLG-472, ligne 2.
+
+    [S3_SOL_L079]  SOL · 1,9 s · plat · p2,1
+        « Je l'ai pas volee, celle-la. »
+        dir : SOL-DLG-472, ligne 3 et derniere. [OBL] Silence reel de
+              2,1 s apres. Aucune reponse possible : le joueur n'a pas
+              d'option, Lohen ne dit rien. Canon annexe B, PN-052.
+
+    [S3_LOH_L080]  LOHEN · 1,3 s · plat · p0,6
+        « Tu connais le poste de milice ? »
+        dir : il change de sujet. Maladroitement. Le silence etait trop
+              long pour lui.
+
+    [S3_SOL_L081]  SOL · 1,1 s · moqueur · p0,4
+        « Tout le monde connait le poste de milice. »
+
+    [S3_LOH_L082]  LOHEN · 1,0 s · plat · p0,5
+        « Tallec y est ? »
+
+    [S3_SOL_L083]  SOL · 2,3 s · plat · p0,7
+        « Il est toujours la. Il bouge pas. Il est comme un meuble mais
+          il parle. »
+
+    [S3_LOH_L084]  LOHEN · 1,2 s · plat · p0,0
+        « C'est une bonne description. »
+        dir : [OBL] fin du document. M15 « Sol » demarre ici, 2 s apres,
+              sur une seule note de clarinette tenue. Si le joueur est
+              parti avant L070, M15 ne demarre pas du tout de la
+              sequence : elle attendra S5. Ce joueur aura un Marche
+              entierement sans theme de Sol et ne le saura jamais.
+
+--- LES 3 LIGNES D'ABANDON DE SOL (12.06) --------------------------------------------
+
+Comptees ici, utilisables dans tout le chapitre. [OBL] Sol est le seul
+PNJ qui SUIT quand on s'eloigne.
+
+    [S3_SOL_L085]  SOL · 0,0 s · — · p0,0
+        (aucun son)
+        dir : PREMIERE FOIS : Sol ne dit rien et suit a 4 m pendant
+              6 secondes exactement, puis s'arrete et laisse partir.
+              [OBL] Cette entree porte un id parce qu'elle occupe un
+              slot du systeme d'abandon, mais elle n'a PAS de fichier
+              VO. Elle n'est pas comptee dans les 2 840. Declaree ici
+              pour que `vo-orphan` ne la signale pas : whitelist.
+
+    [S3_SOL_L086]  SOL · 1,4 s · plat · p0,0
+        « Ok. »
+        dir : deuxieme fois. Iel ne suit plus.
+
+    [S3_SOL_L087]  SOL · 2,0 s · sec · p0,0
+        « T'es presse. Tout le monde est presse. »
+        dir : troisieme fois et suivantes. [OBL] C'est la seule ligne
+              d'abandon du jeu qui fait un peu mal. Elle est de Sol.
+              Elle est meritee.
+
+--- CHECKLIST ----------------------------------------------------------------------
+
+[ ] 12.12 reproduit mot pour mot, aucun ajout dans le perimetre canonique
+[ ] L063 sans appui musical, sans reaction d'aucun personnage
+[ ] Sol n'a pas de nom de famille et on ne le redemande jamais
+[ ] L075/L076 : l'epaule droite n'est pas expliquee, aucune option
+[ ] SOL-DLG-472 : 3 lignes, silence 2,1 s, aucune reponse possible
+[ ] M15 ne demarre pas si le joueur part avant L070
+[ ] L085 : slot sans VO, whitelist `vo-orphan`

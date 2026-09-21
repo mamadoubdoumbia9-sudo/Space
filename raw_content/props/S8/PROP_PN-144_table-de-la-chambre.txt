@@ -1,0 +1,100 @@
+===============================================================================
+PN-144 — LA TABLE DE LA CHAMBRE
+===============================================================================
+Asset : SM_S8_Table_Chambre · S8, chambre du gardien, sous la fenetre ·
+~06:23 · prop narratif · pas d'Echo · LOD0 2 100 tris
+
+§ 1 — CE QU'ON VOIT
+Une table de bois, 1,20 x 0,70 m, quatre pieds tournes, un tiroir.
+Elle est contre le mur courbe, sous la fenetre aux volets fermes.
+Dessus : la lampe (PN-137), le carnet et la borne (PN-141), la lettre et la
+pierre (PN-142, PN-143). Et une chaise.
+[OBL] UNE chaise. Une seule. Tiree, de travers, comme quand on se leve.
+Le plateau de la table est couvert de marques.
+[OBL] Des ronds. Des dizaines de ronds bruns, de 7 a 9 cm, superposes, qui
+se chevauchent sur toute la surface.
+Des traces de tasse. Des centaines de tasses posees pendant des annees.
+[OBL] Et il y a une zone SANS ronds : un rectangle de 21 x 30 cm, au centre
+droit, parfaitement net.
+[OBL] C'est la ou il ecrivait. On ne pose pas sa tasse sur son papier.
+Le bord de la table, cote chaise, est use. Le vernis a disparu sur une
+bande de 40 cm : deux avant-bras.
+Le tiroir est entrouvert de 3 cm.
+Il est VIDE.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 100. Pieds tournes en geometrie.
+[OBL] Les ronds de tasse : texture 4K avec 84 cercles peints a la main, de
+7 a 9 cm, avec des intensites differentes (les anciens sont plus pales) et
+des chevauchements coherents.
+[OBL] Peints a la main. Un generateur produit une distribution trop
+uniforme. Les ronds doivent se concentrer a droite (main droite).
+[OBL] La zone nette : masque, rectangle de 21 x 30, aux bords LEGEREMENT
+irreguliers (le papier n'etait pas toujours exactement au meme endroit).
+La bande d'usure du bord : roughness 0,22 contre 0,44, + 0,4 mm de
+creusement.
+Shader `wood_table_worn`.
+Le tiroir : entrouvert de 3 cm, [OBL] non manipulable. On voit qu'il est
+vide par la fente. Interieur modelise, poussiereux, quelques traces de
+frottement au fond.
+
+§ 3 — CE QUE CA DIT
+Un homme a bu des centaines de tasses a cette table, assis sur cette
+chaise, en ecrivant sur un rectangle de 21 x 30.
+Le geste humain : poser une tasse.
+[OBL] Il n'y a PAS de tasse sur la table au present. Il n'y en a nulle part
+dans la chambre. [OBL] Aucune tasse dans toute la sequence 8.
+[NAR] Les 84 ronds disent des annees. Le rectangle net dit qu'il ecrivait.
+Les avant-bras uses disent qu'il restait.
+Le tiroir vide et entrouvert dit qu'il a pris ce qu'il y avait dedans.
+[OBL] Jamais explique.
+Et il y a une seule chaise.
+
+§ 4 — ECHO
+NEANT. [OBL] Mobilier. Et : E30 (PN-141) est DESSUS. Le systeme ne double
+pas.
+
+§ 5 — MISE EN SCENE
+[OBL] La table porte les trois derniers objets du chapitre. Le joueur y
+passe cinq minutes.
+[OBL] Il voit les ronds de tasse pendant qu'il lit la lettre.
+[ART] Non : en vue subjective (PN-143 § 5), il ne voit que la lettre. Il
+voit les ronds AVANT de la prendre, et APRES l'avoir rangee.
+[OBL] La chaise est tiree. Le joueur ne s'assoit pas (PN-036 : pas de
+commande).
+[OBL] Aucun prompt, aucun LookAt, aucun son, aucune musique.
+[OBL] Il y a une seule chaise, et Mireille a deux tasses (PN-070).
+[OBL] Jamais relie.
+
+§ 6 — AUDIO
+NEANT propre. La table est muette.
+SFX(chair_wood_scrape) : uniquement si le joueur bouscule la chaise en
+passant. -22 dB. [OBL] Dans le silence de 7 minutes de la chambre, ce son
+est enorme. Beaucoup de joueurs sursautent.
+[OBL] Ce n'est pas un jump scare : c'est le joueur qui l'a provoque en
+marchant.
+
+§ 7 — INTERDICTIONS
+Interdit de : ouvrir le tiroir · ajouter un objet dedans · ajouter une
+tasse · ajouter une deuxieme chaise · s'asseoir · deplacer la chaise ·
+generer les ronds · les rendre uniformes · expliquer le tiroir vide ·
+donner un Echo · relier a PN-070.
+
+§ 8 — LIENS
+PN-070 (les deux tasses de Mireille, S4) : deux tasses, une bue.
+Ici : des centaines de ronds, une chaise.
+PN-043 (les deux creux de coudes du forgeron, S3) : ici, une seule bande
+d'avant-bras.
+PN-085 (la chaise de Mireille face au casier vide).
+PN-137, PN-141, PN-142, PN-143 (ce qui est dessus).
+[THEME] UN. [THEME] LES CREUX QUE LES CORPS LAISSENT.
+
+§ 9 — DOD
+[ ] 84 ronds de tasse peints a la main, intensites et chevauchements varies
+[ ] Concentration a droite, jamais uniforme
+[ ] Rectangle net de 21 x 30 cm, bords legerement irreguliers
+[ ] Bande d'usure d'avant-bras, 40 cm, roughness 0,22, creux 0,4 mm
+[ ] Tiroir entrouvert de 3 cm, vide, interieur modelise
+[ ] Une seule chaise, tiree, jamais assise
+[ ] Zero tasse dans toute la sequence 8
+[ ] Zero son propre, zero prompt, zero Echo

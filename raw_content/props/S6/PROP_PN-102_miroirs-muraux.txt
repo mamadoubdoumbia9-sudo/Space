@@ -1,0 +1,103 @@
+===============================================================================
+PN-102 — LES MIROIRS MURAUX
+===============================================================================
+Asset : SM_S6_Miroirs_Muraux · S6, murs longs de la salle de bal ·
+~04:46 · prop narratif · pas d'Echo · LOD0 3 400 tris
+
+§ 1 — CE QU'ON VOIT
+Sur les deux murs longs de la salle, entre les hautes fenetres, il y a des
+miroirs. Huit de chaque cote. Seize en tout.
+Chacun fait 3,20 m de haut sur 1,40 m de large, dans un cadre de stuc dore.
+Ils sont vieux. Le tain est piqué : des taches noires mangent les bords et
+constellent le centre.
+[OBL] Douze sont intacts. Quatre sont casses.
+Les quatre casses le sont de la meme facon : une etoile d'impact a hauteur
+de poitrine, avec des fissures qui rayonnent. Les morceaux tiennent encore
+dans le cadre.
+[OBL] Quatre impacts, quatre miroirs, tous a la meme hauteur, tous du meme
+cote de la salle (le mur nord).
+Ils ne sont pas casses par accident.
+Les douze autres refletent la salle : les lustres, le parquet, les fenetres
+d'en face, et le joueur.
+Face a face, les miroirs se refletent entre eux : un couloir infini de
+lustres qui s'enfonce dans les murs.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 400 (16 cadres de stuc + plans de miroir + 4 etoiles de fracture).
+[OBL] LE PROBLEME TECHNIQUE LE PLUS DUR DU CHAPITRE.
+16 miroirs face a face en reflexion reelle = boucle infinie impossible.
+Solution imposee :
+  — 2 planar reflections seulement (une par mur), resolution 512 x 1 024,
+    mises a jour a 20 Hz, partagees par les 8 miroirs du mur
+  — profondeur de recursion : 1 (un miroir voit la salle, pas les autres
+    miroirs)
+  — l'infini apparent est un CUBEMAP prebakee, placee dans chaque miroir en
+    fond, qui contient un couloir de lustres prerendus. Statique.
+[OBL] Le joueur se voit dans les 12 miroirs intacts. Le couloir infini,
+lui, est un decor. Verifier qu'aucun angle ne revele la supercherie :
+tester depuis 60 points.
+Cout total : 1,3 ms.
+Les 4 fractures : geometrie, 40 fragments chacune, avec un decalage de
+profondeur de 1 a 4 mm par fragment.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a casse quatre miroirs, a hauteur de poitrine, du meme cote.
+Le geste humain : frapper un miroir.
+[OBL] Quatre fois. Le meme mur. [OBL] Jamais explique.
+Les douze autres sont intacts et propres : [OBL] ils ont ete essuyes. Comme
+le miroir de barbier de la mezzanine (PN-022, S1).
+[NAR] Quelqu'un entretient cette salle, allume 72 bougies, balaie le centre
+du parquet, essuie douze miroirs — et a casse les quatre autres.
+[OBL] Le jeu ne dit jamais si c'est la meme personne.
+
+§ 4 — ECHO
+NEANT. Element d'architecture.
+[OBL] Et rappel de la regle technique (PN-060) : les Echos exigent une
+ligne de vue non vitree. Seize surfaces reflechissantes ne changent rien —
+il n'y a simplement pas d'Echo ici.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur se voit. En pied. Pour la premiere fois du chapitre.
+PN-022 (S1) lui montrait son visage a contre-jour, dans le noir, sombre.
+Ici, il se voit entierement, eclaire, dans une salle de bal.
+[ART] Il voit : un homme de 27 ans, trempe jusqu'aux genoux, avec une veste
+de relayeur sale, une sacoche, une epaule qui tombe, et 4 h 46 de fatigue.
+[OBL] Aucun plan scripte. Aucun LookAt. Aucune animation. Aucune musique.
+Le jeu ne signale jamais qu'il y a un miroir.
+[OBL] Lohen ne s'arrete pas devant. Il n'y a pas de LOH-IDL comme a PN-022.
+[OBL] Sol, lui, ne se reflete PAS dans les miroirs ? NON. [OBL] Sol se
+reflete normalement. Il n'y a rien de surnaturel dans ce jeu. Verifier
+explicitement que tous les personnages ont un reflet correct.
+
+§ 6 — AUDIO
+NEANT propre.
+[OBL] Les quatre miroirs casses ne tintent pas, ne craquent pas, ne
+perdent pas de morceaux. Les fragments sont stables depuis longtemps.
+
+§ 7 — INTERDICTIONS
+Interdit de : casser un cinquieme miroir · reparer · expliquer les quatre
+impacts · ajouter du sang sur les fractures · ajouter un reflet anormal ·
+supprimer le reflet d'un personnage · faire apparaitre quelqu'un derriere
+Lohen [OBL — jamais, en aucune circonstance, dans aucun miroir du jeu] ·
+ajouter un jump scare · donner un Echo · ajouter un plan de decouverte ·
+faire s'arreter Lohen.
+
+§ 8 — LIENS
+PN-022 (le miroir de barbier, S1) : le premier reflet, dans le noir.
+PN-060 (le salon de barbier et sa vitrine, S3) : le deuxieme.
+PN-093 (la flaque miroir, S5) : le troisieme, qui refletait le plafond.
+[OBL] Quatre miroirs dans le chapitre. Le premier montre son visage sombre.
+Le dernier le montre en pied, eclaire, dans une salle de bal, apres cinq
+heures. Aucun n'est commente.
+PN-095 (le dessin au charbon) : Sol s'est dessine tout petit.
+[THEME] LE VISAGE. [THEME] SE VOIR.
+
+§ 9 — DOD
+[ ] 16 miroirs, 12 intacts et essuyes, 4 fractures a hauteur de poitrine
+[ ] 4 impacts tous sur le mur nord, jamais expliques
+[ ] 2 planar reflections 512x1024 a 20 Hz, recursion 1
+[ ] Couloir infini en cubemap prebakee, indetectable depuis 60 points testes
+[ ] Reflet en pied du joueur, correct pour tous les personnages
+[ ] Zero plan scripte, zero LookAt, zero animation, zero son
+[ ] Aucune apparition dans aucun miroir, jamais
+[ ] 1,3 ms, valide sur Adreno 640

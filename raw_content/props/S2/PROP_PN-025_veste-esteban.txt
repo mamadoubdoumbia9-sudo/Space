@@ -1,0 +1,129 @@
+===============================================================================
+PN-025 — LA VESTE D'ESTEBAN DANS LA CABINE
+===============================================================================
+Asset : SM_S2_Veste_Esteban · S2, cabine avant de L'Hirondelle de Mer ·
+~01:12 · PORTEUR D'ECHO E04 · PREMIERE PREUVE D'ESTEBAN · LOD0 3 100 tris
+
+§ 1 — CE QU'ON VOIT
+La cabine avant : six couchettes, trois de chaque bord, superposees. Tout
+est incline a 23 degres. Les couvertures ont glisse et se sont amassees
+contre la cloison bribord.
+Sur la couchette superieure tribord — la seule qui soit restee en ordre,
+parce que la gite l'a plaquee contre le bois — une veste.
+Une veste d'homme en toile huilee, brun sombre, col de velours ras, deux
+poches plaquees, une dechirure recousue au coude gauche avec du fil qui
+n'est pas de la bonne couleur.
+Elle est PLIEE. Pas jetee : pliee, manches rentrees, posee a plat.
+Elle n'appartient pas a un marin. C'est une veste de ville, une veste de
+quelqu'un qui n'est pas d'ici, ou qui ne travaille pas de ses mains.
+Sur la couchette, a cote, un mouchoir plie en carre, et rien d'autre.
+[OBL] La veste ne porte AUCUN element ambre. Pas un fil, pas un bouton.
+#FFA33C n'apparait pas sur cet objet.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 100. Mesh sculpte pli par pli, jamais simule.
+Texture 4K dediee. [OBL] La couture du coude gauche est le detail le plus
+important du prop : 14 points, irreguliers, fil gris-bleu sur toile brune,
+faits par quelqu'un qui ne sait pas coudre. Elle doit etre lisible a 40 cm
+et elle sera reutilisee telle quelle sur le modele d'Esteban en
+cinematique (EST-MDL-002), a l'identique, meme UV, meme fil.
+Shader `oilcloth_worn` : toile huilee, roughness 0,44, un leger sheen
+anisotrope sur les zones d'usure (epaules, coudes).
+Anim : PROP-731 — pendant E04 uniquement, la veste ne bouge PAS. Zero
+animation. Cf. § 4.
+Collision : capsule. NON ramassable. [OBL] Lohen ne prend pas la veste.
+Il ne la touche pas. Le prompt est un prompt d'Echo, pas de ramassage.
+
+§ 3 — CE QUE CA DIT
+Esteban etait a bord.
+C'est la premiere preuve materielle du chapitre, a 1h12 de jeu. Jusqu'ici,
+Lohen cherchait sans rien. Ici, il trouve.
+[NAR] Et ce qu'il trouve est une veste pliee. Pas un corps, pas un mot, pas
+une reponse. Un homme qui plie sa veste avant de monter sur le pont.
+Le geste humain : PLIER. Le meme verbe que la couverture du landau
+(PN-014), et ce n'est pas un hasard : c'est le geste de quelqu'un qui
+compte revenir.
+La couture ratee du coude : Esteban recousait ses affaires lui-meme, mal.
+Le joueur apprend un trait de caractere par un fil de la mauvaise couleur.
+Le mouchoir plie en carre a cote : la meme main, la meme manie de l'ordre.
+[OBL] Comment Lohen SAIT que c'est sa veste ? Il ne le dit pas. Il n'y a
+ni dialogue, ni voix off, ni sous-titre. Il le sait parce qu'il la connait.
+Le joueur le comprend par l'animation, § 5.
+
+§ 4 — ECHO
+ECHO E04 — « La veste » — 29 secondes, mode C (le plus rare, ×3).
+Mode C : PAS de silhouette. Rien n'apparait. La lumiere ne change pas.
+Ce qui se passe : le SON de la cabine change. On entend la cabine
+habitee — six hommes qui dorment, une respiration lourde, un ronflement,
+le bois qui travaille, une conversation a deux voix, tres loin, sur le pont,
+incomprehensible.
+Et une de ces deux voix est celle d'Esteban.
+[OBL] Elle est incomprehensible. Aucun mot n'est intelligible. Aucun
+sous-titre n'apparait, meme en accessibilite (14.17 : les sous-titres
+indiquent « [deux voix, indistinctes] »).
+C'est la PREMIERE FOIS que le joueur entend Esteban. Pendant 29 secondes,
+a travers une cloison, sans comprendre un mot.
+A 24 s, les deux voix rient. Une fois. Bref.
+A 27 s, tout s'arrete d'un coup, net, sans fondu.
+[OBL] Musique : NEANT. Le motif LA-DO-MI-RE-LA n'est PAS joue ici. Ce
+serait la place evidente et c'est exactement pourquoi on ne le fait pas.
+Rituel d'entree : 2,44 s, identique.
+
+§ 5 — MISE EN SCENE
+[OBL] Ce qui suit est le moment le plus important de S2.
+Quand le joueur entre dans la cabine, la veste n'est pas en evidence : elle
+est sur la couchette du haut, a droite, dans l'ombre. Il faut la trouver.
+Des que Lohen est a moins de 2,5 m et que la veste est dans son cone de
+vision, LOH-ACT-166 se declenche : il S'ARRETE. Le joueur perd le controle
+pendant 1,8 seconde. Lohen ne bouge pas. Il ne parle pas. La camera ne
+bouge pas.
+[OBL] 1,8 seconde de rien. C'est la seule fois du chapitre ou le jeu vole
+le controle sans raison mecanique. Le joueur comprend exactement ce que ca
+veut dire.
+Puis il recupere le controle. Le prompt d'Echo apparait, normalement, comme
+les trente autres.
+Apres E04 : LOH-IDL-167, 5 s, Lohen reste devant la veste, main droite a
+mi-hauteur, et la baisse. Interruptible. Pas de son.
+[OBL] Il ne prend pas la veste. Elle reste sur cette couchette pour
+toujours. Le joueur peut revenir : elle y est. En S8, elle y est encore.
+
+§ 6 — AUDIO
+Hors Echo : la cabine est le point le plus silencieux de S2. Seulement le
+hull_steel_groan de PN-024, tres attenue par la cloison.
+Pendant E04 : cf. § 4. Traitement : les voix a travers la cloison sont
+filtrees passe-bas 1 200 Hz + reverb de coursive. Le ronflement, lui, est
+proche et non filtre : c'est le detail qui rend la scene physique.
+[OBL] La voix d'Esteban ici est enregistree par le comedien avec un VRAI
+texte (il dit vraiment quelque chose, ecrit, joue), puis rendu
+inintelligible par le filtrage et la distance. On n'utilise pas de
+faux-langage. La difference s'entend.
+Le texte joue n'est jamais publie, jamais sous-titre, jamais reutilise.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre de prendre, toucher, deplacer, sentir la veste ·
+rendre une seule syllabe intelligible · sous-titrer les voix · jouer le
+motif d'Esteban · ajouter de la musique · montrer une silhouette · mettre
+de l'ambre sur la veste · ajouter une lettre ou un objet dans les poches ·
+faire parler Lohen · faire pleurer Lohen (15.22 : Lohen ne pleure pas avant
+la sequence 8, et meme la, on ne le montre pas de face) · rendre E04
+rejouable · deplacer la veste a une autre etape du chapitre.
+
+§ 8 — LIENS
+PN-014 (la couverture pliee). PN-032 (le pardessus plie sur une bitte, S2,
+40 minutes plus tard : un autre homme, un autre pli, aucun lien — faux
+positif volontaire).
+PN-035 (la photo scotchee dans la cabine, a 3 m). PN-039 (la photo 300, S3).
+EST-MDL-002 : la veste portee par Esteban en cinematique, meme couture.
+PN-143 (LA LETTRE) : « Ne me cherche plus dans les objets, mon amour. »
+Ceci est le premier objet. C'est de celui-la qu'elle parle.
+[THEME] LA PREUVE QUI NE PROUVE RIEN.
+
+§ 9 — DOD
+[ ] Veste sculptee pliee, jamais simulee, aucun ambre
+[ ] Couture du coude : 14 points irreguliers, fil gris-bleu, lisible a 40 cm
+[ ] UV et texture identiques a EST-MDL-002
+[ ] LOH-ACT-166 : 1,8 s de perte de controle, sans camera, sans son
+[ ] E04 mode C : zero visuel, voix filtrees 1 200 Hz, un rire a 24 s
+[ ] Texte reel enregistre puis rendu inintelligible ; jamais sous-titre
+[ ] Motif LA-DO-MI-RE-LA absent
+[ ] Veste presente et intacte en S8

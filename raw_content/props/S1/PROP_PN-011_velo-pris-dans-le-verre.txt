@@ -1,0 +1,96 @@
+===============================================================================
+PN-011 — LE VELO PRIS DANS LE VERRE
+===============================================================================
+Asset : SM_S1_Velo_Verre · S1, en contrebas du quai est, sur la Maree, a
+6 m du bord · ~00:27 · prop narratif · pas d'Echo · LOD0 3 300 tris
+
+§ 1 — CE QU'ON VOIT
+Un velo de ville d'homme, cadre noir, porte-bagages arriere, garde-boue.
+Il est dans le verre jusqu'au moyeu : les roues sont prises, le pedalier
+est prise, le cadre emerge a partir de 40 cm.
+Il est DEBOUT. Parfaitement vertical. Le verre l'a saisi en equilibre, dans
+une position qu'aucun velo ne peut tenir seul.
+Le guidon est tourne vers la gauche, comme dans un virage.
+Sur le porte-bagages, sangle par deux tendeurs rouges : un carton a gateaux,
+ficele, avec un noeud a boucle. Le carton est intact. Trois ans de pluie
+l'ont fait gondoler et blanchir, mais la ficelle tient et le noeud est
+toujours fait.
+La selle est reglee tres haut. Un homme grand.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 300. Atlas 2K. Rayons en cartes d'alpha (double face), jante en
+geometrie. Le carton est modelise gondole, pas plan.
+Shader : `maree_glass` sur la zone d'immersion, avec le raccord
+verre/objet traite par le masque de menisque (05.17) — un anneau de 3 cm
+plus clair et plus epais a la ligne de contact, comme un solide qui a
+englobe un corps etranger.
+[OBL] Le velo n'est pas POSE sur le verre : il en SORT. Les vertices sous la
+ligne sont visibles par transparence, deformés par la refraction (IOR 1,52),
+plus flous avec la profondeur.
+Collision : le joueur ne peut pas l'atteindre en S1 (il est sur la Maree,
+et on ne descend pas sur la Maree avant S2). Il le verra d'en haut, a 6 m.
+En S2, il repassera a cote au niveau du sol. Le prop ne change pas ; le
+point de vue change tout.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un rentrait chez lui a velo avec un gateau.
+Le guidon tourne a gauche dit qu'il virait — vers le quai, vers une maison.
+Les deux tendeurs rouges et le noeud a boucle disent qu'il a pris soin du
+carton. Il ne voulait pas l'ecraser.
+La selle haute dit un homme grand.
+Le geste humain : acheter un gateau et le sangler soigneusement.
+[NAR] Personne n'est dans le verre. Le velo est seul et debout. Ou est
+l'homme ? Le jeu ne repondra pas. C'est la premiere fois que le joueur
+comprend, physiquement, ce que « 641 disparus » veut dire : pas 641 corps.
+Zero corps. C'est pire.
+
+§ 4 — ECHO
+NEANT. Raison [OBL] : le velo est sur la MAREE. Aucun Echo n'existe sur la
+Maree elle-meme, dans tout le jeu, sans exception. Le verre ne garde rien —
+il prend. La regle n'est jamais enoncee, mais elle est absolue et le joueur
+la deduit vers la sequence 3.
+Le prompt d'Echo n'apparait pas quand Lohen s'approche en S2. Ce silence
+est la seule pedagogie.
+
+§ 5 — MISE EN SCENE
+Vu d'abord d'EN HAUT, depuis le quai, a 6 m au-dessus, en contre-plongee
+inverse. Le joueur domine. Le velo est petit, net, absurde.
+Cadrage : le velo au tiers gauche, le vide du verre sur les deux tiers
+droits. Le vide doit dominer le cadre.
+[ART] Composition des trois plans : garde-corps rouille en amorce / velo
+sur le verre / brume sans horizon. Pas de Phare dans ce cadre — c'est un
+des rares plans de S1 sans Phare, et c'est deliberé : ici, aucune direction.
+Lumiere : le verre renvoie le ciel. Le velo est plus sombre que tout. Sa
+silhouette est le sujet.
+
+§ 6 — AUDIO
+NEANT a 6 m. Le velo est trop loin pour sonner.
+En S2, a 1,5 m : SFX(metal_cold_tick) toutes les 9-15 s — le metal qui
+travaille avec la temperature. -28 dB. Aucune autre source.
+Aucune musique, ni en S1, ni en S2. [OBL] La Maree est toujours mixee en
+sous-tension : -3 dB sur l'ambiance generale et un banc de bruit rose
+filtre a 120 Hz. On entend le silence du verre.
+
+§ 7 — INTERDICTIONS
+Interdit de : faire tomber le velo · le rendre interactif · ouvrir le carton
+· reveler son contenu · ajouter un corps, un vetement, un chapeau, une
+chaussure a proximite · placer un Echo dessus ou sur toute autre chose
+posee sur la Maree · faire briller les tendeurs rouges plus que la reflectance
+mesuree · ajouter un second velo ailleurs.
+[NAR] Le rouge des tendeurs est le SEUL rouge sature de la sequence 1 avec
+les croix de PN-003. Ce n'est pas un hasard et cela ne se repetera pas.
+
+§ 8 — LIENS
+PN-003 (les 200 croix rouges) : l'autre rouge de S1. PN-031 (la main dans
+le verre, S2) : la reponse la plus dure a la question « ou sont les gens ».
+PN-023 (le tramway sous la surface).
+[THEME] ZERO CORPS. Motif installe ici, a 27 minutes, et jamais explique.
+
+§ 9 — DOD
+[ ] Debout, parfaitement vertical, guidon tourne a gauche
+[ ] Menisque de 3 cm a la ligne de contact verre/metal
+[ ] Refraction IOR 1,52, flou croissant avec la profondeur
+[ ] Carton gondole en geometrie, noeud a boucle modelise
+[ ] Aucun prompt d'Echo, ni en S1 ni en S2
+[ ] Cadrage sans Phare, vide sur 2/3 du cadre
+[ ] Tendeurs rouges : reflectance mesuree, non boostee

@@ -1,0 +1,102 @@
+===============================================================================
+  A-316   idle_sitting_desk
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 316 / 744
+  Partie 3 — MIREILLE VANDECK
+  Categorie : IDLE / REPOS / ATTENTE
+  Fichier source  : A_Mireille_Idl_idle_sitting_desk_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+  Identifiant precedent : A-319 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 13.000 s  (390 frames a 30 fps)
+  Type .................. BOUCLE
+  Root motion ........... RM-NONE
+  Couche AnimationTree .. L0
+  Priorite .............. 5 — locomotion de fond (bande 0-19, bareme 0.05)
+  Poids compresse cible . ~143 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      pelvis, spine_01-03, neck, clavicules, appuis de jambes, doigts au
+      repos
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  MIREILLE VANDECK — 58 ans, gardienne de la Bibliotheque des Eaux.
+
+  Elle est ECONOME. Elle a mal partout et elle ne le montre pas. Chaque
+  mouvement est calcule pour depenser le minimum. Elle ne se leve jamais
+  sans raison. Elle ne hausse JAMAIS la voix : quand elle appuie, elle
+  RALENTIT. Gestes signature : M1 elle tourne sa tasse de 90 deg avant de
+  boire, M2 elle cache sa main brulee quand on la regarde. Elle ment une
+  fois.
+
+  Rig et costume :
+      manteau rapiece (14 pieces, 15 apres le clip A-371), lunettes a un
+      seul verre, canne qui est un pied de biche, tasse
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  assise derriere son bureau, dos droit (elle a ete formee a se tenir droit
+  et elle n'a jamais arrete). Les avant-bras sur la table. La main brulee
+  est TOUJOURS la plus eloignee du visiteur, cachee par le corps ou la
+  manche.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Cyclage [OBL 0.03] : la frame 0 et la frame 390 sont identiques
+  a 0.001 pres. Verifie par `tools/loop_check.py`, qui echoue le
+  build en cas de saut.
+
+  Evenements de timeline :
+      BREATH lente · SFX(chair_creak) f180
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- stop_walk, land_soft, sortie de combat ; -> tout etat
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · cyclage frame 0 == frame 390 (tolerance 0.001)
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-316
+===============================================================================

@@ -1,0 +1,98 @@
+===============================================================================
+DLG · S1 · D10 — LES 26 BARKS DES QUAIS BAS
+0 ligne comptee dans les 118. 26 barks S1_BK (ids L117 a L142).
+Reference INDEX § 6.00 (domicile des barks) et § 6.01 (cooldown 8 min).
+[OBL] A ne pas confondre avec les 10 lignes diegetiques de D07, qui sont
+declenchees par le TOUCHER, uniques, et comptees dans les 118.
+===============================================================================
+
+--- LA DIFFERENCE ENTRE UN BARK ET UNE LIGNE DE D07 [OBL] ---------------------------------------
+
+  · Ligne de D07 : declenchee par un GESTE precis sur un objet precis,
+    unique, ecrite pour cet objet, comptee dans les 118, cooldown 90 s.
+  · Bark de D10 : declenche par le CONTEXTE (marche, effort, proximite,
+    meteo), reutilisable, pilote par le systeme de barks, compte dans
+    les 340, cooldown 8 min.
+
+[OBL] Un integrateur qui deplace une ligne d'une famille a l'autre casse
+deux compteurs. Job CI `bark-vs-diegetic` : les ids `S1_BK_*` doivent
+etre absents du graphe de dialogue et presents dans la table de barks.
+
+--- REGIME DE S1 [OBL] --------------------------------------------------------------------------
+
+[OBL] S1 est la premiere sequence du jeu. Le joueur apprend tout.
+[OBL] Les barks y sont RARES : cooldown porte a 11 minutes (contre 8
+ailleurs), et aucun ne peut se declencher pendant les 22 secondes de
+voix interieure de D01, ni pendant l'arrivee de Pallas.
+[OBL] Job CI `no-bark-intro-s1` : fenetre d'exclusion de 0 a 94 s.
+
+[OBL] Un joueur median entend TROIS barks dans toute la sequence.
+[OBL] C'est volontaire : la premiere heure du jeu doit etre silencieuse
+pour que le bavardage de S3 fasse effet.
+
+[OBL] GAIN : 0,75. Le vent des quais est a -19 dB et ne ducke pas.
+
+-- Groupe A · la marche et le froid (10) --
+
+    [S1_BK_L117]  0,9 s · « Hm. »
+    [S1_BK_L118]  1,2 s · « Il fait froid. »
+    [S1_BK_L119]  1,0 s · « Bon. »
+    [S1_BK_L120]  1,4 s · « Ca glisse. »
+    [S1_BK_L121]  1,1 s · « Doucement. »
+    [S1_BK_L122]  1,3 s · « Le bois est pourri. »
+    [S1_BK_L123]  0,8 s · « Voila. »
+    [S1_BK_L124]  1,2 s · « J'avance. »
+    [S1_BK_L125]  1,0 s · « Encore. »
+    [S1_BK_L126]  1,4 s · « Presque. »
+
+-- Groupe B · le metier (8) --
+
+    [S1_BK_L127]  1,2 s · « Sangle. »
+    [S1_BK_L128]  1,0 s · « Crochet. »
+    [S1_BK_L129]  1,3 s · « Mousqueton. »
+        dir : [OBL] LES TROIS MOTS DE L127 A L129 SONT LE MEME ORDRE
+              QUE LA LIGNE DIEGETIQUE S1_LOH_L095 (« Sangle, crochet,
+              mousqueton. Dans cet ordre. »). [OBL] Le joueur qui a
+              touche le harnais a entendu la phrase complete. Les
+              autres entendront les trois mots separement, au hasard,
+              sur des heures de jeu. [OBL] Aucun lien affiche.
+    [S1_BK_L130]  1,1 s · « Dans cet ordre. »
+    [S1_BK_L131]  1,4 s · « Ca tient. »
+    [S1_BK_L132]  1,0 s · « Ca tient pas. »
+    [S1_BK_L133]  1,2 s · « Je recommence. »
+    [S1_BK_L134]  1,3 s · « Bien. »
+
+-- Groupe C · les quais (8) --
+
+    [S1_BK_L135]  1,4 s · « Y'a personne. »
+    [S1_BK_L136]  1,2 s · « Y'a jamais personne. »
+    [S1_BK_L137]  1,0 s · « Le vent tourne. »
+    [S1_BK_L138]  1,3 s · « La brume monte. »
+    [S1_BK_L139]  1,1 s · « Ou elle descend. Je sais jamais. »
+    [S1_BK_L140]  1,4 s · « Des mouettes, avant. »
+        dir : [OBL][NAR] IL N'Y A AUCUN OISEAU DANS LE CHAPITRE 1.
+              [OBL] Aucun cri d'oiseau dans aucune piste d'ambiance.
+              [OBL] Job CI `no-birds` : verification spectrale du
+              banc de sons. [OBL] Ce bark est la seule mention de leur
+              absence, et il ne l'explique pas. Interdit 21.08.
+    [S1_BK_L141]  1,2 s · « Plus maintenant. »
+    [S1_BK_L142]  1,0 s · « Bon. »
+        dir : [OBL] DERNIER BARK DE S1. [OBL] Les « bon » des barks ne
+              sont pas comptes dans les 47 du chapitre. CI `bon-count`
+              ignore les ids `_BK_`.
+
+--- RECONCILIATION DU COMPTAGE DE S1 [OBL] -------------------------------------------------------
+
+    Lignes comptees (D01 a D09) ................. 118
+    Barks (ce document, L117 a L142) ............  26   hors total
+    Ids utilises .......... L001 a L142 (+ 2 suffixes de variante en D09)
+
+    COMMANDE DE VERIFICATION :
+      tools/count_dialogue.py --seq S1 --expect 118 --studio 117 --barks 26
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] 26 barks, aucun compte dans les 118 — CI `bark-vs-diegetic`
+[ ] Cooldown 11 min, exclusion 0-94 s — CI `no-bark-intro-s1`
+[ ] L140 : aucun oiseau dans le build — CI `no-birds`
+[ ] Les « bon » de barks hors du compte des 47

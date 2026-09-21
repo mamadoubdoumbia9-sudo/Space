@@ -1,0 +1,91 @@
+===============================================================================
+PN-016 — LES CAISSES A POISSONS EMPILEES ET SECHES
+===============================================================================
+Asset : SM_S1_Caisses_Poissons · S1, cote criee, trois piles · ~00:36 ·
+prop narratif · pas d'Echo · LOD0 5 100 tris (l'ensemble)
+
+§ 1 — CE QU'ON VOIT
+Trois piles de caisses a poissons en bois, pochoir « CRIEE DE VELMORA » sur
+le flanc. Pile A : 14 caisses. Pile B : 11. Pile C : 6, et elle est
+DEMONTEE en partie — six caisses ont ete debitees en planches, et les
+planches ont disparu.
+Les caisses sont SECHES. Completement. C'est le detail : dans une ville ou
+tout suinte, ces caisses sont grises, fendillees, legeres. Elles ont ete
+lavees et mises a secher le soir du 14 octobre, retournees, empilees comme
+il faut. Trois ans plus tard elles sont encore en ordre.
+Au sol, entre les piles, une raclette a manche long et un jet d'eau enroule
+sur son devidoir. Le sol de la criee est en beton lisse, avec une rigole
+centrale. Il est propre. Il a ete lave en dernier.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 5 100 pour 31 caisses. Une caisse = 160 tris, 4 variantes d'usure,
+placement main. [OBL] MultiMesh autorise ICI (contrairement a PN-001) car
+les caisses sont un objet industriel identique — mais les ROTATIONS et les
+petits decalages (±3 cm, ±4°) sont uniques et saisis a la main.
+Les 6 caisses demontees : 3 meshes de carcasses partielles.
+Shader `wood_dry_grey` — un shader dedie, le seul bois SEC du chapitre.
+Roughness 0,92, pas de couche d'humidite, pas de reflet.
+[ART] Techniquement, la seule chose qui differencie ce prop de tous les
+autres, c'est l'absence de la couche d'eau. Cela suffit a le faire lire.
+
+§ 3 — CE QUE CA DIT
+Le dernier geste de la criee de Velmora a ete un nettoyage.
+Le geste humain : laver, retourner, empiler. Un travail d'equipe fait
+correctement, a la fin d'une journee ordinaire, par des gens qui comptaient
+recommencer le lendemain a 4 heures.
+Le manque des six caisses debitees dit qu'APRES, quelqu'un est venu chercher
+du bois ici. Pour condamner la capitainerie (PN-015).
+[NAR] La chaine est complete et jamais enoncee : caisses → planches →
+porte clouée. Trois props, quarante metres, aucun texte.
+
+§ 4 — ECHO
+NEANT. Raison : meme que PN-004 — trop de mains, trop souvent. Les objets
+industriels du quotidien ne gardent rien.
+[OBL] Cette regle a une consequence de design a respecter absolument :
+les Echos ne sont jamais sur des objets de travail collectif. Ils sont sur
+des objets PERSONNELS. Un objet a un Echo s'il a appartenu a une personne.
+Verifiable sur les 31 : bottes personnelles, valise, veste, barre tenue par
+un seul homme, lit, canne, etc.
+
+§ 5 — MISE EN SCENE
+La criee est un volume couvert, ouvert sur trois cotes, 24 x 14 m, charpente
+metallique. C'est le plus grand volume de S1 et il est presque vide.
+[ART] Le contraste d'echelle : apres 36 minutes de couloirs de quai etroits,
+le joueur entre dans un hangar. Il respire. Puis il voit que le hangar est
+vide, et la respiration se retourne.
+Les trois piles sont au fond, contre le mur nord, en lumiere rasante d'aube
+qui entre par le cote est. Les ombres des caisses barrent le sol sur 9 m.
+La rigole centrale conduit le regard vers la sortie ouest, vers PN-015.
+
+§ 6 — AUDIO
+Le seul endroit de S1 avec une reverb ample (RT60 1,4 s, charpente
+metallique). Les pas y sonnent grand.
+SFX(metal_frame_tick) sur la charpente, 4 a 20 s, tres haut dans l'espace :
+placer les emetteurs a 9 m de hauteur pour que le joueur entende le volume.
+SFX(wood_dry_knock) si le joueur frole une pile : un son CLAIR, presque
+musical — le bois sec sonne, le bois mouille non. C'est la premiere fois du
+jeu qu'un objet sonne clair. -20 dB.
+Musique : NEANT.
+
+§ 7 — INTERDICTIONS
+Interdit de : faire tomber une pile · permettre de deplacer les caisses ·
+ajouter une odeur/particule de poisson · ajouter des mouettes (il n'y a
+AUCUN oiseau vivant dans le chapitre 1, 09.14) · mouiller les caisses ·
+donner un Echo · ecrire autre chose que « CRIEE DE VELMORA » sur le pochoir
+· compter autrement que 14 / 11 / 6.
+
+§ 8 — LIENS
+PN-015 (les six planches : la meme pile). PN-012 (les casiers). PN-004
+(les filets). PN-001 (les bottes).
+[THEME] LE TRAVAIL INTERROMPU — les quatre props du metier de la mer en S1
+forment un ensemble : on a range les bottes, hisse les filets, ferme les
+casiers et lave les caisses. Tout etait en ordre. C'est ce qui est
+insupportable.
+
+§ 9 — DOD
+[ ] 14 / 11 / 6 caisses, rotations et decalages saisis a la main
+[ ] Shader bois SEC, roughness 0,92, zero couche d'humidite
+[ ] 6 caisses debitees, coherent avec les 6 planches de PN-015
+[ ] RT60 1,4 s, emetteurs de charpente a 9 m
+[ ] Son de bois sec CLAIR, distinct de toutes les autres matieres bois
+[ ] Aucun oiseau, aucune particule organique

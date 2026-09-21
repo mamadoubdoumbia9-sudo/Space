@@ -1,0 +1,100 @@
+===============================================================================
+PN-021 — L'ECHELLE BRISEE DU HANGAR
+===============================================================================
+Asset : SM_S1_Echelle_Brisee · S1, hangar a filets, acces a la mezzanine ·
+~00:47 · prop narratif INTERACTIF (traversee) · pas d'Echo · LOD0 2 200 tris
+
+§ 1 — CE QU'ON VOIT
+Une echelle de meunier fixe, en bois, 4,2 m, qui monte a une mezzanine.
+Quatorze barreaux. Le sixieme, le septieme et le huitieme sont CASSES —
+pas absents : casses, avec les moignons encore fixes aux limons, fendus
+vers le bas. Quelque chose de lourd est tombe dessus, ou quelqu'un.
+Sous l'echelle, au sol, les trois barreaux. Ils sont tombes la et n'ont
+jamais ete ramasses.
+Le neuvieme barreau, juste au-dessus du trou, est POLI. Brillant. Lisse.
+Il a ete empoigne des centaines de fois. Quelqu'un montait par la, tous les
+jours, en enjambant le trou, pendant des annees, sans jamais reparer.
+La rampe de la mezzanine est reparee, elle, avec du fil de fer.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 200. Les fractures des barreaux : geometrie, pas de normal map.
+Shader `wood_tarred` + masque de polissage localise sur le 9e barreau
+(roughness 0,18 au centre, 0,74 aux extremites, transition en 6 cm).
+[ART] Ce gradient de roughness est le prop entier. S'il est rate, l'objet
+ne raconte rien.
+INTERACTION : l'echelle est grimpable. [OBL] Lohen doit avoir les DEUX
+mains libres. S'il porte la lampe (PN-009), le prompt n'apparait pas.
+Il doit la poser au sol. Il n'y a AUCUNE indication de cela : pas de
+message « mains occupees », pas d'icone barree. Rien. Le prompt est absent,
+c'est tout. Le joueur doit deduire.
+Anim : LOH-LOC-118 `ladder_climb_gap` — 8 s, unique dans le jeu. Lohen
+monte, arrive au trou, s'arrete 0,6 s, tend le bras loin, attrape le 9e
+barreau, et se hisse d'un seul bras. L'epaule DROITE (celle qui est abimee).
+Il grogne. Une seule fois, sans mot.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un vivait ici, sur la mezzanine, et montait chaque jour par une
+echelle cassee.
+Le geste humain : ne pas reparer. Trois barreaux gisent au sol depuis des
+annees, a portee de main, et personne ne les a recloues. Mais la rampe,
+elle, a ete reparee — au fil de fer, comme la chaise de PN-007.
+[NAR] La priorite dit tout : on repare ce qui empeche de TOMBER, on ne
+repare pas ce qui empeche de MONTER. Quelqu'un vivait la sans se soucier de
+la difficulte, mais en tenant a ne pas mourir bêtement.
+Le fil de fer sur la rampe est le meme que sur la chaise (PN-007). Meme
+technique, memes tours serres a la pince. Le joueur peut le remarquer.
+
+§ 4 — ECHO
+NEANT. Raison : le 9e barreau poli EST la trace, en matiere. Un Echo
+montrerait la montee ; le poli la montre mieux, et pour toujours.
+[ART] Principe general du chapitre (05.14) : chaque fois qu'une usure peut
+raconter a la place d'une lumiere, on choisit l'usure.
+
+§ 5 — MISE EN SCENE
+Le hangar est sombre. La mezzanine est au-dessus, hors de vue : on ne voit
+pas ce qu'il y a en haut. Aucune lumiere n'en vient.
+Le joueur pose sa lampe au pied de l'echelle. La lumiere reste en bas.
+Il monte dans le noir, avec, sous lui, son propre halo qui s'eloigne.
+[ART] C'est le moment le plus physiquement inconfortable de S1 et il dure
+8 secondes.
+En haut : PN-022, le miroir de barbier. Et rien d'autre.
+Une fois redescendu, il reprend sa lampe. Le jeu ne le lui rappelle pas.
+[OBL] S'il part sans sa lampe, il part sans sa lampe. Elle reste la, au
+sol, allumee, visible a 60 m dans la ville noire, et il peut revenir la
+chercher. 11 % des testeurs l'oublient et la voient de loin plus tard.
+C'est un des meilleurs moments emergents du jeu et il ne doit pas etre
+« corrige ».
+
+§ 6 — AUDIO
+SFX(ladder_wood_strain) : un craquement sous chaque appui, 14 echantillons,
+un par barreau, avec des hauteurs differentes (le bois chante plus haut en
+haut de l'echelle).
+SFX(loh_effort_grunt_single) : un seul son de gorge, au hissage, sur
+l'epaule droite. [OBL] Pas de halètement, pas de serie, pas de repetition
+au deuxieme passage. Un homme de 27 ans ne souffle pas apres quatre metres ;
+il grogne une fois parce que son epaule l'a lache.
+Le halo qui s'eloigne : le SFX(lamp_hiss) de PN-009 s'attenue en dessous.
+On ENTEND qu'on quitte sa lumiere.
+
+§ 7 — INTERDICTIONS
+Interdit de : afficher « mains occupees » ou toute explication · reparer
+l'echelle · permettre de monter avec la lampe · faire tomber Lohen ·
+ajouter un QTE · faire haleter Lohen · rappeler au joueur qu'il a oublie sa
+lampe · mettre quoi que ce soit d'autre que PN-022 sur la mezzanine ·
+faire ceder un barreau pendant la montee.
+
+§ 8 — LIENS
+PN-009 (la lampe qu'il faut poser). PN-022 (ce qu'il y a en haut).
+PN-007 (le fil de fer, meme main). PN-083 (l'echelle de la tour, S4) :
+Lohen la monte a deux mains, sans probleme — on mesure alors, sans un mot,
+que la premiere etait vraiment difficile.
+[THEME] L'EPAULE DROITE — abimee, jamais expliquée, jamais soignee,
+mentionnee zero fois en dialogue, visible dans 14 animations du chapitre.
+
+§ 9 — DOD
+[ ] 3 barreaux casses en geometrie + les 3 barreaux tombes au sol
+[ ] Gradient de roughness du 9e barreau : 0,18 → 0,74 sur 6 cm
+[ ] Prompt absent si lampe en main, zero message d'explication
+[ ] LOH-LOC-118 : hissage a un bras, epaule droite, 1 grognement unique
+[ ] La lampe posee reste allumee et visible a 60 m
+[ ] Fil de fer de la rampe identique a PN-007 (meme asset, meme torsade)

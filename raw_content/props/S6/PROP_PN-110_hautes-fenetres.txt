@@ -1,0 +1,106 @@
+===============================================================================
+PN-110 — LES HAUTES FENETRES
+===============================================================================
+Asset : SM_S6_Fenetres_Hautes · S6, murs longs de la salle de bal ·
+~04:46 · prop narratif ENVIRONNEMENTAL · pas d'Echo · LOD0 5 600 tris
+
+§ 1 — CE QU'ON VOIT
+Onze hautes fenetres, 6 m de haut sur 1,80 m de large, a petits carreaux
+(8 x 4 = 32 carreaux chacune), encadrees de bois peint en blanc.
+Elles donnent sur l'exterieur.
+[OBL] Et dehors, il fait NUIT.
+C'est la premiere nuit du chapitre. Le joueur est entre dans les Conduits a
+04:00 par un jour gris. Il en ressort a 04:45 et il fait nuit.
+[OBL] Cette transition n'est jamais commentee, jamais signalee, jamais
+justifiee. Il n'y a pas de cycle jour/nuit (05.09) : il y a un jour fixe
+avant S5 et une nuit fixe apres. La bascule a eu lieu sous terre.
+Par les fenetres, on voit : des toits, la brume, et tres loin, a gauche,
+le PHARE. Il est eteint.
+Il y a aussi, tout en bas a droite d'une des fenetres, la mer de verre, qui
+renvoie un ciel noir.
+[OBL] Onze carreaux sont casses sur 352. Ils sont remplaces par du carton
+cloue — [OBL] non : ils ne sont PAS remplaces. Ils sont casses, ouverts, et
+il y a onze trous par lesquels le vent entre.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 5 600 pour 11 fenetres (menuiserie en geometrie, 352 carreaux).
+[OBL] Les meneaux sont en GEOMETRIE. Une fenetre a petits carreaux en
+texture est detectable immediatement en contre-jour, et ces fenetres sont
+toujours vues de l'intérieur, contre un exterieur sombre.
+Les vitres : shader `glass_old_wavy` — [OBL] du verre ancien, souffle, avec
+des ondulations. Ce qu'on voit dehors est LEGEREMENT deforme, differemment
+par carreau. 352 variations de normale.
+[ART] C'est le detail qui vieillit le batiment de quarante ans.
+[OBL] La nuit exterieure : skybox nocturne + brume volumetrique + le Phare
+en LOD lointain. Aucune etoile visible (la brume les masque). La lune non
+plus.
+Les 11 carreaux casses : geometrie de bris avec des aretes.
+Cout : 0,6 ms.
+
+§ 3 — CE QUE CA DIT
+Il fait nuit.
+[OBL] Fonction de design pure : le chapitre bascule. Il reste 45 minutes
+de jeu et elles se passent de nuit.
+Le geste humain : aucun.
+[NAR] Les onze carreaux casses : par le vent, par le temps, par des
+pierres. Personne ne les a repares. Mais quelqu'un allume 72 bougies dans
+la meme piece.
+[ART] On entretient ce qui fait de la lumiere. On ne repare pas ce qui
+laisse entrer le froid.
+Et le Phare, a gauche, est eteint. [OBL] Il l'est depuis trois ans. Il le
+sera encore a la fin du chapitre : [OBL] Lohen n'allume PAS le phare. Ce
+n'est pas cette histoire.
+
+§ 4 — ECHO
+NEANT. Element d'architecture.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur sort d'une grille, se releve, et la premiere chose qui
+l'informe de l'heure, c'est onze rectangles noirs de 6 m de haut.
+[ART] Mais il ne les regarde pas : il regarde les lustres. La nuit entre
+par la peripherie de son attention.
+[OBL] La salle est eclairee de l'INTERIEUR par les bougies. Donc les vitres
+font miroir de l'intérieur. Pour voir dehors, il faut s'approcher a moins
+d'un metre et faire ecran avec son corps.
+[OBL] C'est physique et c'est vrai. Le joueur qui veut voir la nuit doit
+coller la camera a la vitre.
+Le Phare n'est visible que depuis la troisieme fenetre du mur nord, sous un
+angle precis. [OBL] Taux de detection : 29-38 %.
+Aucun prompt, aucun marqueur, aucune musique.
+
+§ 6 — AUDIO
+SFX(wind_through_broken_pane) : onze trous, onze sifflements distincts,
+selon la taille du carreau casse et son orientation. -24 dB.
+[OBL] Ils sont spatialises : le joueur peut localiser chaque carreau casse
+a l'oreille.
+[ART] Onze petits sifflements dans une salle de bal ou un piano joue. C'est
+le fond sonore de S6 et il est fait de degats.
+[OBL] La nuit n'a pas de son propre. Pas de hibou, pas de grillon, pas de
+cri lointain, pas de cloche. Velmora la nuit est identique a Velmora le
+jour : vide.
+
+§ 7 — INTERDICTIONS
+Interdit de : reparer un carreau · ouvrir une fenetre · sortir par la ·
+ajouter des etoiles · ajouter la lune · allumer le Phare · ajouter un son
+de nuit · ajouter un animal nocturne · commenter le changement d'heure ·
+ajouter un cycle · faire lever le jour avant la fin du chapitre · donner
+un Echo · ajouter un rideau a la 12e fenetre (il n'y en a que 11).
+
+§ 8 — LIENS
+PN-104 (les rideaux). PN-102 (les miroirs, entre les fenetres).
+PN-071 (le vitrail brise, S4). PN-066 (l'oculus).
+Le Phare Saint-Ambre (S8) : visible ici pour la premiere fois de pres
+depuis le debut de S3.
+PN-145 (le rebord de fenetre et ses onze toits, S8) : [OBL] onze, encore.
+Jamais relie.
+[THEME] LA NUIT. [THEME] CE QU'ON REPARE ET CE QU'ON NE REPARE PAS.
+
+§ 9 — DOD
+[ ] 11 fenetres, 352 carreaux, meneaux en geometrie
+[ ] Verre ancien ondule, 352 variations de normale
+[ ] Nuit fixe, sans etoiles, sans lune, brume volumetrique
+[ ] Vitres faisant miroir de l'intérieur ; vision exterieure a moins d'1 m
+[ ] Phare visible depuis la 3e fenetre nord uniquement, eteint
+[ ] 11 carreaux casses, 11 sifflements spatialises distincts
+[ ] Zero son nocturne, zero animal
+[ ] Bascule jour/nuit jamais commentee

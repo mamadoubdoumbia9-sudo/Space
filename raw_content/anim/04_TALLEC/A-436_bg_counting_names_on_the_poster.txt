@@ -1,0 +1,109 @@
+===============================================================================
+  A-436   bg_counting_names_on_the_poster
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 436 / 744
+  Partie 4 — CAPITAINE ORVAL TALLEC
+  Categorie : VARIANTE / COMPORTEMENT
+  Marqueur   : ARRIERE-PLAN MARCHE SUSPENDU
+  Fichier source  : A_Capitaine_Var_bg_counting_names_on_the_poster_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : conçu — bloc de plage deplie
+  Identifiant precedent : A-439 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 16.000 s  (480 frames a 30 fps)
+  Type .................. BOUCLE
+  Root motion ........... RM-NONE
+  Blend in / out ........ 0.45 s / 0.45 s
+  Couche AnimationTree .. L0
+  Priorite .............. 78 — reaction / degats (bande 60-79, bareme 0.05)
+  Poids compresse cible . ~176 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      corps complet lourd, prothese 12 os rigides
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  CAPITAINE ORVAL TALLEC — 44 ans, ancien officier du port.
+
+  Il est LOURD et il ne se leve pas. Dans toute la scene S3 il reste assis
+  jusqu'a « Non. C'est ton excuse. » : le fait qu'il se leve enfin est
+  l'evenement de la scene. Il parle LENTEMENT et il finit toujours ses
+  phrases. Il ne s'interrompt jamais. Voix la plus grave du casting, on ne
+  lui demande jamais de crier. Gestes : T1 deux coups secs sur la prothese,
+  T2 il s'assoit toujours de travers.
+
+  Rig et costume :
+      uniforme sans insignes (les trous restent), prothese de bras droit en
+      bois et laiton : 12 os RIGIDES, contraintes strictes, JAMAIS de
+      deformation
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  [NAR] LA DERNIERE. Il compte les noms sur l'affiche « RECHERCHE : 641 NOMS
+  » avec son index de bois. IL EN EST A 31. [OBL] Ce sont ses 31 hommes
+  (10.08). Il les compte tous les jours. AUCUN DIALOGUE NE L'EXPLIQUE, dans
+  ce chapitre ni ailleurs. Le doigt s'arrete sur le trente-et-unieme nom et
+  redescend. Job CI `tallec-31` : verifie que le compte de l'animation vaut
+  exactement 31 arrets.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Cyclage [OBL 0.03] : la frame 0 et la frame 480 sont identiques
+  a 0.001 pres. Verifie par `tools/loop_check.py`, qui echoue le
+  build en cas de saut.
+
+  Evenements de timeline :
+      SFX(prosthesis_creak) une fois par boucle, aleatoire · pas de LookAt
+      joueur
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- selection par `market_ambient_state` ; -> autre activite
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · cyclage frame 0 == frame 480 (tolerance 0.001)
+      · les clauses [OBL] de la section 3 sont verifiees en revue, pas
+      seulement en lecture
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-436
+===============================================================================

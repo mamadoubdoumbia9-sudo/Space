@@ -1,0 +1,196 @@
+===============================================================================
+DLG · S6 · D05 — LES DERNIERES MINUTES ET LE SEUL FAUX CHOIX DU JEU
+46 entrees, toutes S6. EST 23 · LOH 23. Contribution : 46.
+Choix n° 30, 31, 32, 33 du chapitre (les 4 choix de S6).
+Reference maitre 09.15 : « Les deux options menent au meme endroit.
+C'est le seul faux choix du jeu. »
+===============================================================================
+
+--- § 1 — LE MOTIF, JOUE PAR L'ORCHESTRE (10 lignes) --------------------------------------------
+
+[OBL] A 6 min 10 de E21, les musiciens attaquent le morceau annonce en
+L063. C'est LA-DO-MI-RE-LA. [OBL] La 5e note est couverte par un rire de
+foule, exactement sur le temps. [OBL] 19e des 23 occurrences incompletes.
+[OBL] Le rire de foule est un asset distinct des deux rires individuels
+(CI `laugh-inventory` ne le compte pas).
+
+    [S6_EST_L139]  2,0 s · chaud · « Voila. Je te l'avais dit. »
+    [S6_LOH_L140]  1,4 s · plat  · « Je connais pas. »
+    [S6_EST_L141]  2,4 s · chaud · « Si. Tout le monde connait. »
+    [S6_LOH_L142]  1,6 s · plat  · « Je connais pas, je te dis. »
+    [S6_EST_L143]  2,8 s · chaud · « Alors je te la chante et tu la connaitras. »
+    [S6_EST_L144]  3,2 s · chaud · (il chante quatre notes, la, do, mi, re)
+        dir : [OBL] IL S'ARRETE AVANT LA CINQUIEME. [OBL] Pas de rire
+              pour la couvrir : il s'arrete, simplement, parce que
+              quelqu'un l'appelle a l'autre bout de la salle (voix de
+              figurant, indistincte). [OBL] Il ne reprend jamais.
+              [OBL] La 5e note du motif n'est completee qu'une fois
+              dans tout le chapitre : a 3:00 de la lettre, sur « Tu as
+              les mains sales. »
+              [OBL] Job CI `motif-incomplete-23` : 23 occurrences
+              incompletes exactement, 1 complete.
+    [S6_LOH_L145]  1,2 s · plat  · « Et apres ? »
+    [S6_EST_L146]  2,2 s · chaud · « Apres y'en a une cinquieme. »
+    [S6_LOH_L147]  1,6 s · plat  · « Laquelle ? »
+    [S6_EST_L148]  2,6 s · chaud · « Je te la ferai une autre fois. »
+        dir : [OBL][NAR] LA PROMESSE. [OBL] Elle sera tenue, trois ans
+              plus tard, par une lettre, dans un phare, pendant que la
+              musique la joue enfin en entier. [OBL] Ni le jeu ni aucun
+              personnage ne fera jamais le lien explicitement.
+              [OBL] Interdit absolu : ne jamais ajouter de flashback
+              de cette ligne pendant la lecture de la lettre.
+
+--- § 2 — CHOIX 30 ET 31 : DEUX VRAIS PETITS CHOIX (12 lignes) --------------------------------
+
+    > CHOIX 30
+      [1] « Pourquoi tu m'as fait venir ? »
+      [2] « Je suis content d'etre venu. »
+
+    [S6_LOH_L149]  2,2 s · plat · « Pourquoi tu m'as fait venir ? »
+    [S6_EST_L150]  2,6 s · chaud · « Parce que tu serais reste chez toi. »
+    [S6_EST_L151]  2,0 s · chaud · « Et ca, c'est pas une soiree. »
+
+    [S6_LOH_L152]  2,4 s · plat · « Je suis content d'etre venu. »
+    [S6_EST_L153]  1,8 s · chaud · « Je sais. »
+    [S6_EST_L154]  2,8 s · chaud · « Tu as enleve ta veste. Chez toi tu l'enleves pas. »
+        dir : [OBL] il observe mieux que n'importe qui d'autre dans le
+              jeu. [OBL] C'est pour ca que son absence est un trou.
+
+    > CHOIX 31
+      [1] « Tu restes jusqu'a la fin ? »
+      [2] « On rentre ? »
+      [3] « Il est quelle heure ? »
+
+    [S6_LOH_L155]  1,8 s · plat · « Tu restes jusqu'a la fin ? »
+    [S6_EST_L156]  2,4 s · chaud · « Je ferme. J'ai les cles. »
+
+    [S6_LOH_L157]  1,2 s · plat · « On rentre ? »
+    [S6_EST_L158]  2,8 s · chaud · « Pas encore. Une heure. Laisse-moi une heure. »
+        dir : [OBL][NAR] IL EN A UNE HEURE ET VINGT-SEPT MINUTES.
+              [OBL] Aucun effet. Aucune musique. Aucun plan.
+
+    [S6_LOH_L159]  1,6 s · plat · « Il est quelle heure ? »
+    [S6_EST_L160]  2,2 s · chaud · « Tard. Vingt-deux et quelque. »
+        dir : [OBL] SEULE INDICATION HORAIRE DONNEE AU JOUEUR DANS E21.
+              [OBL] Le joueur qui connait l'heure de la Maree (23 h 41,
+              donnee en S1 par Pallas et sur trois props) vient de
+              recevoir un compte a rebours. [OBL] Il n'y a pas de
+              compte a rebours. Le temps de l'Echo n'est pas le temps
+              de la fiction : E21 se termine a 22 h 40 fictif.
+              [OBL] Le jeu ne montre JAMAIS 23 h 41. Interdit 21.08.
+
+--- § 3 — LE FAUX CHOIX (CHOIX 32) : LES DERNIERS MOTS (14 lignes) ------------------------------
+
+[OBL] Declencheur : Esteban se leve pour aller fermer les fenetres.
+C'est la derniere interaction de E21. [OBL] Le joueur ne sait pas que
+c'est la derniere.
+
+    [S6_EST_L161]  2,0 s · chaud · « Bon. Je vais fermer les fenetres. »
+    [S6_LOH_L162]  1,4 s · plat  · « Maintenant ? »
+    [S6_EST_L163]  2,6 s · chaud · « Il va pleuvoir apres minuit, je t'ai dit. »
+    [S6_EST_L164]  2,2 s · chaud · « Deux minutes. Bouge pas. »
+
+    > CHOIX 32 — [OBL] LE SEUL FAUX CHOIX DU JEU
+      [1] « Je t'attends. »
+      [2] « Je viens avec toi. »
+
+    [OBL] REGLE : les deux options produisent EXACTEMENT la meme suite.
+    Dans la branche [2], Lohen se leve, fait trois pas, et Esteban dit
+    « Non, reste assis, tu vas tout casser » — et Lohen se rassoit.
+    [OBL] Le joueur a choisi. Le resultat est identique. [OBL] C'est
+    ecrit ici, en clair, pour que personne en production ne « repare »
+    ce choix en lui donnant une consequence. LE FAUX CHOIX EST LE POINT.
+    [OBL] Le joueur DOIT avoir l'impression d'avoir choisi ses derniers
+    mots. Il ne les a pas choisis. Personne ne choisit ses derniers mots.
+
+    -- branche [1]
+    [S6_LOH_L165]  1,6 s · plat · « Je t'attends. »
+    [S6_EST_L166]  2,0 s · chaud · « Voila. »
+
+    -- branche [2]
+    [S6_LOH_L167]  1,8 s · plat · « Je viens avec toi. »
+    [S6_EST_L168]  2,8 s · chaud · « Non, reste assis, tu vas tout casser. »
+    [S6_LOH_L169]  1,2 s · plat · « D'accord. »
+    [S6_EST_L170]  1,6 s · chaud · « Voila. »
+
+    -- Convergence : les six dernieres lignes d'Esteban vivant --
+
+    [S6_EST_L171]  2,4 s · chaud · « Tu gardes ma place. »
+    [S6_LOH_L172]  1,4 s · plat  · « Oui. »
+    [S6_EST_L173]  2,8 s · chaud · « Si quelqu'un s'assoit, tu dis que c'est pris. »
+    [S6_LOH_L174]  1,6 s · plat  · « Je dirai rien du tout. »
+    [S6_EST_L175]  3,0 s · chaud · « Alors tu mets ta veste dessus. Ca parle pour toi. »
+        dir : [OBL][NAR] LA DERNIERE PHRASE D'ESTEBAN VIVANT DANS TOUT
+              LE CHAPITRE 1. [OBL] C'est une consigne pratique sur une
+              veste. [OBL] Direction : legere, distraite, il est deja
+              en train de partir. Il ne la termine pas face a Lohen :
+              il la finit de dos, a 2 m.
+              [OBL] Aucune musique ne change. M22 continue.
+              [OBL] Aucun ralenti. Aucun plan large. Aucun fondu.
+              [OBL] RACCORD S8 : a la fin du chapitre, Lohen pose sa
+              veste 0114 sur Sol endormi (PN-147). Il execute la
+              consigne trois ans plus tard, sur quelqu'un d'autre, sans
+              y penser. [OBL] JAMAIS SOULIGNE. Job CI `veste-echo`
+              verifie seulement que les deux assets partagent le tag.
+    [S6_LOH_L176]  1,2 s · plat  · « D'accord. »
+        dir : [OBL] Derniers mots de Lohen a Esteban. Deux syllabes.
+              [OBL] Esteban est de dos et ne repond pas. Il leve une
+              main sans se retourner. Anim EST-WAV-002, 1,1 s.
+              [OBL] Il marche vers la fenetre est. A 11 m, la
+              dissolution commence. Voir D06.
+
+--- § 4 — CHOIX 33 : LE CHOIX QUI N'EST PAS UN CHOIX NON PLUS (8 lignes) ------------------------
+
+[OBL] Declencheur : pendant la dissolution (D06), le jeu propose un
+dernier choix. [OBL] Il est propose alors que la salle est deja en train
+de s'eteindre. Le temps de selection est illimite : la dissolution
+ATTEND. [OBL] C'est la seule fois du jeu ou le monde attend le joueur.
+
+    > CHOIX 33
+      [1] (L'appeler.)
+      [2] (Ne pas l'appeler.)
+
+    -- branche [1]
+    [S6_LOH_L177]  1,6 s · ? · « Esteban. »
+        dir : [OBL][NAR] LA SEULE FOIS DU CHAPITRE 1 OU LOHEN PRONONCE
+              LE PRENOM D'ESTEBAN A VOIX HAUTE EN S'ADRESSANT A LUI.
+              [OBL] Rappel : la 1re occurrence du nom dans le jeu est
+              au choix 04 (S3). Lohen le dit a des inconnus, pour
+              chercher. Ici il le dit A LUI.
+              [OBL] Direction : la voix casse. UNE SEULE FOIS DANS
+              TOUT LE CHAPITRE, LA VOIX DE LOHEN CASSE. C'est sur ces
+              trois syllabes. [OBL] Prise unique, premiere prise,
+              conservee telle quelle, aucun montage.
+    [S6_EST_L178]  0,0 s · — · (slot sans VO)
+        dir : [OBL] IL NE SE RETOURNE PAS. [OBL] Il n'entend pas : il
+              est a 11 m, dans un Echo, il y a trois ans, et il y a un
+              orchestre. [OBL] Aucune reaction. Aucune animation.
+              [OBL] Le joueur a appele et il ne s'est rien passe.
+    [S6_LOH_L179]  1,2 s · bas · « Bon. »
+    [S6_LOH_L180]  2,4 s · bas · « C'est pas a lui que je parlais, de toute facon. »
+        dir : [OBL] il ment. [OBL] Personne ne releve.
+
+    -- branche [2]
+    [S6_LOH_L181]  0,0 s · — · (slot sans VO)
+        dir : [OBL] 3,6 s de silence. Le joueur regarde Esteban
+              s'eloigner sans rien dire.
+    [S6_LOH_L182]  1,8 s · bas · « Non. »
+        dir : [OBL] il se refuse a lui-meme le droit d'appeler.
+    [S6_LOH_L183]  2,2 s · bas · « Ca sert a rien. »
+    [S6_LOH_L184]  2,6 s · bas · « Et je veux pas savoir s'il se retourne. »
+        dir : [OBL][NAR] LA BRANCHE [2] EST PLUS DURE QUE LA [1].
+              [OBL] Le joueur qui n'appelle pas garde la possibilite
+              qu'Esteban se soit retourne. Celui qui appelle sait que
+              non. [OBL] Le jeu ne dit jamais laquelle est la bonne.
+              [OBL] 63 % appellent.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] L144 : 4 notes, arret sur interruption, 19e occurrence incomplete
+[ ] L148 : la promesse, jamais rappelee, aucun flashback autorise
+[ ] L160 : 22 h et quelque — 23 h 41 n'est jamais montre
+[ ] CHOIX 32 : faux choix, resultat identique, ne JAMAIS lui donner de consequence
+[ ] L175 : derniere phrase d'Esteban = consigne sur une veste, dite de dos
+[ ] L177 : seule cassure de voix de Lohen du chapitre, prise unique
+[ ] L178 : slot muet, il ne se retourne pas
+[ ] CHOIX 33 : la dissolution attend, seule fois du jeu

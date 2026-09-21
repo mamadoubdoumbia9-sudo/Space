@@ -1,0 +1,314 @@
+===============================================================================
+DLG · S8 · D10 — LES LIGNES QUE PRESQUE PERSONNE N'ENTEND,
+LES 48 BARKS, ET LA CLOTURE DES 2 840
+54 entrees, toutes S8. LOH 54. Contribution : 54.
++ 48 barks S8_BK (hors total). [OBL] Dernier document de l'annexe C.
+===============================================================================
+
+--- POURQUOI CES 54 LIGNES EXISTENT [OBL] --------------------------------------------------------
+
+[OBL] Taux de declenchement cumule des 54 lignes ci-dessous : un joueur
+median en entend SIX. [OBL] Le joueur qui les entend toutes n'existe
+pas : certaines s'excluent mutuellement.
+
+[OBL] C'est la derniere fois que ce document le dit, et c'est la these
+de toute l'annexe C : un jeu n'est pas fait de ce que le joueur voit,
+il est fait de ce qu'il aurait pu voir. [OBL] Les 54 lignes sont
+enregistrees, mixees, integrees et testees au meme standard que la
+lettre. [OBL] Interdit absolu de les couper au motif du taux.
+
+--- § 1 — SI LE JOUEUR ETEINT LA LAMPE (3 %) — 6 lignes ------------------------------------------
+
+    [S8_LOH_L421]  2,0 s · bas · « Voila. »
+    [S8_LOH_L422]  2,6 s · bas · « Y'a plus que le jour qui rentre. »
+    [S8_LOH_L423]  2,2 s · bas · « C'est suffisant, maintenant. »
+    [S8_LOH_L424]  2,8 s · bas · « Il aimait pas le noir. Y'a plus de noir. »
+        dir : [OBL] UNIQUEMENT si le joueur a lu E30 (jour 612). Sinon
+              slot muet, meme id, meme duree.
+    [S8_LOH_L425]  1,8 s · bas · « Bon. »
+        dir : [OBL] ce « bon » est dans l'exception de comptage :
+              branche a 3 %, hors des 47. VALIDATION_2840 § 3.
+    [S8_LOH_L426]  2,4 s · bas · « Je regrette peut-etre dans une heure. »
+        dir : [OBL][NAR] LE JEU NE TRANCHE PAS. [OBL] Aucune
+              consequence mecanique. Flag chapitre 2. [OBL] Interdit de
+              juger ce choix.
+
+--- § 2 — SI LE JOUEUR TOURNE LES 41 PAGES VIERGES (12 %) — 8 lignes -----------------------------
+
+    [S8_LOH_L427]  2,0 s · bas · « Encore une blanche. »
+    [S8_LOH_L428]  1,6 s · bas · « Encore. »
+    [S8_LOH_L429]  2,4 s · bas · « Y'en a des dizaines. »
+    [S8_LOH_L430]  2,8 s · bas · « Il disait qu'il avait plus de papier. »
+    [S8_LOH_L431]  2,2 s · bas · « Il en avait. »
+        dir : [OBL][NAR] LOHEN DECOUVRE QU'ESTEBAN A MENTI. [OBL] Sur
+              une chose minuscule. La derniere page qu'il ait ecrite.
+              [OBL] Direction : plat. Aucune colere, aucune tristesse.
+              [OBL] 12 % des joueurs. [OBL] Rappel D07/L314 : dans la
+              branche normale, Lohen ne le sait pas.
+    [S8_LOH_L432]  2,6 s · bas · « Donc c'est pas le papier qui manquait. »
+    [S8_LOH_L433]  2,0 s · bas · « Bon. »
+    [S8_LOH_L434]  2,8 s · bas · « Je referme le carnet a la bonne page. »
+        dir : [OBL] IL LE REPOSE OUVERT SUR JOUR 1049, COMME IL L'A
+              TROUVE. [OBL] Anim LOH-ACT-147, 2,9 s. [OBL] Personne ne
+              le verra jamais.
+
+--- § 3 — SI LE JOUEUR COMPTE LES 31 MARGES (0,4 %) — 4 lignes -----------------------------------
+
+[OBL] Declencheur : le joueur zoome sur 31 marges distinctes portant
+« 0114 ». [OBL] Il n'y a AUCUN retour visuel de progression.
+
+    [S8_LOH_L435]  2,4 s · bas · « Trente et une. »
+    [S8_LOH_L436]  2,0 s · bas · « J'avais dit que je compterais pas. »
+    [S8_LOH_L437]  2,8 s · bas · « La lettre dit trois cent quatorze. »
+        dir : [OBL] UNIQUEMENT si la lettre est deja lue. Sinon : slot
+              muet. [OBL] Il y a 314 feuilles au mur et 31 marges
+              annotees. Les deux nombres sont exacts dans les textures.
+    [S8_LOH_L438]  2,2 s · bas · « Donc j'en ai lu une sur dix. »
+        dir : [OBL] IL CALCULE JUSTE UNE TROISIEME FOIS. [OBL] 0,4 %
+              des joueurs entendront ce calcul. [OBL] Aucune
+              recompense, aucun succes, aucune statistique.
+
+--- § 4 — SI LE JOUEUR REMONTE APRES ETRE DESCENDU (7 %) — 8 lignes ------------------------------
+
+[OBL] La porte du haut n'est pas verrouillee. [OBL] Le joueur peut
+remonter les 1 038 marches. [OBL] Cela prend 9 a 14 minutes et rien ne
+l'en dissuade.
+
+    [S8_LOH_L439]  2,0 s · bas · « Je remonte. »
+    [S8_LOH_L440]  2,6 s · bas · « Je sais pas pourquoi. »
+    [S8_LOH_L441]  2,2 s · bas · « Pour verifier que c'etait vrai. »
+    [S8_LOH_L442]  2,8 s · bas · « La chambre est la. La lampe est la. »
+    [S8_LOH_L443]  2,4 s · bas · « Le carnet est la. »
+    [S8_LOH_L444]  2,0 s · bas · « La lettre est dans ma sacoche. »
+    [S8_LOH_L445]  2,6 s · bas · « Donc c'etait vrai. »
+    [S8_LOH_L446]  2,2 s · bas · « Je redescends. »
+        dir : [OBL][NAR] LA CHAMBRE EST STRICTEMENT IDENTIQUE. [OBL] Il
+              n'y a RIEN de nouveau. Aucun objet ajoute, aucune porte
+              ouverte, aucune recompense pour la persistance.
+              [OBL] Interdit absolu : ne jamais rien ajouter dans la
+              chambre pour le joueur qui remonte. [OBL] Job CI
+              `room-frozen-return`.
+              [OBL] La descente se rejoue normalement. Les seize
+              dernieres lignes (D08 § 4) ne se redeclenchent pas.
+
+--- § 5 — SI LE JOUEUR ATTEND PLUS DE CINQ MINUTES APRES LA LETTRE (2 %) — 10 lignes -------------
+
+[OBL] Aucun prompt n'apparait jamais (CI `no-idle-prompt-s8`). [OBL] A
+5 minutes exactement, ces dix lignes se declenchent, une toutes les
+40 s. [OBL] Puis plus rien, definitivement.
+
+    [S8_LOH_L447]  2,0 s · bas · « Je bouge pas. »
+    [S8_LOH_L448]  2,6 s · bas · « Je sais que je devrais. »
+    [S8_LOH_L449]  2,2 s · bas · « Y'a personne qui m'attend. »
+    [S8_LOH_L450]  2,8 s · bas · « Si. Y'a quelqu'un en bas. »
+    [S8_LOH_L451]  2,4 s · bas · « Iel dort, ca compte pas pareil. »
+    [S8_LOH_L452]  2,0 s · bas · « Ca compte plus, meme. »
+    [S8_LOH_L453]  2,6 s · bas · « Quelqu'un qui dort dehors pour attendre, c'est pas rien. »
+    [S8_LOH_L454]  2,2 s · bas · « Bon. »
+    [S8_LOH_L455]  2,8 s · bas · « Dans deux minutes. »
+    [S8_LOH_L456]  1,8 s · bas · « Deux minutes. »
+        dir : [OBL][NAR] LE MOTIF DES DEUX MINUTES, CINQUIEME ET
+              DERNIERE OCCURRENCE (S6_EST_L164, S6_LOH_L222,
+              S7_LOH_L110, S8_LOH_L074, ici). [OBL] Esteban avait dit
+              deux minutes et n'est jamais revenu. [OBL] Lohen se donne
+              deux minutes et descend. [OBL] 2 % des joueurs.
+              [OBL] Aucune musique. [OBL] Job CI `two-minutes-five`.
+
+--- § 6 — LES HUIT DERNIERES : SI LE JOUEUR NE LIT PAS LA LETTRE (0 %) ---------------------------
+
+[OBL] IL N'Y A PAS DE BRANCHE « NE PAS LIRE ». [OBL] La lettre est le
+seul objet obligatoire du chapitre. [OBL] Le joueur peut sortir de la
+chambre sans la prendre : la porte se referme, l'escalier est la, et a
+la troisieme marche Lohen s'arrete et remonte, scripte, sans ligne.
+[OBL] 0,9 % essaient. [OBL] Les huit entrees ci-dessous couvrent ce
+retour force. [OBL] Ce sont les seules lignes du chapitre ou le jeu
+retire le controle pour imposer une action narrative, et elles sont
+ecrites pour que ce soit le moins humiliant possible.
+
+    [S8_LOH_L457]  0,0 s · — · (il s'arrete a la 3e marche, 1,9 s)
+    [S8_LOH_L458]  2,4 s · bas · « Non. »
+    [S8_LOH_L459]  2,0 s · bas · « J'ai monte mille marches. »
+    [S8_LOH_L460]  2,8 s · bas · « Je vais pas repartir sans regarder ce qu'y a sur la table. »
+    [S8_LOH_L461]  0,0 s · — · (il remonte — le joueur reprend la main en haut)
+        dir : [OBL] LE CONTROLE EST RENDU DES QU'IL EST DANS LA
+              CHAMBRE. [OBL] Il n'est pas force de prendre la lettre
+              tout de suite. Il peut ressortir. [OBL] La boucle est
+              rejouable indefiniment. [OBL] Aucun compteur, aucune
+              ligne supplementaire, aucune moquerie.
+    [S8_LOH_L462]  2,2 s · bas · « Bon. »
+    [S8_LOH_L463]  2,6 s · bas · « Je regarde, et apres je descends. »
+    [S8_LOH_L464]  2,0 s · bas · « Voila. »
+
+--- § 7 — LES 10 LIGNES DU JOURNAL (19.14) --------------------------------------------------------
+
+[OBL] Apres le generique, la lettre est RELISIBLE, entierement, a tout
+moment, dans un nouvel onglet : « LETTRES — 1 / 7 ». [OBL] 19.14 :
+« Beaucoup de joueurs la reliront. Elle doit tenir a la relecture. C'est
+le critere d'ecriture le plus exigeant du projet. »
+
+[OBL] A LA RELECTURE : le texte est identique, la voix d'Esteban lit de
+nouveau, M18 rejoue, et les cinq notes sonnent encore a 3:00.
+[OBL] AUCUNE degradation, aucune ellipse, aucun « resume ». [OBL] Job CI
+`letter-replay-identical`.
+
+[OBL] LES DIX LIGNES CI-DESSOUS sont de Lohen, dans le journal, avant
+d'ouvrir la lettre. Elles tournent en aleatoire, une par consultation.
+[OBL] Elles sont la seule chose qui change entre deux relectures.
+
+    [S8_LOH_L465]  2,0 s · bas · « Je la relis. »
+    [S8_LOH_L466]  2,4 s · bas · « Je comprends un peu plus a chaque fois. »
+    [S8_LOH_L467]  2,8 s · bas · « Y'a des mots que je reconnais maintenant. »
+    [S8_LOH_L468]  2,2 s · bas · « « Imbecile », je sais le lire. »
+        dir : [OBL][NAR] RACCORD S8_EST_L274 (« il ne saura pas lire
+              « imbecile ». Le laisser quand meme. »). [OBL] Il a
+              appris ce mot-la. [OBL] 7 % des joueurs ont lu le
+              fragment du mur. [OBL] Aucun lien affiche.
+    [S8_LOH_L469]  2,6 s · bas · « Pas les autres. Celui-la. »
+    [S8_LOH_L470]  2,0 s · bas · « Elle est dans la sacoche, avec les huit qui restent a remettre. »
+        dir : [OBL] NEUF PLIS DANS LA SACOCHE (D08/L330), moins la
+              sienne : huit. [OBL] Le nombre est exact dans le prop.
+              [OBL] Ce ne sont PAS les six lettres d'Esteban.
+              [OBL] Interdit : ne jamais laisser croire que si.
+    [S8_LOH_L471]  2,8 s · bas · « Celles-la, je les remettrai lundi. »
+    [S8_LOH_L472]  2,4 s · bas · « Celle-la, non. »
+    [S8_LOH_L473]  2,0 s · bas · « Elle est remise. »
+    [S8_LOH_L474]  2,6 s · bas · « C'est mon travail et il est fait. »
+        dir : [OBL][NAR] DERNIERE LIGNE ECRITE DE L'ANNEXE C.
+              [OBL] 2 840e entree du chapitre 1.
+              [OBL] Elle n'est entendue que par les joueurs qui
+              rouvrent le journal apres le generique. [OBL] Elle est
+              la derniere ligne du corpus et elle est optionnelle.
+              [OBL] C'est volontaire. [OBL] Direction : plat, ferme,
+              sans satisfaction. Il ne se felicite pas. Il constate
+              qu'un travail est fait. [OBL] Prise refusee si elle est
+              jouee comme une fin.
+
+--- § 8 — LES 48 BARKS DE S8 (hors total) -----------------------------------------------------------
+
+[OBL] REGIME : cooldown 8 min (standard). [OBL] AUCUN bark ne peut se
+declencher dans la chambre (D03 a D08) ni pendant la scene finale (D09).
+[OBL] Les 48 sont donc TOUS dans la montee et la descente. Job CI
+`no-bark-in-room`.
+
+-- Montee, effort (18) --
+
+    [S8_BK_L475]  0,9 s · « Hop. »
+    [S8_BK_L476]  1,2 s · « Encore. »
+    [S8_BK_L477]  1,0 s · « Ca monte. »
+    [S8_BK_L478]  1,4 s · « Toujours. »
+    [S8_BK_L479]  0,8 s · « Bon. »
+    [S8_BK_L480]  1,1 s · « L'epaule. »
+    [S8_BK_L481]  1,3 s · « Ca va. »
+    [S8_BK_L482]  1,0 s · « Je souffle. »
+    [S8_BK_L483]  1,2 s · « Deux secondes. »
+    [S8_BK_L484]  0,9 s · « Voila. »
+    [S8_BK_L485]  1,4 s · « Je repars. »
+    [S8_BK_L486]  1,1 s · « C'est haut. »
+    [S8_BK_L487]  1,3 s · « C'est tres haut. »
+    [S8_BK_L488]  1,0 s · « Le cable tient. »
+    [S8_BK_L489]  1,2 s · « Elle a bien travaille. »
+    [S8_BK_L490]  0,8 s · « Hm. »
+    [S8_BK_L491]  1,4 s · « Un palier. »
+    [S8_BK_L492]  1,1 s · « Pas celui-la. »
+        dir : [OBL] il ne s'arrete jamais au bon palier. [OBL] Le bark
+              le dit en trois mots, 40 minutes avant que la lettre le
+              dise en douze.
+
+-- Montee, ce qu'il voit (14) --
+
+    [S8_BK_L493]  1,2 s · « Une meurtriere. »
+    [S8_BK_L494]  1,4 s · « On voit la mer. »
+    [S8_BK_L495]  1,0 s · « Enfin, le verre. »
+    [S8_BK_L496]  1,3 s · « Y'a de la brume. »
+    [S8_BK_L497]  1,1 s · « Elle descend. »
+    [S8_BK_L498]  1,4 s · « Elle est en dessous. »
+    [S8_BK_L499]  1,0 s · « Y'a plus de ville. »
+    [S8_BK_L500]  1,2 s · « Des cloches. »
+    [S8_BK_L501]  1,3 s · « Elles sonnent toutes seules. »
+    [S8_BK_L502]  1,1 s · « C'est le vent. »
+    [S8_BK_L503]  1,4 s · « Elles sont justes. »
+    [S8_BK_L504]  1,0 s · « Bizarre. »
+        dir : [OBL] LE SEUL MOT D'ETONNEMENT DU CHAPITRE. [OBL] Un.
+              Dans un bark. [OBL] Rappel : personne ne s'etonne de
+              rien dans ce jeu, c'est la troisieme annee.
+    [S8_BK_L505]  1,2 s · « Y'a de la lumiere en haut. »
+    [S8_BK_L506]  1,3 s · « Toujours. »
+
+-- Descente (16) --
+
+    [S8_BK_L507]  1,0 s · « Ca descend. »
+    [S8_BK_L508]  1,2 s · « Les genoux. »
+    [S8_BK_L509]  1,4 s · « Doucement. »
+    [S8_BK_L510]  0,9 s · « Voila. »
+    [S8_BK_L511]  1,1 s · « Il fait jour. »
+    [S8_BK_L512]  1,3 s · « Ca chauffe deja. »
+    [S8_BK_L513]  1,0 s · « On voit tout. »
+    [S8_BK_L514]  1,2 s · « Tout. »
+    [S8_BK_L515]  1,4 s · « Elle est grande. »
+    [S8_BK_L516]  1,1 s · « Elle est vide. »
+    [S8_BK_L517]  1,3 s · « Les deux. »
+    [S8_BK_L518]  1,0 s · « Bien. »
+    [S8_BK_L519]  1,2 s · « Plus que cent. »
+    [S8_BK_L520]  1,4 s · « Plus que cinquante. »
+    [S8_BK_L521]  1,1 s · « J'y suis presque. »
+    [S8_BK_L522]  1,3 s · « Presque. »
+        dir : [OBL] DERNIER BARK DU CHAPITRE 1. [OBL] Un mot.
+              [OBL] Aucune musique. [OBL] Apres lui, il n'y a plus que
+              les lignes de D09 et le silence.
+
+--- § 9 — TABLE DE COMPTAGE DE S8 [OBL] --------------------------------------------------------------
+
+    D01 le-cable-repare ......................... 34
+    D02 la-montee ............................... 62
+    D03 la-chambre .............................. 58
+    D04 le-rituel-qui-ne-marche-pas ............. 26
+    D05 la-lettre ............................... 68
+    D06 le-mur-de-feuilles ...................... 32
+    D07 le-carnet-e30 ........................... 34
+    D08 ranger-la-lettre ........................ 58
+    D09 le-dernier-plan ......................... 48
+    D10 les-lignes-rares-et-comptage ............ 54
+                                                 ----
+                                     TOTAL S8 =  474   [OBL] conforme
+
+    Barks S8 (hors total) : 48 — ids S8_BK_L475 a S8_BK_L522. [OBL] conforme
+
+    Ventilation par locuteur :
+      LOH ............ 353
+      EST ............  87   (55 lettre + 32 fragments ecrits du mur)
+      SOL ............  28   (20 en D01 + 8 en D09)
+      ECH ............   6   (les 6 extraits du carnet, E30)
+                       ----
+                        474
+
+    Slots muets (sans VO, comptes) : 38 au total en S8, dont les 13 de la
+    lecture (D05 § 3), les 32 fragments ecrits du mur n'etant PAS des
+    slots muets mais du texte affiche.
+      → compteur studio S8 = 474 - 38 - 32 = 404 lignes enregistrees.
+
+    COMMANDE DE VERIFICATION :
+      tools/count_dialogue.py --seq S8 --expect 474 --studio 404 --barks 48
+
+    Choix de S8 : 5 — [OBL] TOUS SANS BRANCHE DE DIALOGUE. Ce sont des
+    choix d'ACTION, non de replique : eteindre ou non la lampe · tourner
+    ou non les pages vierges · remonter ou non · prendre le carnet avant
+    ou apres la lettre · attendre ou descendre. [OBL] Aucun n'affiche
+    d'options a l'ecran. [OBL] C'est l'aboutissement de la courbe des 38
+    choix : S3 en avait 11 avec des options ecrites, S8 en a 5 dont
+    aucune n'est presentee comme un choix.
+
+    Echos de S8 : 1 — E30 (le carnet). [OBL] E31 n'existe pas dans le
+    chapitre 1 : le rituel de la lettre (D04) aurait ete le 31e et il ne
+    produit rien. [OBL] Le compte « 31 Echos » de l'INDEX inclut donc un
+    Echo qui n'en est pas un. [OBL] C'est volontaire et documente ici.
+
+--- § 10 — CHECKLIST DE SEQUENCE ---------------------------------------------------------------------
+
+[ ] 474 lignes, 48 barks, 5 choix d'action, 1 Echo, 38 slots muets
+[ ] Aucun bark dans la chambre ni dans la scene finale — CI `no-bark-in-room`
+[ ] La chambre est identique si le joueur remonte — CI `room-frozen-return`
+[ ] Aucune branche « ne pas lire » : retour force, sans moquerie
+[ ] La lettre est relisible a l'identique — CI `letter-replay-identical`
+[ ] L456 : 5e et derniere occurrence du motif des deux minutes
+[ ] L474 : 2 840e entree, optionnelle, jouee sans satisfaction
+[ ] Aucune confirmation que Esteban est mort ou vivant — 20.05

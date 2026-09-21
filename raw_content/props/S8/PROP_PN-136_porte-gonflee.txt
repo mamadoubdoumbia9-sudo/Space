@@ -1,0 +1,119 @@
+===============================================================================
+PN-136 — LA PORTE GONFLEE DE LA CHAMBRE
+===============================================================================
+Asset : SM_S8_Porte_Chambre · S8, chambre du gardien, 207 m · ~06:21 ·
+prop narratif INTERACTIF · pas d'Echo · LOD0 1 800 tris
+
+§ 1 — CE QU'ON VOIT
+Depuis la lanterne, un demi-etage plus haut, il y a une porte.
+La chambre du gardien.
+C'est une porte de bois ordinaire, peinte en gris, avec un bouton de
+porcelaine blanche.
+Elle est FERMEE.
+[OBL] C'est la premiere porte fermee du chapitre qui va s'ouvrir.
+Le bois a gonfle. Trois ans d'humidite marine a 207 metres : le battant a
+pris 4 mm et il est coince dans son chambranle sur tout le pourtour.
+On le voit : le jeu entre la porte et le cadre a disparu. La peinture est
+craquelee le long de la jointure.
+Le bouton de porcelaine est PROPRE. Poli.
+[OBL] Quelqu'un ouvre cette porte regulierement. Et pourtant elle est
+coincee.
+Sous la porte, un jour de 12 mm.
+Et par ce jour, il y a de la LUMIERE.
+[OBL] Une lumiere chaude. Orange. Qui bouge.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 800. Le gonflement : la geometrie du battant est reellement
+deformee (bombement de 4 mm au centre des cotes).
+La peinture craquelee : masque de texture concentre sur 2 cm le long de la
+jointure.
+Le bouton : roughness 0,08 (porcelaine polie par des mains) contre 0,34
+pour la plaque de propreté autour.
+[OBL] La lumiere sous la porte : c'est PN-137 (la lampe a huile). Elle est
+reellement dans la piece, allumee, et sa lumiere passe par le jour de 12 mm.
+[OBL] Ce n'est pas un effet : c'est une vraie lumiere derriere une vraie
+porte. Elle vacille parce que la lampe vacille.
+OUVERTURE : LOH-ACT-231, 4,2 secondes.
+[OBL] Il pousse. Rien. Il pousse plus fort. Rien.
+[OBL] Il met l'EPAULE. L'epaule GAUCHE. [OBL] Pas la droite. Il a une
+epaule abimee et il le sait.
+Le battant cede d'un coup, avec un craquement de bois.
+[OBL] Il n'est pas casse. Il s'est juste decoince.
+
+§ 3 — CE QUE CA DIT
+Il y a de la lumiere derriere cette porte.
+Le geste humain : polir un bouton de porcelaine a force de l'ouvrir.
+[OBL] Mais la porte est coincee depuis longtemps. Ces deux faits sont
+contradictoires.
+[NAR] Le bouton a ete poli AVANT. Pendant des annees, quelqu'un a ouvert
+cette porte tous les jours. Puis le bois a gonfle et plus personne ne l'a
+ouverte.
+[OBL] Et il y a de la lumiere a l'intérieur.
+[OBL] Comme la lampe-tempete du Registre en S1 (PN-009), qui brulait depuis
+trois ans sans reservoir.
+[OBL] Jamais explique. Ni l'une, ni l'autre.
+[ART] Le chapitre a commence avec une lumiere inexplicable dans une piece
+vide. Il finit avec une autre.
+
+§ 4 — ECHO
+NEANT. [OBL] Une porte est un element d'architecture (PN-055).
+[OBL] Et : les trois derniers Echos du chapitre (E29, E30, E31) sont tous
+les trois derriere cette porte. Aucun devant.
+
+§ 5 — MISE EN SCENE
+[OBL] C'est la derniere porte. Le joueur le sait : il est au sommet.
+Il n'y a rien au-dessus.
+[OBL] Aucun prompt AVANT qu'il ne pousse. Il arrive devant une porte fermee
+avec de la lumiere dessous. Il n'y a pas d'icone.
+Il pousse. [OBL] Le prompt apparait au contact, comme partout ailleurs.
+Les 4,2 secondes de LOH-ACT-231 :
+  0 - 1,1 s : il pousse doucement. Le battant bouge de 2 mm et revient.
+  1,1 - 2,3 s : il pousse a deux mains. Rien.
+  2,3 - 2,9 s : il s'arrete. [OBL] 0,6 seconde d'immobilite.
+  2,9 - 3,8 s : epaule gauche. Un coup.
+  3,8 - 4,2 s : la porte s'ouvre.
+[OBL] Le joueur n'a aucun controle pendant les 4,2 s. C'est mecanique, pas
+narratif : il a demande a ouvrir la porte.
+[OBL] La camera ne bouge pas. Elle reste derriere Lohen. Quand la porte
+s'ouvre, elle ne se precipite pas. Elle reste ou elle est.
+[OBL] Il n'y a pas de plan de la chambre. Le joueur voit ce qu'il voit
+depuis l'endroit ou il est.
+
+§ 6 — AUDIO
+SFX(door_swollen_push) : le bois qui frotte, deux fois.
+SFX(door_shoulder_hit) : le coup d'epaule. [OBL] Un son sourd et lourd.
+SFX(door_release_crack) : le decoincement. Un craquement sec et fort, avec
+la reverb de la lanterne en dessous.
+[OBL] Et puis, quand la porte s'ouvre : RIEN.
+[OBL] M24 « Le Phare » S'ARRETE. Pas en fondu : elle s'arrete.
+[OBL] Elle jouait depuis 19 minutes sans interruption. Elle s'arrete a
+l'ouverture de la porte, au milieu d'une phrase.
+[ART] C'est le silence le plus important du jeu.
+[OBL] Il n'y a plus de musique jusqu'a PN-143. Cela fait environ 6 minutes.
+
+§ 7 — INTERDICTIONS
+Interdit de : ouvrir avec la droite · ajouter un QTE · verrouiller la porte
+· ajouter une cle · ajouter un plan de la chambre · deplacer la camera ·
+ajouter un fondu · ajouter une musique · faire durer M24 apres l'ouverture
+· eteindre la lumiere sous la porte · expliquer la lumiere · refermer la
+porte.
+[OBL] La porte reste ouverte jusqu'a la fin du chapitre.
+
+§ 8 — LIENS
+PN-009 (la lampe-tempete de S1, qui brule depuis trois ans).
+PN-015, PN-051, PN-080, PN-092 (les quatre refus definitifs du chapitre).
+[OBL] Cinq portes fermees. Quatre ne s'ouvrent jamais. Celle-ci s'ouvre.
+PN-021 (l'echelle brisee, S1 : l'epaule droite).
+PN-137 (la lampe a huile, derriere).
+[THEME] LE REFUS — et la seule exception.
+
+§ 9 — DOD
+[ ] Battant bombe de 4 mm, jeu disparu sur tout le pourtour
+[ ] Peinture craquelee sur 2 cm le long de la jointure
+[ ] Bouton de porcelaine poli, roughness 0,08
+[ ] Lumiere reelle de PN-137 passant par un jour de 12 mm, vacillante
+[ ] LOH-ACT-231 : 4,2 s, epaule GAUCHE, 0,6 s d'immobilite a 2,3 s
+[ ] Camera immobile pendant et apres l'ouverture, aucun plan de la chambre
+[ ] M24 s'arrete net a l'ouverture, au milieu d'une phrase
+[ ] Zero musique pendant les 6 minutes suivantes
+[ ] Porte jamais refermee

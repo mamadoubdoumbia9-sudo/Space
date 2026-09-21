@@ -1,0 +1,153 @@
+===============================================================================
+DLG · S5 · D09 — 20 LIGNES D'EFFORT + LES 44 BARKS DES CONDUITS
+20 entrees S5 comptees (LOH 14 · SOL 6) + 44 barks S5_BK (hors total).
+Contribution au total de sequence : 20.
+Reference INDEX § 6.00 : les barks sont domicilies dans la sequence ou ils
+se declenchent ; les 44 barks de S5 vivent ici.
+===============================================================================
+
+--- PARTIE 1 — LES 20 LIGNES D'EFFORT (comptees) ----------------------------------------------
+
+[OBL] Regle de S5 : Lohen porte une lanterne, se deplace accroupi 60 % du
+temps, et a une epaule droite abimee. Le jeu ne dit jamais « endurance ».
+Il n'y a pas de jauge. Il y a ces vingt lignes, reparties sur 28 minutes,
+et le joueur comprend seul.
+
+    [S5_LOH_L337]  1,4 s · souffle · « Je change de main. »
+    [S5_LOH_L338]  1,8 s · souffle · « Gauche maintenant. »
+        dir : [OBL] il ne dit jamais pourquoi c'est la droite qui
+              lache. Rappel canon : l'epaule n'est expliquee nulle
+              part, la seule mention volontaire est S5_LOH_L012.
+    [S5_LOH_L339]  1,2 s · souffle · « Encore combien. »
+    [S5_LOH_L340]  2,0 s · souffle · « Sol dirait vingt minutes. Sol dit toujours vingt minutes. »
+    [S5_LOH_L341]  1,6 s · souffle · « Le plafond descend. »
+    [S5_LOH_L342]  2,2 s · souffle · « Un metre quarante. Je fais un metre soixante-dix-huit. »
+        dir : [OBL] seule mesure de Lohen donnee dans le jeu, et elle
+              est donnee pour se plaindre d'un plafond.
+    [S5_LOH_L343]  1,4 s · souffle · « A genoux, alors. »
+    [S5_LOH_L344]  1,8 s · souffle · « Mes genoux ont vingt-sept ans eux aussi. »
+        dir : [OBL] ATTENTION : cette ligne donne l'age. [OBL] Elle est
+              dite SEUL, en aparte, a 0,7 de gain, et 100 % des joueurs
+              ne l'entendent pas consciemment. [OBL] Elle ne contredit
+              pas `age-never-stated` : le job CI porte sur les lignes
+              ADRESSEES a un autre personnage. Exception declaree dans
+              VALIDATION_2840 § 3.
+    [S5_LOH_L345]  1,2 s · souffle · « Pause. »
+    [S5_LOH_L346]  2,4 s · souffle · « Non. Si je m'assois je me releve pas avant dix minutes. »
+    [S5_LOH_L347]  1,6 s · souffle · « J'avance. »
+    [S5_LOH_L348]  2,0 s · souffle · « Ca va aller. »
+        dir : 9e occurrence. 2,0 s — elle RALLONGE. [OBL] La courbe des
+              onze n'est pas monotone : elle raccourcit de 1 a 8, puis
+              se rallonge une fois, puis s'effondre. C'est plus vrai
+              qu'une decroissance propre.
+    [S5_LOH_L349]  1,8 s · souffle · « La lanterne chauffe le poignet. »
+    [S5_LOH_L350]  1,4 s · souffle · « Je la tiens par l'anse haute. »
+    [S5_LOH_L351]  2,2 s · souffle · « Il faisait ca, lui. Par l'anse haute. »
+        dir : [OBL][NAR] UNE DES QUATRE FOIS DU CHAPITRE OU LOHEN
+              PARLE D'ESTEBAN SANS LE NOMMER. [OBL] « lui » n'est
+              jamais precise. [OBL] Aucun plan, aucune musique, aucune
+              pause. La ligne suivante arrive 0,4 s apres.
+    [S5_LOH_L352]  1,2 s · souffle · « Bon. »
+    [S5_SOL_L353]  1,6 s · plat    · « Tu parles tout seul. »
+    [S5_LOH_L354]  1,4 s · plat    · « Oui. »
+    [S5_SOL_L355]  2,0 s · plat    · « Moi aussi. C'est pas grave. »
+    [S5_SOL_L356]  2,4 s · plat    · « C'est quand tu reponds que c'est grave. »
+        dir : [OBL] 20e ligne comptee. [OBL] Lohen ne repond pas —
+              ce qui, selon Sol, est rassurant.
+
+--- PARTIE 2 — LES 44 BARKS DE S5 (hors total, ids continus) -----------------------------------
+
+[OBL] Regime des barks en S5 : cooldown standard 8 min, MAIS gain
+plafonne a 0,55 (les conduits mangent la voix) et AUCUN bark ne se
+declenche pendant les trois passages dans le noir complet, ni pendant
+D04. [OBL] Job CI `bark-silence-s5-d04` : toute occurrence d'un bark dans
+la fenetre [D04-6 s ; fin D04 +4 s] casse le build.
+
+-- Barks de Lohen, effort et repere (18) --
+
+    [S5_BK_L357]  0,8 s · « Hm. »
+    [S5_BK_L358]  1,0 s · « Ca descend. »
+    [S5_BK_L359]  0,9 s · « Encore. »
+    [S5_BK_L360]  1,2 s · « Ca tourne a gauche. »
+    [S5_BK_L361]  1,0 s · « Tout droit. »
+    [S5_BK_L362]  1,4 s · « Y'a de l'eau au fond. »
+    [S5_BK_L363]  0,8 s · « Froid. »
+    [S5_BK_L364]  1,1 s · « Ma main. »
+    [S5_BK_L365]  1,3 s · « Doucement. »
+    [S5_BK_L366]  0,9 s · « Voila. »
+    [S5_BK_L367]  1,2 s · « C'est glissant. »
+    [S5_BK_L368]  1,0 s · « Je vois rien. »
+    [S5_BK_L369]  1,4 s · « Attends. »
+    [S5_BK_L370]  0,8 s · « Bon. »
+    [S5_BK_L371]  1,2 s · « Ca va. »
+        dir : [OBL] « Ca va » n'est PAS « Ca va aller ». Les onze
+              occurrences canoniques ne comptent pas les barks. Job CI
+              `count-ca-va-aller` ignore les ids `_BK_`.
+    [S5_BK_L372]  1,1 s · « Plus bas. »
+    [S5_BK_L373]  1,3 s · « La. »
+    [S5_BK_L374]  0,9 s · « Ouais. »
+
+-- Barks de Sol, commentaire (14) --
+
+    [S5_BK_L375]  1,0 s · « Par la. »
+    [S5_BK_L376]  1,2 s · « Pas par la. »
+    [S5_BK_L377]  0,9 s · « Suis. »
+    [S5_BK_L378]  1,4 s · « T'es lent. »
+    [S5_BK_L379]  1,1 s · « Baisse-toi. »
+    [S5_BK_L380]  1,3 s · « Fais gaffe au trou. »
+    [S5_BK_L381]  0,8 s · « Hop. »
+    [S5_BK_L382]  1,2 s · « Ca va ? »
+    [S5_BK_L383]  1,0 s · « Tant mieux. »
+    [S5_BK_L384]  1,4 s · « J'ai dit a gauche. »
+    [S5_BK_L385]  0,9 s · « Voila. »
+    [S5_BK_L386]  1,2 s · « T'apprends vite. »
+    [S5_BK_L387]  1,1 s · « Presque. »
+    [S5_BK_L388]  1,3 s · « On y est pas. »
+
+-- Barks d'ambiance vocale non attribuee (12) --
+
+[OBL] Les douze suivants n'ont PAS de locuteur. Ce sont des voix
+lointaines, filtrees a travers les parois, a -22 dB, jamais duckees,
+jamais sous-titrees. [OBL] Job CI `no-subtitle-bk-s5-ambient` : ces douze
+ids doivent etre absents du fichier de sous-titres.
+
+    [S5_BK_L389]  1,6 s · (une voix d'homme, un mot, indistinct)
+    [S5_BK_L390]  2,0 s · (deux personnes qui parlent, aucun mot separable)
+    [S5_BK_L391]  1,4 s · (un rire, tres bref)
+        dir : [OBL][NAR] LE SEUL RIRE DE TOUT LE CHAPITRE 1. Il est a
+              -22 dB, derriere un mur, il dure 1,4 s, et il n'appartient
+              a personne. [OBL] Lohen ne rit jamais (canon). Le jeu
+              place donc son unique rire hors de portee.
+    [S5_BK_L392]  1,8 s · (quelqu'un compte, on n'entend que le rythme)
+    [S5_BK_L393]  2,2 s · (une phrase entiere, incomprehensible, ton de reproche)
+    [S5_BK_L394]  1,6 s · (un seul mot repete trois fois)
+    [S5_BK_L395]  2,0 s · (une porte, puis une voix, puis rien)
+    [S5_BK_L396]  1,4 s · (quelqu'un chantonne quatre notes)
+        dir : [OBL][NAR] QUATRE NOTES DU MOTIF LA-DO-MI-RE-LA. La
+              cinquieme manque. 18e des 23 occurrences incompletes.
+              [OBL] Jamais souligne, jamais mixe au-dessus de -22 dB.
+    [S5_BK_L397]  1,8 s · (une toux)
+    [S5_BK_L398]  2,4 s · (deux mots, dont le second ressemble a un prenom)
+        dir : [OBL] IL NE RESSEMBLE PAS A « ESTEBAN ». Direction de
+              studio explicite : le comedien enregistre un prenom de
+              trois syllabes commencant par une consonne occlusive,
+              puis le son est filtre. [OBL] Interdit absolu : ne jamais
+              faire dire « Esteban » a une voix d'ambiance.
+    [S5_BK_L399]  1,6 s · (quelqu'un pose un objet lourd)
+    [S5_BK_L400]  2,0 s · (rien — piste vide de 2 s declenchee comme un bark)
+        dir : [OBL] Oui, un bark vide. Il occupe un slot de cooldown et
+              ne produit aucun son. Consequence : de temps en temps, le
+              systeme de barks « se tait » pendant 8 minutes sans
+              raison. [OBL] C'est volontaire et c'est la meilleure
+              ligne d'ambiance du document.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] 20 lignes comptees, 44 barks hors total (L357→L400)
+[ ] Aucun bark pendant D04 ni pendant les 3 passages dans le noir
+[ ] Gain barks plafonne a 0,55 en S5
+[ ] Les 12 barks d'ambiance ne sont pas sous-titres
+[ ] L391 : unique rire du chapitre, -22 dB, derriere un mur
+[ ] L396 : 4 notes sur 5, 18e occurrence incomplete
+[ ] L398 : jamais « Esteban »
+[ ] L400 : bark vide, volontaire

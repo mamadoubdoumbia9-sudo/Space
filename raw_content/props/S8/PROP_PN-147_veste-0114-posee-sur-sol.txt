@@ -1,0 +1,165 @@
+===============================================================================
+PN-147 — LA VESTE 0114 POSEE SUR SOL
+===============================================================================
+Asset : SM_Veste_Lohen + SM_S8_Sol_Endormi · S8, pied du Phare, contre la
+porte de fer · ~06:44 · DERNIER PROP DU CHAPITRE 1 · pas d'Echo ·
+LOD0 6 400 tris
+
+                    ------------------------------------
+                    DERNIERE IMAGE JOUABLE DU CHAPITRE.
+                    CF. BLOC 19 ET BLOC 21 DU MASTER.
+                    ------------------------------------
+
+§ 1 — CE QU'ON VOIT
+Lohen redescend. 1 038 marches. [OBL] Onze minutes. [OBL] Les memes.
+[OBL] Il n'y a AUCUN raccourci, aucun fondu, aucune ellipse. Il redescend
+tout l'escalier.
+[OBL] La descente est identique a la montee, sauf trois choses :
+  — il fait plus clair : la nuit s'eclaircit. Il est 5 heures du matin.
+  — les 14 meurtrieres sont grises au lieu d'etre noires
+  — il n'y a plus de musique. M24 ne rejoue pas. M25 est finie.
+    [OBL] Onze minutes de descente en silence, avec seulement ses pas.
+En bas, la porte de fer. Il sort.
+Et contre la porte, dehors, assis par terre, adosse au granit, il y a
+quelqu'un.
+Sol. Il dort.
+[OBL] Il est trempe. Il a plu sur lui pendant des heures.
+[OBL] Il n'est pas venu avec Lohen. Lohen l'a quitte en S6, il y a
+1 h 50. Il a traverse la Descente, le front de mer et le pont casse pour
+venir attendre au pied du Phare.
+Pomme est contre lui. Le chien dort aussi.
+Lohen retire sa veste.
+[OBL] La veste de relayeur. Avec « 0114 » brode sur la poitrine gauche.
+Il la pose sur Sol.
+Il ne le reveille pas.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 6 400 (Sol endormi 3 200 + Pomme 1 400 + veste posee 1 800).
+[OBL] La veste posee est un asset DISTINCT de la veste portee. Elle est
+sculptee dans son etat « posee sur un corps assis », avec les plis du
+tissu qui epouse les epaules et tombe sur les cotes.
+[OBL] Le matricule « 0114 » est visible. Il est sur le dessus.
+[OBL] Sol porte sa propre veste (PN-052), celle dont le matricule a ete
+arrache. Elle est dessous.
+[ART] Deux vestes de relayeur. L'une sans matricule, l'autre avec. Posees
+l'une sur l'autre sur un enfant qui dort.
+Pomme : [OBL] premiere et unique apparition modelisee du chien en S8.
+Il dort, flanc contre la jambe de Sol. Respiration visible : le flanc monte
+de 8 mm, periode 2,4 s.
+[OBL] C'est le seul etre vivant visiblement respirant du dernier plan.
+LOH-ACT-247, 7,2 s : il retire la veste (epaule droite en dernier, plus
+lentement), il se penche, il la pose, il se releve.
+[OBL] Il ne le touche pas. Il ne lui parle pas. Il ne s'accroupit pas
+completement : il se penche.
+
+§ 3 — CE QUE CA DIT
+[OBL] Il donne son matricule.
+Le geste humain : poser un vetement sur quelqu'un qui dort.
+[OBL] La lettre (PN-143) disait : « Je ne sais pas ce que tu vas faire
+maintenant et ce n'est plus mon travail de le savoir. »
+Il fait ca.
+[OBL] Le jeu ne commente pas. Il n'y a pas de voix off, pas de dialogue,
+pas de sous-titre, pas de musique, pas de gros plan.
+[OBL] Sol ne se reveille pas. Il ne saura pas que c'etait Lohen. Il
+trouvera une veste sur lui en se reveillant.
+[OBL] Aucun des six chapitres suivants ne montre ce reveil.
+
+§ 4 — ECHO
+NEANT. [OBL] Il n'y a plus d'Echo. E31 etait le dernier des trente et un.
+[OBL] Le systeme est termine pour le chapitre.
+
+§ 5 — MISE EN SCENE
+[OBL] SEQUENCE FINALE. Chaque element est arbitre.
+1. Lohen sort. [OBL] Camera troisieme personne, derriere lui, comme toujours.
+2. Il voit Sol. [OBL] AUCUN LookAt scripte. Aucun arret. Aucun ralenti.
+   Le joueur garde le controle.
+3. [OBL] LE JOUEUR DOIT DECLENCHER L'ACTION. Le prompt apparait a 2 m.
+   [OBL] IL PEUT PARTIR SANS LE FAIRE.
+   [OBL] S'il part : il marche vers la barque (PN-005, qui est a 4 km,
+   inatteignable), il arrive au bout de la jetee, et le chapitre se termine
+   quand meme. [OBL] Sans la veste. Sans le geste.
+   [OBL] Taux de joueurs qui posent la veste : 94-98 %.
+   [OBL] Les 2 a 6 % qui ne le font pas ont une fin differente et le jeu ne
+   le leur dit pas.
+4. LOH-ACT-247, 7,2 s. [OBL] Camera fixe. Elle ne s'approche pas. Elle ne
+   se baisse pas. Elle reste ou le joueur l'avait mise.
+5. Il se releve. Il reprend le controle.
+6. [OBL] Il marche. Vers la jetee. Vers l'ouest.
+   [OBL] Il fait 40 metres et l'ecran passe au noir.
+   [OBL] PAS de fondu lent. Une coupe. Nette. En 0,3 seconde.
+7. [OBL] Sur le noir, en blanc, centre, dans la typographie du jeu :
+        FIN DU CHAPITRE 1
+8. [OBL] Il reste 4 secondes. Exactement.
+9. [OBL] Puis le texte disparait. Le noir reste. 1,5 seconde.
+10. [OBL] Puis, au meme endroit, dans la meme typographie :
+        Il reste six lettres.
+11. [OBL] 6 secondes. Puis noir. Puis le menu.
+[OBL] Aucune musique pendant les 11,5 secondes de l'ecran final.
+[OBL] AUCUNE. Ni pendant « FIN DU CHAPITRE 1 », ni pendant « Il reste six
+lettres. », ni sur le retour au menu.
+[OBL] Aucun credit ne defile. Aucun succes ne se declenche. Aucun bouton ne
+s'affiche avant les 11,5 secondes ecoulees.
+
+§ 6 — AUDIO
+[OBL] La descente : 11 minutes de pas seuls. Zero musique.
+[OBL] A la sortie : le son du dehors revient. Le vent, et [OBL] PAS DE
+PLUIE. Il a cesse de pleuvoir pendant qu'il etait en haut.
+[OBL] Jamais commente.
+SFX(breath_sleeping_child) : Sol respire. -32 dB. [OBL] Audible seulement a
+moins de 3 m.
+SFX(breath_sleeping_dog) : Pomme. -34 dB. [OBL] Different : plus rapide,
+avec un leger sifflement nasal.
+[ART] Deux respirations. C'est tout ce qu'il reste de vivant dans le son du
+jeu.
+SFX(cloth_lay_over) : la veste posee. [OBL] Un son doux, long, de 1,4 s.
+Le plus doux du jeu.
+[OBL] Sur les 40 derniers metres de marche : les pas de Lohen, et rien.
+[OBL] A la coupe au noir : le son se coupe AUSSI. Net. En meme temps.
+[OBL] Les 11,5 secondes d'ecran final sont en SILENCE NUMERIQUE TOTAL.
+[OBL] -inf dB. Pas de bruit de fond, pas de souffle, pas de reverb
+residuelle.
+[ART] Le jeu se termine sur onze secondes et demie de rien.
+
+§ 7 — INTERDICTIONS
+Interdit de : reveiller Sol · le faire parler · le faire ouvrir les yeux ·
+faire remuer Pomme · faire parler Lohen · ajouter une voix off · ajouter un
+dialogue · ajouter une musique · ajouter un theme final · ajouter un gros
+plan · deplacer la camera · ajouter un fondu lent · ajouter des credits ·
+ajouter un succes · ajouter une image de fin · ajouter une photo · montrer
+Esteban · montrer le reveil de Sol · rendre l'action obligatoire · signaler
+au joueur qu'il a manque le geste · modifier les deux textes · changer les
+durees (4 s / 1,5 s / 6 s) · ajouter du son sur l'ecran final ·
+RENDRE LA FIN PLUS HEUREUSE.
+[OBL] Rappel du BLOC 21.08 : « rendre la fin plus heureuse » est le dernier
+des interdits absolus du projet, et il s'applique integralement ici.
+
+§ 8 — LIENS
+PN-052 (la veste en lambeaux de Sol, matricule arrache, S3 : « C'est pas
+volee. Je dis ca parce que vous avez la meme. »).
+PN-018 (le jeton 0114, ramasse a 00:40, introduit dans la borne a 06:26).
+PN-005 (l'enveloppe « 0114 » dans la barque, a la minute zero).
+PN-139 (les 314 feuilles « 0114 »).
+PN-048 (la sacoche : elle contient maintenant six lettres non livrees, la
+septieme « 0114 », la liste d'Esteban, le dossier ferme de Mireille, un
+objet des Figures, et LA LETTRE).
+[OBL] Il part sans sa veste, avec une sacoche pleine de choses qu'il ne
+peut pas livrer.
+PN-143 (LA LETTRE) : « Des mains qui portent le courrier de toute une ville
+et qui ne recoivent jamais rien. »
+[OBL] Il en a recu une. Il la garde. Et il donne son matricule.
+[THEME] PORTER POUR LES AUTRES. [THEME] LE MATRICULE QUI PASSE.
+
+§ 9 — DOD
+[ ] Descente complete de 1 038 marches, 11 min, zero raccourci, zero musique
+[ ] Nuit eclaircie, 14 meurtrieres grises, pluie cessee, jamais commente
+[ ] Sol trempe, endormi, adosse a la porte ; Pomme contre lui, respirant
+[ ] Veste posee : asset distinct, sculptee sur corps assis, « 0114 » visible
+[ ] Les deux vestes superposees, celle de Sol dessous, sans matricule
+[ ] Action NON obligatoire ; taux 94-98 % ; aucune signalisation si manquee
+[ ] LOH-ACT-247 : 7,2 s, camera fixe, aucun contact, aucun accroupissement
+[ ] Coupe au noir nette en 0,3 s apres 40 m de marche
+[ ] « FIN DU CHAPITRE 1 » : 4 s. Noir : 1,5 s. « Il reste six lettres. » : 6 s
+[ ] Silence numerique total (-inf dB) sur les 11,5 secondes
+[ ] Zero musique, zero credit, zero succes, zero bouton avant la fin
+[ ] Deux respirations audibles a moins de 3 m, distinctes
+[ ] SFX de la veste posee : 1,4 s, le son le plus doux du jeu

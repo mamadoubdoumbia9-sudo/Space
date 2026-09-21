@@ -1,0 +1,199 @@
+===============================================================================
+DLG · S3 · D11 — LES QUATRE ECHOS DU MARCHE (E07 a E10)
+44 entrees, toutes S3. ECH 44. Contribution : 44.
+Regles du systeme : R1 a R10 (cf. props/VALIDATION_CROISEE_147.txt § 1).
+[OBL] Aucun de ces quatre ne montre Esteban. Aucun ne regarde Lohen.
+===============================================================================
+
+--- E07 — LA BOUTIQUE DE CORDES (10) ------------------------------------------------
+
+Declencheur : le comptoir de bois use de la corderie. Sur le chemin.
+95 % des joueurs. Duree 44 s. Six silhouettes, une queue de clients.
+
+    [S3_ECH_L354]  CORDIER · 1,6 s · pratique · p0,4
+        « Six ou dix ? »
+
+    [S3_ECH_L355]  CLIENT 1 · 1,1 s · plat · p0,5
+        « Dix. »
+
+    [S3_ECH_L356]  CORDIER · 2,2 s · pratique · p0,4
+        « En dix j'ai du chanvre et j'ai du mixte. Le mixte tient
+          mieux mouille. »
+
+    [S3_ECH_L357]  CLIENT 1 · 1,4 s · plat · p0,6
+        « Mixte, alors. »
+
+    [S3_ECH_L358]  CLIENT 2 · 1,8 s · agace · p0,5
+        « Il y en a pour longtemps ? »
+
+    [S3_ECH_L359]  CORDIER · 1,3 s · sec · p0,4
+        « Oui. »
+
+    [S3_ECH_L360]  CLIENT 2 · 1,0 s · agace · p0,7
+        « Bon. »
+
+    [S3_ECH_L361]  CORDIER · 2,6 s · pratique · p0,5
+        « Vingt metres, ca fait quatre pieces et je vous en donne
+          vingt-deux parce que vous avez attendu. »
+
+    [S3_ECH_L362]  CLIENT 2 · 1,7 s · surpris · p0,6
+        « Vous faites ca a tout le monde ? »
+
+    [S3_ECH_L363]  CORDIER · 2,4 s · plat · p0,0
+        « A ceux qui rouspetent pas trop. »
+        dir : dissolution. [OBL] E07 est completement banal, et c'est
+              son role : apres six Echos charges, le joueur a besoin
+              d'apprendre que la plupart des vies sont sans interet.
+              C'est ce qui rend les autres supportables.
+
+--- E08 — LE PALIER DE L'ESCALIER 7 (12) ---------------------------------------------
+
+Declencheur : la rampe d'un palier, a 12 m hors du chemin principal.
+52 % des joueurs. Duree 58 s. Deux silhouettes, une porte entre elles.
+
+    [S3_ECH_L364]  FEMME · 1,4 s · plat · p0,5
+        « Tu rentres pas ? »
+
+    [S3_ECH_L365]  HOMME · 1,1 s · plat · p0,6
+        « Dans une minute. »
+
+    [S3_ECH_L366]  FEMME · 1,8 s · plat · p0,7
+        « Tu dis ca depuis vingt minutes. »
+
+    [S3_ECH_L367]  HOMME · 2,2 s · plat · p0,5
+        « Il fait bon sur le palier. »
+
+    [S3_ECH_L368]  FEMME · 2,0 s · sec · p0,8
+        « Il fait bon dedans aussi. »
+
+    [S3_ECH_L369]  HOMME · 1,6 s · plat · p0,9
+        « Oui. »
+
+    [S3_ECH_L370]  FEMME · 2,7 s · plat · p0,6
+        « Qu'est-ce qu'il y a, Manu. »
+
+    [S3_ECH_L371]  HOMME · 2,4 s · plat · p1,2
+        « Rien. »
+
+    [S3_ECH_L372]  FEMME · 3,0 s · plat · p0,7
+        « Tu me le diras sur le palier ou tu me le diras dedans, mais
+          tu me le diras. »
+
+    [S3_ECH_L373]  HOMME · 2,8 s · plat · p0,9
+        « Sur le palier. »
+
+    [S3_ECH_L374]  FEMME · 1,9 s · doux · p0,6
+        « Bon. Je m'assois, alors. »
+        dir : elle s'assoit sur la marche. Elle ne rentre pas non plus.
+
+    [S3_ECH_L375]  HOMME · 2,3 s · plat · p0,0
+        « Voila. C'est deja plus facile. »
+        dir : [OBL] dissolution AVANT qu'il ne dise ce qu'il a. Le
+              joueur ne saura jamais. [OBL] Aucun autre Echo, aucun
+              prop, aucun dialogue ne l'apprendra. R7 : ce qui a ete,
+              jamais ce qui aurait du etre.
+
+--- E09 — LA FENETRE DE L'ETAGE (10) ---------------------------------------------------
+
+Declencheur : un appui de fenetre, accessible seulement au grappin, a
+18 m. 31 % des joueurs. Duree 41 s. Une silhouette, seule.
+
+    [S3_ECH_L376]  VIEILLE FEMME · 2,0 s · plat · p0,6
+        « Trois, huit, quatorze, vingt et un. »
+
+    [S3_ECH_L377]  VIEILLE FEMME · 2,4 s · plat · p0,5
+        « Trois, huit, quatorze, vingt et un. »
+
+    [S3_ECH_L378]  VIEILLE FEMME · 1,8 s · plat · p0,7
+        « Non. Trois, neuf, quatorze. »
+
+    [S3_ECH_L379]  VIEILLE FEMME · 2,2 s · agace · p0,6
+        « Recommence. »
+
+    [S3_ECH_L380]  VIEILLE FEMME · 2,6 s · plat · p0,5
+        « Trois, huit, quatorze, vingt et un, trente-quatre. »
+
+    [S3_ECH_L381]  VIEILLE FEMME · 1,5 s · doux · p0,8
+        « Voila. »
+
+    [S3_ECH_L382]  VIEILLE FEMME · 2,8 s · plat · p0,6
+        « Et tu recommences demain, sinon ca part. »
+
+    [S3_ECH_L383]  VIEILLE FEMME · 2,1 s · plat · p0,7
+        « Ca part tres vite. »
+
+    [S3_ECH_L384]  VIEILLE FEMME · 2,4 s · doux · p0,5
+        « Bonne nuit, les numeros. »
+
+    [S3_ECH_L385]  VIEILLE FEMME · 1,9 s · doux · p0,0
+        « Bonne nuit, moi. »
+        dir : [OBL][NAR] Une femme seule qui recite une suite de
+              chiffres pour ne pas perdre la tete et qui se souhaite
+              bonne nuit. [OBL] Le jeu n'explique pas ce que sont ces
+              nombres. Ce ne sont pas des coordonnees, pas un code, pas
+              un puzzle. Un joueur les entrera quelque part. Il n'y a
+              rien. C'est ecrit ici pour que personne, en production,
+              ne cede a la tentation d'en faire une enigme.
+
+--- E10 — SOUS L'ETAL DE SEL (12) -------------------------------------------------------
+
+Declencheur : ramper sous l'etal de Hanno. 22 % des joueurs. 47 s.
+Quatre silhouettes d'enfants. [OBL] Exception a R6 ? NON : R6 interdit
+les enfants SEULS comme sujet d'un Echo. Ici ils sont quatre et
+l'Echo appartient a l'etal, propriete de Hanno, vivant — donc R4 devrait
+l'interdire. [OBL] R4 exception declaree : l'objet-support n'est pas
+l'etal mais une bille de verre perdue dessous, sans proprietaire connu.
+Cette exception est la SEULE du chapitre avec E13/Mireille. Elle est
+documentee ici et dans VALIDATION_CROISEE_147 § 1.
+
+    [S3_ECH_L386]  ENFANT A · 1,2 s · joueur · p0,4
+        « Elle est a moi. »
+
+    [S3_ECH_L387]  ENFANT B · 1,0 s · joueur · p0,3
+        « Elle est a personne, elle etait par terre. »
+
+    [S3_ECH_L388]  ENFANT A · 1,4 s · joueur · p0,4
+        « Par terre chez mon pere. »
+
+    [S3_ECH_L389]  ENFANT C · 1,6 s · joueur · p0,5
+        « Ton pere il a pas de terre, il a un etal. »
+
+    [S3_ECH_L390]  ENFANT A · 1,1 s · agace · p0,4
+        « C'est pareil. »
+
+    [S3_ECH_L391]  ENFANT D · 1,8 s · joueur · p0,6
+        « On la casse et on fait quatre. »
+
+    [S3_ECH_L392]  ENFANT B · 1,3 s · surpris · p0,4
+        « On peut pas casser du verre en quatre. »
+
+    [S3_ECH_L393]  ENFANT D · 1,5 s · joueur · p0,5
+        « Si. Avec un marteau. »
+
+    [S3_ECH_L394]  ENFANT C · 2,0 s · plat · p0,6
+        « Apres c'est plus une bille, c'est du sable. »
+
+    [S3_ECH_L395]  ENFANT D · 1,7 s · joueur · p0,7
+        « Du sable a quatre. »
+
+    [S3_ECH_L396]  ENFANT A · 2,2 s · plat · p0,5
+        « Bon. On la laisse la et elle est a nous quatre. »
+
+    [S3_ECH_L397]  ENFANT B · 1,9 s · joueur · p0,0
+        « Faut revenir la voir des fois. »
+        dir : [OBL] dissolution. LA BILLE EST TOUJOURS LA, dans le
+              present, sous l'etal, modelisee. Le joueur peut la
+              prendre : elle n'est PAS un des 9 ramassables, elle
+              n'entre pas dans l'inventaire (il n'y a pas d'inventaire),
+              Lohen la repose. Anim LOH-ACT-052, 3,4 s, il la repose
+              exactement au meme endroit. [OBL] S'il essaie dix fois,
+              il la repose dix fois, sans une ligne de dialogue.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] 4 Echos, aucune silhouette ne regarde Lohen
+[ ] E07 volontairement banal
+[ ] E08 : la raison n'est jamais donnee, nulle part
+[ ] E09 : les nombres ne sont PAS une enigme — interdit de production
+[ ] E10 : exception R4 documentee (bille sans proprietaire)
+[ ] La bille est reposee a l'identique, sans commentaire

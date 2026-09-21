@@ -1,0 +1,118 @@
+===============================================================================
+PN-134 — LA MACHINERIE DE LA LENTILLE
+===============================================================================
+Asset : SM_S8_Machinerie · S8, salle des machines, 196 m · ~06:16 ·
+prop narratif · pas d'Echo · LOD0 9 400 tris
+
+§ 1 — CE QU'ON VOIT
+A 196 metres, l'escalier se termine. Une salle circulaire de 4 m, sous la
+lanterne.
+C'est la salle des machines.
+Au centre, un mecanisme d'horlogerie. Un vrai : un poids de fonte de
+280 kg, suspendu a un cable, qui descend dans un puits creuse au centre du
+Phare — [OBL] le poids descend sur 190 metres, dans le vide central de
+l'escalier. Le joueur est passe a cote pendant onze minutes sans le savoir.
+Il est en BAS. Le poids est arrive au bout de sa course.
+Le cable est deroule au maximum.
+Le mecanisme est arrete.
+Une manivelle de remontage est accrochee au mur. [OBL] Elle est a sa place,
+sur ses deux crochets.
+Et il y a un compteur. Un compteur mecanique a rouleaux, qui compte les
+tours de la lentille.
+Il affiche : 4 0 9 3 8 7 1
+Quatre millions quatre-vingt-treize mille huit cent soixante et onze tours.
+Le dernier chiffre est entre deux positions.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 9 400 (mecanisme 5 800 + poids et cable 1 200 + manivelle 400 +
+compteur 300 + salle 1 700).
+[OBL] Le mecanisme est modelise ENTIEREMENT : 34 engrenages, un
+echappement, un regulateur a boules, un train de rouages. Il est ouvert,
+sans capot. Le joueur peut regarder dedans.
+[OBL] Il doit etre MECANIQUEMENT PLAUSIBLE. Un horloger doit pouvoir
+regarder ce modele et dire que ca pourrait tourner. Cela demande une
+documentation reelle sur les machineries de phares a rotation.
+Le compteur : 7 rouleaux en geometrie, le dernier entre deux positions.
+[OBL] 4 093 871 tours. A un tour toutes les 20 secondes, cela fait
+81 877 420 secondes, soit 2 ans et 7 mois de rotation continue.
+[OBL] NON : le Phare ne tourne pas 24 h sur 24. A 12 h par nuit, cela fait
+environ 5 ans. [OBL] Le chiffre doit etre recalcule pour etre coherent avec
+l'age du Phare (1871) et un usage nocturne. Le chiffre final est calcule,
+pas invente.
+Shader `brass_machine_oiled` + `iron_cast`.
+Collision : le joueur contourne. [OBL] Aucune interaction. La manivelle
+n'est pas prenable.
+
+§ 3 — CE QUE CA DIT
+Le Phare fonctionnait a l'horlogerie. Un poids de 280 kg descendait sur
+190 metres et faisait tourner la lentille. Quand il arrivait en bas, le
+gardien le remontait a la manivelle.
+Le geste humain : remonter un poids de 280 kg a la manivelle, toutes les
+nuits, pendant des annees.
+[OBL] Il est en bas. Personne ne l'a remonte.
+[NAR] Le dernier remontage a eu lieu il y a trois ans. Le poids est
+descendu pendant quelques heures, et puis il s'est pose au fond, et la
+lentille s'est arretee.
+Le compteur s'est arrete entre deux chiffres, au milieu d'un tour.
+Et la manivelle est a sa place, sur ses crochets.
+[OBL] Le gardien a range la manivelle. La derniere fois qu'il s'en est
+servi, il l'a raccrochee.
+
+§ 4 — ECHO
+NEANT. [OBL] Machine collective (PN-016).
+[OBL] Et : deux Echos ont eu lieu dans les 40 derniers metres (E27 a 156 m,
+E28 a 178 m). Le systeme ne place pas un troisieme Echo a 196 m (regle des
+25 m / 90 s, PN-035).
+[ART] Le chapitre ferme son systeme ici. Il reste trois Echos : E29, E30,
+E31, et ils sont tous les trois dans la chambre.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur a monte pendant 11 minutes. Il arrive. C'est fini.
+La salle des machines est basse (2,10 m) et encombree.
+[OBL] Il faut la traverser pour atteindre l'echelle de la lanterne (9
+barreaux) puis la chambre.
+[ART] Il contourne un mecanisme d'horlogerie de 5 800 triangles et il ne le
+regarde probablement pas. Il est arrive en haut d'un phare de 212 m et il
+cherche une porte.
+[OBL] Aucun plan, aucun prompt, aucune camera.
+Taux d'examen du compteur : 27-38 %.
+La manivelle sur ses crochets est a hauteur d'yeux, sur le chemin.
+Taux de detection : 64-76 %.
+
+§ 6 — AUDIO
+[OBL] Le mecanisme est SILENCIEUX. C'est un mecanisme d'horlogerie de 34
+engrenages, et il ne fait aucun bruit, parce qu'il est arrete.
+[ART] Le joueur monte 11 minutes vers une machine et la machine est muette.
+SFX(wind_lantern_above) : le vent, par la lanterne au-dessus. Plus fort
+qu'en bas : -17 dB.
+SFX(metal_cold_creak) : la structure metallique de la lanterne, au-dessus,
+qui travaille. Toutes les 20-60 s.
+M24 continue. [OBL] Elle est maintenant a +5 demi-tons de son depart.
+
+§ 7 — INTERDICTIONS
+Interdit de : remonter le poids · prendre la manivelle · faire tourner la
+lentille · allumer le Phare · ajouter un bruit de mecanisme · reparer ·
+ajouter un chiffre rond au compteur · inventer le chiffre sans calcul ·
+ajouter un prompt · en faire une enigme · faire commenter.
+[OBL] LE PHARE N'EST JAMAIS ALLUME. Ni au chapitre 1, ni dans les six
+suivants. C'est un interdit absolu (21.08 : « rendre la fin plus heureuse »).
+
+§ 8 — LIENS
+PN-135 (la lentille, juste au-dessus). PN-130 (l'escalier : le poids
+descendait dans le vide central).
+PN-097 (le compteur electrique arrete), PN-084 (le compteur d'eau),
+PN-109 (la pendule a 23h41), PN-055 (l'horloge a 4h15).
+[OBL] Cinq mecanismes arretes dans le chapitre. Celui-ci est le dernier et
+le plus grand.
+[THEME] LA SERIE D'ARRETS.
+
+§ 9 — DOD
+[ ] 34 engrenages modelises, mecaniquement plausibles, documentes
+[ ] Poids de 280 kg en bas, cable deroule au maximum
+[ ] Manivelle rangee sur ses deux crochets
+[ ] Compteur a 7 rouleaux, dernier chiffre entre deux positions
+[ ] Chiffre calcule a partir de 1871 et d'un usage nocturne, jamais rond
+[ ] Silence absolu du mecanisme
+[ ] Vent a -17 dB par la lanterne
+[ ] M24 a +5 demi-tons
+[ ] Phare jamais allume, dans les 7 chapitres

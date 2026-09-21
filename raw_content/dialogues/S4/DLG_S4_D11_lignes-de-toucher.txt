@@ -1,0 +1,91 @@
+===============================================================================
+DLG · S4 · D11 — LES 34 LIGNES DE TOUCHER DE LA BIBLIOTHEQUE
+34 entrees, toutes S4. LOH 34. Contribution : 34.
+[OBL] C'est le plus gros lot de toucher du chapitre. Raison : dans un
+batiment ou tout est du texte, un homme qui lit mal touche beaucoup.
+===============================================================================
+
+--- REGLE PARTICULIERE A S4 ---------------------------------------------------------------
+
+[OBL] En S1, S2 et S3, toucher donnait un souvenir de metier. Ici, toucher
+donne une TENTATIVE DE LECTURE. Trente-quatre objets portent du texte et
+Lohen essaie de le lire a chaque fois. Il reussit vingt fois. Il echoue
+quatorze fois, et un echec est marque par une ligne ou il abandonne au
+milieu du mot.
+
+[OBL] Les quatorze echecs ne sont PAS une punition, PAS un gag, PAS un
+moment emouvant. Ils passent au meme rythme que les reussites. Le mix est
+identique. Le joueur s'habitue. C'est exactement ce qu'on veut : au bout
+de dix minutes, l'illettrisme de Lohen n'est plus une revelation, c'est
+un fait de la vie quotidienne. C'est comme ca qu'on respecte un
+personnage.
+
+--- LOT A — CE QU'IL LIT (20) ---------------------------------------------------------------
+
+    [S4_LOH_L276]  1,8 s · plat      « Si-lence. Facile, celui-la. »
+    [S4_LOH_L277]  2,2 s · plat      « Sor-tie. Sortie de secours. »
+    [S4_LOH_L278]  2,0 s · plat      « Ne pas fumer. Y'a plus rien a brûler ici, de toute facon. »
+    [S4_LOH_L279]  2,4 s · prudent   « Ou-vra-ges. Ouvrages rares. »
+    [S4_LOH_L280]  1,6 s · plat      « Ferme. »
+    [S4_LOH_L281]  2,6 s · prudent   « Con-sul-ta-tion sur place. »
+    [S4_LOH_L282]  2,2 s · plat      « Rez. Premier. Deuxieme. Les chiffres, ca va. »
+    [S4_LOH_L283]  2,8 s · prudent   « Peri-o-di-ques. Periodiques. Je sais pas ce que c'est. »
+    [S4_LOH_L284]  2,0 s · plat      « Toi-let-tes. »
+    [S4_LOH_L285]  2,4 s · plat      « Hors service. Depuis trois ans, hors service. »
+    [S4_LOH_L286]  2,6 s · prudent   « Re-gis-tre des en-trees. »
+    [S4_LOH_L287]  3,0 s · plat      « La derniere entree date de six semaines. »
+        dir : [OBL] PN-072. Contredit S4_MIR_L050 (« vous etes le
+              troisieme ce mois-ci »). [OBL] Lohen ne fait PAS le
+              rapprochement. Aucune ligne. Le joueur le fait.
+    [S4_LOH_L288]  2,2 s · plat      « Vandeck, M. Tous les jours. Tous les jours depuis trois ans. »
+    [S4_LOH_L289]  1,8 s · plat      « Sauf un. »
+        dir : [OBL][NAR] Il y a UN jour manquant dans le registre de
+              presence de Mireille. C'est le 14 octobre. [OBL] Lohen ne
+              dit pas la date. Le registre est lisible : le joueur peut
+              la trouver. Rien ne l'y invite. Personne n'en parlera
+              jamais, pas meme en S7.
+    [S4_LOH_L290]  2,4 s · plat      « At-ten-tion mar-che. Un peu tard. »
+    [S4_LOH_L291]  2,0 s · plat      « Reserve. Personnel seulement. »
+    [S4_LOH_L292]  2,6 s · prudent   « Dons et legs. Merci a nos dona-teurs. »
+    [S4_LOH_L293]  2,8 s · plat      « Y'a quarante noms. Trente-huit sont barres au crayon. »
+        dir : [OBL][NAR] Quelqu'un a barre trente-huit donateurs morts,
+              au crayon, sur une plaque de bronze. Au crayon, parce
+              qu'on ne grave pas un doute. [OBL] Jamais commente.
+    [S4_LOH_L294]  2,2 s · plat      « Bib-lio-the-que des Eaux. »
+    [S4_LOH_L295]  1,6 s · plat      « Ca, je savais. »
+
+--- LOT B — CE QU'IL N'ARRIVE PAS A LIRE (14) ---------------------------------------------
+
+[OBL] Chacune s'arrete au milieu. Aucune n'est suivie d'un commentaire
+sur l'echec. Lohen passe a autre chose dans la seconde.
+
+    [S4_LOH_L296]  2,4 s · prudent   « Ar-chi... arch... non. »
+    [S4_LOH_L297]  2,8 s · prudent   « Cor-res-pon... corres... »
+    [S4_LOH_L298]  2,2 s · prudent   « Su-pple... suppl... »
+    [S4_LOH_L299]  3,0 s · prudent   « Ico-no-gra... »
+    [S4_LOH_L300]  2,6 s · prudent   « Inven-tai-re som... som... »
+    [S4_LOH_L301]  2,0 s · prudent   « Chro-no... »
+    [S4_LOH_L302]  2,8 s · prudent   « Muni-ci-pa-li... »
+    [S4_LOH_L303]  2,4 s · prudent   « Recen-se... »
+    [S4_LOH_L304]  3,2 s · prudent   « Admi-nis... admi... »
+    [S4_LOH_L305]  2,2 s · prudent   « Hy-dro... »
+    [S4_LOH_L306]  2,6 s · prudent   « Topo... »
+    [S4_LOH_L307]  2,0 s · prudent   « Nomen... »
+    [S4_LOH_L308]  2,8 s · prudent   « Cadas... cadas-tral. Cadastral. »
+        dir : [OBL] il en reussit UN sur les quatorze, le treizieme, et
+              il ne s'en felicite pas. Pas de « ah ! ». Il lit le mot
+              et il passe.
+    [S4_LOH_L309]  2,4 s · plat      « Y'a des mots qui servent a rien. »
+        dir : [OBL] 34e et derniere ligne du lot. C'est la seule fois
+              du chapitre ou Lohen commente son propre illettrisme, et
+              il le fait en accusant les mots. [OBL] Aucune musique
+              (il n'y en a pas). Aucun personnage present. Il est seul
+              au troisieme etage.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] 20 reussites / 14 echecs, meme mix, meme rythme
+[ ] Aucun gag, aucun pathos sur les echecs
+[ ] L287/L289 : contradiction et jour manquant, jamais commentes
+[ ] L293 : 38 noms barres au crayon, jamais commente
+[ ] L309 : seule et unique plainte, adressee aux mots

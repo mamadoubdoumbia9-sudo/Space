@@ -1,0 +1,105 @@
+===============================================================================
+  A-697   lighthouse_lens_rotate
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 697 / 744
+  Partie 10 — PROPS ANIMES ET MECANISMES
+  Categorie : PROP ANIME
+  Fichier source  : A_Props_Prop_lighthouse_lens_rotate_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+  Identifiant precedent : A-702 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 20.000 s  (600 frames a 30 fps)
+  Type .................. BOUCLE
+  Root motion ........... RM-NONE
+  Couche AnimationTree .. L0
+  Priorite .............. N/A — non applicable (clip sans priorite d'etat)
+  Poids compresse cible . ~280 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      rig d'objet dedie, 3 a 32 os selon le mecanisme, aucune deformation de
+      peau
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  PROPS ANIMES ET MECANISMES — rigs d'objets, pas de squelettes.
+
+  [ART][OBL] Dans Velmora, RIEN ne bouge tout seul sans raison. Si un objet
+  s'anime, c'est le vent, la gravite, l'eau, un personnage, ou la Maree.
+  Aucune animation « magique ». Aucun objet qui flotte. [PERF] Tout prop a
+  plus de 30 exemplaires par zone passe en MultiMesh avec animation en
+  shader ; les clips de cette partie sont les props HEROS, animes pour de
+  vrai, et peu nombreux par zone.
+
+  Rig et costume :
+      rigs dedies par objet, de 3 a 32 os selon le mecanisme
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  LA LENTILLE. Rotation a 0,05 tour/s (05.31). [OBL] Cette animation tourne
+  en permanence, dans toutes les zones exterieures, sans jamais s'arreter ni
+  se desynchroniser. Elle est pilotee par l'horloge de jeu absolue, pas par
+  un AnimationPlayer local.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Cyclage [OBL 0.03] : la frame 0 et la frame 600 sont identiques
+  a 0.001 pres. Verifie par `tools/loop_check.py`, qui echoue le
+  build en cas de saut.
+
+  Evenements de timeline :
+      son pilote par la cinematique du rig (vitesse ou angle), jamais par un
+      declencheur a frame fixe · aucun VFX magique
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- appel du systeme qui possede le prop (zone, sequence ou personnage)
+      ; -> etat de repos du rig, qui ne bouge plus
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · cyclage frame 0 == frame 600 (tolerance 0.001)
+      · les clauses [OBL] de la section 3 sont verifiees en revue, pas
+      seulement en lecture
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-697
+===============================================================================

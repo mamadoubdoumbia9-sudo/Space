@@ -1,0 +1,114 @@
+===============================================================================
+PN-133 — LA CORDE DE SECOURS
+===============================================================================
+Asset : SM_S8_Corde_Secours · S8, 178 m d'altitude · ~06:14 ·
+PORTEUR D'ECHO E28 · LOD0 1 200 tris
+
+§ 1 — CE QU'ON VOIT
+A 178 metres, dans une niche du mur, il y a un materiel de secours.
+Une caisse de bois vissee dans le granit, ouverte, avec une inscription
+peinte : EN CAS DE NECESSITE.
+Dedans : une corde de chanvre de 60 metres, lovee en couronne.
+Un mousqueton. Un baudrier de cuir et de toile. Un sifflet de laiton.
+[OBL] Et la corde est SORTIE. Elle n'est plus lovee dans la caisse : une
+extremite est passee par la meurtriere voisine et pend a l'exterieur.
+Elle pend dans le vide sur 44 metres. Il en reste 16 dans la caisse.
+Elle est nouee au montant de la caisse. [OBL] Un noeud de chaise, fait
+correctement, par quelqu'un qui savait.
+Le baudrier est encore dans la caisse. Il n'a pas servi.
+Le mousqueton non plus.
+[OBL] Quelqu'un a sorti une corde de 60 m, l'a nouee, l'a jetee par la
+fenetre — et n'a pas pris le baudrier.
+La corde est mouillee, elle a gonfle, elle est raide. Elle est la depuis
+longtemps.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 200 (caisse 400 + corde lovee 400 + accessoires 400).
+[OBL] La corde qui pend a l'exterieur : 44 m de spline, visible par la
+meurtriere. [OBL] Elle est aussi visible DE L'EXTERIEUR, depuis la jetee et
+depuis le pont casse (PN-127), a 178 m de haut.
+[OBL] Le joueur a donc pu la voir avant de monter, comme un trait pale sur
+le granit noir. Taux de detection depuis le bas : 4-9 %.
+Le noeud de chaise : sculpt, 18 tours de fibres visibles.
+Shader `hemp_swollen_wet`.
+Anim : PROP-841 — la corde exterieure oscille au vent, 30 cm d'amplitude a
+mi-longueur, periode 6 s. [OBL] Mouvement lourd, chanvre gorge d'eau.
+Collision : le joueur peut s'approcher, rien de plus. [OBL] Il ne peut pas
+tirer la corde, ni descendre, ni prendre le baudrier.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a jete une corde par la fenetre et n'a pas pris le baudrier.
+Le geste humain : faire un noeud de chaise. Correctement. Puis ne pas
+s'attacher.
+[OBL] Jamais explique. Ni qui, ni quand, ni pourquoi, ni ce qui a suivi.
+Il n'y a rien en bas de la corde : [OBL] a 44 m sous la fenetre, elle
+s'arrete dans le vide, a 134 m au-dessus de la jetee. Elle ne mene nulle
+part.
+Le sifflet de laiton est dans la caisse. Il est propre.
+[OBL] Un sifflet, c'est pour appeler quelqu'un.
+
+§ 4 — ECHO
+ECHO E28 — « La caisse » — 14 secondes, mode C (son seul).
+[OBL] Aucun visuel.
+Ce qu'on entend :
+  — une caisse qu'on ouvre. Le bois, les charnieres. (0-1 s)
+  — une corde qu'on sort. Le chanvre qui frotte contre le bois. Long : 4 s.
+  — un noeud qu'on fait. [OBL] Trois mouvements, un serrage. (6-8 s)
+  — la corde qu'on jette. [OBL] Le son du chanvre qui file par la
+    meurtriere, puis qui se tend d'un coup a 44 m. (9-10,5 s)
+  — et puis rien pendant 3 secondes.
+  — a 13,5 s : la caisse qu'on REFERME.
+  — fin.
+[OBL] Il a referme la caisse. Apres avoir jete la corde, il a referme la
+caisse.
+[OBL] Et au present, elle est ouverte. Quelqu'un l'a rouverte depuis.
+[OBL] Jamais explique.
+[OBL] Zero voix. Zero musique ajoutee. M24 continue.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+[OBL] La niche est dans le mur, a droite de l'escalier, a hauteur de
+poitrine. Le joueur passe devant.
+[OBL] La corde qui sort par la meurtriere est visible : elle barre le rai
+de lumiere.
+[ART] C'est le seul obstacle visuel de la montee : un trait de chanvre en
+travers de la seule lumiere.
+Taux de detection : 79-89 %.
+[OBL] Aucun prompt hors Echo. Aucune interaction. Il regarde et il monte.
+[OBL] Aucune reaction de Lohen, aucune animation, aucune ligne.
+
+§ 6 — AUDIO
+SFX(rope_wind_exterior) : la corde de 44 m au vent, entendue par la
+meurtriere. Un son grave, module, irregulier.
+[OBL] C'est le seul son exterieur audible entre 160 et 196 m.
+Pendant E28 : cf. § 4. [OBL] Le son du chanvre qui file est le sujet
+technique : 44 metres de corde qui passent par une fente de 15 cm en
+1,5 seconde. Un frottement accelere, puis un CLAC de tension.
+M24 continue.
+
+§ 7 — INTERDICTIONS
+Interdit de : prendre la corde, le baudrier, le mousqueton, le sifflet ·
+descendre en rappel · tirer la corde · expliquer qui l'a jetee · expliquer
+qui a rouvert la caisse · ajouter quelque chose au bout de la corde ·
+souffler dans le sifflet · faire repondre le sifflet · ajouter de la
+musique · rendre E28 rejouable · fermer la caisse.
+
+§ 8 — LIENS
+PN-114 (le cable casse du grappin, S7) : l'autre corde jetee depuis une
+hauteur. [OBL] Aucun lien.
+PN-096 (la corde de Sol dans le puits) : celle-la sert.
+PN-034 (la cloche du chalutier) et le sifflet : deux objets pour appeler.
+PN-131 (les cloches du palier, 22 m plus bas) : le troisieme.
+[OBL] Trois objets sonores pour appeler quelqu'un dans le chapitre. Aucun
+n'a jamais recu de reponse.
+[THEME] APPELER. [THEME] CE QU'ON NE SAURA PAS.
+
+§ 9 — DOD
+[ ] Corde de 60 m : 16 lovee, 44 pendant a l'exterieur
+[ ] Noeud de chaise correct, 18 tours de fibres sculptes
+[ ] Baudrier, mousqueton et sifflet intacts dans la caisse
+[ ] Visible de l'exterieur depuis la jetee, taux 4-9 %
+[ ] Barre le rai de lumiere de la meurtriere
+[ ] E28 : 14 s, son seul, caisse refermee a la fin, ouverte au present
+[ ] Son de 44 m de chanvre filant en 1,5 s + clac de tension
+[ ] Zero interaction, zero prompt hors Echo

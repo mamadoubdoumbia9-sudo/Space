@@ -1,0 +1,103 @@
+===============================================================================
+  A-510   idle_stop_at_door
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 510 / 744
+  Partie 6 — FIGURE — L'ECHASSIER
+  Categorie : LOCOMOTION
+  Fichier source  : A_Figure_Loc_idle_stop_at_door_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+  Identifiant precedent : A-513 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 9.000 s  (270 frames a 30 fps)
+  Type .................. BOUCLE
+  Root motion ........... RM-NONE
+  Couche AnimationTree .. L0
+  Priorite .............. 84 — narratif / interaction (bande 80-94, bareme 0.05)
+  Poids compresse cible . ~198 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      4 pattes (5 os chacune), corps central, renflement, mesh de coeur
+      interne
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  FIGURE — L'ECHASSIER. 3,1 m debout, quatre pattes, corps a 2,1 m.
+
+  Sa signature est la STABILITE HORIZONTALE : le corps ne monte ni ne
+  descend, il glisse. C'est ce qui le rend faux — aucun animal ne se deplace
+  comme ca. Le renflement remplace la tete et il pivote comme un regard.
+  [OBL] Le coeur interne est le seul tell de la fenetre de riposte : aucune
+  UI, aucun contour, aucun son dedie (CI no-parry-ui).
+
+  Rig et costume :
+      corps de verre, 4 pattes de 5 os, renflement, mesh de coeur interne a
+      0.82 d'echelle (figure_core.gdshader)
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  [NAR 10.03] Il s'arrete devant une porte precise et reste la. Il ne
+  l'ouvre pas. Il ne la touche pas. Il se tient devant, comme quelqu'un qui
+  a oublie pourquoi il est venu. 6 occurrences dans le chapitre, toujours
+  devant des maisons habitees avant la Maree. Aucun dialogue ne l'evoque.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Cyclage [OBL 0.03] : la frame 0 et la frame 270 sont identiques
+  a 0.001 pres. Verifie par `tools/loop_check.py`, qui echoue le
+  build en cas de saut.
+
+  Evenements de timeline :
+      FOOTSTEP_L / FOOTSTEP_R aux poses de pied (son matiere 13.28 +
+      haptique) · CLOTH_RUSTLE · RIG_CLINK selon la charge
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- etat courant de l'IA (`ai_state`) ; -> retour a l'idle de la
+      creature, ou enchainement declare par le comportement
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · cyclage frame 0 == frame 270 (tolerance 0.001)
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-510
+===============================================================================

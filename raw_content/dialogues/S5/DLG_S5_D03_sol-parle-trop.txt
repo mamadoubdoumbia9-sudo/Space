@@ -1,0 +1,284 @@
+===============================================================================
+DLG · S5 · D03 — SOL PARLE TROP : LES 62 LIGNES DE MARCHE
+63 entrees, toutes S5. SOL 44 · LOH 19. Contribution : 63.
+Reference maitre : 09.14 « Sol, qui connait le chemin, qui parle trop, qui
+est la seule source de chaleur de la sequence. »
+[OBL] Ces lignes NE SONT PAS des barks. Elles sont ecrites, ordonnees,
+et se declenchent en sequence pendant la marche. Les 31 barks de Sol
+(lot BK_S5) sont separes et sont en D09.
+===============================================================================
+
+--- REGLE D'ECRITURE ------------------------------------------------------------------------
+
+[OBL] Sol change de sujet toutes les 20 a 40 secondes, sans transition,
+comme un enfant de treize ans. [OBL] AUCUN de ces sujets n'est la Maree,
+sa famille, ou sa situation. Elle parle de tout sauf de ca, pendant douze
+minutes, et c'est precisement ce qui prepare D05.
+
+[OBL] Lohen repond une fois sur deux et demie. Ses reponses font en
+moyenne 1,4 s contre 2,2 s pour Sol. Le desequilibre est mesure et
+volontaire.
+
+--- SUJET 1 — LES NOMS DES CONDUITS (10) --------------------------------------------------------
+
+    [S5_SOL_L068]  SOL · 2,0 s · plat · p0,7
+        « Celui-la je l'appelle le Long. »
+
+    [S5_LOH_L069]  LOHEN · 1,2 s · plat · p0,9
+        « Ils ont des noms ? »
+
+    [S5_SOL_L070]  SOL · 2,4 s · plat · p0,8
+        « Bah faut bien. Sinon comment tu dis ou t'es ? »
+
+    [S5_LOH_L071]  LOHEN · 1,4 s · plat · p1,0
+        « A qui ? »
+
+    [S5_SOL_L072]  SOL · 1,0 s · plat · p1,4
+        « ... »
+        dir : [OBL] ligne SILENCIEUSE enregistree. 3e du chapitre.
+              Sous-titre : « (Sol ne repond pas.) » — whitelist.
+              [OBL] Lohen vient de poser la seule question cruelle
+              qu'il posera a Sol de tout le jeu, et il ne l'a pas fait
+              exprès. Il s'en rend compte. Il enchaine tres vite.
+
+    [S5_LOH_L073]  LOHEN · 1,8 s · plat · p0,7
+        « Le Long, donc. Et apres ? »
+
+    [S5_SOL_L074]  SOL · 2,6 s · plat · p0,8
+        « Le Court. Le Mouille. Le Tordu. Le Qui Pue. »
+
+    [S5_LOH_L075]  LOHEN · 1,2 s · plat · p0,9
+        « On est dans lequel ? »
+
+    [S5_SOL_L076]  SOL · 1,6 s · plat · p1,1
+        « Le Qui Pue. »
+
+    [S5_LOH_L077]  LOHEN · 1,4 s · plat · p1,0
+        « Ah oui. »
+
+--- SUJET 2 — LE CHIEN (12) ----------------------------------------------------------------------
+
+[OBL] Sol parle de Pomme AVANT la scene des quatre morts (D05). Elle en
+parle au present. Le joueur ne sait pas encore que le chien est mort.
+[OBL] C'est la mise en place la plus dure du chapitre et elle est faite
+par un enfant qui raconte une anecdote drole.
+
+    [S5_SOL_L078]  SOL · 2,2 s · joueur · p0,8
+        « Y'a un chien qui s'appelle Pomme qui avait peur du Tordu. »
+
+    [S5_LOH_L079]  LOHEN · 1,0 s · plat · p0,9
+        « Peur d'un tuyau ? »
+
+    [S5_SOL_L080]  SOL · 2,8 s · joueur · p0,7
+        « Il avait peur de l'echo. Il aboyait et ca revenait et il
+          aboyait sur ce qui revenait. »
+
+    [S5_SOL_L081]  SOL · 2,4 s · rieur · p0,9
+        « Toute la nuit, des fois. »
+
+    [S5_LOH_L082]  LOHEN · 1,4 s · plat · p1,0
+        « Ca doit etre penible. »
+
+    [S5_SOL_L083]  SOL · 2,0 s · joueur · p0,8
+        « C'etait tres penible. »
+        dir : [OBL] IMPARFAIT. Le premier de la sequence. [OBL] Aucune
+              musique. Sol ne s'en rend pas compte. Le joueur, si.
+              [OBL] Le comedien enfant ne doit PAS marquer le
+              changement de temps. C'est au montage de ne surtout rien
+              faire.
+
+    [S5_SOL_L084]  SOL · 2,6 s · joueur · p0,7
+        « Il mangeait du poisson et apres il puait le poisson et il
+          venait dormir contre toi. »
+
+    [S5_LOH_L085]  LOHEN · 1,2 s · plat · p0,9
+        « Contre toi. »
+
+    [S5_SOL_L086]  SOL · 1,8 s · plat · p1,2
+        « Ouais. »
+
+    [S5_SOL_L087]  SOL · 2,2 s · joueur · p0,8
+        « Il savait ouvrir les portes. Avec le nez. Pas les fermer. »
+
+    [S5_SOL_L088]  SOL · 2,4 s · rieur · p0,9
+        « Alors y'avait toujours toutes les portes ouvertes chez
+          nous. »
+
+    [S5_LOH_L089]  LOHEN · 1,6 s · plat · p0,0
+        « Ca devait faire des courants d'air. »
+        dir : [OBL] il repond a l'anecdote, pas au passe. Il n'a pas
+              releve. Ou il a releve et il ne dit rien. Le jeu ne
+              tranche pas : l'animation faciale est neutre (aucun clip
+              de reaction n'est joue sur cette ligne).
+
+--- SUJET 3 — LA VILLE VUE D'EN DESSOUS (12) --------------------------------------------------------
+
+    [S5_SOL_L090]  SOL · 2,4 s · plat · p0,8
+        « D'ici on entend le Marche. Pas les mots. Le bruit. »
+
+    [S5_SOL_L091]  SOL · 2,0 s · plat · p0,9
+        « A midi ca fait comme une casserole. »
+
+    [S5_LOH_L092]  LOHEN · 1,2 s · plat · p1,0
+        « Et la nuit ? »
+
+    [S5_SOL_L093]  SOL · 1,8 s · plat · p1,2
+        « La nuit y'a le vent dans le Long. Ca siffle. »
+
+    [S5_SOL_L094]  SOL · 2,6 s · plat · p0,8
+        « Ca siffle toujours la meme chose. Cinq notes. »
+        dir : [OBL][NAR] LE MOTIF. Sol l'a entendu mille fois sans
+              savoir ce que c'est. [OBL] Le joueur peut l'entendre :
+              dans le conduit du Long, a un endroit precis, le vent
+              produit LA-DO-MI-RE... et s'arrete. Quatre notes.
+              [OBL] Sol dit cinq. Sol a tort — ou Sol a entendu la
+              cinquieme une fois, une nuit, toute seule. Le jeu ne
+              tranche pas. 16e des 23 occurrences incompletes.
+
+    [S5_LOH_L095]  LOHEN · 1,4 s · plat · p1,1
+        « Cinq ? »
+
+    [S5_SOL_L096]  SOL · 1,6 s · plat · p1,3
+        « Ou quatre. Je sais plus. »
+
+    [S5_SOL_L097]  SOL · 2,2 s · plat · p0,8
+        « Y'a des endroits ou on entend les gens marcher au-dessus. »
+
+    [S5_SOL_L098]  SOL · 2,8 s · plat · p0,9
+        « Sous la Bibliotheque, y'a la vieille qui traverse la piece
+          une fois par jour. Ca fait toc, toc, toc, tres lentement. »
+        dir : [OBL][NAR] Les 22 secondes de marche de Mireille (S4_D07)
+              s'entendent depuis les conduits. [OBL] Le joueur vient de
+              les vivre. Il ne peut plus les entendre : il est deja
+              trop loin. Une seule personne au monde les entend tous
+              les jours et c'est un enfant de treize ans qui vit dans
+              un tuyau.
+
+    [S5_LOH_L099]  LOHEN · 1,8 s · plat · p1,0
+        « Je l'ai rencontree. »
+
+    [S5_SOL_L100]  SOL · 1,4 s · plat · p1,2
+        « Elle est comment ? »
+
+    [S5_LOH_L101]  LOHEN · 2,0 s · plat · p1,4
+        « Elle fait du mauvais the exprès. »
+
+    [S5_SOL_L102]  SOL · 2,4 s · rieur · p0,0
+        « Ah, c'est bien, ca. »
+
+--- SUJET 4 — LES METIERS QUE SOL VEUT FAIRE (14) ------------------------------------------------------
+
+    [S5_SOL_L103]  SOL · 2,0 s · plat · p0,8
+        « Toi t'es facteur. »
+
+    [S5_LOH_L104]  LOHEN · 1,2 s · plat · p0,9
+        « Relayeur. »
+
+    [S5_SOL_L105]  SOL · 1,6 s · plat · p1,0
+        « C'est pareil. »
+
+    [S5_LOH_L106]  LOHEN · 1,4 s · plat · p1,1
+        « Non. »
+
+    [S5_SOL_L107]  SOL · 2,2 s · plat · p0,8
+        « C'est quoi la difference ? »
+
+    [S5_LOH_L108]  LOHEN · 2,8 s · plat · p1,0
+        « Un facteur distribue. Un relayeur porte jusqu'a ce que ca
+          arrive. »
+
+    [S5_SOL_L109]  SOL · 2,4 s · plat · p1,2
+        « Et si ca arrive jamais ? »
+
+    [S5_LOH_L110]  LOHEN · 1,6 s · plat · p1,6
+        « Alors on porte. »
+        dir : [OBL][NAR] LA REGLE DU METIER, troisieme enonce du
+              chapitre (S1 monologue, S3 avec Niels, ici). [OBL] Sol
+              ne relance pas. Iel change de sujet dans la seconde
+              suivante. C'est ce qui empeche la scene d'etre lourde.
+
+    [S5_SOL_L111]  SOL · 2,0 s · joueur · p0,8
+        « Moi je veux faire treuilliste. »
+
+    [S5_LOH_L112]  LOHEN · 1,2 s · plat · p0,9
+        « Comme Thea. »
+
+    [S5_SOL_L113]  SOL · 2,6 s · joueur · p0,8
+        « Non, mieux. Thea elle a quatre treuils. Moi j'en veux six. »
+
+    [S5_LOH_L114]  LOHEN · 1,4 s · plat · p1,0
+        « Pourquoi six ? »
+
+    [S5_SOL_L115]  SOL · 2,2 s · joueur · p0,9
+        « Parce que six c'est plus que quatre. »
+
+    [S5_LOH_L116]  LOHEN · 1,0 s · plat · p0,0
+        « Bon argument. »
+
+--- SUJET 5 — LES TROIS PASSAGES DANS LE NOIR (14) --------------------------------------------------------
+
+[OBL] Chaque passage : Lohen pose la lanterne, grimpe 8 m dans le noir,
+la recupere avec une perche. 40 a 70 secondes selon le joueur. [OBL] Sol
+parle PENDANT. C'est la seule chose qui rend les huit metres tenables, et
+c'est ecrit comme tel.
+
+    -- Passage 1 --
+    [S5_SOL_L117]  SOL · 1,8 s · plat · p0,0
+        « Pose-la. Je la surveille. »
+
+    [S5_SOL_L118]  SOL · 2,4 s · plat · p0,0
+        « Tu grimpes a gauche. Y'a une barre. »
+
+    [S5_SOL_L119]  SOL · 2,0 s · plat · p0,0
+        « Je suis la. »
+        dir : [OBL] trois mots, dits dans le noir complet, a un adulte
+              qui grimpe. [OBL] Aucune musique. C'est le moment le plus
+              chaud du chapitre avant le bal.
+
+    [S5_LOH_L120]  LOHEN · 1,4 s · essouffle · p0,0
+        « Je sais. »
+
+    -- Passage 2 --
+    [S5_SOL_L121]  SOL · 2,2 s · plat · p0,0
+        « Celui-la est plus dur. »
+
+    [S5_SOL_L122]  SOL · 2,8 s · plat · p0,0
+        « Compte. Ca aide. Moi je compte. »
+
+    [S5_LOH_L123]  LOHEN · 1,6 s · essouffle · p0,0
+        « Un. Deux. Trois. »
+
+    [S5_SOL_L124]  SOL · 2,0 s · plat · p0,0
+        « Pas a voix haute. Dans ta tete. Sinon je compte avec toi et
+          on se trompe. »
+
+    [S5_LOH_L125]  LOHEN · 1,2 s · essouffle · p0,0
+        « D'accord. »
+
+    -- Passage 3 --
+    [S5_SOL_L126]  SOL · 1,8 s · plat · p0,0
+        « Dernier. »
+
+    [S5_LOH_L127]  LOHEN · 1,4 s · essouffle · p0,0
+        « Tu as dit ca au deuxieme. »
+
+    [S5_SOL_L128]  SOL · 2,4 s · joueur · p0,0
+        « J'ai menti au deuxieme. »
+
+    [S5_LOH_L129]  LOHEN · 1,0 s · essouffle · p0,0
+        « Pourquoi ? »
+
+    [S5_SOL_L130]  SOL · 2,6 s · plat · p0,0
+        « Parce que t'allais pas grimper si je disais qu'y en avait
+          trois. »
+        dir : [OBL] fin du document. [OBL] Iel a raison. [OBL] Aucun
+              reproche de Lohen. Aucune ligne. Il grimpe.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] Sol change de sujet toutes les 20-40 s, aucun sujet grave
+[ ] L083 : premier imparfait sur Pomme, non marque par le comedien
+[ ] L094 : le motif a 4 notes dans le vent, Sol dit cinq
+[ ] L098 : les pas de Mireille audibles d'en dessous
+[ ] L119 : « Je suis la », aucune musique
+[ ] Ratio de longueur : Sol 2,2 s / Lohen 1,4 s en moyenne

@@ -1,0 +1,107 @@
+===============================================================================
+PN-064 — LA PANCARTE NE PAS DESCENDRE
+===============================================================================
+Asset : SM_S3_Pancarte_Descendre · S3, tete de l'escalier menant du niveau 1
+au verre · ~03:06 · prop a TEXTE LISIBLE · pas d'Echo · LOD0 240 tris
+
+§ 1 — CE QU'ON VOIT
+Une planche de 60 x 25 cm, clouee en travers d'une rambarde, a la tete d'un
+escalier de bois qui descend du Marche jusqu'au verre.
+Dessus, peint au pinceau, en lettres capitales noires, irregulieres, par
+quelqu'un qui n'avait pas de pochoir :
+
+              NE PAS DESCENDRE
+
+Quatre mots. Pas d'explication, pas de signature, pas de date, pas de
+« DANGER », pas de pictogramme.
+La peinture est noire, mate, epaisse. Elle a coule sous le D de DESCENDRE.
+La planche est clouee par quatre clous, dont deux tordus.
+En dessous, l'escalier descend. Neuf marches. Il est intact. Il n'est pas
+bloque, pas condamne, pas casse.
+En bas, le verre.
+Et sur le verre, a 3 m du pied de l'escalier, des traces : le givre est
+efface sur un chemin de 40 cm de large, qui part vers le nord et disparait
+dans la brume.
+Quelqu'un descend regulierement.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 240. [OBL] Texture 2K. Les lettres sont peintes a la main, a l'echelle
+1, sur une vraie planche, photographiees. Aucune police.
+Le E de NE est plus petit que les autres (manque de place au depart, mauvais
+calcul de l'espacement). [OBL] Detail obligatoire : celui qui a peint ca
+n'a pas planifie.
+La coulure sous le D : geometrie de 0,6 mm de relief.
+Le chemin efface dans le givre : decal 2K de 40 cm de large sur 14 m, avec
+un fondu progressif dans la brume.
+[OBL] Le decal doit etre MIS A JOUR : il est present en S3 et en S7. En S7,
+il est plus large (60 cm) et plus marque. Quelqu'un a continue de descendre
+pendant les deux heures ou le joueur etait ailleurs.
+Collision : aucune sur la pancarte. L'escalier est praticable.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a peint un avertissement. Sans dire pourquoi.
+Le geste humain : peindre quatre mots et ne pas expliquer.
+[OBL] Et l'escalier n'est PAS bloque. Celui qui a ecrit ca n'a pas empeche :
+il a prevenu. C'est une nuance enorme et elle definit un caractere.
+[NAR] Tallec. C'est son ecriture (la meme main que les annotations du plan
+mural, PN-045). [OBL] Jamais confirme. Le joueur peut comparer s'il a
+regarde le plan. 9 % le feront.
+Le chemin dans le givre dit que celui qui a ecrit descend quand meme.
+[OBL] Pourquoi il ne faut pas descendre : JAMAIS EXPLIQUE. Ni ici, ni en
+S7, ni dans les six lettres suivantes. Il n'y a rien en bas. Le joueur peut
+descendre : c'est autorise, c'est sans danger, et il n'y a rien.
+
+§ 4 — ECHO
+NEANT. Geste d'apres (PN-015).
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur PEUT descendre. L'escalier fonctionne. En bas, il y a
+60 m x 60 m de verre accessible, vide, sans aucun contenu.
+Il marche dans le givre. Il fait le tour. Il ne trouve rien. Il remonte.
+Environ 3 minutes perdues.
+[ART] C'est le dernier test du chapitre : le jeu dit non, n'empeche pas, et
+ne punit pas. Il ne se passe rien. C'est tout.
+[OBL] Aucun evenement scripte en bas. Aucune apparition. Aucun son
+particulier. Aucune Figure (PN-037 est en S2 et n'apparait pas ici).
+Aucun succes pour avoir desobei. Aucun succes pour avoir obei.
+Le chemin efface dans le givre, lui, le joueur peut le suivre. Il mene
+vers le nord, dans la brume, et s'arrete a 14 m — la ou la brume devient
+trop epaisse pour qu'on voie ses pieds. [OBL] Il n'y a pas de mur invisible.
+Le joueur peut continuer dans la brume. Il se perd. Il n'y a rien.
+Au bout de 80 m, il ne voit plus le Marche. Il doit revenir a la boussole
+mentale. Environ 4 % des joueurs s'y perdent vraiment pendant 2-3 minutes.
+[OBL] Aucune aide, aucun retour automatique, aucune fleche, aucune camera.
+
+§ 6 — AUDIO
+NEANT sur la pancarte.
+En bas, sur le verre : l'ambiance de la Maree (bruit rose 120 Hz, givre qui
+craque). [OBL] La musique M10 s'attenue de 3 dB par 20 m et disparait a
+60 m. Le joueur qui s'eloigne perd la musique. C'est le seul endroit du
+chapitre ou la musique extra-diegetique est spatialisee.
+[ART] Il marche dans le brouillard, sans musique, sans reperes, dans un
+endroit ou on lui a dit de ne pas aller, et il n'y a rien. Le jeu n'a pas
+menti.
+
+§ 7 — INTERDICTIONS
+Interdit de : bloquer l'escalier · expliquer l'avertissement · ajouter un
+danger · ajouter un evenement, une apparition, un son, un objet en bas ·
+ajouter un mur invisible dans la brume · ramener le joueur automatiquement
+· afficher un succes · confirmer que c'est Tallec · ajouter un cinquieme
+mot · ajouter un pictogramme · faire commenter par un PNJ.
+
+§ 8 — LIENS
+PN-045 (le plan mural de Tallec : la meme ecriture, jamais confirmee).
+PN-006 (le ponton brise, S1 : « aucun mur invisible au bord »).
+PN-037 (la Figure immobile, S2) : le joueur qui l'a vue cherchera quelque
+chose dans cette brume. Il ne trouvera rien.
+PN-123 (l'affiche 2e etat, S7) et le chemin de givre elargi.
+[THEME] LE REFUS QUI N'EMPECHE PAS. [THEME] IL N'Y A RIEN.
+
+§ 9 — DOD
+[ ] 4 mots peints a la main, E de NE plus petit, coulure sous le D
+[ ] Escalier praticable, non bloque, 9 marches
+[ ] Chemin de givre 40 cm en S3, 60 cm en S7, meme trajectoire
+[ ] 60 x 60 m de verre accessible, strictement vide
+[ ] Aucun mur invisible, aucun retour automatique, perte possible
+[ ] M10 spatialisee, disparait a 60 m
+[ ] Aucun succes, aucun evenement, aucune explication

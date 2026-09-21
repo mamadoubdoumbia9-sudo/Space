@@ -1,0 +1,92 @@
+===============================================================================
+PN-012 — LA RANGEE DE CASIERS DE PECHEURS
+===============================================================================
+Asset : SM_S1_Casiers_Pecheurs · S1, vestiaire du hangar a filets ·
+~00:31 · prop narratif · pas d'Echo · LOD0 4 600 tris
+
+§ 1 — CE QU'ON VOIT
+Dix-neuf casiers metalliques verticaux, 1,80 m, peinture verte d'origine
+municipale, alignes contre un mur de brique. Numerotes de 1 a 19 au pochoir
+blanc. Chacun porte, glissee dans un porte-nom de tole, une bande de papier
+avec un nom de famille ecrit a la main.
+Quatorze sont fermes a cadenas. Cinq sont ouverts.
+Les cinq ouverts sont VIDES et PROPRES : cintre nu, fond balaye, pas une
+poussiere. Ceux-la, leurs proprietaires les ont vides eux-memes, un jour,
+en partant pour de bon. Ils ont quitte le metier avant la Maree.
+Les quatorze fermes contiennent encore tout. On le sait parce que le
+dix-septieme a une manche de cire jaune coincee dans la porte, qui pend.
+Sur le banc devant, une paire de gants de travail, posee a plat, paume vers
+le haut, doigts ecartes, comme des mains ouvertes.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 4 600. Un casier modelise, 19 instances, 5 variantes de porte
+(fermee / entrouverte 12° / 34° / 61° / grande ouverte).
+[OBL] Les 19 noms sont une texture 4K lisible et sont extraits du fichier
+`content/victims_641.csv`. Trois d'entre eux forment une fratrie (meme nom
+de famille, casiers 4, 5 et 11). Le joueur peut le remarquer. Rien ne le
+signale.
+Les cadenas : 14 modeles, 4 types differents, usures differentes.
+Shader `paint_chipped` + `rust_runoff` (coulees verticales sous les
+charnieres, 05.22).
+Anim : PROP-708 `locker_door_sway` — 2° d'amplitude, 0,06 Hz, seulement sur
+la porte a 61°, celle qui est la moins stable.
+
+§ 3 — CE QUE CA DIT
+Cinq hommes ont arrete la peche. Quatorze etaient encore en activite le
+14 octobre. Le hangar continue de garder leurs affaires.
+Les gants poses paume en l'air sur le banc : personne ne pose des gants
+comme ca. On les jette, on les fourre dans une poche. Ceux-la ont ete
+DEPOSES, ouverts. C'est une pose de renoncement, involontaire.
+Le geste humain : un homme s'est assis sur ce banc, a enleve ses gants, les
+a poses, et ne s'est jamais releve pour les reprendre.
+[NAR] Le detail du casier 17, la manche coincee : quelqu'un a ferme vite.
+
+§ 4 — ECHO
+NEANT. Raison : les casiers appartiennent a dix-neuf personnes, pas a une.
+Un Echo de vestiaire serait une foule. Or le systeme des Echos ne montre
+jamais de foule (regle 11.09) : au-dela de dix-sept silhouettes, on ne voit
+plus des gens, on voit une masse, et la masse ne fait pas mal.
+[OBL] E01 (PN-001) est le seul Echo a dix-sept silhouettes du chapitre. Il
+est le plafond. Rien au-dessus.
+
+§ 5 — MISE EN SCENE
+Un couloir de 11 m. Les casiers a gauche sur toute la longueur. La lampe
+portee (PN-009) eclaire trois casiers a la fois. Le joueur avance, et les
+noms defilent dans son halo, un par un, apparaissant et disparaissant.
+[ART] C'est une mecanique de lecture SPATIALE : on ne peut pas voir les 19
+noms en meme temps. Il faut marcher. Le joueur lit avec ses pieds.
+Les gants sont sur le banc a mi-parcours, a hauteur de genou, dans le halo.
+Au bout du couloir : une fenetre, et dehors, le Phare.
+
+§ 6 — AUDIO
+SFX(metal_locker_resonate) : quand le joueur passe a moins de 60 cm, un
+casier resonne tres bas, comme une cloche sourde — le deplacement d'air
+suffit. -30 dB, 3 variations, jamais deux fois le meme casier consecutif.
+SFX(hinge_slow) sur la porte a 61°, toutes les 22 s, desynchronise.
+Ambiance : le couloir est le point le plus mat du jeu (RT60 = 0,22 s).
+Aucune musique.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre d'ouvrir les 14 casiers fermes · ramasser les gants
+· ajouter un Echo · faire tomber un cadenas · ecrire plus de 19 noms ·
+inventer des noms hors du CSV des 641 · signaler la fratrie · faire
+claquer une porte au passage du joueur (jump scare interdit, 17.14) ·
+mettre un nom MAREK sur un casier.
+[OBL] Esteban n'etait PAS pecheur. Aucun casier ne le concerne.
+
+§ 8 — LIENS
+PN-001 (les 40 bottes) : le meme metier, l'autre bout du meme vestiaire.
+PN-016 (les caisses a poissons). PN-019 (le panier de linge).
+`content/victims_641.csv` : source obligatoire des 19 noms.
+PN-003 : les 19 noms doivent TOUS figurer sur l'affiche des 641, et
+quatorze d'entre eux doivent y etre barres d'une croix rouge. Les cinq
+proprietaires de casiers vides, eux, ne sont pas barres — ils avaient
+quitte la ville. Coherence croisee obligatoire, jamais expliquee.
+
+§ 9 — DOD
+[ ] 19 noms lisibles, issus du CSV, coherents avec PN-003 (14 barres / 5 non)
+[ ] 5 casiers ouverts, vides, PROPRES ; 14 fermes a cadenas differents
+[ ] Manche de cire jaune coincee au casier 17
+[ ] Gants paume vers le haut, non ramassables
+[ ] Lecture impossible sans marcher (halo de 3 casiers max)
+[ ] RT60 mesure a 0,22 s ; aucun claquement de porte scripte

@@ -1,0 +1,99 @@
+===============================================================================
+PN-046 — L'ANCRE DU VIEUX HARNAIS DE TALLEC
+===============================================================================
+Asset : SM_S3_Ancre_Harnais · S3, cabane de Tallec, accrochee au montant
+de la porte · ~02:27 · prop RAMASSABLE (2 des 9) ·
+1 DES 3 PROPS COMMENTES PAR UN PERSONNAGE · pas d'Echo · LOD0 700 tris
+
+§ 1 — CE QU'ON VOIT
+Une piece de fer forge de 14 cm, en forme d'ancre de marine miniature, mais
+sans jas : deux becs, une verge, un anneau.
+Elle est lourde pour sa taille : 340 grammes. C'est du fer plein.
+Elle est accrochee par son anneau a un clou, au montant de la porte, a
+hauteur de main. Sous elle, le bois du montant est use et noirci : on l'a
+decrochee et raccrochee des milliers de fois.
+Sur la verge, une soudure grossiere : une piece rapportee, un oeillet de
+cuir rivete, arrache. Il reste le rivet et un morceau de cuir de 2 cm.
+C'etait l'attache d'un harnais.
+Le fer est poli sur toute sa longueur par le frottement. Il brille.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 700. Sculpt manuel, forge, avec les traces de marteau visibles (le
+forgeron a frappe a chaud : les facettes sont irregulieres).
+Shader `iron_forged_polished` : roughness 0,22 sur les zones de frottement,
+0,61 dans les creux. [OBL] Le gradient suit la forme de la main qui l'a
+tenue. Un objet tenu se polit la ou les doigts passent, pas uniformement.
+Le bois use du montant : decal 1K, 12 x 20 cm.
+INTERACTION : ramassable. C'est Tallec qui la donne — [OBL] pas un pickup
+libre. Elle devient disponible apres TAL-DLG-338.
+Une fois dans la poche de Lohen, elle est consultable par appui long :
+LOH-ACT-143, 3 s, il l'ouvre dans sa paume gauche (le jeton 0114 est dans
+la droite). Il peut tenir les deux. [OBL] Il ne les regarde jamais en meme
+temps : l'animation alterne, elle ne montre pas les deux paumes ouvertes.
+
+§ 3 — CE QUE CA DIT
+Tallec avait un harnais. Un vrai, de travail, pour tirer ou porter.
+L'oeillet a ete arrache — le harnais a cede, ou on l'a coupe.
+[NAR] Il a perdu son bras. Le jeu ne dit pas comment, jamais, dans aucune
+des sept lettres. Cette ancre est tout ce qu'il en reste.
+Le geste humain : garder la piece de metal d'un harnais qui n'existe plus,
+l'accrocher a sa porte, et la decrocher pour la tenir dans la main.
+Le poli de la verge dit des milliers de fois.
+
+§ 4 — ECHO
+NEANT. Objet du present d'un vivant (regle PN-005 / PN-009).
+[OBL] Aucun objet appartenant a un personnage VIVANT ne porte d'Echo, dans
+tout le chapitre. Verifiable : rien de Tallec, rien de Mireille, rien de
+Sol, rien de Lohen. Les Echos sont aux absents.
+
+§ 5 — MISE EN SCENE
+[OBL] C'est l'une des TROIS SEULES fois du chapitre ou un personnage
+commente un prop. Les 144 autres props ne sont jamais mentionnes.
+La replique, TAL-DLG-338, est dite pendant qu'il la decroche et la tend,
+sans la regarder, en regardant le verre :
+    « Prenez. »
+    (Lohen ne bouge pas.)
+    « C'est lourd. C'est le but. Quand vous aurez envie de descendre sur
+     le verre, vous aurez ca dans la poche. Ca ne vous arretera pas.
+     Mais vous saurez que quelqu'un a essaye. »
+[OBL] Cinq phrases. Pas une de plus. Tallec ne dit jamais ce que c'est, ni
+d'ou ca vient, ni qu'il l'a portee.
+Il ne regarde pas Lohen pendant qu'il parle. TAL-ANI-531.
+Lohen la prend. LOH-ACT-142, 2,4 s. Il ne dit rien. [OBL] Il ne remercie
+pas. Il n'y a aucune option de dialogue.
+
+§ 6 — AUDIO
+SFX(iron_small_heavy_palm) : l'ancre dans la paume. Un son MAT et LOURD,
+l'oppose exact du jeton de laiton (PN-018) qui est clair et leger.
+[OBL] Les deux sons doivent etre reconnaissables a l'aveugle. Le joueur
+porte deux objets pendant 1 h 30 et il doit savoir lequel il tient.
+SFX(nail_iron_lift) : le decrochage du clou, une seule fois, dans la scene.
+Aucune musique pendant TAL-DLG-338. [OBL] M13 « Tallec » s'arrete 4 s avant
+la replique et ne reprend pas avant la sortie de la cabane.
+
+§ 7 — INTERDICTIONS
+Interdit de : expliquer le bras de Tallec · expliquer le harnais · permettre
+de jeter, perdre ou echanger l'ancre · lui donner une fonction mecanique
+(elle ne debloque rien, n'ouvre rien, ne pese sur rien) · ajouter une
+gravure, une initiale, une date · la faire commenter une seconde fois ·
+en faire une arme · l'utiliser dans une enigme · la reprendre a Lohen.
+[OBL] Elle est dans sa poche jusqu'a la fin du chapitre et des six lettres
+suivantes. Elle ne sert jamais a rien. C'est exactement ce que Tallec a dit.
+
+§ 8 — LIENS
+PN-018 (le jeton 0114) : les deux objets de poche du chapitre, l'un clair,
+l'autre mat. PN-047 (la prothese de rechange, a 2 m).
+PN-033 (le harpon plante, S2) : « quelqu'un a essaye ». Le joueur l'a vu
+41 minutes plus tot. Tallec ne sait pas que Lohen l'a vu. Le jeu ne relie
+jamais. [OBL] Interdiction absolue de confirmer que le harpon est de Tallec.
+PN-142 (la pierre plate, S8) : le troisieme objet que Lohen tiendra.
+[THEME] FRAPPER CE QUI NE SENT RIEN. [THEME] LE POIDS DANS LA POCHE.
+
+§ 9 — DOD
+[ ] Sculpt forge, traces de marteau irregulieres, 340 g credibles
+[ ] Poli suivant la forme de la prise, pas uniforme
+[ ] Donnee par Tallec apres TAL-DLG-338, jamais en pickup libre
+[ ] Son mat et lourd, distinguable a l'aveugle du jeton de laiton
+[ ] 5 phrases exactement, Tallec ne regarde pas Lohen, aucun remerciement
+[ ] Aucune fonction mecanique, jamais, dans les 7 chapitres
+[ ] Lien avec PN-033 jamais confirme

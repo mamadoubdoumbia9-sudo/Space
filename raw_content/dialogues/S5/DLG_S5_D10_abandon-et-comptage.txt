@@ -1,0 +1,180 @@
+===============================================================================
+DLG · S5 · D10 — LES LIGNES D'ABANDON DE SOL, LA SORTIE, ET LE COMPTAGE
+46 entrees, toutes S5. SOL 27 · LOH 19. Contribution : 46.
+[OBL] Dernier document de S5. Ferme la sequence a 402.
+===============================================================================
+
+--- 1. LA REGLE D'ABANDON DE SOL [OBL] ---------------------------------------------------------
+
+Rappel INDEX § 8.02 : Mireille s'appauvrit quand on l'abandonne (S4).
+Sol fait l'inverse, et c'est pire.
+
+[OBL] MECANISME : le jeu compte les fois ou le joueur s'eloigne de plus
+de 15 m de Sol pendant qu'iel parle, ou coupe une de ses lignes en
+changeant de piece. Seuil : 4 fois.
+
+[OBL] EFFET AU SEUIL : Sol ne se tait pas. Sol PARLE PLUS. Le debit
+augmente de 8 %, les pauses inter-lignes passent de 1,2 s a 0,6 s, et
+les douze lignes ci-dessous (L401→L412) s'ajoutent au pool.
+
+[OBL] Direction de studio : ces douze lignes sont jouees plus VITE et
+plus GAIEMENT que les autres. [OBL] Il est interdit de les jouer
+tristement. [OBL] Un enfant qui sent qu'on s'en va parle plus vite pour
+retenir la personne. C'est un comportement observe et ce n'est pas
+commente par le jeu.
+
+    [S5_SOL_L401]  2,0 s · rapide · « Attends attends attends, j'ai pas fini. »
+    [S5_SOL_L402]  1,6 s · rapide · « Deux secondes. »
+    [S5_SOL_L403]  2,4 s · rapide · « Non mais ecoute ca, c'est court. »
+    [S5_SOL_L404]  1,8 s · rapide · « Ca va etre rapide. »
+    [S5_SOL_L405]  2,2 s · rapide · « Je raccourcis, promis. »
+    [S5_SOL_L406]  1,4 s · rapide · « Trente secondes. »
+    [S5_SOL_L407]  2,6 s · rapide · « T'es oblige d'aller si vite ? Y'a l'eau qu'a la demie. »
+    [S5_SOL_L408]  1,8 s · rapide · « Je marche devant, comme ca tu me perds pas. »
+        dir : [OBL] iel inverse la responsabilite. C'est Lohen qui la
+              perd, et iel s'arrange pour que ce soit sa faute a iel.
+    [S5_SOL_L409]  2,0 s · rapide · « Je parle en marchant, c'est pareil. »
+    [S5_SOL_L410]  2,4 s · rapide · « Tu veux que je me taise ? »
+    [S5_LOH_L411]  1,2 s · plat    · « Non. »
+        dir : [OBL] LA SEULE REPONSE DISPONIBLE. Il n'y a pas d'option
+              « oui ». [OBL] Meme le joueur qui a abandonne Sol quatre
+              fois ne peut pas lui dire de se taire. Le jeu lui refuse
+              cette cruaute-la.
+    [S5_SOL_L412]  2,2 s · rapide · « Ok. Alors je continue. »
+        dir : [OBL] et iel continue, et le joueur qui a declenche ca
+              l'a bien cherche, et le jeu ne le lui reproche jamais.
+
+--- 2. LES SEPT LIGNES QUI NE SE DECLENCHENT PAS AU SEUIL --------------------------------------
+
+[OBL] Inversement : le joueur qui reste (0 ou 1 abandon) debloque ces
+sept lignes, qui n'existent pas pour les autres. Elles sont plus lentes.
+
+    [S5_SOL_L413]  2,8 s · lent · « Tu sais que t'es la premiere personne qui repond depuis longtemps ? »
+    [S5_LOH_L414]  1,4 s · plat · « Depuis combien ? »
+    [S5_SOL_L415]  2,0 s · lent · « Je compte pas. »
+    [S5_LOH_L416]  1,6 s · plat · « Tu comptes tout. »
+        dir : [OBL] il a remarque. Premiere fois que Lohen renvoie a
+              quelqu'un une observation sur son caractere.
+    [S5_SOL_L417]  2,4 s · lent · « Bon, oui. Quatre mois. »
+    [S5_SOL_L418]  3,0 s · lent · « Enfin, des gens qui passent, y'en a. Mais ils repondent pas. »
+    [S5_SOL_L419]  2,6 s · lent · « Toi tu reponds mal, mais tu reponds. »
+        dir : [OBL][NAR] LA MEILLEURE CHOSE QU'ON DISE A LOHEN DU
+              CHAPITRE ENTIER. [OBL] Aucune musique. Aucun plan de
+              reaction. Il ne remercie pas.
+
+--- 3. LA SORTIE DES CONDUITS (18 lignes) ------------------------------------------------------
+
+La grille. La lanterne posee (L196). 90 secondes de marche seul, et la
+salle de bal derriere la porte.
+
+    [S5_LOH_L420]  1,8 s · bas · « La grille est ouverte. »
+    [S5_LOH_L421]  2,2 s · bas · « Elle a ete ouverte. C'est pas pareil. »
+    [S5_LOH_L422]  1,6 s · bas · « Les gonds sont graisses. »
+        dir : [OBL][NAR] QUELQU'UN ENTRETIENT CETTE GRILLE. [OBL] Le
+              Verrier. [OBL] Jamais dit. Jamais soupconne par Lohen.
+              [OBL] Le joueur qui a fait E18 en S4 (4 %) a une
+              description du Verrier en tete et fera le lien. Les 96 %
+              autres ne verront rien. Les deux experiences sont
+              valides.
+    [S5_LOH_L423]  2,0 s · bas · « Je regarde derriere. »
+    [S5_LOH_L424]  2,4 s · bas · « La lanterne est encore la. Sol est assise a cote. »
+    [S5_LOH_L425]  1,8 s · bas · « Elle bouge pas. »
+        dir : [OBL] « Elle » = la lanterne. [OBL] Le jeu laisse
+              l'ambiguite avec Sol. [OBL] Ne jamais la lever.
+    [S5_LOH_L426]  2,2 s · bas · « Bon. »
+    [S5_LOH_L427]  1,4 s · bas · « Il fait clair, ici. »
+    [S5_LOH_L428]  2,0 s · bas · « D'ou ? »
+    [S5_LOH_L429]  2,6 s · bas · « Y'a une verriere. Cassee, mais y'a une verriere. »
+    [S5_LOH_L430]  1,8 s · bas · « Premiere fois depuis ce matin que je vois le ciel. »
+        dir : [OBL] il est 15 h 40 dans la fiction. Le joueur joue
+              depuis environ 2 h 20.
+    [S5_LOH_L431]  2,2 s · bas · « Le sol est propre. »
+    [S5_LOH_L432]  1,6 s · bas · « Pas balaye. Propre. »
+    [S5_LOH_L433]  2,4 s · bas · « Y'a pas de poussiere du tout. »
+    [S5_LOH_L434]  2,0 s · bas · « Sol avait raison. »
+    [S5_LOH_L435]  1,8 s · bas · « Sol a raison depuis le debut, en fait. »
+    [S5_LOH_L436]  2,6 s · bas · « Ca va aller. »
+        dir : [OBL][NAR] 10e OCCURRENCE. 2,6 s. La plus longue des
+              onze, dite dans une piece propre et eclairee, seul.
+              [OBL] La 11e et derniere est en S8, elle dure 0,6 s, et
+              elle est dite a une lettre.
+    [S5_LOH_L437]  0,0 s · — · (slot sans VO)
+        dir : [OBL] 2,8 s de silence debout dans la salle de bal avant
+              que le joueur reprenne la main. [OBL] Fin de S5.
+
+--- 4. NEUF LIGNES DE SOL QUI NE SONT JAMAIS ENTENDUES PAR LOHEN -------------------------------
+
+[OBL] Declenchement : le joueur revient sur ses pas apres L437 (la grille
+n'est pas verrouillee). 6 % le font. Sol parle, seule, a la lanterne.
+[OBL] Lohen est hors champ, en haut, a 9 m. Les lignes sont mixees a
+0,4 de gain avec la reverb du conduit. [OBL] Sol ne sait pas qu'on
+l'entend. [OBL] Si le joueur avance d'un metre, elles s'arretent net et
+ne reprennent jamais de la partie.
+
+    [S5_SOL_L438]  2,0 s · seul · « Bon. »
+    [S5_SOL_L439]  2,4 s · seul · « Il est parti. »
+    [S5_SOL_L440]  2,8 s · seul · « Ils partent tous, c'est normal, c'est pas un truc contre moi. »
+    [S5_SOL_L441]  2,2 s · seul · « Celui-la il a dit merci. »
+    [S5_SOL_L442]  2,6 s · seul · « Deux fois, meme. »
+        dir : [OBL] il l'a dit une fois (L200). [OBL] Sol compte mal,
+              exprès ou pas, et personne ne corrigera.
+    [S5_SOL_L443]  3,0 s · seul · « Pomme aurait bien aime celui-la. »
+        dir : [OBL][NAR] TROISIEME ET DERNIER IMPARFAIT SUR POMME.
+              [OBL] Aucune musique. [OBL] 6 % des joueurs entendront
+              cette ligne. Elle est ecrite pour eux et elle ne sera
+              jamais mise en avant.
+    [S5_SOL_L444]  2,4 s · seul · « Bon. »
+    [S5_SOL_L445]  2,8 s · seul · « Je vais compter les traits. Ca fait passer le temps. »
+    [S5_SOL_L446]  3,2 s · seul · « Un, deux, trois, quatre, cinq... »
+        dir : [OBL][NAR] DERNIERE LIGNE DE S5. [OBL] Sol commence a
+              compter les 1 038 traits du conduit — ceux-la memes qui
+              sont les 1 038 marches du Phare que Lohen montera a la
+              fin du chapitre. [OBL] Le fondu au noir intervient a
+              « cinq ». [OBL] AUCUN PERSONNAGE NE FERA JAMAIS LE
+              LIEN. Interdit 21.08 : ne jamais l'expliquer, dans aucun
+              chapitre.
+
+--- 5. TABLE DE COMPTAGE DE S5 [OBL] ------------------------------------------------------------
+
+    D01 le-noir-et-la-lanterne .................. 30
+    D02 sol-dans-le-noir ........................ 37
+    D03 sol-parle-trop .......................... 63
+    D04 les-quatre-phrases ...................... 26
+    D05 apres-les-quatre-phrases ................ 44
+    D06 les-echos-des-conduits .................. 52
+    D07 la-furtivite-sans-monstre ............... 40
+    D08 les-trois-derniers-choix ................ 44
+    D09 barks-des-conduits (lignes comptees) .... 20
+    D10 abandon-et-comptage ..................... 46
+                                                 ----
+                                     TOTAL S5 =  402   [OBL] conforme
+
+    Barks S5 (hors total) : 44 — ids S5_BK_L357 a S5_BK_L400. [OBL] conforme
+
+    Ventilation par locuteur :
+      SOL ............ 224
+      LOH ............ 124
+      ECH ............  52   (E20a·12 E20b·12 E20c·14 E20d·14)
+                       ----
+                        402
+
+    Slots muets (sans VO, comptes) : S5_LOH_L138, L150, L170, L304, L437
+      → compteur studio S5 = 397 lignes enregistrees.
+
+    COMMANDE DE VERIFICATION :
+      tools/count_dialogue.py --seq S5 --expect 402 --studio 397 --barks 44
+
+    Choix de S5 : 6 — n° 24, 25, 26 (D05) · 27, 28, 29 (D08). [OBL] conforme
+    Echos de S5 : 4 — E20a, E20b, E20c, E20d. Aucun ne montre Esteban.
+
+--- CHECKLIST DE SEQUENCE ----------------------------------------------------------------------
+
+[ ] 402 lignes, 44 barks, 6 choix, 4 Echos, 5 slots muets
+[ ] Aucun timer (les 2 seuls timers du jeu sont en S4)
+[ ] Le Mueur n'apparait jamais — CI `no-mueur`
+[ ] Mix strictement plat, M17 seule, coupee pendant D04
+[ ] « Ca va aller » : occurrences 1 a 10 en S5, la 11e est en S8
+[ ] Personne ne dit a Lohen qu'Esteban est mort — CI `no-death-told`
+[ ] Le mot « Echo » n'est jamais prononce — CI `no-echo-word`
+[ ] Le mot « amour » n'apparait pas en S5 (les 2 occurrences sont S4 et S8)
+[ ] 1 038 : traits du conduit = marches du Phare, jamais relie

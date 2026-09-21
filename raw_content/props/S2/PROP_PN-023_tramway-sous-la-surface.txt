@@ -1,0 +1,118 @@
+===============================================================================
+PN-023 — LE TRAMWAY SOUS LA SURFACE
+===============================================================================
+Asset : SM_S2_Tramway_Immerge · S2, sous la Maree, 3 a 7 m de profondeur,
+sous le trajet du joueur · ~00:54 · PORTEUR D'ECHO E06 · LOD0 7 800 tris
+
+§ 1 — CE QU'ON VOIT
+Le joueur marche sur le verre. Sous ses pieds, a travers trois metres de
+Maree, il y a une rue.
+Il y a un tramway. Un tramway complet, 14 m, deux caisses articulees,
+peinture creme et bordeaux, immobile sur ses rails, dans une rue qui est
+maintenant le fond d'un ocean solide.
+Il est droit. Pas renverse, pas tordu. Il s'est arrete a un arret. Les
+portes du milieu sont OUVERTES.
+Les vitres sont intactes. On voit l'interieur : les barres, les sangles de
+maintien qui pendent — droites, immobiles, prises dans le verre — et les
+sieges. Le pantographe est leve et touche encore le fil.
+Il est VIDE. Entierement. Pas une silhouette, pas un corps, pas un sac.
+A 6 m de la porte ouverte, sur la chaussee, un parapluie, ouvert, pose sur
+le cote. Il pleuvait, le 14 octobre, a 23h41.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 7 800 (caisses 4 200 + intérieur 2 100 + rails/fil/poteaux 1 500).
+[OBL] L'intérieur est modelise et visible. Pas de carte fausse-profondeur :
+le joueur va coller son visage a la surface et regarder, et il verra tout.
+Shader de traversee : `maree_glass_deep`. Trois couches :
+  — refraction IOR 1,52, dispersion chromatique 0,004 sur les aretes
+  — attenuation de Beer-Lambert, couleur d'extinction (0,04 / 0,09 / 0,11),
+    distance de demi-extinction 4,1 m
+  — voile de diffusion croissant : a 3 m on lit les details, a 7 m on ne
+    lit plus que des masses.
+[OBL] AUCUNE caustique. AUCUN godray sous-marin. Ce n'est pas de l'eau.
+C'est du verre massif, parfaitement immobile, sans courant, sans particules
+en suspension, sans vie. Toute la difference entre « joli fond marin » et
+« ville morte scellee » tient dans ce refus.
+Cout GPU 1,9 ms. Le plus cher de S2, budgete.
+
+§ 3 — CE QUE CA DIT
+Le tramway s'est arrete a l'arret. Les portes se sont ouvertes.
+Ce qui veut dire que le conducteur a fait son travail jusqu'au bout de la
+derniere seconde. Il a freine, il s'est arrete a la marque, il a ouvert.
+Et puis il n'y avait plus personne pour descendre ni pour monter.
+Le geste humain : s'arreter a l'arret.
+Le parapluie ouvert a 6 m dit qu'une personne courait vers le tram.
+Le pantographe encore leve dit qu'il y avait du courant. La ville
+fonctionnait. Il n'y a pas eu de panne, pas d'alerte, pas de coupure.
+[NAR] C'est le premier moment ou le joueur comprend l'ECHELLE. Jusqu'ici,
+des quais, des maisons, des objets. Ici, une infrastructure. Une ville
+entiere est la-dessous, avec ses rails, ses fils, ses lampadaires, son
+courant electrique, et personne dedans.
+
+§ 4 — ECHO
+ECHO E06 — « L'arret » — 44 secondes, mode B (silhouettes + matiere).
+Mode B (×4 dans le chapitre) : les silhouettes sont accompagnees d'une
+reprise de la lumiere du monde d'avant. Ici : la rue sous le verre
+s'ECLAIRE. Les lampadaires s'allument, les vitres du tram s'allument, le
+fil prend un reflet.
+[OBL] Le joueur est DEBOUT SUR le verre pendant tout l'Echo. Il regarde a
+ses pieds une rue illuminee a trois metres sous lui. Il n'y descend pas.
+Deroulement : 9 silhouettes dans le tram, assises, immobiles. Une debout
+pres de la porte. Sur le quai d'arret, 2 silhouettes attendent.
+Le tram ne bouge pas. Personne ne monte. Personne ne descend.
+A 31 s, la silhouette au parapluie entre dans le cadre, en courant, depuis
+le hors-champ. Elle court vers le tram. Elle n'arrive jamais : elle
+s'efface a 4 m de la porte, en pleine foulee.
+Les lumieres s'eteignent une par une, de loin vers pres, sur 6 s.
+[OBL] Aucune silhouette ne leve les yeux vers Lohen. Aucune.
+Musique : M09 « Le dernier tram », cordes graves, 44 s, une seule phrase de
+9 notes repetee trois fois, jamais resolue.
+Rituel d'entree : 2,44 s, identique aux 30 autres.
+Declenchement : le joueur doit s'ARRETER et regarder vers le bas plus de
+2 s. [ART] Le seul Echo du chapitre declenche par la direction du regard.
+
+§ 5 — MISE EN SCENE
+Le chemin de S2 passe exactement au-dessus. Sur 40 m, le joueur marche sur
+le toit d'un tramway.
+[ART] Le premier reflexe humain, quand le sol est transparent, est de
+regarder ses pieds. Le jeu compte dessus et ne fait rien d'autre.
+La lumiere du present : un ciel blanc de brume, qui se reflete sur le verre.
+[OBL] Il faut donc gerer le conflit reflet/transparence : le shader arbitre
+par l'angle de vue (Fresnel). De loin on voit le ciel, de pres on voit la
+ville. Le joueur doit BAISSER LA TETE pour percer. C'est physique, c'est
+juste, et ca oblige au geste.
+
+§ 6 — AUDIO
+[OBL] Le tramway est MUET. Le verre ne transmet aucun son. A aucun moment,
+en dehors de l'Echo, rien ne monte du dessous.
+Pendant E06 : le son vient avec la lumiere, mais FILTRE — passe-bas a
+900 Hz, comme entendu a travers une matiere epaisse. Cloches de tram,
+rumeur de rue, pluie. La pluie s'entend, et il ne pleut pas au present.
+A 31 s : les pas de course de la silhouette au parapluie, non filtres,
+PLEINS, comme si elle courait a cote du joueur, sur le verre, au present.
+Puis plus rien. [ART] Ce seul son non filtre est le pic emotionnel de S2.
+Apres l'Echo : 5 s de silence total avant le retour du vent.
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter des corps, des vetements, des sacs dans le tram ·
+ajouter des caustiques ou des godrays · faire bouger quoi que ce soit sous
+le verre · permettre de descendre · fissurer le verre ici · faire regarder
+une silhouette vers le haut · expliquer la Maree · faire commenter Lohen ·
+rendre E06 rejouable · ajouter un panneau de destination lisible.
+
+§ 8 — LIENS
+PN-006 (le cordage tendu du ponton) : la question posee en S1, repondue ici.
+PN-011 (le velo). PN-031 (la main dans le verre) — a 200 m, et le joueur
+vient de comprendre qu'il marche sur une ville.
+[THEME] CE QUI EST DESSOUS. [THEME] ZERO CORPS — le tram vide est la preuve
+a l'echelle. 641 personnes, aucune retrouvee, jamais.
+
+§ 9 — DOD
+[ ] Intérieur modelise, lisible a travers 3 m de verre
+[ ] Beer-Lambert calibre : details a 3 m, masses a 7 m
+[ ] Zero caustique, zero godray, zero particule en suspension
+[ ] Fresnel : ciel de loin, ville de pres, bascule par l'angle de vue
+[ ] E06 : 12 silhouettes, aucune ne leve les yeux, parapluie a 31 s
+[ ] Son filtre 900 Hz SAUF les pas de course, pleins
+[ ] Muet a 100 % hors Echo
+[ ] 1,9 ms max, valide sur Adreno 640

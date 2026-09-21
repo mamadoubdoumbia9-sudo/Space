@@ -1,0 +1,106 @@
+===============================================================================
+  A-072   glass_walk_careful
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 072 / 744
+  Partie 1 — LOHEN
+  Categorie : PENTES, ESCALIERS, SURFACES
+  Fichier source  : A_Lohen_Slp_glass_walk_careful_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 1.680 s  (50 frames a 30 fps)
+  Type .................. BOUCLE
+  Root motion ........... RM-ROT
+  Blend in / out ........ 0.26 s / 0.26 s
+  Couche AnimationTree .. L0+L6
+  Priorite .............. 12 — locomotion de fond (bande 0-19, bareme 0.05)
+  Poids compresse cible . ~24 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      jambes completes, cheville (amplitude accrue), pelvis, colonne, bras
+      d'equilibre, IK de pied
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  LOHEN — 27 ans, 1,74 m, sec, entraine, fatigue.
+
+  Il a du POIDS. Chaque mouvement a un cout visible. Reference : un grimpeur
+  professionnel en fin de journee de travail. Il ne fait jamais un geste
+  gratuit, sauf trois tics (L2 le lacet, L3 le col, L5 la sacoche) qui sont
+  tout le personnage. Il ne sait pas bien lire. Il a deux sourires dans tout
+  le chapitre. Matricule 0114 brode sur la veste, dans l'albedo, et il doit
+  s'user. Epaule droite abimee « depuis Saint-Jerome » — jamais defini,
+  interdit de le definir.
+
+  Rig et costume :
+      veste de relayeur (cloth simule, 1 des 6 pieces reelles du chapitre),
+      harnais, sacoche, gants, lacet au poignet gauche
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  marche sur la Maree de Verre (S2). Les pieds se posent a plat, TRES
+  lentement, avec un temps de verification de 6 frames avant de transferer
+  le poids. Les bras sont ecartes. Il ne fait pas confiance au sol et le
+  corps entier le dit.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Cyclage [OBL 0.03] : la frame 0 et la frame 50 sont identiques
+  a 0.001 pres. Verifie par `tools/loop_check.py`, qui echoue le
+  build en cas de saut.
+
+  Evenements de timeline :
+      FOOTSTEP_glass f8 (SFX 13.29) f8, f33 · HAPTIC(hap_step_glass)
+      VFX(V17) f10, f35 — les fissures s'accumulent et RESTENT
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- walk_F (auto a l'entree sur surface `glass`) ; -> glass_run
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · cyclage frame 0 == frame 50 (tolerance 0.001)
+      · seule la rotation vient de l'anim ; la translation est pilotee par
+      le code (reactivite prioritaire)
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-072
+===============================================================================

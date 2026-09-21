@@ -1,0 +1,169 @@
+===============================================================================
+DLG · S1 · D02 — PALLAS : LE PREMIER ETRE HUMAIN VIVANT DU JEU
+28 lignes · LOHEN 12 / PALLAS 16 · a 00:21:00 de jeu
+Reference maitre : 09.10 (« le premier humain vivant apparait a 00:21 »).
+Props : PN-009 lanterne (non, pas encore), PN-016 le muret aux 40 bottes.
+Anim : PAL-IDL-001..004, LOH-IDL-002, LOH-TRN-018.
+===============================================================================
+
+--- CONTEXTE -------------------------------------------------------------------
+
+Vingt et une minutes que le joueur n'a vu personne. Il a marche, il a
+grimpe, il a declenche un Echo, il a compris que la ville etait morte.
+Puis, au detour du hangar a filets, une femme de 61 ans est assise sur une
+caisse retournee, et elle recoud une sangle de harnais de relayeur.
+
+PALLAS porte le meme uniforme que Lohen, en plus use. Elle a un matricule :
+0031. Elle ne se leve pas. Elle ne sursaute pas. Elle l'a entendu venir
+depuis deux minutes et elle a decide de ne rien dire.
+
+[OBL] Le jeu ne joue AUCUNE musique a l'arrivee de Pallas. Pas de motif
+« rencontre ». M01 s'est arrete a 00:16 et rien n'a repris. Le premier
+humain du jeu arrive dans le silence. C'est la regle la plus contre-
+intuitive de la sequence et c'est celle qui la fait marcher.
+
+[NAR] Pallas est la seule personne du chapitre qui traite Lohen en collegue
+et non en cas. Elle ne le plaint pas une seule fois en 79 lignes. C'est
+pour ca qu'on l'aime. C'est aussi pour ca que sa derniere ligne en S7 fait
+mal (voir DLG_S7_D08).
+
+--- LES 28 LIGNES --------------------------------------------------------------
+
+    [S1_PAL_L015]  PALLAS · 1,3 s · plat · p0,5
+        « Ta sangle gauche est morte. »
+        dir : elle ne leve pas les yeux. Elle continue de coudre. C'est la
+              premiere phrase adressee a Lohen dans tout le jeu et c'est
+              une remarque technique.
+
+    [S1_LOH_L016]  LOHEN · 0,9 s · surpris · p0,3
+        « Pallas. »
+        dir : il s'arrete net. Clip LOH-IDL-002, arret sans recentrage de
+              hanche (il est surpris, pas propre).
+
+    [S1_PAL_L017]  PALLAS · 2,2 s · sec · p0,4
+        « Elle est morte depuis Vertelune, ta sangle. J'ai vu ca d'ici. »
+        dir : elle pointe l'aiguille vers lui sans la lacher.
+
+    [S1_LOH_L018]  LOHEN · 1,1 s · plat · p0,4
+        « Elle tient. »
+
+    [S1_PAL_L019]  PALLAS · 1,6 s · sec · p0,6
+        « Tout tient, jusqu'a une fois. Assieds-toi. »
+        dir : elle tape la caisse a cote d'elle, deux fois, du plat de la
+              main. Elle ne le regarde toujours pas.
+
+    [S1_LOH_L020]  LOHEN · 1,0 s · plat · p0,5
+        « Je ne reste pas. »
+
+    [S1_PAL_L021]  PALLAS · 1,4 s · moqueur · p0,7
+        « Personne ne reste. Assieds-toi quand meme. »
+        dir : premier et dernier sourire de Pallas en S1. Il dure 0,8 s.
+
+    -- Le joueur peut s'asseoir ou rester debout. S'il s'assoit, l'anim
+       LOH-SIT-104 se joue, la camera baisse de 46 cm, et la conversation
+       est identique. Rien n'est gagne. Rien n'est perdu. C'est le premier
+       geste gratuit du jeu et il apprend au joueur que ce jeu en contient.
+
+    [S1_PAL_L022]  PALLAS · 2,4 s · plat · p0,5
+        « Trois ans que je te vois passer sur ce ponton. Toujours a la
+          meme heure. »
+        dir : elle coud. Sept points visibles pendant cette ligne.
+
+    [S1_LOH_L023]  LOHEN · 1,2 s · retenu · p0,4
+        « C'est mon secteur. »
+
+    [S1_PAL_L024]  PALLAS · 1,1 s · sec · p0,8
+        « Non. »
+        dir : un seul mot, et elle s'arrete de coudre pour la premiere
+              fois. Elle repart sur la ligne suivante.
+
+    [S1_PAL_L025]  PALLAS · 2,7 s · plat · p0,4
+        « Ton secteur c'est la Haute Ville. Ca, c'est le secteur de
+          personne. »
+
+    [S1_LOH_L026]  LOHEN · 1,0 s · plat · p0,5
+        « Il y a du courrier en bas. »
+
+    [S1_PAL_L027]  PALLAS · 1,9 s · sec · p0,3
+        « Il y a du courrier partout. Y'a plus personne pour le prendre. »
+
+    [S1_PAL_L028]  PALLAS · 2,1 s · plat · p0,6
+        « Tu sais combien j'en ai remis, ce mois-ci ? Quatre. »
+
+    [S1_LOH_L029]  LOHEN · 0,8 s · plat · p0,4
+        « Moi onze. »
+
+    [S1_PAL_L030]  PALLAS · 1,7 s · moqueur · p0,5
+        « Menteur. »
+        dir : dit avec affection. C'est le mot le plus chaud de la scene.
+
+    [S1_LOH_L031]  LOHEN · 1,0 s · plat · p0,6
+        « Neuf. »
+
+    [S1_PAL_L032]  PALLAS · 1,2 s · sec · p0,9
+        « Sept, et tu le sais. »
+        dir : pause longue apres. Elle noue son fil. Bruit de dents qui
+              coupent le fil, -14 dB, sample reel.
+
+    [S1_PAL_L033]  PALLAS · 2,8 s · plat · p0,4
+        « Le Registre est ferme, Lohen. Pas ferme comme une porte. Ferme
+          comme une bouteille. »
+
+    [S1_LOH_L034]  LOHEN · 1,1 s · plat · p0,3
+        « Je vais voir. »
+
+    [S1_PAL_L035]  PALLAS · 1,3 s · las · p0,5
+        « Bien sur que tu vas voir. »
+
+    [S1_PAL_L036]  PALLAS · 2,3 s · plat · p0,4
+        « Par le toit, alors. L'echelle nord tient encore. La sud, non. »
+        dir : information pure. C'est de l'aide, et elle ne la deguise pas
+              en conseil de vie.
+
+    [S1_LOH_L037]  LOHEN · 0,7 s · plat · p0,4
+        « Merci. »
+
+    [S1_PAL_L038]  PALLAS · 1,5 s · sec · p0,6
+        « Donne-moi ta sangle d'abord. »
+
+    -- Si le joueur donne la sangle (interaction LOH-ACT-022, 4,2 s), les
+       deux lignes suivantes se jouent et la sangle est reparee : en S3, le
+       grappin en pendule n'a aucun bug visuel de sangle. Si le joueur
+       refuse, la sangle claque UNE fois en S3, a un moment sans danger,
+       avec un son sec, et Lohen la rattrape. Rien d'autre ne change.
+       [OBL] Aucune penalite mecanique dans les deux cas.
+
+    [S1_PAL_L039]  PALLAS · 2,0 s · plat · p0,5
+        « Voila. Elle est laide. Elle tiendra deux ans. »
+
+    [S1_LOH_L040]  LOHEN · 1,4 s · doux · p0,6
+        « Elles sont toutes laides, les tiennes. »
+
+    [S1_PAL_L041]  PALLAS · 1,8 s · sec · p0,8
+        « Et elles tiennent toutes deux ans. »
+
+    [S1_PAL_L042]  PALLAS · 2,6 s · plat · p0,0
+        « Allez. Monte voir ta bouteille. »
+        dir : elle se remet a coudre autre chose. Elle ne le regarde pas
+              partir. [OBL] La camera ne se retourne pas sur elle. On ne
+              lui offre pas de plan d'adieu. Elle est encore la, c'est
+              tout.
+
+--- MIX ------------------------------------------------------------------------
+
+Aucune musique. Ambiance quais (BK_S1 lit de fond seul), crachin V02.
+L'aiguille et le fil sont a -16 dB, plus fort que ne le voudrait le
+realisme : ils sont le metronome de la scene.
+[OBL] Duck a -3 dB seulement sur cette scene (au lieu de -7) : Pallas parle
+DANS son environnement, pas au-dessus.
+
+--- CHECKLIST ------------------------------------------------------------------
+
+[ ] Zero musique de l'entree a la sortie de la scene
+[ ] Pallas ne regarde Lohen dans les yeux qu'une fois : L024
+[ ] Le mot « disparu » n'est jamais prononce
+[ ] Le mot « Esteban » n'est jamais prononce
+[ ] Aucune ligne de compassion. Verification a la relecture : si une ligne
+    plaint Lohen, elle est reecrite ou coupee
+[ ] S'asseoir ne donne rien : verifie
+[ ] Sangle non donnee : un seul claquement en S3, zone sans danger

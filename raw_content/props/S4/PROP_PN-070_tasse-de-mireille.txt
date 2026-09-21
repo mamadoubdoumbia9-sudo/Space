@@ -1,0 +1,112 @@
+===============================================================================
+PN-070 — LA TASSE DE MIREILLE
+===============================================================================
+Asset : SM_S4_Tasse_Mireille · S4, table de Mireille, fond de la rotonde ·
+~03:28 · PORTEUR D'ECHO E14 · LOD0 900 tris
+
+§ 1 — CE QU'ON VOIT
+Une tasse de faience blanche, sans soucoupe, avec une anse.
+Elle est ebrechee au bord, sur 1,5 cm, et l'eclat a ete POLI : quelqu'un a
+use l'arete coupante a la pierre pour pouvoir continuer a boire dedans.
+Sur le flanc, un motif imprime : trois petites fleurs bleues.
+Il en manque une. La faience est usee a cet endroit — la troisieme fleur a
+disparu sous le pouce. Trente ans de pouce au meme endroit.
+La tasse est posee sur la table, l'anse tournee vers l'exterieur.
+[OBL] Toujours vers l'exterieur. Jamais vers Mireille.
+A cote, une deuxieme tasse. Identique. Meme faience, memes fleurs.
+Celle-la a ses trois fleurs intactes.
+Elle est retournee, posee a l'envers sur la table.
+Elle est seche a l'intérieur. Elle n'a pas servi depuis longtemps.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 900 pour les deux tasses (450 chacune).
+[OBL] La zone usee (troisieme fleur) : masque de texture + une legere
+depression de 0,3 mm en geometrie. La faience s'use : elle ne se raye pas,
+elle se creuse.
+L'eclat poli : geometrie, avec un changement de roughness (0,52 sur
+l'eclat poli contre 0,08 sur l'email intact).
+Shader `faience_glazed` : un email avec du craquellement fin (masque 4K)
+et un SSS tres court (la faience est translucide sur 1 mm).
+Anim : MIR-ANI-604 — Mireille tourne sa tasse de 90 degres avant chaque
+gorgee. [OBL] 64 occurrences dans le chapitre. Toujours dans le meme sens
+(horaire). Toujours exactement 90 degres.
+Le the : liquide dans la tasse, niveau qui baisse reellement au fil de la
+conversation (8 gorgees, 8 niveaux). [OBL] Pas de reset.
+
+§ 3 — CE QUE CA DIT
+Mireille boit dans une tasse ebrechee qu'elle a poncee pour pouvoir
+continuer a s'en servir.
+Le geste humain : poncer l'eclat d'une tasse cassee au lieu de la jeter.
+La troisieme fleur effacee par le pouce : trente ans.
+La deuxieme tasse, retournee, identique, intacte : il y avait quelqu'un
+d'autre.
+[OBL] Le jeu ne dit jamais qui. Ce n'est pas Esteban. Ce n'est pas un
+enfant. [OBL] Aucune information, jamais.
+Mireille ne la retourne pas pour Lohen. [OBL] Quand elle sert le the a
+Lohen, elle utilise un VERRE, pris ailleurs. La deuxieme tasse reste
+retournee pendant toute la sequence 4.
+
+§ 4 — ECHO
+ECHO E14 — « Deux tasses » — 17 secondes, mode C (sonore, sans visuel).
+[OBL] Rien n'apparait. La lumiere ne change pas. Aucune silhouette.
+Ce qu'on entend, dans la reverb de 3,4 s de la rotonde :
+  — le bruit d'une theiere qu'on pose (a 1 s)
+  — du liquide verse, deux fois (a 3 s et 6 s)
+  — deux tasses reposees sur une table, l'une apres l'autre (9 s, 10 s)
+  — et puis rien pendant 5 secondes
+  — a 15 s : une seule tasse soulevee. Une seule gorgee. Reposee.
+  — fin.
+[OBL] Zero voix. Zero mot. Zero musique. Zero respiration.
+[ART] Dix-sept secondes de vaisselle. C'est le plus petit Echo du jeu et
+c'est celui que les testeurs citent le plus.
+Le point : on verse deux tasses, et une seule est bue. Chaque jour.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+La table de Mireille est au fond de la rotonde, hors de l'eau, sur une
+estrade de planches qu'elle a construite pour se tenir au sec.
+[OBL] E14 n'est declenchable QUE si Mireille n'est pas a la table. Elle
+s'absente une fois pendant la sequence, pendant 3 minutes, pour aller
+chercher quelque chose (MIR-SCE-071). C'est la fenetre.
+Si le joueur ne declenche pas E14 pendant ces 3 minutes, il ne le verra
+jamais. Taux de decouverte cible : 34-45 %.
+[OBL] Aucune indication. Mireille ne dit pas ou elle va. Elle se leve et
+elle part.
+[OBL] Quand elle revient, si l'Echo a eu lieu, elle ne remarque rien. Aucun
+dialogue alternatif. Aucune reaction. Rien du tout.
+
+§ 6 — AUDIO
+SFX(faience_table_set) : la tasse reposee. [OBL] Un son parfait, sec,
+clair, avec 3,4 s de queue de reverb. Enregistre avec une vraie tasse de
+faience sur une vraie table de bois, dans une vraie rotonde si possible.
+SFX(tea_pour) : le the verse. Le niveau sonore change avec le remplissage
+(la note monte). [OBL] Physique reelle, 8 variantes pour 8 niveaux.
+SFX(cup_turn_ceramic) : le quart de tour de MIR-ANI-604, 64 fois dans le
+chapitre. -29 dB, un frottement minuscule.
+[ART] Le joueur l'entendra 64 fois en 50 minutes. A la dixieme, il
+l'attendra. A la trentieme, il le comptera peut-etre.
+Aucune musique pendant E14. M16 s'arrete 2 s avant et reprend 8 s apres.
+
+§ 7 — INTERDICTIONS
+Interdit de : retourner la deuxieme tasse · l'utiliser · reveler a qui elle
+appartenait · faire boire Lohen dans une tasse · casser une tasse · faire
+tourner la tasse dans l'autre sens · varier l'angle de rotation · faire
+reagir Mireille a E14 · ajouter une voix a E14 · ajouter de la musique ·
+rendre E14 rejouable · signaler la fenetre de 3 minutes.
+
+§ 8 — LIENS
+PN-082 (la theiere et le rechaud, a 40 cm). PN-085 (la chaise face au
+casier 4). MIR-ANI-604 (le quart de tour, 64 fois).
+PN-140 (les chaussures rangees cote a cote, S8) : l'autre paire d'objets
+du chapitre qui dit deux personnes.
+[THEME] DEUX. [THEME] LES GESTES QUI RESTENT QUAND LA RAISON EST PARTIE.
+
+§ 9 — DOD
+[ ] Eclat poli en geometrie, roughness 0,52 contre 0,08
+[ ] Troisieme fleur effacee, depression de 0,3 mm
+[ ] Deuxieme tasse intacte, retournee, seche, jamais utilisee
+[ ] Lohen boit dans un verre, jamais dans la deuxieme tasse
+[ ] MIR-ANI-604 : 64 fois, horaire, 90 degres exactement
+[ ] Niveau de the decroissant sur 8 gorgees, sans reset
+[ ] E14 : 17 s, uniquement du son de vaisselle, zero voix, zero musique
+[ ] Fenetre de 3 minutes non signalee ; aucune reaction au retour

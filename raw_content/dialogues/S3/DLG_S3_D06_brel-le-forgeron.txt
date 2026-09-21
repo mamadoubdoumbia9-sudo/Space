@@ -1,0 +1,174 @@
+===============================================================================
+DLG · S3 · D06 — BREL, LE FORGERON : 34 LIGNES CONTRE UN MARTEAU
+34 entrees, toutes S3. BRE 24 · LOH 10. Contribution : 34.
+Role BRE : 74 lignes au total (S3 + S7). Ici : 24 + les 5 de D05 + 2 de S2
++ 1 de D02 = 32 ; les 42 restantes sont en S7 (D06 de S7) et en barks.
+Prop : PN-044 (l'enclume et les 60 anneaux de relayeur).
+===============================================================================
+
+--- LE PERSONNAGE ---------------------------------------------------------------
+
+Brel a 51 ans. Il forge des crochets, des anneaux, des charnieres. Il a
+forge la moitie des 60 anneaux du Marche ; Lohen a pose ceux qu'il a
+forges. Ils se connaissent par les objets, pas par les mots.
+
+[OBL] REGLE DE SCENE : le marteau ne s'arrete JAMAIS pendant que Brel
+parle, sauf trois fois, notees. La VO ne duck pas le marteau. Le joueur
+doit parfois se rapprocher pour entendre. Il n'y a pas de sous-titre plus
+grand, pas de « appuyez pour repeter ». On entend mal un forgeron. C'est
+tout.
+
+[NAR] Brel repond toujours a cote et il a toujours raison. C'est sa
+mecanique de personnage, etablie des S2_BK_L079 (« Y'a plus personne dans
+rien »). Elle ne varie pas en 74 lignes.
+
+--- LES 34 LIGNES -----------------------------------------------------------------
+
+    [S3_LOH_L176]  LOHEN · 1,3 s · poli · p0,5
+        « Vos anneaux tiennent toujours. »
+
+    [S3_BRE_L177]  BREL · 1,8 s · plat · p0,6
+        « Les anneaux tiennent. C'est les gens qui lachent. »
+
+    [S3_LOH_L178]  LOHEN · 1,1 s · plat · p0,5
+        « J'en ai pose trente. »
+
+    [S3_BRE_L179]  BREL · 2,2 s · plat · p0,7
+        « J'en ai forge soixante. Y'a trente qui servent a personne. »
+
+    [S3_LOH_L180]  LOHEN · 1,6 s · plat · p0,6
+        « Ils servent a moi. »
+
+    [S3_BRE_L181]  BREL · 2,4 s · sec · p0,8
+        « Toi t'es personne, en ce moment. »
+        dir : [OBL] ce n'est pas une insulte. Brel veut dire : tu n'es
+              plus en fonction, tu n'as plus de tournee. Lohen le prend
+              comme ce que c'est. [OBL] Aucune option pour se vexer.
+
+    [S3_BRE_L182]  BREL · 2,0 s · plat · p0,5
+        « Assieds-toi si tu restes. Debout tu me fais de l'ombre. »
+
+    [S3_BRE_L183]  BREL · 2,7 s · plat · p0,6
+        « Trois ans que je forge des crochets et des grappins. Avant je
+          forgeais des ancres. »
+
+    [S3_BRE_L184]  BREL · 1,9 s · plat · p0,7
+        « Une ancre ca sert quand on veut s'arreter. Personne veut
+          s'arreter. »
+
+    [S3_LOH_L185]  LOHEN · 1,4 s · plat · p0,5
+        « Tallec en a une, d'ancre. »
+
+    [S3_BRE_L186]  BREL · 2,3 s · plat · p0,9
+        « Je sais. C'est moi. En 'zero-neuf. »
+        dir : [OBL] RACCORD PN-046. L'ancre que Tallec donnera a Lohen
+              a ete forgee par Brel. Le jeu le dit ici, une fois, avant
+              que Lohen la recoive — ou apres, selon l'ordre du joueur.
+              Aucune reaction differente dans les deux cas.
+
+    [S3_BRE_L187]  BREL · 2,8 s · plat · p0,5
+        « Il l'a portee pendant quinze ans a la ceinture. Ca fait un
+          creux dans le cuir. »
+
+    [S3_LOH_L188]  LOHEN · 1,2 s · plat · p0,6
+        « Vous forgez encore des ancres ? »
+
+    [S3_BRE_L189]  BREL · 1,5 s · sec · p0,8
+        « Non. »
+        dir : [OBL] 1er des 3 arrets du marteau. 1,8 s de silence. Puis
+              il reprend, plus fort de 2 dB pendant 6 s.
+
+    [S3_BRE_L190]  BREL · 2,6 s · plat · p0,6
+        « Je descends ramasser du verre le matin. Six heures. Six
+          hommes. »
+
+    [S3_LOH_L191]  LOHEN · 1,8 s · plat · p0,5
+        « Je vous ai entendu, ce matin. »
+
+    [S3_BRE_L192]  BREL · 2,1 s · plat · p0,7
+        « Alors c'etait toi, le type sur le verre. »
+        dir : [OBL][NAR] RACCORD S2. Il l'a vu. Il n'est pas descendu
+              l'aider quand L'Hirondelle a lache. Il ne s'en excuse pas
+              et le jeu ne lui en fait pas le reproche.
+
+    [S3_BRE_L193]  BREL · 2,4 s · plat · p0,6
+        « On descend pas quand ca craque. On compte les tetes apres. »
+
+    [S3_LOH_L194]  LOHEN · 1,0 s · plat · p0,7
+        « Vous en avez compte six. »
+
+    [S3_BRE_L195]  BREL · 1,7 s · plat · p0,9
+        « Toujours six. »
+        dir : [OBL] il ne dit pas « sept avec toi ». Lohen n'est pas
+              des leurs. Rien ne le souligne.
+
+    [S3_BRE_L196]  BREL · 2,9 s · plat · p0,5
+        « Le verre, ca se vend. Les fenetres du Marche, c'est de la
+          Maree fondue. »
+
+    [S3_LOH_L197]  LOHEN · 1,3 s · plat · p0,8
+        « Ca vous derange pas ? »
+
+    [S3_BRE_L198]  BREL · 2,2 s · sec · p1,2
+        « Si. »
+        dir : [OBL] 2e arret du marteau, 2,4 s. La reponse honnete la
+              plus courte du chapitre. Il n'ajoute rien. Il reprend.
+
+    [S3_BRE_L199]  BREL · 2,5 s · plat · p0,6
+        « Ma fille est vitrier. Elle sait pas d'ou vient sa marchandise.
+          Je lui dirai jamais. »
+
+    [S3_BRE_L200]  BREL · 2,0 s · plat · p0,7
+        « Tu lui diras pas non plus. »
+
+    [S3_LOH_L201]  LOHEN · 0,8 s · plat · p0,6
+        « Non. »
+
+    [S3_BRE_L202]  BREL · 2,7 s · plat · p0,5
+        « Bien. Alors tu peux rester. »
+
+    [S3_BRE_L203]  BREL · 2,3 s · plat · p0,6
+        « Le grand roux, avant que tu demandes. »
+        dir : [OBL] Brel aborde Esteban de lui-meme. Le joueur n'a pas
+              pose la question. Aucune option ne le permettait ici.
+
+    [S3_BRE_L204]  BREL · 3,1 s · plat · p0,7
+        « Il venait me chercher du fil de fer. Du fin. Pour les
+          cloches. »
+
+    [S3_BRE_L205]  BREL · 2,6 s · plat · p0,8
+        « Il payait jamais tout de suite et il payait toujours. »
+
+    [S3_LOH_L206]  LOHEN · 1,5 s · plat · p0,9
+        « Il vous doit quelque chose ? »
+
+    [S3_BRE_L207]  BREL · 2,2 s · plat · p1,6
+        « Trois metres de fil fin. »
+        dir : [OBL] 3e et dernier arret du marteau, 3,2 s — le plus
+              long. Il ne regarde pas Lohen. Il regarde son feu.
+
+    [S3_BRE_L208]  BREL · 2,8 s · plat · p0,0
+        « Si tu le trouves, tu lui dis. Trois metres. »
+        dir : [OBL][NAR] Brel sait qu'Esteban est mort. Tout le Marche
+              le sait. Il dit « si tu le trouves » parce qu'il a vu la
+              tete de Lohen et qu'il a decide de lui laisser ca.
+              [OBL] Aucun personnage ne dira jamais a Lohen
+              qu'Esteban est mort. Pas une fois en 3 h 30. C'est la
+              regle la plus stricte du chapitre apres celle de l'ambre.
+              Le joueur, lui, le sait depuis S2. Il porte ca tout seul
+              pendant deux heures et demie. C'est ca, le jeu.
+
+    [S3_LOH_L209]  LOHEN · 1,1 s · plat · p0,0
+        « Trois metres. »
+        dir : il le repete pour ne pas l'oublier. Un homme qui ne sait
+              pas ecrire retient en repetant. [OBL] Il ne le notera
+              nulle part. Le joueur non plus : il n'y a pas de carnet
+              de quete.
+
+--- CHECKLIST ----------------------------------------------------------------------
+
+[ ] Marteau jamais ducke ; 3 arrets exactement (L189, L198, L207)
+[ ] Brel a forge l'ancre de Tallec (raccord PN-046), dit une fois
+[ ] Brel a vu Lohen sur le verre et n'est pas descendu
+[ ] Personne ne dit jamais a Lohen qu'Esteban est mort — CI `no-death-told`
+[ ] L209 : aucune trace ecrite, aucun carnet

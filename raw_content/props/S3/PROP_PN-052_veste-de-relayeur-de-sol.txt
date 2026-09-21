@@ -1,0 +1,108 @@
+===============================================================================
+PN-052 — LA VESTE DE RELAYEUR EN LAMBEAUX DE SOL
+===============================================================================
+Asset : SM_S3_Veste_Sol · S3, portee par Sol, premiere rencontre, niveau 2
+· ~02:42 · prop narratif porte par un personnage ·
+1 DES 3 PROPS COMMENTES PAR UN PERSONNAGE · pas d'Echo · LOD0 4 100 tris
+
+§ 1 — CE QU'ON VOIT
+Sol a 13 ans, pieds nus, et porte une veste d'adulte beaucoup trop grande.
+C'est une VESTE DE RELAYEUR. La meme que celle de Lohen. Meme coupe, meme
+toile, memes deux poches de poitrine, meme col.
+Elle est en lambeaux. Les manches ont ete coupees au couteau, de travers,
+et s'effilochent. Le bas est dechire sur 30 cm. Il manque trois boutons sur
+cinq. Le dos a un trou de la taille d'un poing, borde de fils.
+Elle est sale d'une salete ancienne et incrustee, pas d'une salete de boue.
+Sur la poitrine gauche, a l'endroit ou Lohen porte son matricule brode
+« 0114 », il y a un rectangle de toile plus foncee.
+Le matricule a ete arrache. On voit les trous des points de couture.
+Il reste deux fils.
+[OBL] Sur Sol, la veste descend jusqu'aux genoux.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 4 100. [OBL] Asset PERSONNAGE, skinne sur le squelette de Sol, avec
+cloth simule sur les pans du bas (4 os de jiggle, pas de solver complet).
+Textures : atlas 4K dedie. La toile est le MEME materiau de base que la
+veste de Lohen (partage d'atlas), avec un masque de degradation par-dessus.
+[OBL] Le joueur doit pouvoir reconnaitre que c'est la meme veste. La
+comparaison se fait a l'oeil, en jeu, quand Sol et Lohen sont dans le meme
+plan. Verifier sur 6 plans de la scene de rencontre.
+Les manches coupees : geometrie effilochee, 340 tris de fils individuels
+sur les deux bords.
+Le rectangle du matricule arrache : decal 3 x 8 cm, avec 14 trous de
+couture modelises (0,5 mm) et deux fils de 2 cm en geometrie.
+Shader `fabric_ruined` : trois couches de salete (ancienne, moyenne,
+recente) + un masque d'usure aux points de frottement.
+
+§ 3 — CE QUE CA DIT
+Sol porte la veste d'un relayeur adulte, dont le matricule a ete arrache.
+[OBL] Le jeu ne dit JAMAIS a qui elle appartenait. Trois lectures possibles,
+aucune confirmee, aucune exclue :
+  — son pere ou sa mere etait relayeur
+  — Sol l'a trouvee
+  — Sol l'a prise sur quelqu'un
+Le geste humain : arracher un matricule. Ce n'est pas Sol qui l'a fait —
+les trous sont anciens, la toile a vieilli autour. C'est quelqu'un d'autre,
+il y a longtemps. Le matricule a ete retire avant que Sol ne porte la veste.
+Les manches coupees, elles, sont recentes et faites au couteau par un
+enfant : le trait est de travers et il a fallu s'y reprendre.
+
+§ 4 — ECHO
+NEANT. [OBL] Objet porte par un vivant (PN-046) ET objet d'enfant (PN-007).
+Double interdiction.
+
+§ 5 — MISE EN SCENE
+[OBL] C'est l'une des TROIS SEULES fois du chapitre ou un personnage
+commente un prop.
+La replique, SOL-DLG-472, arrive dans la premiere minute de la rencontre,
+sans que Lohen ait rien demande. Sol la dit vite, en detournant le regard,
+comme on repond a une question qu'on redoute :
+    « C'est pas volee. »
+    (silence de 2,1 s — SOL-ANI-455)
+    « Je dis ca parce que vous avez la meme. »
+[OBL] Trois lignes. Lohen ne repond pas. [OBL] Il n'y a AUCUNE option de
+dialogue. Le joueur ne peut pas poser de question sur la veste, ni
+maintenant, ni jamais.
+Lohen ne la regarde pas. LOH-ANI-231 : il continue de regarder Sol au
+visage, sans baisser les yeux vers la poitrine. [OBL] Ce refus de regarder
+le matricule absent est un point de mise en scene obligatoire, joue image
+par image.
+La rencontre a lieu au niveau 2, sur une passerelle etroite. Sol bloque le
+passage. Il ne bouge pas. Lohen ne peut pas passer.
+
+§ 6 — AUDIO
+SFX(fabric_ruined_movement) : la veste de Sol fait un bruit different de
+celle de Lohen — plus sec, plus papier, parce que la toile a durci.
+[OBL] Deux jeux d'echantillons distincts, 12 variations chacun. Quand les
+deux personnages bougent dans le meme plan, on entend deux vestes.
+Pendant SOL-DLG-472 : aucune musique. [OBL] M15 « Sol » ne commence qu'apres
+la troisieme replique de Lohen, soit 40 secondes plus tard.
+Le silence de 2,1 s entre les deux phrases de Sol est un vrai silence :
+pas de vent monte, pas d'ambiance renforcee, rien.
+
+§ 7 — INTERDICTIONS
+Interdit de : reveler a qui appartenait la veste · permettre au joueur de
+poser une question · faire regarder Lohen le matricule absent · faire
+commenter une deuxieme fois · retrouver le matricule arrache · donner un
+matricule a Sol · faire porter la veste par Lohen · la reparer · l'enlever
+a Sol avant PN-147 · ajouter de la musique sur la replique.
+[OBL] Sol garde cette veste jusqu'a la fin du chapitre. En S8, Lohen pose
+SA veste 0114 par-dessus (PN-147). Sol en porte alors deux.
+
+§ 8 — LIENS
+PN-147 (la veste 0114 posee sur Sol, S8) — la fin du chapitre 1. Le
+matricule que Sol n'a pas, Lohen le lui donne, sans un mot, pendant qu'il
+dort.
+PN-018 (le jeton 0114). PN-042 (l'anneau de relayeur 12). PN-048 (la
+sacoche). SOL-DLG-498 (« le chien s'appelait Pomme »).
+[THEME] PORTER POUR LES AUTRES. [THEME] LE MATRICULE QUI PASSE.
+
+§ 9 — DOD
+[ ] Meme toile de base que la veste de Lohen, reconnaissable a l'oeil
+[ ] Manches coupees au couteau, de travers, effilochage en geometrie
+[ ] Rectangle du matricule : 14 trous de couture, 2 fils restants
+[ ] Trous anciens (toile vieillie autour), coupes de manches recentes
+[ ] SOL-DLG-472 : 3 lignes, silence reel de 2,1 s, aucune reponse possible
+[ ] LOH-ANI-231 : Lohen ne baisse jamais les yeux, verifie image par image
+[ ] Deux jeux de sons de tissu distincts, audibles dans le meme plan
+[ ] M15 absente pendant 40 s apres la rencontre

@@ -1,0 +1,86 @@
+===============================================================================
+DLG · S1 · D08 — LA SORTIE PAR LE TOIT : LE JOUEUR REGARDE EN HAUT
+10 lignes · LOH 4 / PAL 4 / ECH 2 · fin de sequence, 00:26
+Reference maitre : 09.10 « premiere fois que le joueur regarde vers le haut
+et comprend que c'est LA le jeu ».
+Anim : CIN-203 (7 s), LOH-CLB-060..066.
+===============================================================================
+
+--- CONTEXTE -------------------------------------------------------------------
+
+Lohen atteint le toit du Registre. La brume se leve de 40 m d'un coup
+(evenement meteo scripte, 11 s de transition, aucune coupe). Au-dessus
+de lui : Velmora entiere, sept terrasses, et tout en haut, a 212 m, le
+Phare de Saint-Ambre. Eteint.
+
+[OBL] Aucune musique pendant la levee de brume. M02 « La verticale » ne
+demarre qu'APRES la derniere ligne du document, sur le premier pas de
+Lohen vers l'escalier. Onze secondes de ville muette, c'est tout ce
+qu'il faut.
+
+--- LES 10 LIGNES --------------------------------------------------------------
+
+    [S1_LOH_L103]  LOHEN · 1,1 s · essouffle · p1,6
+        « Voila. »
+        dir : il arrive sur le toit, plie en deux, mains sur les genoux.
+              Il dit « voila » a la toiture, pas a la vue : il ne l'a pas
+              encore vue.
+
+    [S1_ECH_L104]  CLOCHE (non-voix) · 3,4 s · — · p0,0
+        dir : [OBL] ce n'est pas une ligne de dialogue mais elle porte un
+              id car elle est dans la timeline VO pour le ducking : une
+              cloche de Saint-Ambre, tres loin, desaccordee d'un quart de
+              ton. Elle sonne une fois. [NAR] Elle est desaccordee parce
+              que l'accordeur est mort. Personne ne le dira.
+              Elle ne compte PAS dans les 2 840 (ce n'est pas une voix) :
+              elle est listee ici pour l'integration. Voir § comptage.
+
+    [S1_LOH_L105]  LOHEN · 0,8 s · fige · p2,2
+        « Oh. »
+        dir : il s'est redresse. C'est tout. Une syllabe pour la plus
+              grande image du jeu jusque-la. Pause de 2,2 s : la plus
+              longue du document, ecrite, obligatoire.
+
+    [S1_PAL_L106]  PALLAS (off, en bas) · 1,7 s · plat · p0,5
+        « Tu la vois ? »
+        dir : elle est restee au pied de l'echelle. Voix a 9 m, en
+              contrebas, filtre de distance, pas de reverb ajoutee.
+
+    [S1_LOH_L107]  LOHEN · 1,0 s · plat · p0,6
+        « Je la vois. »
+
+    [S1_PAL_L108]  PALLAS (off) · 2,4 s · plat · p0,8
+        « Tout le monde la regarde une fois par an. Moi c'est fait, pour
+          cette annee. »
+
+    [S1_LOH_L109]  LOHEN · 1,3 s · plat · p0,5
+        « Elle n'est pas allumee. »
+        dir : [OBL] premiere mention du Phare eteint. Le mot « Phare »
+              n'est pas prononce. Il dit « elle », pour la lampe.
+
+    [S1_PAL_L110]  PALLAS (off) · 2,8 s · sec · p0,9
+        « Elle n'a jamais ete allumee, petit. Pas une fois en deux cents
+          ans. »
+        dir : [OBL][NAR] C'est le canon absolu : le Phare n'a JAMAIS ete
+              allume. Interdit 21.08. Cette ligne est la source. Aucun
+              dialogue, aucun prop, aucune cinematique ne peut la
+              contredire. Le job CI `no-lighthouse` grep le mot
+              « rallumer » dans tout `content/` et echoue s'il le trouve.
+
+    [S1_LOH_L111]  LOHEN · 1,5 s · plat · p0,7
+        « Alors pourquoi ils l'ont construite. »
+        dir : ce n'est pas une question. Pas d'intonation montante.
+
+    [S1_PAL_L112]  PALLAS (off) · 2,6 s · plat · p0,0
+        « Pour qu'on sache ou est le haut. »
+        dir : derniere ligne de Pallas en S1. Elle ne reapparait qu'en
+              S3 (4 lignes) puis en S7 (48 lignes, et ce n'est plus la
+              meme femme). M02 demarre sur le pas suivant de Lohen.
+
+--- CHECKLIST ------------------------------------------------------------------
+
+[ ] 11 s de levee de brume sans musique, sans coupe
+[ ] L105 : une syllabe, pause 2,2 s
+[ ] L110 : canon du Phare jamais allume, CI `no-lighthouse` actif
+[ ] L104 : cloche desaccordee d'un quart de ton, mesurable
+[ ] M02 ne demarre pas avant le pas post-L112

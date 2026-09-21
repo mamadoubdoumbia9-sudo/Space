@@ -1,0 +1,106 @@
+===============================================================================
+PN-057 — LE BRASERO COMMUNAL
+===============================================================================
+Asset : SM_S3_Brasero · S3, place du niveau 1, au croisement de quatre
+passerelles · ~02:16 · prop narratif · pas d'Echo · LOD0 2 600 tris
+
+§ 1 — CE QU'ON VOIT
+Un brasero fait d'un demi-fut de 200 litres, coupe a la meule, perce de
+trous d'aeration, pose sur trois pieds de fer soudes.
+Il est plein de cendre. Jusqu'au bord. Trois ans de cendre tassee par la
+pluie, qui a pris en croute grise et fendue.
+Dedans, dans la cendre : des choses qui n'ont pas brule. Des charnieres.
+Des clous. Une boucle de ceinture. Une monture de lunettes tordue. Le
+squelette metallique d'un parapluie. Trois cuillers. Des dizaines d'oeillets
+de chaussures.
+Autour du brasero, au sol : SEPT chaises. Sept chaises differentes,
+depareillees, tirees d'un peu partout, disposees en cercle irregulier.
+Elles sont toutes tournees vers le feu.
+Six sont a distance normale du brasero — entre 70 cm et 1 m.
+La septieme est a 2,40 m. En retrait. Hors du cercle. Tournee vers le feu
+quand meme.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 600 (brasero 700 + cendre 300 + 7 chaises a 220 en moyenne).
+[OBL] Les 7 chaises sont 7 modeles DIFFERENTS : une chaise de cuisine, un
+tabouret, une chaise d'eglise a prie-dieu, une chaise de jardin en fer, une
+caisse, un fauteuil crevé, une chaise d'enfant rehaussee par un annuaire.
+Aucune ne se ressemble. Elles viennent de sept maisons.
+La cendre : mesh sculpte avec croute fendue, shader `ash_crusted`.
+Les 23 objets metalliques dedans : meshes individuels, partiellement
+enfouis, places a la main.
+Anim : NEANT. Rien ne bouge. Le brasero est froid depuis longtemps.
+Collision : boites. Non deplacables, non assis.
+
+§ 3 — CE QUE CA DIT
+Apres la Maree, les gens qui restaient se sont reunis autour d'un feu.
+Ils ont apporte chacun une chaise de chez eux.
+Ils ont brule ce qu'ils avaient — des meubles, des affaires, des choses
+avec des charnieres et des boucles et des montures de lunettes.
+Le geste humain : apporter sa propre chaise a un feu commun.
+[NAR] Sept chaises. Il ne restait pas des centaines de personnes. Il en
+restait sept, ou moins.
+La septieme chaise, a 2,40 m, en retrait : quelqu'un venait, mais s'asseyait
+plus loin. Tous les soirs, probablement. Assez pres pour etre la, assez
+loin pour ne pas etre avec.
+[OBL] Le jeu ne dit pas qui. Il ne le dira jamais.
+Et puis le feu s'est eteint, et personne ne l'a rallume, et la pluie a
+tasse la cendre pendant trois ans.
+
+§ 4 — ECHO
+NEANT. Geste d'apres (PN-015). [OBL] Et c'est ici que la regle fait le plus
+mal : c'est la seule image de COMMUNAUTE du chapitre, le seul moment ou
+des gens de Velmora ont ete ensemble, et le systeme ne peut pas la montrer.
+Le joueur voit sept chaises vides autour d'une cendre froide.
+[ART] S'il y avait un Echo ici, ce serait le plus beau du jeu. C'est
+exactement pourquoi il n'y en a pas.
+
+§ 5 — MISE EN SCENE
+Au croisement de quatre passerelles, sur la seule vraie place du Marche,
+6 x 6 m. [OBL] Incontournable : tous les itineraires passent par la.
+Le joueur traverse le cercle de chaises. Il marche entre elles.
+[ART] Traverser un cercle de chaises vides tournees vers un feu eteint, en
+allant ailleurs, sans s'arreter, parce qu'on cherche quelqu'un.
+[OBL] Aucun cadrage, aucun LookAt, aucun ralenti, aucun prompt.
+La septieme chaise est sur le trajet naturel : le joueur passe a cote
+d'elle avant d'atteindre le cercle. Il la voit de dos d'abord.
+Lumiere : la place est le point le plus ouvert de S3, donc le plus clair.
+Les sept chaises projettent sept ombres longues vers le nord.
+
+§ 6 — AUDIO
+NEANT propre. Le brasero est muet. Les chaises sont muettes.
+[OBL] Le vent traverse la place sans rien faire sonner. Verifier qu'aucun
+emetteur de vent-dans-un-objet n'est place ici.
+M10 « Le marche » joue normalement, sans modification. [OBL] Aucun
+traitement special. C'est le seul lieu majeur de S3 sans aucune
+signalisation sonore.
+
+§ 7 — INTERDICTIONS
+Interdit de : rallumer le feu · s'asseoir · deplacer une chaise · fouiller
+la cendre · prendre un objet · identifier les 23 objets · expliquer la
+septieme chaise · nommer qui que ce soit · donner un Echo · ajouter une
+huitieme chaise · ajouter de la musique · ajouter un son · faire commenter
+Lohen, Tallec ou Sol · faire apparaitre le brasero allume dans un souvenir,
+une cinematique ou une des six lettres suivantes.
+
+§ 8 — LIENS
+PN-045 (le poele de Tallec : le seul feu vivant du chapitre, a 10 minutes
+d'ici, et il ne chauffe qu'un homme).
+PN-036 (les seaux en cercle, S2) : un cercle pour une personne. Ici, un
+cercle pour sept. [OBL] Jamais relies.
+PN-060 (la chaise vide du barbier). PN-124 (le banc a deux creux, S7).
+[THEME] LES GESTES D'APRES. [THEME] SEPT.
+[NAR] Le chiffre sept traverse le projet : sept lettres, sept chaises,
+sept coups de marteau (PN-043), sept tours de fil de fer (PN-007), sept
+lignes effacees (PN-013), sept seaux (PN-036), sept peignes (PN-053).
+[OBL] Ce n'est jamais un systeme, jamais une enigme, jamais un code.
+Personne ne le remarque dans le jeu. Aucune recompense. C'est une texture.
+
+§ 9 — DOD
+[ ] 7 chaises de 7 modeles totalement differents, provenances distinctes
+[ ] Septieme chaise a 2,40 m, en retrait, tournee vers le feu
+[ ] 23 objets metalliques individuels, partiellement enfouis
+[ ] Cendre en croute fendue, tassee par la pluie
+[ ] Traversee obligatoire du cercle par tous les itineraires
+[ ] Zero son, zero emetteur de vent, zero traitement musical
+[ ] Aucun Echo, aucune image du brasero allume dans les 7 chapitres

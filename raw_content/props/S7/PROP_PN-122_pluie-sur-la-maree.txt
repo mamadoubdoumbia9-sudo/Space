@@ -1,0 +1,115 @@
+===============================================================================
+PN-122 — LA PLUIE SUR LA MAREE
+===============================================================================
+Asset : FX_S7_Pluie_Maree · S7, front de mer de la ville basse ·
+~05:47 · prop narratif ENVIRONNEMENTAL · pas d'Echo · 0 tris (VFX)
+
+§ 1 — CE QU'ON VOIT
+La rue basse debouche sur le front de mer. Le joueur retrouve la Maree,
+pour la premiere fois depuis S2, il y a 4 heures.
+Il pleut.
+Et la pluie tombe sur le verre.
+[OBL] Elle ne s'y enfonce pas. Elle ne l'eclabousse pas comme de l'eau.
+Elle frappe une surface parfaitement lisse, parfaitement dure, parfaitement
+plate, sur des kilometres.
+Chaque goutte rebondit. Elle produit une couronne de micro-gouttelettes
+qui retombent et glissent.
+Et l'eau s'accumule : il y a maintenant une pellicule de 4 mm d'eau de
+pluie sur toute la Maree, a perte de vue.
+[OBL] La Maree noire, recouverte de 4 mm d'eau claire, sous la pluie, la
+nuit.
+Elle est devenue un MIROIR. Un miroir de 4 kilometres.
+Et elle reflete le ciel noir, la ville, et le Phare.
+[OBL] C'est le seul moment du chapitre ou la Maree ressemble a de la mer.
+
+§ 2 — FICHE TECHNIQUE
+0 tris. Systeme de particules + shaders.
+[OBL] La pluie globale de S7 : 14 000 particules, GPU, avec un volume de
+suivi du joueur de 20 x 20 x 15 m.
+[OBL] Les impacts sur la Maree : un systeme SECONDAIRE de 2 400 impacts/s
+dans un rayon de 25 m, chacun produisant une couronne de 6 gouttelettes et
+une onde circulaire de 12 cm dans la pellicule de 4 mm.
+[OBL] Les ondes s'INTERFERENT. C'est le calcul le plus cher : une texture
+de hauteur 1024² mise a jour a 30 Hz, avec propagation et amortissement.
+Le resultat : une surface de 4 mm d'eau agitee par 2 400 impacts par
+seconde, qui reflete quand meme.
+Reflexion : planar, 1024 x 512, 20 Hz, avec distorsion par la normale de la
+texture de hauteur.
+Cout total : 2,4 ms. [OBL] LE PLUS CHER DU CHAPITRE. Il remplace le budget
+de 2,1 ms des lustres de S6, qui n'est plus charge.
+[OBL] Verification obligatoire sur Adreno 640 : 30 fps stables.
+
+§ 3 — CE QUE CA DIT
+Le geste humain : aucun.
+[OBL] Fonction : c'est la SEULE beaute gratuite de S7, et elle arrive apres
+l'atelier, apres le dossier, apres la lettre de Mireille, apres les Figures.
+[ART] Le joueur sort de 40 minutes de choses dures et il trouve quatre
+kilometres de miroir sous la pluie.
+[OBL] Et il y a le Phare dedans. Reflechi, a l'envers, dans l'eau, et il
+est ETEINT.
+[NAR] Le chapitre ne dit rien. C'est le dernier grand plan avant la montee.
+
+§ 4 — ECHO
+NEANT. [OBL] Sur la Maree (regle PN-011, absolue). Phenomene meteo.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur debouche d'une rue etroite et sombre sur un front de mer
+ouvert. La transition de champ de vision est brutale : de 6 m a 4 000 m.
+[ART] C'est la plus grande ouverture du chapitre.
+[OBL] Il n'y a pas de musique. M23 s'arrete a la sortie de la rue, en 4 s.
+[OBL] Il n'y a pas de plan scripte, pas de camera, pas de ralenti, pas de
+recadrage. Il sort d'une rue et il y a ca.
+[OBL] Lohen ne s'arrete pas. Aucun LOH-ACT, aucun LookAt.
+Le joueur peut marcher sur la Maree. [OBL] Il y a 4 mm d'eau : ses pas font
+des eclaboussures et des ondes qui se propagent sur 3 m et interferent avec
+la pluie.
+[ART] Il peut marcher dans un miroir de 4 kilometres et le casser a chaque
+pas.
+[OBL] Il n'y a rien sur la Maree. Aucun objet, aucun evenement, aucune
+Figure, aucun Echo. Il peut marcher 400 m et revenir.
+Le Phare est a 1,1 km. [OBL] Il ne peut PAS l'atteindre par la Maree : a
+300 m du bord, la brume tombe a 15 m de visibilite et il se perd (meme
+dispositif que PN-064). Il doit prendre le pont (PN-127).
+
+§ 6 — AUDIO
+[OBL] LE SON EST LE PROP.
+SFX(rain_on_glass_sheet) : la pluie sur le verre couvert de 4 mm d'eau.
+[OBL] C'est un son que personne n'a jamais entendu : ni de la pluie sur
+l'eau (trop mat), ni de la pluie sur du verre (trop sec). C'est entre les
+deux : une nappe dense, aigue, cristalline, avec une resonance de plaque.
+[OBL] Il faut le FABRIQUER : enregistrer de la pluie sur une plaque de
+verre recouverte de 4 mm d'eau, en exterieur, au sol, en quadriphonie.
+Niveau : -8 dB. [OBL] C'EST LE SON LE PLUS FORT DU CHAPITRE 1, plus fort
+que le four de E23 (-9 dB).
+[ART] Le joueur sort d'une rue et le monde devient bruyant.
+SFX(step_water_film_glass) : les pas dans 4 mm sur du verre. Un son unique,
+clair et liquide.
+[OBL] Aucune musique. Aucune. Pendant les 6 minutes du front de mer.
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter de la musique · ajouter un plan scripte · ajouter une
+Figure · ajouter un objet sur la Maree · allumer le Phare · faire cesser la
+pluie · reduire la pellicule a moins de 4 mm · desactiver l'interference
+des ondes · supprimer la reflexion · ajouter un arc-en-ciel, un eclair, un
+tonnerre [OBL — il n'y a AUCUN orage dans le chapitre : c'est une pluie
+regulière, sans vent, sans eclair, sans tonnerre] · permettre d'atteindre
+le Phare par la Maree.
+
+§ 8 — LIENS
+PN-023, PN-031, PN-033 (la Maree en S2) : le joueur la retrouve apres
+4 heures et elle est meconnaissable.
+PN-093 (la flaque miroir, S5). PN-102 (les miroirs). PN-100 (le parquet).
+PN-127 (le pont casse). PN-135 (la lentille de Fresnel, S8).
+PN-749 (le dernier plan du jeu : la Maree reflete un ciel bleu).
+[THEME] IL FAUT UNE BELLE CHOSE — S7. [THEME] LA MER QUI MANQUE.
+
+§ 9 — DOD
+[ ] Pellicule de 4 mm sur toute la Maree visible
+[ ] 2 400 impacts/s dans 25 m, couronnes de 6 gouttelettes, ondes de 12 cm
+[ ] Interference des ondes, texture de hauteur 1024² a 30 Hz
+[ ] Planar reflection 1024x512 a 20 Hz, distordue par la hauteur
+[ ] Son fabrique par enregistrement reel sur plaque de verre + 4 mm d'eau
+[ ] -8 dB : son le plus fort du chapitre
+[ ] Zero musique pendant 6 minutes
+[ ] Zero orage, zero eclair, zero tonnerre, zero vent
+[ ] 2,4 ms, 30 fps stables sur Adreno 640

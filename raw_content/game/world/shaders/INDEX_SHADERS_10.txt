@@ -1,0 +1,112 @@
+================================================================================
+  LOHEN — LES SEPT LETTRES DE VELMORA
+  ANNEXE D — LES 10 SHADERS SIGNATURE — INDEX ET CLOTURE
+  Reference maitre : LOHEN_PROMPT_MASTER.txt, BLOC 05.D (05.16 -> 05.26)
+  Phase de production : 21.04 phase D, jalon « D4 Les 10 shaders signature »
+================================================================================
+
+AVERTISSEMENT TECHNIQUE
+  Les shaders de Godot ne s'ecrivent PAS en GDScript. Ils s'ecrivent en Godot
+  Shading Language, extension `.gdshader`, langage derive du GLSL ES 3.0.
+  Le master l'impose lui-meme en 05.16 : ecrits a la main, VisualShader
+  interdit. Les fichiers GDScript livres ici sont les CONTROLEURS que certains
+  shaders exigent (buffers persistants, pools, reconstruction de mesh,
+  bindings d'uniforms) — ils ne remplacent pas le code de shader, ils le
+  pilotent.
+
+CIBLE
+  Godot 4.4.1 · Forward Mobile · Vulkan · arm64-v8a · Adreno 620 et superieur.
+  Plafond par materiau : 90 instructions ALU. Zero branche dynamique.
+  Pas de SSR, pas de GI temps reel, pas de volumetrique natif.
+
+--------------------------------------------------------------------------------
+  LES DIX
+--------------------------------------------------------------------------------
+
+  #   FICHIER                        LIGNES  BUDGET ALU / SAMPLES   MASTER
+  01  maree_glass.gdshader             206   84 / 6                 05.17
+  02  figure_body.gdshader             126   71 / 4                 05.18
+  03  echo_reveal.gdshader             108   58 / 3 + depth         05.19
+  04  stone_wet.gdshader               144   77 / 10                05.20
+  05  cloth_lohen.gdshader             101   64 / 5                 05.21
+  06  fog_volumetric_cheap.gdshader    120   43 par slice / 1       05.22
+  07  letter_paper.gdshader            142   51 / 4                 05.23
+  08  grapple_cable.gdshader           105   27 / 1                 05.24
+  09  skybox_velmora.gdshader          189   96 / 5                 05.25
+  10  water_shallow.gdshader            80   29 / 3                 05.26
+
+  COMPAGNONS ET VARIANTES (exiges par le master, non comptes dans les 10)
+      glass_cheap.gdshader              52   31 / 2      mode Heritage, 02.03
+      figure_core.gdshader              51   22 / 1      coeur interne 0.82
+      memory_person.gdshader            67   19 / 0      silhouettes d'Echo
+      _controllers/ripple_stamp.gdshader 20   7 / 0      accumulation du buffer
+
+  TOTAL : 14 fichiers `.gdshader`, 1 511 lignes.
+
+--------------------------------------------------------------------------------
+  CONTROLEURS GDSCRIPT — `_controllers/`
+--------------------------------------------------------------------------------
+
+  maree_ripple_buffer.gd     119 l.  buffer 256x256 par zone, CLEAR_MODE_NEVER,
+                                     aucune decroissance. CI `ripple-persistent`.
+  echo_history_buffer.gd     107 l.  anneau de 6 frames de retard, rituel 2,44 s
+                                     fige. CI `ritual-duration`, `no-echo-on-letter`.
+  grapple_cable_mesh.gd      116 l.  ImmediateMesh, catenaire 32 segments,
+                                     portee 22 m -> 18 m apres S7. CI `cable-splice-s8`.
+  figure_shatter_pool.gd     108 l.  47 fragments preinstancies, montee du coeur
+                                     comme unique tell. CI `fragments-47`, `no-parry-ui`.
+  stone_wet_zone.gd           66 l.  seuils 12 m / 30 m, contraste d'interaction
+                                     clampe a 0.22. CI `waterline-12-30`, `no-outline`.
+  lighthouse_handoff.gd       65 l.  raccord skybox / geometrie a 400 m.
+                                     CI `lighthouse-seam`, `lighthouse-dark`.
+  fog_zone_driver.gd          71 l.  MultiMesh de 12 slices, courbe de densite,
+                                     plan a 150 m en S8. CI `fog-plane-s8`.
+
+  TOTAL : 7 fichiers GDScript, 652 lignes.
+
+--------------------------------------------------------------------------------
+  OUTIL DE VERIFICATION
+--------------------------------------------------------------------------------
+
+  tools/amber_guard.py --scan-shaders
+      Ne compile rien (Godot n'est pas requis dans la CI de relecture).
+      Verifie les regles que le master impose et qu'une relecture distraite
+      casse en silence :
+
+        amber-guard        #FFA33C hors materiaux d'Esteban -> echec
+        no-visual-shader   aucun .tres de VisualShader
+        no-ssr             aucune reflexion ecran
+        no-outline         aucun contour d'interaction (09.21)
+        waterline-12-30    seuils d'humidite intacts
+        budget-declared    chaque shader annonce son budget
+        lighthouse-dark    le Phare ne s'allume pas (21.08)
+        ritual-duration    2,44 s, une seule source dans le depot
+        ripple-persistent  aucune decroissance du buffer de rides
+        fragments-47       47 fragments, zero instanciation en combat
+
+      Etat au dernier passage : ANNEXE D — 10/10 SHADERS CONFORMES.
+
+--------------------------------------------------------------------------------
+  CE QUE CES DIX FICHIERS PORTENT, ET QUI N'EST JAMAIS DIT
+--------------------------------------------------------------------------------
+
+  01  Les rides gravees dans le verre ne partent jamais. C'est la seule trace
+      que Lohen laisse dans Velmora, et il ne la regarde pas.
+  02  La Figure n'a pas de barre de vie. Elle a un coeur qui remonte.
+  03  En S8, le rituel s'execute entierement et ne produit rien.
+  04  La ligne d'humidite a 12 m est le niveau de l'eau d'avant. Personne
+      n'en parle.
+  05  La veste se salit selon l'avancement. Personne ne le commente.
+  06  A 150 m, la brume passe sous le joueur et Velmora disparait.
+  07  La tache de 9 mm n'est jamais expliquee. La derniere ligne est plus
+      serree parce qu'il n'a pas voulu prendre une autre feuille.
+  08  Apres S7 le cable est plus court de quatre metres. Le joueur ne l'a
+      jamais mesure.
+  09  Le Phare est visible depuis 100 % des zones exterieures. Il ne s'allume
+      pas.
+  10  Les deux flaques de la salle de bal sont sous les deux seules fenetres
+      qu'Esteban n'a pas fermees.
+
+================================================================================
+  ANNEXE D CLOSE. 10 shaders signature + 4 compagnons + 7 controleurs + 1 outil.
+================================================================================

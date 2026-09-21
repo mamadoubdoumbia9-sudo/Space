@@ -1,0 +1,89 @@
+===============================================================================
+PN-028 — LES BOUEES ALIGNEES SUR LE PONT
+===============================================================================
+Asset : SM_S2_Bouees_Pont · S2, pont arriere de L'Hirondelle · ~01:24 ·
+prop narratif · pas d'Echo · LOD0 3 600 tris
+
+§ 1 — CE QU'ON VOIT
+Onze bouees spheriques de peche, en verre souffle vert bouteille, dans leur
+filin de chanvre, de 28 a 40 cm de diametre.
+Elles sont dans un rateau de bois, contre la lisse tribord, maintenues par
+une barre transversale. Elles n'ont pas bouge malgre les 23 degres.
+Elles sont INTACTES. Onze spheres de verre souffle, sur un bateau qui s'est
+couche a 23 degres en neuf secondes, et pas une n'est cassee.
+Elles sont recouvertes d'un depot de sel blanc, qui a pris dans les mailles
+du filin et dessine un reseau blanc sur le vert.
+La douzieme place du rateau est vide.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 600 (11 spheres a 180 tris + filins en geometrie 1 400 + rateau 220).
+[OBL] Verre souffle : shader `blown_glass_green`, transmission 0,72,
+IOR 1,51, avec des BULLES et des irregularites d'epaisseur modelisees dans
+la normal map. Le verre souffle a la bouche n'est jamais regulier.
+Les 11 spheres ont 11 variantes de bulles differentes.
+Le depot de sel : masque procedural contraint par une carte d'AO — le sel
+se depose dans les creux et sous les filins, jamais sur les bombes exposees.
+Anim : NEANT. Aucune. Elles sont bloquees par la barre.
+Collision : boite unique sur le rateau. Non prenables.
+
+§ 3 — CE QUE CA DIT
+Le verre n'a pas casse.
+[NAR] C'est un objet-these. Le joueur a passe une heure trente a marcher
+sur du verre qui a englouti une ville. Ici, onze petites boules de verre,
+fragiles, soufflees a la bouche par un artisan, ont survecu intactes a la
+catastrophe qui a solidifie la mer.
+Le jeu ne commente pas. Mais c'est la premiere apparition du VERRE COMME
+METIER, et c'est ce qui prepare tout S7 : Anselme Roux, le Verrier.
+La douzieme place vide : une bouee a ete prise, un jour, avant. Par qui,
+pourquoi, quand — rien.
+Le geste humain : ranger onze bouees dans un rateau et mettre la barre.
+
+§ 4 — ECHO
+NEANT. Objet collectif de travail (cf. PN-016).
+[ART] Mais c'est un faux positif de deuxieme categorie : le verre, dans ce
+jeu, est CHARGE. Le joueur qui approche s'attend a quelque chose. Il n'y a
+rien. C'est le troisieme des sept faux positifs du chapitre.
+
+§ 5 — MISE EN SCENE
+Sur le pont arriere, en plein jour blanc, sous le portique.
+[ART] C'est le seul endroit du chapitre ou la lumiere TRAVERSE quelque
+chose et en ressort coloree. Onze taches vertes tremblantes sur la tole
+grise du pont, a 23 degres.
+C'est la premiere couleur transmise du jeu. Elle dure 40 secondes de marche.
+Le joueur passe a travers les taches vertes. Elles se deplacent sur lui.
+[OBL] Verifier que le shading du personnage recoit bien ces projections
+(light cookies ou shadow-mapped translucency selon le budget ; si le budget
+mobile ne permet pas la vraie transmission, une projection texturee animee
+est acceptee, MAIS elle doit etre calee sur la position reelle du soleil).
+
+§ 6 — AUDIO
+SFX(glass_float_chime) : si le joueur frole le rateau, deux bouees se
+touchent. Un son de verre TRES pur, clair, une seule note, qui resonne 2,4 s.
+[OBL] C'est le son le plus beau du chapitre et il est gratuit : aucune
+recompense, aucun declencheur narratif, rien. Le joueur peut le refaire.
+-16 dB. Il porte loin sur le pont vide.
+[ART] Statistique visee : 78 % des testeurs le refont au moins deux fois.
+Ce son reviendra en S7, joue par le Verrier, et le joueur le reconnaitra
+sans savoir d'ou.
+
+§ 7 — INTERDICTIONS
+Interdit de : casser une bouee · permettre d'en prendre une · en ajouter une
+douzieme · expliquer la place vide · donner un Echo · faire rouler les
+bouees · ajouter un son de verre ailleurs dans S1 ou S2 (ce timbre est
+reserve, et sa deuxieme occurrence est en S7) · colorer autre chose en vert
+transmis dans le chapitre.
+
+§ 8 — LIENS
+PN-118 (la canne de souffleur, S7). PN-119 (l'atelier d'Anselme Roux, S7).
+PN-034 (la cloche de brume : l'autre objet sonore du bateau, et l'oppose —
+grave, lourd, metallique).
+[THEME] LE VERRE COMME METIER, installe ici sans un mot, paye 2 heures plus
+tard. [THEME] CE QUI SURVIT.
+
+§ 9 — DOD
+[ ] 11 spheres, 11 variantes de bulles, aucune cassee
+[ ] Sel depose uniquement dans les creux et sous les filins (contrainte AO)
+[ ] 12e place vide, jamais expliquee
+[ ] Taches vertes projetees sur le pont ET sur le personnage, calees soleil
+[ ] glass_float_chime : note pure, 2,4 s de resonance, refaisable a l'infini
+[ ] Ce timbre n'existe nulle part ailleurs avant S7

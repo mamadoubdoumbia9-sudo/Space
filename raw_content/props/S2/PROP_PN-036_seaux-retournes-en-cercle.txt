@@ -1,0 +1,111 @@
+===============================================================================
+PN-036 — LES SEAUX RETOURNES EN CERCLE
+===============================================================================
+Asset : SM_S2_Seaux_Cercle · S2, pont avant de L'Hirondelle · ~01:28 ·
+prop narratif · pas d'Echo · LOD0 1 900 tris
+
+§ 1 — CE QU'ON VOIT
+Sept seaux de tole galvanisee, retournes, poses a l'envers sur le pont
+avant, disposes en CERCLE de 2,40 m de diametre.
+Ils sont regulierement espaces. Le cercle est presque parfait : quelqu'un
+l'a fait a l'oeil, sans mesurer, et s'est applique.
+[OBL] Malgre l'inclinaison de 23 degres, les seaux n'ont pas glisse : ils
+sont cales par un cordage tendu au ras du pont, qui passe derriere chacun,
+tendu entre deux taquets. Quelqu'un a pris le temps de les caler.
+Ce cordage est POSTERIEUR a la Maree. Le bateau etait deja incline.
+Au centre du cercle : rien. Le pont nu, tole peinte, un peu plus propre
+qu'ailleurs, comme si on s'y etait assis souvent.
+Sur le seau le plus au nord, gravees dans la tole a la pointe d'un couteau,
+quatre barres verticales et une barre en travers. Cinq.
+Sur le suivant, dans le sens horaire : cinq encore.
+Sur les sept seaux, en tout : trente-huit barres.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 900 (7 seaux a 240 tris + cordage 220).
+Les seaux : 3 variantes de modele, 7 rotations uniques, 7 etats de
+bosselure differents.
+[OBL] Les 38 barres sont GRAVEES EN GEOMETRIE (creux de 0,8 mm) et non
+texturees, et elles sont saisies a la main, une par une, avec des
+irregularites : certaines sont profondes, d'autres a peine, la derniere est
+incomplete. Le level artist compte 38. Le joueur aussi, s'il veut.
+Shader `galvanized_scratched`.
+Le cordage : 14 segments, tension visible, deux taquets.
+Collision : boites individuelles. [OBL] Les seaux ne sont ni prenables, ni
+retournables, ni deplacables. On ne regarde pas dessous. Jamais.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a vecu sur ce bateau, apres.
+Il a cale sept seaux en cercle, s'est assis au milieu, et a compte les
+jours. Trente-huit.
+Le geste humain : graver une barre par jour dans de la tole avec la pointe
+d'un couteau.
+Pourquoi un cercle ? On ne sait pas. Pour s'asseoir au milieu. Pour avoir
+quelque chose autour de soi. Pour faire une piece dans un endroit qui n'en
+a pas.
+[NAR] Trente-huit jours sur un chalutier incline a 23 degres, a neuf cents
+metres de la cote, sur une mer de verre.
+Et puis plus de barres. Il est parti, ou il s'est arrete de compter.
+Le pardessus plie sur la bitte (PN-032) est a 850 m d'ici, sur le chemin
+du retour, et il a six mois.
+[OBL] Le jeu ne relie JAMAIS les deux. Aucun dialogue, aucun indice, aucune
+confirmation. Ils sont dans la meme sequence, a vingt minutes d'intervalle.
+C'est tout ce que le joueur aura.
+
+§ 4 — ECHO
+NEANT. Geste d'apres la Maree (regle PN-015). Absolu.
+[ART] C'est le cinquieme faux positif du chapitre, et le plus cruel : un
+objet profondement personnel, charge, avec un compte des jours, et le
+systeme ne repond pas. Parce que le systeme ne montre que l'avant, et que
+cet homme-la n'existait pas avant. Il n'est venu qu'apres.
+
+§ 5 — MISE EN SCENE
+Sur le pont avant, qu'on atteint en sortant de la timonerie par la porte
+opposee. [OBL] Zone facultative : 30 % des joueurs ne feront pas le tour du
+bateau et ne verront jamais les seaux.
+Le cercle est vu d'en haut, depuis la passerelle, avant d'y descendre.
+[ART] De la passerelle, a 3 m au-dessus, le cercle est parfaitement lisible
+comme forme. En descendant sur le pont, on perd la forme et on gagne les
+gravures. Deux informations, deux points de vue, jamais les deux ensemble.
+Aucun eclairage particulier. Le jour blanc.
+Au centre, si Lohen s'y arrete : rien. Pas d'animation, pas de son, pas de
+camera. Le joueur peut s'asseoir ? Non. [OBL] Il n'y a pas de commande
+« s'asseoir » dans ce jeu. Il reste debout au milieu de sept seaux.
+
+§ 6 — AUDIO
+SFX(galvanized_hollow_tap) : si le joueur frole un seau du pied, un son de
+tole creuse, aigu, ridicule, qui resonne 0,8 s. [OBL] Le son est LEGER et
+presque comique. C'est voulu : rien n'est plus seul qu'un objet ridicule
+dans une scene grave.
+Le vent passe dans les seaux retournes : SFX(bucket_wind_hum), une note
+sourde, differente pour chaque seau (7 hauteurs), qui se declenche par
+rafales, 2 a 4 seaux a la fois. -26 dB.
+[ART] Sept notes basses qui chantent par intermittence. C'est le prop le
+plus musical du chapitre et il n'y a aucune musique dessus.
+[OBL] Les 7 hauteurs forment un accord qui n'est PAS le motif d'Esteban.
+Verifier explicitement : aucune combinaison de ces 7 notes ne doit produire
+LA-DO-MI-RE-LA, meme partiellement, meme dans le desordre.
+
+§ 7 — INTERDICTIONS
+Interdit de : retourner un seau · montrer ce qu'il y a dessous · permettre
+de s'asseoir · ajouter un feu, une casserole, un abri, des provisions (rien
+d'autre que les sept seaux) · compter autrement que 38 · relier a PN-032 ·
+nommer l'homme · le faire apparaitre · donner un Echo · ajouter de la
+musique · produire le motif d'Esteban avec les notes de vent.
+
+§ 8 — LIENS
+PN-032 (le pardessus plie, 850 m, jamais relie). PN-029 (la gamelle de
+Mousse, 12 m). PN-020 (la croix). PN-022 (la mezzanine du hangar, S1 :
+quelqu'un d'autre a vecu quelque part, lui aussi).
+[THEME] LE JOUEUR N'EST PAS LE PREMIER. [THEME] LES GESTES D'APRES.
+[NAR] Trois personnes, dans le chapitre 1, sont venues a Velmora apres la
+Maree et y ont vecu seules : celle de la mezzanine (PN-022), celle des
+seaux (PN-036), celle du pardessus (PN-032). Le jeu n'affirme jamais
+qu'elles sont trois. Ni qu'elles sont une.
+
+§ 9 — DOD
+[ ] 7 seaux, cercle de 2,40 m fait a l'oeil, cales par un cordage tendu
+[ ] 38 barres gravees en geometrie, saisies a la main, la derniere inachevee
+[ ] Cordage manifestement posterieur (bateau deja incline)
+[ ] Forme lisible d'en haut, gravures lisibles d'en bas, jamais les deux
+[ ] 7 notes de vent distinctes, ne produisant jamais LA-DO-MI-RE-LA
+[ ] Aucun seau retournable, aucun contenu, aucune assise

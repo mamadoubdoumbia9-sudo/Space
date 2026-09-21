@@ -1,0 +1,97 @@
+===============================================================================
+PN-082 — LA THEIERE ET LE RECHAUD
+===============================================================================
+Asset : SM_S4_Theiere_Rechaud · S4, table de Mireille · ~03:29 ·
+prop narratif · pas d'Echo · LOD0 1 700 tris
+
+§ 1 — CE QU'ON VOIT
+Une theiere de fonte emaillee, noire, 1,2 litre, posee sur un rechaud a
+alcool en laiton.
+Le rechaud brule. Une flamme bleue, basse, silencieuse.
+La theiere est cabossee en trois endroits. Le couvercle ne ferme pas bien :
+il repose de travers, et il manque son bouton — il a ete remplace par une
+vis a bois enfoncee dans le trou et un bout de liege enfile dessus.
+Le bec verse mal. Il y a une trainee brune permanente sur le flanc, sous le
+bec, cuite par la chaleur en une couche vernie.
+A cote du rechaud : une boite de fer-blanc, ouverte. Dedans, du the. Il en
+reste un fond.
+[OBL] Deux centimetres. Pas plus. Elle en a pour trois semaines.
+A cote de la boite : une petite balance de cuisine a deux plateaux, avec ses
+poids. Elle pese son the.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 700 (theiere 700 + rechaud 400 + boite 200 + balance 400).
+La flamme d'alcool : [OBL] un cas particulier. Une flamme d'alcool est
+BLEUE, presque invisible en plein jour, sans suie, sans vacillement fort.
+OmniLight de 2,2 cm de rayon, teinte (0.28, 0.55, 1.00), intensite faible,
+flicker 4 %.
+[OBL] Elle ne produit presque pas de lumiere. Ce n'est pas une source
+d'eclairage : c'est un detail. Verifier qu'elle n'eclaire pas le visage de
+Mireille.
+La trainee cuite sous le bec : masque de texture + 0,3 mm de relief.
+Le liege sur la vis : 40 tris.
+La balance : plateaux mobiles, [OBL] en equilibre, legerement oscillants
+(0,5 mm, 0,3 Hz) — le seul objet de la table qui bouge en permanence.
+Anim : MIR-ANI-628, le service du the. 8 occurrences dans la sequence.
+
+§ 3 — CE QUE CA DIT
+Mireille fait du the. Elle le pese.
+Le geste humain : peser son the a la balance de cuisine parce qu'il en
+reste deux centimetres dans une boite.
+[OBL] Elle en sert a Lohen. C'est le premier geste d'hospitalite du
+chapitre, a 3 h 29, et il lui coute quelque chose de reel.
+[OBL] Le jeu ne le souligne jamais. Elle ne dit pas « c'est mon dernier
+the ». Elle le pese devant lui, elle le verse, elle ne commente pas.
+Le joueur qui voit la boite comprend. Le joueur qui ne la voit pas boit du
+the.
+[NAR] Elle pese pour Lohen la meme quantite que pour elle. Exactement.
+[OBL] MIR-ANI-628 : elle fait deux pesees identiques, avec les memes poids,
+sans hesiter.
+
+§ 4 — ECHO
+NEANT. Objet d'une vivante (PN-046).
+
+§ 5 — MISE EN SCENE
+Sur la table, entre eux, pendant 50 minutes.
+[ART] La flamme bleue est le seul element vivant et chaud de la piece — et
+elle est bleue, donc froide a l'oeil. Le jeu refuse meme cette consolation.
+[OBL] Le rechaud brule pendant toute la sequence. Il ne s'eteint pas. Il
+n'a pas besoin d'etre rallume. Quand Lohen part, il brule encore.
+Quand le joueur revient en S7, Mireille n'est plus la et le rechaud est
+eteint. [OBL] La boite de the est vide.
+Aucun prompt, aucune interaction, aucun LookAt.
+
+§ 6 — AUDIO
+SFX(alcohol_flame_hiss) : le rechaud. Un souffle continu, tres bas
+(-36 dB), sans crepitement. [OBL] Une flamme d'alcool ne crepite pas.
+SFX(cast_iron_tick) : la theiere qui chauffe, un tic metallique toutes les
+20-60 s.
+SFX(tea_pour) : partage avec PN-070, 8 niveaux.
+SFX(balance_pan_tick) : les plateaux de la balance qui s'equilibrent. Un son
+minuscule, deux fois par pesee, 16 fois dans la sequence.
+[OBL] Dans la reverb de 3,4 s, ces petits sons de table portent dans toute
+la rotonde. Le joueur, meme a 15 m, entend Mireille faire du the.
+
+§ 7 — INTERDICTIONS
+Interdit de : eteindre le rechaud pendant S4 · vider la boite de the ·
+faire commenter la quantite restante · faire refuser Lohen · lui faire
+remercier [OBL — aucun remerciement dans le chapitre, cf. PN-046] ·
+donner du the a un autre personnage · remplir la boite · reparer la
+theiere · faire crepiter la flamme d'alcool · l'utiliser comme source
+d'eclairage · donner un Echo.
+
+§ 8 — LIENS
+PN-070 (les deux tasses, E14). PN-085 (la chaise). PN-090 (la reserve de
+nourriture de Sol, S5) : l'autre stock qui s'epuise.
+PN-045 (le poele de Tallec) : l'autre feu entretenu.
+PN-146 (la reserve de provisions, S8).
+[THEME] CE QUI RESTE EN QUANTITE FINIE. [THEME] DONNER CE QU'ON N'A PLUS.
+
+§ 9 — DOD
+[ ] Flamme d'alcool bleue, sans suie, sans crepitement, n'eclaire rien
+[ ] 2 cm de the dans la boite, jamais commente
+[ ] Balance a deux plateaux, oscillation permanente de 0,5 mm
+[ ] Deux pesees identiques pour Lohen et pour elle, sans hesitation
+[ ] Rechaud allume pendant toute S4, eteint et boite vide en S7
+[ ] Sons de table audibles a 15 m dans la reverb de 3,4 s
+[ ] Aucun remerciement, aucun commentaire, aucune option

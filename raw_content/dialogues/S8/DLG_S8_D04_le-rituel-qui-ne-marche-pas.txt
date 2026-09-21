@@ -1,0 +1,155 @@
+===============================================================================
+DLG · S8 · D04 — LE RITUEL QUI NE MARCHE PAS : 2,44 s POUR RIEN
+26 entrees, toutes S8. LOH 26. Contribution : 26.
+Reference maitre 19.06 (l'interaction) et 19.07 (« IL N'Y A PAS D'ECHO »).
+[OBL] C'est la mecanique la plus importante du jeu et elle consiste a ne
+rien produire.
+===============================================================================
+
+--- LE DISPOSITIF [OBL] ---------------------------------------------------------------------------
+
+[OBL] 19.06 : le prompt qui apparait sur la feuille pliee n'est pas
+« Prendre », n'est pas « Lire ». [OBL] C'EST LE GLYPHE DE L'ECHO. Le
+meme depuis 3 h 30, identique au pixel.
+
+[OBL] Pourquoi : Lohen ne sait pas que c'est une lettre. Il voit un
+objet sous une pierre. Il fait ce qu'il fait toujours.
+
+[OBL] SEQUENCE EXACTE, non modifiable :
+  1. Il enleve ses gants. Geste L1, 31e et derniere fois du chapitre
+     (11.03). [OBL] Les gants qu'il enleve sont LES SIENS ; ceux
+     d'Esteban sont deja dans sa main gauche depuis S6. [OBL] Il tient
+     donc deux paires de gants, et le jeu ne le mentionne jamais.
+     Job CI `two-gloves-frame` : verification visuelle a la frame 41.
+  2. Il essuie sa paume sur sa cuisse. Geste L4.
+  3. Il pose la main.
+  4. [OBL] 2,40 SECONDES. PAS UNE DE PLUS. [OBL] Exactement la meme
+     duree que les 30 autres. [OBL] Interdit absolu d'allonger, de
+     ralentir, d'ajouter un souffle, une respiration, un battement de
+     coeur, un filtre, une vignette, un flou. [OBL] Job CI
+     `ritual-duration` : hash de la courbe d'animation compare aux 30
+     autres occurrences. Toute divergence casse le build.
+  5. [OBL] IL N'Y A PAS D'ECHO (19.07). Rien. Pas de post-process, pas
+     de fantome, pas de son, pas de saturation, pas de voix.
+  6. [OBL] 3,5 SECONDES DE SILENCE. Le joueur, conditionne trente fois,
+     attend. [OBL] Aucune indication. Aucun prompt. Aucun son.
+  7. Lohen ouvre les yeux. Il regarde ce qu'il a dans la main.
+     C'est du papier.
+  8. Anim `unfold_letter`, 4,1 s, 3 plis, tremblement de 2 mm a 7 Hz
+     active SEULEMENT sur la troisieme seconde.
+
+[OBL] CE QUE CE DISPOSITIF FAIT AU JOUEUR : il a appris pendant trois
+heures et demie que poser la main sur un objet fait revenir les morts.
+[OBL] Ici, ca ne marche pas. [OBL] Et la raison est dans la lettre, dix
+minutes plus tard : « Ne me cherche plus dans les objets, mon amour. Je
+n'y suis pas. » [OBL] LE JEU A REPONDU AVANT D'ETRE INTERROGE.
+[OBL] Aucun personnage, aucune note, aucun tutoriel ne fera jamais ce
+rapprochement. Job CI `no-ritual-explainer`.
+
+--- § 1 — AVANT LE GESTE (10 lignes) ---------------------------------------------------------------
+
+    [S8_LOH_L155]  2,0 s · bas · « Y'a une feuille sous la pierre. »
+    [S8_LOH_L156]  2,4 s · bas · « Pliee en trois. »
+    [S8_LOH_L157]  1,8 s · bas · « Y'a quelque chose d'ecrit sur le pli. »
+    [S8_LOH_L158]  2,6 s · bas · « Quatre chiffres. »
+    [S8_LOH_L159]  2,2 s · bas · « Zero, un, un, quatre. »
+        dir : [OBL][NAR] DEUXIEME FOIS QU'IL LIT SON MATRICULE DANS
+              CETTE PIECE (L124). [OBL] Direction : identique. Chiffre
+              par chiffre. Aucune emotion ajoutee. [OBL] Aucune
+              musique. Aucun plan. [OBL] 20.02 : « Sur le pli
+              exterieur, seul, au centre : 0114. »
+    [S8_LOH_L160]  2,8 s · bas · « C'est moi, ca. »
+    [S8_LOH_L161]  2,0 s · bas · « C'est pour moi. »
+    [S8_LOH_L162]  2,4 s · bas · « Ou c'est une fiche de service. »
+        dir : [OBL][NAR] IL SE PROTEGE. [OBL] Deuxieme echappatoire du
+              document precedent (L133). [OBL] Un homme a qui personne
+              n'ecrit jamais (la lettre : « des mains qui portent le
+              courrier de toute une ville et qui ne recoivent jamais
+              rien ») vient d'envisager que la seule lettre a son nom
+              soit un formulaire. [OBL] Ne jamais commenter.
+    [S8_LOH_L163]  1,6 s · bas · « Bon. »
+    [S8_LOH_L164]  2,2 s · bas · « Je pose la main. »
+        dir : [OBL] IL ANNONCE LE GESTE. [OBL] C'est la seule fois des
+              31 rituels ou il l'annonce. [OBL] Direction : comme on se
+              donne du courage pour une formalite.
+
+--- § 2 — LE GESTE (6 entrees, dont 4 sans VO) ------------------------------------------------------
+
+    [S8_LOH_L165]  0,0 s · — · (slot sans VO)
+        dir : [OBL] Geste L1 : il enleve ses gants. 1,9 s. 31e fois.
+              [OBL] Il tient maintenant deux paires. Jamais dit.
+    [S8_LOH_L166]  0,0 s · — · (slot sans VO)
+        dir : [OBL] Geste L4 : il essuie sa paume sur sa cuisse. 0,8 s.
+    [S8_LOH_L167]  0,0 s · — · (slot sans VO)
+        dir : [OBL] LE RITUEL. 2,40 s. [OBL] Identique aux 30 autres.
+              CI `ritual-duration`.
+    [S8_LOH_L168]  0,0 s · — · (slot sans VO)
+        dir : [OBL] LE RIEN. 3,5 s. [OBL] Silence complet. Le vent et
+              la lampe continuent : ils ne sont pas coupes, parce que
+              les couper serait un effet. [OBL] Interdit.
+    [S8_LOH_L169]  1,4 s · bas · « Rien. »
+        dir : [OBL][NAR] UN MOT. [OBL] Direction : plat. Ce n'est pas
+              de la deception, c'est un constat de technicien.
+              [OBL] Prise refusee si elle est jouee triste.
+              [OBL] Le joueur, lui, ressent la deception a sa place.
+              C'est tout le principe : le jeu delegue l'emotion au
+              joueur et l'interdit au personnage.
+    [S8_LOH_L170]  2,0 s · bas · « C'est du papier. »
+        dir : [OBL] il ouvre les yeux et regarde sa main.
+
+--- § 3 — APRES LE RIEN (10 lignes) -----------------------------------------------------------------
+
+    [S8_LOH_L171]  2,4 s · bas · « Ca a pas marche. »
+    [S8_LOH_L172]  2,8 s · bas · « Ca marche pas sur tout, je le sais depuis ce matin. »
+        dir : [OBL] IL SE TROMPE SUR LA RAISON. [OBL] Il croit que
+              c'est un rate technique. [OBL] Rappel : sur les 31 objets
+              du chapitre, TOUS ont donne quelque chose. Il n'y a
+              jamais eu d'echec. [OBL] Lohen invente un precedent qui
+              n'existe pas, pour ne pas avoir a penser autre chose.
+              [OBL] Job CI `no-failed-echo` : aucun objet du chapitre
+              ne produit un rituel sterile, sauf celui-ci.
+    [S8_LOH_L173]  2,0 s · bas · « Bon. »
+    [S8_LOH_L174]  2,6 s · bas · « Alors je lis. »
+    [S8_LOH_L175]  2,2 s · bas · « Enfin. J'essaye. »
+        dir : [OBL][NAR] IL SAIT QU'IL VA MAL LIRE. [OBL] Et il va
+              quand meme lire une lettre de trois pages, debout, dans
+              une chambre de six metres, a 212 m, a l'aube.
+              [OBL] Rappel : dans la lecture (19.08), c'est LA VOIX
+              D'ESTEBAN qu'on entend, pas Lohen. [OBL] Le joueur
+              entendra donc la lettre PARFAITEMENT, pendant que le
+              personnage la dechiffre mal. [OBL] Cette asymetrie n'est
+              jamais expliquee et c'est le choix de mise en scene le
+              plus important du chapitre.
+    [S8_LOH_L176]  1,8 s · bas · « Je deplie. »
+    [S8_LOH_L177]  0,0 s · — · (slot sans VO)
+        dir : [OBL] Anim `unfold_letter`, 4,1 s, faite a la main,
+              3 plis. [OBL] Tremblement 2 mm / 7 Hz, active SEULEMENT
+              sur la troisieme seconde. [OBL] Interdit de l'activer
+              plus tot ou plus longtemps.
+    [S8_LOH_L178]  2,4 s · bas · « Y'a une tache en haut a gauche. »
+        dir : [OBL] 20.02 : une tache circulaire de 9 mm. Le joueur
+              peut zoomer. [OBL] C'est une goutte. Elle est seche.
+              [OBL] JAMAIS EXPLIQUEE. [OBL] Interdit absolu : aucun
+              chapitre, aucun document, aucune interview.
+    [S8_LOH_L179]  2,0 s · bas · « Et trois mots sont barres. »
+        dir : [OBL] 20.02 : trois mots ratures et reecrits, les ratures
+              LISIBLES. [OBL] Le joueur peut zoomer et lire les
+              versions abandonnees. [OBL] Elles sont dans le master,
+              pas ici.
+    [S8_LOH_L180]  2,8 s · bas · « La derniere ligne est ecrite plus petit. »
+        dir : [OBL] 20.02 : il n'avait plus de place, et il n'a pas
+              voulu prendre une autre feuille. [OBL] Lohen constate la
+              taille des lettres avant de lire un seul mot. [OBL] C'est
+              ce qu'il sait faire : lire les objets.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] Le prompt est le glyphe de l'Echo, identique au pixel
+[ ] 2,40 s exactement — CI `ritual-duration` par hash de courbe
+[ ] Rien ne se passe, 3,5 s de silence, vent et lampe non coupes
+[ ] L169 : « Rien. » jouee plat, prise refusee sinon
+[ ] Deux paires de gants en main, jamais mentionne — CI `two-gloves-frame`
+[ ] Aucun autre rituel sterile dans le chapitre — CI `no-failed-echo`
+[ ] Aucun explicatif ne relie le rituel rate a la phrase de la lettre —
+    CI `no-ritual-explainer`
+[ ] La tache de 9 mm n'est jamais expliquee, nulle part

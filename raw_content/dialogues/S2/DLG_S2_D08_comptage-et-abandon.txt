@@ -1,0 +1,133 @@
+===============================================================================
+DLG · S2 · D08 — LES 16 LIGNES RESTANTES, COMPTAGE ET CLOTURE DE S2
+16 lignes · LOH 10 / ECH 6 · lignes diegetiques de toucher + comptage
+===============================================================================
+
+--- LES 10 LIGNES DIEGETIQUES DE TOUCHER SUR LE VERRE ----------------------------
+
+Meme regle qu'en S1 : toucher declenche, regarder jamais. Cooldown 90 s.
+[OBL] Toutes en (murm) ou `bas`.
+
+    [S2_LOH_L081]  LOHEN (murm) · 1,2 s · bas · p0,0
+        « Un cartable. »
+        dir : au-dessus d'un cartable pris a 40 cm sous la surface.
+              [OBL] Le jeu ne montre jamais de corps d'enfant. Il montre
+              des cartables, des chaussures (PN-063), des jouets. C'est
+              une regle de decence et c'est aussi plus efficace.
+
+    [S2_LOH_L082]  LOHEN (murm) · 1,0 s · bas · p0,0
+        « Encore une. »
+        dir : sur la 2e des 4 horloges de rue prises dans le verre.
+              [OBL] Les quatre indiquent 23h41. Le joueur peut le
+              verifier. Aucun personnage ne le fera remarquer, jamais.
+
+    [S2_LOH_L083]  LOHEN (murm) · 1,7 s · bas · p0,0
+        « Elles sont toutes a la meme heure. »
+        dir : sur la 4e horloge SEULEMENT, et seulement si le joueur a
+              touche les trois autres. 6 % des joueurs. C'est la seule
+              recompense de l'observation dans S2, et c'est une phrase.
+
+    [S2_LOH_L084]  LOHEN (murm) · 1,3 s · bas · p0,0
+        « Ca, ca se ramasse pas. »
+        dir : sur un tas de verre concasse laisse par les ramasseurs.
+
+    [S2_LOH_L085]  LOHEN (murm) · 1,1 s · plat · p0,0
+        « Bonjour. »
+        dir : [OBL] declenchee en touchant le verre juste au-dessus d'une
+              silhouette humaine identifiable. Il dit bonjour. Une fois.
+              Jamais plus, quel que soit le nombre de silhouettes
+              touchees ensuite. Aucune musique, aucun effet.
+
+    [S2_LOH_L086]  LOHEN (murm) · 1,9 s · bas · p0,0
+        « Il manque une chaussure. »
+        dir : sur une paire depareillee. Rappel silencieux de S1_LOH_L094
+              (la botte orpheline). Motif du chapitre : les paires
+              incompletes. Il court jusqu'a PN-063 en S5.
+
+    [S2_LOH_L087]  LOHEN (murm) · 1,4 s · bas · p0,0
+        « Nickel, ce verre. »
+        dir : amer, et pourtant marque `bas` et pas `amer` : le comedien
+              doit le dire platement. L'amertume est dans le mot, pas
+              dans la voix. C'est la regle de direction de tout le jeu.
+
+    [S2_LOH_L088]  LOHEN (murm) · 2,1 s · bas · p0,0
+        « Y'a un chien. »
+        dir : [NAR][OBL] Un chien est pris dans le verre, a 1,2 m de
+              profondeur, pres du quai nord. Il n'est PAS nomme. Ce
+              n'est pas Pomme (le chien de Sol est mort ailleurs, canon
+              S5). Un joueur fera le rapprochement en S5 et se trompera.
+              Le jeu ne corrige pas les joueurs.
+
+    [S2_LOH_L089]  LOHEN (murm) · 1,6 s · bas · p0,0
+        « Trois ans. »
+        dir : en touchant la coque de L'Hirondelle de l'exterieur, avant
+              d'entrer.
+
+    [S2_LOH_L090]  LOHEN (murm) · 1,2 s · retenu · p0,0
+        « Bon. »
+        dir : deuxieme toucher de la coque. Puis plus rien.
+
+--- LES 6 LIGNES DE E06, L'ECHO QU'ON PEUT RATER ----------------------------------
+
+E06 est declenche par une bouee de sauvetage a 34 m hors du chemin, dans
+une zone ou le verre est sur mais ou rien n'appelle. 28-34 % des joueurs
+le trouvent. Duree 31 s. Deux voix.
+
+    [S2_ECH_L091]  VIEIL HOMME · 2,4 s · plat · p0,5
+        « On la remplace tous les deux ans et elle sert jamais. »
+
+    [S2_ECH_L092]  JEUNE FEMME · 1,6 s · plat · p0,4
+        « Tant mieux, non ? »
+
+    [S2_ECH_L093]  VIEIL HOMME · 2,8 s · plat · p0,6
+        « C'est du gaspillage qui rend heureux. Y'en a pas tant. »
+
+    [S2_ECH_L094]  JEUNE FEMME · 1,9 s · doux · p0,5
+        « Vous devriez ecrire ca quelque part. »
+
+    [S2_ECH_L095]  VIEIL HOMME · 2,2 s · moqueur · p0,7
+        « Pour qui ? »
+
+    [S2_ECH_L096]  JEUNE FEMME · 1,4 s · doux · p0,0
+        « Pour vous. »
+        dir : dissolution. [OBL] C'est le seul Echo entierement gentil de
+              S2. Il est cache. Les joueurs qui fouillent trouvent de la
+              douceur ; ceux qui foncent trouvent le tramway et la
+              Figure. Le jeu recompense la curiosite par de la tendresse,
+              jamais par un objet.
+
+--- COMPTAGE DE LA SEQUENCE S2 ----------------------------------------------------
+
+    D01 descendre sur la Maree ................... 14
+    D02 le tramway ............................... 08
+    D03 Echo 03, la veste ........................ 16
+    D04 le choix a une seule option .............. 06
+    D05 les puits de chaleur ..................... 12
+    D06 Echo 05, la barre a fond ................. 14
+    D07 la premiere Figure ....................... 10
+    D08 lignes de toucher + Echo 06 .............. 16
+                                                -----
+    TOTAL S2 .................................... 96
+
+    Ids : S2_*_L001 a S2_*_L096, aucun trou, aucune variante.
+    Roles : LOH 43 · ECH 43 · BK 10 (dont Brel 2) · PAL 2 · EST 1
+    (S2_ECH_L021, inintelligible, comptee dans ECH pour le graphe et
+    dans EST pour le plan de studio — seule ligne du chapitre a double
+    imputation, declaree).
+    `tools/count_vo_lines.py --seq S2 --expect 96`.
+
+--- PAS DE LIGNES D'ABANDON EN S2 -------------------------------------------------
+
+[OBL] Aucun PNJ majeur ne parle a Lohen sur la Maree (Pallas s'arrete a la
+12e marche). Il n'y a donc aucune ligne d'abandon dans cette sequence.
+C'est note ici pour qu'un integrateur ne croie pas a un oubli.
+
+--- CHECKLIST S2 -------------------------------------------------------------------
+
+[ ] 96 lignes, aucune au-dessus de `bas` ou (murm)
+[ ] Les 4 horloges a 23h41, verifiables, jamais commentees par un PNJ
+[ ] L085 « Bonjour » : une seule fois dans toute la partie
+[ ] Le chien de L082/L088 n'est pas Pomme et rien ne le precise
+[ ] E06 cache, gentil, sans recompense materielle
+[ ] Zero ligne d'abandon, documente
+[ ] Le mot « Esteban » n'est toujours pas prononce (il le sera en S3)

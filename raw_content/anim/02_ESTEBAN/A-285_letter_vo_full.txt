@@ -1,0 +1,123 @@
+===============================================================================
+  A-285   letter_vo_full
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 285 / 744
+  Partie 2 — ESTEBAN
+  Categorie : ACTING / DIALOGUE
+  Fichier source  : A_Esteban_Act_letter_vo_full_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 250.000 s  (7500 frames a 30 fps)
+  Type .................. ONE-SHOT
+  Root motion ........... RM-NONE
+  Couche AnimationTree .. L0
+  Priorite .............. 100 — cinematique (verrouille tout) (bande 95-100, bareme 0.05)
+  Poids compresse cible . ~11500 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      buste, bras, mains, tete, machoire, blendshapes faciaux 60 fps
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006 (chaines de doigts dominantes sur ce clip)
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  ESTEBAN — 31 ans, accordeur de cloches. Plus grand que Lohen, roux.
+
+  Il ne tient pas en place. Il parle avec LES DEUX mains (Lohen n'en utilise
+  qu'une). Il est en avance sur le temps, jamais en retard. Gestes signature
+  : E1 il range sa meche et il RATE, E2 il sourit du cote gauche seulement,
+  E3 il tapote deux fois avant de parler serieusement. [OBL] Seul personnage
+  du jeu SANS REVERB, en toutes circonstances (11.06). [OBL] Aucun Echo ne
+  le montre, sauf E21.
+
+  Rig et costume :
+      gilet (cloth simule dans E21), crayon de charpentier derriere
+      l'oreille, carnet en poche de poitrine, montre
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  LA LETTRE (BLOC 20). Enregistree EN UNE PRISE, sans coupe, sans montage
+  (13.33). C'est le fichier le plus important du jeu. [OBL] Traitement audio
+  : AUCUN. Pas de reverb, pas de filtre, pas de compression de couleur.
+  Seche, proche, presente. La regle etablie depuis 3 heures (11.06 : la voix
+  d'Esteban est toujours mieux traitee que le reste du monde) paie ici. Le
+  clip est decoupe en 14 marqueurs synchronises au defilement pilote par le
+  joueur (19.08). Si le joueur s'arrete, la voix s'arrete AU MARQUEUR
+  SUIVANT, jamais au milieu d'un mot. Marqueurs et directions (extrait, voir
+  20.04 pour l'integral) : M01 « Lohen, » — puis 3 s de silence M04 «
+  ...comme si tu avais peur qu'on te reprenne le chemin » — la voix sourit.
+  M06 « Onze mois, Lohen. » — la seule fois ou il dit son prenom M08 «
+  ...capable de lire une chaise. » — ne PAS jouer la blague. La jouer comme
+  un fait. M10 « Tu as les mains sales. » — LA CLOCHE, 5 notes (19.09) M11 «
+  Ne me cherche plus dans les objets, mon amour. » — 2e et derniere
+  occurrence du mot « amour » du chapitre. Volume -2 dB. L'acteur ne doit
+  PAS l'appuyer. Surtout pas. M13 « Tu m'as trouve. » / « Tu peux la garder.
+  » — 2,5 s de silence entre les deux M14 « P.-S. — Tu es en retard de trois
+  ans. Je ne dirai rien au bureau. » — ton leger, presque enjoue. [NAR]
+  C'est ce qui casse le joueur. Les gens ne pleurent pas sur la tristesse,
+  ils pleurent sur la tendresse qui essaie de faire comme si. [OBL] SOURCE
+  UNIQUE DU TEXTE : BLOC 20.03 du document maitre. Aucune annexe, aucune
+  fiche, aucun fichier de localisation ne duplique ces phrases — elles
+  existent a un seul endroit du projet et sont lues depuis la piste
+  enregistree en une prise.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Clip ONE-SHOT : pas de contrainte de cyclage. La derniere frame
+  doit poser une silhouette blendable vers les etats de sortie.
+
+  Evenements de timeline :
+      piste faciale 60 fps · BREATH aux respirations ecrites · aucun son
+      ajoute qui ne soit pas dans la scene
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- idle de dialogue du personnage ; -> ligne suivante, ou idle
+      d'ecoute
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · clip de cinematique : verrouille toutes les autres couches
+      · les clauses [OBL] de la section 3 sont verifiees en revue, pas
+      seulement en lecture
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-285
+===============================================================================

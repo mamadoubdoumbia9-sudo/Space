@@ -1,0 +1,358 @@
+################################################################################
+#                                                                              #
+#   ANNEXE B — LES 147 PROPS NARRATIFS DE VELMORA                              #
+#   « LOHEN — LES SEPT LETTRES DE VELMORA » — CHAPITRE 1                       #
+#                                                                              #
+#   INDEX MAITRE + STANDARD DE FICHE                                           #
+#   Un document autonome par prop, dans /props/S<n>/                           #
+#   Reference : LOHEN_PROMPT_MASTER.txt, BLOC 06.24                            #
+#                                                                              #
+################################################################################
+
+
+===============================================================================
+0 — CE QU'EST UN PROP NARRATIF (ET CE QUE CE N'EST PAS)
+===============================================================================
+
+0.01 DEFINITION [OBL]
+     Un prop narratif est un objet fait a la main, unique dans tout le jeu,
+     place a un endroit precis, qui RACONTE QUELQUE CHOSE sans qu'aucun
+     personnage n'ait besoin de le commenter.
+     Il se distingue du prop de decor (kit modulaire, atlas partage,
+     instancie en MultiMesh) par trois criteres cumulatifs :
+       (a) il est unique — un seul exemplaire dans le chapitre ;
+       (b) il porte une information narrative qui n'existe nulle part
+           ailleurs ;
+       (c) le joueur peut s'en approcher a moins de 1,5 m et le regarder
+           sans que la densite de texel ne s'effondre (min. 256 px/m).
+
+0.02 CE QUE CE N'EST PAS
+     - Ce n'est pas un collectible. Aucun compteur. Aucun « 7/147 ».
+     - Ce n'est pas une note de lore ecrite. Sur 147 props, 11 seulement
+       portent du texte lisible. Les 136 autres racontent par la FORME,
+       la POSITION, l'USURE et le VOISINAGE.
+     - Ce n'est pas un objet a ramasser. 9 props seulement entrent dans
+       l'inventaire.
+     - Ce n'est pas decoratif. Si un prop ne dit rien, il retourne dans le
+       kit modulaire et perd son statut.
+
+0.03 LA REGLE DU PROP NARRATIF [OBL]
+     Un prop narratif repond a la question : « Qu'est-ce qu'un etre humain
+     a fait ici, et pourquoi ? »
+     Pas : « Qu'est-ce qui serait joli ici ? »
+     Test de validation : un level artist doit pouvoir expliquer, en une
+     phrase, le geste humain qui a produit l'etat actuel de l'objet.
+     S'il n'y arrive pas, le prop est refuse.
+
+0.04 REPARTITION PAR SEQUENCE
+     S1  LES QUAIS BAS .................... 22 props .... PN-001 a PN-022
+     S2  LE VERRE ET LE BATEAU ............ 15 props .... PN-023 a PN-037
+     S3  LE MARCHE SUSPENDU ............... 28 props .... PN-038 a PN-065
+     S4  LA BIBLIOTHEQUE DES EAUX ......... 20 props .... PN-066 a PN-085
+     S5  LES CONDUITS ..................... 14 props .... PN-086 a PN-099
+     S6  LA SALLE DE BAL .................. 13 props .... PN-100 a PN-112
+     S7  LA DESCENTE ...................... 16 props .... PN-113 a PN-128
+     S8  LA MONTEE AU PHARE ............... 19 props .... PN-129 a PN-147
+     --------------------------------------------------------------------
+     TOTAL ............................... 147 props
+
+0.05 BUDGET GLOBAL
+     Polycount cumule ........... 486 000 tris (moyenne 3 306 / prop)
+     Textures ................... 9 atlas 4K dedies + 22 textures uniques
+     Poids disque ............... 64 Mo (inclus dans les 286 Mo du BLOC 16.02)
+     Props porteurs d'Echo ...... 31 (soit les 31 Echos du chapitre, 11.04)
+     Props interactifs non-Echo . 24
+     Props purement visuels ..... 92
+     Props avec texte lisible ... 11
+     Props ramassables .......... 9
+
+
+===============================================================================
+1 — STANDARD DE FICHE (les 10 sections obligatoires)
+===============================================================================
+
+Chaque fichier `/props/S<n>/PROP_<ID>_<slug>.txt` contient, dans cet ordre :
+
+  IDENTITE      ID, nom d'asset, sequence, position, statut, LOD, unicite.
+  § 1 CE QU'ON VOIT
+                Description physique exhaustive. Materiaux, dimensions,
+                etat, usure, couleur. Ecrit pour un modeleur qui n'a pas
+                lu le scenario. Aucune interpretation.
+  § 2 FICHE TECHNIQUE
+                Polycount LOD0-3, textures et resolutions, shader,
+                collision, interactivite, cout GPU, contraintes.
+  § 3 CE QUE CA DIT
+                Le sous-texte. Le geste humain a l'origine de l'objet.
+                Ce que le joueur doit COMPRENDRE sans qu'on le lui dise.
+  § 4 ECHO
+                Presence ou absence. Si present : ID, mode, duree,
+                contenu integral de la memoire rejouee.
+  § 5 MISE EN SCENE
+                Comment le joueur le rencontre. Eclairage, angle
+                d'approche, ce qu'il y a derriere, ce qui attire l'oeil.
+  § 6 AUDIO
+                Sons propres a l'objet, ambiance locale, silence.
+  § 7 INTERDICTIONS
+                Ce que l'equipe n'a PAS le droit de faire avec ce prop.
+                La section la plus importante de chaque fiche.
+  § 8 LIENS
+                Renvois vers les autres props, les dialogues, la lettre.
+                Le reseau de sens du chapitre.
+  § 9 DOD
+                Criteres de cloture verifiables.
+
+[OBL] Aucune fiche ne peut avoir une section vide. Si une section n'a pas
+lieu d'etre (pas d'Echo, par exemple), elle porte la mention NEANT suivie
+de la raison du choix. Un NEANT non justifie fait echouer la revue.
+
+
+===============================================================================
+2 — INDEX COMPLET DES 147 PROPS
+===============================================================================
+
+--- S1 — LES QUAIS BAS (22) ---------------------------------------------------
+PN-001  Le muret aux quarante bottes                    ECHO E01
+PN-002  La valise ouverte au contenu trie par taille    ECHO E03
+PN-003  L'affiche RECHERCHE 641 NOMS                    texte lisible
+PN-004  Les filets suspendus
+PN-005  La barque de Lohen et sa bitte d'amarrage
+PN-006  Le ponton brise qui pointe vers le large
+PN-007  La chaise d'enfant attachee au fil de fer
+PN-008  Le meuble a tiroirs du Registre des Disparus    ECHO E02
+PN-009  La lampe-tempete du bureau du Registre
+PN-010  Le tampon dateur bloque au 14 octobre           texte lisible
+PN-011  Le velo pris dans le verre
+PN-012  La rangee de casiers de pecheurs
+PN-013  Le tableau noir des marees                      texte lisible
+PN-014  Le landau vide
+PN-015  La porte de la capitainerie, clouee
+PN-016  Les caisses a poissons empilees et seches
+PN-017  Le thermometre exterieur
+PN-018  La borne de relais des relayeurs                ramassable
+PN-019  Le panier de linge abandonne
+PN-020  La croix de bois plantee dans le verre
+PN-021  L'echelle brisee du hangar
+PN-022  Le miroir de barbier de la remise
+
+--- S2 — LE VERRE ET LE BATEAU (15) -------------------------------------------
+PN-023  Le tramway sous la surface                      ECHO E06
+PN-024  L'Hirondelle de Mer, coque et inclinaison
+PN-025  La veste d'Esteban dans la cabine               ECHO E04
+PN-026  La barre du chalutier                           ECHO E05
+PN-027  Le carnet de bord mouille                       texte lisible
+PN-028  Les bouees alignees sur le pont
+PN-029  La gamelle du chien de bord
+PN-030  Le puits de chaleur et son halo
+PN-031  La main dans le verre
+PN-032  Le pardessus plie sur une bitte
+PN-033  Le harpon plante dans la Maree
+PN-034  La cloche de brume du chalutier
+PN-035  La photo scotchee dans la cabine
+PN-036  Les seaux retournes en cercle
+PN-037  La premiere Figure immobile
+
+--- S3 — LE MARCHE SUSPENDU (28) ----------------------------------------------
+PN-038  Le mur des trois cents photos                   ECHO / texte
+PN-039  La photo 300 — Lohen et Esteban
+PN-040  Le piano droit cadenasse
+PN-041  La boite aux lettres repeinte en ambre
+PN-042  L'anneau de relayeur numero 12                  ECHO E07
+PN-043  Le comptoir du forgeron                         ECHO E08
+PN-044  La corde a linge bleue                          ECHO E09
+PN-045  Le poste de milice de Tallec                    ECHO E10
+PN-046  L'ancre du vieux harnais de Tallec              ramassable
+PN-047  La prothese de rechange
+PN-048  La sacoche de Lohen                             ECHO E11
+PN-049  Le monte-charge et ses contrepoids              ECHO E12
+PN-050  Le jeu de cordes des enfants
+PN-051  La porte repeinte tous les jours
+PN-052  La veste de relayeur en lambeaux de Sol
+PN-053  Le nid de Sol dans la gaine
+PN-054  La grue rouge
+PN-055  Le clocher penche de Saint-Ambre
+PN-056  La baleine de bois
+PN-057  Le brasero communal
+PN-058  Le tableau de rationnement                      texte lisible
+PN-059  Les six lettres a livrer                        ramassables
+PN-060  La chaise vide du barbier
+PN-061  Le puits a poulie du niveau 2
+PN-062  Les cages a oiseaux vides
+PN-063  Le tas de chaussures d'enfants
+PN-064  La pancarte NE PAS DESCENDRE                    texte lisible
+PN-065  La serre de verre vert
+
+--- S4 — LA BIBLIOTHEQUE DES EAUX (20) ----------------------------------------
+PN-066  L'oculus et son rai de lumiere
+PN-067  Le casier 4, rangee M, troisieme tiroir         ECHO E13
+PN-068  La chemise cartonnee vide
+PN-069  Le rectangle de poussiere propre
+PN-070  La tasse de Mireille                            ECHO E14
+PN-071  Le vitrail brise                                ECHO E15
+PN-072  Le banc de la mezzanine                         ECHO E16
+PN-073  L'echelle roulante                              ECHO E17
+PN-074  Le manteau rapiece quatorze fois
+PN-075  Les lunettes a un seul verre
+PN-076  La canne pied-de-biche
+PN-077  Le registre des noms, volume 3                  texte lisible
+PN-078  Les rayonnages noyes du deuxieme
+PN-079  La passerelle de planches
+PN-080  Le fichier des relayeurs
+PN-081  Le certificat de deces provisoire               texte lisible
+PN-082  La theiere et le rechaud
+PN-083  Le livre gonfle par l'eau
+PN-084  Le compteur d'eau arrete
+PN-085  La chaise de Mireille, face au casier 4
+
+--- S5 — LES CONDUITS (14) ----------------------------------------------------
+PN-086  La lanterne                                     ECHO E18
+PN-087  Le matelas de Sol                               ECHO E19
+PN-088  La grille du puits                              ECHO E20
+PN-089  Les quatre marques a la craie
+PN-090  La reserve de nourriture de Sol
+PN-091  Le collier de chien
+PN-092  Le conduit d'aeration bouche
+PN-093  La flaque permanente
+PN-094  Les plaques de Mueur au sol
+PN-095  Le dessin au charbon sur la paroi
+PN-096  La corde de rappel de Sol
+PN-097  Le compteur electrique mort
+PN-098  Le passage trop etroit
+PN-099  La grille de sortie vers le Meridien
+
+--- S6 — LA SALLE DE BAL (13) -------------------------------------------------
+PN-100  Le parquet en marqueterie
+PN-101  Les trois lustres
+PN-102  Les miroirs muraux
+PN-103  Le piano a queue de l'orchestre
+PN-104  Les rideaux de la salle
+PN-105  La table du buffet, intacte
+PN-106  Le carton d'invitation                          texte lisible
+PN-107  Le gilet a lisere ambre d'Esteban
+PN-108  La quatrieme lettre dans la poche gauche        ramassable / texte
+PN-109  La pendule arretee a 23h41
+PN-110  Les hautes fenetres
+PN-111  Le crayon de charpentier
+PN-112  Le sol de la salle apres l'Echo
+
+--- S7 — LA DESCENTE (16) -----------------------------------------------------
+PN-113  Le kiosque a musique                            ECHO E22
+PN-114  Le cable casse du grappin
+PN-115  Les quatre lampadaires de l'Ancienne Halle
+PN-116  La coulee de verre du Verrier
+PN-117  L'atelier de souffleur d'Anselme Roux           ECHO E23
+PN-118  La canne de souffleur, taille enfant
+PN-119  Le dossier d'Esteban                            ECHO E24 / ramassable
+PN-120  La lettre de Mireille                           ECHO E25 / texte
+PN-121  Les onze objets tombes des Figures              ramassables
+PN-122  La pluie sur la Maree
+PN-123  L'affiche 641 NOMS, deuxieme etat
+PN-124  Le banc a deux creux polis
+PN-125  Le pave descelle
+PN-126  La statue sans tete
+PN-127  Le pont casse
+PN-128  Les fragments du Verrier
+
+--- S8 — LA MONTEE AU PHARE (19) ----------------------------------------------
+PN-129  La premiere marche                              ECHO E26
+PN-130  L'escalier en spirale
+PN-131  Le palier des cloches                           ECHO E27
+PN-132  Les cloches accordees
+PN-133  La corde de secours                             ECHO E28
+PN-134  La machinerie de la lentille
+PN-135  La lentille de Fresnel
+PN-136  La porte gonflee de la chambre
+PN-137  La lampe a huile allumee
+PN-138  La couverture pliee                             ECHO E29
+PN-139  Le mur des trois cent quatorze feuilles         texte lisible
+PN-140  Les chaussures rangees cote a cote
+PN-141  Le carnet sur la table                          ECHO E30 / texte
+PN-142  La pierre plate
+PN-143  LA LETTRE                                       ECHO E31 / texte
+PN-144  La table de la chambre
+PN-145  Le rebord de fenetre et ses onze toits
+PN-146  La reserve de provisions
+PN-147  La veste 0114 posee sur Sol
+
+
+===============================================================================
+3 — LES ONZE PROPS PORTEURS DE TEXTE LISIBLE
+===============================================================================
+[OBL] Sur 147 props, onze seulement portent du texte que le joueur peut
+lire. Cette rarete est un choix : un monde ou tout est annote est un monde
+ou rien n'a de poids. Liste exhaustive et definitive :
+
+  PN-003  L'affiche RECHERCHE 641 NOMS          (et PN-123, son 2e etat)
+  PN-010  Le tampon dateur                       (une date : 14.10)
+  PN-013  Le tableau noir des marees             (7 lignes effacees, 1 reste)
+  PN-027  Le carnet de bord de L'Hirondelle      (4 lignes lisibles)
+  PN-058  Le tableau de rationnement             (chiffres, 1 nom barre)
+  PN-064  La pancarte NE PAS DESCENDRE           (4 mots)
+  PN-077  Le registre des noms volume 3          (une page, 22 noms)
+  PN-081  Le certificat de deces provisoire      (le document du mensonge)
+  PN-106  Le carton d'invitation                 (une date : 14 octobre)
+  PN-120  La lettre de Mireille                  (l'aveu, 9 lignes)
+  PN-139  Le mur des 314 feuilles                (un seul mot, 314 fois)
+  PN-141  Le carnet d'Esteban                    (6 extraits)
+  PN-143  LA LETTRE                              (BLOC 20, integral)
+
+Note : la liste compte 13 entrees pour 11 props uniques, PN-123 etant le
+second etat de PN-003, et PN-141/PN-143 partageant la meme ecriture.
+
+
+===============================================================================
+4 — LES NEUF PROPS RAMASSABLES
+===============================================================================
+Ce jeu n'a pas d'inventaire de collecte. Neuf objets seulement entrent
+dans la sacoche, et chacun a une raison narrative de s'y trouver :
+
+  PN-018  La borne de relais            — outil de metier
+  PN-046  L'ancre du harnais de Tallec  — un don
+  PN-059  Les six lettres a livrer      — le travail de Lohen
+  PN-108  La quatrieme lettre           — dans un souvenir
+  PN-119  Le dossier d'Esteban          — rendu par le Verrier
+  PN-120  La lettre de Mireille         — portee par Sol
+  PN-121  Les onze objets des Figures   — jamais utilises au Ch.1
+  PN-141  Le carnet d'Esteban           — emporte en redescendant
+  PN-143  LA LETTRE                     — pliee, rangee, gardee
+
+
+===============================================================================
+5 — REGLES TRANSVERSALES A TOUS LES PROPS
+===============================================================================
+
+5.01 [OBL] AUCUN CONTOUR. Aucun halo. Aucune peinture jaune. Aucun
+     scintillement. Un prop narratif se signale par la composition, la
+     lumiere et le contraste d'humidite (09.21), jamais par un effet d'UI.
+
+5.02 [OBL] AUCUN PROP NARRATIF N'EST OBLIGATOIRE, sauf les 13 qui portent
+     un Echo majeur du chemin critique. Les 134 autres peuvent etre
+     manques integralement sans bloquer la progression. Un joueur presse
+     finira le chapitre en ayant vu peut-etre 40 d'entre eux. C'est prevu.
+
+5.03 [OBL] REGLE DE L'AMBRE. Sur 147 props, TROIS portent la couleur ambre
+     #FFA33C : PN-041 (la boite aux lettres), PN-107 (le lisere du gilet
+     d'Esteban) et PN-137 (la lampe a huile). Aucun autre. Jamais.
+     L'audit `amber-guard` (05.06) scanne les 144 autres textures.
+
+5.04 [OBL] REGLE DE LA MAIN. Tout prop qu'un etre humain a manipule porte
+     une trace de manipulation : un poli d'usure, une salissure au point
+     de prise, une deformation. Cette trace est MODELISEE ou peinte a la
+     main, jamais generee proceduralement.
+
+5.05 [OBL] REGLE DU VOISINAGE. Un prop narratif n'est jamais seul au
+     milieu d'un espace vide. Il est toujours pose sur, contre, sous ou
+     a cote de quelque chose d'ordinaire. C'est le contraste avec
+     l'ordinaire qui le rend lisible, pas l'isolement.
+
+5.06 [OBL] REGLE DU SILENCE. Aucun personnage ne commente un prop narratif,
+     sauf trois exceptions ecrites (PN-046 par Tallec, PN-052 par Sol,
+     PN-067 par Mireille). Les 144 autres ne sont jamais mentionnes par
+     personne. Jamais.
+
+5.07 [PERF] Tout prop narratif a 4 LODs et un `VisibilityRange` propre.
+     Aucun ne depasse 9 000 tris en LOD0. Les 147 cumules tiennent dans
+     486 000 tris, soit moins que le budget d'une seule scene HIGH (05.33).
+
+5.08 [DOD] Chaque prop a : son fichier de fiche, son `.blend` source, son
+     `.glb` exporte, ses textures, son `.meta.json` (00.14), sa capture de
+     validation, et une ligne dans `/docs/props_manifest.csv`.

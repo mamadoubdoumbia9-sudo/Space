@@ -1,0 +1,98 @@
+===============================================================================
+PN-062 — LES CAGES A OISEAUX VIDES
+===============================================================================
+Asset : SM_S3_Cages_Oiseaux · S3, facade sud, niveau 2, suspendues a une
+tringle sous un balcon · ~02:44 · prop narratif · pas d'Echo ·
+LOD0 3 100 tris
+
+§ 1 — CE QU'ON VOIT
+Neuf cages a oiseaux, en fil de fer et bois, suspendues en ligne a une
+tringle sous un balcon, a 2,40 m au-dessus de la passerelle.
+Elles sont de neuf modeles differents : des rondes, des carrees, une haute
+en forme de pagode, une minuscule de 15 cm.
+Elles sont toutes OUVERTES. Les neuf portillons sont releves et bloques en
+position ouverte — [OBL] bloques : quelqu'un a plie le fil de fer pour
+qu'ils ne puissent plus se refermer.
+Elles sont vides. Il n'y a pas de plumes, pas d'ossements, pas de graines.
+Elles sont propres.
+Dans chacune, la mangeoire et l'abreuvoir sont encore accroches, et vides.
+Sur le perchoir de la troisieme cage, il y a une trace : le bois est poli
+et creuse sur 3 cm, la ou des pattes se sont posees pendant des annees.
+[OBL] Il n'y a AUCUN oiseau dans tout le chapitre 1. Ni vivant, ni mort,
+ni au sol, ni dans le ciel, ni en son.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 100 pour les 9. [OBL] Le fil de fer est en GEOMETRIE : une cage a
+oiseaux en cartes d'alpha est immediatement fausse en contre-jour, et ces
+cages sont toujours en contre-jour (elles sont contre le ciel).
+Barreaux : 1,2 mm de diametre, 24 a 48 par cage selon le modele.
+Anim : PROP-772 — les neuf cages tournent lentement sur leur crochet,
+±7 degres, periodes differentes (11 a 23 s), jamais synchronisees.
+[OBL] Les portillons ouverts ne bougent JAMAIS. Ils sont bloques.
+Shader `wire_rust_thin` + `wood_perch_worn`.
+Collision : aucune. Trop haut.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a ouvert neuf cages et a plie les portillons pour qu'ils ne
+puissent plus se refermer.
+Le geste humain : liberer. Et s'assurer que c'est definitif.
+[NAR] Quand ? Avant ou apres la Maree ? [OBL] Jamais determine. Les deux
+lectures tiennent :
+  — avant : quelqu'un qui partait et qui ne voulait pas laisser mourir
+  — apres : quelqu'un qui ne supportait plus de voir des choses enfermees
+Le perchoir poli de la troisieme cage dit des annees d'oiseau.
+Les cages sont propres : pas de plumes, pas de fientes seches, pas de
+graines. [OBL] Elles ont ete NETTOYEES apres. Quelqu'un a ouvert les cages,
+puis les a lavees, puis les a raccrochees, vides, en ligne.
+
+§ 4 — ECHO
+NEANT. [OBL] Aucun Echo ne contient d'animal (regle PN-029). Et le geste
+d'ouverture est probablement d'apres (PN-015).
+
+§ 5 — MISE EN SCENE
+A 2,40 m, au-dessus de la tete du joueur, contre le ciel.
+[ART] Le joueur les voit en contre-plongee, en silhouette : neuf structures
+de fil de fer noires sur un ciel blanc, qui tournent lentement, chacune a
+son rythme.
+[OBL] C'est le seul groupe d'objets du chapitre dont la lecture est
+purement graphique : neuf dessins au trait, dans le vide, qui bougent.
+Elles sont sur le chemin du niveau 2, entre la corde a linge (PN-044) et le
+monte-charge (PN-049). Le joueur passe dessous 3 a 4 fois.
+Aucun prompt, aucun LookAt, aucun son de signalisation.
+
+§ 6 — AUDIO
+SFX(wire_cage_ring) : les barreaux de fil de fer resonnent tres faiblement
+au vent. Un son fin, aigu, presque une note. Neuf hauteurs differentes
+selon la taille de la cage.
+[OBL] -33 dB. C'est le son le plus faible du chapitre. Il n'est audible que
+si le joueur s'arrete sous les cages et que le vent monte.
+SFX(hook_metal_tick) : les crochets, irregulier.
+[OBL] AUCUN chant d'oiseau, aucun battement d'ailes, aucun cri, nulle part
+dans le chapitre 1. Verifier la banque de sons au grep : zero fichier
+contenant bird, gull, wing, chirp, caw.
+[ART] L'absence d'oiseaux dans une ville portuaire est l'anomalie la plus
+discrete et la plus efficace du jeu. Personne ne la remarque
+consciemment. Tout le monde la ressent.
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter un oiseau, vivant ou mort, ici ou ailleurs · ajouter
+une plume · ajouter un son d'oiseau · fermer un portillon · decrocher une
+cage · donner un Echo · expliquer qui a ouvert · dater le geste · ajouter
+une dixieme cage · faire commenter · placer des graines ou des fientes.
+
+§ 8 — LIENS
+PN-016 (les caisses a poissons : « aucun oiseau », deja note en S1).
+PN-029 (la gamelle de Mousse : l'autre animal absent).
+Pomme, le chien de Sol (S6) : le seul animal vivant des sept chapitres.
+PN-056 (la baleine de bois) : le seul animal represente.
+[THEME] LA VILLE SANS BETES. [THEME] LIBERER.
+
+§ 9 — DOD
+[ ] 9 cages, 9 modeles distincts, fil de fer en geometrie 1,2 mm
+[ ] 9 portillons ouverts et bloques par pliage, jamais animes
+[ ] Perchoir de la 3e cage poli et creuse sur 3 cm
+[ ] Cages propres : zero plume, zero fiente, zero graine
+[ ] 9 rotations desynchronisees, periodes 11 a 23 s
+[ ] 9 hauteurs de resonance, -33 dB
+[ ] grep banque de sons : 0 fichier bird/gull/wing/chirp/caw
+[ ] Aucun oiseau dans aucune scene des 7 chapitres du chapitre 1

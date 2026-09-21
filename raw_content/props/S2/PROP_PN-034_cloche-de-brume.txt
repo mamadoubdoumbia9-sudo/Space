@@ -1,0 +1,105 @@
+===============================================================================
+PN-034 — LA CLOCHE DE BRUME DU CHALUTIER
+===============================================================================
+Asset : SM_S2_Cloche_Brume · S2, passerelle exterieure de L'Hirondelle ·
+~01:22 · prop INTERACTIF NON-ECHO (1 des 24) · LOD0 800 tris
+
+§ 1 — CE QU'ON VOIT
+Une cloche de bronze de 26 cm, suspendue a une potence de fer sur la
+passerelle exterieure, cote bribord. Le battant pend a l'intérieur, retenu
+par une chainette de securite decrochee.
+Sur la robe de la cloche, grave en creux, use, a moitie efface par le sel :
+        L'HIRONDELLE DE MER — 19__
+Les deux derniers chiffres de l'annee sont illisibles.
+La cloche est verte. Trois ans de sel ont mange le bronze en une patine
+epaisse, cratelee, vert-de-gris, qui coule vers le bas en larmes.
+Elle est inclinee a 23 degres avec le bateau — sauf le battant, qui pend
+droit, a la verticale, et touche donc la paroi intérieure d'un cote.
+Il la touche depuis trois ans. Il n'a pas sonne une fois.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 800. Shader `bronze_verdigris` : trois couches — bronze nu sur les
+aretes d'usure, patine verte, coulures. La gravure est en geometrie
+(creux de 1,2 mm), a moitie comblee par la patine.
+[OBL] Le battant pend sur la gravite MONDE, pas sur l'axe local. Meme regle
+que les jumelles de PN-026 et l'eau de PN-029. Verifier les trois ensemble.
+INTERACTION : le joueur peut SONNER. Appui simple.
+LOH-ACT-172, 2,1 s : Lohen attrape la corde, tire une fois, lache.
+La cloche oscille pendant 6 s et s'arrete. Physique reelle (un pendule
+amorti, pas une animation cuite).
+[OBL] Sonnable a l'infini. Aucune limite, aucun compteur, aucun cooldown.
+
+§ 3 — CE QUE CA DIT
+Une cloche de brume sert a signaler sa position quand on ne voit rien.
+On la sonne pour que les autres bateaux sachent qu'on est la.
+Le 14 octobre, a 23h41, elle n'a pas sonne. Le battant est decroche : on
+l'immobilise en navigation par mer calme, pour le silence. « MER BELLE.
+RIEN A SIGNALER. »
+Le geste humain : decrocher le battant un soir de mer plate.
+[NAR] Il n'y a pas eu d'alerte. Pas de cloche, pas de corne, pas de cri.
+Neuf secondes, c'est plus court que le temps qu'il faut pour raccrocher
+un battant.
+
+§ 4 — ECHO
+NEANT en mode standard. [OBL] MAIS — c'est le seul prop du chapitre avec un
+comportement conditionnel d'Echo, et il est cache :
+SI le joueur sonne la cloche APRES avoir vu E05 (la barre), ET s'il reste
+immobile pendant les 6 secondes complètes d'oscillation sans bouger, ALORS
+le troisieme mode C du chapitre se declenche.
+Ce n'est pas un Echo au sens du systeme : il n'y a pas de rituel de 2,44 s,
+pas de prompt, pas de transition. Le son change, simplement.
+Ce qu'on entend : la resonance de la cloche, au lieu de s'eteindre en 6 s,
+continue. Elle se prolonge. Elle devient une note tenue, de plus en plus
+basse, pendant 22 secondes. Et sur cette note, tres loin, trois fois, une
+AUTRE cloche repond. Une cloche plus grave, plus grande, plus loin.
+C'est le Phare Saint-Ambre, a 4 kilometres, en S8, 2 heures plus tard.
+Puis plus rien. La note s'eteint. L'ambiance revient.
+[OBL] Aucune indication. Aucune recompense. Aucun succes. Aucun journal.
+Taux de decouverte estime : 6 %. Acceptable.
+Musique : NEANT. Ce ne sont que des cloches.
+
+§ 5 — MISE EN SCENE
+Sur la passerelle exterieure, entre la cabine et la timonerie. Sur le
+chemin obligatoire. Le joueur passe a 50 cm.
+Le prompt d'interaction apparait. C'est un prompt ordinaire, identique aux
+23 autres interactions non-Echo. Rien ne le distingue.
+[ART] La plupart des joueurs sonneront par simple curiosite de joueur.
+Le son porte sur 900 m de verre plat, dans une ville morte. C'est
+exactement le genre de geste que ce jeu recompense en ne recompensant pas.
+Vue depuis la passerelle : Velmora au loin, le Phare, et 900 m de noir.
+
+§ 6 — AUDIO
+SFX(bell_bronze_dull) : la cloche est SOURDE. La patine epaisse etouffe le
+bronze. Ce n'est pas une belle cloche : c'est un son mat, court, un peu
+fele, qui meurt vite. [OBL] Le contraste avec le son cristallin des bouees
+de verre (PN-028, a 20 m) est deliberé et doit etre net au mix.
+Amortissement : 6 s, courbe exponentielle, avec le battant qui retouche la
+paroi deux fois vers la fin (deux petits chocs a 4,1 s et 5,3 s).
+Mode C conditionnel : la queue est remplacee par un drone descendant de
+22 s (fondamentale 72 Hz → 41 Hz), et les trois cloches lointaines sont
+jouees a -31 dB, filtrees passe-bas 400 Hz, avec 1,4 s d'intervalle.
+[OBL] Ces trois cloches lointaines sont le MEME echantillon que celui du
+Phare en S8 (PN-131). Aucune variation.
+
+§ 7 — INTERDICTIONS
+Interdit de : limiter le nombre de sonneries · afficher un succes, un
+journal, un indice · signaler le mode C · le rendre obligatoire · faire
+repondre quelque chose de vivant · ajouter une voix · faire commenter Lohen
+· raccrocher le battant · faire sonner la cloche toute seule · rendre la
+cloche claire ou belle · reveler que les cloches lointaines sont le Phare.
+
+§ 8 — LIENS
+PN-013 (« MER BELLE. RIEN A SIGNALER. »). PN-026 (E05 : condition du mode C).
+PN-028 (les bouees : l'oppose sonore). PN-131 (le palier des cloches du
+Phare, S8) : le meme echantillon, entendu deux heures plus tard, de pres,
+par un joueur qui ne se souviendra pas consciemment de l'avoir deja entendu.
+[THEME] SIGNALER SA POSITION. [THEME] PERSONNE N'A RIEN VU VENIR.
+
+§ 9 — DOD
+[ ] Battant sur gravite monde, touchant la paroi ; verifie avec PN-026/029
+[ ] Gravure en creux 1,2 mm, annee illisible sur les deux derniers chiffres
+[ ] Pendule physique amorti reel, 6 s, deux rechocs a 4,1 s et 5,3 s
+[ ] Son mat et fele, distinct au mix du timbre des bouees
+[ ] Mode C : condition E05 + 6 s d'immobilite, drone 72→41 Hz, 3 cloches
+[ ] Echantillon des cloches lointaines identique a PN-131, sans variation
+[ ] Zero signalisation, zero succes, zero limite de sonnerie

@@ -1,0 +1,105 @@
+===============================================================================
+PN-097 — LE COMPTEUR ELECTRIQUE MORT
+===============================================================================
+Asset : SM_S5_Compteur_Electrique · S5, niche technique du niveau -3 ·
+~04:36 · prop narratif · pas d'Echo · LOD0 2 200 tris
+
+§ 1 — CE QU'ON VOIT
+Une niche technique, eclairee par la bougie de Sol qui passe.
+Un tableau electrique d'epoque : une planche d'ardoise noire de 1,40 x 0,90,
+vissee au mur, portant des porcelaines, des coupe-circuits a fusibles a
+broche, des barres de cuivre, et un compteur a disque.
+Le disque du compteur est en aluminium, horizontal, et il devrait tourner.
+Il est arrete.
+Il est arrete de travers : [OBL] la marque rouge du disque est visible a
+40 % du tour. Il ne s'est pas arrete en position de repos ; il s'est arrete
+en tournant.
+Les fusibles a broche sont tous en place. Aucun n'a saute.
+[OBL] Ce n'est pas une panne locale. C'est la source qui s'est arretee.
+Le cuivre des barres est vert-de-gris. L'ardoise est intacte, propre, elle
+ne s'abime pas.
+Sur le cote, un interrupteur a manette de porcelaine, gros, en position
+HAUT. Il est enclenche. Le circuit est ferme.
+Quelqu'un est parti sans rien eteindre.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 200. [OBL] Chaque porcelaine (14) est modelisee. Les fusibles a
+broche (9) sont individuels et retirables visuellement (pas par le joueur).
+Le disque d'aluminium : 120 tris, avec la marque rouge peinte.
+Shader `slate_polished` (l'ardoise est le materiau le plus mat et le plus
+noir du jeu, roughness 0,88, albedo 0,04), `porcelain_glazed`,
+`copper_verdigris`.
+[ART] Contraste voulu : la porcelaine blanche brillante sur l'ardoise noire
+mate, a la lueur d'une bougie. C'est le plan le plus graphique de S5.
+Collision : boite. [OBL] Rien n'est manipulable. Aucun prompt. L'interrupteur
+ne bascule pas.
+
+§ 3 — CE QUE CA DIT
+Velmora avait l'electricite. Elle ne l'a plus.
+Le geste humain : aucun. Ou plutot : l'absence de geste. Personne n'a coupe.
+[OBL] Le disque arrete a 40 % de tour est l'information : le courant s'est
+arrete en pleine consommation. Pas de coupure programmee, pas de
+maintenance, pas d'evacuation ordonnee.
+[NAR] Le tramway de PN-023 avait son pantographe leve et du courant dans le
+fil. A 23h41.
+[OBL] Le jeu ne relie jamais les deux props. Ils sont a 2 h 50 d'intervalle.
+L'horloge du clocher (PN-055) s'est arretee a 4h15, quatre heures et demie
+apres — [OBL] elle etait mecanique, a remontage. L'electricite, elle, s'est
+arretee tout de suite.
+Trois arrets, trois heures differentes, aucune explication.
+
+§ 4 — ECHO
+NEANT. Equipement collectif (PN-016).
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur n'a plus sa lampe (PN-096). Il suit Sol et sa bougie.
+La niche technique est sur le cote du conduit. Sol passe devant sans
+s'arreter.
+[ART] Si le joueur veut regarder le tableau, il doit s'arreter — et la
+lumiere s'en va avec Sol.
+[OBL] Sol s'arrete a 8 m et attend, dos tourne. La bougie eclaire le
+tableau a -78 % d'intensite. Le joueur voit les grandes masses : l'ardoise
+noire, les taches blanches des porcelaines. Il ne lit pas le compteur.
+S'il veut le lire, il doit rappeler Sol — [OBL] ce qui est impossible. Il
+n'y a pas de commande d'appel.
+Ou attendre : [OBL] apres 25 secondes d'immobilite, Sol revient de 4 m,
+sans un mot, et s'arrete. La lumiere remonte. Le compteur devient lisible.
+[OBL] C'est la seule fois du chapitre ou un PNJ s'adapte au joueur, et cela
+se fait sans un mot, sans animation d'attente, sans soupir, sans regard.
+Il revient et il attend.
+
+§ 6 — AUDIO
+NEANT propre. Le tableau est totalement muet.
+[OBL] Il n'y a AUCUN bourdonnement, aucun grésillement, aucune etincelle,
+aucun claquement de relais, nulle part dans le chapitre. Velmora n'a pas
+d'electricite depuis trois ans.
+[ART] Le joueur n'a entendu aucun son electrique pendant 4 h 36 et ne s'en
+est pas apercu. Il ne s'en apercevra jamais.
+Le seul son de la niche : la bougie. SFX(candle_flame_close), un
+crepitement minuscule, present uniquement a moins de 1,5 m de Sol.
+
+§ 7 — INTERDICTIONS
+Interdit de : retablir le courant · basculer l'interrupteur · changer un
+fusible · faire tourner le disque · ajouter un bourdonnement · ajouter une
+etincelle · allumer quoi que ce soit d'electrique dans le chapitre · faire
+commenter Sol · donner un Echo · en faire une enigme · ajouter un compteur
+en position ronde.
+
+§ 8 — LIENS
+PN-084 (le compteur d'eau arrete, S4) : le pendant exact. [OBL] Meme
+fonction narrative, meme placement (une niche technique cachee), meme
+absence d'explication. Le joueur qui a trouve les deux a compris comment
+meurt une ville.
+PN-023 (le tramway et son pantographe leve). PN-055 (l'horloge a 4h15).
+PN-101 (les trois lustres, S6) : la prochaine fois qu'il verra de
+l'electricite, ce sera dans un Echo.
+[THEME] LA SERIE D'ARRETS.
+
+§ 9 — DOD
+[ ] Disque arrete a 40 % de tour, marque rouge visible
+[ ] 9 fusibles a broche tous en place, aucun saute
+[ ] Interrupteur a manette en position HAUT, circuit ferme
+[ ] Ardoise roughness 0,88 albedo 0,04, porcelaine brillante, cuivre vert
+[ ] Lisible uniquement si Sol revient apres 25 s d'immobilite
+[ ] Sol revient sans un mot, sans animation d'attente, sans soupir
+[ ] Zero son electrique dans tout le chapitre

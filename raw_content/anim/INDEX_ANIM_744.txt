@@ -1,0 +1,837 @@
+===============================================================================
+  LOHEN — LES SEPT LETTRES DE VELMORA
+  ANNEXE A2 — LES 744 ANIMATIONS EN DOCUMENTS AUTONOMES — INDEX
+  Un fichier complet par clip. Reference : BLOC 07 du master,
+  ANIM_MANIFEST_744.txt (annexe A), contrat de volume 07.20.
+===============================================================================
+
+CE QUE CETTE ANNEXE AJOUTE A L'ANNEXE A
+
+  L'annexe A est un MANIFESTE : elle liste les 744 clips et les compare
+  entre eux. Elle est faite pour etre lue en entier, dans l'ordre.
+
+  L'annexe A2 est un jeu de FICHES DE PRODUCTION : chaque clip est un
+  document qui se lit SEUL, sans le manifeste et sans le master. Chaque
+  fiche reporte son contexte de personnage, ses standards techniques
+  applicables, sa direction d'acteur, sa timeline, ses transitions et
+  ses criteres de validation. C'est ce qu'on donne a un animateur qui
+  prend un clip et qui n'a pas trois heures de lecture devant lui.
+
+  [OBL] Les fiches ne recopient JAMAIS le texte des dialogues : elles
+  referencent l'identifiant de ligne de l'annexe C. Source unique.
+
+-------------------------------------------------------------------------------
+  REPARTITION — CONTRAT 07.20 RESPECTE
+-------------------------------------------------------------------------------
+
+  1  LOHEN                              218 clips   A-001 -> A-218   01_LOHEN/
+  2  ESTEBAN                             96 clips   A-219 -> A-314   02_ESTEBAN/
+  3  MIREILLE VANDECK                    64 clips   A-315 -> A-378   03_MIREILLE/
+  4  CAPITAINE ORVAL TALLEC              58 clips   A-379 -> A-436   04_TALLEC/
+  5  SOL                                 71 clips   A-437 -> A-507   05_SOL/
+  6  FIGURE — L'ECHASSIER                34 clips   A-508 -> A-541   06_ECHASSIER/
+  7  FIGURE — LE MUEUR                   39 clips   A-542 -> A-580   07_MUEUR/
+  8  LE VERRIER (ANSELME ROUX)           52 clips   A-581 -> A-632   08_VERRIER/
+  9  PNJ GENERIQUES DU MARCHE SUSPENDU   48 clips   A-633 -> A-680   09_PNJ/
+  10 PROPS ANIMES ET MECANISMES          64 clips   A-681 -> A-744   10_PROPS/
+  ------------------------------------------------------------------
+  TOTAL                                 744 clips
+
+-------------------------------------------------------------------------------
+  VOLUMETRIE
+-------------------------------------------------------------------------------
+
+  Fichiers de fiche ........ 744
+  Lignes totales ........... 78 334
+  Poids .................... 3.3 Mo
+  Moyenne par fiche ........ 105 lignes
+
+  Origine des fiches :
+      435  manifeste
+      202  conçu — bloc de plage deplie
+       49  manifeste · densifiee (CI no-filler)
+       44  manifeste (entree resumee) — fiche developpee
+        7  manifeste (entree L/R commune) — fiche depliee
+        7  conçu — bloc de plage deplie · densifiee (CI no-filler)
+
+-------------------------------------------------------------------------------
+  SOMMAIRE COMPLET
+-------------------------------------------------------------------------------
+
+  === PARTIE 1 — LOHEN ===
+
+  A-001  idle_neutral                                  12.00 s  BOUCLE
+  A-002  idle_neutral_var02                            12.00 s  BOUCLE
+  A-003  idle_neutral_var03_weight_shift               12.00 s  BOUCLE
+  A-004  idle_breakout_cold                             6.20 s  ONE-SHOT
+  A-005  idle_breakout_look_up                          4.80 s  ONE-SHOT
+  A-006  idle_breakout_touch_bracelet                   5.40 s  ONE-SHOT
+  A-007  idle_breakout_check_satchel                    3.60 s  ONE-SHOT
+  A-008  idle_breakout_stretch_shoulder                 7.10 s  ONE-SHOT
+  A-009  idle_breakout_wipe_face                        4.40 s  ONE-SHOT
+  A-010  idle_exhausted                                 9.00 s  BOUCLE
+  A-011  idle_exhausted_hand_on_wall                    8.20 s  BOUCLE
+  A-012  idle_crouch                                    8.00 s  BOUCLE
+  A-013  idle_lantern_hold                             10.00 s  BOUCLE
+  A-014  idle_carry_heavy                               7.00 s  BOUCLE
+  A-015  idle_edge_peek                                 6.60 s  BOUCLE
+  A-016  idle_dialogue_listen                          11.00 s  BOUCLE
+  A-017  walk_F                                         1.07 s  BOUCLE
+  A-018  walk_B                                         1.20 s  BOUCLE
+  A-019  walk_L                                         1.10 s  BOUCLE
+  A-020  walk_R                                         1.10 s  BOUCLE
+  A-021  walk_slow_F                                    1.50 s  BOUCLE
+  A-022  walk_limp_F                                    1.34 s  BOUCLE
+  A-023  jog_F                                          0.70 s  BOUCLE
+  A-024  jog_L / jog_R (2 clips : LOC-024, LOC-025)     0.74 s  BOUCLE
+  A-025  jog_R                                          0.74 s  BOUCLE
+  A-026  run_F                                          0.60 s  BOUCLE
+  A-027  run_L / run_R (2 clips : LOC-027, LOC-028)     0.62 s  BOUCLE
+  A-028  run_R                                          0.62 s  BOUCLE
+  A-029  sprint_F                                       0.53 s  BOUCLE
+  A-030  sprint_F_tired                                 0.56 s  BOUCLE
+  A-031  strafe_guard_F                                 0.90 s  BOUCLE
+  A-032  strafe_guard_B                                 0.96 s  BOUCLE
+  A-033  strafe_guard_L                                 0.88 s  ONE-SHOT
+  A-034  strafe_guard_R                                 0.88 s  BOUCLE
+  A-035  crouch_walk_F                                  1.40 s  BOUCLE
+  A-036  crouch_walk_B                                  1.50 s  BOUCLE
+  A-037  crouch_walk_L                                  1.45 s  ONE-SHOT
+  A-038  crouch_walk_R                                  1.45 s  BOUCLE
+  A-039  lantern_walk_F                                 1.18 s  BOUCLE
+  A-040  lantern_crouch_walk_F                          1.60 s  BOUCLE
+  A-041  carry_walk_F                                   1.30 s  BOUCLE
+  A-042  carry_walk_stairs_up                           1.70 s  BOUCLE
+  A-043  start_walk_L                                   0.50 s  ONE-SHOT
+  A-044  start_walk_R                                   0.50 s  ONE-SHOT
+  A-045  start_jog                                      0.40 s  ONE-SHOT
+  A-046  start_run_burst                                0.47 s  ONE-SHOT
+  A-047  stop_walk_L                                    0.45 s  ONE-SHOT
+  A-048  stop_walk_R                                    0.45 s  ONE-SHOT
+  A-049  stop_run                                       0.70 s  ONE-SHOT
+  A-050  stop_sprint                                    0.90 s  ONE-SHOT
+  A-051  stop_at_edge                                   0.62 s  ONE-SHOT
+  A-052  turn_in_place_90L                              0.56 s  ONE-SHOT
+  A-053  turn_in_place_90R                              0.56 s  ONE-SHOT
+  A-054  turn_in_place_180                              0.90 s  ONE-SHOT
+  A-055  turn_run_90L                                   0.50 s  ONE-SHOT
+  A-056  turn_run_90R                                   0.50 s  ONE-SHOT
+  A-057  turn_run_180_skid                              0.84 s  ONE-SHOT
+  A-058  stumble_light                                  0.78 s  ONE-SHOT
+  A-059  stumble_recover_hand                           1.05 s  ONE-SHOT
+  A-060  stand_to_crouch                                0.42 s  ONE-SHOT
+  A-061  crouch_to_stand                                0.48 s  ONE-SHOT
+  A-062  crouch_to_stand_urgent                         0.30 s  ONE-SHOT
+  A-063  slope_up_walk                                  1.18 s  BOUCLE
+  A-064  slope_up_jog                                   0.78 s  BOUCLE
+  A-065  slope_down_walk                                1.24 s  BOUCLE
+  A-066  slope_down_jog_controlled                      0.82 s  BOUCLE
+  A-067  stairs_up                                      1.52 s  BOUCLE
+  A-068  stairs_up_tired                                1.90 s  BOUCLE
+  A-069  stairs_up_rest                                 4.20 s  ONE-SHOT
+  A-070  stairs_down                                    1.38 s  BOUCLE
+  A-071  stairs_down_fast                               0.92 s  BOUCLE
+  A-072  glass_walk_careful                             1.68 s  BOUCLE
+  A-073  glass_run                                      0.64 s  BOUCLE
+  A-074  slide_start                                    0.36 s  ONE-SHOT
+  A-075  slide_loop                                     0.50 s  BOUCLE
+  A-076  slide_end                                      0.54 s  ONE-SHOT
+  A-077  jump_standing                                  0.42 s  ONE-SHOT
+  A-078  jump_running                                   0.30 s  ONE-SHOT
+  A-079  jump_from_ledge                                0.38 s  ONE-SHOT
+  A-080  jump_precision                                 0.52 s  ONE-SHOT
+  A-081  fall_short_loop                                0.60 s  BOUCLE
+  A-082  fall_long_loop                                 1.80 s  BOUCLE
+  A-083  fall_flail                                     1.20 s  BOUCLE
+  A-084  air_control_L                                  0.40 s  ONE-SHOT
+  A-085  air_control_R                                  0.40 s  BOUCLE
+  A-086  air_tuck                                       0.34 s  ONE-SHOT
+  A-087  land_soft                                      0.38 s  ONE-SHOT
+  A-088  land_soft_running                              0.28 s  ONE-SHOT
+  A-089  land_medium                                    0.68 s  ONE-SHOT
+  A-090  land_hard_roll                                 0.94 s  ONE-SHOT
+  A-091  land_glass_crack                               1.10 s  ONE-SHOT
+  A-092  land_fatal                                     1.40 s  ONE-SHOT
+  A-093  ledge_grab_from_fall                           0.44 s  ONE-SHOT
+  A-094  vault_low                                      0.46 s  ONE-SHOT
+  A-095  vault_high                                     0.88 s  ONE-SHOT
+  A-096  vault_over_rail                                0.72 s  ONE-SHOT
+  A-097  drop_hang                                      0.56 s  ONE-SHOT
+  A-098  drop_to_ground_soft                            0.50 s  ONE-SHOT
+  A-099  wall_bounce                                    0.42 s  ONE-SHOT
+  A-100  ledge_hang_idle                                5.00 s  BOUCLE
+  A-101  ledge_hang_tired                               4.20 s  BOUCLE
+  A-102  ledge_shimmy_L                                 0.90 s  BOUCLE
+  A-103  ledge_shimmy_R                                 0.90 s  BOUCLE
+  A-104  ledge_shimmy_fast_L                            0.56 s  ONE-SHOT
+  A-105  ledge_shimmy_fast_R                            0.56 s  BOUCLE
+  A-106  ledge_corner_inner_L                           1.02 s  ONE-SHOT
+  A-107  ledge_corner_inner_R                           1.02 s  ONE-SHOT
+  A-108  ledge_corner_outer_L                           1.18 s  ONE-SHOT
+  A-109  ledge_corner_outer_R                           1.18 s  ONE-SHOT
+  A-110  ledge_climb_fast                               0.70 s  ONE-SHOT
+  A-111  ledge_climb_exhausted                          1.32 s  ONE-SHOT
+  A-112  ledge_slip                                     0.48 s  ONE-SHOT
+  A-113  ladder_climb_up                                1.00 s  BOUCLE
+  A-114  ladder_climb_down                              1.10 s  BOUCLE
+  A-115  ladder_mount                                   0.64 s  ONE-SHOT
+  A-116  ladder_dismount_top                            0.82 s  ONE-SHOT
+  A-117  wallrun_L                                      2.10 s  BOUCLE
+  A-118  wallrun_R                                      2.10 s  BOUCLE
+  A-119  wallrun_exit_jump                              0.40 s  ONE-SHOT
+  A-120  grapple_aim_idle                               2.40 s  BOUCLE
+  A-121  grapple_fire                                   0.18 s  ONE-SHOT
+  A-122  grapple_taut                                   0.30 s  ONE-SHOT
+  A-123  grapple_pull_loop                              0.80 s  BOUCLE
+  A-124  grapple_swing_loop                             1.60 s  BOUCLE
+  A-125  grapple_swing_pump_up                          0.60 s  ONE-SHOT
+  A-126  grapple_swing_extend_down                      0.64 s  ONE-SHOT
+  A-127  grapple_release_flip                           0.68 s  ONE-SHOT
+  A-128  grapple_release_plain                          0.32 s  ONE-SHOT
+  A-129  grapple_wall_impact                            0.52 s  ONE-SHOT
+  A-130  grapple_wall_climb_loop                        0.90 s  BOUCLE
+  A-131  grapple_miss                                   0.94 s  ONE-SHOT
+  A-132  grapple_miss_on_glass                          1.20 s  ONE-SHOT
+  A-133  grapple_reel_in                                1.40 s  ONE-SHOT
+  A-134  grapple_retract_fast                           0.42 s  ONE-SHOT
+  A-135  grapple_two_hand_pull                          2.20 s  BOUCLE
+  A-136  grapple_anchor_place                           1.90 s  ONE-SHOT
+  A-137  grapple_zip_ride                               1.20 s  BOUCLE
+  A-138  grapple_zip_brake                              0.76 s  ONE-SHOT
+  A-139  grapple_snap_scripted                          2.60 s  ONE-SHOT
+  A-140  guard_idle                                     4.00 s  BOUCLE
+  A-141  guard_idle_two_enemies                         4.00 s  BOUCLE
+  A-142  strike_light_1                                 0.48 s  ONE-SHOT
+  A-143  strike_light_2                                 0.52 s  ONE-SHOT
+  A-144  strike_light_3                                 0.72 s  ONE-SHOT
+  A-145  strike_heavy_charge                            1.10 s  BOUCLE
+  A-146  strike_heavy_release                           0.88 s  ONE-SHOT
+  A-147  charge_cancel                                  0.40 s  ONE-SHOT
+  A-148  parry_success                                  0.56 s  ONE-SHOT
+  A-149  parry_success_perfect                          0.62 s  ONE-SHOT
+  A-150  parry_fail                                     0.74 s  ONE-SHOT
+  A-151  guard_hold_loop                                2.50 s  BOUCLE
+  A-152  guard_break_exhausted                          0.90 s  ONE-SHOT
+  A-153  riposte_strike                                 0.64 s  ONE-SHOT
+  A-154  dodge_roll_F                                   0.55 s  ONE-SHOT
+  A-155  dodge_roll_B                                   0.55 s  ONE-SHOT
+  A-156  dodge_roll_L                                   0.55 s  ONE-SHOT
+  A-157  dodge_roll_R                                   0.55 s  ONE-SHOT
+  A-158  dodge_step_back                                0.32 s  ONE-SHOT
+  A-159  dodge_sidestep_L                               0.38 s  ONE-SHOT
+  A-160  dodge_sidestep_R                               0.38 s  ONE-SHOT
+  A-161  stagger_light                                  0.62 s  ONE-SHOT
+  A-162  stagger_heavy                                  1.08 s  ONE-SHOT
+  A-163  knockdown                                      1.34 s  ONE-SHOT
+  A-164  getup_fast                                     0.78 s  ONE-SHOT
+  A-165  getup_slow                                     1.68 s  ONE-SHOT
+  A-166  breath_break_collapse                          3.50 s  ONE-SHOT
+  A-167  execute_shatter                                2.20 s  ONE-SHOT
+  A-168  combat_exit                                    1.80 s  ONE-SHOT
+  A-169  weapon_draw                                    0.62 s  ONE-SHOT
+  A-170  weapon_sheathe                                 0.86 s  ONE-SHOT
+  A-171  glove_removal                                  1.10 s  ONE-SHOT
+  A-172  hand_wipe_thigh                                0.64 s  ONE-SHOT
+  A-173  echo_hand_place                                0.70 s  ONE-SHOT
+  A-174  echo_read_loop                                 6.00 s  BOUCLE
+  A-175  echo_read_unstable                             4.00 s  BOUCLE
+  A-176  echo_break                                     1.40 s  ONE-SHOT
+  A-177  echo_end_soft                                  1.90 s  ONE-SHOT
+  A-178  echo_end_hard                                  3.20 s  ONE-SHOT
+  A-179  glove_wear                                     1.24 s  ONE-SHOT
+  A-180  interact_pickup_small                          0.90 s  ONE-SHOT
+  A-181  interact_pickup_from_ground                    1.50 s  ONE-SHOT
+  A-182  interact_door_push_light                       1.10 s  ONE-SHOT
+  A-183  interact_door_push_heavy                       2.20 s  ONE-SHOT
+  A-184  interact_lever_pull                            1.60 s  ONE-SHOT
+  A-185  interact_crank_turn                            2.00 s  BOUCLE
+  A-186  interact_read_paper                            4.20 s  BOUCLE
+  A-187  interact_letter_deliver                        3.40 s  ONE-SHOT
+  A-188  interact_sit_bench                             2.80 s  ONE-SHOT
+  A-189  sit_idle                                      10.00 s  BOUCLE
+  A-190  stand_from_bench                               2.10 s  ONE-SHOT
+  A-191  pickup_lantern                                 1.70 s  ONE-SHOT
+  A-192  place_lantern                                  1.90 s  ONE-SHOT
+  A-193  pickup_heavy                                   2.40 s  ONE-SHOT
+  A-194  drop_heavy                                     1.80 s  ONE-SHOT
+  A-195  idle_dialogue_reply                            5.00 s  BOUCLE
+  A-196  jaw_clench_react                               0.90 s  ONE-SHOT
+  A-197  collar_up_wind                                 1.30 s  ONE-SHOT
+  A-198  shiver_cold                                    2.40 s  BOUCLE
+  A-199  look_back_over_shoulder                        1.60 s  ONE-SHOT
+  A-200  dance_step_basic                               2.00 s  BOUCLE
+  A-201  dance_start                                    1.40 s  ONE-SHOT
+  A-202  dance_step_turn                                2.60 s  ONE-SHOT
+  A-203  dance_stop_abrupt                              0.90 s  ONE-SHOT
+  A-204  cine_C01_row_boat                             22.00 s  ONE-SHOT
+  A-205  cine_C01_first_step_on_glass                  18.00 s  ONE-SHOT
+  A-206  cine_C05_empty_folder                         26.00 s  ONE-SHOT
+  A-207  cine_C08_kneel_ballroom                       22.00 s  ONE-SHOT
+  A-208  cine_C09_receive_folder                       14.00 s  ONE-SHOT
+  A-209  cine_C11_door_push_final                       5.20 s  ONE-SHOT
+  A-210  cine_C11_letter_hand_place                     2.44 s  ONE-SHOT
+  A-211  cine_C11_no_echo                               3.50 s  ONE-SHOT
+  A-212  cine_C11_unfold_letter                         4.10 s  ONE-SHOT
+  A-213  cine_C11_reading_loop                         12.00 s  BOUCLE
+  A-214  cine_C11_react_jaw                             2.80 s  ONE-SHOT
+  A-215  cine_C11_react_eyes_closed                     4.20 s  ONE-SHOT
+  A-216  cine_C11_react_final                           6.00 s  ONE-SHOT
+  A-217  cine_C11_fold_and_store                        5.20 s  ONE-SHOT
+  A-218  cine_C11_coat_on_sol                          11.00 s  ONE-SHOT
+
+  === PARTIE 2 — ESTEBAN ===
+
+  A-219  idle_neutral                                  10.00 s  BOUCLE
+  A-220  idle_lean_table                               12.00 s  BOUCLE
+  A-221  idle_sit_edge                                 11.00 s  BOUCLE
+  A-222  idle_hair_tuck                                 2.60 s  ONE-SHOT
+  A-223  idle_smirk_left                                1.80 s  ONE-SHOT
+  A-224  idle_table_tap_twice                           1.20 s  ONE-SHOT
+  A-225  idle_pencil_spin                               3.40 s  ONE-SHOT
+  A-226  idle_notebook_check                            4.80 s  ONE-SHOT
+  A-227  idle_listening_warm                            9.00 s  BOUCLE
+  A-228  idle_speaking_animated                         8.00 s  BOUCLE
+  A-229  idle_night_anxious                            13.00 s  BOUCLE
+  A-230  idle_back_turned_distant                       8.00 s  BOUCLE
+  A-231  walk_F                                         1.15 s  BOUCLE
+  A-232  walk_backwards_talking                         1.30 s  BOUCLE
+  A-233  stumble_backwards                              0.88 s  ONE-SHOT
+  A-234  walk_slow_thoughtful                           1.60 s  BOUCLE
+  A-235  jog_F                                          0.76 s  BOUCLE
+  A-236  turn_toward_camera                             1.40 s  ONE-SHOT
+  A-237  approach_intimate                              2.80 s  ONE-SHOT
+  A-238  step_away_final                                3.60 s  ONE-SHOT
+  A-239  climb_ladder_bell_tower                        1.10 s  BOUCLE
+  A-240  work_stance_bell                               7.00 s  BOUCLE
+  A-241  sit_down_heavy                                 2.20 s  ONE-SHOT
+  A-242  stand_from_edge                                1.60 s  ONE-SHOT
+  A-243  dance_step_basic_esteban                       2.00 s  BOUCLE
+  A-244  dance_step_turn_esteban                        2.60 s  ONE-SHOT
+  A-245  line_E21_01_you_came                           3.20 s  ONE-SHOT
+  A-246  line_E21_02_fourth_letter                      5.60 s  ONE-SHOT
+  A-247  line_E21_03_predictable                        6.20 s  ONE-SHOT
+  A-248  line_E21_04_dance_first                        2.80 s  ONE-SHOT
+  A-249  line_E21_05_me_neither                         4.40 s  ONE-SHOT
+  A-250  banter_dance_01_ils_jouent_la_valse            2.00 s  ONE-SHOT
+  A-251  banter_dance_02_je_danse_mal                   2.40 s  ONE-SHOT
+  A-252  banter_dance_03_statistiquement_moyens         2.80 s  ONE-SHOT
+  A-253  banter_dance_04_si                             2.20 s  ONE-SHOT
+  A-254  banter_dance_05_donc_c_est_oui                 2.60 s  ONE-SHOT
+  A-255  banter_dance_06_y_a_pas_de_pas                 3.00 s  ONE-SHOT
+  A-256  banter_dance_07_quatre_fois                    2.40 s  ONE-SHOT
+  A-257  banter_dance_08_tu_regardes_tes_pieds          2.20 s  ONE-SHOT
+  A-258  banter_dance_09_tu_as_ferme_les_yeux           2.40 s  ONE-SHOT
+  A-259  banter_dance_10_menteur                        2.00 s  ONE-SHOT
+  A-260  banter_dance_11_je_tourne_pour_deux            2.80 s  ONE-SHOT
+  A-261  line_E21_06_i_got_the_post                     5.00 s  ONE-SHOT
+  A-262  line_E21_07_dont_do_that                       3.60 s  ONE-SHOT
+  A-263  line_E21_08_that_thing                         9.40 s  ONE-SHOT
+  A-264  line_E21_09_already_decided                    7.80 s  ONE-SHOT
+  A-265  line_E21_10A_alright                           4.20 s  ONE-SHOT
+  A-266  line_E21_10B_i_wont_ask                        6.60 s  ONE-SHOT
+  A-267  action_take_hand_turn_palm                     4.80 s  ONE-SHOT
+  A-268  line_E21_11_dirty_hands                        3.80 s  ONE-SHOT
+  A-269  line_E21_12_i_know                             4.60 s  ONE-SHOT
+  A-270  line_E21_13_i_leave_tuesday                    3.00 s  ONE-SHOT
+  A-271  echo_E16_bench_01_arrival                      4.00 s  ONE-SHOT
+  A-272  echo_E16_bench_02_the_bells_at_night           6.50 s  ONE-SHOT
+  A-273  echo_E16_bench_03_growing_old_here             8.00 s  ONE-SHOT
+  A-274  echo_E16_bench_04_read_me_something            3.60 s  ONE-SHOT
+  A-275  echo_E16_bench_05_the_refusal_silence          5.00 s  ONE-SHOT
+  A-276  echo_E16_bench_06_he_does_not_insist           4.40 s  ONE-SHOT
+  A-277  echo_E16_bench_07_small_talk_recovery          5.60 s  ONE-SHOT
+  A-278  echo_E16_bench_08_exit_looking_up              3.00 s  ONE-SHOT
+  A-279  notebook_voice_01_jour_4                       6.00 s  ONE-SHOT
+  A-280  notebook_voice_02_jour_61                      8.00 s  ONE-SHOT
+  A-281  notebook_voice_03_jour_140                     7.50 s  ONE-SHOT
+  A-282  notebook_voice_04_jour_300                     9.00 s  ONE-SHOT
+  A-283  notebook_voice_05_jour_612                    11.00 s  ONE-SHOT
+  A-284  notebook_voice_06_jour_1049                    6.50 s  ONE-SHOT
+  A-285  letter_vo_full                               250.00 s  ONE-SHOT
+  A-286  ghost_ballroom_01_talking_to_someone_A         9.00 s  BOUCLE
+  A-287  ghost_ballroom_02_talking_to_someone_B         7.00 s  BOUCLE
+  A-288  ghost_ballroom_03_talking_to_someone_C        11.00 s  BOUCLE
+  A-289  ghost_ballroom_04_laugh                        4.00 s  BOUCLE
+  A-290  ghost_ballroom_05_scanning_the_room            8.00 s  BOUCLE
+  A-291  ghost_ballroom_06_drinking                     6.00 s  BOUCLE
+  A-292  ghost_ballroom_07_adjust_sleeve                5.00 s  BOUCLE
+  A-293  ghost_ballroom_08_watching_the_door_A         10.00 s  BOUCLE
+  A-294  ghost_ballroom_09_watching_the_door_B          6.00 s  BOUCLE
+  A-295  ghost_ballroom_10_greeting_someone             4.50 s  BOUCLE
+  A-296  ghost_ballroom_11_checking_watch               5.50 s  BOUCLE
+  A-297  ghost_ballroom_12_still_from_behind           12.00 s  BOUCLE
+  A-298  photo_pose_01_bell_workshop_group              0.03 s  POSE FIG
+  A-299  photo_pose_02_laughing_blurred                 0.03 s  POSE FIG
+  A-300  photo_pose_03_lavandieres_with_lohen           0.03 s  POSE FIG
+  A-301  photo_pose_04_back_top_of_stairs               0.03 s  POSE FIG
+  A-302  photo_pose_05_npc_wall_set                     0.03 s  POSE FIG
+  A-303  mirror_reflection_idle                         6.00 s  BOUCLE
+  A-304  hand_insert_01_writing                         6.00 s  ONE-SHOT
+  A-305  hand_insert_02_tuning_a_bell                   4.50 s  ONE-SHOT
+  A-306  hand_insert_03_folding_a_letter                3.20 s  ONE-SHOT
+  A-307  hand_insert_04_letter_into_coat_pocket         2.40 s  ONE-SHOT
+  A-308  hand_insert_05_cup_two_hands                   5.00 s  ONE-SHOT
+  A-309  hand_insert_06_turning_pages                   4.00 s  ONE-SHOT
+  A-310  hand_insert_07_stone_on_paper                  1.50 s  ONE-SHOT
+  A-311  hand_insert_08_pinching_a_candle               2.00 s  ONE-SHOT
+  A-312  idle_generic_echo_background                   9.00 s  BOUCLE
+  A-313  turn_away_dissolve                             3.40 s  ONE-SHOT
+  A-314  reach_toward_nothing                           4.00 s  ONE-SHOT
+
+  === PARTIE 3 — MIREILLE VANDECK ===
+
+  A-315  idle_standing_cane                            11.00 s  BOUCLE
+  A-316  idle_sitting_desk                             13.00 s  BOUCLE
+  A-317  idle_hide_burned_hand                          2.20 s  ONE-SHOT
+  A-318  idle_cup_rotate                                3.60 s  ONE-SHOT
+  A-319  idle_glasses_adjust                            2.40 s  ONE-SHOT
+  A-320  idle_reading_card                              8.00 s  BOUCLE
+  A-321  idle_listening_sharp                          10.00 s  BOUCLE
+  A-322  idle_listening_evasive                        10.00 s  BOUCLE
+  A-323  walk_cane_F                                    1.70 s  BOUCLE
+  A-324  walk_cane_slow                                 2.20 s  BOUCLE
+  A-325  stairs_up_cane                                 2.60 s  BOUCLE
+  A-326  sit_down_slow                                  3.20 s  ONE-SHOT
+  A-327  stand_up_slow                                  3.80 s  ONE-SHOT
+  A-328  turn_in_place_cane                             1.40 s  ONE-SHOT
+  A-329  action_pour_tea                                6.40 s  ONE-SHOT
+  A-330  action_open_drawer_files                       4.20 s  ONE-SHOT
+  A-331  action_hand_over_key                           3.60 s  ONE-SHOT
+  A-332  action_cane_point                              2.00 s  ONE-SHOT
+  A-333  action_slam_ledger                             1.20 s  ONE-SHOT
+  A-334  line_hands_of_a_man_who_touches                4.20 s  ONE-SHOT
+  A-335  line_sit_down_youre_dripping                   2.40 s  ONE-SHOT
+  A-336  line_the_library_is_not_a_shelter              3.00 s  ONE-SHOT
+  A-337  line_what_are_you_looking_for                  2.20 s  ONE-SHOT
+  A-338  line_touching_is_greed                         3.60 s  ONE-SHOT
+  A-339  line_the_registry_is_not_here                  2.80 s  ONE-SHOT
+  A-340  line_i_have_worked_here_since                  3.40 s  ONE-SHOT
+  A-341  line_once_that_is_quite_enough                 2.60 s  ONE-SHOT
+  A-342  line_glass_remembers_heat                      3.80 s  ONE-SHOT
+  A-343  line_you_are_not_the_first                     3.00 s  ONE-SHOT
+  A-344  line_never_anything_new_in_there               5.20 s  ONE-SHOT
+  A-345  line_the_fourth_floor_is_eaten                 2.80 s  ONE-SHOT
+  A-346  line_do_not_thank_me_yet                       2.00 s  ONE-SHOT
+  A-347  line_tea_is_not_hospitality                    3.20 s  ONE-SHOT
+  A-348  line_people_look_for_a_sentence                4.00 s  ONE-SHOT
+  A-349  line_locker_four_row_M                         3.00 s  ONE-SHOT
+  A-350  line_third_floor_touch_nothing                 2.60 s  ONE-SHOT
+  A-351  line_they_are_short                            2.40 s  ONE-SHOT
+  A-352  line_do_not_thank_me_second                    2.20 s  ONE-SHOT
+  A-353  line_wait                                      1.80 s  ONE-SHOT
+  A-354  line_i_just_lied_to_you                        6.00 s  ONE-SHOT
+  A-355  line_the_grille_to_the_west                    3.40 s  ONE-SHOT
+  A-356  line_i_will_get_you_out                        2.80 s  ONE-SHOT
+  A-357  line_conv3_01_you_came_back                    2.80 s  ONE-SHOT
+  A-358  line_conv3_02_the_folder_was_empty             3.60 s  ONE-SHOT
+  A-359  line_conv3_03_i_emptied_it                     2.20 s  ONE-SHOT
+  A-360  line_conv3_04_twenty_two_years_ago             3.00 s  ONE-SHOT
+  A-361  line_conv3_05_it_was_not_for_you               2.80 s  ONE-SHOT
+  A-362  line_conv3_06_i_will_not_explain               2.60 s  ONE-SHOT
+  A-363  line_conv3_07_go_up_the_city                   3.20 s  ONE-SHOT
+  A-364  line_abandon_01_close_the_door                 2.00 s  ONE-SHOT
+  A-365  line_abandon_02_it_will_keep                   2.40 s  ONE-SHOT
+  A-366  letter_written_offscreen                       5.00 s  ONE-SHOT
+  A-367  bg_sorting_cards                              11.00 s  BOUCLE
+  A-368  bg_dusting_shelf                               9.00 s  BOUCLE
+  A-369  bg_rolling_ladder                              7.00 s  BOUCLE
+  A-370  bg_stop_and_listen_to_the_building            12.00 s  BOUCLE
+  A-371  bg_clean_single_lens                           6.00 s  BOUCLE
+  A-372  bg_drinking_tea_alone                          8.00 s  BOUCLE
+  A-373  bg_looking_through_oculus                     10.00 s  BOUCLE
+  A-374  bg_mending_coat_patch_15                      14.00 s  BOUCLE
+  A-375  bg_counting_cards                              9.00 s  BOUCLE
+  A-376  bg_sitting_doing_nothing                      14.00 s  BOUCLE
+  A-377  bg_replacing_fallen_book                       5.00 s  BOUCLE
+  A-378  bg_standing_before_locker_four                13.00 s  BOUCLE
+
+  === PARTIE 4 — CAPITAINE ORVAL TALLEC ===
+
+  A-379  idle_sitting_askew                            14.00 s  BOUCLE
+  A-380  idle_prosthetic_tap                            1.80 s  ONE-SHOT
+  A-381  idle_clean_prosthetic                          9.00 s  BOUCLE
+  A-382  idle_standing_heavy                           10.00 s  BOUCLE
+  A-383  idle_arms_crossed_prosthetic                   8.00 s  BOUCLE
+  A-384  idle_listening_unimpressed                    11.00 s  BOUCLE
+  A-385  walk_heavy_F                                   1.24 s  BOUCLE
+  A-386  stand_up_from_chair                            2.40 s  ONE-SHOT
+  A-387  sit_down_askew                                 2.80 s  ONE-SHOT
+  A-388  turn_90_heavy                                  1.10 s  ONE-SHOT
+  A-389  lean_on_railing                               12.00 s  BOUCLE
+  A-390  action_place_anchor_on_table                   4.60 s  ONE-SHOT
+  A-391  action_look_at_letter                          6.00 s  ONE-SHOT
+  A-392  action_point_at_lohen                          2.20 s  ONE-SHOT
+  A-393  action_rub_face_tired                          3.40 s  ONE-SHOT
+  A-394  line_zero_cent_quatorze                        2.40 s  ONE-SHOT
+  A-395  line_still_cleaning                            2.80 s  ONE-SHOT
+  A-396  line_no_longer_captain                         3.60 s  ONE-SHOT
+  A-397  line_sit_or_dont                               2.20 s  ONE-SHOT
+  A-398  line_eleven_hours                              2.60 s  ONE-SHOT
+  A-399  line_what_did_you_come_for                     2.00 s  ONE-SHOT
+  A-400  line_everyone_wants_the_registry               2.70 s  ONE-SHOT
+  A-401  line_the_registry_answer                       2.40 s  ONE-SHOT
+  A-402  line_four_metres_of_glass                      2.90 s  ONE-SHOT
+  A-403  line_so_you_already_know                       2.30 s  ONE-SHOT
+  A-404  line_who_is_it_addressed_to                    2.00 s  ONE-SHOT
+  A-405  line_he_looks_at_the_letter                    3.00 s  ONE-SHOT
+  A-406  line_why_do_you_carry_it                       4.40 s  ONE-SHOT
+  A-407  line_no_thats_your_excuse                      3.20 s  ONE-SHOT
+  A-408  line_your_tall_redhead                         2.80 s  ONE-SHOT
+  A-409  line_i_know_who_you_look_for                   3.40 s  ONE-SHOT
+  A-410  line_i_lost_thirty_one                         3.00 s  ONE-SHOT
+  A-411  line_not_helping_you_find_him                  4.00 s  ONE-SHOT
+  A-412  line_take_the_anchor                           2.60 s  ONE-SHOT
+  A-413  line_it_is_heavy                               2.20 s  ONE-SHOT
+  A-414  line_dont_thank_me_either                      2.40 s  ONE-SHOT
+  A-415  line_the_market_holds                          2.80 s  ONE-SHOT
+  A-416  line_i_count_the_walkways                      2.10 s  ONE-SHOT
+  A-417  line_you_were_a_runner_at_nineteen             3.60 s  ONE-SHOT
+  A-418  line_the_glass_took_the_port                   2.90 s  ONE-SHOT
+  A-419  line_dont_go_under                             2.50 s  ONE-SHOT
+  A-420  line_there_is_a_kid_down_there                 2.40 s  ONE-SHOT
+  A-421  line_the_wet_brake                             3.20 s  ONE-SHOT
+  A-422  line_i_told_the_company_in_23                  4.20 s  ONE-SHOT
+  A-423  line_they_answered_the_second_time             3.80 s  ONE-SHOT
+  A-424  line_take_the_bread                            2.20 s  ONE-SHOT
+  A-425  line_abandon_go_on_then                        2.00 s  ONE-SHOT
+  A-426  bg_inspect_walkway                            12.00 s  BOUCLE
+  A-427  bg_shouting_offscreen                          8.00 s  BOUCLE
+  A-428  bg_distribute_rations                         16.00 s  BOUCLE
+  A-429  bg_repair_pulley_one_handed                   14.00 s  BOUCLE
+  A-430  bg_smoking                                    10.00 s  BOUCLE
+  A-431  bg_looking_at_the_lighthouse                  11.00 s  BOUCLE
+  A-432  bg_sleeping_sitting_up                        15.00 s  BOUCLE
+  A-433  bg_checking_a_list                             9.00 s  BOUCLE
+  A-434  bg_helping_an_elder_up_a_step                  7.00 s  BOUCLE
+  A-435  bg_before_the_amber_door                      13.00 s  BOUCLE
+  A-436  bg_counting_names_on_the_poster               16.00 s  BOUCLE
+
+  === PARTIE 5 — SOL ===
+
+  A-437  idle_fidget                                    7.00 s  BOUCLE
+  A-438  idle_perfectly_still                           6.00 s  BOUCLE
+  A-439  idle_crouch_perch                              9.00 s  BOUCLE
+  A-440  idle_hang_upside_down                          8.00 s  BOUCLE
+  A-441  idle_eat_unidentified                         11.00 s  BOUCLE
+  A-442  idle_pick_at_sleeve                            5.00 s  BOUCLE
+  A-443  idle_sleeping_against_door                    20.00 s  BOUCLE
+  A-444  idle_listening_pretend_bored                   8.00 s  BOUCLE
+  A-445  idle_suspicious_watch                          7.00 s  BOUCLE
+  A-446  idle_proud_small                               4.00 s  ONE-SHOT
+  A-447  idle_cold_shivering                            6.00 s  BOUCLE
+  A-448  idle_count_on_fingers                          5.50 s  ONE-SHOT
+  A-449  idle_head_tilt_curious                         3.00 s  ONE-SHOT
+  A-450  idle_look_at_lohen_when_not_watched            6.00 s  BOUCLE
+  A-451  walk_bouncy                                    0.90 s  BOUCLE
+  A-452  run_fast_light                                 0.48 s  BOUCLE
+  A-453  run_rooftop_chase                              0.50 s  BOUCLE
+  A-454  crouch_run_duct                                0.72 s  BOUCLE
+  A-455  vault_effortless                               0.40 s  ONE-SHOT
+  A-456  slide_under_gap                                0.62 s  ONE-SHOT
+  A-457  climb_pipe_fast                                0.80 s  BOUCLE
+  A-458  jump_gap_confident                             0.38 s  ONE-SHOT
+  A-459  land_light_roll                                0.48 s  ONE-SHOT
+  A-460  balance_beam_walk                              1.40 s  BOUCLE
+  A-461  hang_and_swap_grip                             1.10 s  ONE-SHOT
+  A-462  drop_from_height                               0.90 s  ONE-SHOT
+  A-463  squeeze_through_gap                            1.80 s  ONE-SHOT
+  A-464  walk_backwards_facing_lohen                    1.05 s  BOUCLE
+  A-465  stop_dead_in_tracks                            0.32 s  ONE-SHOT
+  A-466  turn_and_grin                                  0.80 s  ONE-SHOT
+  A-467  sit_cross_legged                               1.60 s  ONE-SHOT
+  A-468  lie_on_stomach_kick_feet                      10.00 s  BOUCLE
+  A-469  walk_tired_slow                                1.50 s  BOUCLE
+  A-470  action_steal_satchel                           1.20 s  ONE-SHOT
+  A-471  action_throw_satchel_back                      1.80 s  ONE-SHOT
+  A-472  action_repair_grapple                         22.00 s  BOUCLE
+  A-473  action_hand_over_grapple                       2.40 s  ONE-SHOT
+  A-474  action_point_the_way                           1.40 s  ONE-SHOT
+  A-475  action_offer_food                              3.20 s  ONE-SHOT
+  A-476  action_deliver_mireille_letter                 4.00 s  ONE-SHOT
+  A-477  action_shrug_full                              1.10 s  ONE-SHOT
+  A-478  action_wipe_nose_sleeve                        1.00 s  ONE-SHOT
+  A-479  action_kick_pebble                             1.40 s  ONE-SHOT
+  A-480  line_zero_un_un_quatre                         2.60 s  ONE-SHOT
+  A-481  line_thats_a_number_not_a_name                 2.00 s  ONE-SHOT
+  A-482  line_i_can_read_numbers                        2.20 s  ONE-SHOT
+  A-483  line_letters_are_different                     1.80 s  ONE-SHOT
+  A-484  line_i_said_letters_not_words                  3.00 s  ONE-SHOT
+  A-485  line_you_carry_a_letter                        2.40 s  ONE-SHOT
+  A-486  line_youre_a_bad_postman                       2.20 s  ONE-SHOT
+  A-487  line_everyone_here_is                          2.00 s  ONE-SHOT
+  A-488  line_here_everyone_is_that                     3.40 s  ONE-SHOT
+  A-489  line_where_do_you_sleep                        1.60 s  ONE-SHOT
+  A-490  line_nowhere_is_an_answer                      2.20 s  ONE-SHOT
+  A-491  line_everyone_says_no                          2.80 s  ONE-SHOT
+  A-492  line_lower_the_lantern                         2.40 s  ONE-SHOT
+  A-493  line_my_brother_said                           3.20 s  ONE-SHOT
+  A-494  line_he_said_he_could_swim                     2.60 s  ONE-SHOT
+  A-495  line_four_and_the_dog                          8.00 s  ONE-SHOT
+  A-496  line_you_say_nothing                           1.80 s  ONE-SHOT
+  A-497  line_theres_none                               1.40 s  ONE-SHOT
+  A-498  line_better_than_those_who_find                3.00 s  ONE-SHOT
+  A-499  line_you_talk_to_yourself                      2.00 s  ONE-SHOT
+  A-500  line_walk_in_the_middle                        2.20 s  ONE-SHOT
+  A-501  line_hollow_isnt_dangerous                     2.80 s  ONE-SHOT
+  A-502  line_your_boots_make_noise                     3.20 s  ONE-SHOT
+  A-503  line_212_metres                                2.00 s  ONE-SHOT
+  A-504  line_theres_nobody_up_there                    2.40 s  ONE-SHOT
+  A-505  line_then_why_do_you_go_up                     2.60 s  ONE-SHOT
+  A-506  line_four_metres_less                          3.00 s  ONE-SHOT
+  A-507  line_i_wait_here                               4.00 s  ONE-SHOT
+
+  === PARTIE 6 — FIGURE — L'ECHASSIER ===
+
+  A-508  idle_standing                                 12.00 s  BOUCLE
+  A-509  idle_listening_tilt                            5.00 s  ONE-SHOT
+  A-510  idle_stop_at_door                              9.00 s  BOUCLE
+  A-511  walk_slow                                      2.40 s  BOUCLE
+  A-512  walk_patrol                                    2.80 s  BOUCLE
+  A-513  walk_agitated                                  1.60 s  BOUCLE
+  A-514  charge_run                                     0.90 s  BOUCLE
+  A-515  turn_90_L / [ECH-LOC-519] turn_90_R            1.80 s  ONE-SHOT
+  A-516  turn_90_R                                      2.60 s  ONE-SHOT
+  A-517  turn_180_slow                                  3.20 s  ONE-SHOT
+  A-518  crouch_lower_body                              1.60 s  ONE-SHOT
+  A-519  rise_to_full_height                            1.40 s  ONE-SHOT
+  A-520  tell_leg_raise                                 0.80 s  ONE-SHOT
+  A-521  attack_pike_strike                             0.70 s  ONE-SHOT
+  A-522  attack_pike_double                             1.30 s  ONE-SHOT
+  A-523  attack_sweep_low                               1.10 s  ONE-SHOT
+  A-524  attack_body_slam                               1.80 s  ONE-SHOT
+  A-525  reaction_hit_light                             0.40 s  ONE-SHOT
+  A-526  reaction_hit_heavy                             0.80 s  ONE-SHOT
+  A-527  reaction_leg_broken                            1.40 s  ONE-SHOT
+  A-528  walk_broken_leg                                3.20 s  BOUCLE
+  A-529  stagger_heart_exposed                          1.40 s  ONE-SHOT
+  A-530  death_shatter                                  2.60 s  ONE-SHOT
+  A-531  death_slow_settle                              4.00 s  ONE-SHOT
+  A-532  emerge_from_glass                              3.40 s  ONE-SHOT
+  A-533  submerge_into_glass                            3.00 s  ONE-SHOT
+  A-534  alert_freeze_and_pivot                         2.20 s  ONE-SHOT
+  A-535  lost_target_search                             4.60 s  ONE-SHOT
+  A-536  walk_on_glass_gliding                          3.20 s  BOUCLE
+  A-537  climb_vertical_wall                            5.00 s  BOUCLE
+  A-538  group_subordination_posture                    8.00 s  BOUCLE
+  A-539  recoil_from_lantern                            1.80 s  ONE-SHOT
+  A-540  idle_distant_LOD2                             10.00 s  BOUCLE
+  A-541  cross_field_without_aggression                11.00 s  ONE-SHOT
+
+  === PARTIE 7 — FIGURE — LE MUEUR ===
+
+  A-542  idle_crouched                                  8.00 s  BOUCLE
+  A-543  idle_plate_shedding                            6.00 s  BOUCLE
+  A-544  walk_hunched                                   1.10 s  BOUCLE
+  A-545  run_scuttle                                    0.52 s  BOUCLE
+  A-546  run_flee                                       0.56 s  BOUCLE
+  A-547  climb_wall_scramble                            0.90 s  BOUCLE
+  A-548  ceiling_crawl                                  1.40 s  BOUCLE
+  A-549  drop_from_ceiling                              0.80 s  ONE-SHOT
+  A-550  circle_strafe                                  1.20 s  BOUCLE
+  A-551  back_away_hesitant                             1.60 s  BOUCLE
+  A-552  recoil_from_light                              0.90 s  ONE-SHOT
+  A-553  tell_plate_clack                               0.50 s  ONE-SHOT
+  A-554  attack_claw_swipe                              0.56 s  ONE-SHOT
+  A-555  attack_double_swipe                            1.00 s  ONE-SHOT
+  A-556  attack_lunge_bite                              0.90 s  ONE-SHOT
+  A-557  attack_from_behind                             0.70 s  ONE-SHOT
+  A-558  attack_grab_hold                               2.40 s  ONE-SHOT
+  A-559  reaction_hit_light                             0.34 s  ONE-SHOT
+  A-560  reaction_hit_heavy                             0.68 s  ONE-SHOT
+  A-561  stagger_heart_exposed                          1.40 s  ONE-SHOT
+  A-562  death_shatter                                  1.80 s  ONE-SHOT
+  A-563  death_curl_up                                  3.40 s  ONE-SHOT
+  A-564  pack_waiting_posture                           9.00 s  BOUCLE
+  A-565  plate_clack_communication                      2.40 s  ONE-SHOT
+  A-566  coordinated_encirclement                       6.00 s  BOUCLE
+  A-567  the_first_one_to_advance                       3.00 s  ONE-SHOT
+  A-568  collective_recoil_on_death                     1.20 s  ONE-SHOT
+  A-569  scavenger_repair_self                          5.00 s  ONE-SHOT
+  A-570  ambient_crouched_in_corner                    12.00 s  BOUCLE
+  A-571  ambient_scratching_a_wall                     10.00 s  BOUCLE
+  A-572  ambient_watching_a_window                     14.00 s  BOUCLE
+  A-573  ambient_rocking                                9.00 s  BOUCLE
+  A-574  ambient_facing_a_corner                       11.00 s  BOUCLE
+  A-575  ambient_sleeping                              16.00 s  BOUCLE
+  A-576  reaction_to_grapple_sound                      2.00 s  ONE-SHOT
+  A-577  flee_on_echassier_death                        3.40 s  ONE-SHOT
+  A-578  curious_non_hostile_follow                    12.00 s  BOUCLE
+  A-579  doorway_blocking                              10.00 s  BOUCLE
+  A-580  sitting_before_the_amber_mailbox              20.00 s  BOUCLE
+
+  === PARTIE 8 — LE VERRIER (ANSELME ROUX) ===
+
+  A-581  idle_standing_burdened                        14.00 s  BOUCLE
+  A-582  idle_head_raise_notice                         3.00 s  ONE-SHOT
+  A-583  walk_heavy                                     2.60 s  BOUCLE
+  A-584  walk_pursue                                    2.20 s  BOUCLE
+  A-585  walk_stop_and_wait                             6.00 s  ONE-SHOT
+  A-586  turn_90_ponderous                              2.40 s  ONE-SHOT
+  A-587  turn_180_ponderous                             4.20 s  ONE-SHOT
+  A-588  avoid_lamplight                                1.80 s  ONE-SHOT
+  A-589  stand_under_kiosk_pause                        8.00 s  BOUCLE
+  A-590  climb_low_step                                 2.80 s  ONE-SHOT
+  A-591  glass_flow_growth                              5.00 s  BOUCLE
+  A-592  idle_look_at_own_hand                          6.40 s  ONE-SHOT
+  A-593  idle_distant_ambient                          12.00 s  BOUCLE
+  A-594  tell_sweep                                     1.10 s  ONE-SHOT
+  A-595  attack_sweep_flow                              1.40 s  ONE-SHOT
+  A-596  tell_shard_throw                               0.90 s  ONE-SHOT
+  A-597  attack_shard_throw                             1.20 s  ONE-SHOT
+  A-598  tell_vertical_strike                           1.40 s  ONE-SHOT
+  A-599  attack_vertical_strike                         1.00 s  ONE-SHOT
+  A-600  stagger_after_parry                            2.20 s  ONE-SHOT
+  A-601  reaction_hit                                   0.52 s  ONE-SHOT
+  A-602  reaction_hit_heart                             1.10 s  ONE-SHOT
+  A-603  transition_phase2                              5.60 s  ONE-SHOT
+  A-604  idle_two_threats                              10.00 s  BOUCLE
+  A-605  tell_flow_slam                                 0.90 s  ONE-SHOT
+  A-606  attack_flow_slam                               1.10 s  ONE-SHOT
+  A-607  attack_flow_whip                               1.30 s  ONE-SHOT
+  A-608  attack_combined_double                         2.40 s  ONE-SHOT
+  A-609  summon_mueurs                                  3.40 s  ONE-SHOT
+  A-610  reaction_mueur_death                           1.80 s  ONE-SHOT
+  A-611  stagger_phase2                                 2.00 s  ONE-SHOT
+  A-612  flow_retract_pain                              1.60 s  ONE-SHOT
+  A-613  transition_phase3                              7.20 s  ONE-SHOT
+  A-614  phase3_walk_hand_extended                      3.20 s  BOUCLE
+  A-615  phase3_take_hit_absorb                         1.40 s  ONE-SHOT
+  A-616  phase3_stop_and_wait                           4.00 s  BOUCLE
+  A-617  phase3_kneel_slow                              6.00 s  ONE-SHOT
+  A-618  phase3_place_folder                            3.40 s  ONE-SHOT
+  A-619  phase3_point_at_lighthouse                     5.00 s  ONE-SHOT
+  A-620  phase3_final_stillness                        20.00 s  BOUCLE
+  A-621  optional_execute                               3.60 s  ONE-SHOT
+  A-622  optional_echo_touch_idle                      40.00 s  ONE-SHOT
+  A-623  death_if_killed_in_combat                      8.00 s  ONE-SHOT
+  A-624  echo_blowing_glass                            22.00 s  BOUCLE
+  A-625  echo_laughing                                  4.00 s  ONE-SHOT
+  A-626  echo_daughter_on_shoulders                     9.00 s  BOUCLE
+  A-627  echo_teaching_the_cane                        12.00 s  ONE-SHOT
+  A-628  echo_wiping_his_forehead                       3.00 s  ONE-SHOT
+  A-629  echo_closing_the_workshop                     14.00 s  ONE-SHOT
+  A-630  echo_looking_at_the_sea                       16.00 s  BOUCLE
+  A-631  echo_daughter_turns_to_lohen                   1.40 s  ONE-SHOT
+  A-632  echo_shatters                                  2.80 s  ONE-SHOT
+
+  === PARTIE 9 — PNJ GENERIQUES DU MARCHE SUSPENDU ===
+
+  A-633  forge_hammer_cycle                             4.20 s  BOUCLE
+  A-634  forge_bellows                                  3.00 s  BOUCLE
+  A-635  wash_clothes                                   5.60 s  BOUCLE
+  A-636  hang_laundry                                   4.80 s  BOUCLE
+  A-637  carry_crate_walk                               2.20 s  BOUCLE
+  A-638  crate_set_down                                 1.80 s  ONE-SHOT
+  A-639  rope_game_children_A                           6.00 s  BOUCLE
+  A-640  rope_game_children_B                           6.00 s  BOUCLE
+  A-641  paint_door_stroke                              3.40 s  BOUCLE
+  A-642  paint_step_back_admire                         2.60 s  ONE-SHOT
+  A-643  mend_net                                       7.00 s  BOUCLE
+  A-644  sharpen_blade                                  4.00 s  BOUCLE
+  A-645  cook_stir_pot                                  5.00 s  BOUCLE
+  A-646  eat_standing                                   6.00 s  BOUCLE
+  A-647  smoke_lean                                     9.00 s  BOUCLE
+  A-648  argue_gesture_A                                4.40 s  BOUCLE
+  A-649  argue_gesture_B                                4.40 s  BOUCLE
+  A-650  argue_resolve_walkaway                         2.80 s  ONE-SHOT
+  A-651  sing_work_song                                11.00 s  BOUCLE
+  A-652  play_instrument_seated                        12.00 s  BOUCLE
+  A-653  winch_operate                                  5.20 s  BOUCLE
+  A-654  pulley_haul                                    3.80 s  BOUCLE
+  A-655  sweep_walkway                                  4.60 s  BOUCLE
+  A-656  repair_plank                                   6.40 s  BOUCLE
+  A-657  distribute_rations                             5.00 s  BOUCLE
+  A-658  queue_wait_shift                               8.00 s  BOUCLE
+  A-659  child_run_past                                 1.60 s  ONE-SHOT
+  A-660  child_stop_and_stare                           4.00 s  ONE-SHOT
+  A-661  elder_sit_watch                               14.00 s  BOUCLE
+  A-662  elder_stand_slow                               4.20 s  ONE-SHOT
+  A-663  pray_or_wait                                  10.00 s  BOUCLE
+  A-664  pin_photo_to_wall                              3.60 s  ONE-SHOT
+  A-665  read_notice_board                              6.00 s  BOUCLE
+  A-666  cross_out_name                                 3.00 s  ONE-SHOT
+  A-667  greet_nod                                      1.40 s  ONE-SHOT
+  A-668  turn_away_avoid                                2.00 s  ONE-SHOT
+  A-669  hand_over_letter_receive                       3.80 s  ONE-SHOT
+  A-670  read_received_letter                           8.00 s  ONE-SHOT
+  A-671  delivery_reaction_02_refusal                   4.00 s  ONE-SHOT
+  A-672  delivery_reaction_03_wrong_name                5.00 s  ONE-SHOT
+  A-673  delivery_reaction_04_silent_nod                3.20 s  ONE-SHOT
+  A-674  delivery_reaction_05_reads_and_sits_down       7.00 s  ONE-SHOT
+  A-675  delivery_reaction_06_already_knew              6.00 s  ONE-SHOT
+  A-676  sleep_in_alcove                               12.00 s  BOUCLE
+  A-677  cough_sick                                     3.20 s  ONE-SHOT
+  A-678  look_up_at_phare                               5.00 s  ONE-SHOT
+  A-679  flinch_at_figure_sighting                      2.40 s  ONE-SHOT
+  A-680  crowd_idle_generic_ABC                         9.00 s  BOUCLE
+
+  === PARTIE 10 — PROPS ANIMES ET MECANISMES ===
+
+  A-681  lift_platform_ascend                          14.00 s  ONE-SHOT
+  A-682  lift_platform_descend                         12.00 s  ONE-SHOT
+  A-683  counterweight_fall                             3.40 s  ONE-SHOT
+  A-684  winch_drum_rotate                              4.00 s  BOUCLE
+  A-685  pulley_system_run                              3.00 s  BOUCLE
+  A-686  gate_grille_rise                               5.20 s  ONE-SHOT
+  A-687  shutter_slam_open                              1.40 s  ONE-SHOT
+  A-688  door_swing_creak                               2.80 s  ONE-SHOT
+  A-689  door_heavy_grind                               2.20 s  ONE-SHOT
+  A-690  drawer_slide_open                              1.20 s  ONE-SHOT
+  A-691  ladder_flex_under_weight                       1.00 s  BOUCLE
+  A-692  plank_bend_and_snap                            2.00 s  ONE-SHOT
+  A-693  walkway_tilt                                   4.60 s  ONE-SHOT
+  A-694  rope_bridge_sway                               6.00 s  BOUCLE
+  A-695  crane_rotate_wind                             18.00 s  BOUCLE
+  A-696  bell_swing_and_ring                            5.00 s  ONE-SHOT
+  A-697  lighthouse_lens_rotate                        20.00 s  BOUCLE
+  A-698  lens_mechanism_internal                       20.00 s  BOUCLE
+  A-699  boat_hull_settle                               3.00 s  ONE-SHOT
+  A-700  glass_fissure_spread                           6.40 s  ONE-SHOT
+  A-701  scaffold_collapse                              4.20 s  ONE-SHOT
+  A-702  trapdoor_open_fall                             1.80 s  ONE-SHOT
+  A-703  cloth_tarp_large_wind                          8.00 s  BOUCLE
+  A-704  cloth_tarp_gust                                2.40 s  ONE-SHOT
+  A-705  laundry_line_blue                              6.00 s  BOUCLE
+  A-706  laundry_snap_gust                              1.80 s  ONE-SHOT
+  A-707  curtain_ballroom                               9.00 s  BOUCLE
+  A-708  blanket_folded_settle                          1.20 s  ONE-SHOT
+  A-709  rope_hang_sway                                 5.00 s  BOUCLE
+  A-710  rope_taut_vibrate                              0.80 s  ONE-SHOT
+  A-711  net_hang_drift                                 7.00 s  BOUCLE
+  A-712  flag_torn_wind                                 6.00 s  BOUCLE
+  A-713  paper_pinned_flutter                           4.00 s  BOUCLE
+  A-714  papers_scatter_gust                            3.00 s  ONE-SHOT
+  A-715  vegetation_bush_wind                           5.00 s  BOUCLE
+  A-716  seaweed_dry_crackle                            4.00 s  BOUCLE
+  A-717  moss_water_drip                                6.00 s  BOUCLE
+  A-718  curtain_of_beads                               3.20 s  ONE-SHOT
+  A-719  lantern_flame_idle                             4.00 s  BOUCLE
+  A-720  lantern_flame_gust                             1.60 s  ONE-SHOT
+  A-721  lantern_swing_carried                          2.00 s  BOUCLE
+  A-722  oil_lamp_chamber                               6.00 s  BOUCLE
+  A-723  letter_unfold_paper                            4.10 s  ONE-SHOT
+  A-724  letter_fold_paper                              5.20 s  ONE-SHOT
+  A-725  letter_page_in_wind                            2.00 s  BOUCLE
+  A-726  notebook_page_turn                             1.40 s  ONE-SHOT
+  A-727  photo_wall_pin_sway                            3.00 s  BOUCLE
+  A-728  cup_steam_rise                                 5.00 s  BOUCLE
+  A-729  anchor_on_table_settle                         0.80 s  ONE-SHOT
+  A-730  satchel_flap_open                              1.00 s  ONE-SHOT
+  A-731  boots_row_still                                pose   ONE-SHOT
+  A-732  piano_lid_locked                               pose   ONE-SHOT
+  A-733  glass_surface_breathe                         12.00 s  BOUCLE
+  A-734  glass_inclusion_drift                         20.00 s  BOUCLE
+  A-735  glass_heat_pool_soften                         2.40 s  BOUCLE
+  A-736  glass_sink_under_weight                        2.40 s  ONE-SHOT
+  A-737  glass_ripple_footstep                          3.00 s  ONE-SHOT
+  A-738  tram_silhouettes_still                         pose   ONE-SHOT
+  A-739  figure_emerge_from_glass                       3.40 s  ONE-SHOT
+  A-740  rain_on_glass_surface                          4.00 s  BOUCLE
+  A-741  phare_beam_sweep                              20.00 s  BOUCLE
+  A-742  dawn_light_rise                              600.00 s  ONE-SHOT
+  A-743  mist_descend_below_player                     45.00 s  ONE-SHOT
+  A-744  glass_reflects_blue_sky                       30.00 s  ONE-SHOT
+
+===============================================================================
+  ANNEXE A2 CLOSE — 744 fiches autonomes.
+===============================================================================

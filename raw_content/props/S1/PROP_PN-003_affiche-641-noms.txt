@@ -1,0 +1,181 @@
+===============================================================================
+PN-003 — L'AFFICHE « RECHERCHE : 641 NOMS »
+===============================================================================
+Asset        : SM_S1_Affiche_641
+Sequence     : S1 — Les Quais Bas (1er etat) · rappel en S7 (PN-123)
+Position     : sur la porte clouee de la capitainerie (PN-015), plein
+               chemin principal, altitude 4 m. Impossible a manquer.
+Timing       : ~00:13 de jeu
+Statut       : prop narratif majeur · TEXTE LISIBLE · pas d'Echo
+Unicite      : 2 etats (S1 et S7), meme asset, masque different
+LODs         : 3 · LOD0 340 tris (c'est un quad avec un cadre)
+
+-------------------------------------------------------------------------------
+§ 1 — CE QU'ON VOIT
+-------------------------------------------------------------------------------
+Une affiche administrative de 70 x 100 cm, papier epais jauni, collee puis
+reclouee aux quatre coins sur une porte de bois condamnee par deux planches
+en croix.
+
+EN-TETE, imprime, caracteres gras :
+        RECHERCHE
+        LISTE DES PERSONNES NON RETROUVEES
+        MAREE DU 14 OCTOBRE — 641 NOMS
+
+Dessous, sur QUATRE COLONNES, imprimee en petits caracteres, la liste des
+noms. Format : NOM, Prenom, age, quartier.
+Six cent quarante et une lignes. Elles sont reellement toutes la, generees
+et imprimees dans la texture. La police fait 9 px a la resolution native
+de la texture 4K. On peut zoomer et lire n'importe laquelle.
+
+DEUX CENTS de ces lignes sont barrees d'une croix rouge, tracee A LA MAIN,
+au crayon gras. Les croix ne sont pas identiques : certaines sont nettes,
+d'autres rageuses, deux sont des traits simples. Elles ont ete faites par
+plusieurs personnes, sur une longue periode (trois encres differentes).
+
+Le papier est gondole par l'humidite. Le coin inferieur droit s'est
+detache et pend, revelant le bois en dessous. Sur ce coin pendant, on
+distingue le bas de la 4e colonne.
+
+[NAR] LE NOM D'ESTEBAN MAREK EST SUR CETTE AFFICHE.
+Colonne 3, ligne 88. « MAREK, Esteban — 31 — Lavandieres. »
+IL N'EST PAS BARRE.
+Rien ne l'indique. Aucun marqueur, aucun zoom automatique, aucune reaction
+de Lohen. Le joueur peut passer devant sans jamais le voir.
+[OBL] Il n'y a AUCUN moyen de signaler ce nom au joueur. Aucun.
+
+-------------------------------------------------------------------------------
+§ 2 — FICHE TECHNIQUE
+-------------------------------------------------------------------------------
+Polycount     340 tris (quad + cadre + coin decolle en geometrie reelle)
+Textures      `T_S1_Affiche_641_Albedo` 4K, canal alpha pour le dechirement
+              `T_S1_Affiche_641_Normal` 2K (grain du papier, gondolage)
+              `T_S1_Affiche_Crosses_Mask` 2K — les 200 croix en canal
+              separe, pour permettre l'etat 2 (PN-123) par simple swap
+Generation    la liste des 641 noms est generee par
+              `tools/gen_victim_list.py` a partir d'un fichier source
+              `content/victims_641.csv` ecrit A LA MAIN.
+              [OBL] Les 641 noms sont ecrits par un humain, pas generes
+              aleatoirement. Ils ont des coherences de famille (38 fratries,
+              14 couples, 9 familles de 4+), des ages coherents, et des
+              repartitions de quartier realistes.
+              Ce fichier CSV est un document narratif a part entiere et il
+              est relu comme tel.
+Zoom          le prop supporte le zoom joueur jusqu'a 400 px/m effectifs
+Collision     aucune (elle est sur une porte qui en a une)
+Cout GPU      negligeable
+
+-------------------------------------------------------------------------------
+§ 3 — CE QUE CA DIT
+-------------------------------------------------------------------------------
+641 personnes. 200 barrees.
+
+La question que se pose le joueur : barrees pourquoi ?
+Retrouvees ? Confirmees mortes ? Abandonnees par celui qui tenait la
+liste ?
+Le jeu ne repond pas.
+
+Le geste humain (0.03) : quelqu'un vient ici, regulierement, avec un crayon
+gras, et barre des noms. Trois encres = au moins trois personnes, ou une
+personne sur trois ans. Les croix rageuses et les croix nettes ne sont pas
+du meme jour.
+
+Ce que l'affiche dit de l'administration : elle a imprime une liste. Elle a
+fait son travail. Puis elle est partie, et les habitants ont continue de
+tenir la liste a la main, avec ce qu'ils avaient.
+
+[NAR] C'est le premier objet du jeu qui donne un CHIFFRE au desastre.
+Avant lui, la Maree est une atmosphere. Apres lui, c'est 641 personnes.
+
+[NAR CRUCIAL] Et pour le joueur qui zoome et cherche, c'est aussi le
+premier endroit ou le nom d'Esteban existe officiellement. Non barre.
+Cela ne veut rien dire — 441 autres ne sont pas barres non plus.
+Mais le joueur le lira comme un espoir. C'est exactement ce qu'on veut :
+lui faire fabriquer lui-meme le faux espoir qui va le porter 3 h 30.
+
+-------------------------------------------------------------------------------
+§ 4 — ECHO
+-------------------------------------------------------------------------------
+NEANT.
+Raison du choix [OBL] : cette affiche est un document ADMINISTRATIF. Elle
+n'a pas ete touchee avec emotion, elle a ete touchee avec un crayon. Lui
+donner un Echo en ferait un objet intime, ce qu'elle n'est pas.
+Le contraste avec les props voisins (qui, eux, portent des Echos) fait
+partie de la lecon de grammaire du jeu : tout ne resonne pas.
+
+-------------------------------------------------------------------------------
+§ 5 — MISE EN SCENE
+-------------------------------------------------------------------------------
+APPROCHE : plein chemin. Le joueur passe a 2 m. La porte clouee barre une
+ouverture qu'il ne peut pas emprunter, donc il la regarde forcement.
+L'affiche est a hauteur d'yeux exacte (1,62 m au centre).
+
+LUMIERE : l'affiche est le point le plus CLAIR du cadre a cet endroit.
+Papier jaune sur bois noir mouille, dans une zone globalement bleue et
+sombre. Elle attire l'oeil sans aucun effet. C'est de la composition, pas
+de la signaletique.
+
+LE COIN DECOLLE : il bat legerement au vent (PROP anime, 2 cm d'amplitude,
+cycle irregulier). C'est le seul mouvement du cadre. Le mouvement attire
+l'oeil vers le coin, donc vers la 4e colonne, donc vers le fait qu'il y a
+des colonnes, donc vers l'echelle de la liste.
+
+[OBL] Le prompt d'interaction pour zoomer apparait UNE FOIS, en glyphe seul
+(08.20). Il ne reapparait jamais sur les autres affiches du jeu.
+
+-------------------------------------------------------------------------------
+§ 6 — AUDIO
+-------------------------------------------------------------------------------
+Propre        SFX(paper_flutter_corner) — le coin decolle, toutes les 4 a
+              9 s, aleatoire, -26 dB. Tres discret.
+Zoom          quand le joueur zoome, l'ambiance baisse de 4 dB et un leger
+              filtre passe-bas s'applique : on entre dans la lecture.
+              Ce traitement est reutilise sur les 11 props a texte.
+Musique       aucune
+Reverb        IR « exterieur ouvert »
+
+-------------------------------------------------------------------------------
+§ 7 — INTERDICTIONS
+-------------------------------------------------------------------------------
+[OBL] Il est interdit de :
+  - mettre en evidence le nom d'Esteban Marek, de quelque facon que ce
+    soit : pas de surbrillance, pas de zoom auto, pas de reaction de
+    Lohen, pas de son, pas d'entree de journal automatique.
+  - generer les 641 noms aleatoirement.
+  - barrer le nom d'Esteban dans l'etat 1.
+  - faire commenter l'affiche par un personnage en S1.
+  - ajouter une photo a l'affiche.
+  - permettre au joueur de barrer ou d'ecrire quoi que ce soit.
+  - reduire la lisibilite au point qu'on ne puisse pas lire une ligne
+    precise en zoom. La contrainte de 4K est non negociable ici.
+
+-------------------------------------------------------------------------------
+§ 8 — LIENS
+-------------------------------------------------------------------------------
+PN-123  L'affiche, deuxieme etat (S7) — 201 croix. Une de plus.
+        [NAR] Elle a ete ajoutee pendant que le joueur jouait. Le jeu ne
+        dit pas quel nom. Le joueur qui a memorise la ligne 88 ira
+        verifier. Esteban n'est toujours pas barre.
+PN-015  La porte de la capitainerie, son support.
+PN-077  Le registre des noms volume 3 (S4) — la version officielle,
+        manuscrite, anterieure.
+PN-081  Le certificat de deces provisoire (S4) — le document qui, lui,
+        declare Esteban mort. Errone. Cache par Mireille (10.07).
+TAL-ACT : Tallec compte les noms sur cette affiche avec son index de bois
+        (TAL-VAR-439). Il en est a 31 — ses 31 hommes.
+content/victims_641.csv — document source, relu comme du contenu narratif.
+
+-------------------------------------------------------------------------------
+§ 9 — DOD
+-------------------------------------------------------------------------------
+[ ] 641 lignes reelles dans la texture, toutes lisibles en zoom
+[ ] `victims_641.csv` ecrit a la main, relu, avec coherences familiales
+[ ] MAREK Esteban present colonne 3 ligne 88, non barre
+[ ] 200 croix, 3 encres, 4 styles de trace distincts
+[ ] Le coin decolle bat au vent, amplitude 2 cm
+[ ] Zoom lisible a 400 px/m
+[ ] Aucun signalement d'aucune sorte sur le nom d'Esteban
+[ ] Test aveugle : au moins 2 testeurs sur 5 zooment spontanement
+[ ] Test aveugle : 0 testeur ne trouve le nom d'Esteban en S1 sans y avoir
+    ete incite. Si un testeur le trouve, verifier qu'aucun signal ne l'a
+    guide.

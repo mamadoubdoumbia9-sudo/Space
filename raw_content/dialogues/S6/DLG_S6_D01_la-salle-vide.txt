@@ -1,0 +1,128 @@
+===============================================================================
+DLG · S6 · D01 — LA SALLE VIDE : 22 LIGNES AVANT QUE TOUT CHANGE
+22 entrees, toutes S6. LOH 22. Contribution : 22.
+Reference maitre 09.15 : « La seule piece propre de tout le jeu. »
+[OBL] Ces 22 lignes sont les dernieres avant E21. Le joueur ne sait pas
+encore ce qui l'attend. [OBL] Elles ne doivent contenir AUCUN indice.
+===============================================================================
+
+--- REGLE DE LA SEQUENCE [OBL] -----------------------------------------------------------------
+
+S6 est la sequence la plus courte en lignes (236) et la plus longue en
+temps ressenti. Elle contient UN SEUL Echo, qui dure 9 minutes, qui est
+JOUABLE, et qui occupe toute la sequence.
+
+[OBL] Repartition unique du chapitre : 118 des 236 lignes de S6 sont
+d'ESTEBAN — exactement la moitie. C'est la seule sequence ou le
+personnage principal n'a pas la majorite. [OBL] Esteban a 211 lignes dans
+tout le chapitre 1 : 118 sont ici, 39 en S8 (la lettre, en voix off), 54
+disseminees dans les Echos des autres sequences. Il n'est vivant qu'ici.
+
+[OBL] Le joueur ne sait pas, en entrant, qu'il va rencontrer Esteban.
+Rien dans S1-S5 ne l'annonce. [OBL] Job CI `no-est-foreshadow-s5` :
+aucune ligne de S5 ne contient le mot « bal », « danse » ou « musique »
+associe a Esteban.
+
+--- ETAT DE LA SALLE (avant bascule) ---------------------------------------------------------
+
+Bleu-lune desature (saturation 22 %), 34 m × 18 m, plafond a 11 m, trois
+lustres intacts, sept miroirs, un parquet en point de Hongrie, aucune
+poussiere. Six hautes fenetres, dont deux cassees. Il pleut dehors : la
+pluie entre par les deux fenetres cassees et fait deux flaques nettes sur
+le parquet. [OBL] Le parquet n'est pas gondole. Il devrait l'etre. Ce
+n'est jamais releve.
+
+[OBL] AUDIO : silence total sauf la pluie et les pas. Pas de M-track.
+[OBL] Les pas de Lohen resonnent — seule piece du jeu avec une reverb
+de 2,8 s.
+
+--- LES 22 LIGNES -------------------------------------------------------------------------------
+
+    [S6_LOH_L001]  2,0 s · bas · « C'est grand. »
+
+    [S6_LOH_L002]  1,6 s · bas · « Et c'est vide. »
+
+    [S6_LOH_L003]  2,4 s · bas · « Pas vide comme abandonne. Vide comme range. »
+        dir : [OBL] la distinction est la these de la sequence.
+
+    [S6_LOH_L004]  1,8 s · bas · « Les chaises sont contre le mur. »
+
+    [S6_LOH_L005]  2,2 s · bas · « Toutes dans le meme sens. »
+        dir : [NAR] RACCORD : la chaise que Lohen redresse en S4
+              (S4_LOH_L328). Meme geste, echelle differente.
+
+    [S6_LOH_L006]  1,4 s · bas · « Les lustres sont entiers. »
+
+    [S6_LOH_L007]  2,6 s · bas · « Toute la ville est en morceaux et ici trois lustres tiennent. »
+
+    [S6_LOH_L008]  1,8 s · bas · « Il pleut dedans, par deux fenetres. »
+
+    [S6_LOH_L009]  2,2 s · bas · « Le bois devrait etre foutu. »
+
+    [S6_LOH_L010]  1,6 s · bas · « Il l'est pas. »
+        dir : [OBL] Lohen constate l'impossible et passe a autre chose.
+              [OBL] Il ne formule aucune hypothese. Regle transverse.
+
+    [S6_LOH_L011]  2,4 s · bas · « Les miroirs sont propres. »
+
+    [S6_LOH_L012]  2,0 s · bas · « Je me vois. »
+        dir : [OBL][NAR] PREMIERE FOIS QUE LOHEN SE VOIT DANS LE JEU.
+              [OBL] Le joueur aussi : c'est le seul endroit du chapitre
+              ou le modele complet de Lohen est visible en vue
+              subjective, dans un miroir, de face, a 3 m.
+              [OBL] La camera ne s'arrete pas. Aucun plan special.
+              Le joueur peut rester, ou ne pas regarder. 71 % regardent.
+              [OBL] Le reflet est exact : veste 0114, epaule droite
+              plus basse de 2 cm, mains sales.
+
+    [S6_LOH_L013]  1,8 s · bas · « J'ai une tete de quelqu'un qui cherche. »
+
+    [S6_LOH_L014]  2,2 s · bas · « Mes mains sont sales. »
+        dir : [OBL][NAR] LE MOT-MOTIF DE LA LETTRE (PN-143). [OBL]
+              Premiere occurrence hors lettre. [OBL] Dite devant un
+              miroir, sans emphase, a 0,7 de gain, sans musique.
+              [OBL] Job CI `hands-motif` : cette ligne et la phrase
+              finale de la lettre partagent le tag `motif:mains`.
+              [OBL] Interdit d'ajouter un plan sur les mains ici.
+
+    [S6_LOH_L015]  1,6 s · bas · « Bon. »
+
+    [S6_LOH_L016]  2,0 s · bas · « Y'a une porte au fond. »
+
+    [S6_LOH_L017]  2,4 s · bas · « Et un truc par terre, au milieu. »
+
+    [S6_LOH_L018]  1,8 s · bas · « Des gants. »
+        dir : [OBL][NAR] PN-021, LES GANTS D'ESTEBAN. [OBL] Le joueur
+              ne sait pas encore a qui ils sont. [OBL] Ils sont poses
+              au centre exact de la salle, l'un sur l'autre, paume
+              contre paume. [OBL] Ce n'est PAS une paire depareillee.
+              C'est le seul objet apparie du chapitre 1.
+
+    [S6_LOH_L019]  2,2 s · bas · « Des gants d'accordeur. »
+        dir : [OBL] il reconnait le metier avant de reconnaitre
+              l'homme. Il ne dit rien de plus pendant 6 s.
+
+    [S6_LOH_L020]  1,4 s · bas · « Non. »
+        dir : [OBL][NAR] LE « NON » LE PLUS IMPORTANT DU CHAPITRE.
+              [OBL] Il ne dit pas le nom. Il dit non.
+              [OBL] Direction de studio : pas de tremblement, pas de
+              souffle coupe. C'est un « non » de refus administratif,
+              comme on refuse un formulaire. 0,9 de gain.
+              [OBL] Prise refusee si elle est jouee emue.
+
+    [S6_LOH_L021]  2,6 s · bas · « Je les ramasse pas. »
+
+    [S6_LOH_L022]  0,0 s · — · (slot sans VO)
+        dir : [OBL] Il les ramasse. Scripte. Anim LOH-ACT-112, 3,4 s,
+              a une main, l'epaule droite. [OBL] Le joueur n'a pas le
+              choix et le jeu ne lui demande pas. [OBL] Au contact :
+              bascule E21. Voir D02.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] Aucun indice d'Esteban avant L018 — CI `no-est-foreshadow-s5`
+[ ] L012 : seul reflet complet de Lohen du chapitre, aucun plan special
+[ ] L014 : motif des mains, sans emphase — CI `hands-motif`
+[ ] L018 : gants apparies, seul objet apparie du chapitre
+[ ] L020 : joue sans emotion, prises refusees sinon
+[ ] L022 : slot muet, le joueur ramasse sans choix

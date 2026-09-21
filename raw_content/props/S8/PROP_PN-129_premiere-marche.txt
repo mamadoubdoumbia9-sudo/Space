@@ -1,0 +1,123 @@
+===============================================================================
+PN-129 — LA PREMIERE MARCHE
+===============================================================================
+Asset : SM_S8_Premiere_Marche · S8, pied du Phare Saint-Ambre · ~06:02 ·
+PORTEUR D'ECHO E26 · LOD0 900 tris
+
+§ 1 — CE QU'ON VOIT
+Le Phare Saint-Ambre. 212 metres. Une tour de granit qui monte dans la
+pluie et dont on ne voit pas le sommet.
+A son pied, une porte de fer. Elle est ouverte. Elle l'est depuis
+longtemps : la rouille a soude le gond dans cette position.
+Derriere la porte, l'escalier commence.
+La premiere marche.
+Elle est en granit. Elle fait 1,40 m de large et 17 cm de haut.
+[OBL] Elle est CREUSEE. Au centre, sur 80 cm de large, il y a un creux de
+4 centimetres de profondeur.
+Quatre centimetres de granit uses par des pieds.
+[OBL] C'est la marche la plus usee des 1 038 marches du Phare. Chacune est
+usee, mais celle-ci est la premiere : tout le monde la monte, meme ceux qui
+renoncent apres.
+Sur le cote, dans le mur, a hauteur de main, il y a une main courante de
+fer. Son debut est poli a blanc sur 30 cm.
+Et sur le seuil, il y a de l'eau. La pluie entre par la porte ouverte et
+forme une flaque sur la premiere marche.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 900 (marche 200 + seuil 300 + porte 400).
+[OBL] Le creux de 4 cm est en GEOMETRIE, avec un profil correct : plus
+profond au centre, remontant en courbe douce vers les bords, avec une
+surface polie (roughness 0,14) au fond et rugueuse (0,78) sur les aretes
+non touchees.
+[OBL] Le profil doit etre asymetrique : legerement decale vers la droite
+(les gens montent a droite).
+La flaque : plan d'eau de 3 mm, avec les ondes de la pluie qui entre.
+Shader `granite_worn_wet`.
+Anim : PROP-834 — pendant E26.
+
+§ 3 — CE QUE CA DIT
+Des milliers de personnes ont monte cette marche pendant cent quarante ans.
+Le geste humain : monter.
+[OBL] Quatre centimetres de granit. Le granit s'use de 1 mm tous les 35 ans
+sous un passage quotidien. Quatre centimetres, c'est plus que l'age du
+phare. [OBL] C'est donc faux physiquement, et c'est assume : c'est de la
+verite emotionnelle. Le level artist le sait et le fait quand meme.
+[ART] Personne ne verifiera. Tout le monde le sentira.
+Et Lohen va monter 1 038 marches.
+
+§ 4 — ECHO
+ECHO E26 — « La premiere marche » — 29 secondes, mode A.
+[OBL] Le plus simple des 31.
+Ce qu'on voit : des pieds. Des paires de pieds qui montent la premiere
+marche, l'une apres l'autre.
+[OBL] Le cadrage de l'Echo est limite au bas de l'escalier : on ne voit
+jamais au-dessus des genoux. [OBL] Meme dispositif que E20 (PN-088), et
+c'est volontaire : le chapitre se ferme comme il s'est construit.
+Quatorze paires en 29 secondes.
+Elles sont differentes : des bottes de gardien, des sabots, des souliers de
+ville, des pieds nus (une paire), des chaussures d'enfant (une paire —
+[OBL] EXCEPTION AUTORISEE : on ne voit que des pieds, il n'y a pas de
+silhouette d'enfant ; la regle des enfants porte sur les silhouettes, pas
+sur les chaussures).
+[OBL] Elles sont de toutes les epoques. Les souliers de la troisieme paire
+sont du siecle dernier.
+La quatorzieme paire monte, s'arrete sur la marche, et REDESCEND.
+Elle repart par la porte.
+[OBL] Quelqu'un a renonce. C'est la derniere chose que montre l'Echo.
+Musique : M24 « Le Phare » COMMENCE ici. [OBL] Elle commence pendant l'Echo,
+a 4 secondes, et elle ne s'arretera plus jusqu'a la fin du chapitre.
+C'est un seul morceau de 24 minutes. Cordes, contrebasse, un cor.
+[OBL] Elle monte. Sur 24 minutes, elle monte d'un demi-ton toutes les trois
+minutes. Huit fois. Le joueur ne le percoit pas.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur arrive du pont (PN-127) et des fragments (PN-128). Il
+traverse 30 m de jetee sous la pluie.
+Il entre par la porte ouverte.
+[OBL] Il pleut derriere lui. Devant lui, un escalier en spirale qui monte
+dans le noir.
+[OBL] Il n'a pas de lampe depuis 1 h 26.
+[ART] Il va monter 212 metres dans le noir.
+[OBL] Il y a de la lumiere : cf. PN-130. Mais depuis le pied, on ne la voit
+pas. Depuis le pied, c'est noir.
+[OBL] Aucun plan, aucune camera, aucun ralenti. Il entre, il y a une marche
+creusee, et l'Echo est disponible.
+
+§ 6 — AUDIO
+[OBL] DES QUE LE JOUEUR FRANCHIT LA PORTE, LE SON DE LA PLUIE S'ARRETE.
+Pas progressivement : en 0,6 seconde, avec un filtrage et une attenuation
+de 26 dB.
+[ART] Le son le plus fort du chapitre (-8 dB, PN-122) devient un murmure.
+Le joueur entre dans le silence pour la premiere fois depuis une heure.
+SFX(step_granite_worn) : les pas sur le granit use. 12 variations.
+[OBL] Un son PLEIN, sec, avec une reverb de cage d'escalier qui monte :
+RT60 4,2 s, avec un flutter vertical caracteristique des tours.
+[OBL] C'est le RT60 le plus long du jeu.
+Pendant E26 : 14 paires de pas, 14 rythmes, 14 timbres de chaussure.
+[OBL] La quatorzieme redescend : on entend le rythme s'inverser.
+M24 entre a 4 s.
+
+§ 7 — INTERDICTIONS
+Interdit de : montrer au-dessus des genoux · ajouter une silhouette
+complete · fermer la porte · reparer la marche · vider la flaque ·
+interrompre M24 avant la fin du chapitre · ajouter une pause musicale ·
+rendre E26 rejouable · ajouter un compteur de marches · afficher l'altitude.
+
+§ 8 — LIENS
+PN-088 (E20, la grille du puits, S5) : le meme cadrage par les pieds.
+PN-130 (l'escalier). PN-142 (la pierre plate).
+PN-043, PN-072, PN-124 (les creux du chapitre) : celui-ci est le neuvieme
+et le dernier.
+PN-021 (l'echelle brisee, S1) : la premiere montee du jeu.
+[THEME] MONTER. [THEME] LES CREUX QUE LES CORPS LAISSENT.
+
+§ 9 — DOD
+[ ] Creux de 4 cm en geometrie, profil asymetrique decale a droite
+[ ] Roughness 0,14 au fond, 0,78 sur les aretes
+[ ] Main courante polie a blanc sur 30 cm
+[ ] Pluie coupee de 26 dB en 0,6 s au franchissement
+[ ] RT60 4,2 s avec flutter vertical, le plus long du jeu
+[ ] E26 : 14 paires de pieds, jamais au-dessus des genoux, la 14e redescend
+[ ] M24 demarre a 4 s de l'Echo et ne s'arrete plus pendant 24 minutes
+[ ] Montee d'un demi-ton toutes les 3 minutes, 8 fois, imperceptible

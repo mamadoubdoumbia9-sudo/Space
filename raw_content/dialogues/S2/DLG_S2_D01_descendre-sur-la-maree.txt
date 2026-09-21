@@ -1,0 +1,119 @@
+===============================================================================
+DLG · S2 · D01 — DESCENDRE SUR LA MAREE : LES DIX SEULES VOIX DE LA SEQUENCE
+14 lignes · LOH 6 / PAL 2 / BK_S2 6 · debut de sequence, 00:26
+Reference maitre : 09.11. Props : PN-023 a PN-037 (annexe B, S2).
+Anim : LOH-GLS-070..078 (marche sur verre), CIN-205.
+===============================================================================
+
+--- CONTEXTE ET LOI DE LA SEQUENCE ----------------------------------------------
+
+[OBL] S2 contient 96 lignes pour 22 minutes de jeu. C'est la densite la
+plus faible du chapitre apres le silence de S8. Dix de ces lignes seulement
+sont des barks (BK_S2, le plus petit lot du jeu). La regle est simple et
+elle ne souffre aucune exception : SUR LA MAREE, ON NE PARLE PAS FORT.
+Toute ligne prononcee par un vivant pendant que ses pieds touchent le verre
+est marquee (murm) ou plafonnee a `bas`. Aucun personnage ne crie. Meme
+pendant la fuite finale. Surtout pendant la fuite finale.
+
+Raison de fond, jamais dite au joueur : 641 personnes sont dessous.
+Raison de forme : le son du verre (13.29) est l'identite sonore du jeu et
+une voix forte le masquerait.
+
+L'escalier qui descend a la Maree fait 46 marches. Pallas s'arrete a la
+douzieme. Elle ne descend pas. Elle ne descendra jamais, pas une fois du
+chapitre, et personne ne lui demande pourquoi.
+
+--- LES 14 LIGNES --------------------------------------------------------------
+
+    [S2_PAL_L001]  PALLAS · 1,6 s · plat · p0,8
+        « Je vais pas plus bas. »
+        dir : elle s'arrete. Elle ne s'explique pas. Elle ne detourne pas
+              les yeux non plus.
+
+    [S2_LOH_L002]  LOHEN · 0,9 s · plat · p0,5
+        « Je sais. »
+        dir : [OBL] il ne demande pas pourquoi. Aucune option de dialogue
+              ne permet de demander pourquoi. Le joueur voudra. Non.
+
+    [S2_PAL_L003]  PALLAS · 2,7 s · bas · p0,0
+        « Quand ca devient plus clair sous tes pieds, tu cours. Pas
+          avant, sinon tu cours tout le temps. »
+        dir : derniere information technique de Pallas. C'est le tutoriel
+              des puits de chaleur, et c'est une phrase de metier dite par
+              quelqu'un qui n'y va pas.
+
+    -- Lohen descend les 34 marches restantes. 21 secondes. Aucune ligne.
+       Au 46e pas, le son change : c'est la premiere fois qu'on entend le
+       verre (sample `glass_step_A`, 8 prises retenues sur 40).
+
+    [S2_LOH_L004]  LOHEN (murm) · 1,1 s · fige · p1,9
+        « Oh. »
+        dir : [OBL] MEME MOT que S1_LOH_L105, sur le toit. Meme comedien,
+              meme direction, prise differente. C'est volontaire : Lohen
+              n'a qu'une seule reaction a l'immensite et il l'use deux
+              fois en une heure. Personne ne le releve.
+
+    [S2_LOH_L005]  LOHEN (murm) · 1,4 s · bas · p0,9
+        « C'est tiede. »
+        dir : il s'accroupit, pose la paume a plat. Clip LOH-GLS-073.
+              Le verre est tiede : c'est la seule information physique
+              que le jeu donnera jamais sur la Maree. Elle n'est pas
+              expliquee. Elle ne le sera pas. Interdit 21.08.
+
+    -- LES SIX BARKS DE S2 sont ici, dans ce document, parce qu'ils ne
+       sont pas des barks ordinaires : ce sont les six voix des ramasseurs
+       de verre, six hommes qui travaillent a 200 m, et on ne les voit
+       jamais. Ils sont pilotes par le systeme de bark (cooldown 8 min)
+       mais ecrits un par un. Les quatre autres BK_S2 sont en D07.
+
+    [S2_BK_L006]  RAMASSEUR 1 (tres loin) · 2,1 s · plat · p0,0
+        « Celui-la il est bon ! Il sonne bon ! »
+        dir : distance 200 m, filtre + delai de 0,58 s sur l'echo de
+              falaise. On ne comprend qu'un mot sur deux. Volontaire.
+
+    [S2_BK_L007]  RAMASSEUR 2 (tres loin) · 1,7 s · plat · p0,0
+        « Laisse, laisse. Y'a quelqu'un dessous. »
+
+    [S2_BK_L008]  RAMASSEUR 1 (tres loin) · 1,4 s · plat · p0,0
+        « Y'a quelqu'un partout dessous. »
+        dir : [OBL] la ligne la plus dure de S2, dite par un inconnu a
+              200 m, sans emphase, comme une objection de chantier. Si
+              un mixeur la remonte pour qu'on l'entende bien, il a tort.
+              Elle doit etre a la limite de l'intelligible.
+
+    [S2_BK_L009]  RAMASSEUR 3 (tres loin) · 1,9 s · plat · p0,0
+        « Onze heures ! On remonte a onze heures ! »
+
+    [S2_BK_L010]  RAMASSEUR 2 (tres loin) · 1,2 s · plat · p0,0
+        « Compte les tetes, Brel. »
+        dir : [NAR] Brel est le forgeron de S3 (role BRE, 74 lignes). Il
+              ramasse du verre le matin. Rien ne le dit en S3. Un joueur
+              tres attentif reconnaitra le nom.
+
+    [S2_BK_L011]  BREL (tres loin) · 1,6 s · plat · p0,0
+        « Six. Toujours six. »
+
+    [S2_LOH_L012]  LOHEN (murm) · 1,3 s · bas · p0,7
+        « L'Hirondelle est au nord. »
+        dir : il se repere au clocher penche. Aucune boussole, aucun
+              marqueur. Le joueur doit le croire sur parole et chercher
+              le clocher. Il le trouvera : il est visible de partout
+              (regle des 212 m, 09.02).
+
+    [S2_LOH_L013]  LOHEN (murm) · 2,2 s · bas · p0,6
+        « Trois ans que je regarde ce bateau d'en haut. »
+
+    [S2_LOH_L014]  LOHEN (murm) · 1,8 s · retenu · p0,0
+        « Trois ans que je descends pas. »
+        dir : [OBL] fin du document. Premiere fois que Lohen admet
+              quelque chose a voix haute. Il est seul. Il ne l'admettra
+              plus jamais a voix haute avant S8.
+
+--- CHECKLIST ------------------------------------------------------------------
+
+[ ] Aucune voix au-dessus de `bas` de toute la sequence
+[ ] Pallas ne descend pas ; aucune option pour lui demander pourquoi
+[ ] L004 = meme mot que S1_LOH_L105, prise differente
+[ ] Les 6 ramasseurs jamais visibles, jamais atteignables
+[ ] L008 a la limite de l'intelligible, verifie au haut-parleur telephone
+[ ] Le verre est tiede et ce n'est pas explique

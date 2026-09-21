@@ -1,0 +1,106 @@
+===============================================================================
+PN-041 — LA BOITE AUX LETTRES REPEINTE EN AMBRE
+===============================================================================
+Asset : SM_S3_Boite_Lettres_Ambre · S3, Marche suspendu, niveau 1, angle
+de la passerelle nord · ~02:08 · prop narratif · pas d'Echo ·
+1 DES 3 PROPS PORTANT #FFA33C · LOD0 1 300 tris
+
+§ 1 — CE QU'ON VOIT
+Une boite aux lettres publique, en fonte, modele municipal, 1,10 m sur pied,
+avec sa fente horizontale et sa petite porte de levee a l'arriere.
+Elle etait bleue. On le voit : partout ou la peinture neuve s'est ecaillee,
+il y a du bleu dessous, et sous le bleu, du vert plus ancien.
+Elle a ete REPEINTE. En ambre. #FFA33C.
+La peinture a ete passee au pinceau, a la main, mal. Il y a des coulures.
+Il y a des poils de pinceau restes dans la couche. Les bords ne sont pas
+nets : la peinture deborde sur le pied de fonte et sur la plaque
+d'identification municipale, qu'elle recouvre a moitie.
+Elle est recente. Un an, peut-etre moins. Elle est encore vive.
+La fente est ouverte. La porte de levee est ouverte, arrachee de sa
+charniere basse, elle pend.
+La boite est VIDE.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 300. Shader `paint_layered_amber` : quatre couches (fonte, vert,
+bleu, ambre) revelees par un masque d'ecaillage peint a la main.
+[OBL] La couleur ambre est EXACTEMENT #FFA33C en sRGB, soit
+(1.000, 0.639, 0.235) — converti en lineaire (1.000, 0.371, 0.045).
+Le shader ne doit appliquer aucune variation de teinte, aucun gradient,
+aucun bruit de couleur. Seul le shading (lumiere, AO, roughness) la modifie.
+[OBL] La CI `amber-guard` (bloc 03.14) verifie a chaque commit que cette
+valeur n'apparait que sur trois assets : PN-041, PN-107, PN-137. Toute
+autre occurrence dans une texture, un materiau, une lumiere ou un shader
+fait echouer le build.
+Coulures : 7 coulures en geometrie (relief de 0,8 mm), pas en texture.
+Poils de pinceau : 12, modelises, 0,4 mm.
+Anim : PROP-743 — la porte de levee arrachee bat de 3 cm au vent, 0,3 Hz.
+Collision : capsule. [OBL] Non ouvrable, rien a l'intérieur, aucun prompt.
+
+§ 3 — CE QUE CA DIT
+[OBL] Le joueur, a 2 h 08, a vu la couleur ambre exactement zero fois.
+Le jeu a tenu deux heures et huit minutes sans elle.
+Il la voit ici pour la premiere fois, sur une boite aux lettres.
+Il ne sait pas encore que c'est la couleur d'Esteban. Il l'apprendra en S6,
+sur un gilet (PN-107). Retroactivement, cette boite deviendra insupportable.
+[NAR] Quelqu'un a repeint une boite aux lettres en ambre, a la main, au
+pinceau, mal, il y a moins d'un an. Dans une ville vide. Une boite qui ne
+sert plus. Ou personne ne poste rien. Qui n'est jamais relevee.
+Le geste humain : repeindre quelque chose qui ne sert a rien, dans une
+couleur precise, en debordant.
+Et laisser la fente ouverte. Au cas ou.
+[OBL] Le jeu n'explique JAMAIS qui l'a repeinte, ni pourquoi, ni avec quelle
+peinture, ni ou il l'a trouvee. Aucune des sept lettres ne le dit.
+
+§ 4 — ECHO
+NEANT. Geste d'apres (regle PN-015), et le plus recent de tous.
+[ART] Faux positif n°7, le dernier du chapitre. A partir d'ici, le joueur a
+compris le systeme et ne sera plus trompe. Les 24 Echos restants se
+declenchent tous sur des objets qu'il aura correctement identifies.
+
+§ 5 — MISE EN SCENE
+[OBL] Elle est vue de LOIN d'abord : depuis la passerelle precedente, a
+34 m, en enfilade. Un point orange dans un monde gris-vert desature.
+La palette de S3 (05.06) est calibree pour que ce point soit la seule
+saturation superieure a 0,40 dans un rayon de 60 m.
+[ART] Le joueur marche vers elle. C'est le seul moment du chapitre ou la
+couleur seule tire le joueur sur 34 m.
+Arrive dessus : c'est une boite aux lettres. Vide. Cassee. Repeinte de
+travers. Rien.
+Lohen ne s'arrete pas. [OBL] Aucune animation, aucun LookAt, aucun prompt,
+aucun son particulier. Il passe.
+[NAR] Et c'est terrible, parce que Lohen est relayeur. Il porte le courrier.
+Il passe devant une boite aux lettres ouverte et vide, peinte de la couleur
+d'Esteban, et il ne s'arrete pas. Le jeu ne le souligne pas une seule fois.
+
+§ 6 — AUDIO
+SFX(iron_flap_tick) : la porte de levee, -25 dB, 0,3 Hz.
+[OBL] Aucune musique ne change. Aucun stinger. Aucune note.
+Verifier la courbe de mix : plate sur les 34 m d'approche.
+
+§ 7 — INTERDICTIONS
+Interdit de : ouvrir la boite · y mettre quelque chose · y trouver quelque
+chose · permettre a Lohen d'y poster une lettre · donner un Echo · ajouter
+un son ou une musique · faire regarder Lohen · expliquer qui a repeint ·
+utiliser #FFA33C ailleurs que sur PN-041, PN-107 et PN-137 · faire varier
+la teinte · ajouter une deuxieme boite repeinte · la mentionner dans un
+dialogue · signaler sa couleur d'une quelconque maniere.
+
+§ 8 — LIENS
+PN-107 (le gilet a lisere ambre d'Esteban, S6) : la deuxieme occurrence,
+40 minutes plus tard, et celle qui donne son sens a celle-ci.
+PN-137 (la lampe a huile, S8) : la troisieme et derniere.
+PN-018 (la borne de relais). PN-059 (les six lettres a livrer, a 40 m).
+PN-143 (LA LETTRE).
+[THEME] L'AMBRE EST A ESTEBAN — regle de direction artistique la plus
+stricte du projet (05.02). Trois occurrences en 3 h 30.
+[THEME] PORTER LE COURRIER.
+
+§ 9 — DOD
+[ ] #FFA33C exact, aucune variation, aucun gradient, aucun bruit
+[ ] CI amber-guard verte : 3 occurrences dans tout le projet
+[ ] 4 couches de peinture revelees par ecaillage peint a la main
+[ ] 7 coulures et 12 poils de pinceau en geometrie
+[ ] Visible a 34 m en enfilade, seule saturation > 0,40 a 60 m
+[ ] Boite vide, non ouvrable, aucun prompt, aucun son a l'approche
+[ ] Lohen ne ralentit pas, ne regarde pas, ne dit rien
+[ ] Jamais mentionnee dans aucun dialogue des sept lettres

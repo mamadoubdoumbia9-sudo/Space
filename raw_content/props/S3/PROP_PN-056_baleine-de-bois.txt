@@ -1,0 +1,107 @@
+===============================================================================
+PN-056 — LA BALEINE DE BOIS
+===============================================================================
+Asset : SM_S3_Baleine_Bois · S3, suspendue au-dessus de la passerelle
+centrale du niveau 2 · ~02:33 · prop narratif · pas d'Echo · LOD0 4 300 tris
+
+§ 1 — CE QU'ON VOIT
+Une baleine sculptee dans le bois, 3,20 m de long, suspendue par deux
+chaines a la charpente, a 3,60 m au-dessus de la passerelle.
+Elle est superbe. Sculptee par quelqu'un qui savait faire : les proportions
+sont justes, la queue est en mouvement, les sillons de la gorge sont
+graves un par un, l'oeil est incruste d'une bille de verre noir.
+Elle est peinte en gris-bleu, et le ventre en blanc casse.
+C'etait une enseigne. Probablement d'un marchand d'huile, ou d'un
+armateur, ou d'une auberge.
+Elle est INTACTE. C'est le seul objet de grande taille du chapitre qui
+n'ait subi aucun dommage : pas de fissure, pas de peinture ecaillee, pas
+de pourriture. Elle est protegee par un debord de toit de 40 cm qui, par
+hasard, la couvre exactement.
+Une des deux chaines est plus courte que l'autre de 11 cm. La baleine est
+donc legerement de travers, le nez vers le bas.
+Elle a l'air de plonger.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 4 300. Sculpt manuel intégral. [OBL] Les sillons de gorge (23 sillons)
+sont en geometrie. L'oeil est un mesh separe avec un materiau verre.
+Textures : atlas 4K dedie. La peinture est appliquee comme une VRAIE
+peinture sur bois : elle suit le grain, elle est plus epaisse dans les
+creux, elle laisse voir le bois sur les aretes de sculpture.
+[OBL] Aucune usure, aucun ecaillage, aucune salete. C'est le seul asset
+« neuf » du chapitre avec la cabane de Tallec (PN-045) et la prothese
+(PN-047). Trois objets propres en 3 h 30.
+Anim : PROP-769 — rotation lente autour de l'axe des chaines, ±4 degres,
+periode 19 s, irreguliere. [OBL] Le mouvement doit etre LOURD : 3,20 m de
+bois plein, ca ne frissonne pas, ca tourne lentement et ca continue.
+Collision : aucune. Elle est trop haut.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a sculpte une baleine pendant des mois, et elle est toujours la,
+intacte, a tourner lentement au-dessus d'une passerelle deserte.
+Le geste humain : sculpter 23 sillons de gorge un par un.
+[NAR] Ce prop n'a pas de tragedie. C'est le seul.
+[OBL] Fonction de design explicite (17.07) : dans un chapitre de 3 h 30 ou
+chaque objet raconte une interruption, il faut UN objet qui ne raconte que
+sa propre beaute. Sans lui, le joueur cesse de regarder : quand tout fait
+mal, on arrete de voir.
+La baleine est la pour qu'on continue de regarder.
+La chaine plus courte de 11 cm n'a aucun sens narratif. C'est un defaut
+d'accrochage. C'est tout. [OBL] Ne jamais l'expliquer ni la corriger.
+
+§ 4 — ECHO
+NEANT. Enseigne commerciale, objet collectif (PN-016).
+[ART] Et le joueur ne s'y attend meme pas : a 2 h 33, il a compris que les
+belles choses ne repondent pas.
+
+§ 5 — MISE EN SCENE
+[OBL] Au-dessus de la passerelle la plus frequentee de S3. Le joueur passe
+dessous un minimum de 6 fois pendant la sequence.
+Les cinq premieres fois, il ne la voit pas : elle est a 3,60 m, hors du
+champ de vision naturel en marche (la camera par defaut regarde a
+l'horizontale).
+[ART] Elle est vue quand le joueur LEVE LA TETE, et il leve la tete pour
+une raison precise : le monte-charge (PN-049) passe juste a cote, et quand
+il monte, le joueur regarde en haut. La baleine entre alors dans le champ.
+Ou bien il la voit depuis le niveau 3, d'en haut, en regardant en bas.
+[OBL] Depuis le niveau 3, on voit son DOS. Depuis le niveau 1, son VENTRE.
+Depuis le niveau 2, son profil. Trois lectures, trois etages.
+Lumiere : elle est dans une zone de lumiere indirecte, douce. Le bois peint
+renvoie une lueur gris-bleu sur les planches en dessous.
+
+§ 6 — AUDIO
+SFX(chain_slow_creak) : les deux chaines, desynchronisees (la courte
+travaille plus vite). Deux grincements a 19 s et 17 s de periode, qui se
+croisent tous les 2 min 41.
+[OBL] -27 dB, tres bas. C'est un son qu'on entend sans l'ecouter.
+[ART] Le joueur passe six fois dessous. La sixieme, il l'a intégré. C'est
+devenu le son de la passerelle centrale. Le jour ou il quittera S3, il ne
+l'entendra plus, et il ne saura pas ce qui manque.
+Aucune musique liee. M10 tourne.
+
+§ 7 — INTERDICTIONS
+Interdit de : l'abimer · la faire tomber · la faire craquer · donner un
+Echo · expliquer la chaine courte · ajouter une enseigne ecrite ou un nom
+· la faire commenter · ajouter une deuxieme sculpture de cette qualite
+dans le chapitre · l'utiliser comme plateforme, prise ou passage ·
+acceler son mouvement · la rendre interactive.
+[OBL] Elle ne sert a rien. C'est son role.
+
+§ 8 — LIENS
+PN-047 (la prothese) et PN-045 (la cabane) : les trois objets non abimes.
+PN-028 (les bouees de verre, S2) : l'autre moment de beaute gratuite.
+PN-065 (la serre de verre vert, a 80 m).
+[THEME] IL FAUT UNE BELLE CHOSE. Regle de design (17.07) : chaque sequence
+du chapitre contient exactement un prop dont la seule fonction est d'etre
+beau. S1 : PN-004 (les filets et leur quadrillage de lumiere). S2 : PN-028.
+S3 : PN-056. S4 : PN-066. S5 : PN-095. S6 : PN-101. S7 : PN-122.
+S8 : PN-135.
+
+§ 9 — DOD
+[ ] Sculpt complet, 23 sillons en geometrie, oeil en verre incruste
+[ ] Peinture suivant le grain, plus epaisse dans les creux
+[ ] Zero usure, zero ecaillage, zero salete
+[ ] Chaine courte de 11 cm, jamais expliquee, jamais corrigee
+[ ] Trois lectures selon l'etage : dos, profil, ventre
+[ ] Rotation lourde ±4°, periode 19 s, irreguliere
+[ ] Deux grincements desynchronises (19 s / 17 s)
+[ ] Aucune fonction, aucune interaction, aucun commentaire

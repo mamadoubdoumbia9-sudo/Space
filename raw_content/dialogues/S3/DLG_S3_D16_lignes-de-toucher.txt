@@ -1,0 +1,116 @@
+===============================================================================
+DLG · S3 · D16 — LES 24 LIGNES DE TOUCHER DU MARCHE
+24 entrees, toutes S3. LOH 24. Contribution : 24.
+Systeme : toucher declenche, regarder jamais. Cooldown 90 s. Une fois
+chacune. Aucune ne se repete de la partie.
+===============================================================================
+
+--- REGLE ----------------------------------------------------------------------------
+
+[OBL] Aucune de ces lignes ne decrit ce que le joueur voit. Chacune ajoute
+une information que le joueur ne peut PAS voir : une date, un poids, un
+souvenir de metier, un prix d'avant. C'est le seul systeme du jeu qui
+donne acces a la memoire de Lohen, et il coute un geste a chaque fois.
+
+--- LES 24 LIGNES ----------------------------------------------------------------------
+
+    [S3_LOH_L545]  1,6 s · plat
+        « Cet anneau, c'est moi. 'Seize. »
+
+    [S3_LOH_L546]  1,4 s · plat
+        « Celui-la aussi. Il est mal pose. »
+
+    [S3_LOH_L547]  2,0 s · plat
+        « Je les posais a trois metres. On m'a dit quatre. J'ai
+          continue a trois. »
+
+    [S3_LOH_L548]  1,8 s · plat
+        « Bache de sept. Ca coutait deux pieces. »
+
+    [S3_LOH_L549]  1,3 s · plat
+        « Ca en coute huit, maintenant. »
+
+    [S3_LOH_L550]  2,2 s · plat
+        « Cette passerelle a un jour de retard sur son entretien depuis
+          six ans. »
+
+    [S3_LOH_L551]  1,5 s · plat
+        « Elle tiendra. »
+
+    [S3_LOH_L552]  1,9 s · plat
+        « Fer forge. Brel. On reconnait a la queue de l'hameçon. »
+
+    [S3_LOH_L553]  1,7 s · plat
+        « Boite aux lettres douze. Vide depuis trois ans. »
+
+    [S3_LOH_L554]  2,1 s · plat
+        « Non. Deux ans. La douze recevait encore en 'seize. »
+        dir : [OBL] il se corrige. Un homme dont le metier est la
+              memoire des adresses se corrige a voix haute. C'est le
+              seul systeme de « journal » du jeu, et il est dans sa tete.
+
+    [S3_LOH_L555]  1,4 s · plat
+        « Poulie de quatre. Elle grince. Elle a toujours grince. »
+
+    [S3_LOH_L556]  2,4 s · plat
+        « Y'avait une plaque, la. Avec un nom de rue. Quelqu'un l'a
+          prise. »
+
+    [S3_LOH_L557]  1,6 s · plat
+        « Pour le metal, sans doute. »
+
+    [S3_LOH_L558]  2,0 s · plat
+        « Marche numero onze. Elle est neuve. Quelqu'un repare encore. »
+
+    [S3_LOH_L559]  1,8 s · plat
+        « Le sel se garde trois ans. Apres il prend l'humidite. »
+
+    [S3_LOH_L560]  1,5 s · plat
+        « Celui-la en a quatre. »
+
+    [S3_LOH_L561]  2,2 s · plat
+        « Une corde mixte. Ca tient mieux mouille. »
+        dir : [OBL] RACCORD E07 (S3_ECH_L356). Si le joueur a vu
+              l'Echo, Lohen dit ici exactement ce que le cordier
+              disait. Il ne le sait pas. Le joueur, si.
+
+    [S3_LOH_L562]  1,7 s · plat
+        « Tole de toit. Ca brule les pieds en ete. »
+        dir : [NAR] Sol est pieds nus. Lohen y pense. Il ne le dit pas.
+
+    [S3_LOH_L563]  2,0 s · plat
+        « Peinture fraiche. Et dessous, quatre-vingt-dix autres. »
+        dir : declenchee sur la porte de Caro, apres l'avoir rencontre.
+              Avant : la ligne n'existe pas.
+
+    [S3_LOH_L564]  1,4 s · plat
+        « L'eau du toit descend par la. On a pense a tout. »
+
+    [S3_LOH_L565]  2,3 s · plat
+        « Ce mur est en verre fondu. Quatre cents fenetres dans ce
+          marche et je sais d'ou elles viennent. »
+
+    [S3_LOH_L566]  1,9 s · plat
+        « Je ne le dirai pas a la fille de Brel. »
+        dir : [OBL] disponible seulement apres S3_BRE_L200. Lohen tient
+              parole a voix haute, seul, en touchant un mur.
+
+    [S3_LOH_L567]  2,1 s · plat
+        « Un anneau que je n'ai pas pose et que je n'aurais pas pose
+          la. »
+
+    [S3_LOH_L568]  1,6 s · plat
+        « Tant pis. Il tient. »
+        dir : [OBL] 24e et derniere. Apres celle-ci, le systeme de
+              toucher s'eteint pour toute la sequence, meme si le joueur
+              n'a pas tout trouve. Les lignes non entendues sont perdues
+              pour cette partie.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] 24 lignes, une fois chacune, cooldown 90 s
+[ ] Aucune ne decrit ce qui est visible
+[ ] L554 : autocorrection conservee
+[ ] L561 : raccord E07 non signale
+[ ] L566 conditionnee a la promesse faite a Brel
+[ ] Le systeme s'eteint apres la 24e, sans message

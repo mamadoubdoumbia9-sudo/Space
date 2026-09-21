@@ -1,0 +1,101 @@
+===============================================================================
+PN-100 — LE PARQUET EN MARQUETERIE
+===============================================================================
+Asset : SM_S6_Parquet_Marqueterie · S6, sol de la salle de bal du Meridien
+· ~04:45 · prop narratif ENVIRONNEMENTAL · pas d'Echo · LOD0 8 400 tris
+
+§ 1 — CE QU'ON VOIT
+Un parquet de bal. 28 x 16 metres d'un seul tenant.
+Marqueterie : chene clair, noyer, un bois rouge. Le motif est une grande
+rose des vents de 11 m de diametre au centre, entouree de frises
+geometriques qui courent jusqu'aux murs.
+Il est INTACT. Pas une lame soulevee, pas une tache, pas une fissure.
+Il est SEC. Apres 45 minutes de conduits ruisselants et 50 minutes d'eau a
+la bibliotheque, le joueur pose le pied sur un parquet sec et cire.
+Et il est PROPRE. Il y a de la poussiere sur les bords, contre les murs,
+sur 80 cm. Mais le centre — toute la rose des vents, sur 11 m — est net.
+[OBL] Quelqu'un balaie le centre de cette salle.
+Sur le bois, dans le cirage, on voit des traces : des arcs de cercle. Des
+trainees de balai. Elles tournent autour de la rose des vents.
+Et une autre trace, plus fine : des empreintes de pattes. Petites. Elles
+traversent le centre en diagonale, une seule fois, et repartent.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 8 400 pour 448 m². [OBL] La marqueterie est une TEXTURE (4 x 4K en
+tiling non repetitif + une texture unique 8K pour la rose des wents
+centrale), pas de la geometrie. Justification : 448 m² de marqueterie en
+geometrie est impossible sur mobile, et le parquet est toujours vu en
+plongee ou de biais, jamais en silhouette.
+[OBL] En revanche, les JOINTS entre lames sont en normal map a haute
+resolution, et le parallax occlusion est active sur le centre (0,4 ms).
+Le cirage : shader `wood_waxed_reflective`, roughness 0,21, avec une
+reflexion speculaire forte. [OBL] Les trois lustres (PN-101) se refletent
+dans le parquet. C'est le coeur de l'image de S6.
+Les traces de balai : decals 2K, 9 arcs, orientation coherente avec un
+balayage depuis le centre vers l'exterieur.
+Les empreintes de pattes : decal 1K, 14 empreintes, une traversee unique.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un balaie une piste de danse dans une ville morte.
+Le geste humain : balayer.
+[OBL] Pas toute la salle : le centre. La ou on danse.
+Les arcs de balai partent du centre et vont vers l'exterieur. C'est un
+balayage methodique, fait plusieurs fois, par quelqu'un qui commence
+toujours au milieu.
+[NAR] Sol. C'est lui. [OBL] Jamais dit, jamais montre, jamais confirme.
+Les empreintes de Pomme traversent en diagonale : le chien est passe une
+fois sur le sol propre et personne n'a re-balaye derriere.
+
+§ 4 — ECHO
+NEANT propre. [OBL] Le parquet est le SUPPORT de l'Echo E21 (PN-112, le sol
+apres l'Echo) mais il n'en porte pas lui-meme. Distinction importante :
+PN-112 est le prop de l'apres.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur sort d'une grille de 36 x 70 cm au ras du sol.
+La premiere chose qu'il voit, a 15 cm de ses yeux, c'est du parquet cire
+qui reflete trois lustres.
+Il se releve. La salle s'ouvre. 448 m², 9 m de hauteur sous plafond.
+[ART] C'est le plus grand volume du chapitre et il arrive apres le plus
+petit (PN-098, 48 cm). La compression puis la dilatation.
+[OBL] Aucun plan scripte. Aucune camera. Aucun ralenti. Le joueur se releve
+et regarde ou il veut.
+Il marche sur le parquet. [OBL] Ses bottes sont mouillees : elles laissent
+des empreintes. Des vraies, qui restent, qui sechent en 90 secondes, et qui
+salissent le centre propre.
+[ART] Le joueur salit la seule chose propre du chapitre, et personne ne
+le lui reproche.
+
+§ 6 — AUDIO
+SFX(step_parquet_wax) : les pas sur le parquet cire. [OBL] 14 variations,
+un son CLAIR, sec, resonant. Le contraire absolu des 45 minutes precedentes.
+[OBL] Dans le volume de 448 m² x 9 m, RT60 = 3,1 s. Chaque pas remplit la
+salle.
+[ART] Le joueur, seul, fait plus de bruit ici que partout ailleurs.
+SFX(step_parquet_wet) : les 12 premiers pas, avec de l'eau dans les bottes.
+Un son different, colle, qui disparait progressivement.
+M21 « La salle » : [OBL] elle joue deja. Elle est diegetique (cf. PN-103).
+
+§ 7 — INTERDICTIONS
+Interdit de : abimer le parquet · ajouter des lames soulevees · le mouiller
+· ajouter une flaque · nettoyer les empreintes du joueur · reprocher au
+joueur de salir · reveler qui balaie · ajouter un balai visible [OBL —
+il n'y a pas de balai dans la salle] · ajouter des traces de danse, de
+chaussures, de chaises · donner un Echo au parquet lui-meme.
+
+§ 8 — LIENS
+PN-101 (les trois lustres qui s'y refletent). PN-112 (le sol apres l'Echo).
+PN-102 (les miroirs muraux). PN-103 (le piano).
+PN-095 (le dessin au charbon : Sol dessine, Sol balaie).
+[THEME] ENTRETENIR CE QUI PEUT L'ETRE. [THEME] LA COMPRESSION ET LA
+DILATATION.
+
+§ 9 — DOD
+[ ] 448 m², rose des vents de 11 m, marqueterie en texture 8K + 4x4K
+[ ] Parallax occlusion sur le centre, joints en normal map haute def
+[ ] Reflexion des 3 lustres dans le cirage, roughness 0,21
+[ ] Centre propre sur 11 m, poussiere sur 80 cm au pourtour
+[ ] 9 arcs de balai partant du centre, 14 empreintes de pattes en diagonale
+[ ] Empreintes mouillees du joueur, persistantes, sechant en 90 s
+[ ] RT60 3,1 s, 14 variations de pas clairs
+[ ] Aucun balai visible dans la salle

@@ -1,0 +1,98 @@
+===============================================================================
+PN-106 — LE CARTON D'INVITATION
+===============================================================================
+Asset : SM_S6_Carton_Invitation · S6, sur la table du buffet, pres du rond
+propre · ~04:50 · prop a TEXTE LISIBLE · pas d'Echo · LOD0 8 tris
+
+§ 1 — CE QU'ON VOIT
+Un carton d'invitation, 10 x 15 cm, bristol creme, pose contre un verre a
+pied, debout, face au joueur.
+Il est imprime, dans la police d'imprimerie du projet.
+
+     LE CERCLE DU MERIDIEN
+     a l'honneur de convier
+     ________________________
+     au bal d'automne
+     le quatorze octobre, a vingt heures
+     Tenue de soiree
+     Musique de M. Anselme Roux, au piano
+
+La ligne du nom est vide. Ce carton n'a jamais ete attribue.
+En bas a droite, ecrit a la main, au crayon, en tout petit, de travers :
+     « il ne viendra pas »
+[OBL] Quatre mots. Minuscule. Ecrit apres l'impression, par quelqu'un
+d'autre.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 8 tris (quad).
+[OBL] Texture 4K pour 10 x 15 cm. Densite 2 400 px/m. Deuxieme plus haute
+densite du jeu apres PN-039.
+L'imprime : police du projet, encre noire legerement en relief
+(typographie plomb : le texte est EMBOSSE dans le papier, 0,15 mm — detail
+en normal map haute frequence).
+La mention manuscrite : crayon gris, ecriture minuscule (hauteur de 2 mm),
+penchee, ecrite vite. [OBL] Ecrite a la main par une personne reelle,
+scannee. Elle doit etre a la limite de la lisibilite : le joueur doit
+avoir a approcher et a chercher.
+Shader `bristol_aged`.
+Collision : aucune. Non prenable, non retournable.
+
+§ 3 — CE QUE CA DIT
+[OBL] « Musique de M. Anselme Roux, au piano. »
+Le Verrier. Anselme Roux, muet, 2,6 m, que le joueur rencontrera en S7.
+[OBL] Avant la Maree, il jouait du piano dans les bals.
+Le joueur ne sait pas encore qui est Anselme Roux. Il lira ce nom sur un
+carton, et 40 minutes plus tard il rencontrera une chose de 2,6 m qui ne
+parle pas.
+[OBL] Le lien n'est JAMAIS etabli par le jeu. Aucun dialogue, aucun texte,
+aucune confirmation. Le nom est sur le carton, c'est tout.
+Et le piano de cette salle joue tout seul depuis trois ans (PN-103).
+[OBL] Interdiction absolue de relier explicitement PN-103 et PN-106.
+« il ne viendra pas » : quatre mots au crayon sur une invitation vierge.
+[OBL] Jamais explique. Qui ? Qui l'a ecrit ? Jamais.
+
+§ 4 — ECHO
+NEANT. Le bal n'a pas eu lieu (PN-105).
+
+§ 5 — MISE EN SCENE
+Debout contre un verre, a 20 cm du rond propre, a l'extremite de la table.
+[OBL] Le joueur qui trouve le rond trouve le carton. Les deux sont dans le
+meme regard.
+Il est LISIBLE : il est debout, face a lui, a hauteur de table (75 cm).
+Il faut se pencher.
+[OBL] Les quatre mots au crayon demandent un second effort : ils sont en
+bas a droite, en gris clair sur creme, de 2 mm de haut. Le joueur doit
+approcher encore.
+Taux de lecture de l'imprime : 48-60 %. Taux de lecture des quatre mots :
+21-30 %.
+[OBL] Aucun zoom, aucun overlay, aucun prompt. Lohen ne le lit pas.
+
+§ 6 — AUDIO
+NEANT.
+
+§ 7 — INTERDICTIONS
+Interdit de : prendre le carton · le retourner · remplir la ligne du nom ·
+expliquer « il ne viendra pas » · relier Anselme Roux au Verrier · relier
+au piano qui joue · ajouter un deuxieme carton · faire commenter · faire
+lire Lohen · ajouter un overlay · rendre les quatre mots faciles a lire ·
+mentionner Anselme Roux dans un dialogue avant S7.
+
+§ 8 — LIENS
+PN-117, PN-118, PN-128 (Anselme Roux, le Verrier, S7).
+PN-103 (le piano qui joue seul) : [OBL] jamais relie.
+PN-105 (la table). PN-109 (la pendule arretee a 23h41) : le bal etait a
+20 h. La Maree a 23h41. Le bal aurait du battre son plein.
+[OBL] Et la table n'a pas ete touchee, et les 70 couverts sont intacts.
+[NAR] Donc personne n'est venu au bal. Trois heures quarante et une avant
+la Maree, une salle de bal dressee pour soixante-dix personnes etait vide.
+[OBL] Jamais explique. Ce n'est pas la Maree qui a annule le bal.
+[THEME] CE QUI N'A PAS EU LIEU. [THEME] IL NE VIENDRA PAS.
+
+§ 9 — DOD
+[ ] 4K sur 10 x 15 cm, 2 400 px/m, typographie embossee 0,15 mm
+[ ] Ligne du nom vide
+[ ] « Musique de M. Anselme Roux, au piano » present et lisible
+[ ] Quatre mots manuscrits de 2 mm, a la limite de la lisibilite
+[ ] Debout contre un verre, dans le meme regard que le rond propre de PN-105
+[ ] Zero overlay, zero prompt, jamais lu par Lohen
+[ ] Aucun lien etabli avec PN-103 ni avec le Verrier de S7

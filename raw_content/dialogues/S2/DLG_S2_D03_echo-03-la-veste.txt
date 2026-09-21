@@ -1,0 +1,124 @@
+===============================================================================
+DLG · S2 · D03 — ECHO 03 : LA VESTE D'ESTEBAN DANS LA CABINE
+16 lignes · ECH 14 / LOH 2 · l'Echo majeur de S2, 2 min 40
+Prop : PN-025 (la veste — perte de controle non mecanique de 1,8 s).
+Reference maitre : 09.11 « Echo n°3, 2 min 40 ».
+===============================================================================
+
+--- CONTEXTE -------------------------------------------------------------------
+
+L'Hirondelle de Mer, couchee sur le flanc, a moitie avalee par le verre.
+Le joueur entre par une ecoutille qui est maintenant une trappe de sol.
+La cabine est inclinee a 31 degres. Tout ce qui pouvait tomber est tombe
+et s'est arrete contre la cloison basse.
+
+Une veste est accrochee a une patere. Elle pend a la verticale, donc de
+travers par rapport a la piece. C'est le detail qui vend l'inclinaison.
+
+[OBL][NAR] C'est la veste d'Esteban et le jeu ne le dit pas. Il n'y a pas
+d'etiquette, pas d'initiales, pas de photo dans la poche. Ce qu'il y a :
+Lohen perd le controle pendant 1,8 s en la touchant (une des 3 seules
+pertes de controle non mecaniques du chapitre, cf. annexe B). Le joueur
+comprend par le corps de Lohen, pas par un texte.
+
+[OBL] Les 14 lignes d'Echo de E03 ne contiennent PAS la voix d'Esteban.
+Aucun des 31 Echos ne montre Esteban (canon). E03 montre l'equipage du
+chalutier, un soir ordinaire, et Esteban n'etait pas de l'equipage : il
+montait a bord pour accorder l'harmonium du carre. Il n'est pas la ce
+soir-la. Sa veste, si. Il l'a oubliee. Il l'oubliait tout le temps.
+
+--- LES 2 LIGNES DE LOHEN -------------------------------------------------------
+
+    [S2_LOH_L023]  LOHEN (murm) · 0,7 s · fige · p0,0
+        « Ah. »
+        dir : dite PENDANT la perte de controle de 1,8 s, a t+0,9 s.
+              Une syllabe, la gorge fermee. Le comedien l'enregistre
+              apres avoir monte un escalier. [OBL] Aucun autre mot.
+              Aucun « Esteban ». Aucun nom.
+
+    [S2_LOH_L024]  LOHEN (murm) · 1,2 s · plat · p0,0
+        « Bon. »
+        dir : 4 secondes apres, quand le controle revient. Il decroche la
+              veste, la plie en quatre, la remet sur la patere. Pliee.
+              [OBL] Le joueur ne peut pas la prendre. Ce n'est pas un
+              ramassable (les 9 ramassables sont listes en annexe B, la
+              veste n'en est pas). Il peut la toucher autant qu'il veut :
+              la perte de controle ne se reproduit pas.
+
+--- LES 14 LIGNES DE L'ECHO ------------------------------------------------------
+
+Quatre silhouettes : le patron, deux marins, un mousse. Soir d'octobre,
+avant. Ils mangent. L'un d'eux joue mal d'un harmonium.
+
+    [S2_ECH_L025]  PATRON · 2,3 s · plat · p0,5
+        « Referme la porte, il rentre de l'eau par le bas. »
+
+    [S2_ECH_L026]  MARIN 1 · 1,4 s · plat · p0,4
+        « Y'a toujours de l'eau par le bas. »
+
+    [S2_ECH_L027]  PATRON · 1,1 s · sec · p0,7
+        « Referme. »
+
+    [S2_ECH_L028]  MOUSSE · 2,0 s · joueur · p0,5
+        « C'est quoi ce truc qui fait ce bruit. »
+        dir : il parle de l'harmonium. Il a quinze ans. Sa silhouette
+              mesure 1,64 m.
+
+    [S2_ECH_L029]  MARIN 2 · 1,8 s · plat · p0,6
+        « C'est l'harmonium. Touche pas. »
+
+    [S2_ECH_L030]  MOUSSE · 1,3 s · joueur · p0,4
+        « Il est faux. »
+
+    [S2_ECH_L031]  MARIN 2 · 2,4 s · plat · p0,5
+        « Il est faux depuis quinze ans. Y'a un type qui vient le
+          reparer. »
+
+    [S2_ECH_L032]  MOUSSE · 1,0 s · joueur · p0,6
+        « Il repare mal. »
+
+    [S2_ECH_L033]  MARIN 1 · 2,7 s · moqueur · p0,7
+        « Il repare tres bien. C'est nous qui jouons mal. »
+        dir : [NAR] c'est la seule fois du chapitre ou quelqu'un fait
+              l'eloge du travail d'Esteban, et il ne le nomme pas.
+
+    [S2_ECH_L034]  PATRON · 2,1 s · plat · p0,5
+        « Il a encore oublie sa veste, d'ailleurs. »
+        dir : [OBL] LA ligne. Elle arrive a 1 min 42 de l'Echo, au milieu
+              d'une conversation sur un instrument. Elle est dite sans
+              aucune emphase. Le mix ne la souligne pas. La camera ne
+              bouge pas. Beaucoup de joueurs ne la traiteront pas
+              consciemment. Elle fera son travail quand meme.
+
+    [S2_ECH_L035]  MARIN 2 · 1,6 s · plat · p0,4
+        « Il oublie tout. »
+
+    [S2_ECH_L036]  PATRON · 2,2 s · plat · p0,6
+        « Non. Il oublie ce qui se remplace. »
+
+    [S2_ECH_L037]  MOUSSE · 1,5 s · joueur · p0,8
+        « C'est malin, ca. »
+
+    [S2_ECH_L038]  PATRON · 2,8 s · las · p0,0
+        « Mange, toi. Demain quatre heures. »
+        dir : dissolution sur la cuillere du mousse. La veste reelle
+              pend toujours. [OBL] Rien ne change dans la piece apres
+              l'Echo. Pas un objet deplace. Le jeu ne recompense pas.
+
+--- MIX ------------------------------------------------------------------------
+
+L'harmonium joue pendant tout l'Echo, faux, a -19 dB. [OBL] Il joue les
+trois premieres notes du motif LA-DO-MI-RE-LA, s'arrete, recommence.
+C'est la 4e des 23 occurrences incompletes du motif. Il ne le finit
+jamais. Aucun joueur ne remarquera ceci a la premiere partie ; c'est la
+base sur laquelle repose l'effet de la 24e occurrence, complete, a 3:00
+de la lettre.
+
+--- CHECKLIST ------------------------------------------------------------------
+
+[ ] Perte de controle 1,8 s, une seule fois, non repetable
+[ ] La veste n'est pas ramassable et est repliee par Lohen
+[ ] Esteban n'est pas nomme, pas montre, pas entendu dans E03
+[ ] L034 sans emphase de mix ni de camera
+[ ] Harmonium : 3 notes du motif, jamais les 5
+[ ] Aucun objet deplace apres l'Echo

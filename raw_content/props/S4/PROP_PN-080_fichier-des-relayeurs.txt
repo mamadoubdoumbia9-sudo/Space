@@ -1,0 +1,91 @@
+===============================================================================
+PN-080 — LE FICHIER DES RELAYEURS
+===============================================================================
+Asset : SM_S4_Fichier_Relayeurs · S4, casier 11, rangee R, aile ouest ·
+~03:44 · prop narratif · pas d'Echo · LOD0 2 400 tris
+
+§ 1 — CE QU'ON VOIT
+Un casier de classement, comme les autres, rangee R.
+Sur le troisieme tiroir, l'etiquette de laiton porte, ecrit a la main :
+     RELAIS — MATRICULES
+Ce tiroir est ferme. Mais il est le SEUL de toute la bibliotheque a avoir
+une serrure — un petit barillet de laiton, ajoute apres coup, visse dans le
+bois.
+Il est ferme a cle.
+La cle n'est nulle part. [OBL] Elle n'existe pas comme objet dans le jeu.
+Sur le bois, autour de la serrure, il y a des marques. Des entailles, des
+eraflures, des traces de levier. Quelqu'un a essaye de forcer ce tiroir.
+Plusieurs fois. Avec quelque chose de plat et de dur.
+[OBL] Les marques correspondent au biseau du pied-de-biche de PN-076.
+Le tiroir n'a pas cede. Le bois est entame sur 4 mm. C'est du chene.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 400. Reutilise le kit PN-008/PN-067.
+Le barillet ajoute : 180 tris, laiton, visiblement plus recent que le meuble
+(il brille, il n'est pas terni).
+[OBL] Les marques de levier : 9 entailles en geometrie, 1 a 4 mm de
+profondeur, avec la fibre du chene arrachee. Leur profil doit correspondre
+geometriquement au biseau de PN-076. Un joueur qui compare les deux objets
+peut le verifier. Aucun joueur ne le fera. C'est fait quand meme.
+Collision : boite. [OBL] Non ouvrable. Aucun prompt. Le joueur ne peut ni
+forcer, ni crocheter, ni chercher la cle.
+
+§ 3 — CE QUE CA DIT
+Il existe un fichier des relayeurs. Il contient les matricules. Il contient
+donc « 0114 ».
+Il est ferme a cle. Quelqu'un a essaye de l'ouvrir avec un pied-de-biche,
+plusieurs fois, et a echoue.
+Le geste humain : forcer. Et renoncer.
+[NAR] Qui a ferme ce tiroir a cle, et pourquoi ? [OBL] Jamais explique.
+Qui a essaye de le forcer ? [OBL] Jamais dit. Les marques correspondent a
+l'outil de Mireille, et rien ne le confirme.
+[OBL] Le fichier n'est jamais ouvert, dans ce chapitre ni dans les six
+suivants. Son contenu n'est jamais revele. Ce n'est pas un contenu coupe :
+c'est un tiroir ferme.
+[ART] Dans un jeu ou tout se lit, il faut un objet qui refuse absolument.
+
+§ 4 — ECHO
+NEANT. [OBL] Meuble collectif (PN-016). Et : le systeme d'Echo requiert une
+ligne de vue sur l'objet (PN-060). Le contenu est enferme.
+
+§ 5 — MISE EN SCENE
+Dans l'aile ouest, a 12 m de la table de Mireille, sur le pourtour.
+[OBL] Zone facultative. Rien n'y mene. Taux de decouverte cible : 36-46 %.
+[ART] Le joueur qui explore le pourtour de la rotonde trouve 14 casiers
+identiques. Le onzieme a une serrure qui brille. C'est la seule chose qui
+brille dans cette aile.
+Il s'approche, il lit l'etiquette, il comprend que son propre matricule est
+la-dedans, et il ne peut pas l'ouvrir.
+[OBL] Aucun prompt. Aucune animation de Lohen. Aucune reaction. Aucune
+ligne. Il regarde et il repart.
+Mireille, si le joueur revient la voir apres, ne dit rien. [OBL] Aucun
+dialogue alternatif.
+
+§ 6 — AUDIO
+NEANT. Le tiroir est muet. Il ne bouge pas.
+[OBL] Si le joueur pousse le meuble ou le frole : rien. Le tiroir ferme ne
+resonne pas comme les autres. Un meuble plein sonne plein.
+
+§ 7 — INTERDICTIONS
+Interdit de : ouvrir le tiroir · trouver une cle · le crocheter · le forcer
+· le casser · reveler son contenu · confirmer qui a essaye · expliquer qui
+l'a ferme · ajouter un prompt · faire commenter par Mireille ou Tallec ·
+en faire un objectif · le resoudre dans les six lettres suivantes.
+
+§ 8 — LIENS
+PN-076 (le pied-de-biche : les marques correspondent, jamais confirme).
+PN-018 (la borne de relais et le jeton 0114). PN-042 (l'anneau 12).
+PN-048 (la sacoche). PN-067 (le tiroir MAQ-MAS, vide et ouvert).
+[OBL] Deux tiroirs dans cette bibliotheque contiennent ce que Lohen
+cherche : l'un est vide et ouvert, l'autre est plein et ferme a cle.
+Le jeu ne les met jamais dans le meme plan.
+[THEME] LE REFUS. [THEME] CHERCHER DANS LES OBJETS.
+
+§ 9 — DOD
+[ ] Barillet ajoute, laiton neuf, seul element brillant de l'aile ouest
+[ ] 9 entailles de levier en geometrie, profil correspondant a PN-076
+[ ] Chene entame sur 4 mm, non cede
+[ ] Aucun prompt, aucune interaction, aucune cle dans le jeu
+[ ] Jamais ouvert dans les 7 chapitres
+[ ] Jamais dans le meme plan que PN-067
+[ ] Aucun dialogue alternatif de Mireille

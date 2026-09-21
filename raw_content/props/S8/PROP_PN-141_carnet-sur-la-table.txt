@@ -1,0 +1,137 @@
+===============================================================================
+PN-141 — LE CARNET SUR LA TABLE
+===============================================================================
+Asset : SM_S8_Carnet_Table · S8, table de la chambre, a cote de la lampe ·
+~06:26 · PORTEUR D'ECHO E30 + TEXTE LISIBLE · pas ramassable ·
+LOD0 1 900 tris
+
+§ 1 — CE QU'ON VOIT
+Sur la table, a 30 cm de la lampe (PN-137), un carnet.
+Un carnet de moleskine noire, 11 x 18 cm, elastique, tranche rouge.
+Il est FERME.
+[OBL] Il ne s'ouvre pas. Le joueur ne peut pas le prendre, ni l'ouvrir, ni
+le feuilleter.
+Sur la couverture, colle, un rectangle de papier avec un mot ecrit dessus.
+[OBL] Un seul mot :
+        LOHEN
+[OBL] C'est la premiere fois que le nom de Lohen est ECRIT dans le jeu.
+[OBL] Il a ete appele « 0114 » partout : sur l'enveloppe (PN-005), sur la
+borne (PN-018), sur 314 feuilles (PN-139).
+Ici, son nom.
+A cote du carnet, il y a une BORNE. [OBL] Une petite borne de relais
+portative, de table, en laiton, 22 cm : un cadran, une fente a jeton, une
+manette.
+[OBL] C'est le modele de bureau de PN-018. Le Phare en avait une : les
+gardiens recevaient le courrier.
+La fente est vide.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 900 (carnet 400 + borne 1 500).
+[OBL] Le carnet est FERME et le restera. Sa tranche est modelisee : on voit
+qu'il est plein, gondole par l'usage, avec des pages cornees et deux
+signets de papier qui depassent.
+[OBL] Il n'y a AUCUNE page modelisee a l'intérieur. Il ne s'ouvre jamais.
+L'etiquette « LOHEN » : texture 2K, ecriture d'Esteban, meme main que
+PN-108, PN-111, PN-139, PN-143.
+La borne : 340 tris de mecanisme visible, gravure en relief :
+     RELAIS DE VELMORA — PHARE
+INTERACTION : [OBL] LE JETON. Le joueur a le jeton 0114 dans sa poche
+depuis 5 h 46 (PN-018, a 00:40).
+[OBL] Il peut l'introduire dans la fente.
+LOH-ACT-234, 5,8 s : il sort le jeton, le regarde, le met dans la fente,
+tourne la manette.
+[OBL] ET IL DESCEND. Le jeton descend. Pour la premiere fois.
+[OBL] Il n'y a pas de timbre. Rien ne sonne. Rien ne se passe.
+Le jeton est parti. Le cadran ne bouge pas.
+[OBL] Le joueur ne recupere jamais le jeton.
+
+§ 3 — CE QUE CA DIT
+Esteban a mis le nom de Lohen sur un carnet et l'a pose sur une table.
+Le geste humain : coller une etiquette.
+[OBL] Le carnet ne s'ouvre pas. Le joueur ne saura jamais ce qu'il y a
+dedans. Ni dans ce chapitre, ni dans les six suivants.
+[OBL] Il est plein. Il y a deux signets. Il est gondole par l'usage.
+Quelqu'un l'a ecrit pendant longtemps, et l'a adresse.
+[OBL] Et il est a cote de la lettre (PN-143), qui, elle, se lit.
+[ART] Le jeu donne une lettre et refuse un carnet. Le joueur aura la
+lettre, et il passera le reste de sa vie a se demander ce qu'il y avait
+dans le carnet.
+La borne : Lohen introduit son jeton dans une borne de relais, au sommet
+d'un phare, apres 1 038 marches. Le jeton descend. Personne ne repond.
+[OBL] C'est son metier. C'est ce qu'il fait. Il est arrive au bout de sa
+tournee.
+
+§ 4 — ECHO
+ECHO E30 — « La table » — 27 secondes, mode A.
+[OBL] Le deuxieme des trois derniers.
+Ce qu'on voit : une silhouette assise a la table. De trois quarts dos.
+Elle ecrit. [OBL] Dans le carnet.
+On voit sa main bouger. On voit la page tourner. Trois fois.
+[OBL] 19 secondes d'ecriture.
+A 19 s, elle s'arrete. Elle ferme le carnet.
+Elle prend quelque chose — [OBL] un petit rectangle. L'etiquette.
+Elle la colle sur la couverture.
+[OBL] Et elle appuie dessus. Avec le pouce. Pendant 3 secondes.
+[OBL] Trois secondes de pouce sur une etiquette de papier.
+A 25 s, elle repose le carnet sur la table, exactement ou il est au present.
+A 26 s, elle s'efface.
+Musique : NEANT. [OBL] Toujours pas de musique. Cela fait 5 minutes.
+Le seul son : la plume, les pages, et le pouce sur le papier.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+[OBL] La table est sous la fenetre aux volets fermes (PN-145).
+Le carnet et la borne sont dessus, avec la lampe.
+[OBL] Le joueur lit « LOHEN » a 40 cm, en lumiere ambre.
+[OBL] Il n'y a aucun prompt pour ouvrir le carnet. Le prompt d'Echo est
+dessus. Le prompt d'interaction est sur la borne.
+Deux prompts, cote a cote. Aucun n'ouvre le carnet.
+[OBL] Le joueur essaiera. Il n'y a rien.
+[OBL] La borne : le prompt du jeton n'apparait QUE si le joueur a
+effectivement ramasse le jeton en S1 (PN-018, taux de prise 96-99 %).
+[OBL] S'il ne l'a pas pris — 1 a 4 % des joueurs — il n'y a pas de prompt.
+La borne est inerte. Aucun message, aucun regret, aucune indication.
+Il ne saura jamais qu'il aurait pu.
+
+§ 6 — AUDIO
+Pendant E30 :
+SFX(pen_on_moleskine) : la plume sur du papier epais. [OBL] Different de
+PN-120 (la plume sur du papier fin) et de PN-027.
+SFX(page_turn_thick) : trois pages.
+SFX(thumb_on_label) : [OBL] le pouce qui appuie sur l'etiquette pendant
+3 secondes. Un son minuscule, presque inaudible : le frottement du pouce
+sur du papier colle.
+[ART] C'est le son le plus intime du jeu. -38 dB. Il faut le trouver.
+SFX(brass_coin_slot) : le jeton dans la fente, puis la chute dans le
+mecanisme. [OBL] Un son creux, definitif. Le jeton tombe et roule sur 1,2 s
+puis s'arrete.
+[OBL] Aucun timbre. Aucune sonnerie. Aucune reponse.
+[OBL] Aucune musique.
+
+§ 7 — INTERDICTIONS
+Interdit de : ouvrir le carnet · le prendre · en montrer une page · reveler
+son contenu, dans les 7 chapitres · faire sonner la borne · faire repondre
+· recuperer le jeton · ajouter un message · ajouter un succes · ajouter de
+la musique · montrer le visage de la silhouette · faire pleurer · ajouter
+un prompt de regret pour le joueur sans jeton · rendre E30 rejouable.
+
+§ 8 — LIENS
+PN-018 (la borne de relais de S1, le jeton 0114, ramasse a 00:40).
+PN-005 (l'enveloppe « 0114 » de la barque).
+PN-042 (l'anneau de relayeur 12). PN-048 (la sacoche, E11).
+PN-139 (les 314 feuilles). PN-143 (LA LETTRE, a 60 cm).
+PN-119 (le dossier d'Esteban, jamais ouvert) : [OBL] deux objets fermes que
+le joueur emporte ou laisse sans jamais savoir. Le dossier est dans sa
+sacoche. Le carnet reste sur la table.
+[THEME] PORTER POUR LES AUTRES. [THEME] CE QU'ON NE SAURA PAS.
+
+§ 9 — DOD
+[ ] Carnet ferme, tranche gondolee, pages cornees, 2 signets
+[ ] Aucune page modelisee, jamais ouvrable, dans les 7 chapitres
+[ ] Etiquette « LOHEN » : premiere occurrence ecrite de son nom
+[ ] Borne de table avec gravure « RELAIS DE VELMORA — PHARE »
+[ ] Jeton introductible, descend, aucun timbre, jamais recuperable
+[ ] Prompt absent si le jeton n'a pas ete pris en S1, sans aucun message
+[ ] E30 : 19 s d'ecriture, 3 pages, 3 s de pouce sur l'etiquette
+[ ] SFX du pouce a -38 dB, son le plus intime du jeu
+[ ] Zero musique, zero timbre, zero reponse

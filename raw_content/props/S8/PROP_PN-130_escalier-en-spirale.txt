@@ -1,0 +1,118 @@
+===============================================================================
+PN-130 — L'ESCALIER EN SPIRALE
+===============================================================================
+Asset : SM_S8_Escalier_Spirale · S8, tout le fut du Phare, 0 a 196 m ·
+~06:03 · prop narratif ENVIRONNEMENTAL · pas d'Echo · LOD0 34 800 tris
+
+§ 1 — CE QU'ON VOIT
+Un escalier en helice, colle a la paroi interieure du fut, qui monte sur
+196 metres.
+1 038 marches de granit.
+Le fut est conique : 9 m de diametre en bas, 4 m en haut. L'escalier
+retrecit donc en montant, et les marches aussi.
+Le vide central fait 5 m en bas et 1,20 m en haut.
+[OBL] Il n'y a pas de garde-corps sur les 40 premiers metres. Il y a une
+main courante de fer scellee dans le mur, c'est tout.
+Tous les 14 metres, il y a une MEURTRIERE. Une fente verticale de 1,10 m
+sur 15 cm dans le granit.
+[OBL] Quatorze meurtrieres. Elles sont la seule lumiere.
+Par chacune, un rai de lumiere nocturne entre — un gris tres faible, le
+reflet de la Maree, filtre par la pluie.
+[OBL] Entre deux meurtrieres, sur 14 metres de montee, il fait presque noir.
+Le joueur monte de zone claire en zone claire, quatorze fois.
+Et les marches sont toutes usees. Les 1 038.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 34 800 pour 196 m. [OBL] Kit modulaire : 14 sections helicoidales de
+14 m, avec 4 variantes de degradation, + les 14 meurtrieres uniques.
+[OBL] L'usure des marches est un masque VERTEX (pas une texture unique
+par marche) : le creux est modele dans la geometrie du module, et une
+variation par instance decale sa profondeur de +/- 8 mm.
+[OBL] Streaming : 3 sections chargees a la fois (celle du joueur, celle du
+dessus, celle du dessous). Le reste est decharge. Budget : 180 Mo.
+Les 14 rais de lumiere : 14 SpotLights fixes, tres faibles (0,4), avec
+volumetrique local. [OBL] Cout : 0,8 ms au total, 3 actifs a la fois.
+[OBL] La montee dure 11 minutes en marche normale. [OBL] Il n'y a pas de
+course : LOH-LOC-212 `stairs_climb`, vitesse fixe, aucune acceleration
+possible.
+[ART] Onze minutes. Le joueur ne peut pas aller plus vite.
+
+§ 3 — CE QUE CA DIT
+Le geste humain : monter. Mille trente-huit fois.
+[OBL] Pas de gardien depuis trois ans. Pas de lumiere au sommet depuis
+trois ans.
+[NAR] Et il y a quelqu'un en haut. Ou il y a eu quelqu'un.
+[OBL] Le joueur le sait ou ne le sait pas. Rien ne le lui a dit.
+[OBL] Fonction de design : la montee EST le prop. Onze minutes de marches
+identiques, dans le noir, avec quatorze fenetres, sans rien a faire, sans
+rien a trouver, sans rien a resoudre.
+[OBL] Aucun objet sur les 1 038 marches. Aucun. Sauf PN-133 (la corde de
+secours) et PN-131 (le palier des cloches), qui sont des points precis.
+[ART] Le chapitre a dure 6 heures. Il finit par onze minutes d'escalier.
+C'est le prix.
+
+§ 4 — ECHO
+NEANT sur l'escalier lui-meme. [OBL] Deux Echos sont DANS la montee :
+E27 (PN-131, le palier des cloches, a 156 m) et E28 (PN-133, la corde de
+secours, a 178 m).
+[OBL] Aucun autre. Sur 196 metres et onze minutes, deux Echos.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur monte. La camera est derriere lui, comme toujours.
+[OBL] Aucun plan scripte, aucune camera, aucun ralenti, aucun changement
+de point de vue, pendant onze minutes.
+[ART] Le seul evenement visuel est le rythme : sombre, clair, sombre,
+clair, quatorze fois.
+[OBL] A chaque meurtriere, il peut regarder dehors. Il voit :
+  — de 0 a 40 m : la jetee, le pont casse, la ville basse
+  — de 40 a 100 m : les toits, le Marche suspendu au loin, la grue rouge
+  — de 100 a 160 m : la Maree, jusqu'a l'horizon, sous la pluie
+  — de 160 a 196 m : de la brume. [OBL] Rien d'autre. Les quatre dernieres
+    meurtrieres ne montrent que du blanc gris.
+[OBL] Le joueur monte au-dessus de la brume et il ne voit plus rien.
+[OBL] La pluie s'arrete d'etre visible a 140 m : [OBL] il est au-dessus de
+la couche. Il pleut en dessous de lui. Ce n'est jamais commente.
+
+§ 6 — AUDIO
+[OBL] LE SON EST LA STRUCTURE DE LA SEQUENCE.
+SFX(step_granite_stair) : 12 variations. [OBL] Le timbre CHANGE avec
+l'altitude : en bas, le fut fait 9 m et la reverb est ample (RT60 4,2 s).
+En haut, il fait 4 m et la reverb est serree (RT60 1,8 s).
+[OBL] Interpolation continue sur 196 m. Le joueur entend la tour se
+resserrer autour de lui.
+[ART] C'est le meilleur travail sonore du jeu et il dure onze minutes.
+SFX(wind_through_slit) : le vent dans les 14 meurtrieres. [OBL] La hauteur
+de la note MONTE avec l'altitude (le vent est plus rapide en haut) : de
+180 Hz en bas a 640 Hz en haut.
+SFX(rain_through_slit) : audible jusqu'a 140 m, puis plus rien.
+[OBL] La disparition de la pluie du mix, a 140 m, sur 20 secondes, est le
+moment ou le joueur comprend physiquement qu'il est tres haut.
+M24 « Le Phare » continue. Elle monte d'un demi-ton toutes les 3 minutes.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre de courir · ajouter un raccourci · ajouter un
+ascenseur · ajouter un objet sur les marches · ajouter un evenement ·
+ajouter une chute · ajouter un vertige mecanique · ajouter un compteur ·
+afficher l'altitude · couper la montee par un fondu · ajouter un plan
+scripte · interrompre M24 · ajouter un garde-corps en bas.
+
+§ 8 — LIENS
+PN-129 (la premiere marche). PN-131 (le palier, 156 m). PN-133 (la corde,
+178 m). PN-134 (la machinerie, 196 m).
+PN-049 (le monte-charge, S3) : l'autre montee, mecanique, de 15 secondes.
+PN-054 (la grue rouge) et PN-055 (le clocher) : les deux verticales.
+PN-095 (le dessin de Sol : le phare plus grand que tout, avec un trait qui
+sort du cadre).
+[THEME] MONTER. [THEME] CE QUI COUTE.
+
+§ 9 — DOD
+[ ] 1 038 marches, 196 m, fut conique 9 m → 4 m
+[ ] 14 meurtrieres, 14 rais faibles, 14 vues differentes selon l'altitude
+[ ] 4 dernieres meurtrieres : brume seule
+[ ] Pas de garde-corps sur les 40 premiers metres
+[ ] Vitesse fixe, aucune course, 11 minutes exactement
+[ ] RT60 interpole en continu de 4,2 s a 1,8 s sur 196 m
+[ ] Note du vent de 180 a 640 Hz avec l'altitude
+[ ] Pluie disparaissant du mix a 140 m sur 20 s
+[ ] Zero objet, zero evenement, zero plan scripte sur les 1 038 marches
+[ ] Streaming 3 sections, 180 Mo

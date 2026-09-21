@@ -1,0 +1,101 @@
+===============================================================================
+DLG · S2 · D02 — LE TRAMWAY A TROIS METRES SOUS LES PIEDS
+8 lignes · LOH 3 / ECH 5 · le spectacle que le jeu refuse de cadrer
+Prop : PN-029 (le tramway complet, silhouettes assises).
+Reference maitre : 09.11 « Le jeu ne s'arrete pas. La camera ne cadre pas. »
+===============================================================================
+
+--- CONTEXTE ET INTERDIT --------------------------------------------------------
+
+Le joueur marche. Sous ses pieds, a 3 m, un tramway entier, intact, avec
+des gens assis dedans. Debout dans l'allee, une femme tient encore la
+barre.
+
+[OBL] INTERDIT ABSOLU : aucune cinematique, aucun recadrage automatique,
+aucun ralenti, aucune note de musique ajoutee, aucun controller-lock.
+Le joueur peut passer a cote sans le voir. 12 a 18 % le rateront a la
+premiere partie selon les playtests cibles, et c'est ACCEPTE. Si un
+designer propose « un petit cadrage pour ne pas le manquer », la reponse
+est non, et cette ligne du document est la raison ecrite de ce non.
+
+Le tramway ne declenche PAS d'Echo. C'est le seul grand spectacle du
+chapitre sans Echo. Regle R1 : rien de ce qui touche a la Maree n'a
+d'Echo. Le joueur ne le sait pas encore et il va essayer. Il va poser la
+main sur le verre au-dessus du tramway. Il ne se passera rien.
+
+Les 5 lignes d'Echo de ce document ne viennent PAS du tramway. Elles
+viennent d'un banc public a 30 m, un banc ordinaire, moche, sur un bout
+de quai emerge. C'est le faux positif n° 3 du chapitre (cf. annexe B :
+les 7 faux positifs). Le joueur cherche le drame et trouve un homme qui
+attend un bus.
+
+--- LES 3 LIGNES DE LOHEN -------------------------------------------------------
+
+    [S2_LOH_L015]  LOHEN (murm) · 1,0 s · fige · p2,4
+        « ... »
+        dir : ligne SILENCIEUSE enregistree (2e et derniere du jeu apres
+              S1_PAL_L099) : une inspiration coupee. Declenchee seulement
+              si le joueur s'arrete plus de 3 s au-dessus du tramway.
+              Aucun sous-titre. [OBL] Whitelist `sub-match`.
+
+    [S2_LOH_L016]  LOHEN (murm) · 1,4 s · bas · p0,0
+        « Non. »
+        dir : declenchee s'il pose la main sur le verre au-dessus du
+              tramway. Il retire la main tout seul en 0,6 s
+              (LOH-GLS-081). Aucun Echo. Aucune explication.
+
+    [S2_LOH_L017]  LOHEN (murm) · 1,9 s · bas · p0,0
+        « Elle tient encore la barre. »
+        dir : declenchee UNE fois, seulement si le joueur a zoome sur la
+              femme debout plus de 5 s. C'est la seule ligne du jeu qui
+              decrit ce que le joueur voit, et elle existe parce que
+              certains joueurs auront besoin d'entendre quelqu'un d'autre
+              le dire pour y croire.
+
+--- LES 5 LIGNES DE L'ECHO DU BANC (E04, mode C, faux positif) -------------------
+
+[NAR][OBL] E04 est l'UNIQUE Echo du chapitre qui concerne Esteban, et il
+ne le montre pas : on entend sa voix a travers une cloison, inintelligible.
+C'est ici. Le joueur ne peut pas le savoir. Il ne le saura jamais avec
+certitude — en S8, apres la lettre, il aura un doute, et le doute est
+suffisant.
+
+    [S2_ECH_L018]  HOMME AU BANC · 2,2 s · las · p0,6
+        « Il est en retard de onze minutes. Il est toujours en retard de
+          onze minutes. »
+
+    [S2_ECH_L019]  FEMME · 1,4 s · moqueur · p0,5
+        « Alors arrivez onze minutes plus tard. »
+
+    [S2_ECH_L020]  HOMME AU BANC · 2,6 s · plat · p0,8
+        « Et s'il est a l'heure une fois ? Je l'aurai rate. »
+
+    [S2_ECH_L021]  VOIX DERRIERE LA CLOISON · 2,9 s · — · p0,7
+        dir : [OBL] C'EST ESTEBAN. Le texte existe, il est enregistre en
+              entier par son comedien, puis passe a travers une
+              simulation de cloison reelle (enregistrement d'un
+              haut-parleur derriere une porte de 34 mm, prise a 2 m).
+              Resultat : on percoit le RYTHME, la hauteur, deux voyelles.
+              Jamais un mot. Le texte reel, pour le comedien seul :
+              « Je te l'accorde a l'oreille, pas a la machine. La machine
+                entend juste. Elle n'entend pas bien. »
+              [OBL] Ce texte n'apparait dans AUCUN sous-titre, dans aucune
+              langue. Le fichier de sous-titre contient une chaine vide.
+              Job CI `esteban-muffled` : verifie que `S2_ECH_L021` a un
+              sous-titre vide dans les 3 langues.
+
+    [S2_ECH_L022]  FEMME · 1,7 s · plat · p0,0
+        « Vous voyez. Il y a pire que vous. »
+        dir : elle parle de la voix derriere la cloison. Elle rit un peu.
+              Dissolution. [NAR] Le dernier son de l'Echo est le rire
+              d'une inconnue a propos d'Esteban. C'est tout ce que le
+              chapitre donnera de lui en temps reel.
+
+--- CHECKLIST ------------------------------------------------------------------
+
+[ ] Zero cadrage, zero ralenti, zero musique sur le tramway
+[ ] Le tramway ne declenche pas d'Echo (R1)
+[ ] L015 : fichier VO silencieux, sans sous-titre
+[ ] L021 : Esteban enregistre en entier, diffuse a travers une vraie
+    cloison, sous-titre VIDE en FR/EN/ES
+[ ] Aucune indication que L021 est Esteban, nulle part dans le jeu

@@ -1,0 +1,126 @@
+===============================================================================
+PN-120 — LA LETTRE DE MIREILLE
+===============================================================================
+Asset : SM_S7_Lettre_Mireille · S7, sur le bureau de l'arriere-boutique ·
+~05:36 · PORTEUR D'ECHO E25 + TEXTE LISIBLE · pas ramassable ·
+LOD0 16 tris
+
+§ 1 — CE QU'ON VOIT
+Sur le bureau de l'arriere-boutique, une feuille. Posee a plat, seule, au
+centre du sous-main.
+Elle est ecrite. [OBL] De la main gauche de Mireille.
+Elle est courte. Sept lignes. Elle n'est pas signee.
+Il n'y a pas d'enveloppe.
+
+     Anselme,
+
+     Je ne viendrai plus. Ce n'est pas a cause de ce que vous etes
+     devenu. C'est parce que je n'ai plus rien a vous apporter.
+     J'ai garde le dossier dans le tiroir. Je ne peux pas le fermer
+     et je ne peux plus l'ouvrir.
+     Si quelqu'un vient un jour, donnez-le-lui.
+     Il saura quoi en faire. Moi non.
+
+[OBL] Sept lignes. Pas une de plus.
+La feuille est posee la depuis des mois. Elle a jauni.
+Il y a un verre pose dessus, comme presse-papier. Un verre souffle, simple,
+transparent.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 16 tris (quad legerement gondole + verre 180 tris).
+[OBL] Texture 4K. Densite 780 px/m. Lisible a 35 cm.
+[OBL] Ecriture manuscrite reelle, main gauche, meme calligraphe et meme
+etat que PN-077 et PN-119. Coherence graphologique verifiee sur les trois.
+[OBL] Le mot « Anselme » est la SEULE fois du chapitre ou son prenom
+apparait autrement que sur le carton d'invitation (PN-106).
+Le verre presse-papier : `blown_glass_clear`, avec une refraction reelle du
+texte qui est dessous. [OBL] Les lettres sous le verre sont DEFORMEES et
+agrandies. Le joueur lit a travers.
+[ART] C'est le detail : on lit une lettre a travers un objet fabrique par
+celui a qui elle est adressee.
+Collision : aucune. [OBL] Non prenable, non deplacable. Le verre ne bouge
+pas.
+
+§ 3 — CE QUE CA DIT
+Mireille ecrivait a Anselme Roux. Elle venait ici. Elle a arrete.
+« Ce n'est pas a cause de ce que vous etes devenu. »
+[OBL] C'est la seule phrase de tout le chapitre 1 qui reconnaisse
+explicitement que le Verrier est Anselme Roux, et ce qu'il est devenu.
+[OBL] Elle ne decrit rien. Elle ne dit pas comment. Elle ne dit pas quoi.
+[OBL] Jamais explique, dans aucun des sept chapitres.
+« Si quelqu'un vient un jour, donnez-le-lui. »
+[OBL] Le joueur vient de prendre le dossier (PN-119). Personne ne le lui a
+donne. Il l'a pris dans un tiroir.
+[NAR] Et Anselme Roux, 2,6 m, muet, l'attend a 200 metres.
+Le geste humain : poser un verre sur une lettre pour qu'elle ne s'envole
+pas, dans une piece ou il n'y a pas de vent.
+
+§ 4 — ECHO
+ECHO E25 — « La lettre posee » — 12 secondes, mode C. LE PLUS COURT DU JEU.
+[OBL] Aucun visuel.
+Ce qu'on entend :
+  — une chaise qu'on tire (0-1 s)
+  — quelqu'un qui s'assoit (1-2 s)
+  — une plume sur du papier. [OBL] Sept lignes. On entend chaque ligne :
+    le grattement, l'arret en fin de ligne, le retour. Sept fois. (2-9 s)
+  — la plume qu'on pose (9,5 s)
+  — le verre qu'on pose sur le papier (10,5 s)
+  — la chaise qu'on repousse (11,5 s)
+  — fin.
+[OBL] Elle ne se releve pas dans le son. On entend la chaise repoussee, et
+c'est tout. Pas de pas. Elle est encore la quand l'Echo s'arrete.
+[OBL] Zero musique. Zero voix. Zero respiration.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+[OBL] Le bureau est a 1 m du tiroir de PN-119. Le joueur prend le dossier
+et se releve : la lettre est devant lui.
+[OBL] Ordre obligatoire : le dossier D'ABORD, la lettre ENSUITE.
+Le tiroir est bas (2e tiroir, 55 cm). Le sous-main est a 75 cm.
+[ART] Il se baisse, il prend le dossier, il se releve, et il lit qu'on
+aurait du le lui donner.
+[OBL] Aucun prompt de lecture, aucun overlay, aucun zoom.
+Il fait noir. [OBL] La lettre est le texte le plus difficile a lire du
+chapitre : main gauche tremblee, papier jauni, sous un verre deformant,
+dans le noir, eclaire par des reflets.
+[OBL] Aucune aide d'aucune sorte. Taux de lecture integrale : 38-49 %.
+[OBL] Lohen ne la lit pas.
+
+§ 6 — AUDIO
+Pendant E25 : cf. § 4.
+[OBL] Le son de la plume est le sujet. Sept lignes, sept rythmes differents.
+La quatrieme ligne (« Je ne peux pas le fermer ») est ecrite plus lentement
+que les autres. [OBL] Detail obligatoire, mesurable : 2,1 s contre 0,9 s de
+moyenne.
+Le verre pose sur le papier : [OBL] un son minuscule et parfait. Du verre
+sur du papier sur du bois. -26 dB.
+Hors Echo : silence.
+
+§ 7 — INTERDICTIONS
+Interdit de : prendre la lettre · deplacer le verre · ajouter une huitieme
+ligne · la signer · ajouter une enveloppe · expliquer « ce que vous etes
+devenu » · decrire le Verrier dans le texte · faire lire Lohen · ajouter un
+overlay ou un zoom · ajouter de la musique · faire pleurer dans E25 ·
+rendre E25 rejouable · faire porter la lettre a Anselme · lui faire lire.
+[OBL] Anselme Roux ne lit jamais cette lettre dans le chapitre 1. Elle
+reste sur le bureau.
+
+§ 8 — LIENS
+PN-119 (le dossier, a 1 m). PN-117 (E23, l'atelier). PN-128 (les fragments).
+PN-077, PN-081 (l'ecriture de Mireille). PN-106 (le carton : « Anselme
+Roux »).
+PN-143 (LA LETTRE) : [OBL] deux lettres dans le chapitre. Celle-ci est
+courte, non signee, et le destinataire ne la lira pas. L'autre est longue,
+signee, et le destinataire la lira.
+[THEME] LES ECRITURES. [THEME] CE QU'ON NE PEUT PAS FERMER.
+
+§ 9 — DOD
+[ ] 7 lignes exactement, non signee, main gauche de Mireille
+[ ] Coherence graphologique avec PN-077 et PN-119
+[ ] Verre presse-papier refractant et agrandissant le texte
+[ ] Lisible a 35 cm, sans overlay, dans le noir : taux 38-49 %
+[ ] Ordre force : dossier puis lettre (tiroir a 55 cm, bureau a 75 cm)
+[ ] E25 : 12 s, le plus court du jeu, 7 rythmes de plume
+[ ] Quatrieme ligne ecrite en 2,1 s contre 0,9 s de moyenne
+[ ] Chaise repoussee sans pas ensuite
+[ ] Jamais prise, jamais lue par Anselme, jamais deplacee

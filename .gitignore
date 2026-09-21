@@ -1,0 +1,16 @@
+# Build / toolchain
+/build/
+/tmp/
+*.class
+*.dex
+*.apk.idsig
+/android/assets/content/
+/android/assets/generated/
+/dist/*.idsig
+# OS / editeurs
+.DS_Store
+Thumbs.db
+*.tmp
+*.blend1
+# Snapshots de travail
+*.log

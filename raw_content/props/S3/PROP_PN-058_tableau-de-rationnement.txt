@@ -1,0 +1,94 @@
+===============================================================================
+PN-058 — LE TABLEAU DE RATIONNEMENT
+===============================================================================
+Asset : SM_S3_Tableau_Rationnement · S3, mur de l'ancienne cooperative,
+niveau 1 · ~02:18 · prop a TEXTE LISIBLE · pas d'Echo · LOD0 600 tris
+
+§ 1 — CE QU'ON VOIT
+Un panneau de contreplaque de 1,20 x 0,80 m, visse au mur, sous un debord.
+Dessus, un tableau trace a la regle et au crayon gras, en colonnes.
+En-tete, en capitales : REPARTITION — SEMAINE 3
+Sept colonnes : NOM / EAU / FARINE / HUILE / SEL / BOIS / VU
+Et des lignes. Onze lignes.
+Onze noms, ecrits a la main, a l'encre, par la meme personne.
+En face de chaque nom, des chiffres : des litres, des kilos, des mesures.
+Les chiffres ne sont pas les memes pour tout le monde. Certains ont plus.
+La colonne « VU » contient des initiales manuscrites : chacun signait quand
+il avait pris sa part. Chaque ligne a des initiales.
+Sauf une.
+La huitieme ligne. Le nom est ecrit. Les quantites sont ecrites. La colonne
+VU est vide.
+Et le nom de la huitieme ligne est BARRE. Un seul trait, a l'encre, tire
+plus tard, d'une main differente — l'encre est plus claire et le trait
+depasse de 3 cm a droite.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 600. [OBL] Texture 4K dediee. Densite 640 px/m. Les onze lignes sont
+lisibles individuellement a 1,2 m.
+[OBL] Ecriture manuscrite reelle, deux mains : celle qui a tout ecrit
+(l'organisateur) et celle qui a barre. Les initiales de la colonne VU sont
+de ONZE mains differentes — onze personnes reelles signent onze fois.
+[OBL] Les onze noms viennent de `content/victims_641.csv`. DIX d'entre eux
+NE sont PAS barres sur l'affiche PN-003 : ce sont des survivants. Le
+onzieme, celui de la huitieme ligne, l'est.
+Coherence croisee obligatoire et verifiee par script.
+Shader `plywood_weathered` + `crayon_grease` pour les traits de regle.
+Collision : aucune. Non interactif.
+
+§ 3 — CE QUE CA DIT
+Apres la Maree, onze personnes se sont organisees. Elles ont fait un
+tableau. Elles ont reparti l'eau, la farine, l'huile, le sel et le bois.
+Elles ont signe quand elles prenaient.
+Le geste humain : tracer un tableau a la regle. Dans une ville detruite,
+quelqu'un a pris une regle et a trace des colonnes droites.
+[NAR] « SEMAINE 3 ». Il y a eu une semaine 1 et une semaine 2. Il n'y a
+pas eu de semaine 4 : le panneau n'a jamais ete efface ni remplace.
+La huitieme ligne : quelqu'un n'est pas venu chercher sa part, cette
+semaine-la. Et quelqu'un d'autre a barre son nom.
+[OBL] Le jeu n'explique pas ce qui est arrive a cette personne. Ce n'est
+pas la Maree : elle avait survecu, elle etait sur le tableau.
+Onze personnes. Sept chaises autour du brasero (PN-057), a 25 m d'ici.
+[OBL] Le jeu ne fait jamais le calcul. Le joueur le fera ou non.
+
+§ 4 — ECHO
+NEANT. Geste d'apres (PN-015).
+
+§ 5 — MISE EN SCENE
+Sur le mur de la cooperative, a hauteur d'yeux, sur le chemin.
+[ART] C'est le troisieme texte lisible du chapitre (apres PN-010 et PN-013),
+et le premier qui contienne des NOMS de vivants.
+Le joueur qui a lu l'affiche des 641 (PN-003) il y a deux heures et demie
+a vu 641 noms de morts. Ici, onze noms de vivants, dont un barre.
+Lumiere : sous un debord, donc dans l'ombre. La lampe (PN-009) est
+necessaire. [OBL] Le halo de la lampe eclaire 4 a 5 lignes a la fois : le
+joueur lit le tableau par groupes, en deplacant sa main.
+Aucun prompt, aucun zoom, aucun overlay. On se penche.
+
+§ 6 — AUDIO
+NEANT. Le panneau est muet.
+M10 tourne normalement.
+
+§ 7 — INTERDICTIONS
+Interdit de : expliquer la ligne barree · ajouter une semaine 4 · ajouter un
+douzieme nom · afficher le texte en overlay · le faire lire a voix haute
+[OBL — Lohen ne sait pas bien lire] · permettre de prendre le panneau ·
+donner un Echo · relier explicitement aux sept chaises · faire commenter
+par Tallec [OBL — il etait forcement l'un des onze, et il n'en parle
+jamais ; son nom est sur le tableau, ligne 4, et rien ne le signale].
+
+§ 8 — LIENS
+PN-003 (l'affiche des 641) : coherence croisee, 10 non barres, 1 barre.
+PN-057 (le brasero et ses sept chaises, a 25 m).
+PN-045 (Tallec) : son nom est ligne 4. [OBL] Aucun dialogue ne le mentionne.
+Le joueur qui a parle a Tallec puis lit le tableau — ou l'inverse — peut le
+reconnaitre. Environ 12 % le feront.
+PN-123 (l'affiche, deuxieme etat, S7).
+[THEME] LES GESTES D'APRES. [THEME] LES NOMS ECRITS A LA MAIN.
+
+§ 9 — DOD
+[ ] 11 lignes manuscrites, 7 colonnes, quantites inegales et credibles
+[ ] 11 mains differentes pour les initiales de la colonne VU
+[ ] 8e ligne : VU vide, nom barre d'une encre plus claire, trait depassant
+[ ] Coherence CSV validee par script : 10 non barres / 1 barre sur PN-003
+[ ] Nom de Tallec en ligne 4, jamais signale, jamais commente
+[ ] Lisible a 1,2 m, sans overlay, par groupes de 4-5 lignes a la lampe

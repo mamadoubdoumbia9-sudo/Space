@@ -1,0 +1,233 @@
+===============================================================================
+DLG · S3 · D05 — LES QUATRE LETTRES LIVRABLES : LE METIER DE LOHEN
+41 entrees non-BK (LOH 17 · ODI 5 · BRE 5 · THE 5 · NIE 3 · WEN 2, dont 1 slot muet L175). Contribution : 41.
+Reference maitre : 09.12 « LETTRES LIVRABLES : 4 des 6 sont ici. »
+Prop : PN-059 (les six lettres — ramassable, cf. annexe B).
+===============================================================================
+
+--- POURQUOI CES QUATRE SCENES EXISTENT ---------------------------------------------
+
+[OBL] Livrer une lettre ne donne rien : pas de point, pas d'objet, pas
+d'information de quete, pas de succes. C'est le seul systeme optionnel du
+chapitre et sa recompense est entierement narrative.
+
+Ce que ca fait, en revanche : ca montre le metier de Lohen en action, et
+ca installe la regle du relayeur enoncee en S1 (« une lettre non remise,
+tu la gardes »). Quand le joueur recevra la septieme lettre en S8, il
+saura exactement ce qu'un relayeur en fait. Cette connaissance est payee
+ici, en trois minutes de scenes facultatives.
+
+[OBL] Les quatre destinataires sont VIVANTS. Aucune des quatre lettres
+n'est adressee a un disparu. C'est un choix : le jeu aurait pu etre cruel
+quatre fois de suite. Il se retient. Les deux lettres restantes (non
+livrables en S3) sont, elles, adressees a des gens qui ne sont plus la —
+et Lohen les gardera.
+
+Ordre libre. Aucun marqueur. Les destinataires sont trouvables par la
+description ecrite sur le pli, que Lohen ne peut pas lire entierement :
+il reconnait des formes. Il demande. C'est le systeme de recherche.
+
+--- LETTRE 1/4 — POUR ODILE, DE SA SOEUR (10 entrees) ---------------------------------
+
+    [S3_LOH_L135]  LOHEN · 2,0 s · poli · p0,5
+        « J'ai quelque chose pour une Odile. Grande ecriture, encre
+          bleue. »
+        dir : [OBL] il decrit l'ecriture, pas le nom. Il reconnait la
+              forme du mot « Odile » parce qu'il l'a vu souvent. Le
+              joueur ne saura jamais si Lohen lit ou reconnait.
+
+    [S3_ODI_L136]  ODILE · 1,4 s · surpris · p0,6
+        « Ca fait deux ans. »
+
+    [S3_LOH_L137]  LOHEN · 1,7 s · plat · p0,5
+        « Ca fait deux ans que je la porte, oui. »
+
+    [S3_ODI_L138]  ODILE · 2,2 s · plat · p0,7
+        « Je vous demandais pas pardon. Je constatais. »
+
+    [S3_LOH_L139]  LOHEN · 0,9 s · plat · p0,4
+        « Je sais. »
+
+    [S3_ODI_L140]  ODILE · 2,6 s · plat · p0,9
+        « Elle est morte, ma soeur. En 'quinze. Pas la Maree. Le coeur. »
+        dir : [OBL] elle le dit en prenant la lettre. Elle ne la refuse
+              pas. Elle ne pleure pas. Elle continue d'etendre son linge
+              avec l'autre main.
+
+    [S3_LOH_L141]  LOHEN · 1,2 s · plat · p0,6
+        « Vous la voulez quand meme ? »
+
+    [S3_ODI_L142]  ODILE · 1,8 s · sec · p0,5
+        « Evidemment que je la veux. »
+
+    [S3_ODI_L143]  ODILE · 2,9 s · plat · p0,8
+        « Vous croyez qu'on jette les lettres parce que les gens sont
+          morts ? C'est l'inverse, monsieur. »
+        dir : [OBL][NAR] LA PHRASE QUI ANNONCE LE CHAPITRE. Elle est
+              dite par un personnage secondaire, a la 58e minute, entre
+              deux draps mouilles, et le jeu ne la souligne pas d'une
+              seule note de musique. Un joueur sur trois s'en souviendra
+              a la fin. C'est exactement le taux vise.
+
+    [S3_ODI_L144]  ODILE · 1,3 s · plat · p0,0
+        « Merci. Allez-y, vous genez le linge. »
+        dir : elle congedie le porteur d'une lettre de sa soeur morte
+              parce qu'il gene le linge. C'est ca, cette ville.
+
+--- LETTRE 2/4 — POUR BREL, D'UN CREANCIER (10 entrees) --------------------------------
+
+    [S3_LOH_L145]  LOHEN · 1,6 s · poli · p0,5
+        « Brel ? Une lettre. »
+
+    [S3_BRE_L146]  BREL · 1,1 s · plat · p0,6
+        « Pose-la la. »
+        dir : il ne s'arrete pas de frapper. Le marteau continue pendant
+              toute la scene, toutes les 1,4 s, et le mix ne le baisse
+              pas. [OBL] Le ducking de la VO ne s'applique PAS au
+              marteau. On entend mal. C'est vrai.
+
+    [S3_LOH_L147]  LOHEN · 1,4 s · plat · p0,5
+        « Je peux pas. Faut que je vous la donne en main. »
+
+    [S3_BRE_L148]  BREL · 1,9 s · sec · p0,7
+        « Pourquoi. »
+
+    [S3_LOH_L149]  LOHEN · 1,3 s · plat · p0,6
+        « C'est la regle. »
+
+    [S3_BRE_L150]  BREL · 2,4 s · moqueur · p0,5
+        « Y'a plus de regles depuis trois ans et toi t'as encore des
+          regles. »
+
+    [S3_LOH_L151]  LOHEN · 1,1 s · plat · p0,8
+        « Oui. »
+        dir : [OBL] il ne se defend pas. Une syllabe. Brel s'arrete de
+              frapper apres cette reponse — c'est le seul silence du
+              marteau de toute la sequence, 2,2 s.
+
+    [S3_BRE_L152]  BREL · 2,7 s · plat · p0,6
+        « Donne. »
+
+    [S3_BRE_L153]  BREL · 2,1 s · plat · p0,5
+        « C'est une dette. Je sais deja. Je la paierai pas, il est mort. »
+
+    [S3_BRE_L154]  BREL · 3,0 s · plat · p0,0
+        « Mais je la garde, parce qu'il l'a ecrite avant. »
+        dir : il la met dans sa poche de tablier, contre le cuir brule.
+              Il reprend le marteau. [OBL] La lettre sera visible dans
+              sa poche en S7. Modelisee. Personne ne la mentionnera.
+
+--- LETTRE 3/4 — POUR THEA, D'UN INCONNU (10 entrees) ----------------------------------
+
+    [S3_LOH_L155]  LOHEN · 1,8 s · poli · p0,5
+        « Thea. Vous etes bien Thea du treuil trois ? »
+
+    [S3_THE_L156]  THEA · 1,2 s · presse · p0,4
+        « Treuil trois, treuil cinq, treuil sept. Oui. Quoi. »
+
+    [S3_LOH_L157]  LOHEN · 1,0 s · plat · p0,6
+        « Une lettre. »
+
+    [S3_THE_L158]  THEA · 1,5 s · presse · p0,5
+        « De qui. »
+
+    [S3_LOH_L159]  LOHEN · 2,2 s · plat · p0,7
+        « Je sais pas. Y'a pas de nom au dos. »
+
+    [S3_THE_L160]  THEA · 2,8 s · fige · p0,9
+        « Y'a pas de nom au dos. »
+        dir : [OBL] elle repete exactement la phrase de Lohen. Elle
+              arrete le treuil. Le treuil qui s'arrete, c'est 400 kg
+              qui restent en l'air : deux PNJ crient en arriere-plan
+              (barks BK_S3). Elle s'en moque.
+
+    [S3_LOH_L161]  LOHEN · 1,1 s · plat · p0,5
+        « Vous savez qui c'est. »
+
+    [S3_THE_L162]  THEA · 1,7 s · sec · p0,8
+        « Non. »
+        dir : [OBL] elle ment, et cette fois le jeu le SAIT et le
+              montre : elle a serre la lettre contre sa poitrine avant
+              de dire non. L'animation precede le mensonge de 0,4 s.
+              C'est la seule fois du chapitre ou une animation contredit
+              une ligne. Une seule fois, sinon ca devient un systeme.
+
+    [S3_THE_L163]  THEA · 2,3 s · presse · p0,4
+        « Merci. Ecartez-vous, j'ai quatre cents kilos en l'air. »
+
+    [S3_THE_L164]  THEA · 1,9 s · plat · p0,0
+        « Et non, je vous dirai rien. »
+        dir : elle relance le treuil. [OBL] Aucune option de dialogue
+              pour insister. Aucune quete secondaire ne s'ouvre. Cette
+              histoire n'aura jamais de suite, dans aucun chapitre.
+              C'est ecrit ici pour que personne ne la « resolve » plus
+              tard.
+
+--- LETTRE 4/4 — POUR UN ENFANT, DE PERSONNE (10 entrees) ------------------------------
+
+[NAR] La quatrieme lettre est adressee « au petit de la passerelle 9 ».
+Il y a onze enfants sur la passerelle 9. Le jeu ne dit pas lequel.
+
+    [S3_LOH_L165]  LOHEN · 2,4 s · poli · p0,6
+        « J'ai une lettre pour le petit de la passerelle neuf. »
+
+    [S3_NIE_L166]  NIELS · 1,0 s · joueur · p0,4
+        « C'est moi. »
+
+    [S3_WEN_L167]  WENNA · 0,9 s · joueur · p0,4
+        « C'est moi. »
+
+    [S3_NIE_L168]  NIELS · 1,2 s · joueur · p0,5
+        « C'est moi d'abord. »
+
+    [S3_LOH_L169]  LOHEN · 1,6 s · plat · p0,7
+        « Il y en a onze, des petits, ici. »
+
+    [S3_WEN_L170]  WENNA · 1,8 s · plat · p0,6
+        « Bah donne-la a onze. »
+
+    [S3_LOH_L171]  LOHEN · 1,4 s · plat · p0,8
+        « Ca se fait pas. »
+
+    [S3_NIE_L172]  NIELS · 2,6 s · plat · p0,7
+        « Alors lis-la et on saura. »
+        dir : [OBL][NAR] LE PIEGE. Un enfant vient de demander a Lohen
+              de lire a voix haute. Le joueur, lui, sait.
+
+    > CHOIX 05 (aucun timer) — le choix le plus dur de S3
+      [1] « Je ne lis pas le courrier des autres. »
+      [2] « Lis-la, toi. »
+      [3] (Ranger la lettre et partir.)
+
+    -- branche [1] : Lohen se protege derriere la regle du metier.
+    [S3_LOH_L173]  LOHEN · 2,2 s · plat · p0,0
+        « Je ne lis pas le courrier des autres. »
+        dir : vrai, et commode. Les enfants haussent les epaules. La
+              lettre reste non livree et restera dans la sacoche
+              jusqu'a la fin du chapitre.
+
+    -- branche [2] : il la tend a Niels.
+    [S3_LOH_L174]  LOHEN · 1,1 s · plat · p0,0
+        « Lis-la, toi. »
+        dir : Niels lit a voix haute (voir D13, L4xx). C'est une lettre
+              d'un pere a un fils, courte, banale, et elle n'est pour
+              aucun des onze. Les enfants s'en vont deçus. Lohen la
+              reprend.
+
+    -- branche [3] : silence, il range, il part.
+    [S3_LOH_L175]  LOHEN · 0,0 s · — · p0,0
+        (aucun son)
+        dir : [OBL] slot sans VO, comme S3_SOL_L085. Whitelist
+              `vo-orphan`. Le geste de ranger (LOH-ACT-018) est la
+              reponse. Les enfants ne commentent pas. C'est la branche
+              que 44 % des joueurs choisissent en playtest cible.
+
+--- CHECKLIST ----------------------------------------------------------------------
+
+[ ] Livrer une lettre ne donne AUCUNE recompense mecanique
+[ ] Les 4 destinataires sont vivants ; les 2 lettres restantes ne le sont pas
+[ ] L143 sans appui musical
+[ ] L146-L154 : le marteau n'est pas ducke, sauf le silence de 2,2 s
+[ ] L162 : animation contredisant la ligne — UNE seule fois dans le jeu
+[ ] L164 : aucune suite possible, jamais, aucun chapitre
+[ ] L175 : slot sans VO, whitelist

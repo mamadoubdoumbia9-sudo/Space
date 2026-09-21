@@ -1,0 +1,109 @@
+===============================================================================
+PN-146 — LA RESERVE DE PROVISIONS
+===============================================================================
+Asset : SM_S8_Reserve_Phare · S8, placard mural de la chambre ·
+~06:37 · prop narratif · pas d'Echo · LOD0 3 300 tris
+
+§ 1 — CE QU'ON VOIT
+Dans le mur courbe, un placard. Deux portes de bois, sans serrure.
+Elles s'ouvrent. LOH-ACT-244, 1,8 s.
+Dedans, trois etageres.
+[OBL] Etagere du haut : des boites de conserve. Vingt-trois.
+[OBL] Etagere du milieu : de la farine dans un bocal, du sel, de l'huile
+(trois bouteilles, dont deux pleines), des biscuits de mer dans une boite
+de fer, du the.
+[OBL] Etagere du bas : du PETROLE. Quatre bidons de 5 litres. Trois sont
+pleins. Le quatrieme est entame.
+[OBL] Vingt litres de petrole. Dans la chambre.
+Et le brûleur du Phare, huit metres plus bas, est vide (PN-135).
+[OBL] Il avait de quoi allumer le Phare. Pendant des semaines.
+Il ne l'a pas fait.
+[OBL] Jamais explique. Ni ici, ni dans la lettre, ni dans les six chapitres
+suivants.
+Sur la porte intérieure du placard, colle, un papier.
+[OBL] Une liste. Pas manuscrite : imprimee. C'est la liste de dotation
+reglementaire d'un gardien de phare. Elle date de 1871.
+Elle est annotee a la main, dans les marges, par Esteban.
+[OBL] Les annotations sont illisibles : trop petites, delavees.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 300 (placard 900 + 23 boites 1 600 + contenants 800).
+[OBL] Les 23 boites sont le MEME modele de base que celles de Sol (PN-090),
+avec les memes 14 etiquettes dessinees pour le projet.
+[OBL] Elles ne sont PAS triees. Elles sont posees, en vrac, sur deux
+rangees.
+[ART] Sol trie. Esteban non.
+Les bidons de petrole : 4 x 220 tris, tole peinte, avec un bouchon a vis et
+une etiquette au pochoir.
+[OBL] Le niveau du quatrieme est visible par un voyant de verre lateral.
+La liste de 1871 : texture 2K, police d'imprimerie du projet, annotations
+manuscrites illisibles.
+Collision : praticable. [OBL] Rien n'est prenable. Aucun objet ne sort du
+placard.
+
+§ 3 — CE QUE CA DIT
+Il avait de quoi tenir des mois, et vingt litres de petrole.
+Le geste humain : ranger des provisions.
+[OBL] Il n'a pas allume le Phare.
+[NAR] Un phare eteint dans une ville morte, et un homme qui vit dedans avec
+vingt litres de petrole.
+[OBL] La lettre ne l'evoque pas. Les six chapitres suivants ne l'evoquent
+pas. Aucun personnage ne pose la question.
+[OBL] Le joueur peut se la poser. C'est tout ce que le jeu lui donne.
+[OBL] Rappel d'interdit absolu (21.08) : LE PHARE N'EST JAMAIS ALLUME.
+Le joueur ne peut pas l'allumer. Il n'y a aucun prompt, aucune interaction,
+aucune possibilite, dans les sept chapitres.
+[OBL] Le petrole est la, il est visible, il est a huit metres du brûleur,
+et rien.
+
+§ 4 — ECHO
+NEANT. [OBL] Provisions, objets du present. Et E31 est termine : il n'y a
+plus d'Echo dans le chapitre.
+
+§ 5 — MISE EN SCENE
+[OBL] Le placard est a gauche en entrant, derriere le joueur quand il lit
+la lettre.
+[OBL] Zone facultative. Rien ne le signale. Les portes sont fermees.
+Taux d'ouverture : 49-62 %.
+[OBL] Il l'ouvre generalement APRES la lettre, en explorant la chambre une
+derniere fois.
+[ART] Il vient de lire que l'homme qu'il cherchait lui a laisse une lettre,
+et il ouvre un placard, et il y a vingt litres de petrole et un phare
+eteint au-dessus de sa tete.
+[OBL] Aucun prompt de reflexion. Aucun LookAt. Aucune musique. Aucun
+dialogue.
+[OBL] La voix d'Esteban (PN-143 § 6) est peut-etre encore en train de lire.
+
+§ 6 — AUDIO
+SFX(cupboard_door_open) : les deux portes, une fois.
+SFX(tin_can_tap) : partage avec PN-090.
+[OBL] Aucun autre son. Le placard est muet.
+[OBL] Aucune musique.
+
+§ 7 — INTERDICTIONS
+Interdit de : prendre quelque chose · utiliser le petrole · allumer le
+Phare · rendre les annotations lisibles · expliquer pourquoi il ne l'a pas
+allume · faire commenter Lohen · ajouter une note explicative · trier les
+boites · ajouter un Echo · ajouter de la musique · en faire une enigme.
+
+§ 8 — LIENS
+PN-135 (le brûleur vide de la lentille, 8 m plus bas).
+PN-134 (la machinerie arretee : [OBL] meme avec du petrole, la lentille ne
+tournerait pas. Le poids est en bas et il faut le remonter a la manivelle.
+[OBL] Et la manivelle est la, sur ses crochets. Rien n'empeche
+techniquement d'allumer le Phare. Et personne ne le fait.)
+PN-090 (la reserve de Sol, S5) : memes boites, triees, sept fois moins
+nombreuses.
+PN-082 (les 2 cm de the de Mireille, S4).
+[OBL] Trois reserves dans le chapitre. Celle de Mireille est presque vide.
+Celle de Sol est comptee et triee. Celle d'Esteban est abondante et en vrac.
+[THEME] CE QUI RESTE EN QUANTITE FINIE. [THEME] LE PHARE ETEINT.
+
+§ 9 — DOD
+[ ] 23 boites en vrac, non triees, memes modeles que PN-090
+[ ] 4 bidons de petrole, 3 pleins, 1 entame avec voyant de niveau
+[ ] Liste de dotation de 1871, annotations manuscrites illisibles
+[ ] Zone facultative, portes fermees, taux d'ouverture 49-62 %
+[ ] Rien de prenable, aucun objet ne sort
+[ ] Phare jamais allumable, aucun prompt, dans les 7 chapitres
+[ ] Zero musique, zero commentaire, zero explication

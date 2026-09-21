@@ -1,0 +1,98 @@
+===============================================================================
+PN-015 — LA PORTE DE LA CAPITAINERIE, CLOUEE
+===============================================================================
+Asset : SM_S1_Porte_Clouee · S1, facade de la capitainerie · ~00:34 ·
+prop narratif · pas d'Echo · LOD0 2 700 tris
+
+§ 1 — CE QU'ON VOIT
+Une porte a double battant, peinte en bleu administratif, vitree dans sa
+partie haute par six carreaux. Quatre carreaux sont casses.
+Elle est condamnee par SIX PLANCHES clouees en travers, de l'exterieur.
+Les planches viennent de caisses a poissons demontees : on lit encore, a
+l'envers sur l'une d'elles, « CRIEE DE VELMORA » au pochoir.
+Les clous sont enfonces de travers. Beaucoup sont tordus, deux ou trois par
+planche, rabattus a coups de marteau maladroits. Ce n'est pas un menuisier.
+C'est quelqu'un de presse, ou de bouleverse, ou de seul.
+Sur le battant droit, sous les planches, une plaque de laiton :
+        CAPITAINERIE DU PORT DE VELMORA
+        HORAIRES : 07H00 - 19H00
+        EN CAS D'URGENCE, SONNER
+Et une sonnette de porte, en cuivre. Elle fonctionne encore.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 700. Les six planches sont six meshes uniques (largeurs 11 a 19 cm,
+longueurs differentes, angles differents : -4°, +2°, -11°, 0°, +7°, -3°).
+[OBL] Aucune planche parallele a une autre. Un homme presse ne fait pas de
+paralleles.
+Les clous : 23 clous en geometrie, dont 9 tordus, modelises un par un.
+Verre casse : 4 carreaux, arretes modelisees, pas d'alpha plate.
+Shader `paint_chipped` + `glass_broken_edge`.
+Interaction : LA SONNETTE. C'est l'une des 24 interactions non-Echo du
+chapitre. Le joueur peut sonner. Autant de fois qu'il veut.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a ferme la capitainerie DE L'EXTERIEUR. Pas pour empecher
+d'entrer — les carreaux sont casses, on entre par la vitre en dix secondes.
+Pour DECLARER que c'est fini. C'est un geste symbolique fait avec les
+moyens du bord, par une personne qui n'avait plus d'autorite que celle-la.
+Le geste humain : demonter des caisses a poissons pour trouver du bois.
+La plaque « EN CAS D'URGENCE, SONNER » sous six planches clouees est la
+deuxieme ironie majeure du chapitre, apres PN-013 a deux metres de la.
+Les deux sont dans le meme champ de vision. C'est voulu.
+
+§ 4 — ECHO
+NEANT. Raison : la porte est un geste d'apres la Maree. Les Echos ne
+montrent que l'avant. Un objet modifie apres le 14 octobre ne peut pas
+porter d'Echo — c'est la deuxieme regle implicite du systeme (la premiere
+etant PN-011 : rien sur la Maree).
+[NAR] Ces deux regles, jamais enoncees, rendent la carte des Echos lisible
+pour un joueur attentif : il finit par savoir, avant d'approcher, si un
+objet va repondre. C'est une competence, pas une information.
+
+§ 5 — MISE EN SCENE
+Sur le chemin principal, incontournable. Le joueur essaie d'entrer :
+il ne peut pas. C'est le premier refus du jeu.
+[ART] Le refus est la mecanique narrative centrale de S1 : la barque ne
+repart pas, la capitainerie est close, la chaise ne se rejoue pas, le velo
+est hors d'atteinte. On apprend au joueur, pendant 40 minutes, qu'il n'aura
+pas ce qu'il demande. Toute la lettre du chapitre 8 repose sur cette
+education.
+Il se retourne : PN-013, le tableau noir.
+Cadrage : la plaque de laiton et une planche clouee dans le meme plan
+rapproche, quand le joueur se penche pour lire.
+
+§ 6 — AUDIO
+SFX(doorbell_brass) — LA SONNETTE. Deux notes de cuivre, mecaniques, sans
+electricite, un son parfaitement ordinaire et propre.
+[OBL] Elle sonne DANS le batiment vide. Le son doit etre traite comme
+venant de l'interieur : filtre passe-bas, reverb longue (RT60 1,9 s),
+attenue de 9 dB. On entend un bruit habiter une piece ou il n'y a personne.
+Apres le carillon, l'ambiance revient en 2,5 s, et pendant ces 2,5 s le
+vent est mixe a -6 dB. Le monde ecoute avec le joueur.
+Aucune reponse. Jamais. Quel que soit le nombre de coups.
+[ART] Statistique visee : 61 % des testeurs sonnent une deuxieme fois.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre d'entrer · faire repondre quelqu'un · faire
+repondre a la Nieme sonnerie · ajouter un easter egg de sonnette · arracher
+les planches · casser un cinquieme carreau · mettre les planches paralleles
+· faire commenter Lohen · afficher « ferme » ou tout message d'interface.
+[OBL] La capitainerie n'est JAMAIS accessible, ni au chapitre 1 ni
+ailleurs. Il n'y a rien dedans. Ce n'est pas un contenu coupe : c'est un
+intérieur qui n'existe pas et qui n'existera jamais.
+
+§ 8 — LIENS
+PN-013 (le tableau noir, a 2 m, meme cadre). PN-016 (les caisses a
+poissons : les planches viennent de la, et il manque exactement six
+planches a la pile). PN-057 (la porte clouee de l'ecole, S3 — meme main,
+memes clous tordus, meme angle de travers).
+[THEME] LE REFUS. [THEME] LES GESTES D'APRES.
+
+§ 9 — DOD
+[ ] 6 planches, 6 angles distincts, aucune parallele
+[ ] 23 clous en geometrie dont 9 tordus
+[ ] Le pochoir « CRIEE DE VELMORA » lisible a l'envers sur une planche
+[ ] Sonnette fonctionnelle, son traite comme intérieur, RT60 1,9 s
+[ ] Vent a -6 dB pendant 2,5 s apres chaque sonnerie
+[ ] La pile PN-016 a exactement 6 caisses demontees en moins
+[ ] Aucun accès intérieur possible, aucun message d'interface

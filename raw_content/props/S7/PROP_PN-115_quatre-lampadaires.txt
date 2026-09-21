@@ -1,0 +1,109 @@
+===============================================================================
+PN-115 — LES QUATRE LAMPADAIRES DE L'ANCIENNE HALLE
+===============================================================================
+Asset : SM_S7_Lampadaires · S7, place de l'Ancienne Halle · ~05:09 ·
+prop narratif · pas d'Echo · LOD0 3 600 tris (les quatre)
+
+§ 1 — CE QU'ON VOIT
+Quatre lampadaires de fonte, aux quatre coins de la place, 4,80 m de haut.
+Style municipal : fut cannele, base a moulures, lanterne a quatre faces
+vitrees, epi decoratif au sommet.
+[OBL] Ils sont A GAZ. Pas electriques. Il y a un bec, un robinet de
+reglage, et une petite trappe d'allumage.
+Trois sont eteints. Leurs vitres sont cassees ou opaques de crasse.
+Le quatrieme est ALLUME.
+Une petite flamme jaune, dans une lanterne dont les quatre vitres sont
+propres.
+[OBL] Il y a encore du gaz dans les conduites de Velmora. Trois ans apres.
+Ce n'est jamais explique.
+Sous le lampadaire allume, le pave est SEC sur un cercle de 1,5 m : la
+chaleur de la flamme evapore la pluie qui tombe sur le globe.
+[OBL] C'est le seul endroit sec de toute la sequence 7.
+Et il y a quelqu'un dessous.
+[OBL] NON. Il n'y a personne. Le cercle sec est vide.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 900 par lampadaire. Cannelures et moulures en geometrie.
+La flamme : sprite 3 plans, 24 frames, + OmniLight 2 000 K, rayon 9 m,
+ombres actives. Flicker 9 %.
+[OBL] Un bec de gaz de rue est plus stable qu'une bougie et moins qu'une
+lampe a petrole. 9 % est la valeur.
+Le cercle sec : [OBL] c'est une exclusion du systeme de pluie. Les
+particules sont supprimees dans un cylindre de 1,5 m, et le decal de
+mouillage du sol y est masque avec un bord flou de 20 cm.
+[ART] C'est le detail le plus cher en attention du prop et c'est lui qui
+vend la chaleur.
+Cout : 0,4 ms (une lumiere a ombres sous la pluie).
+Anim : PROP-827 — les vitres des trois lampadaires eteints vibrent sous la
+pluie, 1 mm.
+
+§ 3 — CE QUE CA DIT
+Un lampadaire sur quatre est allume, entretenu, et ses vitres sont propres.
+Le geste humain : nettoyer quatre vitres de lanterne a 4,80 m de haut, et
+ouvrir un robinet de gaz.
+[OBL] Il faut une echelle. Il n'y en a pas sur la place.
+[NAR] Quelqu'un entretient une lumiere sur cette place. Le meme quelqu'un,
+peut-etre, qui allume 72 bougies dans la salle de bal (PN-101), qui graisse
+le monte-charge (PN-049), qui repeint une porte (PN-051), qui plante des
+radis (PN-065).
+[OBL] Le jeu n'etablit jamais qu'il s'agit de la meme personne. Ni du
+contraire.
+Il y a un cercle de sol sec de 1,5 m de diametre, sous une lumiere, dans
+une ville morte, sous la pluie.
+
+§ 4 — ECHO
+NEANT. Equipement municipal (PN-016) et entretien d'un vivant (PN-046).
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur arrive sur la place par la rue haute, sous la pluie
+battante, apres avoir quitte une salle de bal chaude.
+Il traverse 34 chaises de fer mouillees (PN-113).
+Et il y a un cercle sec, a 30 m, sous une lumiere.
+[ART] Il ira. Tout le monde y va. Taux de visite : 94-98 %.
+[OBL] Et il n'y a rien. Il se tient dans 1,5 m de sec, sous une lumiere
+jaune, et la pluie tombe tout autour.
+[OBL] Aucun evenement, aucune rencontre, aucun objet, aucun prompt, aucun
+Echo, aucune musique.
+Il peut y rester. Indefiniment.
+[OBL] La pluie ne le mouille pas dans le cercle : [OBL] son shader de
+personnage a un parametre de mouillage qui DECROIT dans le cercle sec, sur
+40 secondes, et remonte quand il ressort.
+[ART] Le joueur peut se secher. Ca ne sert a rien. C'est agreable.
+
+§ 6 — AUDIO
+SFX(gas_mantle_hiss) : le bec de gaz. Un souffle regulier, doux, continu,
+-27 dB, audible a moins de 4 m.
+[OBL] Dans le cercle sec, le son de la pluie change : les impacts sur le
+sol disparaissent dans un rayon de 1,5 m, mais la pluie alentour reste.
+[ART] Le joueur entend un trou dans la pluie, autour de lui.
+SFX(rain_on_glass_globe) : la pluie qui frappe le globe chaud et
+s'evapore — un grésillement fin, distinct.
+[OBL] Aucune musique. M23 « La Descente » ne commence qu'apres la place,
+au premier escalier.
+
+§ 7 — INTERDICTIONS
+Interdit de : eteindre le lampadaire · allumer les trois autres · reveler
+qui l'entretient · ajouter une echelle · ajouter un personnage sous le
+cercle · ajouter un objet dans le cercle · ajouter un Echo · ajouter de la
+musique · faire commenter Lohen · expliquer le gaz · limiter le temps dans
+le cercle · rendre le sechage utile mecaniquement.
+
+§ 8 — LIENS
+PN-101 (les 72 bougies). PN-049 (le monte-charge graisse). PN-051 (la porte
+repeinte). PN-065 (les neuf pousses). PN-100 (le parquet balaye).
+[OBL] Cinq entretiens dans le chapitre. Jamais attribues, jamais relies.
+PN-137 (la lampe a huile, S8).
+PN-009 (la lampe-tempete, laissee en S5) : le joueur n'a plus de lumiere a
+lui depuis 1 h 10.
+[THEME] ENTRETENIR CE QUI PEUT L'ETRE. [THEME] PORTER LA LUMIERE — et ne
+plus en avoir.
+
+§ 9 — DOD
+[ ] 4 lampadaires a gaz, 3 eteints vitres sales, 1 allume vitres propres
+[ ] Cercle sec de 1,5 m : exclusion de particules + masque de decal, bord 20 cm
+[ ] Flicker 9 %, 2 000 K, ombres actives
+[ ] Mouillage du personnage decroissant sur 40 s dans le cercle
+[ ] Trou dans le son de la pluie, rayon 1,5 m
+[ ] Grésillement d'evaporation sur le globe
+[ ] Zero evenement, zero objet, zero Echo, zero musique
+[ ] Temps illimite dans le cercle, aucun benefice mecanique

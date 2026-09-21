@@ -1,0 +1,124 @@
+===============================================================================
+PN-139 — LE MUR DES TROIS CENT QUATORZE FEUILLES
+===============================================================================
+Asset : SM_S8_Mur_Feuilles · S8, paroi courbe de la chambre, face au lit ·
+~06:24 · prop a TEXTE LISIBLE · pas d'Echo · LOD0 4 200 tris
+
+§ 1 — CE QU'ON VOIT
+Le mur courbe de la chambre, sur 240 degres, du sol au plafond.
+Il est couvert de papier.
+Trois cent quatorze feuilles, epinglees, punaisees, collees, accrochees les
+unes sur les autres, en couches.
+Elles sont de toutes les tailles et de tous les papiers : des feuilles
+arrachees a des registres, des dos d'affiches, du papier d'emballage, des
+pages de livre ecrites dans les marges, des cartons.
+Sur chacune, il y a la meme chose.
+[OBL] Quatre chiffres. Ecrits a la main. En grand.
+        0114
+Trois cent quatorze fois.
+[OBL] Elles ne sont pas identiques. Chacune est ecrite differemment : plus
+grand, plus petit, plus appuye, penche, droit, tremblé, rapide, lent.
+Certaines occupent toute la feuille. D'autres sont dans un coin.
+Sur l'une, les chiffres sont repasses vingt fois jusqu'a percer le papier.
+Sur une autre, ils sont a peine visibles.
+[OBL] C'est l'ecriture d'Esteban. La meme que PN-108 et PN-111.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 4 200 (314 quads, dont 90 courbes a 12 tris pour les feuilles
+gondolees).
+[OBL] SIX atlas 4K. Densite 540 px/m. Chaque feuille est lisible
+individuellement a 70 cm.
+[OBL] Les 314 « 0114 » sont ecrits A LA MAIN, un par un, par le calligraphe
+qui a produit PN-108, PN-111 et PN-143. Trois cent quatorze fois.
+[OBL] Aucune duplication. Aucune rotation d'une meme image. Aucune
+generation.
+[ART] Le calligraphe doit ecrire 314 fois le meme nombre, sur 314 supports
+differents, en variant l'etat d'esprit. Cela prend plusieurs jours. C'est
+le sujet.
+[OBL] ANIM : PROP-718 — rappel ANIM_MANIFEST : les 314 feuilles bougent
+ENSEMBLE a l'entree du joueur. Un souffle d'air quand la porte s'ouvre.
+[OBL] Une seule fois. 1,8 seconde. Amplitude 4 mm. Puis plus jamais.
+[OBL] C'est la premiere chose qui bouge dans la chambre.
+
+§ 3 — CE QUE CA DIT
+0114.
+Le matricule de Lohen.
+[OBL] Le joueur l'a vu sur une enveloppe dans une barque, a la minute zero
+(PN-005). Il l'a vu grave sur une borne de relais a 40 minutes (PN-018). Il
+l'a vu brode sur la veste de Lohen pendant six heures. Il a vu son absence
+sur la veste de Sol (PN-052).
+Il le voit ici trois cent quatorze fois.
+Le geste humain : ecrire un nombre sur un mur. Trois cent quatorze fois.
+[OBL] Ce n'est pas un calcul. Ce n'est pas un code. Ce n'est pas un compte
+a rebours. Ce n'est pas un nombre de jours.
+[OBL] C'est un homme seul dans une chambre au sommet d'un phare, qui ecrit
+le matricule de quelqu'un sur tout ce qu'il trouve.
+[OBL] Le jeu ne l'explique jamais. La lettre (PN-143) n'en parle pas
+directement — elle dit seulement : « Tu vas trouver le mur. Je ne vais pas
+m'excuser pour le mur. »
+
+§ 4 — ECHO
+NEANT. [OBL] Le refus final du systeme.
+Trois cent quatorze objets personnels, ecrits a la main, par la personne
+que le joueur cherche depuis six heures, dans la piece ou il a vecu.
+Aucun prompt.
+[OBL] Le systeme des Echos n'a jamais rien montre d'Esteban et ne montrera
+jamais rien. Sur 31 Echos, ZERO ne le contient.
+[OBL] Verifiable : E01 a E31, aucune silhouette n'est Esteban.
+[ART] C'est la regle la plus tenue du jeu et personne ne l'enonce.
+
+§ 5 — MISE EN SCENE
+[OBL] Le mur est FACE A LA PORTE. C'est la premiere chose que le joueur
+voit quand la porte s'ouvre (PN-136).
+[OBL] Mais il ne voit pas ce qui est ecrit : il est a 3 m, en lumiere
+ambre, et il voit un mur couvert de papier.
+[OBL] PROP-718 : les 314 feuilles bougent ensemble pendant 1,8 s.
+[ART] Un mur qui respire une fois.
+Il doit s'approcher pour lire.
+[OBL] Et il ne peut pas tout voir d'un coup : le mur fait 240 degres. Il
+doit tourner sur lui-meme, au centre de la chambre, pour en faire le tour.
+[ART] Il tourne sur lui-meme dans une piece ronde, eclairee en ambre, en
+lisant son propre matricule trois cent quatorze fois.
+[OBL] Aucun plan. Aucune camera. Aucun ralenti. Aucune musique. Aucune voix
+off. Aucun compteur. Aucun sous-titre.
+[OBL] Lohen ne dit rien. Il ne peut pas bien lire, mais il sait reconnaitre
+ces quatre chiffres. [OBL] Ce sont les seuls caracteres qu'il lit sans
+effort dans tout le jeu.
+
+§ 6 — AUDIO
+[OBL] PROP-718 : le souffle des 314 feuilles. SFX(paper_wall_breath), 1,8 s.
+[OBL] Un son de papier collectif, doux, ample. Enregistre reellement : 314
+feuilles sur un mur et un ventilateur.
+[OBL] C'est le seul son du prop. Apres, le mur est muet : il n'y a pas de
+courant d'air dans une piece aux volets fermes.
+[OBL] Aucune musique. Le silence de PN-136 continue.
+
+§ 7 — INTERDICTIONS
+Interdit de : generer les 314 · en dupliquer une · ajouter un autre nombre
+· ajouter un mot, un nom, un dessin, une date · ajouter une 315e feuille ·
+les decrocher · les prendre · les compter en interface · ajouter un
+compteur · ajouter de la musique · ajouter une voix off · faire commenter
+Lohen · faire pleurer Lohen · expliquer le mur autrement que par la phrase
+de PN-143 · faire bouger les feuilles une seconde fois.
+
+§ 8 — LIENS
+PN-005 (l'enveloppe « 0114 » dans la barque, minute zero).
+PN-018 (la borne de relais, le jeton 0114).
+PN-052 (la veste de Sol, matricule arrache).
+PN-147 (la veste 0114 posee sur Sol).
+PN-108 (la liste), PN-111 (le « 14 » au crayon), PN-143 (la lettre) : la
+meme main.
+PN-038 (le mur des trois cents photos, S3) : [OBL] l'autre mur du chapitre.
+300 visages de 300 personnes differentes. 314 fois un seul nombre.
+[OBL] Jamais relies.
+[THEME] LES ECRITURES. [THEME] PORTER POUR LES AUTRES.
+
+§ 9 — DOD
+[ ] 314 feuilles, 314 « 0114 » ecrits a la main, zero duplication
+[ ] 314 supports differents, 6 atlas 4K, 540 px/m, lisibles a 70 cm
+[ ] Une feuille percee par repassage, une a peine visible
+[ ] Meme calligraphe et meme main que PN-108, PN-111, PN-143
+[ ] PROP-718 : souffle unique de 1,8 s, 4 mm, enregistre reellement
+[ ] Mur sur 240 degres, rotation du joueur obligatoire
+[ ] Zero Echo, zero prompt, zero musique, zero VO, zero compteur
+[ ] Aucune silhouette d'Esteban dans les 31 Echos, verifie

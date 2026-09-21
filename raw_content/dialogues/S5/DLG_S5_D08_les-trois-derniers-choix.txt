@@ -1,0 +1,156 @@
+===============================================================================
+DLG · S5 · D08 — LES TROIS DERNIERS CHOIX DE S5 + LES LIGNES DE TOUCHER
+44 entrees, toutes S5. LOH 30 · SOL 14. Contribution : 44.
+Choix n° 27, 28, 29 du chapitre.
+===============================================================================
+
+--- CHOIX 27 — LA NOURRITURE (6 entrees) -------------------------------------------------------
+
+Declencheur : 6 minutes apres D02, Sol ressort quelque chose a manger.
+
+    > CHOIX 27
+      [1] « Tu manges ou ? »
+      [2] « Tu manges quand ? »
+
+    [S5_LOH_L293]  LOHEN · 1,2 s · plat · p0,0
+        « Tu manges ou ? »
+    [S5_SOL_L294]  SOL · 1,8 s · plat · p0,0
+        « Partout. »
+
+    [S5_LOH_L295]  LOHEN · 1,4 s · plat · p0,0
+        « Tu manges quand ? »
+    [S5_SOL_L296]  SOL · 2,2 s · plat · p0,0
+        « Quand j'ai. »
+        dir : [OBL] la deuxieme question est la bonne, et la reponse
+              est pire. [OBL] Aucune option pour proposer de la
+              nourriture : Lohen n'en a pas. Un relayeur part le matin
+              avec rien. [OBL] Le joueur va vouloir donner quelque
+              chose. Il ne peut pas. C'est ecrit ici pour qu'on ne
+              cede pas en production.
+    [S5_LOH_L297]  LOHEN · 1,6 s · plat · p0,0
+        « J'ai rien sur moi. »
+    [S5_SOL_L298]  SOL · 2,0 s · sec · p0,0
+        « J'ai rien demande. »
+        dir : [OBL] deuxieme fois que Sol dit cette phrase (la premiere
+              est S3_SOL_L419). [OBL] C'est la phrase de Sol. Elle
+              revient une troisieme et derniere fois en S8.
+
+--- CHOIX 28 — LE NOM (8 entrees) ----------------------------------------------------------------
+
+Declencheur : apres D04, si le joueur a fait la branche [3] du CHOIX 26.
+
+    > CHOIX 28
+      [1] « Sol, c'est un vrai prenom ? »
+      [2] « Qui t'a appele Sol ? »
+      [3] (Ne rien demander.)
+
+    [S5_LOH_L299]  LOHEN · 2,0 s · plat · p0,0
+        « Sol, c'est un vrai prenom ? »
+    [S5_SOL_L300]  SOL · 1,6 s · sec · p0,0
+        « C'est le mien. »
+
+    [S5_LOH_L301]  LOHEN · 1,8 s · plat · p0,0
+        « Qui t'a appele Sol ? »
+    [S5_SOL_L302]  SOL · 2,4 s · plat · p0,0
+        « Ma mere. »
+    [S5_SOL_L303]  SOL · 2,8 s · plat · p0,0
+        « Et avant elle m'appelait autrement, et je m'en souviens plus,
+          et c'est tres bien. »
+        dir : [OBL][NAR] L'unique information sur le passe de Sol
+              au-dela des quatre morts. [OBL] Elle est incomplete et le
+              restera. [OBL] Aucun chapitre ne donnera l'autre prenom.
+
+    [S5_LOH_L304]  LOHEN · 0,0 s · — · p0,0
+        (slot sans VO — branche [3])
+    [S5_SOL_L305]  SOL · 2,2 s · plat · p0,0
+        « Tu demandes pas ? »
+    [S5_LOH_L306]  LOHEN · 1,4 s · plat · p0,0
+        « Non. »
+        dir : [OBL] et Sol ne dit rien de plus. [OBL] La branche
+              silencieuse est encore la meilleure et le jeu ne le dit
+              toujours pas.
+
+--- CHOIX 29 — LA GRILLE (6 entrees) ------------------------------------------------------------
+
+Le dernier choix de S5, devant la grille qui donne sur la salle de bal.
+
+    > CHOIX 29
+      [1] « Qu'est-ce qu'il y a derriere, vraiment ? »
+      [2] « Je reviendrai par ici. »
+
+    [S5_LOH_L307]  LOHEN · 2,6 s · plat · p0,0
+        « Qu'est-ce qu'il y a derriere, vraiment ? »
+    [S5_SOL_L308]  SOL · 2,0 s · plat · p0,0
+        « Je te l'ai dit. Une piece propre. »
+    [S5_SOL_L309]  SOL · 2,8 s · plat · p0,0
+        « Et de la musique, des fois. Mais j'ai du reyer. »
+        dir : [OBL][NAR] « J'ai du rever » — orthographe volontaire
+              dans la ligne source pour marquer la prononciation
+              enfantine. Texte affiche : « Mais j'ai du rever. »
+              [OBL] SOL A ENTENDU LA MUSIQUE DE LA SALLE DE BAL.
+              M22, la seule musique joyeuse du jeu, celle de E21.
+              [OBL] Personne n'explique jamais comment une musique de
+              trois ans se rejoue dans une piece scellee. Interdit
+              21.08.
+
+    [S5_LOH_L310]  LOHEN · 2,0 s · plat · p0,0
+        « Je reviendrai par ici. »
+    [S5_SOL_L311]  SOL · 1,6 s · plat · p0,0
+        « Non. »
+    [S5_SOL_L312]  SOL · 2,4 s · plat · p0,0
+        « Apres la piece, ca monte. Et quand ca monte, on redescend
+          pas par ou on est venu. »
+        dir : [OBL][NAR] Sol a raison : Lohen redescendra par S7, pas
+              par les conduits. [OBL] Sol enonce sans le savoir la
+              structure du chapitre entier.
+
+--- LES 24 LIGNES DE TOUCHER DES CONDUITS --------------------------------------------------------
+
+[OBL] Particularite de S5 : toucher se fait A UNE MAIN (l'autre tient la
+lanterne). Les 24 lignes sont donc toutes plus breves qu'ailleurs, et
+Lohen ne peut jamais prendre un objet a deux mains de toute la sequence.
+
+    [S5_LOH_L313]  1,4 s · bas    « Froid. »
+    [S5_LOH_L314]  1,8 s · bas    « De la fonte. Ca date. »
+    [S5_LOH_L315]  1,2 s · bas    « Un trait. Cinq traits. »
+    [S5_LOH_L316]  2,0 s · bas    « Mille et quelques, si je compte les groupes. »
+        dir : [OBL] PN-088. Il approche du bon nombre (1 038) et ne le
+              dit pas. [OBL] Aucun personnage ne le dira jamais.
+    [S5_LOH_L317]  1,6 s · bas    « Une gamelle. Y'a trois lettres. »
+    [S5_LOH_L318]  1,4 s · bas    « Illisibles. »
+    [S5_LOH_L319]  2,2 s · bas    « Une couverture pliee. Bien pliee. »
+    [S5_LOH_L320]  1,8 s · bas    « Quelqu'un qui plie, c'est quelqu'un qui compte revenir. »
+        dir : [NAR] RACCORD E02 (la valise triee par taille, S1).
+              Meme geste, meme logique, meme issue. [OBL] Non souligne.
+    [S5_LOH_L321]  1,2 s · bas    « Une bougie. Eteinte depuis longtemps. »
+    [S5_LOH_L322]  2,0 s · bas    « De la cire jusqu'en bas. Elle a brule entiere. »
+    [S5_LOH_L323]  1,6 s · bas    « Quelqu'un l'a regardee bruler jusqu'au bout. »
+    [S5_LOH_L324]  1,4 s · bas    « Des peaux. »
+    [S5_LOH_L325]  1,8 s · bas    « C'est sec. C'est vieux. »
+    [S5_LOH_L326]  2,2 s · bas    « Ca se dechire comme du papier. »
+    [S5_LOH_L327]  1,6 s · bas    « Je vais rien dechirer du tout. »
+    [S5_LOH_L328]  1,2 s · bas    « De l'eau qui coule derriere. »
+    [S5_LOH_L329]  2,0 s · bas    « Y'a une ville entiere de tuyaux et plus personne pour s'en servir. »
+    [S5_LOH_L330]  1,8 s · bas    « Une chaussure. Une seule. »
+        dir : [OBL][NAR] TROISIEME PAIRE DEPAREILLEE DU CHAPITRE
+              (S1_LOH_L094 la botte, S2_LOH_L086 la chaussure,
+              ici). [OBL] La quatrieme et derniere est PN-063, les 118
+              chaussures d'enfants, a 90 secondes d'ici.
+    [S5_LOH_L331]  1,4 s · bas    « Petite. »
+    [S5_LOH_L332]  2,4 s · bas    « Je la laisse ou elle est. »
+    [S5_LOH_L333]  1,6 s · bas    « Une echelle scellee. Elle monte vers quoi ? »
+    [S5_LOH_L334]  2,0 s · bas    « Vers la Bibliotheque, si je me repere bien. »
+    [S5_LOH_L335]  1,8 s · bas    « Elle est murée en haut. »
+    [S5_LOH_L336]  2,2 s · bas    « Y'a une porte qui donne sur rien, ici aussi. »
+        dir : [OBL][NAR] RACCORD CARO (S3_CAR_L317, la porte qui donne
+              sur un mur). [OBL] 24e et derniere ligne de toucher de la
+              sequence.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] CHOIX 27 : aucune option pour nourrir Sol — interdit de production
+[ ] L298 : 2e des 3 « J'ai rien demande » du chapitre
+[ ] L303 : l'autre prenom de Sol n'existe dans aucun document
+[ ] L309 : la musique de la salle de bal, jamais expliquee
+[ ] Toucher a une main, aucun objet pris a deux mains en S5
+[ ] L330 : 3e paire depareillee, la 4e est PN-063

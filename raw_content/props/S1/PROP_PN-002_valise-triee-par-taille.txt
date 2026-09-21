@@ -1,0 +1,197 @@
+===============================================================================
+PN-002 — LA VALISE OUVERTE AU CONTENU TRIE PAR TAILLE
+===============================================================================
+Asset        : SM_S1_Valise_Triee
+Sequence     : S1 — Les Quais Bas
+Position     : sous l'auvent du hangar a filets, a 4 m du chemin principal,
+               a droite, altitude 3 m. Legerement a l'ecart : il faut faire
+               un detour de six pas.
+Timing       : ~00:11 de jeu, OPTIONNEL
+Statut       : prop narratif · PORTEUR D'ECHO E03 (optionnel)
+Unicite      : exemplaire unique
+LODs         : 4 · LOD0 5 200 tris · cull a 60 m
+
+-------------------------------------------------------------------------------
+§ 1 — CE QU'ON VOIT
+-------------------------------------------------------------------------------
+Une valise de voyage en carton bouilli renforce de coins metalliques,
+modele d'avant-guerre, 68 x 42 x 19 cm, brun-rouge, avec deux sangles de
+cuir et une poignee dont le revetement a fondu.
+Elle est POSEE A PLAT, ouverte a 180 degres, sur une bache goudronnee
+elle-meme etalee au sol. Quelqu'un a mis la bache AVANT de poser la
+valise : le sol est boueux et la bache est propre dessous.
+
+Le contenu est entierement sorti et etale sur la bache, autour de la
+valise, en QUATRE RANGEES PARALLELES, triees par taille decroissante :
+
+  Rangee 1 (les plus grands) : un manteau d'homme plie en quatre, une
+    couverture de laine, une nappe brodee.
+  Rangee 2 : trois chemises pliees, un pantalon, un chale.
+  Rangee 3 : six mouchoirs, une paire de gants de femme, deux bonnets
+    d'enfant, une paire de chaussettes reprisees.
+  Rangee 4 (les plus petits) : un de a coudre, trois boutons de nacre,
+    une epingle a cheveux, une alliance, une dent de lait dans un carre
+    de papier plie.
+
+Les objets sont espaces regulierement : 4 cm entre chaque, mesures.
+Les angles sont alignes.
+Rien n'a ete vole. L'alliance est la, en evidence, depuis trois ans.
+
+La valise elle-meme est VIDE et propre a l'interieur, sauf une etiquette
+de bagage encore attachee a la poignee, dont l'encre a coule : on distingue
+un nom de famille commencant par « VAN », et rien d'autre.
+
+Tout est trempe. Le carton de la valise a gondole. Les vetements sont
+noirs d'humidite et ont pris la forme du sol. La couverture de laine a
+moisi sur ses bords. Le de a coudre est intact et brille faiblement.
+
+-------------------------------------------------------------------------------
+§ 2 — FICHE TECHNIQUE
+-------------------------------------------------------------------------------
+Polycount     LOD0 5 200 (valise 1 400 + 19 objets + bache 600)
+              LOD1 2 800 / LOD2 1 200 / LOD3 400
+Textures      atlas 2K `T_S1_Valise_Contenu` + 1 texture 1K pour
+              l'etiquette (lisible en zoom, encre coulee peinte a la main)
+Shader        `cloth_soaked.gdshader` pour les tissus (absorption par
+              contact sol), `stone_wet` pour la bache
+Cloth         AUCUNE simulation. Tout est fige, deforme en sculpt.
+              [OBL] Ces vetements ont pris la forme du sol il y a trois
+              ans. Ils ne bougent plus. Une simulation cloth les rendrait
+              vivants et detruirait le prop.
+Collision     boite unique sur la valise, pas sur les objets
+Interaction   Echo E03 sur la valise (le bord, pas le contenu)
+              L'alliance N'EST PAS ramassable. Voir § 7.
+Cout GPU      0,14 ms
+
+-------------------------------------------------------------------------------
+§ 3 — CE QUE CA DIT
+-------------------------------------------------------------------------------
+Quelqu'un a fait ses bagages pour partir.
+Puis quelqu'un — le meme, ou un autre — a tout deballe.
+Et l'a trie par taille.
+
+Le tri par taille est la cle. Ce n'est pas un tri utile. Ce n'est pas un
+tri de personne pressee. Ce n'est pas un tri de pillard.
+C'est un tri de personne qui a besoin que quelque chose soit en ordre.
+
+Le geste humain (0.03) : une personne a attendu, ici, sous cet auvent, avec
+sa valise. L'attente a dure. A un moment, elle a ouvert la valise et a
+commence a ranger. Puis a ranger mieux. Puis a mesurer les ecarts.
+C'est ce que font les mains quand la tete ne peut plus rien faire.
+
+La bache posee AVANT dit qu'elle etait encore rationnelle au debut.
+L'espacement de 4 cm dit qu'elle ne l'etait plus a la fin.
+L'alliance laissee en evidence dit que personne n'est venu depuis.
+La dent de lait dans son papier plie dit qu'il y avait un enfant.
+L'absence de l'enfant, et l'absence de la personne, disent le reste.
+
+[NAR] Ce prop est un portrait. On ne voit jamais le visage. On voit ce que
+ses mains ont fait pendant les dernieres heures.
+
+-------------------------------------------------------------------------------
+§ 4 — ECHO E03 — « LA VALISE TRIEE »
+-------------------------------------------------------------------------------
+ID            E03 · Mode A · Duree 0:45 · OPTIONNEL
+Cout          -18 Souffle
+Objet porteur le coin superieur gauche de la valise, la ou le carton est
+              le plus use par les mains
+
+CONTENU DE LA MEMOIRE :
+Une seule silhouette. Une femme, d'apres la stature et le chale.
+Elle est accroupie devant la valise, dos a la mer.
+
+Pendant 45 secondes, ELLE RANGE.
+Elle prend un objet, le pose, recule la main, le regarde, le deplace de
+deux centimetres, recommence. Elle refait la rangee 3 entierement, deux
+fois, pendant l'Echo.
+
+Elle ne pleure pas. Elle ne parle pas. Elle ne regarde pas la mer une
+seule fois.
+A la seconde 38, elle s'arrete, pose les deux mains a plat sur ses cuisses,
+et reste immobile 4 secondes.
+Puis elle recommence a ranger.
+L'Echo se dissout sur elle en train de deplacer un bouton de nacre.
+
+[OBL] Il ne se passe rien d'autre. Aucune revelation. Aucun nom prononce.
+Aucune resolution. Le joueur qui a paye 18 de Souffle pour cet Echo
+n'obtient AUCUNE information utile.
+Il obtient seulement 45 secondes de la vie de quelqu'un.
+C'est le premier Echo optionnel du jeu et il enseigne exactement ce que le
+systeme offre : pas des reponses. De la presence.
+
+-------------------------------------------------------------------------------
+§ 5 — MISE EN SCENE
+-------------------------------------------------------------------------------
+APPROCHE : le prop est HORS du chemin principal. Il faut voir l'auvent,
+decider d'y aller, faire six pas de detour. Environ 55 % des joueurs le
+trouveront.
+Ce qui attire l'oeil : sous l'auvent, il fait plus sombre, mais LA BACHE
+GOUDRONNEE renvoie un reflet speculaire etroit quand le joueur passe a un
+certain angle. C'est un eclat, pas un halo. Il dure 1,5 seconde de marche.
+
+LUMIERE : l'auvent coupe le ciel. La valise est dans une lumiere indirecte
+froide (7800 K), sauf une bande de 20 cm de lumiere directe qui tombe par
+un trou dans la tole et qui traverse la rangee 4 — donc l'alliance et la
+dent de lait sont les seuls objets eclaires chaudement.
+[OBL] Cette bande de lumiere n'a PAS ete placee pour designer l'alliance.
+Elle a ete placee parce qu'il y a un trou dans la tole. Le trou est
+modelise, visible, et la pluie goutte au meme endroit.
+
+CADRAGE : aucun. Pas de camera scriptee, pas de point de vue impose. Le
+joueur s'accroupit ou pas, zoome ou pas. S'il ne s'accroupit pas, il ne
+verra jamais la dent de lait.
+
+-------------------------------------------------------------------------------
+§ 6 — AUDIO
+-------------------------------------------------------------------------------
+Ambiance      sous l'auvent, l'ambiance A01 est filtree : passe-bas a
+              4 kHz, -6 dB. On entend qu'on est « dedans ».
+Propre        SFX(drip_on_tarp) — une goutte toutes les 2,8 s, exactement,
+              sur la bache, a 40 cm de la valise. Le rythme est METRONOMIQUE
+              et il ne varie jamais. C'est le seul son de l'endroit.
+              [ART] Cette regularite est ce qui rend l'endroit insupportable
+              au bout de 30 secondes.
+Musique       aucune. Ni en approche, ni dans l'Echo. [OBL]
+              L'Echo E03 est le seul Echo du chapitre sans musique.
+Reverb        IR « hangar », queue courte
+
+-------------------------------------------------------------------------------
+§ 7 — INTERDICTIONS
+-------------------------------------------------------------------------------
+[OBL] Il est interdit de :
+  - rendre l'alliance ramassable. Elle reste. Trois ans que personne ne l'a
+    prise ; le joueur ne sera pas le premier.
+  - rendre l'etiquette entierement lisible. « VAN » et rien d'autre.
+    [NAR] Le joueur pensera a Mireille VANDECK. Ce n'est pas elle. Ce n'est
+    pas sa famille. Le jeu ne le confirmera ni ne l'infirmera jamais.
+  - simuler le tissu.
+  - ajouter une photo, une lettre, un journal intime dans la valise.
+  - faire varier le rythme de la goutte.
+  - donner une recompense mecanique a l'Echo E03.
+  - deplacer un seul objet quand le joueur marche dessus. Il peut marcher
+    sur la bache. Rien ne bouge.
+
+-------------------------------------------------------------------------------
+§ 8 — LIENS
+-------------------------------------------------------------------------------
+PN-001  Le muret aux bottes — meme geste : mettre en ordre avant de partir.
+        Les deux props sont a 90 m l'un de l'autre et le joueur les voit a
+        5 minutes d'intervalle. Le rapprochement se fait tout seul.
+PN-019  Le panier de linge abandonne — l'inverse exact : le desordre.
+PN-069  Le rectangle de poussiere propre (S4) — encore un absent decrit par
+        ce qu'il a laisse en ordre.
+PN-140  Les chaussures rangees cote a cote (S8).
+[THEME] Ce prop ouvre le motif du RANGEMENT COMME DEUIL, qui traverse tout
+        le chapitre et culmine avec la couverture pliee d'Esteban (PN-138).
+
+-------------------------------------------------------------------------------
+§ 9 — DOD
+-------------------------------------------------------------------------------
+[ ] 19 objets, 4 rangees, espacement de 4 cm verifie en scene
+[ ] La dent de lait n'est visible qu'en position accroupie
+[ ] L'etiquette est lisible en zoom et ne donne que « VAN »
+[ ] Le trou dans la tole est modelise et la goutte tombe dessous
+[ ] SFX drip a 2,8 s d'intervalle, invariable
+[ ] Echo E03 : 45 s, une silhouette, zero information nouvelle
+[ ] Aucune musique nulle part sur ce prop
+[ ] Test aveugle : les testeurs qui le trouvent restent > 30 s

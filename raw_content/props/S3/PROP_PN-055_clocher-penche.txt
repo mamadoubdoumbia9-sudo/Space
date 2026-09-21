@@ -1,0 +1,105 @@
+===============================================================================
+PN-055 — LE CLOCHER PENCHE DE SAINT-AMBRE
+===============================================================================
+Asset : SM_S3_Clocher_Penche · S3, eglise Saint-Ambre, bordure ouest du
+Marche · ~02:55 · prop narratif · pas d'Echo · LOD0 8 900 tris
+
+§ 1 — CE QU'ON VOIT
+Le clocher de l'eglise Saint-Ambre. Pierre grise, 28 m, toit d'ardoise en
+fleche, abat-sons, une horloge sur la face sud.
+Il penche. De 9 degres, vers l'ouest.
+Le sol a bouge : la Maree, en durcissant, a souleve les fondations d'un
+cote. On voit le soulevement a la base — le pave s'est fendu en etoile sur
+6 m et une levre de 40 cm s'est formee.
+Le clocher n'est pas tombe. Il a penche et il s'est arrete.
+Trois ans plus tard, il est toujours a 9 degres.
+L'horloge de la face sud est arretee. [OBL] PAS a 23h41. Elle indique 4h15.
+Elle s'est arretee quatre heures et demie APRES, quand son mecanisme est
+arrive au bout de son remontage.
+Dans le beffroi, visible entre les abat-sons : une cloche. Une seule. Il y
+avait deux emplacements. Le second est vide.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 8 900, 4 LODs. Pierre de taille : geometrie sur les chaines d'angle et
+les corniches, normal map ailleurs.
+[OBL] Les 9 degres sont appliques a la geometrie ET au soulevement du sol.
+La fracture du pave (6 m, en etoile, levre de 40 cm) est sculptee, 1 200
+tris a elle seule. C'est elle qui rend le penchement credible : sans la
+cause visible au sol, un batiment penche a l'air d'une erreur d'import.
+L'horloge : cadran 2K, aiguilles en geometrie, bloquees a 4h15.
+Anim : NEANT. [OBL] Le clocher ne bouge pas, ne craque pas, ne menace pas
+de tomber. Il n'y a aucune tension dramatique. Il a fini de bouger il y a
+trois ans.
+Collision : le batiment est ferme. Le joueur ne peut pas entrer dans
+l'eglise. [OBL] Il n'y a pas d'interieur. L'eglise n'est pas un lieu du
+chapitre 1 et ne le sera jamais.
+
+§ 3 — CE QUE CA DIT
+La Maree a souleve la terre.
+[OBL] C'est la seule preuve physique, dans tout le chapitre, que l'evenement
+a eu une force MECANIQUE. Partout ailleurs, la mer est devenue du verre et
+c'est tout. Ici, le sol a bouge. Quelque chose a pousse.
+[OBL] Jamais explique. Aucune analyse, aucun temoin, aucune theorie, dans
+aucune des sept lettres.
+L'horloge a 4h15 dit que la ville a continue quatre heures et demie.
+Des mecanismes ont tourne. Des choses ont fonctionne. Et puis elles se sont
+arretees une par une, faute de quelqu'un pour les remonter.
+[ART] C'est la mort d'une ville : pas un evenement, une serie d'arrets.
+La deuxieme cloche manquante : elle a ete descendue. Avant ou apres, on ne
+sait pas. Elle n'est nulle part dans le jeu.
+
+§ 4 — ECHO
+NEANT. [OBL] Un batiment n'est pas un objet personnel (regle PN-016). Aucun
+batiment du chapitre ne porte d'Echo : les 31 Echos sont tous sur des
+objets de moins de 2 m, sauf E12 (le monte-charge) et E06 (le tramway),
+qui sont des machines et non des lieux.
+
+§ 5 — MISE EN SCENE
+Visible depuis le niveau 2 et le niveau 3 du Marche, en surplomb.
+[OBL] Le joueur le voit d'en haut ou de niveau, jamais d'en bas : le pied
+du clocher est au niveau du verre, inaccessible.
+[ART] Le penchement n'est lisible que s'il y a une verticale de reference
+dans le cadre. Le level design place systematiquement un montant de
+passerelle, un poteau ou un cable vertical dans les vues du clocher.
+Sans reference, 9 degres ne se voient pas.
+Lumiere : plein ouest, donc le clocher recoit la lumiere la plus directe de
+S3. C'est le seul objet clair du chapitre. La pierre grise, propre,
+eclairee, dans un monde sombre et mouille.
+[OBL] Lohen ne le regarde jamais. Aucun LookAt, aucun plan, aucune mention.
+
+§ 6 — AUDIO
+NEANT. [OBL] Le clocher est SILENCIEUX. La cloche ne sonne pas, jamais, en
+aucune circonstance. Elle ne tinte pas au vent. Elle ne resonne pas.
+[ART] Une eglise silencieuse a cote d'un phare dont les cloches sonneront
+en S8. Le jeu ne les oppose jamais explicitement.
+Le vent dans les abat-sons : SFX(louver_wind), une note soufflee, plate,
+-28 dB. C'est tout.
+
+§ 7 — INTERDICTIONS
+Interdit de : faire sonner la cloche · faire tomber le clocher · le faire
+craquer ou trembler · ouvrir l'eglise · creer un interieur · retrouver la
+deuxieme cloche · arreter l'horloge a 23h41 · expliquer le soulevement ·
+ajouter une croix, une statue, un symbole religieux marque · faire prier
+un personnage · donner un Echo · faire commenter Lohen.
+[OBL] Il n'y a aucun contenu religieux dans le chapitre 1. Saint-Ambre est
+un toponyme, pas un theme. Aucun personnage ne parle de Dieu, de priere,
+d'ame ou d'au-dela. Verifier au grep sur les 1 400 lignes de dialogue.
+
+§ 8 — LIENS
+PN-054 (la grue rouge) : les deux verticales du Marche.
+PN-109 (la pendule arretee a 23h41, S6) : l'autre horloge, celle qui s'est
+arretee au bon moment. Le joueur verra les deux et il y aura 50 minutes
+entre les deux.
+PN-131, PN-132 (le palier et les cloches du Phare, S8).
+Le Phare Saint-Ambre : meme nom. [OBL] Jamais souligne.
+[THEME] LA SERIE D'ARRETS. [THEME] LES DEUX VERTICALES.
+
+§ 9 — DOD
+[ ] 9 degres + soulevement du sol sculpte, fracture en etoile de 6 m
+[ ] Horloge bloquee a 4h15, jamais 23h41
+[ ] Une cloche presente, un emplacement vide, jamais explique
+[ ] Zero animation, zero craquement, zero tension dramatique
+[ ] Verticale de reference presente dans toutes les vues cadrees
+[ ] Silence absolu : la cloche ne sonne jamais
+[ ] grep dialogues : 0 occurrence de Dieu/priere/ame/au-dela
+[ ] Aucun interieur, jamais accessible

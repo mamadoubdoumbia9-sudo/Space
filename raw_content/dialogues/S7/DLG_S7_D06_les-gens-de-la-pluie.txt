@@ -1,0 +1,131 @@
+===============================================================================
+DLG · S7 · D06 — LES GENS DE LA PLUIE : QUATRE RENCONTRES QU'ON PEUT RATER
+28 entrees, toutes S7. LOH 18 · BRE 5 · PAL 3 · ODI 2. Contribution : 28.
+[OBL] Aucune de ces quatre rencontres n'est sur le chemin principal.
+Un joueur direct termine S7 sans en voir une seule.
+===============================================================================
+
+--- REGLE [OBL] ------------------------------------------------------------------------------------
+
+[OBL] Les quatre rencontres sont a 8, 14, 22 et 30 m du chemin optimal.
+Aucune n'est signalee : pas d'icone, pas de voix qui appelle, pas de
+lumiere attirante. [OBL] Seule la regle 09.20 s'applique (un point
+d'interet visible depuis partout) — et ici le point d'interet est une
+silhouette immobile sous la pluie, ce qui est, statistiquement, moins
+attirant qu'une porte.
+
+[OBL] TAUX DE DECOUVERTE MESURE : Brel 44 % · Odile-2 18 % · Pallas 61 %
+· le garcon 9 %. [OBL] Le jeu n'en tient aucun compte.
+
+--- § 1 — BREL, L'HOMME QUI ATTEND UN BATEAU (8 lignes) --------------------------------------
+
+BRE = Brel, 51 ans, ancien marinier de L'Hirondelle (S2). Il est assis
+au bout d'un ponton, sous la pluie, face a une eau qui n'existe plus.
+
+    [S7_BRE_L168]  2,4 s · calme · « Vous allez pas rester la, vous etes trempe. »
+    [S7_LOH_L169]  2,0 s · fort · « Vous non plus. »
+    [S7_BRE_L170]  2,8 s · calme · « Moi j'attends. C'est different, quand on attend. »
+    [S7_LOH_L171]  1,6 s · fort · « Vous attendez quoi ? »
+    [S7_BRE_L172]  3,0 s · calme · « La maree. La vraie. Celle qui monte et qui redescend. »
+        dir : [OBL][NAR] LE MOT « MAREE » UTILISE DANS SON SENS
+              ORDINAIRE. [OBL] Seule occurrence du chapitre. Partout
+              ailleurs, la Maree est l'evenement. [OBL] Brel est le
+              seul personnage qui refuse de laisser le mot se faire
+              voler. [OBL] Jamais explique.
+    [S7_LOH_L173]  2,2 s · fort · « Y'a plus d'eau. »
+    [S7_BRE_L174]  2,6 s · calme · « Y'a plus d'eau aujourd'hui. »
+    [S7_BRE_L175]  3,2 s · calme · « J'ai quarante ans de metier, jeune homme. L'eau revient toujours. »
+        dir : [OBL] il a tort. [OBL] Ou il a raison et ce sera dans un
+              autre chapitre. [OBL] Le jeu ne tranche pas.
+              [OBL] Brel a 13 lignes dans le chapitre 1 : 5 en S2, 8
+              ici. Il ne reapparait pas en S8.
+
+--- § 2 — ODILE, DEUXIEME RENCONTRE (4 lignes) ------------------------------------------------
+
+[OBL] Declencheur : revenir au mur des noms APRES le combat contre le
+Verrier. Odile y est encore. [OBL] 18 %.
+
+    [S7_ODI_L176]  2,6 s · usee · « Vous avez trouve votre colonne ? »
+    [S7_LOH_L177]  1,4 s · fort · « Oui. »
+    [S7_ODI_L178]  2,8 s · usee · « Et il y avait une croix ou il y en avait pas ? »
+    [S7_LOH_L179]  2,0 s · fort · « Y'en avait pas. »
+        dir : [OBL][NAR] ELLE NE REPOND RIEN. [OBL] Elle hoche la tete
+              et recopie. [OBL] Aucune consolation, aucun espoir
+              propose, aucune phrase de fin. [OBL] Le dialogue se
+              termine sur une reponse de Lohen, ce qui n'arrive que
+              trois fois dans tout le chapitre.
+              [OBL] Interdit : ne jamais ajouter de ligne de sortie
+              pour Odile.
+
+--- § 3 — PALLAS, LE TROISIEME POSTE (4 lignes) ------------------------------------------------
+
+PAL = Pallas, 61 ans, matricule 0031, relayeuse. Deuxieme apparition
+apres S1 et S3. [OBL] 61 % — c'est la rencontre la plus trouvee parce
+qu'elle est sous une lampe.
+
+    [S7_PAL_L180]  2,0 s · sec · « 0114. »
+    [S7_LOH_L181]  1,4 s · fort · « 0031. »
+        dir : [OBL] ILS S'APPELLENT PAR LEUR MATRICULE. [OBL] Depuis
+              S1. [OBL] Aucun des deux n'a jamais utilise le prenom de
+              l'autre. Personne ne le releve.
+    [S7_PAL_L182]  2,8 s · sec · « T'as plus de cable et t'as encore huit kilometres. »
+    [S7_PAL_L183]  3,0 s · sec · « Prends le mien. Je fais que de la plaine cette semaine. »
+        dir : [OBL][NAR] LE SEUL CADEAU DU CHAPITRE 1. [OBL] Elle lui
+              donne son cable. [OBL] AUCUNE OPTION DE REFUS. Le joueur
+              ne peut pas dire non : l'echange est scripte, 2,9 s.
+              [OBL] Lohen ne dit pas merci. [OBL] Rappel : il remercie
+              des objets inanimes et un boss muet. Il ne remercie pas
+              Pallas. [OBL] JAMAIS COMMENTE.
+              [OBL] CONSEQUENCE MECANIQUE : le grappin est UTILISABLE
+              pour les 6 dernieres minutes de S7. [OBL] Le joueur qui
+              rate Pallas finit la sequence a pied. [OBL] 39 % des
+              joueurs jouent une fin de S7 sensiblement plus penible
+              et ne sauront jamais qu'il y avait une alternative.
+              [OBL] Interdit : aucun indice, aucun rappel, aucune
+              statistique de fin.
+
+--- § 4 — LE GARCON QUI COMPTE (12 lignes) ------------------------------------------------------
+
+[OBL] 9 %. La rencontre la moins vue du chapitre 1. [OBL] Un garcon
+d'environ 12 ans, sous un porche, qui compte les gouttes qui tombent
+d'une gouttiere. Il ne s'arrete pas de compter pendant toute la scene :
+ses chiffres continuent SOUS les lignes de dialogue, a -12 dB.
+
+    [S7_LOH_L184]  2,0 s · bas · « Tu comptes quoi ? »
+    [S7_LOH_L185]  2,4 s · bas · « (il ne repond pas) »
+        dir : [OBL] cette entree EST une ligne de Lohen : c'est un
+              silence de 2,4 s ou il attend. [OBL] Le garcon continue :
+              « quatre cent douze, quatre cent treize... »
+    [S7_LOH_L186]  1,8 s · bas · « Tu comptes jusqu'ou ? »
+    [S7_LOH_L187]  2,6 s · bas · « (toujours rien) »
+    [S7_LOH_L188]  2,2 s · bas · « D'accord. »
+    [S7_LOH_L189]  2,8 s · bas · « Moi aussi je compte des trucs. Des marches, des metres. »
+    [S7_LOH_L190]  2,0 s · bas · « Ca aide. »
+    [S7_LOH_L191]  2,4 s · bas · « Ca aide pas, en fait. Mais ca occupe. »
+    [S7_LOH_L192]  1,6 s · bas · « Bon. »
+    [S7_LOH_L193]  2,8 s · bas · « Si tu dors dehors ce soir, va sous le kiosque, y'a un toit. »
+        dir : [OBL] LE SEUL CONSEIL PRATIQUE QUE LOHEN DONNE A UN
+              ENFANT DANS LE CHAPITRE. [OBL] Il ne le donne pas a Sol.
+              Il le donne a un inconnu qui ne l'ecoute pas.
+              [OBL] Le kiosque est celui de l'arene du boss (09.30).
+    [S7_LOH_L194]  2,2 s · bas · « Voila. »
+    [S7_LOH_L195]  3,0 s · bas · « Quatre cent vingt-huit, au fait. Tu t'es trompe a quatre cent neuf. »
+        dir : [OBL][NAR] IL COMPTAIT AUSSI, EN MEME TEMPS, PENDANT TOUT
+              LE DIALOGUE. [OBL] Et il a raison : la piste audio du
+              garcon contient reellement une erreur a 409 (il dit deux
+              fois « quatre cent neuf »). [OBL] Un joueur peut le
+              verifier a l'oreille. [OBL] LE GARCON S'ARRETE DE
+              COMPTER. C'est la seule reaction qu'il ait de toute la
+              scene. Il ne dit rien. [OBL] Lohen part.
+              [OBL] Rappel S4 : 20 lectures reussies / 14 echecs, et il
+              calcule de tete en S7. Il ne sait pas lire. Il sait
+              compter. Le jeu ne l'oppose jamais explicitement.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] 4 rencontres hors chemin, aucune signalee
+[ ] L172 : « maree » au sens ordinaire, seule occurrence
+[ ] L179 : le dialogue se termine sur Lohen, aucune ligne de sortie pour Odile
+[ ] L183 : le cable de Pallas, aucun refus possible, aucun merci, aucun indice
+[ ] Le comptage du garcon continue sous les lignes, erreur reelle a 409
+[ ] L195 : verifiable a l'oreille dans le fichier audio

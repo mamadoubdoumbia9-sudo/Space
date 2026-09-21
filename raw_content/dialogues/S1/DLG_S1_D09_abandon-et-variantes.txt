@@ -1,0 +1,84 @@
+===============================================================================
+DLG · S1 · D09 — LIGNES D'ABANDON DE PALLAS ET VARIANTES DE S1
+6 lignes · PAL 3 (abandon) + 3 variantes
+Reference maitre : 12.06. Reference INDEX : § 8.
+===============================================================================
+
+--- LES 3 LIGNES D'ABANDON DE PALLAS ---------------------------------------------
+
+Declencheur : le joueur s'eloigne de plus de 7 m pendant que Pallas parle.
+La ligne en cours est coupee A LA SYLLABE (pas de fade), et une de ces
+trois se joue, dans l'ordre, jamais en aleatoire.
+
+    [S1_PAL_L113]  PALLAS · 1,4 s · plat · p0,0
+        « ... bon. »
+        dir : premiere fois. Elle ne hausse pas la voix. Elle se remet a
+              coudre. [OBL] Si le joueur revient, elle NE REPREND PAS sa
+              phrase : elle en commence une autre, plus courte.
+
+    [S1_PAL_L114]  PALLAS · 2,1 s · sec · p0,0
+        « Je parle a une caisse. C'est pas nouveau. »
+        dir : deuxieme fois.
+
+    [S1_PAL_L115]  PALLAS · 1,8 s · las · p0,0
+        « Va. Va, va, va. »
+        dir : troisieme fois et toutes les suivantes. Apres celle-la,
+              plus aucune ligne d'abandon ne se joue de toute la
+              sequence. Pallas a arrete de commenter.
+
+--- LES 3 VARIANTES ALEATOIRES (x3) ---------------------------------------------
+
+Une seule ligne de S1 existe en trois variantes tirees au sort : le salut
+de Lohen quand le joueur revient vers Pallas apres s'en etre eloigne.
+[OBL] Les trois sont enregistrees, tirees sans remise, et la troisieme
+n'arrive donc qu'a la troisieme visite. Un joueur qui revient quatre fois
+n'entend plus rien : Lohen ne dit plus bonjour. C'est juste.
+
+    [S1_LOH_L116/a]  LOHEN · 0,6 s · plat · p0,0
+        « Pallas. »
+
+    [S1_LOH_L116/b]  LOHEN · 0,9 s · plat · p0,0
+        « C'est encore moi. »
+
+    [S1_LOH_L116/c]  LOHEN · 1,2 s · las · p0,0
+        « Je tourne en rond. »
+        dir : [OBL] cette variante est honnete. Le jeu admet, par la voix
+              du personnage, que le joueur est perdu. Il ne lui donne
+              aucune direction pour autant. Aucun marqueur ne s'allume.
+
+--- COMPTAGE DE LA SEQUENCE S1 ---------------------------------------------------
+
+    D01 ouverture voix off ...................... 14
+    D02 Pallas, premiere humaine ................ 28
+    D03 Echo 01, les bottes ..................... 12
+    D04 le Registre, la porte ................... 10
+    D05 les deux choix .......................... 16
+    D06 Echo 02, la valise ...................... 12
+    D07 les 10 lignes diegetiques ............... 10
+    D08 la sortie par le toit ................... 10
+    D09 abandon et variantes .................... 06
+                                               -----
+    TOTAL S1 ................................... 118
+
+    RECONCILIATION DES IDs. Les identifiants vont de L001 a L116, soit 116
+    entrees, plus les deux suffixes de variante L116/b et L116/c : 118.
+    Cas particulier declare : [S1_ECH_L104] porte un id de timeline VO
+    (c'est la cloche desaccordee, necessaire au ducking) mais n'est pas un
+    fichier de comedien. Elle est donc comptee dans les 118 du graphe de
+    dialogue et EXCLUE du plan de session studio. Le job
+    `tools/count_vo_lines.py --seq S1 --expect 118 --studio 117` verifie
+    les deux chiffres separement. C'est le seul cas du chapitre.
+
+    Ventilation par role : LOH 46 · PAL 32 · ECH 26 · GAR 5 ·
+    voix d'enfant d'Echo 9 (comprises dans ECH pour le casting, distinctes
+    pour la reglementation du travail des mineurs : voir INDEX § 9.03).
+
+--- CHECKLIST S1 -----------------------------------------------------------------
+
+[ ] 118 lignes exactement, ids S1_*_L001..L116 (+2 suffixes de variante)
+[ ] Aucun trou d'id non documente
+[ ] Une seule voix interieure, 22 s, jamais reprise
+[ ] Zero musique : a l'arrivee de Pallas, pendant la levee de brume
+[ ] Le mot « Esteban » n'est prononce NULLE PART en S1
+[ ] Le mot « amour » n'apparait pas (quota global : 2, tous deux ailleurs)
+[ ] Aucun choix de S1 n'a de consequence mecanique

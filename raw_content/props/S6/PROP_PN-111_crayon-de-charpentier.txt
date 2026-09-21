@@ -1,0 +1,102 @@
+===============================================================================
+PN-111 — LE CRAYON DE CHARPENTIER
+===============================================================================
+Asset : SM_S6_Crayon_Charpentier · S6, sur le rebord interieur de la
+cinquieme fenetre, derriere le rideau ferme · ~04:53 · prop narratif ·
+pas d'Echo · LOD0 140 tris
+
+§ 1 — CE QU'ON VOIT
+Derriere le rideau ferme, sur le rebord de la fenetre, a cote du
+portemanteau au gilet (PN-107), il y a un crayon.
+Un crayon de charpentier : plat, ovale, large de 12 mm, en bois tendre, la
+mine rectangulaire.
+Il est taille au couteau. Mal. Les coupes sont grossieres, irregulieres, et
+la mine depasse de 8 mm de facon asymetrique.
+Il a ete beaucoup utilise : il ne fait plus que 7 cm.
+A cote, sur le rebord de pierre, il y a des TRAITS.
+Des essais de mine. Des gribouillis. Quelqu'un a teste la pointe sur la
+pierre avant d'ecrire, plusieurs fois.
+Il y a onze traits.
+Et un mot, ecrit sur la pierre du rebord, en petit, a la mine de
+charpentier :
+[OBL] Ce n'est pas un mot. C'est un CHIFFRE.
+        14
+
+§ 2 — FICHE TECHNIQUE
+LOD0 140. Le crayon : sculpt avec les facettes de taille au couteau
+(9 facettes irregulieres) et la mine asymetrique.
+[OBL] La mine de charpentier est GRASSE et LARGE. Le trait qu'elle laisse
+sur la pierre est epais (3 mm), gris-noir, brillant, et il accroche le
+relief de la pierre.
+Les 11 traits d'essai + le « 14 » : decal 2K sur le rebord.
+[OBL] Le « 14 » est ecrit de la MEME main que PN-108 (la liste d'Esteban).
+Meme inclinaison, meme formation du 1 et du 4. Coherence graphologique
+obligatoire.
+[OBL] Mais il est ecrit a la mine de charpentier, pas a la plume. Le
+graphologue doit produire les deux versions avec le meme geste.
+Shader `wood_soft_cut` + `graphite_thick`.
+Collision : aucune. [OBL] Non prenable. Il n'y a PAS de prompt.
+
+§ 3 — CE QUE CA DIT
+Esteban est reste derriere ce rideau. Debout. Assez longtemps pour tailler
+un crayon, faire onze essais de mine, et ecrire un chiffre sur la pierre.
+Le geste humain : essayer sa mine sur un rebord avant d'ecrire.
+Onze essais. [OBL] Onze. Il a hesite longtemps avant d'ecrire deux
+caracteres.
+« 14 ». Le 14 octobre. Le jour du bal. Le jour de la Maree.
+[OBL] Il a ecrit la date sur le rebord d'une fenetre, derriere un rideau,
+a cote de son gilet boutonne, et il n'est pas alle au bal.
+[OBL] Jamais explique. Aucune interpretation n'est fournie, en jeu ou
+hors jeu.
+Le crayon est reste la. Il ne l'a pas repris.
+
+§ 4 — ECHO
+NEANT. [OBL] Le refus est ici total : c'est un objet personnel d'Esteban,
+avec un geste humain evident, dans un espace confine, et il n'y a rien.
+[OBL] Meme justification que PN-107 : ce qui s'est passe derriere ce rideau
+n'a pas eu lieu. Il n'y est pas alle. Il a prepare, il a hesite, il est
+parti. Le systeme ne rejoue pas les hesitations.
+
+§ 5 — MISE EN SCENE
+[OBL] Dans l'espace de 60 cm, en lumiere rouge, apres LOH-ACT-206 et apres
+avoir pris la liste (PN-108).
+Le crayon est sur le rebord, a 90 cm du sol, a droite du portemanteau.
+[OBL] Le joueur doit se tourner. Dans 60 cm de large, ce n'est pas anodin :
+il doit pivoter sur place, dos au velours.
+Les traits et le « 14 » sont sur la pierre, en gris sur gris, dans une
+lumiere rouge.
+[OBL] Ils sont TRES difficiles a voir. Le rai dore de 6 cm (PN-107) eclaire
+le gilet, pas le rebord.
+Taux de decouverte cible : 17-26 %.
+[ART] C'est le detail le plus cache du chapitre apres PN-063 et PN-084, et
+c'est le plus proche d'Esteban que le joueur puisse arriver avant la lettre.
+[OBL] Aucun prompt, aucun LookAt, aucun son, aucune musique, aucune
+reaction de Lohen.
+
+§ 6 — AUDIO
+NEANT. Silence total dans l'espace du rideau (RT60 0,6 s, M21 a -11 dB).
+
+§ 7 — INTERDICTIONS
+Interdit de : prendre le crayon · ecrire · ajouter un prompt · ajouter un
+autre mot, un nom, une phrase · expliquer le « 14 » · expliquer les onze
+essais · faire commenter Lohen · eclairer le rebord · ajouter de la musique
+· donner un Echo · relier explicitement a PN-108 ou a PN-106.
+[OBL] Le crayon n'est jamais mentionne dans les six lettres suivantes.
+
+§ 8 — LIENS
+PN-107 (le gilet, a 40 cm). PN-108 (la liste, meme main).
+PN-106 (le carton d'invitation, « il ne viendra pas ») : [OBL] jamais relie.
+PN-089 (les 4 marques a la craie de Sol, S5) : l'autre inscription murale.
+PN-139 (les 314 feuilles, S8) : la meme main, 314 fois.
+[THEME] LES ECRITURES. [THEME] HESITER.
+
+§ 9 — DOD
+[ ] Crayon plat, 7 cm, 9 facettes de taille au couteau, mine asymetrique
+[ ] 11 traits d'essai sur la pierre, comptables
+[ ] « 14 » a la mine de charpentier, meme main que PN-108
+[ ] Coherence graphologique entre plume (PN-108) et mine (PN-111)
+[ ] Trait de 3 mm, gris-noir brillant, accrochant le relief
+[ ] Hors du rai dore, en gris sur gris, lumiere rouge
+[ ] Rotation sur place necessaire dans 60 cm
+[ ] Taux de decouverte 17-26 %
+[ ] Zero prompt, zero son, zero reaction

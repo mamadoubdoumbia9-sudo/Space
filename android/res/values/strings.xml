@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Le nom visible par le systeme. Tout le reste du texte du jeu vient de la
+  table de localisation embarquee (content/locales/locales.json), jamais des
+  ressources Android : une seule source de verite pour les cinq langues.
+-->
+<resources>
+    <string name="app_name">LOHEN</string>
+</resources>

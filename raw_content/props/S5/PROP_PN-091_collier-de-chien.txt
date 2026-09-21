@@ -1,0 +1,89 @@
+===============================================================================
+PN-091 — LE COLLIER DE CHIEN
+===============================================================================
+Asset : SM_S5_Collier_Chien · S5, accroche a un clou dans la chambre de
+chauffe · ~04:13 · prop narratif · pas d'Echo · LOD0 380 tris
+
+§ 1 — CE QU'ON VOIT
+Un collier de chien, en cuir, accroche a un clou dans le mortier, a 1,30 m.
+Il est petit : il ferait le tour d'un cou de 28 cm. Un petit chien.
+Il est REPARE : la lanière a casse et a ete recousue, sur 4 cm, avec du fil
+de peche vert, en points croises.
+La boucle est en laiton. Il y a une medaille.
+La medaille est ronde, en laiton, de 3 cm. Elle porte un nom grave.
+[OBL] Le nom grave n'est PAS « Pomme ».
+C'est un autre nom. Un nom de chien, court, grave proprement, par un
+graveur professionnel, il y a longtemps. Il est parfaitement lisible.
+Le collier est accroche au mur. Pomme ne le porte pas.
+[OBL] Pomme ne porte AUCUN collier. Le joueur le verra en S6.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 380. Cuir : sculpt avec le pli d'usure de la boucle (un cran est
+beaucoup plus use que les autres : le cran n°4).
+La reparation au fil de peche : 18 points croises en geometrie, fil vert
+translucide de 0,4 mm.
+La medaille : texture 2K, gravure en creux de 0,3 mm, en geometrie.
+[OBL] Le nom est lisible a 40 cm. Il est choisi une fois et ne change
+jamais. Il ne doit etre ni comique, ni symbolique, ni signifiant. Un nom de
+chien ordinaire.
+Shader `leather_hardened` + `brass_engraved`.
+Collision : aucune. Non prenable, aucun prompt.
+
+§ 3 — CE QUE CA DIT
+Il y avait un autre chien. Avant.
+Le geste humain : recoudre un collier casse avec du fil de peche.
+Puis l'accrocher a un clou et ne plus s'en servir.
+[OBL] Le jeu ne dit jamais ce qui est arrive au premier chien. Aucun
+dialogue, aucun indice, aucune scene, dans aucun des sept chapitres.
+[OBL] Et Sol ne met pas ce collier a Pomme. Il le laisse au mur.
+[NAR] Deux lectures, aucune tranchee : soit il ne veut pas remplacer, soit
+il ne veut pas qu'on puisse attraper Pomme par le cou.
+Le cran n°4 use : le premier chien a porte ce collier serre a la meme
+taille pendant des annees. Il n'a jamais grandi apres.
+
+§ 4 — ECHO
+NEANT. [OBL] Aucun Echo ne contient d'animal (PN-029). Et objet d'un vivant.
+
+§ 5 — MISE EN SCENE
+A 1,30 m, sur le mur de la chambre de chauffe, a 3 m du matelas.
+[OBL] Il est dans le champ quand le joueur regarde le matelas (PN-087) :
+meme mur, plus a droite.
+[ART] Le joueur le voit en passant. Il voit un collier. Il pense a Pomme,
+qu'il n'a pas encore rencontre — [OBL] rappel : Sol a mentionne Pomme en
+S3 (SOL-DLG-498, « le chien s'appelait Pomme », dite en rythme de liste de
+courses) mais le joueur ne l'a jamais vu.
+Il lit le nom sur la medaille. Ce n'est pas Pomme.
+[OBL] Il ne se passe rien. Aucun prompt, aucune reaction, aucune musique.
+Sol, s'il est present, ne dit rien. [OBL] Aucune option de dialogue.
+
+§ 6 — AUDIO
+NEANT.
+[OBL] Le collier ne bouge pas, ne tinte pas. La medaille ne fait pas de
+bruit contre la boucle : il est immobile au mur depuis longtemps.
+[ART] Le joueur entendra une medaille tinter en S6, sur Pomme. [OBL] NON —
+Pomme ne porte pas de collier, donc pas de medaille, donc aucun tintement.
+Le seul son de Pomme sera ses griffes sur le sol.
+
+§ 7 — INTERDICTIONS
+Interdit de : le prendre · le mettre a Pomme · reveler le sort du premier
+chien · faire commenter Sol · permettre de demander · ajouter un deuxieme
+collier · donner un collier a Pomme · faire tinter la medaille · nommer le
+chien dans un dialogue · donner un Echo · relier a la gamelle de Mousse
+(PN-029). [OBL] Ce n'est PAS Mousse. Modele de collier different, taille
+differente, nom different. Aucun lien, jamais.
+
+§ 8 — LIENS
+PN-029 (la gamelle de Mousse, S2) : [OBL] aucun lien. Faux lien volontaire.
+PN-090 (la gamelle propre de Pomme, a 3 m).
+PN-062 (les cages a oiseaux ouvertes, S3).
+Pomme (S6) : le seul animal vivant du jeu.
+[THEME] LA VILLE SANS BETES. [THEME] LES FAUX LIENS.
+
+§ 9 — DOD
+[ ] Petit collier, 28 cm, cran n°4 fortement use
+[ ] Reparation : 18 points croises de fil de peche vert en geometrie
+[ ] Medaille gravee, nom lisible a 40 cm, different de « Pomme »
+[ ] Nom ordinaire, ni comique ni symbolique
+[ ] Zero son, zero prompt, zero dialogue
+[ ] Pomme ne porte jamais de collier dans le jeu
+[ ] Aucun lien etabli avec PN-029

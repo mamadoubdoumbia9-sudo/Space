@@ -1,0 +1,155 @@
+===============================================================================
+DLG · S4 · D07 — TROISIEME CONVERSATION : LA CLE ET LA PHRASE DE S8
+26 entrees, toutes S4. MIR 16 · LOH 10. Contribution : 26.
+Reference maitre : 09.13 SORTIE. « Une phrase que le joueur ne comprendra
+qu'a la sequence 8. »
+Props : PN-067 (le tiroir), PN-119 (le dossier vide, emporte).
+===============================================================================
+
+--- CONTEXTE ------------------------------------------------------------------------
+
+Fin de sequence. Mireille se leve pour la seule et unique fois : 22
+secondes, pour aller chercher une cle dans un meuble a 4 m. Elle marche
+mal. Anim MIR-WLK-003, 22 s, sans ellipse, sans coupe.
+
+[OBL] Le joueur attend 22 secondes qu'une femme de 58 ans traverse une
+piece. C'est long. C'est le dernier temps mort de l'entracte avant deux
+heures de descente et de montee. [OBL] Aucune option pour l'aider.
+Aucune ligne pendant les 22 s.
+
+--- LES 26 LIGNES --------------------------------------------------------------------------
+
+    [S4_MIR_L171]  MIREILLE · 2,0 s · plat · p1,2
+        « Vous emportez la chemise vide. »
+        dir : constat, pas question. [OBL] RACCORD PN-119 : le dossier
+              est l'un des 9 ramassables et il ne sera JAMAIS ouvert
+              apres. Le joueur peut essayer : Lohen le range.
+
+    [S4_LOH_L172]  LOHEN · 1,4 s · plat · p1,0
+        « Oui. »
+
+    [S4_MIR_L173]  MIREILLE · 2,4 s · sec · p1,3
+        « Pourquoi ? Il n'y a rien dedans. »
+
+    [S4_LOH_L174]  LOHEN · 2,8 s · plat · p1,4
+        « Y'a son nom ecrit dessus. »
+        dir : [OBL][NAR] LA REPONSE. Un homme qui ne sait pas lire
+              emporte une chemise vide parce qu'un nom est ecrit
+              dessus. [OBL] Mireille ne repond pas a ca. Silence de
+              1,4 s. Elle enchaine sur autre chose.
+
+    [S4_MIR_L175]  MIREILLE · 2,2 s · plat · p1,1
+        « Attendez. »
+
+    -- Elle se leve. 22 secondes. Aucune ligne. --
+
+    [S4_MIR_L176]  MIREILLE · 2,6 s · plat · p1,2
+        « Cette cle ouvre la grille du conduit, en bas, a l'ouest. »
+
+    [S4_LOH_L177]  LOHEN · 1,6 s · plat · p1,0
+        « Un conduit vers ou ? »
+
+    [S4_MIR_L178]  MIREILLE · 2,0 s · plat · p1,3
+        « Vers le haut. Tout va vers le haut, ici. »
+
+    [S4_LOH_L179]  LOHEN · 1,8 s · plat · p1,1
+        « Pourquoi vous m'aidez ? »
+
+    [S4_MIR_L180]  MIREILLE · 3,2 s · plat · p1,4
+        « Je ne vous aide pas. Je vous fais sortir. Ce n'est pas la
+          meme chose et ca m'arrange. »
+        dir : [OBL] M2, 5e occurrence. [NAR] Elle ment une troisieme
+              fois, tres legerement. Cette fois le joueur le sent.
+
+    [S4_MIR_L181]  MIREILLE · 2,4 s · plat · p1,2
+        « Il y a des choses en bas. Vous les connaissez ? »
+
+    [S4_LOH_L182]  LOHEN · 1,4 s · plat · p1,0
+        « Les Mueurs. »
+
+    [S4_MIR_L183]  MIREILLE · 2,8 s · plat · p1,5
+        « On dit ca. Moi je les ai jamais vus et je travaille au-dessus
+          depuis trois ans. »
+        dir : [OBL][NAR] RACCORD CANON PN-094 : le Mueur n'apparait
+              JAMAIS de tout le chapitre. Mireille le confirme sans le
+              savoir, deux heures avant que le joueur traverse les
+              conduits en cherchant partout. [OBL] Le mix de S5 est
+              strictement plat : aucun son de creature.
+
+    [S4_LOH_L184]  LOHEN · 1,6 s · plat · p1,2
+        « On dit qu'ils muent. »
+
+    [S4_MIR_L185]  MIREILLE · 3,0 s · sec · p1,4
+        « On dit beaucoup de choses sur ce qui mue. Une ville entiere
+          qui mue, ca fait du bruit. »
+        dir : [OBL] elle parle de Velmora, pas des creatures. Aucune
+              option pour le lui faire preciser.
+
+    [S4_LOH_L186]  LOHEN · 1,2 s · plat · p1,3
+        « Merci, madame Vandeck. »
+
+    [S4_MIR_L187]  MIREILLE · 1,8 s · sec · p1,6
+        « Mireille. »
+        dir : [OBL] elle donne son prenom a la toute fin, apres trois
+              conversations. [OBL] Lohen ne l'utilisera qu'une seule
+              fois, en S7, et ce sera la derniere fois qu'il lui
+              parlera.
+
+    [S4_LOH_L188]  LOHEN · 1,0 s · plat · p1,2
+        « Mireille. »
+
+    [S4_MIR_L189]  MIREILLE · 2,2 s · plat · p1,4
+        « Voila. Allez-y. »
+
+    -- Il part. A 6 m de la porte : --
+
+    [S4_MIR_L190]  MIREILLE · 1,6 s · plat · p1,1
+        « Jeune homme. »
+
+    [S4_LOH_L191]  LOHEN · 0,8 s · plat · p1,0
+        « Oui ? »
+
+    [S4_MIR_L192]  MIREILLE · 4,0 s · plat · p2,2
+        « Quand vous le trouverez, ne lisez pas tout de suite. »
+        dir : [OBL][NAR] LA PHRASE. C'est elle que le joueur ne
+              comprendra qu'en S8. [OBL] Direction : elle la dit
+              exactement comme elle a dit « ne montez pas au
+              quatrieme ». Aucune solennite. Aucune musique (il n'y en
+              a pas). Aucun plan. Elle est deja en train de se
+              rasseoir quand elle la termine.
+              [NAR] Elle dit « le », pas « la lettre ». Elle ne sait
+              rien d'une lettre. Elle parle de ce qu'on trouve, en
+              general, au bout d'une recherche. Elle a raison quand
+              meme.
+
+    [S4_LOH_L193]  LOHEN · 1,2 s · plat · p1,4
+        « Quoi ? »
+
+    [S4_MIR_L194]  MIREILLE · 2,6 s · plat · p1,3
+        « Asseyez-vous d'abord. Les gens lisent debout et apres ils
+          tombent. »
+        dir : [OBL][NAR] EN S8, LOHEN S'ASSOIT AVANT DE LIRE. Anim
+              LOH-SIT-240. [OBL] Le joueur ne peut pas l'en empecher :
+              c'est scripte. Un joueur sur dix se souviendra de cette
+              ligne a ce moment-la. Pour lui, cette vieille dame aura
+              tenu la main du personnage a travers deux heures et
+              demie de jeu.
+
+    [S4_LOH_L195]  LOHEN · 1,0 s · plat · p1,2
+        « D'accord. »
+
+    [S4_MIR_L196]  MIREILLE · 1,4 s · sec · p0,0
+        « Non. Vous dites d'accord et vous ne le ferez pas. »
+        dir : [OBL] elle a tort. Il le fera. [OBL] C'est la derniere
+              ligne de Mireille de la sequence 4 : elle se trompe, et
+              elle se trompe dans le bon sens. Elle ne le saura jamais.
+              Elle a 24 lignes en S7 et aucune ne revient la-dessus.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] 22 s de marche de Mireille, sans ellipse, sans ligne, sans option d'aide
+[ ] L174 : la raison d'emporter une chemise vide
+[ ] L183 : le Mueur n'apparait jamais, mix plat en S5
+[ ] L187 : prenom donne a la fin ; utilise une seule fois, en S7
+[ ] L192/L194 : la phrase de S8, dite sans solennite
+[ ] L196 : elle se trompe, et personne ne le lui dira

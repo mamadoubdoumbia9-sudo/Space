@@ -1,0 +1,142 @@
+===============================================================================
+DLG · S7 · D07 — LES QUATRE ECHOS DE LA DESCENTE (E22 a E25)
+32 entrees, toutes S7. ECH 32. Contribution : 32.
+[OBL] E23 est le SEUL Echo du jeu ou un fantome regarde Lohen.
+===============================================================================
+
+--- E22 — LE PONTON (8 lignes, 34 s) --------------------------------------------------------------
+
+Sur le ponton de Brel, a 4 m de lui. Il ne le voit pas. 51 %.
+Deux mariniers, le 13 octobre, la veille.
+
+    [S7_ECH_L196]  2,0 s · plat · « On sort demain ? »
+    [S7_ECH_L197]  2,4 s · plat · « Si le vent tombe. »
+    [S7_ECH_L198]  1,8 s · plat · « Le vent tombe toujours le quinze. »
+    [S7_ECH_L199]  2,6 s · plat · « Alors on sort le quinze. »
+    [S7_ECH_L200]  2,2 s · plat · « Ma femme voulait que je reste pour le bal. »
+    [S7_ECH_L201]  2,8 s · plat · « Le bal c'est demain soir, tu peux faire les deux. »
+        dir : [OBL][NAR] LE BAL. [OBL] Le joueur vient de passer neuf
+              minutes dedans. [OBL] Aucun soulignement, aucune
+              musique, aucune reprise de M22.
+    [S7_ECH_L202]  2,0 s · plat · « Je danse mal. »
+    [S7_ECH_L203]  3,0 s · plat · « Tout le monde danse mal. C'est pour ca que c'est un bal et pas un concours. »
+        dir : [OBL] dissolution. [OBL] RACCORD S6_EST_L097. Deux
+              hommes, deux endroits, la meme blague, a douze heures
+              d'intervalle. [OBL] Jamais releve.
+
+--- E23 — LA FEMME QUI REGARDE (8 lignes, 41 s) ------------------------------------------------
+
+[OBL] L'EXCEPTION. Reference INDEX § 4.03bis : « les fantomes ne
+regardent jamais Lohen sauf E23. »
+
+[OBL] MISE EN SCENE : une femme d'environ 35 ans, debout sous la pluie
+au milieu de la place, a l'endroit exact ou le Verrier se tiendra.
+[OBL] Elle est de dos au declenchement. A la ligne L207, ELLE SE
+RETOURNE ET FIXE LOHEN pendant 6,2 s, sans ciller, pendant qu'elle parle.
+[OBL] Aucun effet visuel n'accompagne ce regard. Pas de musique, pas de
+gros plan, pas de changement de couleur. [OBL] La camera n'est PAS
+verrouillee : le joueur peut se detourner. 71 % ne se detournent pas.
+
+[OBL] REGLE ABSOLUE : elle ne parle PAS a Lohen. Elle parle a quelqu'un
+qui se tenait la, il y a trois ans, exactement a la position actuelle du
+joueur. [OBL] La coincidence est totale et n'est jamais expliquee.
+[OBL] Interdit absolu : ne jamais faire dire au jeu, dans aucun
+chapitre, qu'elle l'a vu.
+
+    [S7_ECH_L204]  2,2 s · plat · « Tu es en retard. »
+    [S7_ECH_L205]  1,8 s · plat · « Non, je dis pas ca pour t'embeter. »
+    [S7_ECH_L206]  2,6 s · plat · « Je dis ca parce que je t'ai attendu et que j'ai eu froid. »
+    [S7_ECH_L207]  3,0 s · plat · « Regarde-moi quand je te parle. »
+        dir : [OBL][NAR] ELLE SE RETOURNE ICI. [OBL] 6,2 s de regard
+              fixe. [OBL] La phrase s'adresse a un absent et frappe le
+              joueur en pleine figure. [OBL] Direction de studio :
+              aucune agressivite. C'est de la lassitude tendre.
+              [OBL] Prise refusee si elle est jouee en colere.
+    [S7_ECH_L208]  2,4 s · plat · « Voila. »
+    [S7_ECH_L209]  2,8 s · plat · « Bon. On y va, il pleut et j'ai les pieds mouilles. »
+    [S7_ECH_L210]  2,0 s · plat · « Tu me raconteras dans le chaud. »
+    [S7_ECH_L211]  2,6 s · plat · « Donne ton bras, ca glisse. »
+        dir : [OBL] ELLE TEND LE BRAS VERS LOHEN. [OBL] Le joueur peut
+              tendre le sien : l'interaction EXISTE, elle est
+              possible, elle a une animation (LOH-ACT-134, 2,1 s).
+              [OBL] Rien ne se passe. Le bras traverse. [OBL] La femme
+              se dissout 1,1 s plus tard, bras tendu.
+              [OBL] 34 % essaient. [OBL] Aucune ligne, aucun succes,
+              aucun commentaire, jamais.
+
+--- E24 — LES DEUX HOMMES QUI PORTENT (8 lignes, 37 s) ------------------------------------------
+
+Sous un porche, a 22 m du chemin. 27 %. Le 15 octobre au matin, le
+lendemain de la Maree. [OBL] Deuxieme exception R2 du chapitre apres les
+quatre Echos de S5. [OBL] Ici c'est le lendemain, pas trois ans apres :
+l'ecart est d'onze heures.
+
+    [S7_ECH_L212]  2,0 s · epuise · « Souleve par les epaules, pas par les bras. »
+    [S7_ECH_L213]  2,4 s · epuise · « Je sais. »
+    [S7_ECH_L214]  2,8 s · epuise · « Non, tu sais pas, ca fait trois fois que tu le fais mal. »
+    [S7_ECH_L215]  2,2 s · epuise · « Combien y'en a encore. »
+    [S7_ECH_L216]  2,6 s · epuise · « Dans cette rue, onze. »
+    [S7_ECH_L217]  3,0 s · epuise · « Et dans la ville ? »
+    [S7_ECH_L218]  2,4 s · epuise · « Compte pas. Fais la rue. »
+        dir : [OBL][NAR] LA REGLE DU METIER, ENONCEE PAR DES INCONNUS.
+              [OBL] 4e enonce du chapitre (S1 Tallec, S3 Pallas, S5
+              Sol « alors on porte », ici). [OBL] Le 5e et dernier est
+              dans la lettre.
+    [S7_ECH_L219]  2,8 s · epuise · « D'accord. Je fais la rue. »
+        dir : [OBL] dissolution. [OBL] AUCUN CORPS N'EST VISIBLE DANS
+              L'ECHO. [OBL] On entend l'effort, on voit les deux
+              hommes se baisser et se relever ensemble, et il n'y a
+              rien entre leurs mains. [OBL] Interdit absolu :
+              ne jamais modeliser les corps des 641.
+
+--- E25 — LE DERNIER ECHO AVANT LE PHARE (8 lignes, 44 s) --------------------------------------
+
+Au pied du Phare, altitude 8 m, sur les dernieres marches exterieures.
+[OBL] 94 % — quasiment tous les joueurs. C'est le seul Echo de S7 sur le
+chemin principal, et le dernier Echo du chapitre 1 (le 25e vu, sur 31
+existants).
+
+[OBL] UNE SEULE VOIX : un homme d'environ 50 ans, gardien du Phare,
+parlant a quelqu'un qu'on n'entend pas. [OBL] Il s'interrompt aux
+endroits ou l'autre repond. Les silences sont ECRITS : ils durent
+exactement le temps d'une reponse plausible.
+
+    [S7_ECH_L220]  2,4 s · calme · « Vous voulez monter ? A cette heure-ci ? »
+    [S7_ECH_L221]  2,8 s · calme · « Mille trente-huit marches, monsieur. »
+        dir : [OBL][NAR] LE NOMBRE, TROISIEME OCCURRENCE (S5 les traits,
+              S6 Esteban, ici). [OBL] Toujours pas de lien.
+    [S7_ECH_L222]  2,2 s · calme · « (silence de 2,2 s) »
+        dir : [OBL] cette entree EST une ligne : c'est le silence
+              pendant que l'autre repond. [OBL] Il est compte dans les
+              2 840. [OBL] Aucun son, sauf la pluie.
+    [S7_ECH_L223]  3,0 s · calme · « Bon. Je vous ouvre, mais je monte pas avec vous. »
+    [S7_ECH_L224]  2,6 s · calme · « La lampe marche plus depuis 'dix-huit, vous verrez rien. »
+        dir : [OBL][NAR] IL A TORT AUSSI. [OBL] Deuxieme personne du
+              chapitre a affirmer que la lampe est eteinte (la
+              premiere : Tallec, L051). [OBL] Les deux sont de bonne
+              foi. [OBL] Le joueur va monter et la trouver allumee.
+              [OBL] Personne n'expliquera jamais qui l'a rallumee.
+              Interdit 21.08.
+    [S7_ECH_L225]  2,4 s · calme · « (silence de 2,4 s) »
+    [S7_ECH_L226]  2,8 s · calme · « Comme vous voulez. Tenez la rampe, elle est froide mais elle tient. »
+    [S7_ECH_L227]  3,2 s · calme · « Et redescendez avant le jour, sinon vous verrez la ville et ca vaut pas le coup. »
+        dir : [OBL][NAR] DERNIERE LIGNE DU DERNIER ECHO DU CHAPITRE 1.
+              [OBL] Lohen redescendra APRES le jour (l'aube est en S8,
+              VFX V26). [OBL] Il verra la ville. [OBL] Le chapitre se
+              termine avant qu'il redescende. [OBL] Aucun personnage
+              ne reprendra jamais cette phrase.
+              [OBL] Dissolution. Le rituel de 2,44 s se joue pour la
+              31e et derniere fois du chapitre — [OBL] non : pour la
+              25e fois VUE par ce joueur. Les 31 existent ; aucun
+              joueur ne les voit tous en une partie (S4/E18 4 %,
+              S6/E21 obligatoire, etc.). [OBL] Aucun compteur d'Echos
+              n'existe dans l'interface.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] E23 : seul regard direct du jeu, camera libre, aucun effet
+[ ] E23/L211 : le bras tendu est interactif et ne donne rien, 34 %
+[ ] E24 : exception R2 (le lendemain), aucun corps modelise
+[ ] E25 : 94 %, dernier Echo, 2 entrees de silence comptees
+[ ] L224 : 2e affirmation de bonne foi que la lampe est eteinte
+[ ] Aucun compteur d'Echos dans l'interface

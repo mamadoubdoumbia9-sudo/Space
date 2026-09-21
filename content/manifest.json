@@ -1,0 +1,51 @@
+{
+ "project": "LOHEN — Les Sept Lettres de Velmora",
+ "chapter": 1,
+ "pipeline_version": "1.0",
+ "stats": {
+  "dialogues": {
+   "scenes": 86,
+   "lines": 2832,
+   "barks": 340,
+   "choices": 33
+  },
+  "props": {
+   "count": 147
+  },
+  "anims": {
+   "count": 744,
+   "by_char": {
+    "LOHEN": 218,
+    "ESTEBAN": 96,
+    "MIREILLE VANDECK": 64,
+    "CAPITAINE ORVAL TALLEC": 58,
+    "SOL": 71,
+    "FIGURE — L'ECHASSIER": 34,
+    "FIGURE — LE MUEUR": 39,
+    "LE VERRIER (ANSELME ROUX)": 52,
+    "PNJ GENERIQUES DU MARCHE SUSPENDU": 48,
+    "PROPS ANIMES ET MECANISMES": 64
+   }
+  },
+  "echos": {
+   "count": 31
+  },
+  "letter": {
+   "blocks": 27
+  },
+  "tuning": {
+   "families": 17
+  },
+  "locales": {
+   "keys": 130,
+   "langs": 5
+  },
+  "quests": {
+   "nodes": 57
+  },
+  "choices": {
+   "count": 38,
+   "linked": 30
+  }
+ }
+}

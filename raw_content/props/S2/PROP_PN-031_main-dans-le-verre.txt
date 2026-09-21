@@ -1,0 +1,106 @@
+===============================================================================
+PN-031 — LA MAIN DANS LE VERRE
+===============================================================================
+Asset : SM_S2_Main_Verre · S2, sur la Maree, a 60 m de la rive, sur le
+chemin du retour · ~01:38 · prop narratif · pas d'Echo · LOD0 1 700 tris
+
+§ 1 — CE QU'ON VOIT
+Dans le verre, a 40 centimetres sous la surface, il y a une main.
+Une main gauche d'adulte, ouverte, doigts ecartes, paume vers le haut.
+Elle est seule. Il n'y a pas de bras. Il n'y a pas de corps. Il n'y a rien
+d'autre dans le verre autour, sur vingt metres.
+Elle n'est pas coupee. Il n'y a pas de plaie, pas de moignon, pas de sang.
+Le poignet s'arrete, simplement, et a partir de la il y a du verre.
+Elle n'est pas abimee. La peau est intacte, les ongles sont propres, il y a
+un cal a la base de l'index — une main qui travaillait.
+Elle ne pourrit pas. Trois ans.
+Elle porte une alliance.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 700. Sculpt anatomique complet, reference photo, pas de rig.
+[OBL] Peau vue a travers 40 cm de verre : le shader `maree_glass` applique
+son Beer-Lambert, donc la main est LEGEREMENT VERTE-GRISE et floue de 1,4 px
+sur ses contours. Elle n'est jamais nette. Le joueur ne peut pas la voir
+comme une main de rendu propre. C'est essentiel : la nettete la rendrait
+gore ; le flou la rend impossible.
+Le raccord poignet/verre : masque de transition de 2 cm ou la peau devient
+verre. [OBL] Pas de coupe franche. Pas de bord. Pas de sang. La matiere
+change, c'est tout. C'est le detail technique le plus difficile du chapitre
+et il n'y a pas de deuxieme essai possible : s'il est rate, le prop est
+ridicule ou obscene.
+L'alliance : 90 tris, or, aucune gravure lisible.
+Cull : 45 m. [OBL] Elle n'est PAS visible de loin. Il faut passer a 5 m.
+Anim : NEANT. Absolument aucune. Jamais.
+
+§ 3 — CE QUE CA DIT
+[OBL] RIEN. Ce prop ne raconte aucun geste humain et ne repond a aucune
+question. Il est le seul du chapitre a rompre la regle de validation de
+l'index (0.03).
+Il existe pour une raison unique : le joueur, depuis 1 h 38, se demande ou
+sont les 641 personnes. Le jeu lui montre une main.
+Une seule. Sur 641. Ouverte, paume en l'air, sans corps.
+[NAR] Ce n'est pas un indice. Ce n'est pas un debut de reponse. Ce n'est
+pas un fragment de cadavre — il n'y a pas de cadavre, il y a une main
+entiere et intacte dans du verre.
+La paume vers le haut : la meme position que les gants de PN-012.
+Et l'alliance dit qu'il y avait quelqu'un d'autre.
+Toute interpretation appartient au joueur. Le jeu n'en propose aucune, ni
+maintenant, ni jamais, dans aucune des sept lettres.
+
+§ 4 — ECHO
+NEANT. Sur la Maree. [OBL] Et c'est la que la regle « le verre ne garde
+rien » devient insupportable : voici une personne, litteralement dans le
+verre, et il n'y a pas d'Echo. Le joueur s'approchera. Aucun prompt.
+Le silence du systeme est ici a son maximum d'expression.
+
+§ 5 — MISE EN SCENE
+[OBL] Elle est HORS DU CHEMIN. A 11 m a gauche du trajet de retour.
+Rien ne mene a elle. Aucune lumiere, aucune composition, aucun son,
+aucune ligne de fuite. Elle est posee dans le vide.
+[ART] Taux de decouverte cible : 40-55 %. Presque un joueur sur deux
+terminera le chapitre sans jamais voir la main. C'est accepte et voulu.
+Le jeu ne repartit pas son contenu essentiel dans des detours, mais il
+autorise ses moments les plus forts a etre manques. C'est ce qui rend les
+autres reels.
+Ce qui attire : rien, sauf la reflectance. A un certain angle, la peau sous
+le verre renvoie un eclat plus chaud que le noir environnant. Un joueur qui
+balaie l'horizon verra, une seconde, une tache pale a 30 m.
+Si Lohen s'approche a moins de 2 m : aucune animation. Il reste debout.
+[OBL] Pas de LOH-ACT, pas d'accroupissement, pas de main tendue, pas de
+LookAt scripte. Le joueur regarde, ou pas. Lohen est un corps a cote.
+
+§ 6 — AUDIO
+NEANT. Rien. Absolument rien.
+Le bruit rose de la Maree continue, identique. Le vent continue, identique.
+Aucun son ne signale, n'accompagne, ne souligne, ne s'arrete.
+[OBL] Aucune musique n'est autorisee dans un rayon de 80 m, en toute
+circonstance, pour toute la duree du chapitre.
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter un corps, un bras, un visage, un vetement · rendre
+l'alliance lisible ou ramassable · faire bouger les doigts · faire
+apparaitre d'autres corps ailleurs (celui-ci est UNIQUE dans les sept
+lettres) · donner un Echo · ajouter un son · ajouter de la musique · faire
+reagir Lohen · le faire mentionner par un PNJ · en faire un objectif ·
+le signaler sur une carte (il n'y a pas de carte) · le rendre gore ·
+l'expliquer.
+[OBL] Aucun testeur, aucun producteur, aucun retour de focus group ne peut
+motiver l'ajout d'une explication. Si le prop met mal a l'aise, il
+fonctionne.
+
+§ 8 — LIENS
+PN-012 (les gants, paume vers le haut). PN-002 (l'alliance de la valise,
+non ramassable, S1). PN-011 (le velo, zero corps). PN-023 (le tram vide).
+[THEME] ZERO CORPS — et l'exception unique qui le confirme.
+[OBL] Rappel de canon : les 641 n'ont JAMAIS ete retrouves. Cette main ne
+contredit pas le canon : elle n'a pas ete retrouvee, elle est la, dans un
+verre qu'on ne peut pas ouvrir, inaccessible pour toujours.
+
+§ 9 — DOD
+[ ] Main gauche, ouverte, paume en l'air, alliance, cal a l'index
+[ ] Raccord poignet/verre : 2 cm de transition de matiere, zero bord
+[ ] Beer-Lambert applique : teinte vert-gris, flou de 1,4 px, jamais nette
+[ ] Zero sang, zero plaie, zero deterioration
+[ ] Cull 45 m, invisible de loin, hors du chemin de 11 m
+[ ] Taux de decouverte mesure entre 40 et 55 % sur 20 testeurs
+[ ] Zero son, zero musique a 80 m, zero animation de Lohen

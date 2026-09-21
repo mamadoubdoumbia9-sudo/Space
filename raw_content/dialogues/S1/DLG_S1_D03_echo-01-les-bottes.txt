@@ -1,0 +1,101 @@
+===============================================================================
+DLG · S1 · D03 — ECHO 01 : LE MURET AUX 40 BOTTES
+12 lignes · voix d'Echo (ECH) uniquement · Lohen ne parle pas
+Prop : PN-016 (les 40 bottes alignees). Anim : LOH-ECH-150, rituel 2,44 s.
+Reference maitre : BLOC 11, E01. Plafond de 17 silhouettes : c'est ici qu'il
+est pose, et c'est le seul Echo qui l'atteint exactement.
+===============================================================================
+
+--- CONTEXTE -------------------------------------------------------------------
+
+Premier Echo du jeu. Le joueur ne sait pas ce qu'est un Echo. Il touche un
+muret ou quarante bottes de peche sont alignees par paires, propres,
+retournees pour secher. Rituel de 2,44 s (main, inspiration, bascule de
+mix), non skippable, comme les 30 autres.
+
+Ce qu'il voit : dix-sept silhouettes de verre bleute qui rentrent de la
+mer. Elles retirent leurs bottes. Elles les posent. Elles s'en vont vers
+un endroit qui n'existe plus. Duree 1 min 12.
+
+[OBL] Les silhouettes ne regardent jamais Lohen. Aucune exception avant
+E23. Si un animateur oriente une tete vers la camera ici, le job CI
+`no-look` echoue le build.
+
+[OBL] Aucune de ces 12 lignes n'explique quoi que ce soit. Ce sont des
+bouts de conversation d'un soir de travail ordinaire. Le joueur comprendra
+le systeme en le vivant, pas en l'ecoutant.
+
+--- LES 12 LIGNES --------------------------------------------------------------
+
+Traitement impose (cf. INDEX § 4.03bis) : passe-bas 5,2 kHz, pre-delay
+90 ms, aucune reverb de piece. Elles arrivent toutes du meme cote
+(bâbord du joueur) quelle que soit la position des silhouettes. C'est
+faux, c'est volontaire, et personne ne le remarque consciemment.
+
+    [S1_ECH_L043]  HOMME 1 · 1,4 s · plat · p0,4
+        « Douze caisses. On en a douze. »
+
+    [S1_ECH_L044]  FEMME 1 · 1,1 s · sec · p0,6
+        « Onze. »
+
+    [S1_ECH_L045]  HOMME 1 · 0,9 s · agace · p0,9
+        « Douze. »
+
+    [S1_ECH_L046]  FEMME 2 · 2,2 s · las · p0,5
+        « J'ai les pieds qui sonnent. J'ai les pieds qui sonnent comme
+          des cloches. »
+        dir : elle rit un peu. Le rire est dans la prise, pas ajoute.
+
+    [S1_ECH_L047]  HOMME 2 · 1,6 s · moqueur · p0,4
+        « Va les faire accorder, alors. »
+        dir : [NAR] premiere mention indirecte du metier d'Esteban dans
+              tout le jeu. Aucun joueur ne fera le lien maintenant.
+              Beaucoup le feront en rejouant. C'est le but.
+
+    [S1_ECH_L048]  FEMME 2 · 1,3 s · rieur · p0,7
+        « Il me prendrait cher. »
+
+    [S1_ECH_L049]  HOMME 3 · 2,0 s · pratique · p0,5
+        « Range-les a l'endroit. Elles vont prendre l'eau. »
+
+    [S1_ECH_L050]  ENFANT (sup) · 1,0 s · joueur · p0,3
+        « C'est moi qui les compte ! »
+        dir : [OBL] cette silhouette mesure 1,21 m. Le plancher canonique
+              est 1,20 m. C'est la plus petite silhouette du jeu avant
+              E23. Elle n'est PAS une exception : elle passe la regle
+              d'un centimetre, et c'est ecrit ici pour que personne ne la
+              coupe par erreur en croyant bien faire.
+
+    [S1_ECH_L051]  FEMME 1 · 1,5 s · doux · p0,6
+        « Vas-y. Compte. »
+
+    [S1_ECH_L052]  ENFANT · 2,8 s · joueur · p0,8
+        « Deux, quatre, six, huit, dix, douze, quatorze, seize... »
+        dir : l'enfant compte de deux en deux, par paires de bottes. Il
+              s'arrete a seize. Il y a quarante bottes. Il ne finira pas.
+              [OBL] Personne ne le fait remarquer.
+
+    [S1_ECH_L053]  HOMME 1 · 1,7 s · plat · p0,5
+        « Demain cinq heures. Pas cinq heures et quart. »
+
+    [S1_ECH_L054]  FEMME 2 · 1,9 s · las · p0,0
+        « Demain, demain. Bonne nuit, les hommes. »
+        dir : derniere ligne. L'Echo se dissout sur elle. Les 17
+              silhouettes se defont en 3,1 s. Les quarante bottes reelles
+              sont toujours la, dans la brume, mouillees, seules.
+
+--- APRES ----------------------------------------------------------------------
+
+[OBL] Lohen ne dit RIEN. Aucune reaction verbale au premier Echo. Il
+retire sa main (LOH-ECH-152), il regarde ses doigts 1,1 s, il repart.
+Le joueur a le droit d'etre perdu. Il le restera 4 minutes, jusqu'a E02.
+Ne pas ajouter de ligne explicative. Jamais.
+
+--- CHECKLIST ------------------------------------------------------------------
+
+[ ] 17 silhouettes exactement, aucune ne regarde Lohen
+[ ] L050 : silhouette a 1,21 m, documentee, non coupee
+[ ] L052 : le comptage s'arrete a seize, jamais corrige
+[ ] Zero ligne de Lohen dans ce document
+[ ] Aucune ligne n'evoque la Maree, le verre, ou une catastrophe (R1)
+[ ] Rituel 2,44 s non skippable

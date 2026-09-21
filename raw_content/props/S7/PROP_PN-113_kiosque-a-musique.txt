@@ -1,0 +1,128 @@
+===============================================================================
+PN-113 — LE KIOSQUE A MUSIQUE
+===============================================================================
+Asset : SM_S7_Kiosque · S7, place de l'Ancienne Halle, debut de la Descente
+· ~05:08 · PORTEUR D'ECHO E22 · LOD0 7 100 tris
+
+§ 1 — CE QU'ON VOIT
+Un kiosque a musique octogonal, 7 m de diametre, sur un socle de pierre de
+1,20 m. Huit colonnes de fonte, un toit en pagode de zinc, une balustrade
+ajouree.
+Il pleut. [OBL] C'est la premiere pluie du chapitre. Elle a commence en
+sortant de la salle de bal et elle ne s'arretera plus.
+Le zinc du toit est perce en trois endroits. L'eau tombe a travers, en
+trois filets, sur le plancher du kiosque.
+Le plancher est pourri sous les trois filets : trois trous, trois cercles
+de bois noir.
+Sur le plancher, les pupitres de l'orchestre sont encore la. Neuf pupitres
+de metal noir, plies, empiles contre la balustrade — sauf un.
+Un pupitre est debout, deplie, au centre.
+Il porte une partition. Trempee, illisible, collee au metal par trois ans
+de pluie.
+Devant le kiosque, sur la place, des chaises. Trente-quatre chaises de fer,
+en rangs, face au kiosque, sous la pluie.
+[OBL] Elles sont RANGEES. Alignees. Personne ne les a rentrees.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 7 100 (structure 4 200 + 9 pupitres 1 100 + 34 chaises 1 800).
+[OBL] La balustrade ajouree est en geometrie (motif decoupe, 68 motifs).
+Une balustrade en alpha ne tient pas en contre-jour sous la pluie.
+Les 34 chaises : 1 modele, 34 transforms, alignement a +/- 6 cm et +/- 4°.
+[OBL] Un alignement humain, pas une grille.
+La pluie : systeme de particules global de S7 (cf. PN-122), + 3 emetteurs
+de filets continus sous les trous du toit.
+[OBL] Les 3 filets frappent le bois pourri et produisent des eclaboussures
+reelles, avec des ondes dans les flaques des trois trous.
+Shader `zinc_oxidized`, `cast_iron_wet`, `wood_rotted_black`.
+Anim : PROP-821 (le pupitre debout vibre sous les gouttes, 2 mm).
+
+§ 3 — CE QUE CA DIT
+Il y avait un concert public. Les chaises sont encore en place.
+Le geste humain : aligner trente-quatre chaises.
+[OBL] Et un pupitre est reste deplie, au centre, avec sa partition.
+[NAR] Les huit autres musiciens ont plie leur pupitre et sont partis. Le
+neuvieme non.
+Le geste humain : plier son pupitre. Huit fois sur neuf.
+[OBL] Le kiosque est le premier lieu de S7, et S7 est la sequence du
+Verrier. Anselme Roux jouait du piano dans les bals (PN-106).
+[OBL] Il n'y a pas de piano dans un kiosque a musique. Aucun lien n'est
+etabli. Le neuvieme pupitre n'est pas identifie.
+
+§ 4 — ECHO
+ECHO E22 — « Le kiosque » — 37 secondes, mode B.
+[OBL] Il pleut pendant l'Echo. [OBL] La pluie ne s'arrete PAS. C'est le
+seul Echo du chapitre qui se joue sous la pluie, et la pluie du present
+continue de tomber a travers les silhouettes.
+Ce qu'on voit : le jour revient (comme E21, mais cette fois il pleut aussi
+dans le passe — [OBL] ce n'est pas la meme pluie : elle est plus fine).
+Neuf silhouettes dans le kiosque, debout, instruments a la main.
+Sur la place : les 34 chaises sont OCCUPEES. 34 silhouettes assises, sous
+des parapluies.
+[OBL] C'est la plus grande foule des 31 Echos : 43 silhouettes.
+[OBL] Rappel de la regle 11.09 : au-dela de dix-sept silhouettes, on voit
+une masse. E01 (17) etait le plafond.
+[OBL] EXCEPTION ASSUMEE ET UNIQUE : ici, la masse EST le sujet. On ne
+regarde pas des individus. On regarde un public.
+Ils ne bougent pas. Aucun des 43. Pendant 31 secondes.
+L'orchestre ne joue pas. Les instruments sont leves, prets, immobiles.
+Le public attend. Les parapluies sont immobiles.
+A 33 s : tout s'efface, en meme temps, sans fondu.
+[OBL] Aucune note n'est jouee. Pendant 37 secondes, un orchestre de neuf
+musiciens et un public de trente-quatre personnes attendent, sous la pluie,
+et rien ne commence.
+Musique : NEANT. [OBL] Le seul son est la pluie.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur arrive sur la place par la rue haute. Il voit d'abord les
+34 chaises vides sous la pluie, de dos, alignees.
+Puis le kiosque, au fond.
+Il traverse les rangs de chaises. [OBL] Il passe entre elles. Il n'y a pas
+d'allee : il doit slalomer.
+L'Echo se declenche depuis le kiosque, au centre, a l'emplacement du chef
+d'orchestre. [OBL] Donc le joueur est DANS l'orchestre pendant l'Echo, au
+milieu des neuf, face au public.
+[ART] Quarante-trois personnes le regardent. [OBL] NON — elles ne le
+regardent pas. Elles regardent le kiosque. Il est juste sur leur ligne de
+vue. Aucune ne le voit.
+[OBL] Regle absolue maintenue : aucune silhouette ne regarde jamais Lohen,
+sauf VER-ECH-634.
+
+§ 6 — AUDIO
+SFX(rain_on_zinc) : la pluie sur le toit de zinc. [OBL] Le son le plus
+caracteristique de S7. Un crepitement metallique, dense, avec des
+resonances de tole. -12 dB sous le kiosque, -20 dB a 10 m.
+SFX(water_jet_wood) : les trois filets sur le bois pourri. Trois hauteurs.
+SFX(rain_on_iron_chairs) : les 34 chaises de fer sous la pluie. [OBL] Un
+tapis de micro-impacts metalliques, spatialise sur toute la place.
+[ART] Le joueur traverse 34 chaises qui sonnent sous la pluie.
+Pendant E22 : [OBL] la pluie du passe s'ajoute, plus fine, plus aigue. Les
+34 parapluies produisent 34 sons de toile tendue.
+[OBL] Zero musique, zero note d'instrument, zero voix, zero toux, zero
+raclement de chaise. Un public parfaitement silencieux.
+
+§ 7 — INTERDICTIONS
+Interdit de : faire jouer l'orchestre · ajouter une note · faire bouger une
+silhouette · faire applaudir · arreter la pluie · ranger les chaises ·
+lire la partition · identifier le neuvieme musicien · relier a Anselme Roux
+· ajouter de la musique · rendre E22 rejouable · depasser 43 silhouettes ·
+faire regarder Lohen par une silhouette.
+
+§ 8 — LIENS
+PN-001 (E01, 17 silhouettes, S1) : l'ancien plafond.
+PN-103, PN-112 (le piano et E21) : la musique qui joue seule / la musique
+qui ne commence jamais.
+PN-105, PN-106 (le bal qui n'a pas eu lieu).
+PN-122 (la pluie sur la Maree).
+[THEME] CE QUI N'A PAS EU LIEU. [THEME] ATTENDRE.
+
+§ 9 — DOD
+[ ] Balustrade ajouree en geometrie, 68 motifs
+[ ] 3 trous de zinc, 3 filets, 3 cercles de bois pourri, ondes reelles
+[ ] 8 pupitres plies + 1 deplie au centre avec partition illisible
+[ ] 34 chaises alignees a la main, +/- 6 cm et +/- 4°
+[ ] E22 : 43 silhouettes, exception unique a la regle des 17
+[ ] Aucune note jouee, aucun mouvement, 31 s d'attente immobile
+[ ] Pluie du present continue pendant l'Echo, pluie du passe plus fine
+[ ] Zero musique, zero voix, zero bruit de public
+[ ] 34 sons de chaise de fer sous la pluie, spatialises

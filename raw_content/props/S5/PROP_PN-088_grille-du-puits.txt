@@ -1,0 +1,120 @@
+===============================================================================
+PN-088 — LA GRILLE DU PUITS
+===============================================================================
+Asset : SM_S5_Grille_Puits · S5, croisement des conduits, niveau -1 ·
+~04:06 · PORTEUR D'ECHO E20 · LOD0 2 100 tris
+
+§ 1 — CE QU'ON VOIT
+Au plafond du conduit, a 2,40 m, une ouverture carree de 1 m avec une
+grille de fonte a barreaux croises.
+Par la grille, on voit le ciel. C'est un puits de lumiere : il debouche a
+la surface, sur une rue de Velmora, 4 metres plus haut.
+Un rectangle de jour gris tombe a travers les barreaux et dessine un
+quadrillage au sol du conduit.
+[OBL] C'est la seule lumiere naturelle des 45 minutes de S5.
+La grille est scellee. Elle ne s'ouvre pas. Elle n'a jamais eu de charniere.
+Entre les barreaux, il y a des CHOSES.
+Des choses qui sont tombees par la, de la rue, en trois ans, et qui se sont
+coincees dans les croisements de la fonte.
+Une casquette. Un gant. Deux feuilles mortes. Un morceau de journal. Un
+bouton. Une ficelle. Une piece de monnaie, coincee sur la tranche.
+Onze objets, suspendus au plafond, dans la lumiere.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 100 (grille 700 + 11 objets coinces 1 400).
+[OBL] Les 11 objets sont individuellement modelises et coinces de facon
+PHYSIQUEMENT credible : chacun repose sur au moins deux barreaux, avec une
+deformation legere au point de contact (le tissu s'affaisse, le papier
+se plie, la piece est verticale dans un interstice de 8 mm).
+Le quadrillage de lumiere au sol : [OBL] projection reelle via la
+geometrie de la grille et une DirectionalLight avec ombres, pas un decal.
+Le joueur passe dedans et les barres d'ombre defilent sur lui.
+Anim : PROP-806 — deux objets bougent tres legerement au vent (la ficelle,
+2 cm, 0,4 Hz ; le morceau de journal, 4 mm).
+Cull : la geometrie de la rue au-dessus est presente sur 6 m (on voit un
+bout de facade et de ciel par la grille).
+
+§ 3 — CE QUE CA DIT
+Il y a un monde au-dessus. On le voit. On ne peut pas y aller.
+Le geste humain : aucun. Ces onze objets sont tombes.
+[NAR] Mais chacun d'eux a ete porte, tenu, perdu par quelqu'un. Une
+casquette qui s'envole. Un gant qu'on laisse tomber. Une piece qui roule.
+Onze petites pertes ordinaires, conservees au plafond d'un conduit, dans la
+seule lumiere de la sequence.
+[OBL] Ils sont tous ANTERIEURS a la Maree ? Non : le morceau de journal est
+detrempe et illisible, les feuilles sont de l'annee. Certains sont recents.
+Le monde d'en haut continue de perdre des choses.
+[ART] La piece de monnaie sur la tranche : c'est le detail qui dit trois
+ans sans que personne ne passe. Personne n'a pris la piece.
+
+§ 4 — ECHO
+ECHO E20 — « La grille » — 21 secondes, mode A.
+[OBL] Cet Echo se passe AU-DESSUS. Le joueur est en bas, dans le conduit,
+et regarde a travers la grille.
+Ce qu'on voit, par le carre de 1 m : des pieds. Des jambes. Des gens qui
+passent sur la grille, en surface.
+Quatorze passages en 21 secondes. Des adultes, dans les deux sens, a
+differentes vitesses. Une paire de jambes s'arrete sur la grille pendant
+3 secondes — quelqu'un s'est arrete au-dessus — puis repart.
+[OBL] On ne voit jamais au-dessus des genoux. Le cadrage de la grille
+l'interdit physiquement. C'est le seul Echo du chapitre ou le decoupage est
+fait par le decor et non par la mise en scene.
+A 19 s, plus personne. Deux secondes de grille vide.
+Fin.
+[OBL] Aucun objet ne tombe pendant l'Echo. Les onze restent en place.
+Musique : NEANT. Les pas sont la musique. [OBL] Quatorze rythmes de pas
+distincts, sur de la pierre, entendus a travers une grille de fonte a 2,4 m
+au-dessus de la tete du joueur.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur doit LEVER LA TETE. La grille est au plafond. Le prompt
+d'Echo n'apparait que si la camera est orientee a plus de 40 degres vers le
+haut, en se tenant dans le quadrillage de lumiere.
+[ART] Il doit se placer sous la grille, dans la lumiere, et regarder en
+l'air. Une posture d'attente.
+Taux de decouverte cible : 58-70 %.
+[OBL] Pendant les 21 secondes, il garde le controle de la camera mais s'il
+baisse la tete, il ne voit que le conduit sombre. Tout est en haut.
+Apres l'Echo : le quadrillage de lumiere est exactement le meme. Personne
+ne passe. Il n'y a personne en haut.
+
+§ 6 — AUDIO
+Hors Echo : SFX(street_wind_above) — le vent de la rue, filtre par la
+grille et la distance, -26 dB. C'est la seule presence de l'exterieur dans
+toute la sequence 5.
+[OBL] Il n'y a AUCUN autre son de surface. Pas de voix, pas de pas, pas de
+porte. La ville est vide.
+Pendant E20 : les 14 passages. [OBL] Traitement : les pas sont au-dessus,
+donc filtres (passe-bas 1 800 Hz) mais PROCHES et forts. Le joueur entend
+des gens marcher juste au-dessus de sa tete.
+[ART] La position de l'ecoute est le sujet : il est en dessous.
+Les 3 secondes d'arret : silence complet, puis le pas repart.
+Aucune musique.
+
+§ 7 — INTERDICTIONS
+Interdit de : ouvrir la grille · sortir par la · prendre un des 11 objets ·
+faire tomber quelque chose pendant l'Echo · montrer au-dessus des genoux ·
+montrer un visage · ajouter une voix · ajouter de la musique · faire
+s'accroupir une silhouette pour regarder en bas · faire regarder Lohen par
+une silhouette · rendre E20 rejouable · ajouter un passage apres l'Echo.
+
+§ 8 — LIENS
+PN-023 (le tramway sous la surface, S2) : le joueur etait AU-DESSUS et
+regardait EN BAS un monde mort. Ici il est EN DESSOUS et regarde EN HAUT un
+monde vivant. [OBL] Les deux Echos sont construits en miroir exact. Jamais
+souligne, jamais mentionne, jamais relie par le jeu.
+PN-099 (la grille de sortie vers le Meridien) : l'autre grille, celle qui
+s'ouvre.
+PN-066 (l'oculus, S4) : l'autre lumiere qui tombe d'en haut.
+[THEME] CE QUI EST DESSUS, CE QUI EST DESSOUS.
+
+§ 9 — DOD
+[ ] 11 objets coinces de facon physiquement credible, deformation au contact
+[ ] Piece de monnaie verticale dans un interstice de 8 mm
+[ ] Quadrillage de lumiere par ombre reelle, defilant sur le joueur
+[ ] Geometrie de rue presente sur 6 m au-dessus
+[ ] E20 declenchable seulement camera > 40° vers le haut, dans la lumiere
+[ ] 14 passages, jamais au-dessus des genoux, arret de 3 s
+[ ] Pas filtres passe-bas 1 800 Hz, proches et forts
+[ ] Construction en miroir de E06, jamais soulignee

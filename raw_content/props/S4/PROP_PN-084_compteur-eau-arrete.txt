@@ -1,0 +1,98 @@
+===============================================================================
+PN-084 — LE COMPTEUR D'EAU ARRETE
+===============================================================================
+Asset : SM_S4_Compteur_Eau · S4, local technique, sous l'escalier de la
+mezzanine · ~03:50 · prop narratif · pas d'Echo · LOD0 1 100 tris
+
+§ 1 — CE QU'ON VOIT
+Un renfoncement de 1,5 x 1,5 m sous l'escalier, ferme par une porte
+grillagee qui pend sur un gond.
+Dedans : la plomberie de la bibliotheque. Un gros tuyau de fonte, deux
+vannes a volant, un manometre, et un compteur d'eau a cadran.
+Le compteur est un modele a aiguilles et a rouleaux de chiffres.
+Les rouleaux affichent : 0 0 4 7 2 9 1 , 3
+Il est arrete.
+La grande aiguille du cadran est entre deux graduations.
+Le tuyau de fonte est FISSURE, sur 30 cm, en haut. Une fissure fine, nette,
+qui suit une generatrice.
+[OBL] C'est par la que l'eau est entree. Pas par le toit, pas par la mer.
+Par un tuyau qui a gele ou cede, un jour, il y a trois ans, et qui a vide
+le chateau d'eau de la ville dans la bibliotheque.
+Sous la fissure, le sol est creuse : 8 cm de beton ronges par trois ans de
+goutte a goutte.
+Le tuyau ne coule plus. Il n'y a plus rien en amont.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 100. Le compteur : cadran 2K lisible, rouleaux de chiffres en
+geometrie separee.
+[OBL] Le chiffre affiche est exact et coherent : 47 291,3 m³. Un volume
+plausible pour une bibliotheque municipale sur 40 ans d'exploitation.
+Aucun chiffre rond, aucun chiffre « joli ».
+La fissure : geometrie, 30 cm, avec les levres decalees de 1,5 mm et une
+trace de calcaire blanc sur le pourtour.
+Le creusement du beton : sculpt de 8 cm, avec la forme en goutte.
+Shader `cast_iron_wet` + `brass_gauge`.
+Collision : le joueur peut entrer dans le renfoncement (1,5 x 1,5 m, il
+tient debout). [OBL] Aucune vanne manipulable. Aucun prompt.
+
+§ 3 — CE QUE CA DIT
+La bibliotheque n'a pas ete inondee par la Maree. Elle a ete inondee par un
+tuyau qui a cede.
+[OBL] C'est l'explication complete de l'etat de toute la sequence 4, et
+elle est cachee dans un placard sous un escalier, sans un mot, a 3 h 50,
+apres que le joueur a passe 35 minutes dans l'eau.
+Le geste humain : aucun. C'est une panne.
+[NAR] Ce qui veut dire : ca aurait pu etre repare. Un plombier, une soudure,
+deux heures de travail. Il n'y avait plus de plombier.
+La ville n'est pas morte d'un coup. Elle est morte de mille petites choses
+qu'on n'a pas pu reparer.
+Le compteur arrete a 47 291,3 : le dernier chiffre du service public.
+
+§ 4 — ECHO
+NEANT. Equipement technique collectif (PN-016).
+
+§ 5 — MISE EN SCENE
+[OBL] Sous l'escalier de la mezzanine. La porte grillagee pend et est
+entrouverte de 40 cm. Il faut se baisser pour entrer.
+Zone entierement facultative. Rien n'y mene. Aucune lumiere, aucun son.
+Taux de decouverte cible : 19-27 %.
+[ART] C'est le deuxieme prop le plus difficile a trouver du chapitre, apres
+PN-063 (les chaussures d'enfants). Et c'est celui qui explique la sequence.
+[OBL] Le jeu place sa seule explication causale dans l'endroit le plus
+cache. C'est un choix : les reponses, dans ce jeu, sont dans les placards,
+et elles ne concernent jamais l'essentiel.
+La lampe (PN-009) est indispensable : le renfoncement est noir.
+Aucun prompt, aucune animation, aucune reaction.
+
+§ 6 — AUDIO
+SFX(pipe_iron_tick) : le tuyau de fonte travaille, toutes les 30-90 s.
+[OBL] Il n'y a AUCUN son de goutte. Le tuyau est sec. C'est fini depuis
+longtemps.
+[ART] Le joueur entre dans un placard a plomberie inondee et il n'entend
+pas d'eau. C'est le detail qui dit que tout est termine.
+Dans le renfoncement, l'acoustique change brutalement : RT60 0,15 s, contre
+3,4 s a 2 metres de la. Le joueur passe d'une cathedrale a une boite.
+
+§ 7 — INTERDICTIONS
+Interdit de : reparer le tuyau · fermer une vanne · vider la rotonde ·
+faire couler de l'eau · ajouter un son de goutte ici · ajouter une note
+explicative · faire commenter par Mireille · donner un Echo · afficher un
+chiffre rond · rendre la panne reparable · en faire une enigme.
+
+§ 8 — LIENS
+PN-078 (les rayonnages noyes : la consequence). PN-066 (l'oculus casse : le
+joueur a pu croire que l'eau venait de la). PN-079 (la passerelle).
+PN-055 (le clocher penche et l'horloge a 4h15) : [OBL] l'autre prop qui dit
+que la ville s'est arretee par degres, pas d'un coup. Jamais relies.
+PN-097 (le compteur electrique mort, S5) : le pendant exact, une sequence
+plus loin.
+[THEME] LA SERIE D'ARRETS. [THEME] CE QU'ON NE REPARE PAS.
+
+§ 9 — DOD
+[ ] Compteur a 47 291,3 m³, chiffre non rond, aiguille entre deux graduations
+[ ] Fissure de 30 cm en geometrie, levres decalees de 1,5 mm, calcaire
+[ ] Beton creuse de 8 cm sous la fissure, forme en goutte
+[ ] Renfoncement accessible, porte grillagee a 40 cm, lampe indispensable
+[ ] Zero son de goutte, tuyau sec
+[ ] RT60 0,15 s, contraste brutal avec la rotonde
+[ ] Taux de decouverte 19-27 %, aucune signalisation

@@ -1,0 +1,130 @@
+===============================================================================
+SYSTEME · LES 38 CHOIX DU CHAPITRE 1 — TABLE COMPLETE ET REGLES
+Annexe C. Source unique de la numerotation des choix.
+Reference maitre : BLOC 12 (regles de dialogue) · INDEX § 7.
+===============================================================================
+
+--- 1. LES SEPT REGLES DES CHOIX [OBL] -------------------------------------------------------------
+
+1.01 [OBL] AUCUN CHOIX N'EST MORAL. Il n'y a ni bonne ni mauvaise
+     reponse, aucun karma, aucune jauge de reputation, aucun personnage
+     qui « se souvient » d'un ton. [OBL] Interdit absolu d'ajouter un
+     systeme de reputation, dans ce chapitre ou un autre.
+
+1.02 [OBL] AUCUN CHOIX N'EST AFFICHE COMME IMPORTANT. Pas d'icone, pas
+     de son distinct, pas de mention « ce choix aura des consequences ».
+     Job CI `no-choice-warning`.
+
+1.03 [OBL] DEUX TIMERS DANS TOUT LE JEU, tous deux en S4 : choix 17
+     (9,4 s) et choix 18 (14,2 s). [OBL] Effet visuel : perte d'opacite
+     lineaire des options. JAMAIS de barre, jamais de rouge, jamais de
+     tic-tac. [OBL] Si le temps expire : l'option la plus haute n'est
+     PAS choisie automatiquement — le silence est joue comme une
+     reponse a part entiere, ecrite pour ca.
+
+1.04 [OBL] LE SILENCE EST TOUJOURS UNE OPTION VALIDE quand il est
+     propose. Il figure dans 9 des 38 choix, toujours en derniere
+     position, toujours entre parentheses. [OBL] Dans 6 de ces 9 cas,
+     c'est la branche la mieux ecrite. Le jeu ne le dit jamais.
+
+1.05 [OBL] AUCUN CHOIX N'EST REJOUABLE. Aucune sauvegarde a la scene,
+     aucun chapitrage, aucun « rembobiner ». Une seule sauvegarde
+     automatique, ecrasee. Job CI `single-save-slot`.
+
+1.06 [OBL] 34 DES 38 CHOIX NE CHANGENT QU'UNE REPLIQUE. Les 4 qui font
+     plus : n° 04 (premiere occurrence du nom Esteban), n° 18 (ouvre
+     E18, 4 % des joueurs), n° 20 (fait disparaitre le geste M2 de
+     Mireille), n° 34 (le dossier, flag chapitre 2).
+
+1.07 [OBL] LA COURBE EST DECROISSANTE ET C'EST VOLONTAIRE :
+     S3 en a 11 avec options ecrites ; S8 en a 5 dont AUCUNE n'affiche
+     d'options. [OBL] Plus le joueur avance, moins on lui demande son
+     avis, et plus ses actes comptent. C'est la these du chapitre.
+
+--- 2. LA TABLE DES 38 -----------------------------------------------------------------------------
+
+  N°  SEQ  DOC              INTITULE COURT                        TIMER  EFFET
+  --  ---  ---------------  ------------------------------------  -----  ---------------------------
+  01  S1   D05              Repondre a Pallas ou pas               non    replique
+  02  S1   D05              Demander la route / la suivre          non    replique
+  03  S2   D04              Le choix a une seule option            non    aucun (voir 3.02)
+  04  S3   D12              Prononcer le nom d'Esteban             non    1re occurrence du nom
+  05  S3   D12              Insister aupres de Tallec              non    replique
+  06  S3   D12              Payer Thea ou negocier                 non    replique
+  07  S3   D12              Croire Brel ou non                     non    replique
+  08  S3   D12              Suivre Sol sur les toits               non    replique
+  09  S3   D12              Repondre a Garric                      non    replique
+  10  S3   D12              Le refus de la ville (« qui »)         non    replique
+  11  S3   D12              Lire la lettre a voix haute            non    replique
+  12  S3   D12              Accepter l'aide de Niels               non    replique
+  13  S3   D12              Wenna : la question directe            non    replique
+  14  S3   D12              Partir sans saluer                     non    replique
+  15  S4   D10              Poser la tasse ou non                  non    replique
+  16  S4   D12              Demander l'annee du veuvage            non    replique
+  17  S4   D10              La question sur les croix              9,4 s  replique + ton
+  18  S4   D10              Regarder le dos du dossier             14,2 s ouvre E18 (4 %)
+  19  S4   D12              Interrompre Mireille                   non    replique
+  20  S4   D12              La question sur la main                non    supprime le geste M2
+  21  S4   D12              Rester ou partir                       non    replique
+  22  S4   D12              Redresser la chaise                    non    replique
+  23  S4   D12              Remercier ou non                       non    replique
+  24  S5   D05              « Vieux ou fatigue »                   non    replique
+  25  S5   D05              La piece propre                        non    replique
+  26  S5   D05              Demander a Sol d'attendre              non    ligne en plus en S8
+  27  S5   D08              « Tu manges ou / quand »               non    replique
+  28  S5   D08              Le prenom de Sol                       non    replique
+  29  S5   D08              La grille                              non    replique
+  30  S6   D05              Pourquoi m'as-tu fait venir            non    replique
+  31  S6   D05              Rester / rentrer / l'heure             non    replique
+  32  S6   D05              LE FAUX CHOIX                          non    AUCUN (voir 3.01)
+  33  S6   D05              Appeler ou non                         non    replique
+  34  S7   D05              Prendre le dossier                     non    flag chapitre 2
+  35  S7   D05              Achever le Verrier ou partir           non    flag chapitre 2
+  36  S8   D08 / D10        Eteindre la lampe                      non    flag, 6 lignes
+  37  S8   D07              Le carnet avant ou apres la lettre     non    28 variantes
+  38  S8   D10              Remonter / tourner les pages / attendre non   lignes rares
+
+  [OBL] Les choix 36, 37, 38 N'AFFICHENT AUCUNE OPTION A L'ECRAN. Ce
+  sont des choix d'action. Ils sont comptes parmi les 38 parce que le
+  graphe de dialogue les traite comme des embranchements.
+  [OBL] Le choix 38 regroupe trois actions exclusives par le temps :
+  un joueur qui remonte n'attend pas, et vice versa.
+
+--- 3. LES TROIS CHOIX PARTICULIERS [OBL] ------------------------------------------------------
+
+3.01 LE FAUX CHOIX (n° 32, S6/D05).
+     [OBL] Les deux options menent EXACTEMENT au meme endroit, au mot
+     pres. [OBL] Ce n'est pas une economie de production : c'est la
+     seule facon de donner au joueur l'impression d'avoir choisi ses
+     derniers mots avec Esteban. [OBL] Personne ne choisit ses derniers
+     mots. [OBL] INTERDIT ABSOLU de lui donner une consequence, dans
+     aucune version, aucun patch, aucun chapitre.
+
+3.02 LE CHOIX A UNE SEULE OPTION (n° 03, S2/D04).
+     [OBL] Une seule ligne s'affiche. Le joueur doit la valider.
+     [OBL] Il n'y a rien d'autre a dire et le jeu le montre en le
+     faisant. [OBL] C'est le seul de ce type. Ne pas en ajouter.
+
+3.03 LES DEUX TIMERS (n° 17 et 18, S4).
+     [OBL] Ce sont les deux seuls du jeu, ils sont dans la sequence la
+     plus calme, et ils portent sur les deux questions les plus
+     impolies qu'on puisse poser a Mireille. [OBL] Le temps qui presse
+     n'est pas un danger : c'est une gene sociale. [OBL] Ne jamais
+     mettre de timer sur une action physique.
+
+--- 4. CE QUI N'EXISTE PAS [OBL] -----------------------------------------------------------------
+
+  · aucun choix a 4 options ou plus (maximum : 3)
+  · aucun choix repete ou relancable
+  · aucun choix verrouille par une competence, un objet ou un flag
+  · aucun choix dont le texte affiche differe de la ligne prononcee
+    (job CI `choice-wysiwyg` : la replique jouee EST l'option lue)
+  · aucun ecran de fin listant les choix faits
+  · aucune statistique mondiale de choix
+
+--- 5. VERIFICATION --------------------------------------------------------------------------------
+
+    Repartition : S1 2 · S2 1 · S3 11 · S4 7 · S5 6 · S6 4 · S7 2 · S8 5
+                = 38  [OBL] conforme a l'INDEX § 7 et au BLOC 12.
+
+    tools/count_choices.py --expect 38 --timers 2 --silent-options 9

@@ -1,0 +1,93 @@
+===============================================================================
+PN-013 — LE TABLEAU NOIR DES MAREES
+===============================================================================
+Asset : SM_S1_Tableau_Marees · S1, mur exterieur de la capitainerie, sous
+un auvent de tole · ~00:34 · prop a TEXTE LISIBLE · pas d'Echo ·
+LOD0 700 tris
+
+§ 1 — CE QU'ON VOIT
+Un tableau noir d'ardoise de 1,40 x 0,90 m, encadre de bois, visse au mur
+sous un auvent qui l'a protege de la pluie. Un chiffon et deux craies dans
+une gouttiere de bois en bas.
+Le tableau est organise en huit lignes preimprimees a la peinture blanche :
+DATE / PLEINE MER MATIN / BASSE MER MATIN / PLEINE MER SOIR / BASSE MER SOIR
+/ COEFF. / VENT / AVIS.
+Sept lignes ont ete EFFACEES. Pas nettoyees : effacees a la main, au
+chiffon, en mouvements circulaires. Il reste des fantomes de craie, des
+arcs de cercle blanchatres, illisibles.
+UNE ligne n'a pas ete effacee. La derniere. « AVIS ».
+Elle porte, a la craie, d'une ecriture rapide et penchee :
+
+        AVIS :  MER BELLE.  RIEN A SIGNALER.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 700. [OBL] Texture 4K dediee. L'ardoise demande trois couches : le
+noir de fond use, les preimprimes blancs ecailles, et la couche de craie
+avec son alpha propre.
+[OBL] Les arcs d'effacement sont peints a la main dans la texture, jamais
+generes proceduralement : le mouvement du bras doit etre lisible. Sept
+zones distinctes, sept rythmes de bras differents.
+Le texte restant est ecrit a la main a la tablette graphique, pas dans une
+police manuscrite. Il doit contenir une hesitation : le E de BELLE est
+repasse deux fois.
+Craies : 2 objets, 1,1 cm de diametre, usees en biseau.
+Shader `chalk_slate` : le speculaire de l'ardoise change fortement avec
+l'angle. Le texte n'est parfaitement lisible que depuis un arc de 40°.
+Le joueur doit se placer. [ART] Il le fera sans qu'on le lui demande.
+
+§ 3 — CE QUE CA DIT
+« MER BELLE. RIEN A SIGNALER. »
+C'est l'ironie la plus violente du chapitre et elle tient en cinq mots
+ecrits par un homme qui faisait son travail correctement.
+Les sept lignes effacees disent la routine : chaque matin, on efface, on
+reecrit. Le tableau etait vivant. Il a ete efface pour la derniere fois le
+matin du 14 octobre, rempli, puis plus personne n'est venu l'effacer.
+Le geste humain : effacer. Sept fois le meme geste de bras. C'est le geste
+le plus repete de tout le chapitre et il est entierement fait de traces.
+
+§ 4 — ECHO
+NEANT. Raison : le tableau est deja un palimpseste — c'est un Echo
+materiel, en craie. Superposer un Echo lumineux serait dire deux fois la
+meme chose. Le jeu ne dit jamais deux fois la meme chose (00.14).
+
+§ 5 — MISE EN SCENE
+A hauteur d'yeux, en plein chemin, a cote de PN-015 (la porte clouee).
+Le joueur qui veut entrer dans la capitainerie trouve la porte clouee, se
+retourne, et le tableau est la. [ART] Le blocage cree la lecture.
+L'auvent de tole cree une bande d'ombre nette en travers du tableau. La
+ligne « AVIS » est dans la lumiere. Les sept lignes effacees sont dans
+l'ombre. Le cadrage fait la hierarchie ; le jeu ne fait rien d'autre.
+[OBL] Aucun prompt, aucun zoom, aucune surbrillance.
+
+§ 6 — AUDIO
+SFX(tin_awning_tick) : la tole de l'auvent travaille, 2 impacts secs
+espaces de 4 a 30 s, imprevisibles, -22 dB. C'est le son le plus « seul »
+du jeu : un objet qui parle a personne.
+Aucun son propre au tableau.
+
+§ 7 — INTERDICTIONS
+Interdit de : afficher le texte en surimpression ou en sous-titre ·
+permettre d'ecrire ou d'effacer · ajouter une date visible sur la ligne
+DATE (elle est effacee comme les autres) · faire commenter par Lohen ·
+faire reciter par la voix off · rendre le texte lisible depuis n'importe
+quel angle · generer les arcs d'effacement proceduralement.
+[OBL] Cinq mots. Pas un de plus. Ne jamais ajouter « QUE DIEU NOUS GARDE »
+ni aucun renfort dramatique.
+
+§ 8 — LIENS
+PN-010 (le tampon) : la date. PN-027 (le carnet de bord, S2) : la derniere
+ligne ecrite a bord de L'Hirondelle, 23h39 — « vent nul, mer plate ».
+Les deux hommes, a terre et en mer, ont ecrit la meme chose la meme nuit.
+Aucun des deux n'avait tort.
+PN-015 (la porte clouee, a 2 m).
+[THEME] PERSONNE N'A RIEN VU VENIR. Point de doctrine narrative : la Maree
+n'a PAS ete annoncee (10.07). Aucun presage, aucun signe avant-coureur,
+nulle part dans le jeu. Toute tentative d'en ajouter un est un bug.
+
+§ 9 — DOD
+[ ] 7 zones d'effacement peintes a la main, 7 gestes de bras distincts
+[ ] Texte manuscrit reel, E de BELLE repasse deux fois
+[ ] Lisible seulement dans un arc de 40°
+[ ] Bande d'ombre de l'auvent : AVIS eclaire, effacements dans l'ombre
+[ ] Zero prompt, zero VO, zero sous-titre
+[ ] Coherence avec PN-027 validee

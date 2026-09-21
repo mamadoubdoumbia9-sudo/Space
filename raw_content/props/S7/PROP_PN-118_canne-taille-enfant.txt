@@ -1,0 +1,104 @@
+===============================================================================
+PN-118 — LA CANNE DE SOUFFLEUR, TAILLE ENFANT
+===============================================================================
+Asset : SM_S7_Canne_Enfant · S7, atelier, contre le mur, avec les onze
+autres · ~05:29 · prop narratif · pas d'Echo · LOD0 420 tris
+
+§ 1 — CE QU'ON VOIT
+Contre le mur de l'atelier, onze cannes de souffleur rangees par ordre de
+longueur : 160, 152, 147, 140, 133, 127, 120, 114, 106, 98, 90 cm.
+Et une douzieme, au bout, a droite.
+Elle fait 62 centimetres.
+[OBL] C'est presque la moitie de la plus courte.
+Ce n'est pas une canne d'atelier : c'est une canne fabriquee pour un enfant.
+Le tube est plus fin (14 mm au lieu de 22). L'embout de soufflage est plus
+petit. Il y a un manchon de liege enroule au milieu, cousu, pour la prise —
+[OBL] les cannes d'adulte n'en ont pas. On l'a ajoute pour une petite main.
+Le liege est use. Elle a servi.
+A l'extremite, il y a un depot de verre. Une petite masse irreguliere,
+grise, de 3 cm. Une paraison ratee, refroidie sur la canne, jamais
+decrochee.
+[OBL] Le dernier objet que quelqu'un a essaye de faire avec cette canne
+est reste dessus.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 420. Tube en geometrie (14 mm, 62 cm), manchon de liege sculpte avec
+sa couture (22 points), depot de verre en sculpt.
+[OBL] Le liege use : masque de roughness (0,31 sur la zone de prise contre
+0,68 ailleurs) + un aplatissement geometrique de 0,8 mm la ou les doigts
+serraient.
+[OBL] La zone d'usure fait 9 cm de long. C'est la largeur de la main d'un
+enfant de 7-9 ans.
+Le depot de verre : shader `glass_failed_cooled`, opaque, gris, avec des
+bulles eclatees en surface.
+Shader `steel_tube_scaled` (l'acier des cannes se calamine a la chaleur).
+Collision : aucune. [OBL] Non prenable. Aucun prompt.
+
+§ 3 — CE QUE CA DIT
+Un homme a fabrique une canne de souffleur pour sa fille.
+Le geste humain : coudre un manchon de liege sur un tube d'acier pour
+qu'une petite main puisse tenir.
+[OBL] Il ne l'a pas achetee. Il ne l'a pas coupee dans une vieille. Il a
+pris un tube de 14 mm, il l'a coupe a 62 cm, il a fait un embout, et il a
+cousu du liege au milieu.
+Le liege est use sur 9 cm : elle s'en est servie. Souvent. Pendant des
+mois, peut-etre des annees.
+Et il y a une paraison ratee refroidie au bout.
+[OBL] C'est la derniere chose qu'elle a essaye de souffler, et elle n'a pas
+reussi, et personne n'a decroche le verre de la canne.
+[OBL] Le jeu ne dit jamais ce qui lui est arrive. Il ne dit pas qu'elle est
+morte. Il ne dit pas qu'elle est vivante. Aucun des sept chapitres ne le
+dit.
+Elle est sur l'affiche des 641 ? [OBL] Verifier : OUI. Le nom ROUX figure
+dans le CSV, et il y a deux ROUX : un adulte et un enfant. Aucun des deux
+n'est barre.
+
+§ 4 — ECHO
+NEANT. [OBL] Regle des enfants. [OBL] Et : E23 est a 4 metres, dans la meme
+piece. Le systeme ne place pas deux Echos a moins de 25 m (PN-035).
+[ART] Elle apparait dans E23. Elle ne peut pas apparaitre deux fois.
+
+§ 5 — MISE EN SCENE
+[OBL] Les douze cannes sont rangees par ordre de longueur. L'oeil suit la
+serie decroissante : 160, 152, 147... 98, 90.
+Et puis 62.
+[ART] La rupture de la serie est la mise en scene. Le rangement fait le
+travail. Personne n'a rien cadre.
+[OBL] La douzieme canne est a droite, donc a la fin du balayage naturel du
+regard (gauche a droite).
+Taux de detection : 63-74 %.
+[OBL] Aucun prompt, aucun LookAt, aucun son, aucune musique, aucune
+reaction de Lohen.
+[OBL] Elle est visible AVANT E23. Le joueur voit la petite canne, puis il
+declenche l'Echo et voit l'enfant.
+[ART] L'ordre compte. L'objet d'abord, la personne ensuite.
+
+§ 6 — AUDIO
+NEANT.
+
+§ 7 — INTERDICTIONS
+Interdit de : la prendre · decrocher la paraison · reveler le sort de
+l'enfant · la nommer · ajouter une treizieme canne · casser la serie ·
+faire commenter · donner un Echo · ajouter un dessin, un nom grave, une
+initiale sur la canne · la faire apparaitre dans les mains du Verrier ·
+la resoudre dans les six lettres suivantes.
+
+§ 8 — LIENS
+PN-117 (l'atelier, E23, le regard de 1,4 s).
+PN-047 (la prothese de rechange de Tallec, S3) : [OBL] l'autre objet du
+chapitre fabrique avec amour par quelqu'un pour quelqu'un d'autre. Jamais
+relies.
+PN-007 (la chaise d'enfant attachee), PN-014 (le landau), PN-050 (le jeu de
+cordes), PN-063 (les 118 chaussures).
+PN-128 (les fragments du Verrier).
+PN-003 (l'affiche : deux ROUX, aucun barre).
+[THEME] LES ENFANTS ABSENTS. [THEME] FABRIQUER POUR QUELQU'UN.
+
+§ 9 — DOD
+[ ] 62 cm, tube de 14 mm, dans une serie de 160 a 90 cm
+[ ] Manchon de liege cousu, 22 points, usure sur 9 cm, aplatissement 0,8 mm
+[ ] Paraison ratee de 3 cm refroidie au bout, jamais decrochee
+[ ] Douzieme position, a droite, fin du balayage naturel
+[ ] Visible avant le declenchement de E23
+[ ] Zero prompt, zero son, zero reaction
+[ ] Deux ROUX dans le CSV, aucun barre sur PN-003

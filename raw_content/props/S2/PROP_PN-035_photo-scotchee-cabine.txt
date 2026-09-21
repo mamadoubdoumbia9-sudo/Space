@@ -1,0 +1,103 @@
+===============================================================================
+PN-035 — LA PHOTO SCOTCHEE DANS LA CABINE
+===============================================================================
+Asset : SM_S2_Photo_Cabine · S2, cabine avant de L'Hirondelle, cloison
+au-dessus de la couchette basse bribord · ~01:13 · prop narratif ·
+pas d'Echo · LOD0 40 tris
+
+§ 1 — CE QU'ON VOIT
+Une photographie noir et blanc, 9 x 13 cm, scotchee a la cloison par quatre
+bouts de ruban adhesif qui ont jauni et se decollent aux coins.
+Elle est gondolee par l'humidite. Le coin superieur droit s'est detache et
+la photo pend legerement en avant.
+Sur la photo : une femme, assise sur une chaise, dehors, devant un mur de
+pierre. Elle a une trentaine d'annees. Elle ne sourit pas. Elle regarde
+l'objectif, droit, calmement.
+Elle tient sur ses genoux quelque chose qu'on ne distingue pas : la photo
+est trop abimee a cet endroit precis. Une tache d'humidite brune a mange le
+centre inferieur.
+Au dos — visible parce que le coin est decolle et qu'on apercoit l'envers
+si on se place a gauche — il y a de l'ecriture. Trois mots. Ils sont
+illisibles : le scotch et l'humidite les ont dissous.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 40 tris (un quad courbe de 12 tris + le scotch).
+[OBL] Texture 4K pour 9 x 13 cm. Densite 1 100 px/m. La photo est l'objet
+le plus densement texture du chapitre par unite de surface.
+La photographie elle-meme doit etre PRISE : un vrai tirage argentique,
+d'une vraie comedienne, sur un vrai mur de pierre, puis vieilli
+physiquement (humidite, scotch, soleil) avant numerisation.
+[OBL] Aucune generation, aucun filtre « vieille photo », aucun compositing.
+La texture du grain argentique et celle de la degradation reelle ne se
+simulent pas de facon credible a 1 100 px/m.
+Le gondolement : geometrie (12 tris courbes), pas un plan.
+Shader `photo_paper_damp`.
+Collision : aucune. Non prenable, non decollable, non retournable.
+
+§ 3 — CE QUE CA DIT
+Un des six hommes de L'Hirondelle avait une femme, et il avait scotche sa
+photo au-dessus de sa couchette.
+Le geste humain : scotcher. Quatre bouts de ruban, faits vite, pas droits.
+[NAR] Ce n'est pas la photo d'Esteban. Ce n'est pas un indice. Ce n'est pas
+un fil narratif. C'est quelqu'un d'autre, dont on ne saura rien.
+La veste d'Esteban est a deux metres, sur la couchette du haut a tribord.
+[OBL] Le joueur, a ce moment precis, cherche partout des traces d'Esteban.
+Il trouve une photo. Il s'approche. Ce n'est pas lui. Ce n'est personne
+qu'il connait.
+C'est le rappel le plus efficace du chapitre : il y avait 641 vies ici, et
+641 histoires, et le joueur n'en suit qu'une, et c'est arbitraire.
+Ce qu'elle tient sur ses genoux ne sera jamais visible. Les trois mots au
+dos ne seront jamais lisibles.
+
+§ 4 — ECHO
+NEANT. Raison [OBL] : la photo est a DEUX METRES de PN-025, la veste
+d'Esteban, qui porte E04. Deux Echos dans la meme piece, a deux metres,
+est structurellement interdit (regle de rythme 11.14 : distance minimale
+entre deux Echos = 25 m ou 90 secondes de jeu).
+[ART] Consequence narrative heureuse : la piece contient un objet qui parle
+et un objet qui se tait, et c'est celui d'Esteban qui parle. Le joueur ne
+le formule pas ; il le sent comme une chance.
+
+§ 5 — MISE EN SCENE
+Sur la cloison, a 1,20 m du sol, au-dessus de la couchette basse.
+C'est plus bas que le regard naturel : il faut se pencher.
+[ART] Le joueur se penche parce que la lampe (PN-009) eclaire par le bas
+quand il la tient, et que le coin decolle accroche la lumiere en faisant
+une petite ombre portee mobile. Un coin de papier qui bouge dans un halo :
+l'oeil y va.
+Elle est vue AVANT la veste dans 80 % des parcours (la couchette basse
+bribord est plus proche de la porte). [OBL] C'est voulu : on veut que le
+joueur ait une fausse alerte avant la vraie trouvaille.
+Aucun LookAt, aucun ralenti, aucun son, aucun prompt.
+Si Lohen s'en approche a moins d'un metre : rien.
+
+§ 6 — AUDIO
+NEANT. La photo est silencieuse.
+[OBL] Y compris le coin decolle : il ne bat pas, il ne froisse pas. Il n'y
+a pas de courant d'air dans une cabine fermee.
+
+§ 7 — INTERDICTIONS
+Interdit de : rendre lisibles les trois mots au dos · reveler ce qu'elle
+tient · nommer la femme · la faire apparaitre dans un Echo, ici ou ailleurs
+· la relier a un personnage du jeu · permettre de decoller, retourner,
+prendre la photo · ajouter d'autres photos dans la cabine · faire commenter
+· generer l'image · utiliser un filtre de vieillissement numerique.
+[OBL] Cette femme n'existe dans le jeu que sur ce rectangle de 9 x 13 cm.
+Aucune des sept lettres ne la mentionne.
+
+§ 8 — LIENS
+PN-025 (la veste, a 2 m). PN-038 (le mur des trois cents photos, S3) : la
+prochaine fois que le joueur verra des visages, il y en aura trois cents,
+et il cherchera parmi eux. PN-039 (la photo 300 — Lohen et Esteban), a
+25 minutes d'ici.
+[THEME] 641 HISTOIRES DONT ON NE SUIT QU'UNE.
+
+§ 9 — DOD
+[ ] Tirage argentique reel, comedienne reelle, vieillissement physique
+[ ] Aucun filtre numerique, aucune generation
+[ ] 4K sur 9 x 13 cm, densite 1 100 px/m
+[ ] Gondolement en geometrie, coin superieur droit decolle
+[ ] Trois mots au dos presents dans la texture mais illisibles
+[ ] Zone tenue sur les genoux definitivement indechiffrable
+[ ] Vue avant la veste dans >= 75 % des parcours testes
+[ ] Zero son, zero prompt, zero animation

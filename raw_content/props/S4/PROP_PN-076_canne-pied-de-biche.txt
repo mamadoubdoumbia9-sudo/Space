@@ -1,0 +1,100 @@
+===============================================================================
+PN-076 — LA CANNE PIED-DE-BICHE
+===============================================================================
+Asset : SM_S4_Canne_Mireille · S4, appuyee contre la table de Mireille ·
+~03:28 · prop narratif · pas d'Echo · LOD0 480 tris
+
+§ 1 — CE QU'ON VOIT
+Une canne. Elle est appuyee contre la table, a portee de la main gauche de
+Mireille.
+Ce n'est pas une canne. C'est un PIED-DE-BICHE. Une barre de fer forge de
+95 cm, avec une extremite recourbee et fendue en V, et l'autre aplatie en
+biseau.
+Elle a ete transformee : le bout recourbe a ete entoure de cuir, cousu,
+pour faire une poignee. Le cuir est use, noirci, moule a la forme d'une
+main.
+Le bout aplati, celui qui touche le sol, a ete lime pour ne pas glisser :
+il y a des stries croisees, refaites plusieurs fois.
+Le fer est marque. Il y a des entailles, des ecrasements, des traces de
+coups sur toute la longueur.
+Quelqu'un a beaucoup travaille avec cet outil avant d'en faire une canne.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 480. Sculpt manuel. [OBL] Les entailles et ecrasements sont en
+geometrie (23 marques, 0,5 a 2 mm), pas en normal map : la silhouette de la
+barre doit etre irreguliere.
+Le cuir de la poignee : 12 tours, couture en geometrie, forme de main
+moulee (sculpt).
+Les stries du bout : 14 stries croisees, 0,4 mm.
+Shader `iron_forged_worn` + `leather_hardened`.
+[OBL] Elle est TOUJOURS a portee de la main gauche de Mireille, dans toutes
+les configurations de la scene. Si elle se deplace, la canne se deplace.
+Elle ne la lache jamais plus de 20 secondes.
+Anim : MIR-ANI-622, la prise et la depose. MIR-LOC-630 a 638, la marche
+avec canne (9 clips, cote gauche).
+
+§ 3 — CE QUE CA DIT
+Une femme de 58 ans marche avec un pied-de-biche.
+Le geste humain : coudre du cuir autour d'un outil pour en faire une canne.
+[NAR] Pourquoi un pied-de-biche et pas une canne ? Parce qu'il n'y a pas de
+canne a Velmora. Parce que c'etait ce qu'il y avait. Parce que ca pese
+2,8 kg et qu'elle s'y est habituee.
+[OBL] Et parce qu'un pied-de-biche ouvre les portes.
+Les 23 marques de coups sur le fer : cet outil a servi. Beaucoup.
+[OBL] Le jeu ne dit jamais a quoi. Il n'y a aucun dialogue, aucun indice,
+aucune scene. Mireille ne l'utilise jamais devant le joueur comme un outil :
+uniquement comme une canne.
+[OBL] Elle ne s'en sert pas non plus comme d'une arme, jamais, dans aucune
+circonstance, y compris en S7.
+
+§ 4 — ECHO
+NEANT. Objet d'une vivante (PN-046).
+
+§ 5 — MISE EN SCENE
+Appuyee contre la table, dans le cadre, pendant 50 minutes.
+[ART] Le joueur la voit comme une canne pendant les 40 premieres minutes.
+Puis, a un moment — souvent quand elle se leve et que la lumiere prend le
+bout fendu en V — il voit que c'est un pied-de-biche.
+[OBL] Aucun plan, aucun eclairage, aucun cadrage ne provoque ce moment. Il
+arrive ou il n'arrive pas.
+[OBL] Quand elle marche, MIR-LOC-630 : elle pose la canne AVANT le pied
+droit, pas en meme temps. Decalage de 0,22 s. Une demarche a trois temps.
+[ART] Le joueur l'entend avant de la voir arriver, pendant toute la
+sequence : trois sons, pas deux.
+
+§ 6 — AUDIO
+SFX(iron_tip_wood) : le bout de fer sur l'estrade de planches. Un son dur,
+metallique, precis. -16 dB.
+SFX(iron_tip_water) : le bout de fer dans les 4 cm d'eau. Un son
+completement different : etouffe, avec un ploc et un raclement.
+[OBL] Deux matieres, deux sons, et le joueur suit Mireille a l'oreille
+quand elle passe de l'estrade a l'eau.
+Le rythme a trois temps (canne-droite-gauche) dans une reverb de 3,4 s :
+[ART] c'est la signature sonore de la sequence 4. Le joueur l'entendra
+encore en S7, quand Mireille reviendra. Il la reconnaitra avant de la voir.
+Aucune musique liee.
+
+§ 7 — INTERDICTIONS
+Interdit de : la faire utiliser comme outil devant le joueur · la faire
+utiliser comme arme · expliquer les 23 marques · permettre de la prendre ·
+permettre de demander · en faire un objet d'enigme · ouvrir une porte avec
+· la faire commenter · donner un Echo · synchroniser la canne avec le pied
+· la lui retirer.
+
+§ 8 — LIENS
+PN-046 (l'ancre de Tallec) et PN-047 (la prothese) : les trois objets des
+personnages vivants du chapitre. Aucun n'a de fonction mecanique. Aucun
+n'est jamais explique.
+PN-051 (la porte repeinte, qui ne s'ouvre pas) : [OBL] Mireille a un
+pied-de-biche et il y a une porte condamnee a 900 m. Le jeu ne relie jamais.
+PN-136 (la porte gonflee de la chambre, S8) : Lohen l'ouvre a l'epaule.
+[THEME] SE DEBROUILLER AVEC CE QU'IL Y A.
+
+§ 9 — DOD
+[ ] 23 marques de coups en geometrie, silhouette irreguliere
+[ ] Cuir cousu 12 tours, forme de main moulee, stries limees au bout
+[ ] Toujours a portee de la main gauche, jamais lachee plus de 20 s
+[ ] Demarche a trois temps, canne 0,22 s avant le pied droit
+[ ] Deux sons distincts : sur planche et dans l'eau
+[ ] Jamais utilisee comme outil ni comme arme, dans les 7 chapitres
+[ ] Aucune option de dialogue, aucune explication

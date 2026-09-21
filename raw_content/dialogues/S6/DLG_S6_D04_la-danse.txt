@@ -1,0 +1,145 @@
+===============================================================================
+DLG · S6 · D04 — LA DANSE : QUATRE PRESSIONS, AUCUN ECHEC POSSIBLE
+44 entrees, toutes S6. EST 29 · LOH 15. Contribution : 44.
+Reference maitre 09.15 : « un mini-systeme de 4 pressions douces, sans
+echec possible, juste du rythme. »
+===============================================================================
+
+--- LE SYSTEME [OBL] -----------------------------------------------------------------------------
+
+[OBL] QUATRE pressions. Pas trois, pas huit. Elles arrivent sur les
+temps 1 de quatre mesures espacees de 12 s. [OBL] FENETRE DE VALIDATION :
+1,8 s — enorme. [OBL] Il est materiellement difficile de les rater.
+
+[OBL] SI LE JOUEUR RATE : rien. Esteban continue. Une ligne differente
+se declenche (voir § 3). [OBL] AUCUN ECHEC. Aucun « reessayer ». Aucun
+son d'erreur. Aucune vibration negative.
+
+[OBL] SI LE JOUEUR NE TOUCHE RIEN DU TOUT pendant les quatre : les
+quatre lignes de rattrapage s'enchainent et la scene se termine
+normalement, 6 s plus tot. [OBL] La danse a lieu quand meme : Esteban
+mene. [OBL] Le joueur n'a en realite jamais dirige quoi que ce soit.
+
+[OBL] RETOUR HAPTIQUE : une seule vibration, 40 ms, amplitude 0,25, sur
+chaque pression reussie. [OBL] C'est la seule vibration positive du
+chapitre 1. Les 6 autres sont des chutes.
+
+[OBL] CAMERA : vue subjective maintenue. [OBL] INTERDICTION ABSOLUE de
+passer en camera externe pour « montrer la danse ». On ne voit jamais
+Lohen danser. On voit Esteban danser, a 50 cm, mal, et c'est tout.
+
+--- § 1 — AVANT (12 lignes) ------------------------------------------------------------------
+
+    [S6_EST_L095]  2,0 s · chaud · « Ils jouent la valse. »
+    [S6_LOH_L096]  1,2 s · plat  · « Et ? »
+    [S6_EST_L097]  2,4 s · chaud · « Et je danse mal, et tu danses pas du tout. »
+    [S6_EST_L098]  2,8 s · chaud · « Donc statistiquement, ensemble, on est moyens. »
+    [S6_LOH_L099]  1,6 s · plat  · « Non. »
+    [S6_EST_L100]  2,2 s · chaud · « Si. »
+    [S6_LOH_L101]  1,4 s · plat  · « Non. »
+    [S6_EST_L102]  2,6 s · chaud · « Tu as dit non deux fois, donc c'est oui. »
+        dir : [OBL][NAR] LE SEUL PERSONNAGE DU JEU QUI SAIT LIRE LES
+              « NON » DE LOHEN. [OBL] Mireille echoue a le faire en S4.
+              Sol n'essaie pas. Tallec s'en moque.
+    [S6_LOH_L103]  1,8 s · plat  · « Je sais pas les pas. »
+    [S6_EST_L104]  3,0 s · chaud · « Y'a pas de pas. Y'a un temps, et tu poses ton poids dessus. »
+        dir : [OBL][NAR] C'est aussi la regle de tout le gameplay de
+              traversee du jeu. [OBL] Un accordeur de piano vient
+              d'expliquer le systeme de deplacement du chapitre. [OBL]
+              Jamais souligne, jamais reutilise comme tutoriel.
+    [S6_LOH_L105]  1,4 s · plat  · « C'est tout ? »
+    [S6_EST_L106]  2,4 s · chaud · « C'est tout. Quatre fois. Apres on s'assoit. »
+        dir : [OBL] il annonce le nombre de pressions. C'est le seul
+              tutoriel du jeu et il est dans une replique de flirt.
+
+--- § 2 — LES QUATRE PRESSIONS, REUSSIES (16 lignes) ----------------------------------------------
+
+-- Pression 1 (t+0) --
+    [S6_EST_L107]  1,6 s · chaud · « La. »
+    [S6_EST_L108]  2,0 s · chaud · « Voila, tu vois. »
+    [S6_LOH_L109]  1,2 s · plat  · « C'est facile. »
+    [S6_EST_L110]  2,4 s · chaud · « C'est facile parce que c'est moi qui tourne. »
+
+-- Pression 2 (t+12) --
+    [S6_EST_L111]  1,4 s · chaud · « Encore. »
+    [S6_EST_L112]  2,2 s · chaud · « Tu regardes tes pieds. »
+    [S6_LOH_L113]  1,6 s · plat  · « Oui. »
+    [S6_EST_L114]  2,6 s · chaud · « Regarde ailleurs. N'importe ou. »
+        dir : [OBL] LE JOUEUR PEUT REGARDER OU IL VEUT. [OBL] S'il
+              regarde Esteban pendant les 3 s qui suivent, la
+              pression 3 se declenche AUTOMATIQUEMENT, sans input.
+              [OBL] Rien ne l'annonce. 44 % des joueurs le font par
+              reflexe. [OBL] Aucune recompense, aucune ligne
+              specifique. Le jeu a juste decide que regarder suffit.
+
+-- Pression 3 (t+24) --
+    [S6_EST_L115]  1,8 s · chaud · « Bien. »
+    [S6_EST_L116]  2,4 s · chaud · « Tu as ferme les yeux ? »
+    [S6_LOH_L117]  1,2 s · plat  · « Non. »
+    [S6_EST_L118]  2,0 s · chaud · « Menteur. »
+        dir : [NAR] 3e « menteur » du chapitre (Pallas S1, Sol S5,
+              Esteban ici). [OBL] Trois personnes differentes, trois
+              tons differents, jamais releve.
+
+-- Pression 4 (t+36) --
+    [S6_EST_L119]  1,6 s · chaud · « Derniere. »
+    [S6_LOH_L120]  1,4 s · plat  · « Deja. »
+        dir : [OBL][NAR] UN MOT. [OBL] Lohen vient de dire qu'il
+              voudrait que ca dure. [OBL] Il ne le dira jamais
+              autrement, dans aucune sequence, a personne.
+              [OBL] Direction : plat. Absolument plat. Le comedien ne
+              sait pas, en enregistrant, que c'est la ligne.
+    [S6_EST_L121]  2,8 s · chaud · « On peut recommencer. On a toute la nuit. »
+        dir : [OBL][NAR] Il est 22 h 14. La Maree est a 23 h 41.
+              [OBL] Aucune musique ne change. Aucun plan. M22
+              continue, joyeuse, avec un musicien qui rate une entree
+              douze secondes plus tard.
+    [S6_LOH_L122]  1,6 s · plat  · « D'accord. »
+
+--- § 3 — LES QUATRE PRESSIONS, RATEES (8 lignes) --------------------------------------------------
+
+[OBL] Ces lignes remplacent les precedentes, une pour une. [OBL] Elles
+sont plus douces, pas moqueuses. [OBL] Un joueur qui rate tout obtient
+une scene LEGEREMENT plus tendre. C'est volontaire et jamais annonce.
+
+    [S6_EST_L123]  2,0 s · chaud · « Pas grave. Je tourne pour deux. »
+    [S6_EST_L124]  2,4 s · chaud · « Laisse-toi porter, c'est pas une epreuve. »
+    [S6_EST_L125]  2,8 s · chaud · « Tu es raide comme une poutre et je m'en fiche completement. »
+    [S6_EST_L126]  2,2 s · chaud · « Voila. On a fait semblant. Ca compte pareil. »
+    [S6_LOH_L127]  1,4 s · plat  · « Desole. »
+    [S6_EST_L128]  2,6 s · chaud · « Ne dis pas desole pour une valse. »
+    [S6_LOH_L129]  1,2 s · plat  · « D'accord. »
+    [S6_EST_L130]  3,0 s · chaud · « Garde-le pour un truc grave. Y'en aura. »
+        dir : [OBL][NAR] LA LIGNE QUE LES JOUEURS QUI RATENT TOUT
+              RECOIVENT ET QUE LES AUTRES N'ENTENDENT JAMAIS.
+              [OBL] Elle est meilleure que sa contrepartie. [OBL] C'est
+              la position du jeu sur l'echec depuis la premiere ligne
+              du BLOC 12 : on ne perd rien a rater.
+
+--- § 4 — APRES (8 lignes) ------------------------------------------------------------------------
+
+    [S6_EST_L131]  2,2 s · chaud · « On s'assoit. »
+    [S6_EST_L132]  2,6 s · chaud · « La, contre le mur, avec les vieux. »
+    [S6_LOH_L133]  1,4 s · plat  · « Ils nous regardent. »
+    [S6_EST_L134]  2,4 s · chaud · « Ils regardent tout le monde. C'est leur soiree aussi. »
+    [S6_LOH_L135]  1,8 s · plat  · « Tu transpires. »
+    [S6_EST_L136]  2,0 s · chaud · « Je danse mal, je te l'avais dit. »
+    [S6_LOH_L137]  1,6 s · plat  · « Tu danses pas mal. »
+    [S6_EST_L138]  2,8 s · chaud · « Alors la, c'est la chose la plus gentille que tu m'aies dite. »
+        dir : [OBL] Direction : il le dit en riant. [OBL] LE RIRE
+              D'ESTEBAN EST DANS LE MIX. 1,2 s. [OBL] Rappel : Lohen ne
+              rit jamais (canon), et le seul autre rire du chapitre est
+              a -22 dB derriere un mur en S5. [OBL] Celui-ci est a
+              pleine echelle, a 50 cm, et c'est le seul rire propre du
+              chapitre 1. [OBL] Job CI `laugh-inventory` : exactement
+              deux fichiers de rire dans tout le build.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] 4 pressions, fenetre 1,8 s, aucun echec, aucun son d'erreur
+[ ] Vue subjective maintenue, on ne voit jamais Lohen danser
+[ ] Pression 3 auto-validee par le regard, non annonce, 44 %
+[ ] Branche ratee = 8 lignes plus tendres, jamais signalee
+[ ] L120 « Deja. » — joue plat, le comedien n'est pas prevenu
+[ ] L121 : 22 h 14, aucune emphase
+[ ] L138 : rire d'Esteban, 1 des 2 rires du build — CI `laugh-inventory`

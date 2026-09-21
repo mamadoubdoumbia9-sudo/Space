@@ -1,0 +1,163 @@
+===============================================================================
+PN-117 — L'ATELIER DE SOUFFLEUR D'ANSELME ROUX
+===============================================================================
+Asset : SM_S7_Atelier_Verrier · S7, au bout de la coulee, ville basse ·
+~05:28 · PORTEUR D'ECHO E23 · ECHO LE PLUS IMPORTANT DU CHAPITRE APRES E31
+LOD0 12 400 tris
+
+§ 1 — CE QU'ON VOIT
+Un atelier de souffleur de verre. 12 x 8 m, plafond bas, charpente de bois
+noircie.
+Au centre, le four. Un four a bassin, en briques refractaires, avec sa
+gueule ronde de 60 cm.
+[OBL] Le four est CASSE. Sa paroi avant a explose vers l'exterieur. Les
+briques sont projetees sur 4 m. La gueule est devenue un trou de 2 m.
+Et c'est de la que part la coulee (PN-116).
+Autour du four : le poste de travail. Un banc de souffleur, avec ses deux
+bras paralleles. Des cannes appuyees au mur — [OBL] onze cannes, de
+longueurs differentes. Des pinces, des ciseaux a verre, des mailloches de
+bois fruitier.
+Le marbre : une plaque d'acier poli de 80 x 50, pour rouler la paraison.
+[OBL] Elle est rayee dans tous les sens par vingt ans de travail.
+Des moules de bois trempes dans un baquet.
+Contre le mur du fond, les etageres de produits finis.
+Il y a des verres. Des carafes. Des bols. Des bouteilles. Des bouees.
+Trois cents pieces, peut-etre.
+[OBL] Aucune n'est cassee.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 12 400 (four 3 900 + poste 2 800 + 11 cannes 900 + outils 1 400 +
+300 pieces de verre sur etageres 3 400).
+[OBL] Les 300 pieces : 22 modeles, 300 placements a la main, avec 6
+variantes de teinte de verre (le verre change de couleur selon le bain).
+[OBL] Elles utilisent `blown_glass_green` (PN-028), `blown_glass_clear`, et
+4 autres variantes. Elles doivent etre BELLES. C'est le seul endroit du
+chapitre ou l'on voit de l'artisanat acheve.
+Le four casse : sculpt de rupture, briques refractaires vitrifiees a
+l'intérieur (shader `firebrick_vitrified`, une surface a demi fondue).
+[OBL] Les 11 cannes sont individuelles : longueurs 90 a 160 cm, avec des
+depots de verre a l'extremite, differents pour chacune.
+Le marbre raye : normal map 4K + un masque anisotrope (les rayures ont une
+direction dominante par zone).
+Cout : 1,8 ms.
+
+§ 3 — CE QUE CA DIT
+Un homme a souffle du verre ici pendant vingt ans.
+Le geste humain : ranger onze cannes par ordre de longueur contre un mur.
+Le four a explose.
+[OBL] Quand ? Six mois (l'age de la coulee, PN-116). Comment ? Jamais dit.
+Trois cents pieces sur les etageres, aucune cassee : [OBL] l'explosion a
+projete les briques vers l'AVANT, dans la rue, pas vers les etageres.
+[NAR] Ou bien quelqu'un a range apres.
+Anselme Roux. Le Verrier. Le joueur va le rencontrer dans quatre minutes.
+[OBL] Le jeu n'a JAMAIS prononce son nom, sauf sur le carton d'invitation
+de S6 (PN-106), 35 minutes plus tot : « Musique de M. Anselme Roux, au
+piano. »
+[OBL] Et il n'y a pas de piano ici. Il n'y en a jamais eu.
+
+§ 4 — ECHO
+ECHO E23 — « L'atelier » — 43 secondes, mode A.
+[OBL] C'EST L'ECHO LE PLUS IMPORTANT DU CHAPITRE 1 APRES E31 (LA LETTRE).
+[OBL] C'est le seul Echo du jeu ou une silhouette REGARDE LOHEN.
+Deroulement :
+  0 s — rituel 2,44 s.
+  2,4 s — le four s'allume. Une lumiere orange-blanc, violente (2 400 K,
+      intensite 8x), qui sort de la gueule ronde et INONDE l'atelier.
+      [OBL] C'est la lumiere la plus forte du chapitre. Le joueur, habitue
+      a 5 heures de penombre, est ebloui pendant 1,5 s (auto-exposure).
+  4 s — une silhouette. Grande. Au banc. Elle tourne une canne.
+      [OBL] Elle est de taille humaine normale : 1,82 m. PAS 2,6 m.
+      C'est Anselme Roux avant.
+  4 s a 26 s — elle travaille. Elle tourne, elle souffle, elle reprend au
+      four, elle roule sur le marbre, elle tourne encore.
+      [OBL] 22 secondes de metier reel, choregraphie d'apres un vrai
+      souffleur de verre filme. Chaque geste est juste.
+  26 s — une DEUXIEME silhouette entre. Petite. 1,15 m.
+      [OBL] UNE ENFANT. C'est la fille d'Anselme Roux.
+      [OBL] C'est la seule silhouette de moins de 1,20 m des 31 Echos.
+      L'exception unique, annoncee dans PN-007, PN-014, PN-050, PN-063.
+  28 s — elle s'approche du banc. Elle regarde son pere travailler.
+      Elle ne fait rien d'autre.
+  33 s — l'homme s'arrete. Il lui tend la canne.
+      [OBL] Il ne lui parle pas. Il tend la canne.
+  35 s — elle la prend a deux mains. Elle est trop lourde pour elle. Elle
+      la tient quand meme.
+  37 s — et elle tourne la tete.
+      [OBL] ELLE REGARDE LOHEN. Directement. 1,4 seconde.
+      [OBL] C'est la seule fois en 5 h 28 de jeu. C'est la seule fois des
+      sept chapitres.
+  38,4 s — elle detourne les yeux et regarde la canne.
+  41 s — les deux silhouettes s'effacent. Le four s'eteint en 2 s.
+  43 s — fin.
+Musique : NEANT jusqu'a 37 s. [OBL] A 37 s, exactement au regard : UNE
+NOTE. Un LA. Tenue 1,4 seconde. Puis rien.
+[OBL] C'est la premiere note du motif d'Esteban, jouee seule, hors contexte,
+par un instrument qui n'est pas le piano (un violoncelle).
+[OBL] Elle n'a aucun rapport avec Esteban. Le joueur ne peut pas le savoir.
+C'est la 19e des 23 occurrences incompletes.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur suit la coulee de verre (PN-116) sur 120 m et arrive a la
+gueule d'un four casse.
+Il entre. L'atelier est noir. Il n'a plus de lampe (PN-096).
+[OBL] Il voit par la lumiere du lampadaire a gaz (PN-115) qui entre par la
+porte, et par les 300 pieces de verre sur les etageres qui renvoient ce peu
+de lumiere en centaines de petits points.
+[ART] Trois cents reflets dans le noir. C'est ce qu'il voit en entrant.
+Le prompt d'Echo est sur le BANC DE SOUFFLEUR, pas sur le four.
+[OBL] Pendant E23, le joueur garde le controle de la camera. Il peut
+regarder ailleurs pendant les 1,4 seconde du regard.
+[OBL] S'il regarde ailleurs, il le rate. Definitivement. E23 n'est pas
+rejouable.
+[ART] Taux de captation du regard : 81-90 %. Un joueur sur huit environ
+manquera le seul regard du jeu.
+
+§ 6 — AUDIO
+Hors Echo : l'atelier est silencieux. SFX(rain_on_roof_distant), la pluie
+sur la charpente, attenuee.
+[OBL] Les 300 pieces de verre ne tintent pas. Il n'y a pas de courant d'air.
+Pendant E23 :
+SFX(furnace_roar) : le four. [OBL] Un rugissement grave et continu, -9 dB.
+C'est le son le plus FORT du chapitre 1.
+[ART] Le joueur n'a rien entendu de fort depuis 5 h 28. Le four rugit.
+SFX(glass_blow_breath) : le souffle dans la canne. [OBL] On entend un homme
+souffler. C'est intime et c'est enorme.
+SFX(marver_roll) : le verre roule sur le marbre d'acier. Un grincement
+chaud.
+SFX(glass_shear) : les ciseaux, deux fois.
+[OBL] A 37 s, au regard : le four baisse de 6 dB pendant 1,4 s. Pas de
+coupure, pas de silence : une inspiration du monde.
+Et le LA du violoncelle.
+
+§ 7 — INTERDICTIONS
+Interdit de : montrer les visages · faire parler · faire sourire l'enfant ·
+faire regarder Lohen par une autre silhouette, ici ou ailleurs, dans les
+sept chapitres · prolonger le regard au-dela de 1,4 s · le raccourcir ·
+ajouter un effet, un ralenti, un zoom, une vignette, un flash · ajouter de
+la musique avant 37 s · jouer plus d'une note · rendre E23 rejouable ·
+donner un rattrapage · expliquer l'explosion du four · relier Anselme Roux
+au Verrier par un dialogue ou un texte · casser une des 300 pieces.
+
+§ 8 — LIENS
+PN-106 (le carton d'invitation : le seul endroit ou son nom est ecrit).
+PN-118 (la canne taille enfant, dans la meme piece).
+PN-116 (la coulee). PN-128 (les fragments du Verrier).
+PN-007, PN-014, PN-050, PN-063 (les quatre refus d'enfants du chapitre) :
+[OBL] ils existent tous les quatre POUR que celui-ci compte.
+PN-028, PN-065, PN-071 (le verre d'Anselme Roux, dissemine dans le jeu).
+Le Verrier (VER-MDL-004, 2,6 m, muet, visage humain intact).
+[THEME] LES ENFANTS ABSENTS — et la seule qui regarde.
+
+§ 9 — DOD
+[ ] 300 pieces de verre, 22 modeles, 6 teintes, aucune cassee
+[ ] 11 cannes individuelles, 90 a 160 cm, depots differents
+[ ] Four casse vers l'avant, briques vitrifiees a l'intérieur
+[ ] Marbre raye avec masque anisotrope directionnel
+[ ] E23 : 22 s de metier choregraphie d'apres un souffleur reel filme
+[ ] Silhouette adulte a 1,82 m, jamais 2,6 m
+[ ] Enfant a 1,15 m : seule silhouette < 1,20 m des 31 Echos
+[ ] Regard a 37 s, 1,4 s exactement, camera libre, ratable definitivement
+[ ] Un seul LA de violoncelle, four a -6 dB pendant 1,4 s
+[ ] Four a -9 dB : son le plus fort du chapitre
+[ ] Taux de captation mesure entre 80 et 90 % sur 25 testeurs

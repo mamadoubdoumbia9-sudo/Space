@@ -1,0 +1,149 @@
+===============================================================================
+DLG · S3 · D08 — THEA ET LE MONTE-CHARGE : LES TROIS CONTREPOIDS
+29 entrees, toutes S3. THE 20 · LOH 9. Contribution : 29.
+Reference maitre : 09.12 SORTIE. Prop : PN-056 (le monte-charge, cage 4).
+Anim : LOH-GRP-100..107 (grappin, traction de contrepoids).
+===============================================================================
+
+--- CONTEXTE -------------------------------------------------------------------
+
+La sortie de S3 : le monte-charge vers la Bibliotheque est bloque. Trois
+contrepoids sont coinces en hauteur. Il faut les tirer au grappin. C'est
+la seule enigme mecanique de la sequence et elle se resout en 4 minutes.
+
+[OBL] Thea ne donne PAS la solution. Elle donne trois faits, et les trois
+faits suffisent. Si le joueur reste bloque plus de 6 minutes, elle ne
+repete rien et n'ajoute rien. Il n'y a pas de systeme d'indice progressif
+dans ce jeu. Le joueur s'assoit et regarde, comme tout le monde.
+
+--- LES 28 LIGNES ------------------------------------------------------------------
+
+    [S3_THE_L248]  THEA · 1,4 s · presse · p0,5
+        « Il marche pas. Revenez demain. »
+
+    [S3_LOH_L249]  LOHEN · 1,1 s · plat · p0,6
+        « Je peux pas revenir demain. »
+
+    [S3_THE_L250]  THEA · 1,8 s · presse · p0,4
+        « Tout le monde peut pas revenir demain. »
+
+    [S3_LOH_L251]  LOHEN · 1,3 s · plat · p0,7
+        « Qu'est-ce qui est casse ? »
+
+    [S3_THE_L252]  THEA · 2,4 s · pratique · p0,5
+        « Rien. Trois contrepoids sont en l'air. Faut qu'ils
+          redescendent. »
+
+    [S3_LOH_L253]  LOHEN · 1,0 s · plat · p0,6
+        « Et ils descendent pas. »
+
+    [S3_THE_L254]  THEA · 2,7 s · pratique · p0,4
+        « Ils descendent pas parce qu'ils sont en l'air. Vous suivez ? »
+        dir : elle n'est pas sarcastique. Elle explique mal et vite,
+              comme quelqu'un qui a explique ca deux cents fois.
+
+    [S3_THE_L255]  THEA · 2,9 s · pratique · p0,6
+        « Fait un : ils pesent quatre-vingts kilos chacun. Vous les
+          tirez pas a la main. »
+
+    [S3_THE_L256]  THEA · 3,1 s · pratique · p0,5
+        « Fait deux : y'a un anneau de relayeur au-dessus de chacun.
+          C'est vous qui les avez poses, peut-etre. »
+
+    [S3_THE_L257]  THEA · 2,8 s · pratique · p0,8
+        « Fait trois : si vous les faites descendre dans le desordre,
+          ca remonte. Le plus lourd d'abord. »
+        dir : [OBL] LES TROIS FAITS. Le joueur a tout. Le plus lourd est
+              identifiable a l'oeil : il est plus sombre, plus mat, et
+              sa chaine a des maillons plus gros. Aucune UI ne l'indique.
+
+    [S3_LOH_L258]  LOHEN · 1,2 s · plat · p0,6
+        « Lequel est le plus lourd ? »
+
+    [S3_THE_L259]  THEA · 1,6 s · sec · p0,9
+        « Regardez-les. »
+        dir : [OBL] LA reponse la plus importante du document. Le jeu
+              refuse de designer. Il dit : regarde. C'est la philosophie
+              de tout le chapitre en deux mots.
+
+    [S3_LOH_L260]  LOHEN · 1,4 s · plat · p0,5
+        « Le noir. »
+
+    [S3_THE_L261]  THEA · 1,1 s · plat · p0,7
+        « Voila. »
+        dir : [OBL] elle confirme APRES que le joueur a propose, jamais
+              avant. Et si le joueur se trompe (s'il parle au mauvais
+              contrepoids), elle ne dit rien du tout : il tire, ca
+              remonte, il recommence. L'echec est muet.
+
+    -- Pendant la resolution --
+
+    [S3_THE_L262]  THEA · 1,8 s · presse · p0,0
+        « Pas celui-la. »
+        dir : declenche UNIQUEMENT si le joueur vise le troisieme en
+              premier — le seul ordre qui peut coincer la cage
+              definitivement et forcer un reset de 40 s. Elle previent
+              une fois. Une seule.
+
+    [S3_THE_L263]  THEA · 1,3 s · pratique · p0,0
+        « Bien. »
+
+    [S3_THE_L264]  THEA · 1,6 s · pratique · p0,0
+        « Deuxieme. »
+
+    [S3_THE_L265]  THEA · 2,2 s · pratique · p0,0
+        « Attendez qu'il arrete de balancer. Sinon vous reprenez tout. »
+
+    [S3_THE_L266]  THEA · 1,4 s · pratique · p0,0
+        « Voila. »
+
+    [S3_LOH_L267]  LOHEN · 1,7 s · essouffle · p0,0
+        « Il est plus lourd que quatre-vingts kilos, celui-la. »
+
+    [S3_THE_L268]  THEA · 2,0 s · plat · p0,0
+        « Cent dix. Je dis quatre-vingts pour pas decourager. »
+
+    [S3_LOH_L269]  LOHEN · 1,1 s · plat · p0,0
+        « Ca marche ? »
+
+    [S3_THE_L270]  THEA · 1,5 s · plat · p0,0
+        « Sur vous, oui. »
+
+    -- La cage repart --
+
+    [S3_THE_L271]  THEA · 2,4 s · pratique · p0,5
+        « Montez. Tenez la grille avec la main gauche, elle se ferme
+          mal. »
+
+    [S3_LOH_L272]  LOHEN · 1,2 s · plat · p0,6
+        « Vous montez pas ? »
+
+    [S3_THE_L273]  THEA · 2,1 s · plat · p0,7
+        « J'ai quatre treuils. Je monte le soir. »
+
+    [S3_LOH_L274]  LOHEN · 1,6 s · plat · p0,8
+        « Merci, Thea. »
+
+    [S3_THE_L275]  THEA · 2,6 s · plat · p0,9
+        « La lettre. Celle sans nom au dos. »
+        dir : [OBL] elle y revient d'elle-meme, 20 minutes de jeu plus
+              tard, au moment ou Lohen part. Uniquement si le joueur a
+              livre la lettre 3/4 (D05). Sinon cette ligne et la suivante
+              n'existent pas.
+
+    [S3_THE_L276]  THEA · 3,0 s · plat · p0,0
+        « Je l'ai pas ouverte. Je l'ouvrirai pas. Mais je sais ce qu'il
+          y a dedans, et c'est pour ca. »
+        dir : [OBL] DERNIERE LIGNE DE THEA DU CHAPITRE. Elle n'apparait
+              plus, ni en S4, ni ailleurs (ses 69 lignes sont S3+S4 :
+              les 12 de S4 sont hors champ, au telephone acoustique de
+              la Bibliotheque, D09 de S4). La cage part. On ne saura
+              jamais. Aucun chapitre ne le dira.
+
+--- CHECKLIST ----------------------------------------------------------------------
+
+[ ] Trois faits donnes, jamais la solution
+[ ] Aucun indice progressif, aucun rappel apres 6 minutes
+[ ] L259 « Regardez-les. » : aucune UI ne designe le contrepoids lourd
+[ ] Echec muet ; un seul avertissement (L262)
+[ ] L276 : jamais resolu, aucun chapitre

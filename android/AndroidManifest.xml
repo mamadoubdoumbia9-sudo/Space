@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  LOHEN — Les Sept Lettres de Velmora, Chapitre 1
+  Manifeste Android.
+
+  22.04 : exactement deux permissions (VIBRATE, WAKE_LOCK), jamais INTERNET
+          (00.05 : le jeu se joue en mode avion, du debut a la fin), orientation
+          paysage forcee (00.06 : portrait interdit).
+  22.05 : minSdk 26 (Android 8.0), targetSdk 35. Aucune bibliotheque native :
+          le rendu est du Java + OpenGL ES 2.0, il tourne sur toutes les ABI.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.velmora.lohen"
+    android:versionCode="1"
+    android:versionName="1.0-chapitre1">
+
+    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="35" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="true" />
+    <uses-feature android:name="android.hardware.gamepad" android:required="false" />
+    <uses-feature android:name="android.hardware.faketouch" android:required="false" />
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:theme="@style/LohenTheme"
+        android:allowBackup="true"
+        android:fullBackupOnly="true"
+        android:hardwareAccelerated="true"
+        android:isGame="true"
+        android:hasFragileUserData="false"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".LohenActivity"
+            android:label="@string/app_name"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboard|keyboardHidden|navigation|uiMode|density|fontScale"
+            android:resizeableActivity="false"
+            android:windowSoftInputMode="adjustNothing"
+            android:alwaysRetainTaskState="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="android.app.lib_name" android:value="" />
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,125 @@
+===============================================================================
+DLG · S3 · D14 — E11 (L'ANCRE) ET E12 (LE BANC) : LES DEUX ECHOS DEBLOQUES
+24 entrees, toutes S3. ECH 24. Contribution : 24.
+E11 : debloque par CHOIX 08 branche [1]. E12 : par CHOIX 14 branche [1].
+[OBL] Ce sont les 2 « choix qui debloquent un Echo » de S3 (INDEX § 7).
+===============================================================================
+
+--- E11 — L'ANCRE SUR LA TABLE DE TALLEC (12 lignes, 52 s) -------------------------------
+
+[OBL] R3 (proprietaire unique) : l'ancre appartient a Tallec, vivant.
+R4 interdirait l'Echo. EXCEPTION ? Non : l'Echo n'est pas celui de Tallec,
+c'est celui du BATEAU disparu auquel l'ancre appartenait — proprietaire
+unique, mort en 'douze, avant la Maree. R3 et R4 sont respectees. Cette
+justification est ecrite ici parce qu'un relecteur croira a une erreur.
+
+Quatre silhouettes sur un pont de bateau, par gros temps.
+
+    [S3_ECH_L448]  PATRON DE PECHE · 2,2 s · pratique · p0,4
+        « Mouille ! »
+
+    [S3_ECH_L449]  MATELOT · 1,4 s · essouffle · p0,5
+        « Elle mord pas ! »
+
+    [S3_ECH_L450]  PATRON DE PECHE · 2,0 s · pratique · p0,4
+        « Donne-lui de la chaine ! »
+
+    [S3_ECH_L451]  MATELOT · 1,8 s · essouffle · p0,6
+        « J'ai plus de chaine ! »
+
+    [S3_ECH_L452]  TALLEC (jeune) · 2,4 s · pratique · p0,5
+        « Recule de vingt metres et remouille. Le fond est meilleur
+          derriere. »
+        dir : [OBL][NAR] C'EST TALLEC, a 32 ans, avec DEUX bras.
+              [OBL] Le comedien de Tallec enregistre ces 4 lignes avec
+              une voix plus haute de trois demi-tons et un debit 20 %
+              plus rapide. Meme homme, autre epoque.
+              [OBL] Le joueur peut ne pas le reconnaitre. Aucune aide.
+              Le prenom n'est pas dit. La silhouette a deux bras : le
+              seul indice, et il faut regarder.
+
+    [S3_ECH_L453]  PATRON DE PECHE · 1,6 s · sec · p0,5
+        « C'est toi le capitaine ? »
+
+    [S3_ECH_L454]  TALLEC (jeune) · 1,2 s · plat · p0,7
+        « Non. »
+
+    [S3_ECH_L455]  PATRON DE PECHE · 2,6 s · plat · p0,6
+        « Recule de vingt metres ! Et remouille ! »
+        dir : il repete l'ordre de Tallec comme si c'etait le sien.
+              [OBL] Personne ne le releve. C'est comme ca que ca marche.
+
+    [S3_ECH_L456]  MATELOT · 1,9 s · essouffle · p0,5
+        « Elle mord ! »
+
+    [S3_ECH_L457]  PATRON DE PECHE · 2,2 s · plat · p0,6
+        « Bien. »
+
+    [S3_ECH_L458]  TALLEC (jeune) · 2,8 s · plat · p0,7
+        « Je la reprendrai un jour, cette ancre. Elle est a moi. »
+
+    [S3_ECH_L459]  PATRON DE PECHE · 2,4 s · moqueur · p0,0
+        « Elle est a la mer, petit. On l'emprunte. »
+        dir : [OBL] dissolution. L'ancre reelle est sur la table, et
+              Tallec la donnera a Lohen dans la meme piece. Le joueur
+              qui a vu E11 comprend qu'il recoit un objet emprunte a la
+              mer par un homme de 32 ans qui avait deux bras.
+              [OBL] Tallec ne mentionne JAMAIS cet Echo. Il ne sait pas
+              que Lohen l'a vu. Aucun dialogue ne change.
+
+--- E12 — LE BANC DE LA PASSERELLE 4 (12 lignes, 34 s) -------------------------------------
+
+Le banc ou Lohen s'assoit pour ressortir la cinquieme lettre.
+[OBL] C'est le faux positif n° 4 : le joueur attend un drame. Il y a
+deux vieux qui parlent de rien pendant trente-quatre secondes.
+
+    [S3_ECH_L460]  VIEUX 1 · 1,8 s · plat · p0,5
+        « Tu t'assois du mauvais cote. »
+
+    [S3_ECH_L461]  VIEUX 2 · 1,4 s · plat · p0,4
+        « Y'a pas de mauvais cote sur un banc. »
+
+    [S3_ECH_L462]  VIEUX 1 · 2,2 s · plat · p0,5
+        « Y'a le cote du vent et l'autre. »
+
+    [S3_ECH_L463]  VIEUX 2 · 1,6 s · plat · p0,6
+        « Alors pousse-toi. »
+
+    [S3_ECH_L464]  VIEUX 1 · 1,2 s · sec · p0,7
+        « Non. »
+
+    [S3_ECH_L465]  VIEUX 2 · 2,0 s · plat · p0,5
+        « Voila. Donc y'a pas de mauvais cote, y'a un cote que tu
+          gardes. »
+
+    [S3_ECH_L466]  VIEUX 1 · 2,6 s · plat · p0,6
+        « Trente ans que tu me fais ce coup-la. »
+
+    [S3_ECH_L467]  VIEUX 2 · 1,8 s · moqueur · p0,5
+        « Trente-deux. »
+
+    [S3_ECH_L468]  VIEUX 1 · 1,4 s · plat · p0,8
+        « Trente. »
+
+    [S3_ECH_L469]  VIEUX 2 · 2,4 s · plat · p0,6
+        « Trente-deux, et tu le sais, et tu dis trente pour que je
+          corrige. »
+
+    [S3_ECH_L470]  VIEUX 1 · 2,0 s · doux · p0,7
+        « Oui. »
+
+    [S3_ECH_L471]  VIEUX 2 · 2,2 s · doux · p0,0
+        « Bon. Reste la, alors. »
+        dir : [OBL] dissolution. Rien ne s'est passe. Le joueur a
+              depense un choix pour ca. [OBL] C'est exactement ce qu'il
+              fallait : deux vieillards qui s'aiment sans le dire, sur
+              le banc ou Lohen tient une lettre qu'il ne peut pas lire.
+              Le jeu ne fait aucun rapprochement. Le joueur le fait ou
+              ne le fait pas.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] E11 : justification R3/R4 ecrite, silhouette de Tallec a deux bras
+[ ] Tallec jeune : +3 demi-tons, debit +20 %, prenom jamais dit
+[ ] Tallec ne mentionne jamais E11
+[ ] E12 : aucun drame, aucun rapprochement souligne

@@ -1,0 +1,129 @@
+===============================================================================
+PN-049 — LE MONTE-CHARGE ET SES CONTREPOIDS
+===============================================================================
+Asset : SM_S3_Monte_Charge · S3, puits central du Marche, reliant les
+niveaux 1, 2 et 3 · ~02:35 · PORTEUR D'ECHO E12 · MECANIQUE UTILISABLE ·
+LOD0 9 200 tris
+
+§ 1 — CE QU'ON VOIT
+Un monte-charge a contrepoids, entierement mecanique, sans moteur.
+Une plateforme de bois de 2 x 2 m, encadree de quatre montants de fer,
+suspendue a quatre cables qui montent dans un puits de 14 m jusqu'a une
+poutre maitresse avec quatre poulies.
+De l'autre cote des poulies : les contrepoids. Ce ne sont pas des blocs de
+fonte. Ce sont SEIZE CAISSES remplies de pierres, de ferraille, de sable —
+de tout ce qu'on a pu trouver. Elles sont empilees dans un chassis
+coulissant, avec des cales pour ajuster.
+Le systeme fonctionne. Il n'y a pas de rouille bloquante : les poulies ont
+ete graissees, et pas il y a trois ans. Il y a quelques mois.
+Sur le montant, a hauteur de main, une manette de frein a levier, en bois
+poli.
+Et sur la plateforme, au sol, un tas de choses qui ne devraient pas y etre :
+trois sacs de toile, une caisse a outils, un balai. Un chargement pret a
+monter, qui n'est jamais monte.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 9 200 (plateforme 1 400 + structure 3 100 + 16 caisses de contrepoids
+2 900 + cables/poulies 1 800).
+[OBL] Les quatre cables sont en geometrie sur toute leur longueur (14 m),
+avec une tension visible et un leger balancement dephase.
+MECANIQUE : le monte-charge est UTILISABLE. C'est l'une des 24 interactions
+non-Echo. Le joueur tire le levier : la plateforme monte ou descend, selon
+l'equilibre des contrepoids.
+[OBL] Il n'y a pas de bouton d'etage. Le joueur tire, ca bouge, il relache,
+ca s'arrete. Vitesse 0,9 m/s. Duree niveau 1 → niveau 3 : 15 secondes.
+[OBL] Pendant les 15 secondes, le joueur n'a rien a faire. Il monte. Il
+regarde le Marche defiler. C'est tout. Aucun evenement, aucun dialogue,
+aucune musique ajoutee.
+Anim : PROP-759 (plateforme), PROP-760 (contrepoids, mouvement inverse),
+PROP-761 (16 caisses qui bougent legerement dans leur chassis).
+[OBL] Le contrepoids doit etre VISIBLE pendant la montee. Le joueur monte,
+les caisses descendent, dans le meme cadre. La physique est le spectacle.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un entretient ce monte-charge.
+Les poulies sont graissees. Les cables sont tendus. Le frein fonctionne.
+Ce n'est pas un vestige : c'est une machine en service.
+Le geste humain : graisser une poulie a 14 m de haut, dans une ville vide,
+pour un monte-charge que personne n'utilise.
+[NAR] C'est Tallec. Le joueur peut le deviner (le poste de Tallec est au
+niveau 3, il faut bien qu'il monte ses provisions). [OBL] Tallec ne le dit
+jamais. Aucune ligne. Aucun indice explicite.
+Le chargement abandonne sur la plateforme, lui, a trois ans. Il n'a jamais
+monte.
+
+§ 4 — ECHO
+ECHO E12 — « La montee » — 47 secondes, mode B. Le plus long du chapitre
+apres E01.
+[OBL] Il se declenche PENDANT que le joueur monte. Le prompt apparait
+quand la plateforme est a mi-course, a 7 m, et le joueur doit le valider en
+mouvement. C'est le seul Echo declenche en deplacement.
+Une fois declenche, la plateforme CONTINUE de monter pendant tout l'Echo.
+Le rituel de 2,44 s se joue en mouvement. [OBL] La vitesse ne change pas.
+Ce qu'on voit : le Marche s'allume, niveau par niveau, a mesure qu'on
+monte. Niveau 1 : quatorze silhouettes, une echoppe eclairee, du mouvement.
+Niveau 2 : neuf silhouettes, des etals, quelqu'un qui court.
+Niveau 3 : trois silhouettes, immobiles, au bord, qui regardent la mer.
+Sur la plateforme elle-meme, avec Lohen : DEUX silhouettes.
+[OBL] Elles sont assises sur le bord de la plateforme, jambes dans le vide,
+dos a Lohen, epaule contre epaule. Elles montent avec lui.
+Elles ne bougent pas pendant 41 secondes.
+A 44 s, l'une pose sa tete sur l'epaule de l'autre.
+A 46 s, tout s'eteint. La plateforme arrive au niveau 3.
+[OBL] Les deux silhouettes ne sont pas Lohen et Esteban. Le jeu ne le dit
+pas. Le joueur le pensera. C'est tout ce qui compte.
+Musique : M14 « La montee », cordes ascendantes, 47 s, un seul crescendo
+continu qui n'atteint jamais son sommet : il s'arrete a la dominante.
+[OBL] C'est le seul crescendo du chapitre et il est non resolu.
+Rituel d'entree : 2,44 s, en mouvement.
+
+§ 5 — MISE EN SCENE
+[ART] Le monte-charge est la colonne vertebrale de S3. Le joueur l'utilise
+3 a 5 fois pendant la sequence. Les quatre premieres fois : rien.
+La cinquieme — ou plutot, la premiere fois qu'il monte du niveau 1 au
+niveau 3 d'une traite, sans s'arreter — l'Echo devient disponible.
+[OBL] Condition : trajet complet niveau 1 → niveau 3 sans relacher le levier.
+Un joueur qui s'arrete a chaque etage ne verra jamais E12. Taux de
+decouverte cible : 64-73 %.
+Le puits est etroit et sombre en bas, ouvert et clair en haut. Pendant les
+15 secondes, on passe du sombre au clair.
+La lampe de Lohen (PN-009) eclaire les parois qui defilent.
+
+§ 6 — AUDIO
+SFX(pulley_heavy_turn) : les quatre poulies, en continu pendant le trajet,
+legerement desynchronisees (elles n'ont pas exactement le meme diametre).
+Quatre notes de grincement tres proches, qui battent.
+SFX(cable_tension_hum) : les cables chantent sous la charge, une note grave
+qui MONTE en frequence a mesure que la plateforme monte (la longueur libre
+du cable raccourcit). [OBL] Effet physique reel, calcule, pas scripte.
+[ART] Le joueur entend qu'il monte. C'est un des meilleurs details audio du
+jeu et personne ne le remarquera.
+SFX(counterweight_shift) : les 16 caisses qui travaillent, irregulier.
+Pendant E12 : la rumeur monte aussi, niveau par niveau. Au niveau 1, une
+foule. Au niveau 3, presque le silence.
+[OBL] Les deux silhouettes assises ne font AUCUN bruit. Pas de respiration,
+pas de vetement, pas un mot. Elles sont muettes pendant 47 secondes.
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter des etages · ajouter des boutons · scripter un
+incident pendant la montee · faire tomber la plateforme · faire parler les
+deux silhouettes · les identifier · les faire se retourner · les faire
+regarder Lohen · resoudre le crescendo de M14 · rendre E12 rejouable ·
+permettre de monter sans le contrepoids visible · accelerer le trajet.
+
+§ 8 — LIENS
+PN-045 (le poste de Tallec, au niveau 3 : c'est par la qu'il monte).
+PN-061 (le puits a poulie du niveau 2). PN-114 (le cable casse du grappin,
+S7). PN-130 (l'escalier en spirale du Phare, S8) : l'autre grande montee,
+et celle-la, Lohen la fait a pied, 212 m, seul.
+[THEME] MONTER. [THEME] EPAULE CONTRE EPAULE.
+
+§ 9 — DOD
+[ ] Contrepoids visible et mobile dans le meme cadre que la plateforme
+[ ] 16 caisses distinctes, contenus differents, cales ajustables
+[ ] Frein a levier, pas de bouton d'etage, 0,9 m/s, 15 s de trajet complet
+[ ] Note des cables qui monte en frequence, calculee physiquement
+[ ] E12 : declenche en mouvement a 7 m, rituel joue en mouvement
+[ ] Deux silhouettes assises, muettes, immobiles 41 s, tete a 44 s
+[ ] M14 : crescendo unique du chapitre, non resolu, arret sur la dominante
+[ ] 15 s sans aucun evenement pendant la montee ordinaire

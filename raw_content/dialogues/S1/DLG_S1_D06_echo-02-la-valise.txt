@@ -1,0 +1,81 @@
+===============================================================================
+DLG · S1 · D06 — ECHO 02 : LA VALISE TRIEE PAR TAILLE
+12 lignes · voix d'Echo · deux personnes, un depart qui n'a pas eu lieu
+Prop : PN-011 (la valise ouverte, contenu etale et trie par taille).
+Reference maitre : 09.10 « quelqu'un a pris le temps ». E02, mode A, 58 s.
+===============================================================================
+
+--- CONTEXTE -------------------------------------------------------------------
+
+Quatre minutes apres E01. Le joueur n'a toujours pas de mot pour ce qui
+lui arrive. Sur le quai, une valise ouverte, et devant elle, le contenu
+etale au sol en rangees regulieres : chemises, puis pantalons, puis
+mouchoirs, du plus grand au plus petit. Une pluie de trois ans est
+passee dessus. Rien n'a bouge.
+
+E02 est le premier Echo a DEUX voix qui se repondent vraiment. C'est lui
+qui apprend au joueur le systeme, pas E01. Regle de design : le premier
+exemple est mysterieux, le deuxieme est lisible.
+
+Deux silhouettes. Un homme accroupi, une femme debout. La femme ne
+s'accroupit jamais de tout l'Echo.
+
+--- LES 12 LIGNES --------------------------------------------------------------
+
+    [S1_ECH_L081]  FEMME · 1,4 s · sec · p0,5
+        « Tu ne tries pas. Tu ranges. »
+
+    [S1_ECH_L082]  HOMME · 1,2 s · plat · p0,4
+        « Je trie. »
+
+    [S1_ECH_L083]  FEMME · 2,3 s · agace · p0,6
+        « Le bateau part dans quarante minutes. Ferme cette valise. »
+
+    [S1_ECH_L084]  HOMME · 2,7 s · plat · p0,7
+        « Si je la ferme mal, tout arrive froisse, et on se presente
+          froisses. »
+        dir : il continue de poser les mouchoirs. Un par un. Il ne leve
+              jamais la tete.
+
+    [S1_ECH_L085]  FEMME · 1,6 s · las · p0,8
+        « On se presente en retard, plutot. »
+
+    [S1_ECH_L086]  HOMME · 1,1 s · doux · p0,5
+        « Assieds-toi. »
+
+    [S1_ECH_L087]  FEMME · 1,0 s · sec · p0,9
+        « Non. »
+        dir : [OBL] elle reste debout tout l'Echo. Aucune version ou elle
+              s'assoit. Si un animateur la fait s'accroupir « pour la
+              dynamique du plan », c'est un bug.
+
+    [S1_ECH_L088]  HOMME · 2,9 s · plat · p0,6
+        « Les grands en bas, les petits en haut. Comme ca tu retrouves
+          tout sans rien deranger. »
+
+    [S1_ECH_L089]  FEMME · 2,1 s · las · p0,5
+        « Personne ne retrouve rien, jamais, dans une valise. »
+
+    [S1_ECH_L090]  HOMME · 1,8 s · doux · p0,7
+        « Dans les miennes, si. »
+
+    [S1_ECH_L091]  FEMME · 2,4 s · doux · p0,6
+        « C'est vrai. C'est la seule chose que tu fais bien. »
+        dir : dit sans mechancete. Elle pose la main sur le crane de
+              l'homme, 1,2 s, et la retire.
+
+    [S1_ECH_L092]  HOMME · 2,0 s · plat · p0,0
+        « Alors laisse-moi la faire bien. »
+        dir : dissolution. La valise reelle est toujours ouverte, le
+              contenu toujours trie, sous trois ans de crachin.
+              [OBL] Le jeu ne dit jamais s'ils ont pris le bateau. Le
+              contenu de la valise est au sol : le joueur en tirera la
+              conclusion qu'il voudra, et les deux conclusions sont
+              tenables.
+
+--- CHECKLIST ------------------------------------------------------------------
+
+[ ] Contenu de la valise reellement trie par taille, mesurable a l'ecran
+[ ] La femme ne s'accroupit pas
+[ ] Aucune ligne ne mentionne une date, une destination, une catastrophe
+[ ] Aucune reaction de Lohen apres l'Echo (idem E01)

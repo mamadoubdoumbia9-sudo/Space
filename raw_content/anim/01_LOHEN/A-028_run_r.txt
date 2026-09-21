@@ -1,0 +1,108 @@
+===============================================================================
+  A-028   run_R
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 028 / 744
+  Partie 1 — LOHEN
+  Categorie : LOCOMOTION
+  Marqueur   : MIROIR DE A-027
+  Fichier source  : A_Lohen_Loc_run_r_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : conçu — bloc de plage deplie
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 0.620 s  (18 frames a 30 fps)
+  Type .................. BOUCLE
+  Root motion ........... RM-ROT (4.40 m/s)
+  Blend in / out ........ 0.18 s / 0.18 s
+  Couche AnimationTree .. L0
+  Priorite .............. 14 — locomotion de fond (bande 0-19, bareme 0.05)
+  Poids compresse cible . ~14 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      jambes completes, bassin, colonne, bras, IK de pied, nuque
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  LOHEN — 27 ans, 1,74 m, sec, entraine, fatigue.
+
+  Il a du POIDS. Chaque mouvement a un cout visible. Reference : un grimpeur
+  professionnel en fin de journee de travail. Il ne fait jamais un geste
+  gratuit, sauf trois tics (L2 le lacet, L3 le col, L5 la sacoche) qui sont
+  tout le personnage. Il ne sait pas bien lire. Il a deux sourires dans tout
+  le chapitre. Matricule 0114 brode sur la veste, dans l'albedo, et il doit
+  s'user. Epaule droite abimee « depuis Saint-Jerome » — jamais defini,
+  interdit de le definir.
+
+  Rig et costume :
+      veste de relayeur (cloth simule, 1 des 6 pieces reelles du chapitre),
+      harnais, sacoche, gants, lacet au poignet gauche
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  course en diagonale avec inclinaison laterale de 9 deg vers la droite.
+  [OBL] L'inclinaison vient du BASSIN, pas de la colonne : incliner la
+  colonne donne une course de patineur. La tete reste verticale — elle
+  compense sur L3.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Cyclage [OBL 0.03] : la frame 0 et la frame 18 sont identiques
+  a 0.001 pres. Verifie par `tools/loop_check.py`, qui echoue le
+  build en cas de saut.
+
+  Evenements de timeline :
+      FOOTSTEP_L f0 · FOOTSTEP_R f9 · CLOTH_RUSTLE f4 · BREATH toutes les 3
+      foulees
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- run_F, start_run_burst ; -> run_F, turn_run_90R, jump_running
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · cyclage frame 0 == frame 18 (tolerance 0.001)
+      · seule la rotation vient de l'anim ; la translation est pilotee par
+      le code (reactivite prioritaire)
+      · les clauses [OBL] de la section 3 sont verifiees en revue, pas
+      seulement en lecture
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-028
+===============================================================================

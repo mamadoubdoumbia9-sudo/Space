@@ -1,0 +1,100 @@
+===============================================================================
+  A-585   walk_stop_and_wait
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 585 / 744
+  Partie 8 — LE VERRIER (ANSELME ROUX)
+  Categorie : LOCOMOTION
+  Fichier source  : A_Le_Loc_walk_stop_and_wait_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+  Identifiant precedent : A-588 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 6.000 s  (180 frames a 30 fps)
+  Type .................. ONE-SHOT
+  Root motion ........... RM-NONE
+  Couche AnimationTree .. L0
+  Priorite .............. 40 — combat (bande 40-59, bareme 0.05)
+  Poids compresse cible . ~132 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      240 os dont 74 pour la coulee (jiggle-bones), visage humain intact,
+      machoire bloquee
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  LE VERRIER (ANSELME ROUX) — 52 ans, maitre verrier. 2,6 m.
+
+  [ART][OBL] CE N'EST PAS UN MONSTRE. C'est un homme fatigue avec quelque
+  chose de tres lourd sur le dos. Chaque mouvement doit exprimer LE POIDS et
+  la LENTEUR. LE VISAGE HUMAIN EST INTACT ET CALME, et c'est ce qui est
+  insupportable. Il ne peut plus parler : sa machoire est prise. Il
+  communique en montrant. Il a lu le meme Echo 4 000 fois — celui de sa
+  fille.
+
+  Rig et costume :
+      86 000 tris, 240 os dont 74 pour la coulee (chaine de jiggle-bones)
+      qui forme une aile, un manteau ou une vague selon l'angle
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  il s'arrete, la coulee continue d'onduler 1,5 s apres l'arret, et il
+  attend. Il ne cherche pas Lohen des yeux. Il attend simplement.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Clip ONE-SHOT : pas de contrainte de cyclage. La derniere frame
+  doit poser une silhouette blendable vers les etats de sortie.
+
+  Evenements de timeline :
+      FOOTSTEP_L / FOOTSTEP_R aux poses de pied (son matiere 13.28 +
+      haptique) · CLOTH_RUSTLE · RIG_CLINK selon la charge
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- etat courant de l'IA (`ai_state`) ; -> retour a l'idle de la
+      creature, ou enchainement declare par le comportement
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-585
+===============================================================================

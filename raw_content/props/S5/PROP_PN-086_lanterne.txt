@@ -1,0 +1,114 @@
+===============================================================================
+PN-086 — LA LANTERNE
+===============================================================================
+Asset : SM_S5_Lanterne_Conduits · S5, entree des Conduits, accrochee a un
+crochet dans la paroi · ~04:02 · PORTEUR D'ECHO E18 · LOD0 1 400 tris
+
+§ 1 — CE QU'ON VOIT
+Une lanterne de mineur. Pas une lampe-tempete comme PN-009 : une lanterne
+de securite, avec un globe cylindrique protege par une cage de fils de
+laiton verticaux, un bouclier de tole en haut, et un anneau de suspension.
+Elle est accrochee a un crochet de fer scelle dans la paroi de brique, a
+1,70 m, juste apres l'entree du conduit.
+Elle est ETEINTE. C'est la premiere fois qu'on trouve une lampe eteinte
+dans ce jeu.
+Le verre du globe est noir de suie sur sa moitie basse.
+Le reservoir est vide. Completement. Il y a une croute seche au fond.
+Sur l'anneau de suspension, une etiquette de metal estampee, usee, ou on
+lit encore quatre lettres : ... O U I L  (le reste est efface).
+Sous la lanterne, au sol, contre la paroi : un bidon d'huile de 5 litres.
+Renverse. Vide. Le bouchon est a 40 cm.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 400. La cage de laiton : 14 fils verticaux en geometrie, 1,8 mm.
+[OBL] Pas de carte d'alpha. Cette lanterne sera tenue a 30 cm de la camera
+pendant E18.
+Le globe : verre cylindrique, transmission 0,71 en haut, 0,09 en bas
+(suie). Masque de suie peint a la main, avec des coulures verticales.
+L'etiquette estampee : geometrie en creux de 0,4 mm.
+Shader `brass_worn` + `glass_sooted`.
+Anim : PROP-801 — pendant E18, la lanterne S'ALLUME. Puis s'eteint.
+[OBL] Elle ne peut PAS etre prise, ni allumee, ni remplie par le joueur.
+Il n'y a pas de prompt de ramassage. Lohen a deja sa lampe-tempete.
+
+§ 3 — CE QUE CA DIT
+Il y avait un systeme d'eclairage dans les Conduits. Des lanternes
+accrochees a des crochets, alimentees a l'huile, remplies par quelqu'un.
+Le bidon renverse et vide dit la derniere fois : on a fini l'huile, on a
+laisse le bidon, on est parti.
+Le geste humain : accrocher une lanterne a un crochet apres l'avoir
+eteinte. [OBL] Elle est accrochee, pas posee. Le dernier geste a ete
+ordonne.
+L'etiquette « ...OUIL » : un nom, ou le mot « MAZOUIL » (une marque
+d'huile), ou autre chose. [OBL] Jamais resolu. Aucun indice ailleurs.
+
+§ 4 — ECHO
+ECHO E18 — « Le crochet » — 25 secondes, mode B.
+La lanterne s'allume. [OBL] Elle est la SEULE source lumineuse de l'Echo :
+le conduit s'eclaire d'une lumiere jaune, basse, tremblante, sur 9 m.
+Ce qu'on voit : le conduit, eclaire, tel qu'il etait. Il est PROPRE. Le sol
+est balaye. Il n'y a pas de flaque, pas de gravats, pas de rouille rampante.
+C'est un couloir de service entretenu.
+Une silhouette arrive par le fond, marche vers la lanterne, la decroche,
+et repart dans l'autre sens, en l'emportant.
+La lumiere part avec elle. Le conduit s'assombrit derriere.
+[OBL] Le joueur, lui, reste. Il regarde la lumiere s'eloigner sur 9 m et
+tourner au coude. Puis c'est noir.
+Six secondes de noir total. [OBL] Y compris la lampe de Lohen : elle est
+eteinte pendant ces 6 secondes. C'est le seul moment du chapitre ou le
+joueur ne voit absolument rien.
+Puis la lanterne reapparait, accrochee, eteinte. Et la lampe de Lohen se
+rallume.
+Musique : NEANT. [OBL] Le seul son est celui des pas qui s'eloignent.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+[OBL] E18 est le premier Echo de S5 et le premier de tout le chapitre a
+PLONGER LE JOUEUR DANS LE NOIR.
+La sequence 5 est souterraine. Le joueur vient de passer 4 heures dehors et
+dans des batiments eclaires. Il entre dans un conduit de 1,90 m de haut.
+La lanterne est a 4 m de l'entree, a droite.
+[OBL] Apres E18, le joueur sait ce que c'est que le noir dans ce jeu. Les
+45 minutes suivantes se jouent avec cette information.
+[OBL] Il n'y a aucun ecran de securite, aucun avertissement, aucune option
+de luminosite forcee. Le noir est noir.
+Accessibilite (14.19) : l'option « reduire les passages sombres » du menu
+remplace ces 6 s par 6 s a 8 % de luminosite. [OBL] Elle est desactivee par
+defaut et n'est jamais suggeree en jeu.
+
+§ 6 — AUDIO
+SFX(brass_hook_lift) : la lanterne decrochee. Un son clair, precis.
+SFX(step_stone_receding) : les pas qui s'eloignent sur 9 m puis tournent.
+[OBL] Spatialisation complete : le joueur suit la personne a l'oreille
+apres l'avoir perdue de vue. Attenuation, filtrage progressif, et le
+changement de reverb quand elle tourne au coude.
+Pendant les 6 s de noir : [OBL] le son du conduit est PLEIN. On entend
+l'egouttement, la resonance, le vent lointain. Le joueur n'est pas coupe du
+monde : il est juste aveugle.
+[ART] C'est la difference entre le noir et le vide. Le jeu fait la
+difference.
+Aucune musique.
+
+§ 7 — INTERDICTIONS
+Interdit de : prendre, allumer, remplir la lanterne · ajouter de l'huile ·
+reveler l'etiquette · montrer le visage · faire revenir la silhouette ·
+ajouter un son pendant le noir qui n'existe pas hors Echo · ajouter de la
+musique · reduire la duree du noir · activer l'option d'accessibilite par
+defaut · la suggerer en jeu · rendre E18 rejouable.
+
+§ 8 — LIENS
+PN-009 (la lampe-tempete, S1) : Lohen la porte depuis 4 heures. C'est la
+premiere fois qu'elle s'eteint.
+PN-137 (la lampe a huile allumee, S8) : la derniere lampe du jeu, et l'une
+des trois occurrences de #FFA33C.
+PN-097 (le compteur electrique mort). PN-101 (les trois lustres, S6).
+[THEME] PORTER LA LUMIERE. [THEME] LE NOIR.
+
+§ 9 — DOD
+[ ] Cage de 14 fils de laiton en geometrie, tenue a 30 cm de la camera
+[ ] Globe : transmission 0,71 haut / 0,09 bas, coulures de suie
+[ ] Bidon renverse, vide, bouchon a 40 cm
+[ ] E18 : lumiere unique, depart sur 9 m, coude, 6 s de noir total
+[ ] Lampe de Lohen eteinte pendant les 6 s
+[ ] Son plein et spatialise pendant le noir, zero musique
+[ ] Option d'accessibilite presente, desactivee par defaut, jamais suggeree

@@ -1,0 +1,95 @@
+===============================================================================
+  A-300   photo_pose_03_lavandieres_with_lohen
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 300 / 744
+  Partie 2 — ESTEBAN
+  Categorie : VARIANTE / COMPORTEMENT
+  Marqueur   : MUR DE 300 PHOTOS (06.24)
+  Fichier source  : A_Esteban_Var_photo_pose_03_lavandieres_with_lohen_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : conçu — bloc de plage deplie
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 0.033 s  (1 frames a 30 fps)
+  Type .................. POSE FIGEE
+  Root motion ........... N/A
+  Couche AnimationTree .. N/A
+  Priorite .............. N/A — non applicable (clip sans priorite d'etat)
+  Poids compresse cible . ~3 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      corps complet fige — une seule frame, posee a la main
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006 (chaines de doigts dominantes sur ce clip)
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  ESTEBAN — 31 ans, accordeur de cloches. Plus grand que Lohen, roux.
+
+  Il ne tient pas en place. Il parle avec LES DEUX mains (Lohen n'en utilise
+  qu'une). Il est en avance sur le temps, jamais en retard. Gestes signature
+  : E1 il range sa meche et il RATE, E2 il sourit du cote gauche seulement,
+  E3 il tapote deux fois avant de parler serieusement. [OBL] Seul personnage
+  du jeu SANS REVERB, en toutes circonstances (11.06). [OBL] Aucun Echo ne
+  le montre, sauf E21.
+
+  Rig et costume :
+      gilet (cloth simule dans E21), crayon de charpentier derriere
+      l'oreille, carnet en poche de poitrine, montre
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  [NAR] LA PHOTO. Esteban et Lohen, rue des Lavandieres. [OBL] C'est la
+  SEULE image du jeu ou ils apparaissent ensemble en dehors d'un Echo.
+  Punaisee au mur du Marche, en S3, a 1 h de jeu, A HAUTEUR D'YEUX. [OBL]
+  Personne ne la mentionne. Aucun marqueur, aucun son, aucun succes.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Evenements de timeline :
+      aucun · rendu en jeu, eclaire par la scene, zoomable
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      aucune — clip de 1 frame monte sur un AnimationPlayer en pause
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · les clauses [OBL] de la section 3 sont verifiees en revue, pas
+      seulement en lecture
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-300
+===============================================================================

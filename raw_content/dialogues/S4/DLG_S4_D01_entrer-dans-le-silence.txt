@@ -1,0 +1,129 @@
+===============================================================================
+DLG · S4 · D01 — ENTRER DANS LE SILENCE : L'ENTRACTE COMMENCE
+18 entrees, toutes S4. LOH 12 · MIR 6. Contribution : 18.
+Reference maitre : 09.13. « REGLE UNIQUE : le silence. Aucune musique. »
+Props : PN-066 a PN-085 (annexe B, S4). Anim : LOH-WLK-024 (marche lente).
+===============================================================================
+
+--- LA LOI DE LA SEQUENCE 4 -----------------------------------------------------------
+
+[OBL] AUCUNE MUSIQUE EN S4. Pas une note, du premier pas au dernier, 28
+minutes. C'est le plus long silence musical du chapitre et le seul
+entracte. Le joueur vient de courir une heure vingt.
+
+[OBL] Consequence d'ecriture : les 388 lignes de S4 portent seules le
+rythme. Une ligne mal placee s'entend ici comme nulle part ailleurs.
+Regle de densite : jamais plus de 6 lignes consecutives sans un silence
+ecrit de 1,5 s ou plus.
+
+[OBL] Toutes les voix de S4 sont a un niveau naturel bas. Pas de
+chuchotement theatral : des gens qui parlent normalement dans un endroit
+ou l'acoustique fait le travail. Reverb : impulsion convolutive n° 3
+(le hangar), pre-delay 140 ms, queue 3,4 s.
+
+--- LES 18 LIGNES ------------------------------------------------------------------------
+
+    [S4_LOH_L001]  LOHEN · 1,4 s · fige · p2,8
+        « Oh. »
+        dir : [OBL] TROISIEME ET DERNIERE FOIS. Meme mot qu'en S1
+              (le toit) et S2 (la Maree). Le comedien enregistre les
+              trois dans la meme session, a la suite, pour que la
+              parente s'entende. Apres celle-ci, Lohen ne dira plus
+              jamais « oh » du chapitre. Pause 2,8 s : la plus longue
+              du document.
+
+    -- Ce qu'il voit : l'oculus, six etages, le rai de lumiere unique,
+       V01 a densite maximale. 09.13 : « la plus belle lumiere du jeu ».
+       [OBL] Aucun plan automatique. Aucune cinematique. Le joueur leve
+       la tete lui-meme ou il ne la leve pas.
+
+    [S4_LOH_L002]  LOHEN · 1,8 s · bas · p1,6
+        « Y'a personne. »
+
+    [S4_MIR_L003]  MIREILLE (off) · 1,2 s · sec · p0,9
+        « Si. »
+        dir : [OBL] elle est a 14 m, assise, hors du champ de la camera.
+              Le joueur doit la chercher. Elle ne bouge pas pour l'aider.
+
+    [S4_LOH_L004]  LOHEN · 1,0 s · surpris · p0,7
+        « Pardon. »
+
+    [S4_MIR_L005]  MIREILLE · 2,4 s · plat · p1,2
+        « On dit tous ca en entrant. Moi aussi je l'ai dit. »
+
+    [S4_LOH_L006]  LOHEN · 1,6 s · plat · p0,8
+        « Je cherche une fiche. »
+
+    [S4_MIR_L007]  MIREILLE · 1,4 s · sec · p1,4
+        « Naturellement. »
+        dir : [OBL] Mireille a 58 ans et elle a entendu cette phrase
+              quatre mille fois. La direction est : politesse totale,
+              zero chaleur. Ce n'est pas de la froideur, c'est de
+              l'usure administrative.
+
+    [S4_MIR_L008]  MIREILLE · 3,0 s · plat · p0,6
+        « Neuf cents fiches lisibles. Trois mille abimees. Le reste
+          est de la pate. »
+
+    [S4_LOH_L009]  LOHEN · 1,2 s · plat · p0,9
+        « Comment on cherche ? »
+
+    [S4_MIR_L010]  MIREILLE · 2,8 s · plat · p1,1
+        « On lit. »
+        dir : [OBL] LA ligne de la sequence. Dite a un homme qui ne
+              sait pas bien lire, par une femme qui l'ignore, dans un
+              batiment qui ne contient que du texte.
+              [OBL] Aucune musique (il n'y en a pas), aucun plan, aucune
+              reaction de Lohen. Le joueur encaisse seul.
+
+    [S4_LOH_L011]  LOHEN · 1,0 s · plat · p1,3
+        « D'accord. »
+
+    [S4_MIR_L012]  MIREILLE · 3,2 s · plat · p0,7
+        « Trois informations recoupees et vous avez votre fiche. La
+          date, le quartier, le metier. Dans cet ordre, ou vous y
+          passerez la nuit. »
+        dir : [OBL] LE SYSTEME DE RECHERCHE ENTIER, explique en une
+              ligne, une fois. Il n'y a pas de rappel, pas de tutoriel,
+              pas d'entree de menu. Si le joueur n'ecoute pas, il
+              cherchera au hasard pendant quatorze minutes. 09.13 :
+              « Duree reelle observee : 7 a 14 minutes. C'est voulu. »
+
+    [S4_LOH_L013]  LOHEN · 1,4 s · plat · p0,8
+        « La date je l'ai. »
+
+    [S4_MIR_L014]  MIREILLE · 1,8 s · sec · p1,0
+        « Tout le monde a la date. »
+        dir : [OBL] le 14 octobre. Elle ne la prononce pas. [OBL] La
+              date complete n'est prononcee a voix haute que DEUX fois
+              dans le chapitre : par Esteban dans la lettre (« vingt-
+              trois heures quarante et une ») et jamais autrement. Job
+              CI `date-count`.
+
+    [S4_LOH_L015]  LOHEN · 1,6 s · plat · p0,9
+        « Le quartier aussi. »
+
+    [S4_MIR_L016]  MIREILLE · 2,2 s · plat · p1,2
+        « Alors il vous manque un metier, et les metiers sont au
+          troisieme. »
+
+    [S4_LOH_L017]  LOHEN · 1,2 s · plat · p0,7
+        « Merci. »
+
+    [S4_MIR_L018]  MIREILLE · 2,6 s · plat · p0,0
+        « Ne me remerciez pas en entrant. Ca porte malheur et c'est
+          premature. »
+        dir : [OBL][NAR] Elle annonce en douze mots ce qu'elle dira
+              vraiment trois heures plus tard (canon 12.13 : « Ne me
+              remerciez pas encore »). Le joueur croit a une manie de
+              vieille dame. C'est une manie de vieille dame. C'est
+              aussi vrai.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] Zero note de musique dans toute la sequence 4
+[ ] L001 : troisieme et dernier « Oh », trois prises de la meme session
+[ ] Aucun plan automatique sur l'oculus
+[ ] L010 et L012 : le systeme entier, dit une fois, jamais rappele
+[ ] La date du 14 octobre n'est pas prononcee ici
+[ ] Densite : jamais 6 lignes sans un silence de 1,5 s

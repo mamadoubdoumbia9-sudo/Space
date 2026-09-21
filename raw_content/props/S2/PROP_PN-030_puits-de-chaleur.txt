@@ -1,0 +1,108 @@
+===============================================================================
+PN-030 — LE PUITS DE CHALEUR ET SON HALO
+===============================================================================
+Asset : SM_S2_Puits_Chaleur · S2, sur la Maree, a 120 m de L'Hirondelle ·
+~01:31 · prop narratif ENVIRONNEMENTAL · pas d'Echo · LOD0 900 tris
+
+§ 1 — CE QU'ON VOIT
+Une zone circulaire de 9 m de diametre, sur le verre, ou la Maree n'est pas
+noire : elle est LAITEUSE. Opaque. Blanche comme du verre depoli.
+Au centre, la surface est bombee de 30 cm, comme une lentille.
+Autour, sur 1,5 m, un anneau ou le verre est parfaitement clair et lisse —
+plus clair que partout ailleurs.
+Et il n'y a pas de givre. Partout sur la Maree, a 4 degres, il y a une
+pellicule de givre matinal qui craque sous les pas. Ici, non. Le givre
+s'arrete net au bord de l'anneau, en une ligne franche.
+Le verre y est TIEDE. On ne peut pas le savoir en regardant. Mais Lohen
+s'arrete et s'accroupit.
+Sous la zone laiteuse, on ne voit rien. C'est le seul endroit de la Maree
+qui ne montre pas ce qu'il y a dessous.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 900 (le bombement et l'anneau en geometrie, 9 m de diametre).
+Shader `maree_glass_frosted` : variante du shader principal avec
+transmission 0,08 au lieu de 0,66 et un SSS tres court (0,4 cm) qui donne
+la laiterie. [OBL] Pas de texture de givre inverse : la difference est
+physique, gerée par un masque de temperature dans le G-buffer.
+La transition givre/pas-givre est un blend de 4 cm, pas un fondu. Franche.
+Distorsion de l'air : un leger shimmer vertical au-dessus de la zone,
+amplitude 0,6 px a 2 m, decroissant. [OBL] Tres discret. C'est la seule
+distorsion de chaleur du jeu.
+Anim : NEANT. La zone est parfaitement stable.
+Interaction : LOH-ACT-181, 3,4 s — Lohen s'accroupit, pose la paume nue
+(gauche) sur le verre, la laisse 2 s, la retire. Il ne dit rien. Il se
+releve. Une seule fois par partie.
+
+§ 3 — CE QUE CA DIT
+Il y a quelque chose de chaud sous la Maree.
+[OBL] JAMAIS EXPLIQUE. Ni au chapitre 1, ni dans les six lettres suivantes.
+Pas de source, pas de creature, pas de machine, pas de reacteur, pas de
+metaphore resolue. C'est un fait du monde.
+Le geste humain : aucun. C'est le premier prop narratif du chapitre qui ne
+raconte aucun geste humain. Il raconte le MONDE.
+[ART] Fonction de design : a 1h31, le joueur a passe une heure et demie a
+lire des objets humains. Le jeu lui rappelle qu'il y a autre chose ici, que
+la Maree n'est pas un decor, et qu'elle ne rendra pas de comptes.
+Le verre laiteux qui empeche de voir dessous est le point : partout
+ailleurs, la Maree montre. Ici, elle cache.
+
+§ 4 — ECHO
+NEANT. [OBL] Triple impossibilite : sur la Maree (regle PN-011), aucun
+geste humain, et surtout — si un Echo existait ici, il expliquerait. Le
+systeme des Echos est une machine a reveler. On ne la branche jamais sur
+la Maree elle-meme.
+[NAR] Le prompt d'Echo n'apparait pas, mais un prompt d'INTERACTION
+apparait (la paume). C'est la seule fois du chapitre ou le joueur voit une
+icone d'interaction sur la Maree. Il s'attend a un Echo. Il a un geste.
+
+§ 5 — MISE EN SCENE
+Sur le chemin du retour, entre L'Hirondelle et la rive. Le joueur revient.
+Il a trouve la veste. Il a vu la barre. Il rentre.
+La zone blanche est visible a 200 m : un disque pale sur une plaine noire.
+Elle n'etait pas la a l'aller. [OBL] SI, elle y etait — mais le chemin
+d'aller passe 90 m plus au nord et l'angle de la lumiere du debut de S2 ne
+la revelait pas. Rien n'a change. C'est le joueur qui n'avait pas regarde.
+Verifier que la zone est bien presente et visible dans l'editeur des le
+debut de la sequence.
+Le shimmer de chaleur est visible a contre-jour seulement, donc seulement
+au retour. La direction de la lumiere fait tout le travail.
+Apres l'interaction : rien. Lohen se releve et continue. Aucune musique,
+aucun plan, aucun mot.
+
+§ 6 — AUDIO
+[OBL] Le SILENCE change. Sur la zone, le banc de bruit rose filtre a 120 Hz
+de la Maree (cf. PN-011) DISPARAIT completement. Il n'y a plus rien du tout.
+Le joueur entre dans les 9 m et le monde perd sa derniere couche de fond.
+Il ressort : elle revient.
+Aucun testeur ne l'identifie consciemment. Tous le ressentent.
+Les pas : sur la zone, matiere `verre_tiede` — le meme son que le verre,
+mais sans le craquement de givre. Le craquement s'arrete a la ligne. C'est
+le seul indice audible de la frontiere.
+Aucune musique, jamais.
+
+§ 7 — INTERDICTIONS
+Interdit de : expliquer la source de chaleur · montrer quoi que ce soit
+dessous · faire fondre le verre · faire monter de la vapeur · ajouter une
+lueur · ajouter une creature · faire parler Lohen · faire commenter par un
+PNJ · ajouter un journal · reutiliser ce shader ailleurs dans le chapitre ·
+faire de la zone une entree, un passage ou un secret · resoudre dans les
+lettres 2 a 7.
+[OBL] Cette zone est la seule anomalie non humaine du chapitre 1, et elle
+doit le rester.
+
+§ 8 — LIENS
+PN-011 (le velo : la Maree ne rend rien). PN-023 (le tramway : la Maree
+montre). Ici, la Maree cache. Trois comportements, aucun explique.
+PN-037 (la premiere Figure immobile, a 300 m, 6 minutes plus tard) —
+l'autre anomalie non humaine, et le jeu ne les relie pas.
+[THEME] LE MONDE NE DOIT PAS DE COMPTES.
+
+§ 9 — DOD
+[ ] 9 m de diametre, bombement de 30 cm, anneau clair de 1,5 m
+[ ] Transition givre/sans-givre franche, 4 cm de blend, ligne visible
+[ ] Transmission 0,08 : rien n'est visible dessous
+[ ] Shimmer 0,6 px, visible a contre-jour uniquement
+[ ] LOH-ACT-181 : paume gauche, 2 s, une fois par partie, sans un mot
+[ ] Bruit de fond 120 Hz coupe a 100 % dans la zone
+[ ] Craquement de givre absent sur la zone, present au bord
+[ ] Presente et inchangee depuis le debut de S2

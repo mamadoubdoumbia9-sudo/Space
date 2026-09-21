@@ -1,0 +1,112 @@
+===============================================================================
+DLG · S2 · D06 — ECHO 05 : LA BARRE A FOND TRIBORD
+14 lignes · ECH 14 · l'Echo le plus court et le plus violent de S2
+Verrou canon (annexe B) : « E05 barre a fond tribord, 11 s de silence total
+puis 4 s de roue bloquee ». Prop : PN-034 (la roue de barre).
+===============================================================================
+
+--- CONTEXTE -------------------------------------------------------------------
+
+La timonerie du chalutier, au-dessus de la cabine. La roue de barre est
+bloquee a fond tribord. Elle est bloquee parce que quelqu'un l'a mise la
+et que le verre l'a prise ainsi.
+
+Duree de l'Echo : 47 s. Il commence normalement. A t+24 s, tout s'arrete.
+
+[OBL] LE VERROU DES 11 SECONDES. A t+24 s, le mix coupe integralement :
+voix, ambiance, musique, pluie, tout. -inf dB numerique pendant 11 s,
+pendant lesquelles les silhouettes continuent de bouger. Puis 4 s de son
+de la roue bloquee, seule, qui force (sample reel : une roue de gouvernail
+de 1,4 m, bloquee, sur laquelle deux hommes tirent). Puis dissolution.
+
+Ces 15 secondes sont le deuxieme silence actif du chapitre (13.31, liste
+`/docs/silence_beats.md`). Elles ne sont ni sautables ni raccourcissables.
+Si un producteur demande a les reduire a 6 s « pour le rythme », non : la
+duree EST l'effet, et un playtest a 6 s ne produit rien du tout.
+
+--- LES 14 LIGNES ----------------------------------------------------------------
+
+Toutes avant t+24 s. Apres, personne ne parle.
+
+    [S2_ECH_L057]  PATRON · 1,6 s · pratique · p0,4
+        « Cap au deux-sept-zero. »
+
+    [S2_ECH_L058]  BARREUR · 1,1 s · pratique · p0,5
+        « Deux-sept-zero. »
+
+    [S2_ECH_L059]  MARIN 1 · 2,3 s · plat · p0,4
+        « On rentre tot. Y'a pas de vent et y'a pas de poisson. »
+
+    [S2_ECH_L060]  PATRON · 1,4 s · sec · p0,6
+        « Y'a pas de poisson parce qu'on rentre tot. »
+
+    [S2_ECH_L061]  MARIN 1 · 1,2 s · moqueur · p0,5
+        « C'est ca. »
+
+    [S2_ECH_L062]  BARREUR · 2,0 s · plat · p0,4
+        « Le compas dévie. Regarde. »
+
+    [S2_ECH_L063]  PATRON · 1,7 s · plat · p0,5
+        « Il dévie depuis juin. »
+
+    [S2_ECH_L064]  BARREUR · 2,4 s · prudent · p0,6
+        « Non. La, il dévie en ce moment. Pendant que je le regarde. »
+        dir : [OBL] c'est la seule ligne de tout le chapitre qui ressemble
+              a un presage, et elle n'en est PAS un : un compas qui
+              devie devant temoin s'explique par une masse metallique
+              proche, et il y en a une (le treuil qu'on vient de
+              remonter). Le jeu ne le dira pas. Il ne faut PAS ajouter
+              de plan sur le treuil : ce serait expliquer.
+              INTERDIT 21.08 : aucun presage de la Maree. Cette ligne
+              passe parce qu'elle a une cause banale disponible pour qui
+              la cherche. Elle est la limite. On ne va pas plus loin.
+
+    [S2_ECH_L065]  PATRON · 1,9 s · plat · p0,5
+        « Le treuil est encore sorti ? »
+
+    [S2_ECH_L066]  MARIN 1 · 1,0 s · plat · p0,7
+        « Ouais. »
+
+    [S2_ECH_L067]  PATRON · 2,1 s · plat · p0,6
+        « Voila ton compas. Rentre-le. »
+        dir : [OBL] LA CAUSE EST DONNEE. Explicitement, platement, deux
+              lignes apres l'inquietude. C'est ainsi qu'on ecrit un monde
+              sans presage : on repond a l'etrange par de la mecanique,
+              tout de suite, sans mystere.
+
+    [S2_ECH_L068]  BARREUR · 1,3 s · plat · p0,5
+        « Deux-sept-zero, toujours. »
+
+    [S2_ECH_L069]  MARIN 1 · 2,6 s · las · p0,8
+        « Trente-huit minutes et je suis dans mon lit. »
+
+    [S2_ECH_L070]  PATRON · 2,2 s · plat · p0,0
+        « Trente-neuf. »
+        dir : derniere ligne. Il a raison a la minute pres, comme
+              toujours. [OBL] A t+24 s exactement — 1,1 s apres la fin de
+              cette ligne — LE MIX COUPE. Rien n'annonce la coupure. Les
+              silhouettes continuent : le barreur tourne la roue a fond
+              tribord (mouvement de 2,8 s), les autres regardent quelque
+              chose hors champ que la camera ne montre pas et ne montrera
+              jamais. 11 s. Puis 4 s de roue qui force. Puis rien.
+
+--- CE QUE LE JOUEUR VOIT PENDANT LES 11 SECONDES -------------------------------
+
+[OBL] Le joueur doit pouvoir regarder ou il veut. Aucun lock. S'il regarde
+ses pieds pendant onze secondes, il rate tout, et c'est son droit.
+Ce qui se passe : le barreur met la barre a fond, les trois autres se
+tournent vers bâbord arriere, un d'eux leve un bras. La silhouette du
+patron pose une main sur l'epaule du mousse. C'est le seul contact
+physique entre deux silhouettes de tout le chapitre.
+
+[OBL] La camera ne cadre pas la main sur l'epaule. Aucun zoom. Aucune
+lumiere differente.
+
+--- CHECKLIST --------------------------------------------------------------------
+
+[ ] 11 s de -inf dB numerique, mesurees, non raccourcissables
+[ ] 4 s de roue bloquee, sample reel
+[ ] L064 : cause banale fournie en L067, aucun plan sur le treuil
+[ ] Aucun presage de la Maree
+[ ] Main sur l'epaule : presente, jamais cadree
+[ ] Aucun lock de camera pendant les 11 s

@@ -1,0 +1,131 @@
+===============================================================================
+DLG · S3 · D01 — ENTREE DANS LA VILLE VIVANTE : LE CHOC DU BRUIT
+26 entrees : 22 BARKS (comptes dans les 340, lot BK_S3) + 4 lignes LOHEN
+(comptees dans les 512 de S3). Contribution de ce document au total S3 : 4.
+Les 22 barks ci-dessous ont leur domicile canonique ICI et non dans
+dialogues/BARKS/ : le document BK_S3 y renvoie au lieu de les recopier.
+Reference maitre : 09.12. Anim : LOH-WLK-020, foule PNJ-GEN-001..048.
+===============================================================================
+
+--- LA REGLE DU CHOC ------------------------------------------------------------
+
+Quarante-huit minutes de solitude viennent de s'ecouler. Le monte-charge
+s'ouvre sur 400 personnes.
+
+[OBL] Le mix ne fait AUCUN fondu. La porte du monte-charge s'ouvre en
+0,8 s et le lit d'ambiance du Marche entre a plein niveau, -11 dB, d'un
+coup. C'est la plus grande variation de niveau du jeu apres les cloches
+de E27. Certains joueurs sursauteront. C'est prevu, c'est mesure, et le
+preset « Haut-parleur » (13.32) est valide specifiquement sur ce moment.
+
+[OBL] Les 22 barks ci-dessous sont dans les 96 de BK_S3. Ils se jouent
+dans les 90 premieres secondes, en couches, certains simultanes. Le
+joueur n'est pas cense tous les entendre. Il est cense etre submerge.
+Aucun n'est important. C'est le seul endroit du jeu ou on ecrit du
+dialogue pour qu'il ne soit pas ecoute.
+
+--- LES 22 BARKS D'ENTREE --------------------------------------------------------
+
+    [S3_BK_L001]  MARCHANDE · 1,4 s · clair · p0,0
+        « Du sel, du sel gris, deux pieces la mesure ! »
+
+    [S3_BK_L002]  HOMME · 1,1 s · agace · p0,0
+        « Tu passes ou tu passes pas. »
+
+    [S3_BK_L003]  ENFANT · 0,9 s · joueur · p0,0
+        « A toi ! A toi ! »
+
+    [S3_BK_L004]  FEMME · 1,6 s · clair · p0,0
+        « Odile ! Ton linge touche par terre ! »
+
+    [S3_BK_L005]  VIEUX · 2,0 s · las · p0,0
+        « Trois ans qu'ils disent qu'ils vont reparer la passerelle six. »
+
+    [S3_BK_L006]  HOMME · 1,2 s · presse · p0,0
+        « Derriere ! Derriere ! »
+
+    [S3_BK_L007]  FEMME · 1,8 s · plat · p0,0
+        « Je l'ai pas vue depuis mardi. Elle mange plus, je crois. »
+
+    [S3_BK_L008]  MARCHAND · 1,3 s · clair · p0,0
+        « Corde de six, corde de dix, crochet neuf ! »
+
+    [S3_BK_L009]  ADO · 1,0 s · moqueur · p0,0
+        « C'est un relayeur. Regarde sa veste. »
+
+    [S3_BK_L010]  ADO 2 · 1,4 s · moqueur · p0,0
+        « Y'a plus de courrier, imbecile. »
+
+    [S3_BK_L011]  FEMME · 1,7 s · plat · p0,0
+        « Si, y'en a. Ma soeur en recoit. »
+
+    [S3_BK_L012]  HOMME · 2,1 s · plat · p0,0
+        « Ta soeur elle est au Marche. C'est pas du courrier, c'est du
+          bavardage a pied. »
+
+    [S3_BK_L013]  ENFANT · 1,1 s · joueur · p0,0
+        « Wenna a triche ! »
+
+    [S3_BK_L014]  ENFANT 2 · 0,8 s · joueur · p0,0
+        « Non ! »
+
+    [S3_BK_L015]  FORGERON (Brel, hors champ) · 1,5 s · plat · p0,0
+        « Ca chauffe. Ecartez-vous. »
+
+    [S3_BK_L016]  FEMME · 1,9 s · las · p0,0
+        « Encore le treuil. Thea ! Le treuil ! »
+
+    [S3_BK_L017]  MILICIEN · 1,3 s · sec · p0,0
+        « Circulez sur la gauche. »
+
+    [S3_BK_L018]  VIEILLE · 2,3 s · plat · p0,0
+        « De mon temps on descendait au port pour ca. »
+
+    [S3_BK_L019]  HOMME · 1,6 s · plat · p0,0
+        « De ton temps y'avait un port. »
+
+    [S3_BK_L020]  MARCHANDE · 1,2 s · clair · p0,0
+        « Sel ! Sel gris ! »
+
+    [S3_BK_L021]  ENFANT · 1,0 s · joueur · p0,0
+        « Un, deux, trois, la corde ! »
+
+    [S3_BK_L022]  FEMME · 2,4 s · doux · p0,0
+        « Rentre avant la nuit. Je dis ca tous les jours et tu rentres
+          jamais avant la nuit. »
+
+--- LES 4 LIGNES DE LOHEN --------------------------------------------------------
+
+    [S3_LOH_L023]  LOHEN · 1,1 s · fige · p0,0
+        « Ah oui. »
+        dir : il avait oublie le bruit. Deux syllabes pour quarante-huit
+              minutes de solitude qui s'arretent. Dit pour lui, couvert
+              a moitie par la foule : le mix ne le protege pas.
+
+    [S3_LOH_L024]  LOHEN · 1,4 s · plat · p0,0
+        « Pardon. Pardon. »
+        dir : declenchee a la 3e collision avec un PNJ. [OBL] Les PNJ ne
+              s'ecartent PAS devant le joueur. Aucun couloir invisible.
+              Se frayer un passage prend du temps et c'est le but : la
+              foule est un terrain, pas un decor.
+
+    [S3_LOH_L025]  LOHEN · 1,8 s · plat · p0,0
+        « Anneau bleu. C'est moi qui l'ai pose. »
+        dir : au premier des 60 anneaux de relayeur. Declenchee une
+              seule fois dans toute la sequence, au premier touche.
+              [OBL] Aucune indication visuelle ne distingue les anneaux
+              poses par Lohen. Il en a pose la moitie. Il ne les
+              recompte jamais.
+
+    [S3_LOH_L026]  LOHEN · 1,3 s · plat · p0,0
+        « Le poste de milice est en haut. »
+        dir : une seule direction donnee au joueur dans toute la
+              sequence. Pas de marqueur de quete. Le poste est visible :
+              c'est le seul batiment avec un toit de tole rouge.
+
+--- CHECKLIST --------------------------------------------------------------------
+
+[ ] Entree du son sans fondu, -11 dB, valide au haut-parleur
+[ ] Les PNJ ne s'ecartent pas
+[ ] 22 barks en couches, aucun important
+[ ] Aucun marqueur de quete vers le poste de milice

@@ -1,0 +1,130 @@
+===============================================================================
+DLG · S4 · D13 — E19 (L'AFFICHE) + LES 38 BARKS CHUCHOTES DE BK_S4
+12 lignes S4 (E19) + 38 barks (lot BK_S4, comptes dans les 340).
+Contribution au total S4 : 12.
+===============================================================================
+
+--- E19 — L'AFFICHE DES 641 NOMS (12 lignes, 56 s) --------------------------------------
+
+Debloque par le CHOIX 21 branche [1]. 29 % des joueurs.
+[OBL] R3 : l'affiche a un proprietaire unique — l'imprimeur qui l'a
+tiree, mort en 'seize, pas a la Maree. L'Echo est le sien.
+
+Une imprimerie. Trois silhouettes. La presse tourne.
+
+    [S4_ECH_L339]  L'IMPRIMEUR · 2,4 s · pratique · p0,8
+        « Six cent quarante et un. Tu es sur du chiffre ? »
+
+    [S4_ECH_L340]  L'EMPLOYE · 1,8 s · plat · p0,9
+        « C'est le chiffre qu'on m'a donne. »
+
+    [S4_ECH_L341]  L'IMPRIMEUR · 2,8 s · pratique · p1,0
+        « Ce n'est pas pareil. »
+
+    [S4_ECH_L342]  L'EMPLOYE · 2,2 s · plat · p1,1
+        « Non. »
+
+    [S4_ECH_L343]  L'IMPRIMEUR · 3,0 s · pratique · p0,9
+        « Combien de colonnes ? »
+
+    [S4_ECH_L344]  L'EMPLOYE · 2,0 s · plat · p1,0
+        « Quatre. Cent soixante par colonne. »
+
+    [S4_ECH_L345]  L'IMPRIMEUR · 2,6 s · pratique · p1,2
+        « Ca fait six cent quarante. »
+
+    [S4_ECH_L346]  L'EMPLOYE · 2,4 s · plat · p1,4
+        « Il y en a un de plus en bas de la quatrieme. Tout seul. »
+
+    [S4_ECH_L347]  L'IMPRIMEUR · 3,2 s · plat · p1,6
+        « Alors mets-le en haut de la premiere. »
+
+    [S4_ECH_L348]  L'EMPLOYE · 2,8 s · plat · p1,2
+        « Pourquoi ? »
+
+    [S4_ECH_L349]  L'IMPRIMEUR · 3,4 s · plat · p1,0
+        « Parce qu'en bas tout seul, on dirait qu'on l'a oublie. »
+        dir : [OBL][NAR] Le 641e nom est en haut de la premiere
+              colonne. [OBL] Sur l'affiche PN-003, modelisee, le
+              premier nom de la premiere colonne est en effet decale
+              de 2 mm et d'une taille de corps differente de 0,4 pt.
+              Verifiable au zoom. [NAR] Ce nom n'est PAS Esteban Marek
+              (canon : MAREK Esteban n'est jamais barre, et il est dans
+              la troisieme colonne). C'est le nom de PN-077 l. 22 —
+              celui de la 201e croix. Personne ne le dira jamais.
+
+    [S4_ECH_L350]  L'EMPLOYE · 2,2 s · plat · p0,0
+        « D'accord. »
+        dir : dissolution. La presse continue de tourner 1,4 s apres la
+              disparition des silhouettes. [OBL] C'est le seul Echo du
+              chapitre dont un son survit a la dissolution. Une seule
+              fois. On ne recommence pas.
+
+--- LES 38 BARKS DE BK_S4 (hors total S4) -----------------------------------------------------
+
+[OBL] Tous chuchotes, tous sous -22 dB, tous a plus de 8 m du joueur.
+Ce sont les deux employes de nuit, la femme de menage, et un lecteur
+solitaire au deuxieme. Quatre voix. Aucun ne s'adresse a Lohen. Aucun
+n'est intelligible a plus de 14 m.
+
+[OBL] LE PARADOXE ASSUME : la sequence est « vide » (09.13 : « Y'a
+personne », L002) et il y a quatre personnes dedans. Elles sont loin,
+basses, occupees. Le joueur croit etre seul avec Mireille pendant vingt
+minutes, puis il croise une femme de menage au detour d'un rayonnage et
+il sursaute. Une fois. C'est tout ce que la sequence se permet.
+
+    [S4_BK_L351]  « ... deux mille sept cent douze... »                    2,0 s
+    [S4_BK_L352]  « ... et il en reste trois mille... »                    1,8 s
+    [S4_BK_L353]  « Le seau. »                                             0,8 s
+    [S4_BK_L354]  « Je l'ai vide. »                                        1,0 s
+    [S4_BK_L355]  « Tu l'as vide hier. »                                   1,3 s
+    [S4_BK_L356]  « Je le vide tous les jours. »                           1,6 s
+    [S4_BK_L357]  « Chut. »                                                0,5 s
+    [S4_BK_L358]  « Y'a personne. »                                        1,0 s
+    [S4_BK_L359]  « Y'a Vandeck. »                                         1,2 s
+    [S4_BK_L360]  « Vandeck c'est pas personne ? »                         1,8 s
+    [S4_BK_L361]  « ... »                                                  0,9 s
+        dir : [OBL] souffle de rire retenu. Fichier VO reel.
+    [S4_BK_L362]  « Troisieme etage, plancher. »                           1,6 s
+    [S4_BK_L363]  « Je sais. »                                             0,7 s
+    [S4_BK_L364]  « Non, le TROISIEME. Le quatrieme est deja fini. »       2,4 s
+    [S4_BK_L365]  « Ah. »                                                  0,6 s
+    [S4_BK_L366]  « Faut le dire a quelqu'un. »                            1,4 s
+    [S4_BK_L367]  « A qui ? »                                              0,9 s
+    [S4_BK_L368]  « ... »                                                  1,1 s
+    [S4_BK_L369]  « Voila. »                                               0,8 s
+    [S4_BK_L370]  « Page trente et un. »                                   1,2 s
+    [S4_BK_L371]  « Page trente et un. »                                   1,2 s
+        dir : [OBL] le lecteur solitaire du deuxieme relit la meme
+              page. Il la relit 31 fois dans la sequence si le joueur
+              reste assez longtemps. Personne ne le remarque, sauf le
+              systeme de bark qui, pour lui seul, n'a PAS de cooldown.
+              Exception unique et declaree.
+    [S4_BK_L372]  « Page trente et un. »                                   1,2 s
+    [S4_BK_L373]  « ... trente et un. »                                    1,4 s
+    [S4_BK_L374]  « Le balai est casse. »                                  1,3 s
+    [S4_BK_L375]  « Repare-le. »                                           1,0 s
+    [S4_BK_L376]  « Avec quoi ? »                                          0,9 s
+    [S4_BK_L377]  « Avec le balai. »                                       1,1 s
+    [S4_BK_L378]  « ... »                                                  0,8 s
+    [S4_BK_L379]  « Bonne nuit. »                                          1,0 s
+    [S4_BK_L380]  « Il est trois heures de l'apres-midi. »                 2,0 s
+    [S4_BK_L381]  « Bonne nuit quand meme. »                               1,6 s
+        dir : [NAR] RACCORD S1_LOH_L064 (« Bonne nuit » a 06:40).
+              Dans cette ville, les horaires ne veulent plus rien dire.
+              Deuxieme et derniere occurrence du motif.
+    [S4_BK_L382]  « Faut rentrer les fiches du couloir. »                  1,8 s
+    [S4_BK_L383]  « Demain. »                                              0,7 s
+    [S4_BK_L384]  « Tu dis ca depuis trois ans. »                          1,6 s
+    [S4_BK_L385]  « Et elles sont toujours la. »                           1,4 s
+    [S4_BK_L386]  « Donc ca marche. »                                      1,2 s
+    [S4_BK_L387]  « ... »                                                  0,9 s
+    [S4_BK_L388]  « Chut. »                                                0,5 s
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] E19 : 641e nom en haut de colonne 1, decale de 2 mm, verifiable
+[ ] E19 : seul Echo dont un son (la presse) survit 1,4 s a la dissolution
+[ ] 38 barks, tous sous -22 dB, jamais intelligibles a plus de 14 m
+[ ] L371-L373 : exception de cooldown declaree pour le lecteur
+[ ] Un seul sursaut dans toute la sequence (la femme de menage)

@@ -1,0 +1,107 @@
+===============================================================================
+PN-037 — LA PREMIERE FIGURE IMMOBILE
+===============================================================================
+Asset : SM_S2_Figure_Immobile_01 · S2, sur la Maree, a 300 m au sud du
+chemin de retour · ~01:46 · prop narratif · pas d'Echo · DERNIER PROP DE S2
+LOD0 4 400 tris
+
+§ 1 — CE QU'ON VOIT
+Tres loin, sur le verre, il y a quelqu'un debout.
+Une silhouette humaine, verticale, immobile, a 300 metres. On distingue une
+forme sombre, la proportion d'un corps, peut-etre un manteau.
+Elle ne bouge pas. Elle ne se rapproche pas. Elle ne s'eloigne pas.
+Si le joueur marche vers elle, elle reste a 300 metres. [OBL] Non pas
+parce qu'elle recule — elle est parfaitement statique dans le monde — mais
+parce qu'un mur invisible de brume arrete la progression du joueur a 280 m
+du chemin : au-dela, la visibilite tombe a 12 m et le joueur perd sa
+direction. Il n'y a pas de barriere. Il y a du brouillard.
+Si le joueur revient sur le chemin et regarde a nouveau : elle est la.
+Si le joueur l'observe pendant cinq minutes : elle ne bouge pas.
+En S8, depuis le sommet du Phare, a 212 m de haut, on peut voir ce point
+du verre. Il n'y a rien.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 4 400 mais [OBL] le joueur ne verra JAMAIS le LOD0. Le prop est
+verrouille au LOD3 (180 tris) en permanence, par un override de distance
+force, meme si le joueur s'approche a 280 m. Le LOD0 existe uniquement
+parce que le pipeline l'exige et il ne doit jamais etre charge.
+Ce qu'on voit reellement : 180 tris, une texture 256², a travers 300 m de
+brume volumetrique (extinction 0,004/m), soit une silhouette de 9 pixels de
+haut sur un ecran de telephone.
+[OBL] Zero animation. Zero. Pas de respiration, pas de balancement, pas de
+vertex-anim, pas de billboard qui tourne. C'est un mesh statique, oriente
+une fois a l'import, jamais touche ensuite.
+[OBL] Sa rotation ne suit PAS la camera. Selon l'endroit d'ou le joueur
+regarde, il la voit de trois quarts, de profil ou de dos. Elle est orientee
+au 118° et elle le reste.
+Elle est presente dans la scene S2 depuis le chargement, jamais spawnee,
+jamais despawnee, jamais streamee. Cout : 0,02 ms.
+
+§ 3 — CE QUE CA DIT
+[OBL] Rien. Absolument rien. Deuxieme et derniere exception a la regle de
+validation de l'index (0.03), apres PN-031.
+Ce n'est pas un fantome. Ce n'est pas un Echo. Ce n'est pas un survivant.
+Ce n'est pas Esteban. Ce n'est pas le Verrier. Ce n'est pas la mort.
+Ce n'est pas une hallucination de Lohen (le jeu n'a aucun registre
+d'hallucination et n'en aura jamais).
+[OBL] C'est un objet du monde. Il y a quelqu'un debout, tres loin, sur la
+mer de verre, et on ne saura pas qui, et on ne s'en approchera pas.
+Interdiction absolue, dans ce chapitre et dans les six suivants,
+d'identifier, d'expliquer, de resoudre, de nommer ou de reutiliser cette
+Figure autrement que comme dans § 8.
+
+§ 4 — ECHO
+NEANT, evidemment. Elle est a 300 m et inatteignable.
+[ART] Le joueur, a 1h46, connait le systeme. Il sait qu'un objet a un Echo
+ou n'en a pas. Il n'a jamais envisage qu'une PERSONNE puisse etre un objet
+du decor. Ce prop est le seul qui casse sa grille de lecture.
+
+§ 5 — MISE EN SCENE
+[OBL] Elle n'est pas dans l'axe du chemin. Elle est a 40° a gauche. Le
+joueur qui marche droit vers la rive ne la voit pas.
+Ce qui la revele : la lumiere. Vers 01:46, la brume s'est levee de 20 %
+(cf. PN-026, § 5) et un pan de ciel s'eclaircit au sud. Pendant environ
+90 secondes de temps de jeu, la visibilite au sud passe de 180 m a 340 m.
+Puis la brume revient et elle disparait.
+[OBL] Fenetre de 90 secondes, une seule fois, pendant le retour de S2.
+Si le joueur ne regarde pas au sud pendant ces 90 secondes, il ne la verra
+jamais. Taux de decouverte cible : 22-30 %.
+Si Lohen la regarde : rien. Pas de LookAt, pas de ralenti, pas de musique,
+pas d'arret, pas de dialogue, pas de zoom, pas de vignettage.
+[OBL] Le jeu ne reconnait a aucun moment l'existence de cette Figure.
+
+§ 6 — AUDIO
+NEANT. Aucun son ne vient d'elle. Aucun son ne change quand on la voit.
+Aucune musique. Aucun stinger. Aucun sub-bass.
+[OBL] Verifier au metre : la courbe de mix est strictement identique, que
+la Figure soit visible ou non, que le joueur la regarde ou non.
+
+§ 7 — INTERDICTIONS
+Interdit de : la faire bouger, meme d'un pixel · la faire disparaitre
+pendant qu'on la regarde · la faire apparaitre plus pres · la dupliquer ·
+lui donner un visage, un nom, une voix · l'animer · l'utiliser comme
+jump scare · la faire commenter · la relier a Esteban, au Verrier, a un
+mort, a un survivant · ajouter un son · ajouter de la musique · afficher un
+succes · la rendre atteignable · l'expliquer dans les lettres 2 a 7 ·
+la supprimer parce que des testeurs la trouvent frustrante.
+[OBL] Un testeur frustre est un testeur qui l'a vue.
+
+§ 8 — LIENS
+[OBL] SEULE reutilisation autorisee dans le chapitre 1 : en S8, au sommet
+du Phare, le joueur peut regarder le verre. La Figure n'y est pas. Ce point
+precis du verre est vide. Aucune camera ne le souligne, aucune ligne de
+dialogue ne l'evoque, aucun succes ne se declenche. Environ 2 % des joueurs
+le verifieront.
+PN-030 (le puits de chaleur) et PN-031 (la main) : les trois anomalies
+non humaines / non explicables de S2. Jamais reliees entre elles.
+[THEME] LE MONDE NE DOIT PAS DE COMPTES.
+
+§ 9 — DOD
+[ ] Verrouillee au LOD3 en permanence, LOD0 jamais charge
+[ ] Zero animation de toute nature, rotation fixe a 118°, ne suit pas la camera
+[ ] Statique dans la scene des le chargement, jamais spawnee
+[ ] Fenetre de visibilite de 90 s, une seule fois, par la meteo
+[ ] Taux de decouverte mesure entre 20 et 32 % sur 20 testeurs
+[ ] Courbe de mix strictement identique avec et sans visibilite
+[ ] Absente du verre en S8, sans aucune signalisation
+[ ] Aucune ligne de dialogue du chapitre ne la mentionne

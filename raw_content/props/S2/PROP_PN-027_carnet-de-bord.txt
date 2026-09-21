@@ -1,0 +1,110 @@
+===============================================================================
+PN-027 — LE CARNET DE BORD MOUILLE
+===============================================================================
+Asset : SM_S2_Carnet_Bord · S2, tablette de la timonerie, a 1 m de la barre
+· ~01:20 · prop a TEXTE LISIBLE · pas d'Echo · LOD0 1 100 tris
+
+§ 1 — CE QU'ON VOIT
+Un cahier de bord a couverture de toile noire, format 24 x 32, ouvert a
+plat sur une tablette inclinee, maintenu par un elastique de cuir.
+Il est MOUILLE. Pas humide : trempe, puis seche, puis retrempe, cent fois
+en trois ans. Les pages ont gondole en vagues. L'encre a bave par endroits.
+La page de gauche est illisible : l'eau a tout dissous en nuages gris-bleu.
+La page de droite est lisible sur quatre lignes. Les autres ont coule.
+
+Ce qu'on lit, ecrit a l'encre, d'une ecriture de marin, petite et penchee :
+
+     14.10 — 19h20 — appareillage. 6 a bord + 1 passager.
+     14.10 — 21h05 — chalut a l'eau. Fond propre.
+     14.10 — 23h39 — vent nul. Mer plate comme une assiette.
+     14.10 — 23h4
+
+La derniere ligne s'arrete apres « 23h4 ». Le trait de la plume continue
+sur 4 centimetres, en descendant, jusqu'au bord de la page.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 100. La gondolerie des pages est de la GEOMETRIE : 340 tris rien que
+pour les ondulations de la double page. Une normal map ne rend pas le
+relief d'un papier qui a seche cent fois.
+[OBL] Texture 8K pour la double page. C'est la plus haute resolution de
+texture du chapitre, sur un objet de 24 cm. Justification : le joueur
+approchera son visage a 25 cm et lira ligne par ligne. La densite requise
+est de 700 px/m.
+Les quatre lignes sont ECRITES A LA MAIN par un calligraphe, a la plume,
+puis scannees. [OBL] Aucune police. Aucun generateur. Le « 23h4 » interrompu
+et le trait de 4 cm sont faits en une seule fois, par une main reelle qu'on
+interrompt pendant qu'elle ecrit.
+Shader `paper_wet_dry_cycled` : deux couches d'encre (celle qui a tenu,
+celle qui a bave) + un masque de gondolerie couple a la normal map.
+Collision : non ramassable, non tournable. [OBL] On ne peut pas tourner les
+pages. Il n'y a pas d'autre page. Le carnet n'est pas un document a
+consulter : c'est un objet a regarder.
+
+§ 3 — CE QUE CA DIT
+« 6 a bord + 1 passager. »
+Le passager, c'est Esteban. Le joueur vient de trouver sa veste huit
+minutes plus tot, dans la cabine, deux ponts plus bas. Il n'y a pas besoin
+de le dire.
+« Mer plate comme une assiette » a 23h39 : deux minutes avant.
+Et le trait de 4 cm qui descend.
+Le geste humain : ecrire l'heure. Il commencait a noter 23h45 ou 23h47 —
+une entree de routine. Il en etait a « 23h4 » quand ca a commence.
+[NAR] Le trait qui descend est la trace physique de la premiere seconde de
+la Maree. C'est le document le plus proche de l'evenement que le jeu
+possede, et il ne contient aucune information sur l'evenement.
+[OBL] C'est deliberé et c'est absolu : la Maree n'est JAMAIS decrite par un
+temoin, jamais expliquee, jamais analysee. Les 641 personnes qui l'ont vue
+n'ont rien laisse. Toute tentative d'ajouter un temoignage est une
+violation du canon (10.07, 21.08).
+
+§ 4 — ECHO
+NEANT. Raison : le carnet est un document de service, tenu par plusieurs
+mains (six hommes se relaient a la veille). Objet collectif, cf. PN-016.
+[ART] Et surtout : E05 vient d'avoir lieu, a un metre de la. Deux Echos a
+un metre l'un de l'autre seraient une faute de rythme.
+
+§ 5 — MISE EN SCENE
+Sur la tablette, a droite de la barre. Le joueur qui vient de vivre E05 se
+retourne et le voit.
+Ordre naturel : la barre d'abord (elle est au centre, on la voit en
+entrant), le carnet ensuite. [OBL] Ne pas inverser : le carnet APRES l'Echo.
+Si le joueur lit le carnet d'abord, il apprend qu'il y avait un passager
+avant de voir la silhouette du patron — et E05 perd sa solitude.
+Solution : la tablette du carnet est orientee de telle sorte qu'elle n'est
+lisible que depuis une position qu'on n'atteint qu'en contournant la barre.
+L'architecture impose l'ordre. Aucun script.
+Lumiere : la lumiere blanche des vitres tombe a plat sur la page. Le papier
+gondole projette ses propres micro-ombres. C'est ca qui le rend reel.
+[OBL] Aucun zoom, aucun mode examen, aucun overlay. Le joueur se penche.
+
+§ 6 — AUDIO
+NEANT. Le carnet est muet. Aucun bruissement, aucune page qui tourne.
+Le sifflement de la timonerie (PN-026) continue. C'est tout.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre de tourner les pages · ajouter une cinquieme ligne
+lisible · nommer le passager · nommer les six hommes · decrire la Maree ·
+completer « 23h4 » · ramasser le carnet · afficher le texte en overlay ou
+en sous-titre · faire lire a voix haute par Lohen [OBL — il ne sait pas
+bien lire, 01.06 ; il DECHIFFRE, lentement, et on ne l'entend jamais] ·
+utiliser une police manuscrite generee.
+
+§ 8 — LIENS
+PN-010 (le tampon : « HIRON », interrompu de la meme facon, a terre).
+PN-013 (« MER BELLE. RIEN A SIGNALER. », ecrit le meme jour par un homme
+qui n'avait pas tort). PN-025 (la veste du passager). PN-003 (les 641 noms,
+ou figurent les six hommes de L'Hirondelle — et Esteban, non barre).
+PN-143 : Esteban ecrit lui aussi, et son ecriture est ENTIEREMENT
+differente de celle-ci. Le joueur a vu trois ecritures dans le chapitre
+avant la lettre : celle de Lohen (PN-005), celle du patron (PN-027), celle
+du fonctionnaire (PN-008). La quatrieme est celle qu'il attend depuis 3 h.
+[THEME] LES ECRITURES. [THEME] LA MAREE NE S'EXPLIQUE PAS.
+
+§ 9 — DOD
+[ ] Gondolerie en geometrie, 340 tris sur la double page
+[ ] Texture 8K, densite 700 px/m, lisible a 25 cm ligne par ligne
+[ ] 4 lignes ecrites a la plume par une main reelle, interruption reelle
+[ ] Trait de 4 cm descendant jusqu'au bord de la page
+[ ] Lisible seulement depuis une position atteinte en contournant la barre
+[ ] Zero overlay, zero VO, zero page tournee
+[ ] Ecriture distincte de celles de PN-005, PN-008 et PN-143

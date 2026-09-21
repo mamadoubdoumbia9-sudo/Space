@@ -1,0 +1,169 @@
+===============================================================================
+DLG · S8 · D07 — LE CARNET (E30) : LE SEUL ECHO QU'ON LIT AU LIEU DE LE VOIR
+34 entrees, toutes S8. ECH 6 (extraits canoniques) · LOH 28. Contribution : 34.
+Reference maitre 19.05. [OBL] E30 est le 30e Echo. Il dure 2:30. 94 % des
+joueurs le prennent. [OBL] Il n'a ni fantome, ni rituel, ni dissolution.
+===============================================================================
+
+--- POURQUOI E30 N'EST PAS UN ECHO COMME LES AUTRES [OBL] -----------------------------------
+
+[OBL] Les 29 Echos precedents fonctionnent tous pareil : main posee,
+rituel de 2,44 s, silhouettes grises, voix filtrees, dissolution.
+[OBL] E30 n'a RIEN DE TOUT CA. Pas de rituel — Lohen prend simplement le
+carnet. Pas de fantome. Pas de post-process. Pas de filtre.
+
+[OBL] CE QUI SE PASSE : le joueur tourne les pages, une par une, au
+rythme qu'il veut. L'ecriture d'Esteban est lisible. Six fois, sur les
+six pages canoniques, LA VOIX D'ESTEBAN LIT — seche, proche, exactement
+comme dans la lettre, exactement comme en S6.
+
+[OBL] POURQUOI C'EST QUAND MEME UN ECHO : parce que c'est un objet
+touche qui rend une voix morte. [OBL] Le jeu le classe en E30 dans ses
+donnees et ne le dit jamais au joueur. [OBL] Le mot « Echo » n'est
+jamais prononce (CI `no-echo-word`).
+
+[OBL] ORDRE : le carnet est ouvert sur la table. [OBL] Si le joueur le
+prend AVANT la lettre, il entend les six extraits puis lit la lettre.
+S'il le prend APRES, les six extraits sont identiques mais les 28 lignes
+de Lohen sont remplacees par leurs variantes « post-lettre » (voir § 3).
+[OBL] 71 % le prennent avant. [OBL] Aucun ordre n'est suggere.
+
+--- § 1 — LES SIX EXTRAITS CANONIQUES (19.05, texte fixe) ----------------------------------------
+
+[OBL] Texte source : master 19.05. Non reproduit integralement ici pour
+la meme raison que la lettre (CI `letter-single-source` s'applique aussi
+au carnet : source unique).
+
+    [S8_ECH_L281]  6,4 s · sec · <Jour 4. La lentille tourne toute seule.>
+        dir : [OBL] « Je ne l'explique pas, je l'entretiens. C'est deja
+              un travail. » [OBL] 20.05 : « Pourquoi la lentille
+              tourne » ne recoit pas de reponse. [OBL] Esteban non plus
+              ne la donne pas, et il a eu trois ans.
+
+    [S8_ECH_L282]  9,2 s · sec · <Jour 61. J'ai compte : onze toits>
+        dir : [OBL] le toit, encore (L257, L080). Troisieme occurrence
+              du motif, toujours sans lien. CI `roof-unmarked`.
+
+    [S8_ECH_L283]  10,8 s · sec · <Jour 140. Je descends jusqu'au palier des cloches>
+        dir : [OBL][NAR] « Elles sont fausses. Je les accorde. Personne
+              ne les entendra. Ce n'est pas une raison. »
+              [OBL] LOHEN VIENT DE LES ENTENDRE, IL Y A DIX MINUTES
+              (S8_LOH_L088/L089), ET IL A DIT QU'ELLES ETAIENT JUSTES.
+              [OBL] C'est la seule fois du chapitre ou le joueur peut
+              verifier le travail d'Esteban. [OBL] Le carnet dit
+              « personne ne les entendra ». Quelqu'un les a entendues.
+              [OBL] Aucun personnage ne fait le lien. Aucune musique.
+              Aucun succes. Job CI `bells-unmarked`.
+
+    [S8_ECH_L284]  11,4 s · sec · <Jour 300. Aujourd'hui j'ai ecrit son matricule>
+        dir : [OBL] « au lieu de son prenom. Je crois que c'est parce
+              que le matricule, lui, existe dans un registre quelque
+              part. » [OBL] C'est l'explication des 314 feuilles et des
+              31 marges. Elle arrive AVANT la lettre pour 71 % des
+              joueurs. [OBL] Ils entendront donc « trois cent quatorze
+              fois » en sachant deja pourquoi, et ce sera pire.
+
+    [S8_ECH_L285]  9,6 s · sec · <Jour 612. Si quelqu'un monte un jour, qu'il sache :>
+        dir : [OBL] « la lampe n'est pas un signal. C'est juste que je
+              n'aime pas le noir. » [OBL] SEULE PHRASE DU CHAPITRE
+              ADRESSEE A UN LECTEUR INCONNU. [OBL] Esteban ne l'ecrit
+              pas pour Lohen. Il l'ecrit pour n'importe qui.
+              [OBL] Interdit : ne jamais la faire commenter.
+
+    [S8_ECH_L286]  3,0 s · sec · <Jour 1049. Je n'ai plus de papier.>
+        dir : [OBL][NAR] DERNIERE PAGE ECRITE DU CARNET. [OBL] Il reste
+              41 pages vierges apres. [OBL] Le joueur peut les tourner
+              toutes. [OBL] Elles sont vraiment la, vraiment vierges,
+              et ca prend 26 secondes. [OBL] 12 % des joueurs les
+              tournent jusqu'au bout. [OBL] Il n'y a rien a la fin.
+              [OBL] Interdit absolu : ne jamais rien cacher dans les
+              41 dernieres pages. Aucun mot, aucun dessin, aucun
+              easter egg. Job CI `blank-pages-41`.
+
+--- § 2 — LES 28 LIGNES DE LOHEN (version « avant la lettre ») -----------------------------------
+
+    [S8_LOH_L287]  2,0 s · bas · « Jour quatre. »
+    [S8_LOH_L288]  2,4 s · bas · « Il a commence a compter le quatrieme jour. »
+    [S8_LOH_L289]  2,8 s · bas · « Donc les trois premiers, il comptait pas. »
+        dir : [OBL] il deduit. [OBL] Il a raison et il n'en fait rien.
+    [S8_LOH_L290]  1,8 s · bas · « Je tourne. »
+    [S8_LOH_L291]  2,2 s · bas · « Des chiffres. Des colonnes. »
+    [S8_LOH_L292]  2,6 s · bas · « Des mots que je connais pas. »
+    [S8_LOH_L293]  2,0 s · bas · « Je tourne quand meme. »
+    [S8_LOH_L294]  2,4 s · bas · « Jour soixante et un. »
+    [S8_LOH_L295]  2,8 s · bas · « Il comptait les toits par la fenetre. »
+    [S8_LOH_L296]  2,2 s · bas · « Onze. »
+    [S8_LOH_L297]  1,6 s · bas · « Bon. »
+        dir : [OBL] IL NE VA PAS PLUS LOIN. [OBL] Cinquieme et derniere
+              fois du chapitre ou Lohen est a une phrase de comprendre
+              quelque chose. [OBL] Les cinq : le parquet (S6), les
+              fenetres (S6), la lampe (S7), les gonds (S8/L091), les
+              toits (ici). [OBL] Aucune n'aboutit. [OBL] Job CI
+              `five-near-misses` : liste figee, on n'en ajoute pas, on
+              n'en resout aucune.
+    [S8_LOH_L298]  2,0 s · bas · « Jour cent quarante. »
+    [S8_LOH_L299]  2,4 s · bas · « Les cloches. »
+    [S8_LOH_L300]  2,8 s · bas · « Il descendait deux fois par semaine pour des cloches. »
+    [S8_LOH_L301]  2,2 s · bas · « Ca fait combien, en trois ans. »
+    [S8_LOH_L302]  2,6 s · bas · « Trois cents fois, a peu pres. »
+        dir : [OBL] IL CALCULE JUSTE, ENCORE (2 × 52 × 3 = 312).
+              [OBL] Deuxieme calcul mental du chapitre apres
+              S7_LOH_L087. [OBL] Aucun commentaire.
+    [S8_LOH_L303]  1,8 s · bas · « Pour des cloches que personne entend. »
+    [S8_LOH_L304]  2,4 s · bas · « Moi je les ai entendues. »
+        dir : [OBL][NAR] LA LIGNE. [OBL] Il repond au carnet. [OBL] Le
+              carnet ne repond pas. [OBL] Aucune musique. Aucun plan.
+              [OBL] C'est la seule conversation du chapitre entre un
+              vivant et un texte, et elle dure une phrase.
+    [S8_LOH_L305]  2,0 s · bas · « Jour trois cents. »
+    [S8_LOH_L306]  2,8 s · bas · « Il ecrivait mes chiffres au lieu de mon nom. »
+    [S8_LOH_L307]  2,2 s · bas · « Parce que les chiffres sont dans un registre. »
+    [S8_LOH_L308]  2,6 s · bas · « Et les noms, non. »
+        dir : [OBL][NAR] IL A COMPRIS CELLE-LA. [OBL] Une sur cinq.
+              [OBL] Direction : plat. Aucune emotion. Il tourne la
+              page.
+    [S8_LOH_L309]  2,0 s · bas · « Jour six cent douze. »
+    [S8_LOH_L310]  2,4 s · bas · « « Si quelqu'un monte un jour. » »
+    [S8_LOH_L311]  2,8 s · bas · « Il savait pas que ce serait moi. »
+    [S8_LOH_L312]  2,2 s · bas · « Ou il le savait et il l'a ecrit comme ca quand meme. »
+    [S8_LOH_L313]  1,8 s · bas · « Jour mille quarante-neuf. »
+    [S8_LOH_L314]  2,4 s · bas · « Plus de papier. »
+        dir : [OBL][NAR] IL Y A 41 PAGES VIERGES APRES CETTE LIGNE.
+              [OBL] Le joueur les a peut-etre tournees. Lohen, non.
+              [OBL] LOHEN NE SAIT DONC PAS QU'ESTEBAN A MENTI SUR LE
+              PAPIER. [OBL] Le joueur, si — s'il a tourne.
+              [OBL] Aucune ligne, jamais, dans aucun chapitre.
+
+--- § 3 — LES VARIANTES « APRES LA LETTRE » [OBL] --------------------------------------------------
+
+[OBL] Si le joueur prend le carnet APRES avoir lu la lettre (29 %), les
+28 lignes ci-dessus sont remplacees par 28 variantes. [OBL] Elles ne
+sont PAS comptees en plus : meme ids, meme slots, contenu different.
+[OBL] Job CI `variant-same-id`.
+
+[OBL] REGLE DES VARIANTES : elles sont PLUS COURTES. Toutes. En
+moyenne 0,6 s de moins. [OBL] Lohen a lu la lettre ; il n'a plus rien a
+deduire, il verifie. [OBL] Exemples contraignants pour l'equipe :
+  · L288 devient « Il a commence le quatrieme jour. » (2,0 s)
+  · L297 devient « Onze. » (1,0 s) — [OBL] il ne dit plus « Bon. »
+  · L304 devient « Je les ai entendues. » (1,8 s) — le « Moi » tombe
+  · L311/L312 fusionnent en un slot muet et un « Il savait. » (1,4 s)
+  · L314 reste identique, au mot et a la durée. [OBL] C'est la seule
+    des 28 qui ne change pas. [OBL] Rappel S4 : une seule ligne de
+    Mireille survivait toujours a l'appauvrissement (S4_MIR_L192 →
+    L409). [OBL] Meme principe, jamais signale, deux sequences d'ecart.
+
+[OBL] Les 23 autres variantes sont ecrites dans le meme esprit et
+validees par la meme regle : plus courtes, jamais plus explicites,
+aucune ne mentionne la lettre.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] E30 : pas de rituel, pas de fantome, pas de filtre, voix seche
+[ ] 6 extraits canoniques, source unique au master 19.05
+[ ] 41 pages vierges reelles, rien dedans — CI `blank-pages-41`
+[ ] L297 : 5e et derniere quasi-comprehension — CI `five-near-misses`
+[ ] L302 : 2e calcul mental juste
+[ ] L304 : la seule reponse faite a un texte dans tout le jeu
+[ ] L314 : Lohen ignore les pages vierges, le joueur peut savoir
+[ ] 28 variantes post-lettre, memes ids — CI `variant-same-id`

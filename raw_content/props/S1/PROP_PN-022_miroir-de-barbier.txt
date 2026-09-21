@@ -1,0 +1,105 @@
+===============================================================================
+PN-022 — LE MIROIR DE BARBIER DE LA REMISE
+===============================================================================
+Asset : SM_S1_Miroir_Barbier · S1, mezzanine du hangar a filets ·
+~00:48 · prop narratif · pas d'Echo · DERNIER PROP DE S1 · LOD0 1 600 tris
+
+§ 1 — CE QU'ON VOIT
+La mezzanine fait 4 x 3 m. Il y a : un matelas a meme le plancher, une
+caisse retournee en guise de table, une bougie fondue jusqu'au bout, et un
+miroir.
+Le miroir est un grand miroir de barbier ovale, 70 cm, cadre de bois tourne,
+manifestement vole ou recupere dans un salon. Il est appuye contre le mur,
+pose au sol, incline vers l'arriere.
+Le tain est piqué. Des taches noires mangent les bords sur 8 cm.
+Il est PROPRE. Quelqu'un l'a essuye. Dans une piece couverte de trois ans
+de poussiere, la surface du miroir est nette.
+Devant, sur le plancher, a 60 cm : deux marques d'usure. Les pieds de
+quelqu'un qui s'est tenu la, souvent, debout, a regarder.
+Sur la caisse : un rasoir droit, ouvert, propre. Un blaireau. Pas de savon.
+Et une photographie posee face contre bois.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 600. Le tain piqué : texture 4K avec masque de degradation aux bords.
+[OBL] REFLEXION REELLE. Une ReflectionProbe ne suffit pas : le joueur DOIT
+se voir. Utiliser un SubViewport avec camera miroir, 512x512, mis a jour a
+15 Hz seulement quand le joueur est a moins de 4 m et dans le cone.
+Cout : 1,6 ms. C'est le prop le plus cher de S1 et c'est justifie.
+La reflexion est degradee volontairement : le tain piqué mange 22 % de la
+surface, et un leger flou (2 px) simule la planeite imparfaite.
+La photographie : face contre bois. Non retournable. Aucune interaction.
+Anim : NEANT sur le prop. LOH-IDL-093 sur Lohen, voir § 5.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un dormait ici. Seul. Dans un hangar a filets, sur un matelas, avec
+un miroir de barbier vole et un rasoir.
+Le geste humain : ESSUYER LE MIROIR. Dans une piece qu'on ne nettoie pas,
+on nettoie le miroir. Parce qu'on veut encore se voir.
+Les deux marques au sol disent la duree : des mois debout au meme endroit.
+Le rasoir ouvert et propre, sans savon : il se rasait a l'eau froide.
+La photo face contre bois : il a arrete de la regarder. Mais il ne l'a pas
+jetee.
+[NAR] Qui ? Le jeu ne le dit pas au chapitre 1. [OBL] Aucun indice ne
+permet de conclure que c'etait Esteban, et aucun ne permet de l'exclure.
+Cette ambiguite est verrouillée : elle ne sera pas resolue dans ce chapitre.
+Interdiction absolue d'ajouter un objet qui trancherait (un vetement ambre,
+une lettre, une initiale, une chose reconnaissable).
+
+§ 4 — ECHO
+NEANT. Raison [OBL] : c'est le dernier prop de la sequence 1 et le joueur
+s'attend a un Echo. On le lui refuse. La sequence 1 se termine sur un
+miroir muet dans lequel il se voit lui-meme.
+C'est la these du chapitre en un objet : tu es venu chercher quelqu'un,
+et le seul visage que le monde te renvoie est le tien.
+Aucun prompt n'apparait. Le joueur reste devant, comprend qu'il n'y a rien,
+et redescend.
+
+§ 5 — MISE EN SCENE
+[OBL] La seule chose qui se passe est ceci, et elle doit etre parfaite :
+si le joueur reste immobile devant le miroir, dans le cone, a moins de 2 m,
+pendant plus de 6 secondes, Lohen joue LOH-IDL-093.
+LOH-IDL-093 (4,1 s) : il leve la main droite vers son visage, lentement,
+s'arrete a 15 cm de sa joue, et la baisse. Il ne se touche pas.
+[OBL] UNE SEULE FOIS PAR PARTIE. Jamais rejouable. Aucun son. Aucune
+musique. Aucun mouvement de camera. Le joueur garde le controle pendant
+toute l'animation et peut l'interrompre en bougeant — et s'il l'interrompt,
+elle est perdue pour la partie entiere.
+La lampe est restee en bas (PN-021) : la mezzanine est eclairee par une
+seule chose, la lueur qui monte du rez-de-chaussee, par le trou de
+l'echelle, derriere Lohen. Il se voit a contre-jour. Son visage est sombre.
+[ART] C'est le dernier plan de la sequence 1.
+
+§ 6 — AUDIO
+NEANT. Silence quasi total sur la mezzanine.
+Le vent est a -18 dB (on est sous le toit). Aucune goutte. Aucun craquement.
+Le seul son est celui de la respiration de Lohen, qui n'est mixee QUE dans
+cette piece, a -26 dB. Le joueur ne l'a jamais entendue avant et ne
+l'entendra plus apres. [ART] Pendant 40 minutes, on l'a suivi ; ici, pour
+8 secondes, on est dedans.
+Le lamp_hiss de PN-009 monte du trou de l'echelle, tres attenue.
+
+§ 7 — INTERDICTIONS
+Interdit de : retourner la photographie · reveler qui vivait la · ajouter
+un objet identifiant · ajouter un Echo · faire rejouer LOH-IDL-093 · ajouter
+de la musique · deplacer la camera · faire parler Lohen · montrer son
+visage de face en dehors du miroir · ajouter un reflet anormal (il n'y a
+personne derriere lui, jamais, dans aucune circonstance, et ce prop n'est
+PAS un jump scare — 17.11) · permettre de prendre le rasoir.
+
+§ 8 — LIENS
+PN-025 (la veste d'Esteban, S2) : le prochain objet qui pose la meme
+question et qui, LUI, y repond. La sequence 2 commence 90 secondes plus tard.
+PN-095 (le miroir de la chambre de Mireille, S5) : casse, lui.
+PN-143 (LA LETTRE) : « Ne me cherche plus dans les objets, mon amour. »
+Le miroir de S1 est la premiere fois que le jeu le dit — en refusant de
+montrer autre chose que Lohen.
+[THEME] CHERCHER DANS LES OBJETS. [THEME] LE VISAGE.
+
+§ 9 — DOD
+[ ] Reflexion reelle par SubViewport, 512², 15 Hz, cone + 4 m, <= 1,6 ms
+[ ] Tain piqué mangeant 22 % de la surface + flou de 2 px
+[ ] Deux marques d'usure au sol a 60 cm, orientees vers le miroir
+[ ] LOH-IDL-093 : 4,1 s, une seule fois par partie, interruptible et perdue
+[ ] Respiration de Lohen mixee uniquement ici, a -26 dB
+[ ] Photo non retournable, aucun indice d'identite
+[ ] Contre-jour par le trou de l'echelle, visage sombre dans le reflet

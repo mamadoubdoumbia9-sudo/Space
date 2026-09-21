@@ -1,0 +1,135 @@
+===============================================================================
+PN-131 — LE PALIER DES CLOCHES
+===============================================================================
+Asset : SM_S8_Palier_Cloches · S8, 156 m d'altitude dans le fut ·
+~06:10 · PORTEUR D'ECHO E27 · LOD0 6 700 tris
+
+§ 1 — CE QU'ON VOIT
+A 156 metres, l'escalier debouche sur un palier. Le premier depuis le pied.
+Une salle circulaire de 4,50 m, avec un plancher de bois et quatre
+meurtrieres.
+[OBL] Au centre, suspendues a une charpente de chene, TROIS CLOCHES de
+bronze.
+Ce sont les cloches de brume du Phare. Elles sonnaient quand on ne voyait
+rien, pour que les bateaux sachent ou etait la cote.
+La plus grande fait 90 cm. Les deux autres 70 et 55.
+Elles sont accordees. [OBL] Trois notes : SOL, SI bemol, RE. Un accord
+mineur.
+Les cordes de sonnerie pendent jusqu'au plancher. Elles sont usees a
+hauteur de main, sur 40 cm, les trois.
+Au sol, sous les cordes, il y a un tabouret.
+Et sur le mur, il y a des marques.
+[OBL] Des barres. Gravees dans le mortier, au couteau. Par paquets de cinq.
+Il y en a QUATRE CENT ONZE.
+[OBL] Elles couvrent 2,40 m de mur.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 6 700 (3 cloches 2 900 + charpente 1 800 + cordes 600 + palier 1 400).
+[OBL] Les trois cloches sont accordees REELLEMENT : leur geometrie (profil,
+epaisseur de la panse, diametre) determine leur note dans le moteur audio.
+Le sound designer et le modeleur travaillent ensemble.
+[OBL] Les 411 barres sont en geometrie (creux de 0,8 mm), gravees par
+paquets de 5, avec 82 paquets complets et une barre seule.
+[OBL] Elles sont de profondeurs et de fermetes differentes : elles ont ete
+faites une par une, sur une longue periode.
+[ART] Le level artist doit graver 411 barres a la main. C'est long. C'est
+le sujet.
+Shader `bronze_patina` + `mortar_scratched`.
+Anim : PROP-838 — pendant E27, les trois cloches SONNENT et oscillent
+reellement (physique de pendule, amplitude 22°).
+
+§ 3 — CE QUE CA DIT
+Quelqu'un est monte ici 411 fois pour sonner les cloches de brume.
+Le geste humain : graver une barre apres avoir sonne.
+[OBL] 411 fois. A 156 metres. 1 038 marches a chaque fois... [OBL] non :
+le palier est a 156 m, soit environ 820 marches. 411 fois 820 marches.
+[NAR] Le gardien du Phare. Il est monte, il a sonne, il a grave une barre,
+il est redescendu. 411 fois.
+[OBL] Le jeu ne dit pas sur combien de temps. Il ne dit pas son nom. Il ne
+dit pas ce qu'il est devenu.
+[OBL] ET LE 14 OCTOBRE, IL A SONNE. Cf. PN-034 (la cloche du chalutier, S2)
+et son mode C : trois cloches lointaines, plus graves, qui repondent.
+[OBL] C'est cet echantillon. Le meme, exactement (PN-034 § 6).
+[ART] Le joueur l'a peut-etre entendu il y a 4 h 30, sur un chalutier, s'il
+a sonne la cloche au bon moment (6 % de taux de decouverte).
+Il ne s'en souviendra pas consciemment. Il reconnaitra le son.
+Personne n'est venu.
+
+§ 4 — ECHO
+ECHO E27 — « Les cloches » — 35 secondes, mode A.
+Une silhouette. Un homme. Il monte sur le tabouret. Il prend les trois
+cordes — [OBL] les trois ensemble, dans ses deux mains.
+Il sonne.
+[OBL] Les trois cloches sonnent ENSEMBLE. SOL - SI bemol - RE. L'accord
+mineur, a plein volume, dans une salle de 4,50 m, a -6 dB.
+[OBL] C'EST LE SON LE PLUS FORT DU JEU. Plus fort que la pluie sur la Maree
+(-8 dB) et que le four de E23 (-9 dB).
+Il sonne neuf fois. Trois series de trois, avec 4 secondes entre les series.
+[OBL] Le protocole de brume : trois coups, pause, trois coups, pause, trois
+coups. Il le connait par coeur.
+Apres la neuvieme, il descend du tabouret.
+Il va au mur. Il grave une barre.
+[OBL] On entend le couteau dans le mortier. 3 secondes.
+Il s'arrete. Il reste face au mur, dos au joueur, 8 secondes.
+Il s'efface.
+[OBL] Les cloches, elles, continuent de resonner pendant 6 secondes apres
+sa disparition. [OBL] Le bronze ne sait pas qu'il est parti.
+Musique : [OBL] M24 « Le Phare » ne s'arrete PAS. Elle continue sous les
+cloches. C'est le seul Echo du chapitre qui se joue par-dessus de la
+musique.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur monte depuis 7 minutes dans le noir. Le palier est le
+premier espace depuis le pied.
+[OBL] Il est ECLAIRE : quatre meurtrieres au lieu d'une, donc quatre fois
+plus de lumiere. Apres 7 minutes, c'est presque violent.
+Les trois cloches sont au centre. Il faut les contourner pour reprendre
+l'escalier.
+[OBL] Les 411 barres sont sur le mur OPPOSE a l'escalier. Le joueur les
+voit en se retournant, ou pas.
+Taux de detection : 58-70 %. Taux de comptage effectif : moins de 1 %.
+[OBL] Le joueur peut SONNER les cloches lui-meme. [OBL] Une interaction,
+LOH-ACT-227. Il tire les trois cordes.
+[OBL] Elles sonnent. Fort. Et rien ne se passe.
+[ART] Il peut sonner autant de fois qu'il veut. Personne ne repond. Il n'y
+a plus de bateaux.
+
+§ 6 — AUDIO
+[OBL] Les cloches doivent etre enregistrees sur de VRAIES cloches
+accordees, pas synthetisees. Trois cloches de 90, 70 et 55 cm.
+Queue de resonance : 14 secondes. [OBL] Dans une salle a RT60 2,4 s, plus
+la cage d'escalier en dessous qui agit comme un resonateur de 156 m.
+[ART] Quand le joueur sonne, le son descend dans la tour. Il l'entend
+partir sous lui.
+SFX(knife_mortar) : la barre gravee, 3 s, pendant E27.
+SFX(rope_hemp_pull) : les cordes.
+M24 continue sans interruption.
+
+§ 7 — INTERDICTIONS
+Interdit de : faire repondre quelque chose aux cloches · ajouter un bateau
+· ajouter une lumiere en reponse · montrer le visage · nommer le gardien ·
+expliquer les 411 · ajouter une 412e barre · limiter les sonneries ·
+synthetiser les cloches · interrompre M24 · rendre E27 rejouable ·
+desaccorder les cloches.
+
+§ 8 — LIENS
+PN-034 (la cloche du chalutier, S2, mode C) : le MEME echantillon, entendu
+4 h 30 plus tot par 6 % des joueurs.
+PN-013 (« MER BELLE. RIEN A SIGNALER. »). PN-026 (E05, la barre a fond).
+PN-036 (les 38 barres sur les seaux), PN-061 (les 73 encoches), PN-089 (les
+4 marques a la craie) : [OBL] les trois autres comptages du chapitre.
+Celui-ci est le quatrieme et le plus grand. Aucun n'est relie aux autres.
+PN-132 (les cloches accordees) : prop distinct, fiche dediee.
+[THEME] AVOIR FAIT CE QU'IL FALLAIT. [THEME] COMPTER.
+
+§ 9 — DOD
+[ ] 3 cloches reellement accordees SOL / SI bemol / RE, geometrie-audio
+[ ] 411 barres gravees a la main, 82 paquets de 5 + 1, profondeurs variees
+[ ] Cordes usees sur 40 cm, les trois
+[ ] E27 : protocole 3-3-3, 9 coups, -6 dB, son le plus fort du jeu
+[ ] Resonance de 6 s apres la disparition de la silhouette
+[ ] Queue de 14 s descendant dans la tour de 156 m
+[ ] M24 non interrompue : seul Echo joue par-dessus de la musique
+[ ] Sonnable a l'infini par le joueur, aucune reponse jamais
+[ ] Echantillon identique a PN-034

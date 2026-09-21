@@ -1,0 +1,135 @@
+===============================================================================
+PN-112 — LE SOL DE LA SALLE APRES L'ECHO
+===============================================================================
+Asset : DECAL_S6_Sol_Apres_Echo · S6, parquet central, apres E21 ·
+~05:02 · PORTEUR D'ECHO E21 · DERNIER PROP DE S6 · 0 tris
+
+§ 1 — CE QU'ON VOIT
+[OBL] Avant l'Echo : le parquet de PN-100, propre au centre, avec les arcs
+de balai et les empreintes mouillees du joueur.
+Pendant l'Echo E21 : cf. § 4.
+Apres l'Echo : le parquet. Le meme.
+[OBL] Sauf a un endroit.
+Au centre exact de la rose des vents, il y a maintenant deux marques dans
+la cire. Deux paires d'empreintes de chaussures, face a face, a 40 cm.
+Elles n'y etaient pas.
+[OBL] Elles sont dans la CIRE, pas dans la poussiere. Elles sont
+physiquement impossibles : la cire est dure depuis des annees.
+Elles sont nettes, profondes de 0,4 mm, et elles restent.
+[OBL] Elles restent pour toute la partie. En S7, quand le joueur passe en
+contrebas et qu'on voit la salle par une fenetre, elles sont la. Il n'y a
+aucun moyen de les voir de la, mais elles y sont.
+
+§ 2 — FICHE TECHNIQUE
+0 tris. Decal 2K, 90 x 60 cm, active de facon permanente apres E21.
+[OBL] Les empreintes sont de deux paires de chaussures DIFFERENTES :
+  — une paire de souliers de ville d'homme, pointure ~44, semelle lisse
+  — une paire de bottines, pointure ~41, semelle a petits clous
+[OBL] La seconde paire n'est PAS une paire de chaussures de femme. Ce sont
+deux hommes.
+Elles sont face a face, orteils vers orteils, a 40 cm.
+[OBL] Aucune empreinte de deplacement autour. Elles sont arrivees la et
+reparties sans laisser de trace. Ce sont deux instants, pas un trajet.
+Le decal utilise une normal map (creusement de 0,4 mm) + un masque de
+roughness (la cire ecrasee est plus lisse : 0,14 contre 0,21).
+Cout : 0,03 ms.
+
+§ 3 — CE QUE CA DIT
+[OBL] Rien n'est dit. C'est le dernier prop de S6 et il ne contient aucune
+information verbalisable.
+Deux hommes se sont tenus face a face au centre d'une piste de danse, a
+40 cm l'un de l'autre.
+Le geste humain : se tenir face a quelqu'un.
+[OBL] Le jeu n'identifie personne. Aucun nom, aucun indice, aucune
+confirmation, dans ce chapitre ni dans les six suivants.
+[ART] Le joueur pensera a Lohen et Esteban. Il aura probablement raison. Le
+jeu ne le confirmera jamais.
+
+§ 4 — ECHO
+ECHO E21 — « Le centre » — 51 secondes, mode B. LE PLUS LONG DU CHAPITRE.
+[OBL] Declenchement : le joueur doit se tenir au centre exact de la rose
+des vents et rester immobile 5 secondes. Aucune indication.
+Taux de decouverte cible : 66-78 %.
+Deroulement :
+  0 s — rituel 2,44 s.
+  2,44 s — la salle change. [OBL] Pas de silhouettes. Aucune.
+      Les 72 bougies des lustres s'eteignent. La salle devient sombre.
+      Puis les hautes fenetres (PN-110) s'eclairent : il fait JOUR dehors.
+      Un jour blanc et plat entre par onze fenetres de 6 m.
+      [OBL] C'est le seul retour du jour dans les 45 dernieres minutes.
+  9 s — le piano (PN-103) s'arrete. [OBL] M21 s'interrompt net, en pleine
+      mesure. Le silence dure 4 secondes.
+  13 s — le piano recommence. [OBL] Il joue AUTRE CHOSE.
+      Une valse. Plus rapide (88 BPM), plus simple, plus gaie. En RE MAJEUR.
+      [OBL] C'est M22 « La valse », et c'est la SEULE musique joyeuse des
+      sept chapitres.
+  13 s a 44 s — 31 secondes de valse dans une salle vide et eclairee par le
+      jour. Personne ne danse. Il n'y a personne.
+      [OBL] Aucune silhouette. Aucun mouvement. Rien. La salle est vide et
+      la musique joue.
+  44 s — la valse s'arrete, sur une cadence complete cette fois.
+  45 s — le jour s'eteint aux fenetres en 3 secondes.
+  48 s — les 72 bougies se rallument, une par une, sur 2,5 secondes.
+  50,5 s — M21 reprend, exactement ou elle s'etait arretee a 9 s.
+  51 s — fin.
+[OBL] Et les deux paires d'empreintes sont dans la cire.
+[OBL] Elles apparaissent sans transition, sans effet, sans son. Elles sont
+simplement la quand le joueur baisse les yeux.
+
+§ 5 — MISE EN SCENE
+[OBL] Pendant les 51 secondes, le joueur garde le controle total. Il peut
+marcher, tourner, sortir de la rose des vents, aller aux fenetres.
+[OBL] L'Echo ne s'arrete pas s'il bouge. C'est le seul Echo du chapitre
+qui ne depend plus de sa position apres le declenchement.
+[ART] Il peut donc traverser une salle de bal vide, eclairee par le jour,
+pendant qu'une valse joue. Seul. Pendant 31 secondes.
+[OBL] Aucune camera, aucun plan, aucun ralenti, aucun cadrage, jamais.
+[OBL] Lohen ne danse pas. Il n'y a aucune animation de danse dans le
+chapitre 1. [OBL] Les 11 clips de la danse (EST-DAN-271 a 281, cf.
+ANIM_MANIFEST) sont produits en tout dernier et ne sont PAS utilises ici.
+Ils sont pour le chapitre 4.
+
+§ 6 — AUDIO
+[OBL] M22 « La valse » : 31 secondes, re majeur, 88 BPM, piano seul.
+Elle est DIEGETIQUE et spatialisee sur le piano, comme M21.
+[OBL] Elle ne contient pas le motif d'Esteban. Verifier note a note.
+[OBL] Pendant E21, les 11 sifflements des carreaux casses (PN-110)
+DISPARAISSENT. Il fait jour, il ne fait plus de vent.
+Et les pampilles des lustres (PN-101) se taisent aussi : les bougies sont
+eteintes, l'air ne circule plus.
+[ART] Pendant 42 secondes, la salle n'a qu'un seul son : un piano.
+Aucun pas fantome. Aucune voix. Aucun rire. Aucun frou-frou de robe.
+[OBL] Il n'y a personne et on ne fait semblant de rien.
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter une silhouette · ajouter un danseur · ajouter un son
+de foule · faire danser Lohen · utiliser les clips EST-DAN · identifier les
+empreintes · les effacer · en ajouter une troisieme paire · les faire
+apparaitre avec un effet · ajouter un son a leur apparition · rendre E21
+rejouable · resoudre M22 ailleurs dans le chapitre · jouer M22 hors de E21
+· expliquer le retour du jour.
+[OBL] M22 n'est jouee qu'une fois, pendant 31 secondes, dans tout le
+chapitre 1.
+
+§ 8 — LIENS
+PN-100 (le parquet). PN-103 (le piano). PN-101 (les lustres).
+PN-110 (les fenetres et la nuit). PN-107 (le gilet, a 18 m).
+PN-072 (E16, le banc : deux personnes, un contact de main).
+PN-049 (E12 : deux silhouettes epaule contre epaule).
+[OBL] Trois Echos du chapitre montrent deux personnes ensemble : E12, E16,
+et E21 — et E21 ne montre personne. C'est la progression.
+PN-143 (LA LETTRE).
+[THEME] DEUX. [THEME] CE QUI N'A PAS EU LIEU.
+
+§ 9 — DOD
+[ ] Declenche au centre exact de la rose, 5 s d'immobilite, sans indication
+[ ] 51 s, le plus long du chapitre
+[ ] Zero silhouette, zero mouvement, zero personnage pendant tout l'Echo
+[ ] Jour revenant aux 11 fenetres, seul retour du jour des 45 dernieres min
+[ ] M21 coupee net a 9 s, silence 4 s, M22 de 13 a 44 s, reprise a 50,5 s
+[ ] M22 : re majeur, 88 BPM, 31 s, diegetique, seule musique joyeuse du jeu
+[ ] Sifflements et pampilles silencieux pendant l'Echo
+[ ] Controle total conserve, Echo independant de la position apres declenchement
+[ ] Deux paires d'empreintes (44 lisse / 41 cloutee) face a face a 40 cm
+[ ] Apparition sans effet, sans son ; permanentes pour la partie
+[ ] Aucun clip EST-DAN utilise

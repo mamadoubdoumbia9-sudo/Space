@@ -1,0 +1,93 @@
+===============================================================================
+PN-018 — LA BORNE DE RELAIS DES RELAYEURS
+===============================================================================
+Asset : SM_S1_Borne_Relais + SM_Jeton_0114 · S1, angle du quai est et de la
+rampe · ~00:40 · prop RAMASSABLE (1 des 9) · pas d'Echo · LOD0 1 400 tris
+
+§ 1 — CE QU'ON VOIT
+Une borne de fonte de 1,15 m, section octogonale, scellee dans le pave.
+En haut, une tete plate avec un cadran gradue et une fente a jeton.
+Autour du cadran, grave dans la fonte, en relief :
+        RELAIS DE VELMORA — POSTE 4
+        DEPOSER LE JETON — TOURNER — ATTENDRE LE TIMBRE
+Le cadran est bloque. L'aiguille est arretee entre deux graduations.
+Dans la fente, un jeton est coince a mi-course. Il ne descend plus.
+Le jeton est en laiton, du diametre d'une grosse piece. Il porte un numero
+frappe : 0114.
+Ce n'est pas le jeton de Lohen. Lohen a le sien dans sa poche. Il en existe
+un exemplaire par borne, remis au relayeur qui passe.
+Le jeton coince est celui du relayeur qui est passe ici avant lui.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 400 (borne 1 100 + tete 220 + jeton 80).
+Gravure en relief : geometrie reelle sur le texte, pas de normal map. Le
+texte doit accrocher la lumiere rasante et il sera filme en gros plan.
+Shader `cast_iron_wet` + `brass_worn` pour le jeton.
+INTERACTION : le jeton est RAMASSABLE. C'est le 1er des 9 ramassables du
+chapitre et le seul de S1 avec la lampe PN-009.
+Une fois pris, il va dans la poche de Lohen. [OBL] Il n'y a pas
+d'inventaire visible (14.04). Le jeton existe comme un fait, pas comme une
+entree de menu. Le joueur peut le sortir a tout moment par un appui long :
+Lohen l'ouvre dans sa paume, 3 secondes, et le referme. Animation
+LOH-ACT-141, jouable a l'infini, jamais commentee.
+Le jeton sert UNE fois, en S8 (PN-141).
+
+§ 3 — CE QUE CA DIT
+Lohen est relayeur. Matricule 0114. Il porte le courrier entre les villes,
+a pied, a la rame, sur des distances absurdes, pour des gens qui attendent.
+La borne dit son metier au joueur sans qu'aucun dialogue ne l'explique.
+Elle dit aussi que le systeme etait organise, ancien, fiable — « ATTENDRE
+LE TIMBRE » implique une mecanique, une administration, des horaires.
+Et elle est bloquee.
+Le geste humain : introduire un jeton et tourner. Le relayeur precedent a
+fait son geste, et la borne s'est arretee au milieu.
+[NAR] Le jeton porte 0114 parce que c'est LE numero de ce poste, pas celui
+d'un homme. Lohen s'appelle 0114 parce qu'il est ce relais. Le joueur le
+comprendra a la lettre : « Des mains qui portent le courrier de toute une
+ville et qui ne recoivent jamais rien. »
+
+§ 4 — ECHO
+NEANT. Raison : objet de service public, et surtout — [OBL] — objet du
+PRESENT de Lohen. Les objets de son metier n'ont pas d'Echo (cf. PN-005).
+
+§ 5 — MISE EN SCENE
+La borne est a un angle, en pleine lumiere, isolee. Aucun autre prop dans
+un rayon de 5 m. [ART] L'isolement est la signalisation. Sur 40 minutes de
+quai encombre, un objet seul au milieu d'un espace vide se remarque.
+Le prompt d'interaction pour le jeton est le premier prompt du jeu (00:40).
+Il apparait a 1,2 m. [OBL] Une icone de main, 0,6 s de fondu, aucun texte,
+aucune touche affichee (14.08).
+Quand Lohen prend le jeton : gros plan sur sa paume, 2 s, il le retourne
+une fois avec le pouce, il le ferme. LOH-ACT-140.
+[OBL] Aucune voix off. Aucun sous-titre. Aucun « journal mis a jour ».
+
+§ 6 — AUDIO
+SFX(brass_coin_palm) : le jeton dans la paume. Un son sec, propre, plein.
+Le meilleur son du chapitre : il doit donner envie de le refaire. C'est
+volontaire — le joueur qui rejoue l'animation 30 fois sur 3 h 30 aura tenu
+un objet dans sa main pendant tout le chapitre, et cela prepare la lettre.
+SFX(iron_hollow_knock) si le joueur frappe la borne : creux, grave.
+Aucune musique.
+
+§ 7 — INTERDICTIONS
+Interdit de : reparer la borne · la faire fonctionner · produire un timbre
+· afficher un inventaire · afficher « objet obtenu » · expliquer le metier
+de relayeur en texte · ajouter d'autres bornes fonctionnelles · perdre le
+jeton · permettre de le jeter · utiliser #FFA33C pour le laiton (le laiton
+est 45/33/18 en lineaire, PAS ambre).
+
+§ 8 — LIENS
+PN-005 (l'enveloppe « 0114 » dans la barque). PN-141 (S8) : le jeton est
+introduit dans la derniere borne, celle du Phare, et cette fois il descend.
+PN-143 (LA LETTRE) : « Des mains qui portent le courrier... ».
+PN-147 (la veste 0114 posee sur Sol) — la fin du chapitre. Le numero passe
+a quelqu'un d'autre.
+[THEME] PORTER POUR LES AUTRES.
+
+§ 9 — DOD
+[ ] Gravure en geometrie, lisible en lumiere rasante a 80 cm
+[ ] Jeton ramassable, aucun inventaire, aucune notification
+[ ] LOH-ACT-141 rejouable a l'infini par appui long, jamais commentee
+[ ] SFX brass_coin_palm valide comme « son qu'on a envie de refaire »
+[ ] Isolement de 5 m sans aucun autre prop
+[ ] Laiton non-ambre, verifie au colorimetre contre #FFA33C

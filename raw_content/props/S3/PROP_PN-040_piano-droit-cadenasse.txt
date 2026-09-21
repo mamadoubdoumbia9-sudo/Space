@@ -1,0 +1,98 @@
+===============================================================================
+PN-040 — LE PIANO DROIT CADENASSE
+===============================================================================
+Asset : SM_S3_Piano_Droit · S3, plateforme centrale du Marche, niveau 1 ·
+~02:05 · prop narratif · pas d'Echo · LOD0 4 900 tris
+
+§ 1 — CE QU'ON VOIT
+Un piano droit d'etude, noyer verni, sur une plateforme en plein air, sous
+un auvent de tole ondulee qui ne le couvre qu'aux trois quarts.
+Le couvercle du clavier est FERME et tenu par une chaine et un cadenas.
+La chaine fait trois fois le tour du corps du piano et passe dans les
+poignees. Le cadenas est ferme. Il n'y a pas de cle.
+Le bois est fendu. Trois ans dehors : le placage se decolle en longues
+langues, le vernis a blanchi, un pied a gonfle et s'est fendu en etoile.
+Sur le dessus, quelqu'un a pose une pierre plate, pour empecher le
+couvercle superieur de battre au vent. Elle y est toujours.
+Sous le piano, cale contre un pied : un tabouret a vis, reglé tres bas.
+Une hauteur d'enfant.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 4 900. La chaine : 46 maillons en geometrie, physique figee (bake),
+avec les points de contact reels sur le bois et deux maillons qui pendent.
+[OBL] Pas de chaine texturee. On tourne autour du piano, on voit la chaine
+de tous les cotes.
+Placage decolle : 11 langues de placage modelisees, epaisseur 1,5 mm,
+double face.
+Shader `wood_varnish_split` : vernis blanchi + bois nu dessous + gonflement.
+Le pied fendu : sculpt dedie.
+Collision : boite. [OBL] Non ouvrable, non jouable, non deplacable. Aucun
+prompt d'aucune sorte.
+Anim : NEANT sur le piano. PROP-741 pour deux maillons de chaine qui
+oscillent de 1 cm au vent fort, 0,2 Hz.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a cadenasse un piano.
+[NAR] Les deux lectures, et le jeu ne tranche pas :
+  — on l'a ferme pour le proteger, pour qu'on ne l'abime pas
+  — on l'a ferme pour que plus personne n'en joue
+Le geste humain : poser une pierre plate sur un couvercle pour qu'il ne
+batte pas au vent. Ca, ce n'est pas de la colere. C'est du soin.
+Donc : quelqu'un a ferme ce piano avec soin, et a pris la peine de le
+proteger du vent, et a emporte la cle.
+Le tabouret regle a hauteur d'enfant, cale sous le piano pour qu'il ne
+s'envole pas.
+[OBL] Aucun personnage ne mentionne ce piano. Jamais.
+
+§ 4 — ECHO
+NEANT. Geste d'apres (regle PN-015). [ART] Faux positif n°6 du chapitre.
+Un instrument de musique, dans un jeu ou la musique est rare et signifiante,
+est l'objet que le joueur attend le plus. Il ne repond pas.
+[OBL] Et surtout : il ne produit AUCUN son de toute la partie.
+
+§ 5 — MISE EN SCENE
+Sur une plateforme carree de 6 x 6 m, au croisement de trois passerelles.
+Le joueur passe forcement a cote, quel que soit son itineraire.
+Le piano est au centre, seul. C'est le seul objet de la plateforme.
+[ART] Un piano seul en plein air sur une plateforme suspendue au-dessus
+d'une mer de verre. L'image se suffit. Aucun eclairage ajoute, aucun
+cadrage impose, aucun ralenti.
+Lumiere : plein jour gris. Le vernis blanchi ne reflete presque rien. Le
+piano est mat, sourd, eteint.
+[OBL] Lohen ne s'arrete pas, ne regarde pas, ne touche pas.
+
+§ 6 — AUDIO
+[OBL] Le piano est TOTALEMENT MUET. On ne peut pas en tirer un son. Si le
+joueur le frole, le bouscule, marche a cote : rien. Pas une corde, pas une
+vibration, pas une resonance.
+C'est le seul objet du chapitre qui refuse de faire du bruit alors que sa
+nature est d'en faire.
+SFX(chain_link_tick) : les deux maillons, -30 dB, 0,2 Hz.
+SFX(tin_awning_ring) : l'auvent, comme PN-013.
+[OBL] Aucune musique de piano n'est jouee dans un rayon de 30 m. M10 « Le
+marche » est aux cordes et aux vents ; verifier que la piste ne contient
+aucun piano sur ce segment. Le piano du jeu (le motif d'Esteban, M04, la
+lettre) ne doit jamais coexister avec ce prop.
+
+§ 7 — INTERDICTIONS
+Interdit de : ouvrir, deverrouiller, jouer, faire sonner le piano · trouver
+la cle · ajouter un Echo · faire resonner une corde · ajouter une partition
+· ajouter un nom · le faire commenter · le deplacer · le detruire · le
+reutiliser en S6 (le piano a queue de la salle de bal, PN-103, est un autre
+instrument et n'a aucun lien).
+
+§ 8 — LIENS
+PN-103 (le piano a queue de l'orchestre, S6) : celui-la, le joueur
+l'entendra. La difference sera enorme, et personne ne la soulignera.
+PN-050 (le jeu de cordes des enfants, a 30 m). PN-060 (la chaise vide du
+barbier).
+[THEME] CE QU'ON FERME A CLE. [THEME] LES GESTES D'APRES.
+
+§ 9 — DOD
+[ ] Chaine en geometrie, 46 maillons, 3 tours, cadenas ferme, pas de cle
+[ ] 11 langues de placage decollees, pied fendu en etoile
+[ ] Pierre plate posee sur le couvercle superieur
+[ ] Tabouret a hauteur d'enfant, cale sous le piano
+[ ] Silence absolu : aucun son possible, en aucune circonstance
+[ ] Aucun piano dans M10 sur 30 m autour
+[ ] Aucun prompt, aucune interaction, aucun personnage n'en parle

@@ -1,0 +1,118 @@
+===============================================================================
+PN-087 — LE MATELAS DE SOL
+===============================================================================
+Asset : SM_S5_Matelas_Sol · S5, chambre de chauffe desaffectee, niveau -2 ·
+~04:11 · PORTEUR D'ECHO E19 · LOD0 3 200 tris
+
+§ 1 — CE QU'ON VOIT
+Une ancienne chambre de chauffe, 5 x 4 m, voutee en brique, avec une
+chaudiere morte au fond et deux conduits qui partent au plafond.
+Contre le mur le plus sec, un matelas. Un vrai matelas, a ressorts,
+simple, 90 x 190. Il est propre. Il a ete battu, aere, retourne.
+Dessus : deux couvertures pliees au carre, un oreiller, et un drap.
+[OBL] Le lit est FAIT. Pas juste range : fait. Les angles du drap sont
+rentres sous le matelas, a la facon d'un lit d'hopital ou de caserne.
+Quelqu'un a appris a faire un lit correctement, et le fait.
+A cote, sur une caisse : une bougie, un gobelet d'eau, et une pierre plate
+grise posee a plat.
+Au mur, a hauteur de tete allongee, quatre marques a la craie (PN-089).
+Le matelas est pour une personne. Il n'y a qu'un oreiller.
+Mais le drap, du cote du mur, est froisse. Toujours du meme cote. Il y a un
+creux, contre le mur, de la taille d'un chien.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 200 (matelas 1 100 + literie sculptee 1 400 + caisse et objets 700).
+[OBL] La literie est SCULPTEE, pli par pli, dans son etat fait-au-carre.
+Aucune simulation. Un lit fait ne se simule pas.
+Le creux du chien contre le mur : sculpt de 4 cm de profondeur dans le
+drap, avec des poils courts en cartes d'alpha (0,3 mm, 400 brins).
+La pierre plate grise : 60 tris. [OBL] Elle est identique au modele de
+PN-142 (la pierre plate du Phare, S8). Meme asset, meme forme, meme
+materiau. Le joueur les verra a 40 minutes d'intervalle. Personne ne le
+signale.
+Shader `fabric_clean_worn` — [OBL] propre. C'est le textile le plus propre
+du chapitre.
+Anim : NEANT hors Echo.
+
+§ 3 — CE QUE CA DIT
+Sol dort ici. Pas dans la gaine du Marche (PN-053) : ici.
+Le geste humain : faire son lit au carre.
+[OBL] Sol a 13 ans, vit seul depuis trois ans, trie des boutons par taille,
+et fait son lit tous les matins avec les angles rentres.
+[NAR] Qui lui a appris ? Le jeu ne le dit jamais. Aucun dialogue.
+Le creux contre le mur : Pomme dort la. Tous les soirs. Contre le mur, du
+cote froid, entre Sol et la brique.
+[OBL] Sol dort du cote de la piece. Le chien dort du cote du mur. Sol lui
+laisse la place protegee.
+La pierre plate sur la caisse : sans explication. Elle est la.
+
+§ 4 — ECHO
+ECHO E19 — « La chambre de chauffe » — 34 secondes, mode A.
+[OBL] Cet Echo ne montre PAS Sol. Il montre la piece avant.
+Ce qu'on voit : la chaudiere en fonctionnement (une lueur rouge sourde par
+la porte du foyer, sans flamme visible). Un homme — une silhouette large —
+pellette. Il jette du charbon dans le foyer. Sept pelletees.
+Entre chaque pelletee, il se redresse et respire.
+A la septieme, il pose la pelle contre le mur. Il s'assoit par terre, dos a
+la chaudiere, exactement a l'endroit ou est le matelas aujourd'hui.
+Il reste assis 12 secondes.
+Il s'efface.
+[OBL] La pelle reste appuyee contre le mur pendant 3 secondes apres lui.
+Puis elle s'efface aussi.
+[OBL] Il n'y a pas de pelle au present. Elle n'est nulle part dans le jeu.
+Musique : M19 « La chaufferie », un seul instrument grave (contrebasse a
+l'archet), sept notes, une par pelletee, puis un silence de 12 secondes.
+[OBL] La huitieme note n'existe pas. Meme principe que M04 (E02, S1).
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+[OBL] Sol n'est PAS dans la piece quand le joueur la decouvre. Il est
+parti devant, dans le conduit suivant. Le joueur entre seul.
+[ART] Il entre dans la chambre a coucher d'un enfant de 13 ans, sans lui,
+avec une lampe, et il regarde son lit fait.
+[OBL] Aucun prompt sur le matelas lui-meme au-dela de l'Echo. Rien n'est
+fouillable. Aucun objet n'est prenable.
+Quand Sol revient (SOL-SCE-091, 90 secondes plus tard), il ne dit rien sur
+le fait que Lohen soit entre. [OBL] Aucune reaction, aucun dialogue
+alternatif, aucune gene. Il passe et continue.
+[OBL] Si le joueur declenche E19 pendant que Sol est dans la piece : Sol ne
+le voit pas, ne reagit pas, ne le mentionne jamais. Comme Tallec (PN-045).
+
+§ 6 — AUDIO
+Hors Echo : la chambre de chauffe est le point le plus SEC et le plus MAT
+de S5. RT60 0,4 s (brique voutee + textile).
+[ART] Apres 9 minutes de conduits ruisselants et resonants, le joueur entre
+dans une piece qui absorbe. On entend que c'est habite.
+SFX(boiler_metal_cold) : la chaudiere morte, un tic toutes les 40-120 s.
+Pendant E19 : SFX(coal_shovel), 7 pelletees, chacune differente (la pelle
+racle, le charbon tombe, le foyer accepte). Et la respiration de l'homme —
+[OBL] c'est le seul Echo du chapitre ou l'on entend une RESPIRATION humaine.
+Sept respirations, de plus en plus courtes.
+Puis 12 secondes ou l'on n'entend que la chaudiere qui brule.
+Aucune voix.
+
+§ 7 — INTERDICTIONS
+Interdit de : fouiller · prendre un objet · defaire le lit · s'allonger ·
+montrer Sol dans l'Echo · faire reagir Sol a l'intrusion ou a l'Echo ·
+reveler qui a appris a Sol a faire son lit · expliquer la pierre plate ·
+ajouter une pelle au present · ajouter une huitieme note a M19 · reveler
+Pomme ici · rendre E19 rejouable · ajouter un jouet, un dessin, une photo.
+
+§ 8 — LIENS
+PN-053 (le nid de Sol dans la gaine, S3) : le joueur croyait que c'etait la
+qu'il vivait. PN-090 (la reserve de nourriture). PN-091 (le collier de
+chien). PN-089 (les quatre marques a la craie, au mur, a 40 cm).
+PN-142 (la pierre plate, S8) : le meme asset.
+PN-147 (la veste 0114 posee sur Sol, S8).
+[THEME] FAIRE SON LIT. [THEME] LAISSER LA BONNE PLACE A L'AUTRE.
+
+§ 9 — DOD
+[ ] Literie sculptee, lit fait au carre, angles rentres
+[ ] Creux de chien contre le mur, 4 cm, 400 brins de poils
+[ ] Pierre plate identique a l'asset de PN-142
+[ ] Textile le plus propre du chapitre
+[ ] E19 : 7 pelletees, 7 respirations, 12 s assis, pelle qui reste 3 s
+[ ] M19 : 7 notes, la 8e absente
+[ ] Aucune pelle au present, nulle part dans le jeu
+[ ] Sol absent a la decouverte, aucune reaction a son retour
+[ ] RT60 0,4 s, contraste net avec les conduits

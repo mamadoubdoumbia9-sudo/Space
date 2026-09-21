@@ -1,0 +1,106 @@
+===============================================================================
+PN-061 — LE PUITS A POULIE DU NIVEAU 2
+===============================================================================
+Asset : SM_S3_Puits_Poulie · S3, ouverture dans le plancher de la
+passerelle du niveau 2 · ~02:36 · prop narratif INTERACTIF · pas d'Echo ·
+LOD0 1 800 tris
+
+§ 1 — CE QU'ON VOIT
+Une ouverture carree de 1,20 m dans le plancher de la passerelle, bordee
+d'un cadre de bois use. Au-dessus, une potence et une poulie.
+Une corde passe dans la poulie. Elle descend par le trou, jusqu'au verre,
+9 metres plus bas.
+Au bout, en bas, un seau de bois cercle de fer.
+C'est un puits. Mais il n'y a pas d'eau : il y a du verre.
+[OBL] Le seau repose sur la Maree. Il est vide. Il est sec. Il l'est depuis
+trois ans.
+Autour du trou, sur le plancher, quatre zones usees et polies : les quatre
+positions ou on pose les pieds pour tirer.
+Sur le cadre, des dizaines d'encoches au couteau. Quelqu'un comptait
+quelque chose. Il y en a soixante-treize.
+La corde est en bon etat. Elle a ete remplacee. Recemment.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 800 (cadre 400 + potence 500 + poulie 300 + corde 400 + seau 200).
+La corde : 9 m + la remontee, spline dynamique de 24 segments.
+INTERACTION : le joueur peut REMONTER le seau. C'est une des 24
+interactions non-Echo.
+LOH-ACT-186 `pull_rope_loop`, boucle de 1,6 s, repetee 11 fois.
+[OBL] Il faut 11 tractions. 17,6 secondes. Le joueur doit appuyer 11 fois.
+Il n'y a pas de barre de progression, pas de compteur, pas d'indication.
+Il tire jusqu'a ce que ca arrive.
+[OBL] A la 6e traction, LOH-ANI-234 : Lohen change de main. Il passe la
+corde de la droite a la gauche (l'epaule droite). Une seule fois.
+Le seau arrive. Il est vide. Il y a 2 cm de poussiere seche au fond.
+[OBL] Le joueur peut le redescendre. Il n'y a rien d'autre.
+
+§ 3 — CE QUE CA DIT
+Le Marche suspendu est a 9 m au-dessus de la mer. Pour avoir de l'eau, on
+descendait un seau.
+Apres la Maree, la mer est devenue du verre. Le seau descend toujours. Il
+ne remonte plus rien.
+Le geste humain : remplacer une corde. Quelqu'un a change cette corde il y
+a moins d'un an. Pour un puits qui ne donne rien.
+Les 73 encoches sur le cadre : quelqu'un compte. Les descentes ? Les jours ?
+[OBL] Jamais explique.
+[NAR] Et le joueur, lui, tire 11 fois sur une corde pour remonter un seau
+vide. Le jeu lui fait executer le geste inutile, physiquement, 17 secondes,
+sans recompense d'aucune sorte.
+[OBL] C'est le seul travail physique repetitif du chapitre et il ne produit
+rien. C'est le sujet du jeu execute par les pouces du joueur.
+
+§ 4 — ECHO
+NEANT. [OBL] Le seau est sur la Maree (regle PN-011) et la corde est un
+geste d'apres (PN-015). Le puits lui-meme est collectif (PN-016).
+Triple impossibilite. Le prop le plus verrouille de S3 apres PN-053.
+
+§ 5 — MISE EN SCENE
+En plein milieu de la passerelle du niveau 2. Le joueur doit contourner le
+trou — [OBL] il peut tomber dedans. C'est le SEUL endroit du chapitre ou
+une chute est possible.
+Chute : 9 m, sur le verre. [OBL] Lohen ne meurt pas. Il n'y a pas de mort
+dans le chapitre 1 (08.31). Il tombe, il atterrit lourdement, il reste au
+sol 3 secondes (LOH-ANI-237, une chute vraiment moche — regle d'animation
+n°7 : l'echec doit etre moche), il se releve en se tenant l'epaule droite.
+Puis il doit remonter par le monte-charge, ce qui prend 90 secondes.
+[OBL] Aucun ecran de mort, aucun rechargement, aucune penalite, aucun son
+d'echec, aucun message. Juste 90 secondes a refaire le chemin.
+[ART] C'est la seule punition du jeu et c'est du temps perdu.
+Le trou n'est pas signale. Il n'y a pas de barriere, pas de ruban, pas de
+pictogramme. Il est visible : c'est un trou de 1,20 m en plein chemin.
+
+§ 6 — AUDIO
+SFX(pulley_single_squeal) : la poulie, a chaque traction. 11 grincements.
+[OBL] Les 11 sont DIFFERENTS et ils montent en hauteur a mesure que la
+corde raccourcit (meme principe physique que PN-049). Le joueur entend que
+le seau monte.
+SFX(bucket_glass_scrape) : au depart, le seau racle le verre. Un son dur.
+SFX(rope_hand_slide) : le glissement dans les mains, 11 fois, avec une
+variation nette a la 6e (le changement de main).
+SFX(loh_effort_breath) : un souffle a la 8e, 10e et 11e traction. Trois.
+[OBL] Pas onze. Un homme ne souffle pas a chaque traction.
+Aucune musique. M10 continue.
+
+§ 7 — INTERDICTIONS
+Interdit de : mettre de l'eau dans le seau · y mettre un objet · ajouter une
+recompense · afficher un compteur ou une barre · expliquer les 73 encoches
+· empecher la chute · ajouter une barriere ou un avertissement · tuer Lohen
+· afficher un ecran d'echec · ajouter un son d'echec · reduire le nombre de
+tractions · sauter l'animation · donner un Echo.
+
+§ 8 — LIENS
+PN-049 (le monte-charge : la remontee apres une chute, et l'autre systeme
+de poulies). PN-044 (les poulies de la corde a linge). PN-021 (l'echelle
+brisee, S1 : l'epaule droite, deja).
+PN-033 (le harpon, S2) : l'autre geste inutile et repete.
+[THEME] L'EPAULE DROITE. [THEME] LE GESTE QUI NE DONNE RIEN.
+
+§ 9 — DOD
+[ ] 11 tractions exactement, 17,6 s, aucun compteur, aucune barre
+[ ] Changement de main a la 6e (LOH-ANI-234), une seule fois
+[ ] 11 grincements distincts montant en hauteur
+[ ] 3 souffles seulement (8e, 10e, 11e)
+[ ] Seau vide, 2 cm de poussiere, redescendable, aucune recompense
+[ ] Chute possible, 9 m, aucune mort, aucun ecran, 90 s de detour
+[ ] Chute vraiment moche (regle d'animation n°7)
+[ ] 73 encoches, jamais expliquees

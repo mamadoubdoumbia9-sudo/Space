@@ -1,0 +1,121 @@
+===============================================================================
+PN-071 — LE VITRAIL BRISE
+===============================================================================
+Asset : SM_S4_Vitrail_Brise · S4, mur nord de la rotonde, 4 m au-dessus de
+l'eau · ~03:31 · PORTEUR D'ECHO E15 · LOD0 3 600 tris
+
+§ 1 — CE QU'ON VOIT
+Un grand vitrail de 4 x 2,5 m, en arc, dans le mur nord.
+Ce n'est pas un vitrail religieux. C'est un vitrail civique : il represente
+une carte. La carte de la baie de Velmora, stylisee, avec le port, la
+ville, le phare, et la mer en verre bleu.
+Il est brise. Un tiers manque, en bas a droite.
+[OBL] La partie manquante est exactement celle qui representait LA MER.
+Le port est intact. La ville est intacte. Le phare est intact. La mer a
+disparu du vitrail.
+Les plombs sont tordus vers l'exterieur : quelque chose est sorti, pas
+entre. Ou le verre a ete pousse de l'intérieur.
+Par le trou, on voit le vrai dehors : la brume, un bout de toit, rien.
+Les morceaux tombes sont en bas, dans l'eau, au pied du mur. Des dizaines
+de fragments bleus dans 4 cm d'eau claire.
+[OBL] Ils sont BLEUS. Dans une piece ou tout est brun, gris et vert.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 600 (vitrail 1 400 + plombs 900 + 64 fragments au sol 1 300).
+[OBL] Le vitrail est en geometrie : chaque piece de verre est un mesh
+separe avec son propre materiau. 118 pieces. Pas de texture de vitrail.
+Justification : le joueur voit le vitrail a contre-jour, de pres, et les
+plombs doivent avoir une epaisseur reelle et projeter des ombres.
+Transmission par piece : 0,42 a 0,71 selon la couleur.
+[OBL] La lumiere traversante projette la carte sur le mur oppose, en
+couleurs, deformee par l'angle. Light cookie 2K teintee, mise a jour jamais
+(la lumiere est fixe, 05.09). Cout 0,2 ms.
+La projection tombe sur les rayonnages noyes (PN-078).
+Les fragments dans l'eau : 64 meshes, avec refraction de l'eau par-dessus.
+Anim : PROP-782 — pendant E15, un fragment bouge. Un seul. 1 cm.
+
+§ 3 — CE QUE CA DIT
+Le vitrail representait la baie. La mer du vitrail est cassee.
+[OBL] Coincidence pure. Il n'y a aucun lien causal entre la Maree et cette
+cassure : le vitrail a ete brise par une branche, une pierre, un accident.
+[OBL] Le jeu ne l'explique pas et ne suggere jamais de lien surnaturel.
+[ART] C'est le principe du chapitre : le monde produit des coincidences
+terribles, et personne ne les commente, et elles ne veulent rien dire.
+Le geste humain : aucun sur la cassure. Mais quelqu'un a rentre les
+fragments — ou plutot, ne les a pas enleves. Ils sont ou ils sont tombes.
+[NAR] Mireille marche dans cette piece depuis trois ans avec des morceaux
+de verre dans l'eau. Elle les contourne. Elle connait leur position.
+
+§ 4 — ECHO
+ECHO E15 — « Le vitrail » — 31 secondes, mode B (lumiere + silhouettes).
+Le vitrail se REPARE. [OBL] Pas d'un coup : piece par piece, de bas en
+haut, en 11 secondes. 47 pieces de verre bleu reviennent a leur place.
+Quand il est complet, la lumiere change : la projection sur le mur oppose
+devient entiere. La carte de la baie apparait en couleurs sur les
+rayonnages, avec la mer bleue.
+[OBL] C'est la seule image de la mer NON SOLIDIFIEE de tout le chapitre.
+Dix-neuf secondes.
+Pendant ce temps, deux silhouettes : deux personnes debout devant le
+vitrail, de dos, qui le regardent. Une adulte, une plus petite (1,45 m —
+[OBL] un adolescent, pas un enfant : la regle des enfants n'est pas violee,
+et la taille doit etre verifiee au centimetre).
+Elles ne bougent pas.
+A 28 s, le vitrail se recasse. [OBL] Pas en sens inverse : les 47 pieces
+tombent, toutes en meme temps, en 0,4 s. Sans son.
+[OBL] Silence absolu pendant la casse. C'est le seul evenement violent du
+chapitre et il est muet.
+Les silhouettes s'effacent pendant la chute.
+Musique : M17 « La carte », harpe et flute, 31 s, qui s'arrete net a 28 s,
+au milieu d'une phrase, sur la casse.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+Le vitrail est a 4 m au-dessus de l'eau, sur le mur nord. Le joueur le voit
+depuis le sol de la rotonde et depuis la mezzanine.
+[OBL] L'Echo se declenche depuis le SOL, en levant les yeux. Le prompt
+apparait a 6 m.
+[ART] Pendant E15, le joueur est dans 4 cm d'eau, sous une coupole de 22 m,
+et regarde une carte de la mer se reformer en lumiere bleue sur des
+etageres noyees.
+La projection sur les rayonnages est le vrai spectacle : le joueur peut se
+retourner et regarder le mur au lieu du vitrail. [OBL] Beaucoup le feront.
+C'est prevu. La composition fonctionne dans les deux sens.
+
+§ 6 — AUDIO
+Hors Echo : SFX(wind_through_break) — le vent passe par le trou. Une note
+soufflee, grave, irreguliere. C'est le seul point ou l'exterieur entre
+acoustiquement dans la bibliotheque. -21 dB.
+Pendant E15 : le vent s'arrete (le vitrail est repare). [OBL] Le joueur
+entend la piece se fermer. Detail majeur : pendant 19 secondes, la
+bibliotheque est etanche, et le silence a une qualite differente.
+SFX(glass_lead_settle) : les 47 pieces qui reviennent, 11 s, un son de
+verre qui s'emboite, tres doux.
+A 28 s : RIEN. La casse est totalement muette.
+Apres : le vent revient, en 1 s, et le joueur se rend compte qu'il avait
+disparu.
+
+§ 7 — INTERDICTIONS
+Interdit de : reparer le vitrail definitivement · ramasser les fragments ·
+sortir par le trou · expliquer la cassure · suggerer un lien avec la Maree
+· ajouter un son a la casse · montrer les visages · faire regarder les
+silhouettes vers Lohen · faire de la petite silhouette un enfant de moins
+de 1,40 m · resoudre M17 · rendre E15 rejouable · ajouter du sang ou une
+blessure liee au verre.
+
+§ 8 — LIENS
+PN-066 (l'oculus : l'autre verre casse de la piece).
+PN-028, PN-065 (le verre vert de PN-028 et de la serre) et PN-116, PN-117
+(l'atelier du Verrier, S7). [OBL] Ce vitrail a ete fait par le pere
+d'Anselme Roux. Jamais dit, jamais montre, jamais suggere.
+PN-023 (le tramway : l'autre Echo de mode B avec lumiere).
+[THEME] LA MER QUI MANQUE. [THEME] LES COINCIDENCES QUI NE VEULENT RIEN DIRE.
+
+§ 9 — DOD
+[ ] 118 pieces de verre en geometrie, plombs a epaisseur reelle
+[ ] Tiers manquant correspondant exactement a la mer de la carte
+[ ] Projection coloree sur les rayonnages, light cookie 2K, 0,2 ms
+[ ] 64 fragments bleus dans l'eau, seule couleur bleue de la piece
+[ ] E15 : reparation 11 s, mer visible 19 s, casse a 28 s en 0,4 s
+[ ] Casse totalement muette ; vent coupe pendant la reparation
+[ ] Petite silhouette a 1,45 m, verifiee au centimetre
+[ ] M17 arretee net au milieu d'une phrase

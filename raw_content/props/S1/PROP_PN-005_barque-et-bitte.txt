@@ -1,0 +1,86 @@
+===============================================================================
+PN-005 — LA BARQUE DE LOHEN ET SA BITTE D'AMARRAGE
+===============================================================================
+Asset : SM_S1_Barque_Lohen + SM_S1_Bitte_Verre · S1, point de depart exact
+du jeu, altitude 0 · 00:00 · prop narratif · pas d'Echo · LOD0 3 800 tris
+
+§ 1 — CE QU'ON VOIT
+Une barque a rames de 4,2 m, coque en bois clair goudronne, en bon etat —
+c'est le seul objet PROPRE et ENTRETENU de toute la sequence 1. Deux rames
+rangees dans les dames de nage, un banc central, un fond sec, un seau vide.
+Elle est posee SUR le verre noir, pas dans l'eau. Elle ne flotte pas :
+elle repose, legerement inclinee a bribord, sur une surface solide.
+Elle est amarree a une BITTE D'AMARRAGE de fonte qui depasse du verre de
+34 cm. La bitte etait sur un quai, il y a trois ans. Le quai est dessous.
+Le noeud : un tour mort et deux demi-cles, fait avec un soin visible. La
+boucle est nette, le cordage est lisse au point de friction.
+Sur le banc, une enveloppe. Pas de nom dessus. Juste « 0114 », a l'encre,
+d'une ecriture maladroite et appuyee.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 800 (barque 2 600 + rames 500 + bitte 400 + cordage 300).
+Textures : atlas 4K dedie (c'est le premier plan de la cinematique C01).
+Cordage en geometrie reelle, 9 segments, noeud modelise nœud par nœud.
+Shader `wood_tarred.gdshader`. L'enveloppe utilise `letter_paper` (05.23)
+en variante seche.
+Anim : PROP-704 pour le tangage (8 cm) quand Lohen monte/descend.
+Collision : precise (le joueur peut y remonter en fin de S1, il ne le fera
+pas — rien ne l'y invite).
+Etat persistant : la barque reste amarree la pendant tout le chapitre. Elle
+est visible depuis 4 points de S2. Elle ne bouge jamais.
+
+§ 3 — CE QUE CA DIT
+Un homme est arrive par la mer, seul, a la rame, sur quatre kilometres de
+verre. Il a pris le temps de faire un beau noeud.
+Le geste humain : le noeud. Personne ne fait un noeud pareil s'il compte
+repartir dans l'heure. Personne ne fait un noeud pareil non plus s'il
+n'espere pas repartir du tout.
+La proprete de la barque contraste avec toute la sequence : Lohen vient
+d'ailleurs, il a des moyens, il a prepare ce voyage. Ce n'est pas une
+impulsion. C'est trois ans de preparation.
+L'enveloppe avec « 0114 » : il s'ecrit a lui-meme. Le joueur ne le comprend
+qu'a la voix off (12.10), 90 secondes plus tard.
+
+§ 4 — ECHO
+NEANT. Raison [OBL] : c'est l'objet de Lohen, au present. Les Echos sont
+des memoires d'avant la Maree. Son propre present n'en a pas. Cette absence
+enseigne implicitement la regle temporelle du systeme avant meme le premier
+Echo.
+
+§ 5 — MISE EN SCENE
+C'est le PREMIER plan jouable du jeu (C01, plans 2-6, 15.02). La camera est
+dessus pendant 60 secondes avant que le joueur ne prenne le controle.
+Le noeud est filme en gros plan pendant 6 secondes (LOH-CIN-205).
+Lumiere : contre-jour d'aube, la barque en silhouette, le Phare derriere.
+Quand le joueur reprend le controle et se retourne, il voit sa barque.
+[OBL] Aucun marqueur de « retour ». Le jeu ne propose jamais de repartir.
+
+§ 6 — AUDIO
+SFX(oar_glass) — le moment ou la rame frappe le verre au lieu de l'eau :
+le premier son signature du jeu (13.29), en cinematique.
+SFX(rope_creak) toutes les 20 s, tres discret, quand le vent tire la barque.
+SFX(hull_settle) deux fois par minute, un craquement de coque.
+Musique : M01 « Velmora, 06:12 » demarre au plan 5, pas avant.
+
+§ 7 — INTERDICTIONS
+Interdit de : faire flotter la barque · lui donner un Echo · la faire
+disparaitre ou deriver · permettre de la detacher · ecrire autre chose que
+« 0114 » sur l'enveloppe · permettre de lire l'enveloppe avant la sequence 8
+· ajouter des provisions, une carte, un sac visible dans la barque.
+[OBL] L'enveloppe reste dans la sacoche tout le chapitre et n'est JAMAIS
+ouverte. Son contenu n'est jamais revele, ni au chapitre 1, ni ailleurs.
+
+§ 8 — LIENS
+PN-018 (la borne de relais) : meme matricule. PN-143 (LA LETTRE) : le pli
+d'Esteban porte aussi « 0114 », de SON ecriture — et le joueur a vu celle
+de Lohen ici, a la minute zero. Les deux ecritures sont visiblement
+differentes (14.06). C'est la premiere occurrence de la typographie
+manuscrite de Lohen, et elle sert de reference de comparaison 3 h 30 plus
+tard. PN-147 (la veste 0114 posee sur Sol).
+
+§ 9 — DOD
+[ ] Noeud modelise, filmable en gros plan a 400 px/m
+[ ] La barque repose, ne flotte pas, inclinee a bribord
+[ ] « 0114 » dans la police manuscrite de Lohen, pas celle d'Esteban
+[ ] Visible depuis 4 points de S2, position identique
+[ ] Aucune interaction de detachement possible

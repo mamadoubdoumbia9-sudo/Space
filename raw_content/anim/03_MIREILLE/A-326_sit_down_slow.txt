@@ -1,0 +1,101 @@
+===============================================================================
+  A-326   sit_down_slow
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 326 / 744
+  Partie 3 — MIREILLE VANDECK
+  Categorie : LOCOMOTION
+  Fichier source  : A_Mireille_Loc_sit_down_slow_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+  Identifiant precedent : A-329 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 3.200 s  (96 frames a 30 fps)
+  Type .................. ONE-SHOT
+  Root motion ........... RM-FULL
+  Couche AnimationTree .. L0
+  Priorite .............. N/A — non applicable (clip sans priorite d'etat)
+  Poids compresse cible . ~70 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      jambes completes, pelvis, spine_01-03, bras contrebalances, IK de pied
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  MIREILLE VANDECK — 58 ans, gardienne de la Bibliotheque des Eaux.
+
+  Elle est ECONOME. Elle a mal partout et elle ne le montre pas. Chaque
+  mouvement est calcule pour depenser le minimum. Elle ne se leve jamais
+  sans raison. Elle ne hausse JAMAIS la voix : quand elle appuie, elle
+  RALENTIT. Gestes signature : M1 elle tourne sa tasse de 90 deg avant de
+  boire, M2 elle cache sa main brulee quand on la regarde. Elle ment une
+  fois.
+
+  Rig et costume :
+      manteau rapiece (14 pieces, 15 apres le clip A-371), lunettes a un
+      seul verre, canne qui est un pied de biche, tasse
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  elle s'assoit en trois temps, une main sur l'accoudoir, l'autre sur la
+  canne, et le dernier tiers est une chute controlee de 8 cm. Expiration a
+  l'arrivee.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Clip ONE-SHOT : pas de contrainte de cyclage. La derniere frame
+  doit poser une silhouette blendable vers les etats de sortie.
+
+  Evenements de timeline :
+      SFX(chair_receive) f78 · BREATH_OUT f80
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- transition de demarrage correspondante ; -> autre vitesse du
+      BlendSpace2D, ou transition d'arret
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · la translation vient integralement de l'anim : aucun deplacement
+      ajoute par le code pendant le clip
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-326
+===============================================================================

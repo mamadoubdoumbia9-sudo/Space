@@ -1,0 +1,85 @@
+===============================================================================
+PN-010 — LE TAMPON DATEUR BLOQUE AU 14 OCTOBRE
+===============================================================================
+Asset : SM_S1_Tampon_Dateur · S1, comptoir du bureau du Registre ·
+~00:22 · prop narratif a TEXTE LISIBLE · pas d'Echo · LOD0 900 tris
+
+§ 1 — CE QU'ON VOIT
+Un tampon dateur de bureau, bois et caoutchouc, avec trois molettes
+crantees : jour, mois, annee. Il est pose sur son encreur ouvert.
+Les molettes affichent : 14 — OCT — [l'annee].
+A cote, une feuille de registre, avec vingt-deux lignes remplies a la main
+et une vingt-troisieme commencee. Les vingt-deux premieres portent
+l'empreinte du tampon, bien nette, dans la colonne de droite.
+La vingt-troisieme ligne a l'ecriture mais PAS le tampon. La main s'est
+arretee entre l'ecriture et le coup de tampon.
+L'encreur est ouvert. Le tampon est pose DESSUS, encre, pret a frapper.
+Il est encore encre. Le tampon a seche, mais l'empreinte de caoutchouc est
+noire et grasse.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 900. Atlas 2K partage bureau.
+[OBL] Texture 4K dediee pour la feuille de registre : les 22 lignes sont
+ECRITES A LA MAIN, lisibles individuellement a 1,5 m (min. 300 px/m). Noms,
+heures d'arrivee de navires, tonnages. Aucune ligne generee, aucun
+lorem ipsum, aucune repetition.
+La 23e ligne est incomplete au milieu d'un mot. Le mot interrompu est
+« HIRON » (pour L'Hirondelle de Mer, PN-024, que le joueur verra en S2).
+Les trois molettes sont de la geometrie avec les crans modelises.
+Shader `rubber_inked` (le caoutchouc encre a un speculaire particulier).
+Collision : non ramassable, non tournable. Les molettes ne bougent pas.
+
+§ 3 — CE QUE CA DIT
+Le tampon donne au joueur LA DATE, sans qu'aucun personnage n'ait a la
+prononcer. C'est le seul endroit du chapitre 1 ou le 14 octobre est ecrit
+en clair avant la sequence 6.
+Le geste humain : le tampon est POSE sur l'encreur, encre, pas range dans
+son etui. On le pose la entre deux lignes, pas en fin de journee.
+La 23e ligne interrompue au milieu de « HIRON » place l'instant : 23h41.
+[NAR] Et cela dit que L'Hirondelle de Mer arrivait au port ce soir-la.
+Elle n'y est jamais arrivee : le joueur la trouvera en S2, a 900 m au large,
+prise dans le verre, inclinee a 23 degres. Le lien est disponible pour qui
+le veut, jamais souligne.
+
+§ 4 — ECHO
+NEANT. Raison : le tampon EST son propre Echo. Il contient l'instant
+d'arret sous forme materielle. Un Echo serait redondant — et la redondance
+est le seul vrai peche de ce jeu (00.14).
+
+§ 5 — MISE EN SCENE
+Sur le comptoir, a droite de PN-009 (la lampe). Quand le joueur prend la
+lampe, il eclaire mecaniquement le comptoir de plus pres : le registre
+devient lisible. Le jeu n'a rien fait pour ca. La physique de la lumiere
+portee suffit.
+[OBL] Aucun zoom d'inspection, aucun mode « examiner », aucun overlay de
+lecture (14.09). Le joueur se penche avec la camera libre, ou il ne lit pas.
+Le texte est fait pour etre lisible EN JEU, dans l'espace, pas dans une UI.
+
+§ 6 — AUDIO
+NEANT propre. Le tampon ne fait aucun bruit.
+[ART] Dans le mix de la piece, on entend uniquement : le souffle de la
+lampe (PN-009), la reverb seche, et les pas sur le plancher.
+La tentation d'ajouter un « coup de tampon fantome » est explicitement
+rejetee (cf. § 7).
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter un son de tampon fantome · animer les molettes ·
+permettre de tamponner · afficher la date en surimpression · en faire une
+entree de journal ou de codex (il n'y a pas de codex) · ecrire l'annee en
+chiffres visibles ailleurs dans le jeu · completer le mot « HIRON » ·
+mettre plus ou moins de 22 lignes tamponnees.
+
+§ 8 — LIENS
+PN-024 (L'Hirondelle de Mer, S2) : le mot interrompu. PN-013 (le tableau
+noir des marees) : l'autre source de date. PN-003 (l'affiche 641).
+PN-027 (le carnet de bord, S2) : la meme nuit vue depuis le navire —
+derniere ligne ecrite a 23h39, deux minutes avant.
+[THEME] LE TRAVAIL INTERROMPU, ici a l'echelle d'un seul geste.
+
+§ 9 — DOD
+[ ] 22 lignes manuscrites uniques, lisibles a 1,5 m, contenu credible
+[ ] 23e ligne interrompue exactement a « HIRON »
+[ ] Molettes 14 / OCT, crans en geometrie
+[ ] Lisible sans aucun mode examiner ni overlay
+[ ] Zero son, zero animation
+[ ] Coherence croisee validee avec PN-027 (23h39) et PN-024

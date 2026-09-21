@@ -1,0 +1,102 @@
+===============================================================================
+  A-476   action_deliver_mireille_letter
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 476 / 744
+  Partie 5 — SOL
+  Categorie : ACTING / DIALOGUE
+  Fichier source  : A_Sol_Act_action_deliver_mireille_letter_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+  Identifiant precedent : A-479 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 4.000 s  (120 frames a 30 fps)
+  Type .................. ONE-SHOT
+  Root motion ........... RM-NONE
+  Couche AnimationTree .. L0
+  Priorite .............. 88 — narratif / interaction (bande 80-94, bareme 0.05)
+  Poids compresse cible . ~184 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      buste, bras, mains, tete, machoire, blendshapes faciaux 60 fps
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006 (chaines de doigts dominantes sur ce clip)
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  SOL — 13 ans, genre non precise, jamais precise, jamais un sujet.
+
+  Sol ne s'arrete JAMAIS de bouger (geste S1), SAUF quand c'est grave (geste
+  S2) — et alors l'immobilite est totale, absolue, effrayante. Tout le
+  personnage tient dans ce contraste : l'animateur doit SUR-ANIMER
+  l'agitation pour que l'immobilite frappe. Parle par phrases de quatre mots
+  maximum. Sait ou tout se trouve. Ne demande jamais rien. Sol est le seul
+  personnage qui fait rire le joueur, et ce role est VITAL : sans Sol, le
+  chapitre est irrespirable.
+
+  Rig et costume :
+      vetements trois fois trop grands, veste de relayeur en lambeaux qui
+      etait celle de quelqu'un d'autre, PIEDS NUS (10 os d'orteils animes
+      individuellement, IK de pied de precision)
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  E25 (S7). Iel apporte la lettre de Mireille a Lohen, sous la pluie, en
+  courant. Iel la tient sous sa veste pour la proteger. Iel est trempe. La
+  lettre est seche. [NAR] Sol vient de faire le travail d'un relayeur.
+  Personne ne le souligne.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Clip ONE-SHOT : pas de contrainte de cyclage. La derniere frame
+  doit poser une silhouette blendable vers les etats de sortie.
+
+  Evenements de timeline :
+      SFX(rain_on_cloth) · SFX(paper_dry_reveal) f70
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- idle de dialogue du personnage ; -> ligne suivante, ou idle
+      d'ecoute
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-476
+===============================================================================

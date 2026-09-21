@@ -1,0 +1,99 @@
+===============================================================================
+PN-019 — LE PANIER DE LINGE ABANDONNE
+===============================================================================
+Asset : SM_S1_Panier_Linge · S1, cour derriere les logements de peche,
+au pied d'un fil a linge · ~00:43 · prop narratif · pas d'Echo ·
+LOD0 4 800 tris
+
+§ 1 — CE QU'ON VOIT
+Un panier d'osier ovale, pose a plat au sol, plein de linge.
+Au-dessus, un fil a linge tendu entre deux murs, sur 7 m. Il porte encore
+QUATRE pieces : deux draps, une chemise d'homme, une taie d'oreiller.
+Elles sont tenues par des pinces de bois. Elles ne sont jamais tombees.
+Trois ans de vent et de pluie : elles sont grises, raidies, deformees. Un
+drap a une dechirure de 60 cm qui bat encore un peu.
+Dans le panier, le linge est MOUILLE — pas de la pluie : c'est du linge qui
+sort d'une lessiveuse. Il est tordu, essore, en boules serrees. Il n'a
+jamais seche : au fond du panier, sous les couches, il a pourri. Une tache
+noire s'etale du centre vers les bords.
+Une cinquieme pince a linge est tombee. Elle est au sol, a 40 cm du panier.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 4 800 (panier 1 100 + 4 pieces sur fil 2 400 + contenu du panier 1 300).
+[OBL] Les quatre pieces sur le fil sont des meshes SCULPTES dans leur etat
+raidi, pas des tissus simules. Un tissu qui a seche en forme et durci ne se
+simule pas.
+Anim : PROP-721 `cloth_stiff_flap` — seule la dechirure du drap bouge, sur
+40 cm, amplitude 6 cm, 0,3 Hz irregulier. Le reste est fige.
+Shader `fabric_weathered` : deux couches, la trame et le depot gris-vert,
+avec un gradient vertical (le bas est plus sale, c'est la ou l'eau coule).
+Le contenu du panier : masse sculptee + shader `fabric_rot` avec la tache
+noire en masque radial.
+Collision : boite. Non fouillable.
+
+§ 3 — CE QUE CA DIT
+Une femme a fait une lessive. Elle a essore, rempli le panier, sorti le
+panier dans la cour, et commence a etendre. Elle a etendu quatre pieces.
+Elle a pose la cinquieme pince — et la pince est tombee.
+Le geste humain : etendre du linge. Quatre pieces. La cinquieme pince par
+terre marque la SECONDE exacte de l'interruption, comme le mot « HIRON » de
+PN-010 marque la sienne.
+[NAR] Mais attention : la Maree a eu lieu a 23h41. On n'etend pas du linge
+a 23h41. Cette lessive a ete interrompue par autre chose — un appel, un
+cri, un bruit dans la rue, quelqu'un qui est venu. Le jeu ne le dira jamais.
+C'est la seule anomalie temporelle de la sequence 1 et elle est deliberee :
+tous les objets ne racontent pas la meme nuit. Certains racontent une autre
+vie, interrompue autrement. Une ville n'est pas un decor coherent.
+
+§ 4 — ECHO
+NEANT. Raison : la regle « objet personnel = Echo » pourrait s'appliquer,
+et c'est precisement pourquoi on la refuse ici. Le joueur, a 43 minutes, a
+vu deux Echos (E01, E02, E03) et commence a croire qu'il a compris le
+systeme. Ce prop, qui coche toutes les cases, ne repond pas.
+[OBL] C'est le premier faux positif du chapitre, et il est intentionnel.
+Le systeme ne doit jamais devenir previsible. Mesure : sur 31 Echos, on
+place 7 « faux positifs » de cette force dans le chapitre.
+
+§ 5 — MISE EN SCENE
+Une cour de 9 x 6 m, entre quatre murs, un seul acces. Le joueur y entre
+par curiosite : rien ne l'y oblige. [OBL] Zone optionnelle, 2 minutes de
+contenu, aucune recompense, aucun objet, aucun Echo. 34 % des joueurs n'y
+entreront pas. C'est acceptable (17.09).
+Lumiere : la cour est en ombre portee. Le fil a linge est en hauteur, et
+les quatre pieces accrochent le seul rai de lumiere qui passe entre deux
+toits. Elles sont eclairees ; le panier est dans le noir.
+Le drap dechire bat. C'est le seul mouvement de la cour.
+[ART] Composition : le rai de lumiere en diagonale, les quatre pieces
+suspendues, et en bas, dans l'ombre, la masse noire du panier. On voit ce
+qui a ete fait et on ne voit pas ce qui reste a faire.
+
+§ 6 — AUDIO
+SFX(cloth_stiff_snap) : le drap dechire, toutes les 4-9 s, un claquement
+SEC — du tissu raide, pas du tissu souple. -19 dB. C'est le son le plus
+present de la cour et il ne s'arrete jamais.
+La cour a une reverb en boite (RT60 0,9 s, 4 murs proches), tres differente
+du quai ouvert. Le joueur entend qu'il est entre quelque part.
+Aucune musique. [OBL] Aucun son d'eau qui goutte ici — il y en a partout
+ailleurs, la cour est seche. Le contraste est le point.
+
+§ 7 — INTERDICTIONS
+Interdit de : donner un Echo · permettre de fouiller le panier · faire
+tomber une piece du fil · ajouter un vetement d'enfant (les enfants sont
+traites par PN-007 et PN-014 uniquement) · simuler les tissus · ajouter une
+lessiveuse, un savon, une brosse (le hors-champ fait le travail) ·
+expliquer l'anomalie de l'heure · faire commenter par qui que ce soit.
+
+§ 8 — LIENS
+PN-010 (« HIRON ») : l'autre interruption a la seconde pres.
+PN-025 (la veste d'Esteban, S2) : le prochain textile important, et LUI
+porte un Echo. La difference sera sentie.
+[THEME] LE TRAVAIL INTERROMPU. [THEME] LES FAUX POSITIFS — refuser au
+joueur ce qu'il attend, pour que l'accord final compte.
+
+§ 9 — DOD
+[ ] 4 pieces sculptees raidies, aucune simulation
+[ ] Cinquieme pince au sol a 40 cm exactement
+[ ] Tache de pourriture en gradient radial au fond du panier
+[ ] Aucun prompt d'Echo malgre tous les criteres apparents
+[ ] Rai de lumiere sur le fil, panier dans l'ombre
+[ ] Cour seche : zero SFX de goutte dans le rayon de 12 m

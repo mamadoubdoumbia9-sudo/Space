@@ -1,0 +1,128 @@
+===============================================================================
+DLG · S7 · D01 — LE CABLE CASSE : LE JEU RETIRE SA PROPRE JOIE
+26 entrees, toutes S7. LOH 26. Contribution : 26.
+Reference maitre 09.16 : « Le joueur perd le grappin a la minute 3 (le
+cable casse, anim `grapple_snap`, scriptee). »
+===============================================================================
+
+--- LA REGLE DE S7 [OBL] --------------------------------------------------------------------------
+
+S7 est la sequence ou le jeu reprend ce qu'il a donne. Le grappin part a
+la minute 3. La pluie ne s'arrete jamais. Six des quatorze combats du
+chapitre sont ici. [OBL] Et le dialogue suit : S7 a le RATIO DE SILENCE
+LE PLUS ELEVE du chapitre — 274 lignes pour 41 minutes, contre 402 pour
+28 minutes en S5.
+
+[OBL] PLUIE : M23 est un enregistrement de pluie sur toles, 41 minutes
+sans boucle audible (4 couches decalees par des nombres premiers).
+[OBL] Aucune musique melodique en S7 avant le boss. C'est la deuxieme
+sequence quasi muette du chapitre apres S4 — mais S4 etait un silence
+poli, celui-ci est un bruit continu, et c'est pire.
+
+[OBL] DUCKING : la pluie descend de -7 dB sous chaque ligne, comme la
+VO standard. [OBL] Consequence recherchee : chaque fois que quelqu'un
+parle, le monde se calme un peu. Les joueurs ne le remarquent pas et
+parlent aux PNJ plus longtemps que necessaire. Mesure en playtest :
++34 % de temps passe en conversation par rapport a S3.
+
+--- LES 26 LIGNES -------------------------------------------------------------------------------
+
+    [S7_LOH_L001]  1,6 s · bas · « Il pleut. »
+        dir : [OBL] premiere ligne de S7. Deux mots. [OBL] Il ne
+              pleuvait pas depuis le debut du chapitre. Il pleuvra
+              jusqu'a la fin de la sequence.
+
+    [S7_LOH_L002]  2,0 s · bas · « Depuis quand ? »
+
+    [S7_LOH_L003]  2,4 s · bas · « J'ai passe trois heures dedans, j'ai rien vu venir. »
+        dir : [OBL] il est 16 h 10 dans la fiction. Le joueur joue
+              depuis environ 2 h 50.
+
+    [S7_LOH_L004]  1,8 s · bas · « Cent dix-huit metres. »
+
+    [S7_LOH_L005]  2,2 s · bas · « En bas c'est huit. »
+
+    [S7_LOH_L006]  1,4 s · bas · « Bon. »
+
+    [S7_LOH_L007]  2,6 s · bas · « Le cable est mouille, ca glisse dans le frein. »
+        dir : [OBL] AVERTISSEMENT DIEGETIQUE. [OBL] Il est donne 2 min
+              40 avant la casse. [OBL] Aucun indicateur d'usure, aucune
+              barre, aucun son d'alerte. [OBL] Seulement cette ligne,
+              une fois. 29 % des joueurs s'en souviendront apres coup.
+
+    [S7_LOH_L008]  2,0 s · bas · « Je descends doucement. »
+
+    [S7_LOH_L009]  1,6 s · bas · « Doucement. »
+
+    [S7_LOH_L010]  2,4 s · bas · « Une pointe par appui, pas deux. »
+
+    [S7_LOH_L011]  1,8 s · bas · « Voila. »
+
+    [S7_LOH_L012]  2,2 s · bas · « Encore quatre-vingt-dix metres. »
+
+    [S7_LOH_L013]  0,0 s · — · (slot sans VO)
+        dir : [OBL][NAR] LA CASSE. Anim `grapple_snap`, 0,9 s,
+              scriptee, INEVITABLE. [OBL] Elle survient a l'instant
+              precis ou le joueur vient de reussir un enchainement
+              propre — le declencheur n'est pas un timer, c'est le
+              troisieme ancrage consecutif sans erreur. [OBL] Le jeu
+              casse le grappin AU MEILLEUR MOMENT DU JOUEUR.
+              [OBL] Chute de 4 m. Aucun degat. Vibration : 180 ms,
+              amplitude 0,9 — la plus forte du chapitre.
+              [OBL] Aucun son de musique. La pluie ne baisse pas.
+
+    [S7_LOH_L014]  1,2 s · souffle · « Ah. »
+        dir : [OBL] Direction : ce n'est pas un cri. C'est le bruit
+              d'un homme qui comprend. [OBL] Prise refusee si elle
+              est jouee comme une douleur.
+
+    [S7_LOH_L015]  2,8 s · souffle · « Le cable est en bas et moi je suis en haut. »
+
+    [S7_LOH_L016]  1,6 s · souffle · « Enfin, au milieu. »
+
+    [S7_LOH_L017]  2,4 s · bas · « Quatre-vingt-quatre metres a faire a pied. »
+
+    [S7_LOH_L018]  2,0 s · bas · « Sous la pluie. »
+
+    [S7_LOH_L019]  1,4 s · bas · « Bon. »
+        dir : [OBL][NAR] TROISIEME « BON. » EN DIX-NEUF LIGNES.
+              [OBL] Le mot « bon » est le tic de Lohen : 47 occurrences
+              dans le chapitre, dont 11 en S7. [OBL] Il ne dit jamais
+              « merde », « non » de colere ou « pourquoi moi ». Il dit
+              « bon » et il continue. [OBL] Job CI `bon-count` : 47
+              exactement, aucune ajoutee en localisation.
+
+    [S7_LOH_L020]  2,6 s · bas · « Le grappin, c'est la Compagnie qui le fournit. »
+
+    [S7_LOH_L021]  2,2 s · bas · « Et le cable, c'est nous qui le payons. »
+        dir : [OBL] seule ligne du chapitre sur les conditions de
+              travail. [OBL] Dite sous la pluie, a personne, une fois.
+              [OBL] Aucun systeme economique n'existe dans le jeu.
+              [OBL] Interdit : ne jamais ajouter d'argent, de boutique,
+              de reparation payante. Interdit 21.08 (monetisation).
+
+    [S7_LOH_L022]  1,8 s · bas · « Je le recupererai en bas. »
+
+    [S7_LOH_L023]  2,4 s · bas · « S'il est encore la. »
+
+    [S7_LOH_L024]  2,0 s · bas · « Il sera la. Personne vole un cable de relayeur. »
+
+    [S7_LOH_L025]  2,8 s · bas · « Ca sert a rien si t'as pas le bras qui va avec. »
+        dir : [OBL] l'epaule droite. [OBL] 2e allusion volontaire du
+              chapitre (la 1re est S5_LOH_L012). [OBL] Toujours aucune
+              explication. [OBL] Il en reste une, en S8.
+
+    [S7_LOH_L026]  1,6 s · bas · « J'avance. »
+        dir : [OBL] fin du document. [OBL] A partir d'ici et jusqu'a la
+              fin du chapitre, le grappin n'est plus dans les mains de
+              Lohen. [OBL] Il est rendu en S8, par Sol, repare.
+              [OBL] Entre les deux : 41 minutes de jeu terrestre.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] La casse se declenche sur le 3e ancrage propre, pas sur un timer
+[ ] L007 : seul avertissement, donne 2 min 40 avant, jamais repete
+[ ] L014 : pas un cri, prise refusee sinon
+[ ] L019 : 3e « bon » — CI `bon-count` = 47 dans le chapitre
+[ ] L021 : aucune economie, aucune boutique, jamais
+[ ] L025 : 2e allusion a l'epaule, non expliquee

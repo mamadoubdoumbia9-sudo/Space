@@ -1,0 +1,102 @@
+===============================================================================
+PN-074 — LE MANTEAU RAPIECE QUATORZE FOIS
+===============================================================================
+Asset : SM_S4_Manteau_Mireille · S4, porte par Mireille · ~03:28 ·
+prop narratif porte par un personnage · pas d'Echo · LOD0 5 800 tris
+
+§ 1 — CE QU'ON VOIT
+Mireille porte un manteau d'homme. Laine grise, long, croise, col large.
+Il est trop grand pour elle : les epaules tombent, les manches sont
+retroussees de trois tours.
+Il est rapiece QUATORZE fois.
+Quatorze pieces de tissu, toutes differentes : de la laine, du velours, du
+coton, un morceau de couverture, un carre de toile ciree pour le coude
+gauche, une piece decoupee dans une doublure a rayures.
+Les coutures sont visibles. Grosses, irregulieres, faites a la main.
+[OBL] Les quatorze coutures sont de deux qualites tres differentes :
+  — les huit premieres (les plus anciennes, les plus delavees) sont
+    regulieres, serrees, faites par quelqu'un qui savait coudre
+  — les six dernieres sont grossieres, inegales, avec des points qui
+    sautent et du fil qui pend
+[OBL] Elles sont toutes faites de la main gauche.
+Le manteau est propre. Brosse. Il sent probablement le savon.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 5 800. Asset personnage, skinne sur Mireille, cloth sur les pans (6 os
+de jiggle).
+Textures : 2 atlas 4K. [OBL] Les 14 pieces sont 14 materiaux distincts avec
+14 UV separes. Ce n'est pas une texture de patchwork : ce sont de vraies
+pieces rapportees avec des epaisseurs differentes (0,5 a 3 mm) visibles en
+silhouette.
+[OBL] Les coutures sont en GEOMETRIE : 340 points de couture modelises, un
+par un, avec les irregularites. Visibles a 1 m.
+Shader `wool_heavy_patched`.
+[OBL] Distinction obligatoire des deux qualites de couture : les 8 anciennes
+ont un espacement de 4 mm +/- 0,3 ; les 6 recentes de 7 mm +/- 2,8.
+Le mesureur doit pouvoir les separer statistiquement.
+
+§ 3 — CE QUE CA DIT
+C'est un manteau d'homme. Elle le porte depuis longtemps.
+Le geste humain : recoudre. Quatorze fois.
+[OBL] Les huit premieres reprises ont ete faites avec deux mains valides.
+Les six dernieres avec une seule.
+[NAR] Le joueur voit la main droite de Mireille : elle est brulee, les
+doigts sont raides, elle la garde souvent dans sa poche.
+[OBL] MIR-ANI-611 : si le regard du joueur s'attarde sur sa main droite
+plus de 1,2 seconde, elle la rentre dans sa poche. Sans un mot. Sans
+changer d'expression. 100 % du temps.
+Elle continue de reparer son manteau avec une seule main.
+[OBL] Elle n'en parle jamais. Le mot « brulure » n'existe pas dans le
+chapitre. Le mot « feu » non plus, sauf pour le poele de Tallec.
+
+§ 4 — ECHO
+NEANT. Objet d'une vivante (PN-046).
+
+§ 5 — MISE EN SCENE
+Le joueur passe 50 minutes avec Mireille. Le manteau est dans le cadre en
+permanence.
+[ART] Il ne le regarde pas au debut. Il le voit vers la 20e minute, quand
+elle se tourne et que la lumiere du rai (PN-066) tombe en rasant sur son
+dos et revele les quatorze reliefs.
+[OBL] Le rai de lumiere ne l'eclaire jamais directement (elle l'evite,
+PN-066 § 5). Mais elle passe DANS SA PENOMBRE, a 1 m du bord, et c'est la
+lumiere indirecte qui revele les pieces.
+Aucun plan, aucun zoom, aucun LookAt, aucun dialogue sur le manteau.
+[OBL] Aucune option pour demander.
+
+§ 6 — AUDIO
+SFX(wool_heavy_move) : le manteau est lourd. Le son de Mireille qui bouge
+est mat, epais, lent. [OBL] Distinct de tous les autres tissus du jeu :
+la veste de Lohen (toile), celle de Sol (toile durcie), le pardessus
+(PN-032, laine trempee, mais celui-la est muet).
+24 variations. Le joueur l'entend pendant 50 minutes.
+Aucune musique liee.
+
+§ 7 — INTERDICTIONS
+Interdit de : expliquer la brulure · expliquer le manteau · reveler a qui
+il appartenait · permettre de demander · faire commenter par Lohen, Tallec
+ou Sol · reparer le manteau · en montrer une quinzieme piece · utiliser les
+mots brulure, feu, accident, incendie dans le chapitre · donner un Echo ·
+faire pleurer Mireille · lui faire retirer le manteau.
+[OBL] Mireille garde son manteau pendant toute la sequence, y compris assise
+a sa table, y compris en buvant. Elle a froid. Elle ne le dit pas.
+
+§ 8 — LIENS
+PN-025 (la veste d'Esteban, recousue au coude gauche avec du fil de la
+mauvaise couleur) : [OBL] deux personnages qui reparent mal leurs
+vetements, a 2 heures d'intervalle. Le joueur verra les deux coutures. Le
+jeu ne les compare jamais.
+PN-052 (la veste de Sol, coupee au couteau).
+PN-039 (la photo 300 : c'est Mireille qui l'a punaisee, jamais confirme).
+MIR-MDL-003 (la main brulee). MIR-ANI-611.
+[THEME] REPARER MAL. [THEME] CE QU'ON NE DIT PAS.
+
+§ 9 — DOD
+[ ] 14 pieces, 14 materiaux, 14 UV, epaisseurs 0,5 a 3 mm en silhouette
+[ ] 340 points de couture en geometrie, visibles a 1 m
+[ ] Deux qualites separables statistiquement (4 mm +/- 0,3 / 7 mm +/- 2,8)
+[ ] Toutes les coutures faites de la main gauche (orientation des points)
+[ ] MIR-ANI-611 : main rentree apres 1,2 s de regard, 100 % du temps
+[ ] Jamais eclaire directement par le rai ; revele en lumiere indirecte
+[ ] 24 variations de son de laine lourde, distinctes de tout autre tissu
+[ ] grep dialogues : 0 occurrence de brulure/incendie/accident

@@ -1,0 +1,120 @@
+===============================================================================
+DLG · S5 · D07 — LA FURTIVITE SANS MONSTRE : 40 LIGNES POUR RIEN
+40 entrees, toutes S5. LOH 24 · SOL 16. Contribution : 40.
+Reference maitre : 09.14 « Furtivite simple : rester dans le noir les
+attire, la lumiere les repousse a 4 m. »
+[OBL] CANON PN-094 : LE MUEUR N'APPARAIT JAMAIS. Ces 40 lignes decrivent
+une mecanique de furtivite contre un ennemi qui n'existe pas.
+===============================================================================
+
+--- LA DECISION DE DESIGN LA PLUS RISQUEE DU CHAPITRE ----------------------------------------
+
+Le jeu implemente un systeme de furtivite complet : detection, lumiere
+repoussante a 4 m, zones sures, indicateur diegetique (la flamme de la
+lanterne vacille quand « quelque chose » approche). Le systeme
+FONCTIONNE. Il tourne. Il a un etat, des transitions, une IA.
+
+Il n'y a aucune creature dans la scene.
+
+[OBL] Ce que le systeme pilote reellement : le vacillement de la flamme,
+des sons de deplacement dans les parois (jamais dans le conduit), et des
+courants d'air. [OBL] Le joueur passera vingt minutes a se cacher de
+rien, et il aura raison de le faire, parce que le jeu ne lui ment pas :
+il y a bien quelque chose qui bouge dans les parois. Ce n'est
+simplement jamais montre, jamais nomme, jamais confirme.
+
+[OBL] Aucun patch, aucun chapitre ulterieur ne montrera un Mueur. Job CI
+`no-mueur` interdit l'existence d'un asset de creature dans `scenes/s5/`.
+
+--- LES 24 LIGNES DE LOHEN --------------------------------------------------------------------
+
+    [S5_LOH_L253]  1,6 s · bas    « La flamme bouge. »
+    [S5_LOH_L254]  1,2 s · bas    « Y'a pas de vent ici. »
+    [S5_LOH_L255]  2,0 s · bas    « Donc y'a un trou quelque part. »
+    [S5_LOH_L256]  1,8 s · bas    « Ou autre chose. »
+    [S5_LOH_L257]  1,4 s · bas    « Je leve la lanterne. »
+    [S5_LOH_L258]  2,2 s · bas    « Quatre metres. Ca suffit, d'apres elle. »
+    [S5_LOH_L259]  1,6 s · bas    « J'espere qu'elle a raison. »
+    [S5_LOH_L260]  2,4 s · bas    « Y'a quelque chose dans la paroi. »
+    [S5_LOH_L261]  1,8 s · bas    « Dans. Pas dedans avec moi. Dans. »
+        dir : [OBL] la distinction est la seule information que le jeu
+              donne sur les Mueurs de tout le chapitre. Ils sont DANS
+              les parois. Pas dans le conduit. Jamais.
+    [S5_LOH_L262]  1,2 s · bas    « Ca va aller. »
+        dir : 6e occurrence. 1,2 s.
+    [S5_LOH_L263]  2,0 s · bas    « Ca s'est arrete. »
+    [S5_LOH_L264]  1,6 s · bas    « Non. Ca s'est deplace. »
+    [S5_LOH_L265]  2,2 s · bas    « Devant. »
+    [S5_LOH_L266]  1,4 s · bas    « Bon. »
+    [S5_LOH_L267]  2,6 s · bas    « Si je recule, je reviens au Tordu et je perds vingt minutes. »
+    [S5_LOH_L268]  1,8 s · bas    « J'avance. »
+    [S5_LOH_L269]  1,0 s · bas    « Ca va aller. »
+        dir : 7e. 1,0 s.
+    [S5_LOH_L270]  2,4 s · bas    « Y'a plus rien. »
+    [S5_LOH_L271]  1,6 s · bas    « Y'a jamais rien eu, peut-etre. »
+        dir : [OBL][NAR] LA LIGNE QUI AUTORISE LES DEUX LECTURES.
+              [OBL] Le jeu ne tranchera jamais. Un joueur pensera
+              qu'il a echappe a quelque chose. Un autre pensera qu'il
+              a eu peur du vide. Les deux ont raison et le jeu ne
+              departage pas. C'est l'objectif de toute la sequence.
+    [S5_LOH_L272]  2,0 s · bas    « La lanterne pese. »
+    [S5_LOH_L273]  1,4 s · bas    « Deux kilos, peut-etre. »
+    [S5_LOH_L274]  2,2 s · bas    « Deux kilos pendant vingt minutes, c'est pas deux kilos. »
+    [S5_LOH_L275]  0,9 s · bas    « Ca va aller. »
+        dir : 8e. 0,9 s. [OBL] La formule est presque epuisee.
+    [S5_LOH_L276]  2,8 s · bas    « Quand je sortirai de la, je saurai pas dire si y'avait quelque chose. »
+        dir : [OBL] 24e et derniere ligne du lot de Lohen. [OBL] Il
+              enonce lui-meme le probleme du joueur. Personne ne le
+              resout.
+
+--- LES 16 LIGNES DE SOL PENDANT LA FURTIVITE -----------------------------------------------------
+
+[OBL] Sol n'a pas peur. Pas une seconde. C'est le contraste qui rend la
+peur de Lohen credible : un enfant qui vit ici trouve ca normal.
+
+    [S5_SOL_L277]  1,4 s · plat    « Baisse la lanterne, tu vas les enerver. »
+    [S5_SOL_L278]  1,2 s · plat    « Enfin. Si y'en a. »
+        dir : [OBL] Sol elle-meme n'est pas sure. Personne dans ce jeu
+              n'a jamais vu un Mueur.
+    [S5_SOL_L279]  2,0 s · plat    « Mon frere disait qu'il en avait vu un. »
+    [S5_SOL_L280]  1,6 s · plat    « Mon frere disait plein de trucs. »
+    [S5_SOL_L281]  2,4 s · plat    « Il disait aussi qu'il savait nager. »
+        dir : [OBL][NAR] Le frere de Sol est un des quatre morts de
+              D04. [OBL] Cette ligne est la seule autre mention de lui
+              du chapitre. [OBL] Elle est drole. C'est ce qui la rend
+              insoutenable. [OBL] Aucune reaction de Lohen. Aucune
+              ligne. Le jeu enchaine.
+    [S5_SOL_L282]  1,8 s · plat    « Marche au milieu, les cotes sont creux. »
+    [S5_SOL_L283]  1,4 s · plat    « Creux ca veut pas dire dangereux. Ca veut dire creux. »
+    [S5_SOL_L284]  2,2 s · plat    « Toi tu fais du bruit comme trois personnes. »
+    [S5_SOL_L285]  1,6 s · plat    « C'est tes bottes. »
+    [S5_SOL_L286]  2,0 s · plat    « Moi j'ai pas de bottes, alors je fais pas de bruit. »
+        dir : [OBL] Sol vient de trouver un avantage a ne pas avoir de
+              chaussures. [OBL] Aucune reaction. C'est la deuxieme et
+              derniere allusion aux pieds nus.
+    [S5_SOL_L287]  1,2 s · plat    « Chut. »
+    [S5_SOL_L288]  2,4 s · plat    « Non, rien. Je voulais voir si tu obeissais. »
+    [S5_SOL_L289]  1,8 s · joueur  « Tu obeis bien. »
+    [S5_SOL_L290]  2,2 s · plat    « Y'a un endroit ou ca gratte, apres le coude. »
+    [S5_SOL_L291]  2,6 s · plat    « Ca gratte depuis trois ans. Je sais pas ce que c'est et j'ai jamais regarde. »
+    [S5_SOL_L292]  3,0 s · plat    « Et je regarderai jamais, et toi non plus, parce qu'on passe devant et on continue. »
+        dir : [OBL] 16e et derniere ligne de Sol du lot. [OBL] LE
+              JOUEUR PEUT REGARDER. Il y a un renfoncement, apres le
+              coude, atteignable en rampant 2 m. [OBL] Ce qu'il y
+              trouve : rien. Un renfoncement vide de 60 cm. Le
+              grattement continue, derriere la paroi, inaccessible.
+              [OBL] Aucune ligne ne se declenche. Aucun succes. Aucun
+              Echo. Le joueur a rampe deux metres pour voir un mur.
+              [OBL] 19 % des joueurs le font. C'est la meilleure
+              depense de leur curiosite du chapitre, et elle ne
+              rapporte rien, et c'est exactement ce que ce jeu promet
+              depuis S1.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] Systeme de furtivite complet, zero creature instanciee — CI `no-mueur`
+[ ] Le bruit est TOUJOURS dans les parois, jamais dans le conduit
+[ ] L271 : les deux lectures restent valides, aucun arbitrage
+[ ] L281 : le frere de Sol, une seule autre mention, drole
+[ ] L292 : le renfoncement est vide, aucune recompense, 19 %
+[ ] « Ca va aller » : occurrences 6, 7, 8 (1,2 / 1,0 / 0,9 s)

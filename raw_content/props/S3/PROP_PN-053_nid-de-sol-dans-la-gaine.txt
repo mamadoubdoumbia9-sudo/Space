@@ -1,0 +1,118 @@
+===============================================================================
+PN-053 — LE NID DE SOL DANS LA GAINE
+===============================================================================
+Asset : SM_S3_Nid_Sol · S3, gaine technique horizontale sous le niveau 2 ·
+~02:47 · prop narratif · pas d'Echo · LOD0 5 200 tris
+
+§ 1 — CE QU'ON VOIT
+Une gaine technique de 90 cm de haut sur 1,40 de large, qui court sous la
+passerelle du niveau 2 sur 12 metres. On y accede par une trappe de visite
+dont le panneau a ete enleve et pose a cote.
+Dedans, sur 3 metres, quelqu'un vit.
+Un matelas fait de quatre couvertures pliees et superposees. Une caisse
+retournee en table. Une boite de conserve avec trois bougies de tailles
+differentes. Une gourde. Un couteau plante dans le bois de la paroi.
+Et des objets ranges. Beaucoup. Alignes le long de la paroi, par categorie :
+onze cuillers. Quatre paires de lunettes. Sept peignes. Trois montres.
+Vingt-deux boutons, tries par taille dans une boite de fer-blanc.
+Une rangee de quatorze petites choses que le joueur ne peut pas identifier.
+[OBL] Rien n'est en desordre. Tout est aligne, groupe, trie. C'est le
+rangement de quelqu'un qui n'a que ca a faire.
+Au fond, la ou la gaine devient trop basse, un espace de 40 cm de haut.
+Dedans, une couverture roulee en nid. Poils de chien dessus.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 5 200 dont 2 900 pour les 61 petits objets (moyenne 47 tris chacun).
+[OBL] Les 61 objets sont des meshes individuels, places a la main, tries
+visuellement. Pas de scatter, pas d'instanciation aleatoire.
+Les 22 boutons dans la boite de fer-blanc sont tries par taille croissante
+et le joueur peut le verifier.
+Les 3 bougies : une allumee (OmniLight 1 800 K, rayon 2,2 m, flicker 11 % —
+[OBL] une vraie bougie, elle, a le droit de vaciller, contrairement a la
+lampe-tempete PN-009).
+Espace jouable : le joueur RAMPE. LOH-LOC-175 `crawl_low`, vitesse 0,8 m/s,
+camera a 60 cm du sol, avec un leger roulis a chaque appui de main.
+[OBL] 12 m de rampement. Il n'y a pas de course, pas de saut, pas de
+raccourci. C'est lent et c'est inconfortable.
+Shader : les parois de gaine en tole galvanisee, RT60 0,18 s.
+
+§ 3 — CE QUE CA DIT
+Un enfant de 13 ans vit dans une gaine technique, sous une passerelle, et
+il trie des boutons par taille.
+Le geste humain : trier. Onze cuillers alignees. Vingt-deux boutons par
+taille. Sept peignes.
+[NAR] Ce n'est pas de la collection. C'est ce qu'on fait quand on est seul
+depuis trois ans et qu'on a besoin que quelque chose soit en ordre.
+[OBL] Le joueur a deja vu ca : PN-002, la valise triee par taille, a la
+vingtieme minute du jeu, dans la sequence 1. Il l'a peut-etre oublie.
+Le nid de chien au fond, avec les poils, est vide.
+Pomme est dehors, avec Sol. Le joueur le rencontrera dans 4 minutes.
+
+§ 4 — ECHO
+NEANT. [OBL] Lieu d'un vivant, objets d'un vivant, objets d'enfant. Triple
+interdiction. C'est le prop le plus categoriquement exclu du systeme.
+[ART] Et c'est le plus riche du chapitre en information humaine. Le jeu
+demontre ici, sans un mot, que son systeme surnaturel est inutile : un
+espace vecu raconte mieux qu'un fantome.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur n'entre PAS de son plein gre. Sol l'y emmene.
+Sequence : apres la rencontre (PN-052), Sol dit « Venez. » (SOL-DLG-481),
+descend dans la trappe, et disparait. Le joueur suit ou reste.
+S'il reste 60 secondes sans suivre, Sol ressort la tete et dit « Alors ? »
+(SOL-DLG-482). Une seule fois. Ensuite plus rien : le joueur peut rester
+dehors indefiniment. [OBL] La sequence S3 ne se debloque pas sans la gaine.
+Si le joueur refuse pendant 4 minutes, rien ne se passe. Il n'y a pas
+d'alternative. Il finira par descendre.
+A l'intérieur : la camera est a 60 cm. Sol rampe devant, de dos, plus vite
+que Lohen, et s'arrete pour l'attendre trois fois. [OBL] Il ne dit rien
+pendant les 12 m. 45 secondes de rampement en silence derriere un enfant.
+Arrive au bout : il s'assoit contre la paroi, jambes repliees, et allume la
+bougie. SOL-ANI-461.
+[OBL] Aucun mouvement de camera, aucun plan large, aucune revelation
+dramatique. Le joueur decouvre les 61 objets en tournant la tete lui-meme,
+a la lueur d'une bougie, dans un espace de 90 cm de haut.
+
+§ 6 — AUDIO
+[OBL] Le rampement change tout le mix. En gaine :
+  — l'exterieur passe a -26 dB, filtre passe-bas 800 Hz
+  — RT60 tombe a 0,18 s (tole, espace minuscule)
+  — la respiration de Lohen devient audible a -24 dB [OBL] deuxieme et
+    derniere fois du chapitre apres PN-022, la mezzanine du miroir
+  — les frottements de la veste et de la sacoche sur la tole : constants
+SFX(hand_metal_crawl) : 16 variations, main + genou, desynchronises.
+SFX(candle_light) : l'allumette de Sol. Un son propre, net, chaleureux.
+[ART] La premiere flamme allumee DEVANT le joueur dans tout le jeu.
+Musique : M15 « Sol », qui a commence dehors, continue — [OBL] mais elle
+est filtree comme si elle venait de l'exterieur. La musique reste dehors.
+C'est le seul endroit du jeu ou la musique extra-diegetique est traitee
+comme un son du monde. Personne ne le remarquera consciemment.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre de prendre un des 61 objets · les identifier ·
+identifier les 14 petites choses · expliquer d'ou ils viennent · fouiller ·
+donner un Echo · ajouter un jouet, une peluche, un dessin d'enfant · faire
+parler Sol pendant le rampement · ajouter un plan large · reveler Pomme ici
+· ajouter un cadavre, un parent, une photo de famille · rendre la gaine
+evitable.
+[OBL] Le mot « orphelin » n'est jamais prononce dans le chapitre.
+
+§ 8 — LIENS
+PN-002 (la valise triee par taille, S1, 2 h 27 plus tot) — [OBL] le lien le
+plus long du chapitre. Deux personnes, a deux heures et demie d'intervalle,
+trient leurs affaires par taille. Le jeu ne le dit pas.
+PN-087 (le matelas de Sol, S5, E19) : Sol a un deuxieme endroit. Le joueur
+le decouvrira et comprendra que celui-ci n'etait pas le seul.
+PN-090 (la reserve de nourriture de Sol). PN-091 (le collier de chien).
+PN-052 (la veste). PN-022 (la mezzanine : un autre nid, un autre solitaire).
+[THEME] TRIER POUR TENIR. [THEME] LES ENFANTS ABSENTS — et celui qui reste.
+
+§ 9 — DOD
+[ ] 61 objets individuels places a la main, tries par categorie
+[ ] 22 boutons tries par taille croissante, verifiable
+[ ] 12 m de rampement a 0,8 m/s, camera a 60 cm, aucun raccourci
+[ ] Sol silencieux pendant tout le rampement, 3 arrets d'attente
+[ ] Respiration de Lohen audible, 2e et derniere fois du chapitre
+[ ] M15 filtree comme venant de l'exterieur
+[ ] Aucune revelation de camera ; decouverte par rotation du joueur
+[ ] Nid de chien vide, poils presents, Pomme non revele

@@ -1,0 +1,10 @@
+# BLOC 02.01 demandait Godot 4.4.1-stable. Voir docs/decisions/ADR-001-moteur-natif.md :
+# les binaires Godot et les export templates ne sont pas accessibles depuis cet
+# environnement d'execution (hosts de release bloques). Le moteur est donc
+# natif, ecrit a la main, Java 17 + OpenGL ES 2.0, sans WebView.
+engine=native-velmora-gles2
+java=17
+minSdk=26
+targetSdk=35
+compileSdk=35
+abi=arm64-v8a,armeabi-v7a,x86_64 (code Java pur : aucune bibliotheque native)

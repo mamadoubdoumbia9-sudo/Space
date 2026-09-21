@@ -1,0 +1,110 @@
+===============================================================================
+PN-101 — LES TROIS LUSTRES
+===============================================================================
+Asset : SM_S6_Lustres · S6, plafond de la salle de bal, 7,50 m ·
+~04:45 · prop narratif · pas d'Echo · LOD0 6 900 tris (les trois)
+
+§ 1 — CE QU'ON VOIT
+Trois lustres de cristal, alignes sur l'axe long de la salle, suspendus a
+7,50 m.
+Ils sont ENORMES : 2,20 m de diametre, six niveaux de pampilles, 340
+pieces de cristal chacun.
+Ils sont ALLUMES.
+[OBL] Pas a l'electricite — il n'y a pas d'electricite (PN-097). A la
+BOUGIE. Chaque lustre porte 24 bougeoirs, et dans chaque bougeoir il y a
+une bougie.
+Soixante-douze bougies allumees a 7,50 m au-dessus du sol.
+[OBL] Elles ne sont pas toutes de la meme hauteur : certaines sont
+presque consumees, d'autres neuves. Elles ont ete remplacees au fur et a
+mesure, pas toutes ensemble.
+Sous chaque lustre, sur le parquet, il y a de la cire. Des dizaines de
+gouttes figees, accumulees en petits monticules. [OBL] Elles ne sont PAS
+balayees. On balaie la poussiere, pas la cire.
+Le cristal renvoie la lumiere en centaines de points sur les murs, le
+plafond, le parquet.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 300 par lustre. Les 340 pampilles : 30 modeles, instanciees.
+[OBL] Le cristal utilise `crystal_dispersive` : IOR 1,62, avec dispersion
+chromatique (abbe 32) sur les aretes. Les eclats sur les murs sont donc
+LEGEREMENT irises. C'est le seul endroit du jeu avec de la dispersion.
+Eclairage : [OBL] 72 bougies ne peuvent pas etre 72 lumieres. Solution :
+3 lumieres principales (une par lustre, OmniLight, 1 850 K, rayon 14 m,
+ombres) + une emissive sur chaque flamme + une light probe volume prebakee.
+Les eclats sur les murs : light cookie 4K par lustre, projetee, fixe.
+[OBL] Les cookies ne bougent PAS malgre le vacillement des flammes. Le
+vacillement est simule uniquement par une variation d'intensite de 6 % sur
+les 3 lumieres principales, dephasee.
+Cout total : 2,1 ms. Le plus cher du chapitre. Budgete.
+Les flammes : 72 sprites, 3 plans croises, 24 frames.
+La cire au sol : 3 sculpts de monticules, 180 gouttes.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un monte a 7,50 metres pour allumer soixante-douze bougies.
+[OBL] Comment ? Le joueur ne le saura jamais. Il n'y a pas d'echelle dans
+la salle, pas de nacelle, pas de treuil visible. [OBL] Les lustres ne se
+descendent pas : ils sont fixes.
+Le geste humain : allumer.
+[NAR] Et il y a de la cire accumulee sous chaque lustre depuis longtemps.
+Ce n'est pas la premiere fois. C'est un rituel.
+[OBL] Les bougies ne sont pas toutes de la meme hauteur : elles ont ete
+remplacees individuellement, au fil des mois.
+Le joueur entre dans une salle de bal eclairee a la bougie, dans une ville
+morte, et il y a de la musique.
+
+§ 4 — ECHO
+NEANT. Element d'architecture (PN-055) et objet entretenu par un vivant.
+
+§ 5 — MISE EN SCENE
+[OBL] C'est l'image du chapitre. Celle de l'affiche, du trailer, de la
+boutique.
+Un homme en veste de relayeur, trempe, seul, debout au bord d'une piste de
+danse de 448 m², sous trois lustres de cristal allumes a la bougie, avec la
+lumiere qui se reflete dans le parquet cire.
+[OBL] Aucun plan scripte. Aucune camera imposee. Aucun ralenti. Aucune
+musique ajoutee (M21 joue deja, diegetique).
+[ART] Le jeu a passe 4 h 45 a refuser toute beaute facile. Il livre ici la
+plus grande image qu'il possede, et il ne la cadre pas.
+La lumiere est DOREE, 1 850 K, chaude. [OBL] amber-guard : elle n'est PAS
+ambre. Verifie : (1.00, 0.72, 0.43). Le domaine #FFA33C est reserve.
+
+§ 6 — AUDIO
+SFX(crystal_pampille_tick) : les pampilles s'entrechoquent tres legerement
+quand l'air bouge. [OBL] 340 par lustre, donc un bruit de fond cristallin,
+fin, continu, a -31 dB. Il ne s'arrete jamais.
+[ART] C'est le son le plus delicat du jeu. Il faut 3 couches : les micro-
+chocs individuels (aleatoires), une nappe de resonance, et un « souffle »
+de cristal presque inaudible.
+SFX(candle_drip_far) : la cire qui tombe de 7,50 m sur le parquet.
+[OBL] Rare : une goutte toutes les 40-120 s. Elle met 1,24 s a tomber
+(hauteur reelle) et le son arrive apres.
+[OBL] Aucun son de flamme audible a 7,50 m. Une bougie ne s'entend pas de
+si loin.
+
+§ 7 — INTERDICTIONS
+Interdit de : eteindre les lustres · les faire tomber · les descendre ·
+reveler comment on les allume · ajouter une echelle ou une nacelle ·
+electrifier · ajouter une bougie qui s'eteint · utiliser #FFA33C · ajouter
+un plan scripte · ajouter de la musique non diegetique · faire vaciller les
+cookies projetees · donner un Echo.
+
+§ 8 — LIENS
+PN-009 (la lampe-tempete, laissee en S5). PN-086 (la lanterne eteinte).
+PN-137 (la lampe a huile ambre, S8).
+PN-100 (le parquet qui reflete). PN-102 (les miroirs qui multiplient).
+PN-097 (le compteur electrique mort) : il n'y a pas d'electricite, et il y
+a 72 bougies allumees.
+[THEME] IL FAUT UNE BELLE CHOSE — S6. [THEME] ENTRETENIR CE QUI PEUT
+L'ETRE.
+
+§ 9 — DOD
+[ ] 3 lustres, 340 pampilles, 24 bougeoirs, 72 bougies allumees
+[ ] Hauteurs de bougies inegales, remplacement individuel visible
+[ ] Dispersion chromatique sur les aretes, eclats legerement irises
+[ ] 3 lumieres + emissives + probes ; cookies 4K fixes, jamais animees
+[ ] Vacillement par intensite 6 % dephasee uniquement
+[ ] Monticules de cire au sol, jamais balayes
+[ ] Son cristallin continu a -31 dB, 3 couches
+[ ] Gouttes de cire avec retard de chute de 1,24 s
+[ ] Lumiere (1.00, 0.72, 0.43) validee non-ambre
+[ ] 2,1 ms, valide sur Adreno 640

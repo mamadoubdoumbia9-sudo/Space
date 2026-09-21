@@ -1,0 +1,93 @@
+===============================================================================
+PN-083 — LE LIVRE GONFLE PAR L'EAU
+===============================================================================
+Asset : SM_S4_Livre_Gonfle · S4, pose seul sur une etagere seche, aile sud
+· ~03:42 · prop narratif · pas d'Echo · LOD0 1 300 tris
+
+§ 1 — CE QU'ON VOIT
+Sur une etagere a 1,60 m — donc hors d'eau, dans la partie intacte des
+rayonnages — il y a un livre seul.
+Il est gonfle. Il a trempe, longtemps, et il a seche.
+Il fait maintenant trois fois son epaisseur d'origine. Les pages ont
+ondule, se sont ecartees, et le bloc-livre ressemble a un accordeon ouvert.
+La couverture a gondole et ne ferme plus : elle balle a 40 degres.
+Il est POSE, pas range. Il est a plat, seul, au milieu d'une etagere vide
+de 1,20 m.
+Quelqu'un l'a sorti de l'eau. L'a monte. L'a mis la. Tout seul, sur une
+etagere qu'on a videe pour lui.
+On peut lire le titre sur le dos, deforme mais lisible.
+[OBL] Le titre est : « ATLAS DES COTES — TOME II ».
+Ce n'est pas un livre sentimental. C'est un atlas geographique.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 300. [OBL] Sculpt dedie, PAS une instance des blocs de PN-078.
+Les 60 ondulations de pages sont modelisees individuellement.
+Texture 4K : le papier gonfle a des aureoles, des tanins remontes, des
+zones plus sombres ou l'eau est restee. [OBL] Peint a la main d'apres un
+vrai livre trempe puis seche. Ce type de degradation ne se procedurise pas.
+Le dos : titre en lettres dorees, ecaillees, deformees par le gonflement.
+Lisible a 1 m avec difficulte. [OBL] C'est volontairement dur a lire.
+Shader `book_swollen_dried`.
+Collision : boite. [OBL] Non prenable, non ouvrable. Aucun prompt.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a sauve un livre. Un seul. Sur des milliers.
+Et ce n'est pas un roman, pas un livre d'enfant, pas un recueil de poemes.
+C'est le tome II d'un atlas des cotes.
+Le geste humain : vider une etagere pour y poser un seul livre.
+[OBL] Pourquoi celui-la : jamais explique. Aucun dialogue, aucun indice.
+[NAR] Un atlas des cotes contient des cartes. Des cartes montrent ou sont
+les villes, les ports, les phares. Quelqu'un qui cherche quelqu'un a besoin
+de cartes.
+Ou bien : quelqu'un qui aime quelqu'un qui est parti par la mer regarde des
+cartes de cotes.
+Ou bien : c'est le seul qui flottait.
+[OBL] Le jeu ne tranche pas. Les trois lectures sont disponibles.
+
+§ 4 — ECHO
+NEANT. Livre de bibliotheque (objet collectif, PN-016) et geste d'apres
+(PN-015).
+[ART] Le joueur, a 3 h 42, ne demande plus d'Echo. Il est passe a autre
+chose : il lit les objets directement. Le systeme surnaturel a fini son
+travail pedagogique et s'efface.
+
+§ 5 — MISE EN SCENE
+Aile sud, a 1,60 m, sur une etagere vide.
+[OBL] C'est le vide autour qui le signale : dans 69 metres de rayonnages
+pleins, 1,20 m d'etagere vide avec un objet au centre.
+[ART] Meme principe que la borne de relais de S1 (PN-018) : l'isolement est
+la signalisation. Le jeu n'a utilise cette technique que deux fois en
+3 h 42, et elle fonctionne parce qu'elle est rare.
+Taux de decouverte cible : 52-64 %.
+[OBL] Aucun prompt, aucune lumiere, aucun LookAt, aucun son.
+Lohen ne peut pas le prendre. Il ne peut pas l'ouvrir. Il ne peut pas lire
+le titre — [OBL] il ne sait pas bien lire, et le titre est deforme. Le
+joueur le lit. Lohen voit un livre gonfle.
+
+§ 6 — AUDIO
+NEANT.
+[OBL] Il ne fait aucun bruit, meme si le joueur le frole. Un livre gonfle
+et seche est une masse compacte et muette.
+
+§ 7 — INTERDICTIONS
+Interdit de : le prendre · l'ouvrir · montrer une page · montrer une carte
+· reveler qui l'a sauve · expliquer le choix · en sauver un deuxieme ·
+ajouter un marque-page, une note, un signet, une dedicace · faire commenter
+· donner un Echo · rendre le titre facile a lire · en faire un objet de
+quete.
+
+§ 8 — LIENS
+PN-078 (les rayonnages noyes). PN-073 (l'echelle et la brosse).
+PN-071 (le vitrail : la carte de la baie, cassee a l'endroit de la mer).
+[OBL] Deux cartes dans cette bibliotheque : un vitrail dont la mer manque,
+et un atlas des cotes qu'on a sauve de l'eau. Jamais reliees.
+PN-018, PN-042, PN-048 (Lohen, relayeur, qui traverse des cotes).
+[THEME] SAUVER UNE SEULE CHOSE.
+
+§ 9 — DOD
+[ ] Sculpt dedie, 60 ondulations de pages individuelles
+[ ] Texture peinte a la main d'apres un vrai livre trempe et seche
+[ ] Titre « ATLAS DES COTES — TOME II », deforme, difficile a lire
+[ ] Etagere vide de 1,20 m autour, seule signalisation
+[ ] Zero prompt, zero son, zero interaction
+[ ] Aucun marque-page, aucune annotation, aucun contenu revele

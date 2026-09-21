@@ -1,0 +1,201 @@
+===============================================================================
+DLG · S4 · D12 — LES CINQ AUTRES CHOIX DE S4
+29 entrees, toutes S4. LOH 13 · MIR 16 (dont 2 slots muets). Contribution : 29.
+Choix n° 19 a n° 23 du chapitre. [OBL] Aucun n'a de timer : les deux
+seuls timers du jeu sont en D10.
+===============================================================================
+
+--- RECAPITULATIF DES 7 CHOIX DE S4 -------------------------------------------------------
+
+    n°  doc    moment                    options  effet
+    17  D10    la phrase fausse              2+exp change une replique
+    18  D10    le dossier vide               3+exp change une scene
+    19  ici    le the                        2      change une replique
+    20  ici    la main brulee                3      change une scene
+    21  ici    les croix rouges              2      debloque un Echo
+    22  ici    la chaise vide                2      change une scene
+    23  ici    le depart                     3      change une replique
+
+--- CHOIX 19 — LE THE (4 entrees) -----------------------------------------------------------
+
+    > CHOIX 19
+      [1] « Il est vraiment mauvais. »
+      [2] « Il est tres bon. »
+
+    [S4_LOH_L310]  LOHEN · 1,8 s · plat · p0,0
+        « Il est vraiment mauvais. »
+    [S4_MIR_L311]  MIREILLE · 2,2 s · sec · p0,0
+        « Merci. »
+        dir : [OBL] elle est sincerement contente. Elle le fait
+              mauvais exprès (L026) : lui dire qu'il est mauvais,
+              c'est reconnaitre son travail.
+
+    [S4_LOH_L312]  LOHEN · 1,4 s · poli · p0,0
+        « Il est tres bon. »
+    [S4_MIR_L313]  MIREILLE · 2,6 s · sec · p0,0
+        « Alors vous mentez mal et vous avez mauvais gout. Les deux
+          sont graves. »
+        dir : [OBL] la branche polie est la mauvaise, et le jeu ne le
+              signale par rien d'autre qu'une pique. Aucune
+              consequence.
+
+--- CHOIX 20 — LA MAIN BRULEE (7 entrees) ------------------------------------------------------
+
+Declencheur : apres la 5e occurrence du geste M2. [OBL] Le choix
+n'apparait QUE si le joueur a regarde la main de Mireille (detection du
+regard, 2,5 s cumulees) au moins trois fois. 37 % des joueurs.
+
+    > CHOIX 20
+      [1] « Votre main. »
+      [2] « Vous ecrivez de la gauche. »
+      [3] (Ne rien dire, et ne plus regarder.)
+
+    -- branche [1] : la question directe.
+    [S4_LOH_L314]  LOHEN · 1,2 s · plat · p0,0
+        « Votre main. »
+    [S4_MIR_L315]  MIREILLE · 1,6 s · sec · p0,0
+        « Oui. »
+        dir : [OBL] elle ne la cache pas. Elle la pose a plat sur la
+              table, paume en bas, et elle l'y laisse. [OBL] A partir
+              de cet instant, le geste M2 NE SE REPRODUIT PLUS de
+              toute la sequence. Le joueur a coute a Mireille son
+              seul refuge, et le jeu ne le lui dit pas.
+    [S4_MIR_L316]  MIREILLE · 2,8 s · plat · p0,0
+        « C'est de l'eau bouillante. En 'six. Une casserole. C'est
+          tres bete et ca ne raconte rien. »
+        dir : [OBL] la verite, plate, immediate, decevante. Ce n'est
+              pas la Maree. Ce n'est pas un drame. C'est une casserole.
+
+    -- branche [2] : l'observation, pas la question.
+    [S4_LOH_L317]  LOHEN · 2,0 s · plat · p0,0
+        « Vous ecrivez de la gauche. »
+    [S4_MIR_L318]  MIREILLE · 2,4 s · plat · p0,0
+        « Depuis treize ans. Mal. »
+        dir : [OBL] M2 continue apres cette branche. Elle n'a pas ete
+              forcee. [NAR] C'est la meilleure branche et rien ne le
+              dit. [OBL] En S7, si le joueur a pris [2], Mireille
+              ecrira une ligne devant lui. Si le joueur a pris [1],
+              elle ne le fera pas. C'est le seul effet inter-sequence
+              de S4.
+    [S4_MIR_L319]  MIREILLE · 3,0 s · plat · p0,0
+        « Les croix, sur les affiches, c'est de la main gauche. Ca se
+          voit. Personne ne l'a jamais remarque. »
+        dir : [OBL][NAR] ELLE VIENT D'AVOUER LES 200 CROIX. En une
+              subordonnee, dans une branche optionnelle d'un choix
+              conditionnel, a un homme qui ne sait pas bien lire.
+              [OBL] Lohen ne reagit pas : il n'a pas compris. Aucune
+              option de suivi. [OBL] Le joueur qui a vu l'affiche
+              PN-003 en S1 et qui ecoute ici a la reponse a une
+              question posee dans les vingt premieres minutes du jeu.
+              Environ 11 % des joueurs. Aucune confirmation ailleurs.
+
+    -- branche [3] : silence.
+    [S4_LOH_L320]  LOHEN · 0,0 s · — · p0,0
+        (slot sans VO)
+        dir : [OBL] il detourne les yeux et ne regarde plus la main de
+              toute la sequence (le systeme de regard le force :
+              LOH-LOK-004 desactive la cible). M2 continue.
+
+--- CHOIX 21 — LES CROIX ROUGES (5 entrees) --------------------------------------------------------
+
+Declencheur : une affiche identique a PN-003, punaisee au rez.
+
+    > CHOIX 21
+      [1] « Il y en a une ici aussi. »
+      [2] « Qui les barre ? »
+
+    [S4_LOH_L321]  LOHEN · 1,8 s · plat · p0,0
+        « Il y en a une ici aussi. »
+    [S4_MIR_L322]  MIREILLE · 2,4 s · plat · p0,0
+        « Il y en a une dans chaque batiment public. Quatorze. »
+        dir : [OBL] debloque E19 sur l'affiche (12 lignes, D13).
+
+    [S4_LOH_L323]  LOHEN · 1,4 s · plat · p0,0
+        « Qui les barre ? »
+    [S4_MIR_L324]  MIREILLE · 1,2 s · sec · p0,0
+        « Non. »
+        dir : [OBL] quatrieme refus de la formule. [OBL] Meme question
+              que Lohen a posee a Pallas en S1 (CHOIX 01 branche [1]).
+              Pallas avait repondu « quelqu'un qui a une meilleure
+              ecriture que toi et moi ». Elle avait raison sans le
+              savoir. Mireille refuse. Les deux reponses sont dans le
+              jeu, a deux heures d'intervalle, et aucune ne dit rien.
+    [S4_MIR_L325]  MIREILLE · 2,8 s · plat · p0,0
+        « Posez la question a quelqu'un qui aime parler. Il y en a au
+          Marche. »
+        dir : [OBL] elle l'envoie poser la question a des gens qui ne
+              savent pas. Ce n'est pas de la malice : c'est de la
+              lassitude.
+
+--- CHOIX 22 — LA CHAISE VIDE (6 entrees) ------------------------------------------------------------
+
+Declencheur : apres E13, si le joueur revient parler a Mireille.
+[OBL] Si le joueur n'a pas fait E13, ce choix n'apparait pas.
+
+    > CHOIX 22
+      [1] « Cette chaise etait a quelqu'un. »
+      [2] (Ne rien dire.)
+
+    [S4_LOH_L326]  LOHEN · 2,2 s · plat · p0,0
+        « Cette chaise etait a quelqu'un. »
+    [S4_MIR_L327]  MIREILLE · 2,0 s · plat · p0,0
+        « Oui. »
+    [S4_MIR_L328]  MIREILLE · 3,4 s · plat · p0,0
+        « Et elle est droite, maintenant. Merci. »
+        dir : [OBL][NAR] ELLE A REMARQUE. Lohen a redresse la chaise
+              (S4_LOH_L170) en croyant que personne ne voyait.
+              [OBL] Elle ne dit rien d'autre. Elle ne demande pas
+              comment il savait qu'elle etait de travers. Elle ne
+              mentionne pas l'Echo. Elle dit merci pour une chaise.
+              [OBL] C'est le seul remerciement de Mireille du chapitre.
+
+    [S4_LOH_L329]  LOHEN · 0,0 s · — · p0,0
+        (slot sans VO — branche [2])
+    [S4_MIR_L330]  MIREILLE · 2,6 s · plat · p0,0
+        « Elle est droite. Merci. »
+        dir : [OBL] elle le dit MEME SI le joueur n'a rien demande.
+              Les deux branches aboutissent au remerciement. Le joueur
+              qui se tait l'obtient quand meme, en plus court.
+
+--- CHOIX 23 — LE DEPART (8 entrees) --------------------------------------------------------------
+
+    > CHOIX 23
+      [1] « Je reviendrai. »
+      [2] « Je ne reviendrai pas. »
+      [3] « Vous allez rester ici ? »
+
+    [S4_LOH_L331]  LOHEN · 1,2 s · plat · p0,0
+        « Je reviendrai. »
+    [S4_MIR_L332]  MIREILLE · 1,6 s · sec · p0,0
+        « Non. »
+        dir : [OBL] elle a raison. Lohen ne reviendra jamais a la
+              Bibliotheque. Elle, elle sera en S7, dehors, dans la
+              rue, et ce sera autre chose.
+
+    [S4_LOH_L333]  LOHEN · 1,6 s · plat · p0,0
+        « Je ne reviendrai pas. »
+    [S4_MIR_L334]  MIREILLE · 2,2 s · plat · p0,0
+        « Bien. C'est plus honnete et ca m'evite d'esperer. »
+
+    [S4_LOH_L335]  LOHEN · 1,8 s · plat · p0,0
+        « Vous allez rester ici ? »
+    [S4_MIR_L336]  MIREILLE · 3,0 s · plat · p0,0
+        « Jusqu'a ce que le plancher du troisieme lache. Apres je
+          descendrai au deuxieme. »
+    [S4_MIR_L337]  MIREILLE · 2,4 s · sec · p0,0
+        « J'ai six etages d'avance. »
+        dir : [OBL][NAR] Elle a planifie sa retraite en etages de
+              plancher pourri. Elle le dit comme une bonne nouvelle.
+    [S4_MIR_L338]  MIREILLE · 2,8 s · plat · p0,0
+        « Allez-y, jeune homme. Vous avez une ville a monter. »
+        dir : [OBL] derniere ligne du document. [NAR] Elle dit
+              « monter », pas « chercher ». Elle sait ou il va finir.
+              Tout le monde finit en haut.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] CHOIX 20 conditionne au regard (37 %) ; branche [1] supprime M2
+[ ] L319 : l'aveu des 200 croix, en subordonnee, jamais confirme
+[ ] Branche [2] du CHOIX 20 = seul effet inter-sequence de S4 (vers S7)
+[ ] CHOIX 22 : les deux branches donnent le remerciement
+[ ] L332 : Mireille a raison, Lohen ne revient jamais

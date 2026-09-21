@@ -1,0 +1,150 @@
+===============================================================================
+DLG · S7 · D02 — TALLEC SOUS LA PLUIE : LA CONVERSATION DE L'AUVENT
+34 entrees, toutes S7. TAL 20 · LOH 14. Contribution : 34.
+[OBL] Derniere apparition de Tallec du chapitre 1. Il a 236 lignes au
+total ; ces 34 sont les dernieres, et il ne reapparait pas en S8.
+===============================================================================
+
+--- QUI EST TALLEC, RAPPEL [OBL] ------------------------------------------------------------------
+
+Tallec, 44 ans, contremaitre de relais. C'est lui qui a envoye Lohen en
+Haute Ville le matin (S1). Il n'est pas son ami. Il n'est pas son ennemi.
+Il est son superieur, il est correct, et il est fatigue.
+
+[OBL] REGLE DE TALLEC, tenue sur 236 lignes : IL NE MENT JAMAIS ET IL NE
+CONSOLE JAMAIS. C'est le seul personnage du jeu dont on peut croire
+chaque mot. [OBL] C'est pour ca que ce qu'il dit ici fait mal.
+
+[OBL] MISE EN SCENE : un auvent de tole, 2 m sur 3, altitude 71 m. Il
+est assis sur une caisse, il mange, il ne se leve pas de toute la scene.
+La pluie fait 78 dB sur la tole au-dessus d'eux. [OBL] Les deux hommes
+doivent parler plus fort que partout ailleurs dans le jeu : +4 dB de
+niveau de jeu, et le comedien de Lohen enregistre cette scene le meme
+jour que S1, pas le meme jour que S5-S6.
+
+--- LES 34 LIGNES -------------------------------------------------------------------------------
+
+    [S7_TAL_L027]  2,0 s · fort · « Tiens. Le disparu. »
+
+    [S7_LOH_L028]  1,4 s · fort · « Tallec. »
+
+    [S7_TAL_L029]  2,6 s · fort · « Onze heures que t'es parti. T'etais ou ? »
+
+    [S7_LOH_L030]  2,2 s · fort · « Haute Ville. Puis la Bibliotheque. Puis dessous. »
+
+    [S7_TAL_L031]  2,4 s · fort · « Dessous. »
+
+    [S7_LOH_L032]  1,2 s · fort · « Oui. »
+
+    [S7_TAL_L033]  2,8 s · fort · « Y'a personne qui va dessous. Meme les gamins y vont pas. »
+
+    [S7_LOH_L034]  1,8 s · fort · « Y'a une gamine qui y vit. »
+
+    [S7_TAL_L035]  2,4 s · fort · « Alors y'a une gamine qui y vit. »
+        dir : [OBL] il ne discute pas. Il enregistre. [OBL] C'est sa
+              maniere : il accepte l'information et ne fait rien avec.
+              [OBL] LE JOUEUR VA ESPERER QU'IL FASSE QUELQUE CHOSE POUR
+              SOL. IL NE FERA RIEN. Aucune option ne le permet.
+
+    [S7_TAL_L036]  2,0 s · fort · « Ton cable ? »
+
+    [S7_LOH_L037]  1,6 s · fort · « Casse. »
+
+    [S7_TAL_L038]  2,2 s · fort · « Le frein mouille. »
+
+    [S7_LOH_L039]  1,4 s · fort · « Oui. »
+
+    [S7_TAL_L040]  2,6 s · fort · « Je l'ai dit a la Compagnie en 'vingt-trois. Deux fois. »
+
+    [S7_TAL_L041]  2,4 s · fort · « Ils ont repondu la deuxieme fois. »
+
+    [S7_LOH_L042]  1,8 s · fort · « Ils ont dit quoi ? »
+
+    [S7_TAL_L043]  2,8 s · fort · « Que le frein etait conforme. »
+        dir : [OBL] il ne commente pas. Il mord dans son pain.
+              [OBL] Aucune musique. C'est drole et personne ne rit.
+
+    [S7_TAL_L044]  2,2 s · fort · « Assieds-toi, tu degoulines. »
+
+    [S7_LOH_L045]  1,4 s · fort · « Je reste debout. »
+
+    [S7_TAL_L046]  2,0 s · fort · « Comme tu veux. »
+
+    [S7_TAL_L047]  2,6 s · fort · « Tu l'as pas trouve. »
+        dir : [OBL][NAR] CE N'EST PAS UNE QUESTION. [OBL] Tallec est le
+              seul personnage du chapitre qui sait pourquoi Lohen est
+              parti ce matin. [OBL] Il l'a su tout du long, depuis S1,
+              et il n'en a jamais parle.
+
+    [S7_LOH_L048]  1,2 s · fort · « Non. »
+
+    [S7_TAL_L049]  2,4 s · fort · « Tu vas ou, maintenant ? »
+
+    [S7_LOH_L050]  1,6 s · fort · « Le Phare. »
+
+    [S7_TAL_L051]  2,8 s · fort · « Y'a rien, au Phare. C'est eteint depuis 'dix-huit. »
+
+    [S7_LOH_L052]  2,0 s · fort · « Y'a une lampe allumee en haut. »
+
+    [S7_TAL_L053]  2,4 s · fort · « Non. »
+
+    [S7_LOH_L054]  1,8 s · fort · « Je l'ai vue depuis la Haute Ville ce matin. »
+
+    [S7_TAL_L055]  3,0 s · fort · « Alors t'as vu un reflet, et tu vas monter deux cent douze metres pour un reflet. »
+        dir : [OBL][NAR] TALLEC NE MENT JAMAIS. [OBL] ET IL A TORT.
+              [OBL] La lampe est allumee. Le joueur la verra en S8.
+              [OBL] Le seul personnage fiable du jeu se trompe sur la
+              seule chose qui compte. [OBL] Aucun personnage ne le lui
+              dira jamais : Lohen ne redescend pas dans ce chapitre.
+
+    [S7_LOH_L056]  1,4 s · fort · « Oui. »
+
+    [S7_TAL_L057]  2,6 s · fort · « Bon. »
+        dir : [OBL][NAR] TALLEC DIT « BON » COMME LOHEN. [OBL] Lohen a
+              pris le tic de son contremaitre. [OBL] 1 des 47.
+              [OBL] Jamais releve.
+
+    [S7_TAL_L058]  2,2 s · fort · « Prends le pain. »
+
+    [S7_LOH_L059]  1,6 s · fort · « J'ai pas faim. »
+
+    [S7_TAL_L060]  3,0 s · fort · « J'ai pas demande si t'avais faim. Prends le pain. »
+        dir : [OBL][NAR] DERNIERE LIGNE DE TALLEC DU CHAPITRE 1, sur
+              236. [OBL] C'est un ordre de contremaitre et c'est le
+              seul geste de tendresse dont il soit capable.
+              [OBL] RACCORD S6 : Esteban dit « Prends le pain. »
+              (S6_EST_L084). [OBL] Deux hommes, trois ans d'ecart,
+              meme phrase, meme raison. [OBL] JAMAIS SOULIGNE.
+              Job CI `bread-line` verifie seulement que les deux
+              lignes partagent le tag `motif:pain`.
+              [OBL] LOHEN PREND LE PAIN. Anim scriptee, 2,2 s. Il ne
+              le mange pas. Il le met dans sa veste. [OBL] Le pain est
+              encore dans sa veste a la fin du chapitre, quand il pose
+              la veste sur Sol endormi. [OBL] PERSONNE NE LE DIT.
+              Job CI `bread-in-coat` : le prop PN-112 doit etre
+              instancie dans la scene finale.
+
+--- CE QUE TALLEC NE DIT PAS [OBL] -----------------------------------------------------------
+
+[OBL] Tallec sait qu'Esteban est mort. Il l'a su le 16 octobre, il y a
+trois ans, par la liste. [OBL] Il ne le dit pas. Il ne le dira jamais.
+[OBL] Regle transverse CI `no-death-told`.
+
+[OBL] AUCUNE OPTION DE DIALOGUE NE PERMET DE LE LUI DEMANDER. [OBL] Ce
+n'est pas un oubli : c'est la regle. Le joueur ne peut pas poser la
+question a la seule personne qui repondrait honnetement.
+
+[OBL] Il n'y a AUCUN choix dans ce document. Les deux choix de S7 sont
+en D05. [OBL] Une conversation de 34 lignes sans une seule option, au
+milieu d'un jeu a 38 choix : c'est le point. On ne negocie pas avec
+Tallec.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] +4 dB de niveau de jeu, pluie a 78 dB sur la tole
+[ ] Tallec ne se leve pas une seule fois
+[ ] L035 : il ne fera rien pour Sol, aucune option
+[ ] L055 : il se trompe, et personne ne le detrompera jamais
+[ ] L060 : « Prends le pain. » — CI `bread-line`, CI `bread-in-coat`
+[ ] Zero choix dans ce document
+[ ] Aucune option pour demander si Esteban est mort — CI `no-death-told`

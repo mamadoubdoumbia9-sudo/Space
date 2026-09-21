@@ -1,0 +1,138 @@
+===============================================================================
+DLG · S6 · D02 — LA BASCULE : E21, LE SEUL ECHO JOUABLE
+18 entrees, toutes S6. EST 10 · LOH 8. Contribution : 18.
+[OBL] E21 est le 21e des 31 Echos, le plus long (9 min), le seul jouable,
+le seul en couleur chaude, et le seul ou le joueur INCARNE le fantome.
+===============================================================================
+
+--- LA BASCULE [OBL] -----------------------------------------------------------------------------
+
+[OBL] Le rituel des Echos dure 2,44 s partout dans le jeu, 31 fois, non
+skippable. ICI IL DURE 2,44 s AUSSI. Aucune exception. Le joueur
+reconnait le rituel et s'attend a 40 secondes de fantomes gris.
+
+Il obtient neuf minutes de couleur.
+
+[OBL] COURBE DE BASCULE, exactement :
+  t+0,00 → t+2,44 : rituel standard, identique aux 30 autres.
+  t+2,44 → t+6,44 : la saturation monte de 22 % a 70 % en 4 s, courbe
+      ease-in-out. Les 3 lustres s'allument un par un (0,8 s d'ecart).
+      La pluie DISPARAIT des deux fenetres cassees — elles ne sont plus
+      cassees. Les deux flaques s'effacent en dernier, a t+6,2.
+  t+4,00 : LE SON ARRIVE. M22 entre a -34 dB et monte a -14 dB en 2,4 s.
+      [OBL] M22 est la SEULE musique joyeuse du jeu. Un orchestre de
+      danse de 11 musiciens, enregistre en une prise, avec les bruits de
+      chaises et un musicien qui rate une entree a 1:14. Le rate est
+      garde.
+  t+6,44 : 41 invites sont la. Ils etaient absents a t+6,43. Aucune
+      apparition progressive, aucun fondu individuel. [OBL] Ils sont
+      simplement la, comme si on avait cligne des yeux.
+  t+7,00 : le joueur reprend la main.
+
+[OBL] REGLE ABSOLUE : le joueur n'incarne PAS un fantome qui se souvient.
+Il incarne Lohen, il y a trois ans, le 14 octobre, a 21 h 30, deux heures
+avant la Maree. [OBL] Le HUD (il n'y en a pas) ne change pas. Le modele
+de mains change : les mains sont PROPRES. [OBL] Aucune ligne ne le
+signale. 34 % des joueurs le remarquent.
+
+[OBL] CONTRAINTE DE SAISIE : les commandes sont identiques. Le grappin
+est absent (Lohen n'etait pas relayeur en 'vingt-deux). [OBL] Le joueur
+tente de grappiner en moyenne 1,4 fois dans les 9 minutes. Il n'y a pas
+de message d'erreur. Il ne se passe rien.
+
+--- LES 18 LIGNES -------------------------------------------------------------------------------
+
+    [S6_EST_L023]  EST · 1,6 s · chaud · p0,0
+        « Tu es venu. »
+        dir : [OBL][NAR] PREMIERE LIGNE D'ESTEBAN VIVANT DE TOUTE LA
+              FRANCHISE. [OBL] Elle arrive 0,6 s apres la reprise de
+              main, avant que le joueur ait bouge. [OBL] Il est a 4 m,
+              de dos, il se retourne en la disant. Anim EST-TRN-001.
+              [OBL] Direction : chaud, ordinaire, sans surprise. Il
+              l'attendait. C'est une soiree normale.
+              [OBL] VOIX : grain moyen, un peu rauque, debit lent.
+              Aucune reverb ajoutee — [OBL] Esteban est le SEUL
+              personnage de la salle sans reverb de 2,8 s. Il sonne
+              comme s'il etait a 40 cm. Personne ne l'explique.
+              Job CI `esteban-dry`.
+
+    [S6_LOH_L024]  LOH · 1,2 s · ? · p1,4
+        « Oui. »
+        dir : [OBL] Lohen d'il y a trois ans. Meme voix, 4 % plus
+              haute, debit 6 % plus rapide. [OBL] Le comedien
+              enregistre toutes les lignes de S6 en premier, avant
+              celles de S1-S5, et ne les reecoute jamais.
+
+    [S6_EST_L025]  EST · 2,4 s · chaud · p0,0
+        « Tu as une tete de quelqu'un qui a couru. »
+
+    [S6_LOH_L026]  LOH · 1,8 s · plat · p0,0
+        « J'ai couru. »
+
+    [S6_EST_L027]  EST · 2,0 s · chaud · p0,0
+        « Il y avait pas d'urgence. »
+
+    [S6_LOH_L028]  LOH · 2,2 s · plat · p0,0
+        « Y'a jamais d'urgence. Je cours quand meme. »
+
+    [S6_EST_L029]  EST · 2,6 s · chaud · p1,2
+        « Ca, c'est la chose la plus vraie que tu aies dite ce mois-ci. »
+
+    [S6_EST_L030]  EST · 2,0 s · chaud · p0,0
+        « Donne-moi tes gants. »
+
+    [S6_LOH_L031]  LOH · 1,4 s · plat · p0,0
+        « C'est les tiens. »
+
+    [S6_EST_L032]  EST · 2,4 s · chaud · p0,0
+        « Je sais. Tu les prends toujours. »
+        dir : [OBL][NAR] LE JOUEUR VIENT DE RAMASSER CES GANTS DANS LE
+              PRESENT, TROIS ANS PLUS TARD, DANS UNE SALLE VIDE.
+              [OBL] Aucune musique ne souligne. M22 continue, joyeuse.
+              [OBL] Interdit : aucun ralenti, aucun plan sur les gants,
+              aucun changement de mix.
+
+    [S6_LOH_L033]  LOH · 1,6 s · plat · p0,0
+        « J'ai froid aux mains. »
+
+    [S6_EST_L034]  EST · 2,2 s · chaud · p0,0
+        « Tu as froid partout. C'est une specialite. »
+
+    [S6_LOH_L035]  LOH · 1,2 s · plat · p0,0
+        « Hm. »
+
+    [S6_EST_L036]  EST · 2,8 s · chaud · p0,0
+        « Bon. Il y a quarante et une personnes ici et tu vas en
+          regarder zero. »
+
+    [S6_LOH_L037]  LOH · 1,8 s · plat · p0,0
+        « Je te regarde, toi. »
+        dir : [OBL] dit platement. [OBL] Ce n'est pas une declaration.
+              C'est une constatation de mauvaise humeur. [OBL] C'est
+              quand meme la chose la plus tendre que Lohen dit du
+              chapitre a un vivant.
+
+    [S6_EST_L038]  EST · 2,4 s · chaud · p1,6
+        « Ca fait un. »
+
+    [S6_EST_L039]  EST · 3,0 s · chaud · p0,0
+        « Viens. Je te presente personne, promis. On fait le tour et on
+          revient. »
+
+    [S6_LOH_L040]  LOH · 1,4 s · plat · p0,0
+        « D'accord. »
+        dir : [OBL] Le joueur reprend la main pour de bon. [OBL] A
+              partir d'ici et pendant 7 minutes, il peut aller ou il
+              veut dans la salle. [OBL] Esteban SUIT. Il ne guide pas.
+              [OBL] Si le joueur reste immobile 40 s, Esteban s'assoit
+              a cote de lui et ne dit rien pendant 20 s. Puis reprend.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] Rituel de 2,44 s identique aux 30 autres Echos
+[ ] Saturation 22 % → 70 % en 4 s, 41 invites apparaissent d'un coup
+[ ] Mains propres, jamais signale
+[ ] Grappin absent, aucun message d'erreur
+[ ] Esteban sans reverb — CI `esteban-dry`
+[ ] L032 : les gants, aucun soulignement musical ou visuel
+[ ] Esteban suit, ne guide jamais

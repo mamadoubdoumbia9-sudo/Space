@@ -1,0 +1,134 @@
+===============================================================================
+PN-067 — LE CASIER 4, RANGEE M, TROISIEME TIROIR
+===============================================================================
+Asset : SM_S4_Casier_4M · S4, Bibliotheque des Eaux, aile est, rangee M ·
+~03:22 · PORTEUR D'ECHO E13 · 1 DES 3 PROPS COMMENTES PAR UN PERSONNAGE ·
+LOD0 2 800 tris
+
+§ 1 — CE QU'ON VOIT
+Un meuble de classement, identique a celui du Registre (PN-008, S1) : chene
+sombre, tiroirs de 18 x 12, porte-etiquettes de laiton.
+C'est le casier 4 de la rangee M. Il a 21 tiroirs.
+Vingt sont fermes.
+Le troisieme en partant du haut est OUVERT. Tire de 31 cm — presque
+entierement sorti. Il est en equilibre sur ses glissieres.
+Il est vide.
+Sur son etiquette de laiton : « MAQ - MAS ».
+Le bois de la facade de ce tiroir est different des vingt autres : il est
+plus clair, plus lisse, sur une bande de 3 cm autour de la poignee.
+Il a ete ouvert et referme des milliers de fois. Bien plus que les autres.
+Devant le casier, dans l'eau, il y a une chaise. Une chaise de bois,
+ordinaire, posee face au meuble, a 80 cm.
+Les pieds de la chaise sont dans l'eau depuis trois ans. Le bois a gonfle
+et noirci sur les 4 premiers centimetres.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 800. Reutilise le kit du meuble PN-008 avec des variations.
+[OBL] Les 21 etiquettes sont lisibles : la rangee M couvre MAA a MYZ,
+repartie sur plusieurs casiers. Le casier 4 couvre MAN a MAZ. Coherence
+alphabetique verifiee.
+La bande d'usure autour de la poignee du 3e tiroir : masque de roughness
+(0,17 contre 0,49 ailleurs) + un creusement de 0,8 mm en geometrie.
+[OBL] C'est le detail central du prop. Il doit etre visible a 1,5 m en
+lumiere du rai.
+Le tiroir en equilibre a 31 cm : [OBL] il ne tombe jamais, ne bouge jamais,
+n'est pas refermable. Aucune interaction physique.
+Anim : PROP-778 — pendant E13, le tiroir recule de 4 cm. Une fois.
+Shader `wood_polished` + `brass_tarnish` + une couche d'humidite sur les
+30 premiers centimetres (l'eau monte par capillarite dans le bois).
+
+§ 3 — CE QUE CA DIT
+« MAQ - MAS ». MAREK.
+Le tiroir qui contenait la fiche d'Esteban Marek.
+Il est ouvert. Il est vide. Il a ete ouvert des milliers de fois.
+Et il y a une chaise devant.
+Le geste humain : s'asseoir devant un tiroir vide.
+[NAR] Mireille vient ici. Tous les jours, ou presque, depuis trois ans.
+Elle ouvre le tiroir. Elle regarde. Elle le laisse ouvert. Elle s'assoit.
+[OBL] Le joueur n'a pas encore rencontre Mireille quand il trouve ce prop.
+Il la rencontre 4 minutes plus tard, au fond de la bibliotheque.
+[OBL] Il ne peut PAS faire le lien avant. Rien ne l'indique. La chaise est
+juste une chaise.
+
+§ 4 — ECHO
+ECHO E13 — « Le tiroir » — 22 secondes, mode A.
+[OBL] Cet Echo est le plus depouille du chapitre.
+Ce qu'on voit : une silhouette, debout, devant le casier. De dos.
+Elle ouvre le tiroir. Elle regarde dedans. Elle referme.
+Elle rouvre. Elle regarde. Elle referme.
+Elle rouvre. Elle regarde.
+Elle ne referme pas.
+Elle reste, la main sur la poignee, le tiroir ouvert, 8 secondes.
+Elle s'efface.
+[OBL] Trois ouvertures. Duree totale 22 s. Aucune autre action. Aucun autre
+personnage. Aucun mouvement de camera.
+[OBL] La silhouette est celle de Mireille — memes proportions, meme
+demarche legerement raide, meme facon de tenir l'epaule gauche plus haut.
+Le joueur ne la connait pas encore. Il la reconnaitra RETROSPECTIVEMENT,
+4 minutes plus tard, quand il la verra marcher.
+[OBL] C'est le seul Echo du chapitre qui montre un personnage VIVANT.
+Il viole la regle « les Echos sont aux absents » (PN-046).
+[NAR] Justification jamais enoncee : Mireille n'est pas une absente, mais
+ce qu'elle fait devant ce tiroir, elle ne le fait plus. Elle a arrete il y
+a six mois. L'Echo montre quelque chose de fini.
+Musique : NEANT. [OBL] Silence complet. Le seul son est celui du tiroir,
+trois fois, dans la reverb de 3,4 s de la rotonde.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+[OBL] C'est l'une des TROIS SEULES fois du chapitre ou un personnage
+commente un prop, et c'est la plus tardive : Mireille en parle en S4, mais
+BEAUCOUP plus tard, a 03:48, apres 25 minutes de conversation.
+MIR-DLG-389, dite pendant qu'elle verse du the, sans lever les yeux :
+    « Vous avez vu la chaise, la-bas. »
+    (Lohen ne repond pas.)
+    « Je ne vais plus. C'est fini. Mais je n'ai pas enleve la chaise,
+     parce que si j'enleve la chaise, c'est que c'est vraiment fini,
+     et ce n'est pas la meme chose. »
+[OBL] Trois phrases. Elle ne dit pas « le tiroir ». Elle dit « la chaise ».
+Elle ne dit pas le nom d'Esteban. Elle ne dit pas ce qu'il y avait dedans.
+[OBL] Lohen ne repond pas. Aucune option de dialogue. Le joueur ne peut pas
+demander.
+MIR-ANI-604 : elle tourne sa tasse de 90 degres avant de boire. Comme
+toujours. 64 fois dans le chapitre.
+
+§ 6 — AUDIO
+SFX(drawer_wood_wet) : le tiroir. [OBL] Different de PN-008 (S1) : le bois
+a gonfle, le tiroir FROTTE. Un son plus sourd, plus resistant, plus long.
+Trois occurrences pendant E13.
+La reverb de la rotonde (RT60 3,4 s) transforme chaque son de tiroir en
+evenement. [ART] Un tiroir qu'on ouvre resonne pendant trois secondes sous
+une coupole de 22 m. C'est tout l'Echo.
+SFX(chair_wood_swell) : la chaise gonflee craque quand le joueur passe
+a moins de 50 cm — le plancher travaille sous son poids.
+Aucune musique, ni pendant ni apres. M16 reprend 20 s apres l'Echo.
+
+§ 7 — INTERDICTIONS
+Interdit de : refermer le tiroir · l'ouvrir davantage · mettre quelque chose
+dedans · trouver la fiche d'Esteban · nommer MAREK autrement que sur
+l'etiquette de tranche · deplacer ou prendre la chaise · faire s'asseoir
+Lohen · faire s'asseoir Mireille pendant la sequence · montrer le visage de
+la silhouette · ajouter de la musique a E13 · rendre E13 rejouable ·
+permettre au joueur d'interroger Mireille sur le tiroir · confirmer que la
+silhouette est Mireille.
+
+§ 8 — LIENS
+PN-008 (le meuble du Registre, S1, 3 heures plus tot) : cinq tiroirs
+ouverts, dont « MA-ME ». Le joueur a deja vu ca. Il ne s'en souvient
+probablement pas. [OBL] Meme asset de base, meme logique, deux echelles.
+PN-085 (la chaise de Mireille, face au casier 4) — prop distinct, meme
+chaise, fiche dediee.
+PN-070 (la tasse de Mireille, E14). PN-077 (le registre des noms, vol. 3).
+PN-081 (le certificat de deces provisoire).
+PN-143 : « Ne me cherche plus dans les objets, mon amour. »
+[THEME] CHERCHER DANS LES OBJETS — et Mireille est celle qui a arrete.
+
+§ 9 — DOD
+[ ] 21 etiquettes coherentes, MAN a MAZ, « MAQ - MAS » sur le 3e tiroir
+[ ] Bande d'usure : roughness 0,17, creusement 0,8 mm, visible a 1,5 m
+[ ] Tiroir a 31 cm, en equilibre, non manipulable, ne tombe jamais
+[ ] Chaise gonflee et noircie sur 4 cm, dans l'eau
+[ ] E13 : 3 ouvertures, 8 s d'immobilite finale, silence total
+[ ] Silhouette aux proportions et a la demarche de Mireille, non confirmee
+[ ] MIR-DLG-389 : 3 phrases a 03:48, jamais le mot « tiroir », jamais Esteban
+[ ] Aucune option de dialogue pour interroger

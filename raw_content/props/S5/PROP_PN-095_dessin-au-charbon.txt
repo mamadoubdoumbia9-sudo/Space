@@ -1,0 +1,116 @@
+===============================================================================
+PN-095 — LE DESSIN AU CHARBON SUR LA PAROI
+===============================================================================
+Asset : DECAL_S5_Dessin_Charbon · S5, paroi ouest du conduit -2, apres la
+flaque · ~04:26 · prop narratif · pas d'Echo · 0 tris
+
+§ 1 — CE QU'ON VOIT
+Sur la brique, sur une longueur de SEPT METRES, il y a un dessin.
+Au charbon de bois. Noir sur brique rouge sombre.
+C'est une fresque. Elle a ete faite par etapes, sur des mois : certaines
+parties sont pales et poudreuses, d'autres sont noires et fraiches.
+Ce qu'elle represente, de gauche a droite :
+  — une ville, vue de face, avec des maisons hautes et serrees
+  — la mer devant, dessinee en lignes ondulees
+  — un bateau
+  — puis la mer n'est plus en lignes ondulees : elle est en HACHURES
+    droites, serrees, appuyees. Le trait change completement.
+  — la ville, encore, mais vide : les fenetres sont noircies
+  — un phare, tres grand, plus grand que tout le reste, avec un trait
+    vertical qui monte jusqu'au plafond du conduit
+  — et a droite du phare, tout au bout des sept metres, une petite figure.
+    Un bonhomme. Tres simple : un rond, un trait, quatre membres.
+    Il est seul.
+    A cote de lui, il y a un deuxieme bonhomme, plus petit.
+    Et entre les deux, un trait qui les relie par la main.
+[OBL] Le deuxieme bonhomme a quatre pattes. C'est un chien.
+
+§ 2 — FICHE TECHNIQUE
+0 tris. [OBL] Cinq decals 4K juxtaposes, 7 m au total, densite 580 px/m.
+[OBL] Le dessin est realise A LA MAIN, au vrai charbon de bois, sur un vrai
+mur de brique, par un illustrateur a qui on demande de dessiner comme un
+enfant de 10-13 ans qui dessine bien mais sans technique apprise.
+Photographie en lumiere rasante, detoure, converti en decal.
+[OBL] Aucun dessin numerique. Le charbon sur la brique a un comportement
+specifique (il saute les creux, il s'ecrase sur les aretes, il bave sous la
+pression) qui ne se simule pas.
+[OBL] Les differences d'age entre les parties sont obtenues physiquement :
+on dessine, on attend, on frotte legerement, on redessine ailleurs.
+Le trait vertical du phare monte sur la voute : [OBL] un sixieme decal,
+projete sur la courbure, avec correction de distorsion.
+Visible uniquement a la lampe portee.
+
+§ 3 — CE QUE CA DIT
+Sol dessine sur les murs depuis des mois.
+Le geste humain : dessiner. C'est le seul acte de creation pure du
+chapitre 1.
+[OBL] Il raconte ce qu'il a vu : la ville, la mer, le bateau, puis la mer
+qui change de nature au milieu du dessin — le trait change parce que la
+chose a change.
+Il n'a pas dessine de catastrophe. Pas de vague, pas de destruction, pas de
+gens qui tombent. Il a change son hachurage.
+[NAR] Et puis il a dessine le phare, plus grand que tout, avec un trait qui
+sort du cadre.
+Et lui-meme, tout petit, au bout, avec son chien, en se tenant par la main.
+[OBL] Il n'y a pas de troisieme personnage. Il n'y a pas d'adulte. Il n'y
+a personne d'autre sur sept metres de fresque.
+
+§ 4 — ECHO
+NEANT. Objet d'un vivant, geste d'apres, enfant. Triple (PN-053).
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur sort de la flaque (PN-093), trempe jusqu'aux genoux, et la
+paroi de gauche porte sept metres de dessin.
+[OBL] Il ne peut pas le voir d'un coup : le conduit fait 1,90 m de large et
+la lampe eclaire 2,5 m. Il doit MARCHER le long, de gauche a droite, et le
+dessin se revele par tranches, dans l'ordre chronologique du recit.
+[ART] Le joueur lit une bande dessinee de sept metres a la lampe, en
+marchant, dans un souterrain, apres avoir traverse de l'eau noire.
+C'est la sequence la plus belle du chapitre et elle est entierement faite
+de charbon sur de la brique.
+[OBL] Sol est DEVANT. Il marche. Il ne s'arrete pas. Il ne se retourne pas.
+Il ne dit rien. [OBL] Il ne commente jamais son dessin, ici ni ailleurs,
+dans aucun des sept chapitres.
+[OBL] Si le joueur s'arrete trop longtemps (plus de 40 s), Sol s'arrete
+aussi, plus loin, dos tourne, et attend. Il ne revient pas.
+Aucun prompt. Aucune musique ajoutee. M20 continue, inchangee.
+
+§ 6 — AUDIO
+NEANT propre. Un dessin ne fait pas de bruit.
+[OBL] M20 « Les Conduits » continue sans modification. Aucune reprise
+musicale, aucun theme, aucune emotion sonore ajoutee.
+[ART] C'est la decision la plus difficile de la sequence 5 : ne rien
+ajouter au moment le plus emouvant. Elle doit tenir contre tous les
+retours de playtest.
+Les pas de Lohen dans l'eau qui degoutte de ses jambes : [OBL] pendant les
+30 premieres secondes apres la flaque, un SFX(water_drip_from_clothes),
+irregulier, qui s'attenue. C'est le seul son ajoute.
+
+§ 7 — INTERDICTIONS
+Interdit de : faire commenter Sol · faire commenter Lohen · ajouter un
+personnage au dessin · ajouter un adulte · ajouter un mot, un nom, une date
+· ajouter de la couleur · ajouter de la musique · declencher un theme ·
+permettre d'effacer ou de dessiner · donner un Echo · reveler quand Sol l'a
+commence · le photographier en jeu · le montrer dans une cinematique ·
+en faire un objectif · le dessiner numeriquement.
+
+§ 8 — LIENS
+PN-053 (le nid de Sol). PN-087 (le matelas). PN-089 (les 4 marques a la
+craie). PN-090 (la reserve). PN-091 (le collier).
+[OBL] Cinq props de Sol dans le chapitre. Aucun n'est commente par lui.
+Pomme (S6) : le chien du dessin. Le joueur le rencontre 20 minutes plus
+tard et le reconnait.
+Le Phare (S8) : Sol l'a dessine plus grand que tout, avec un trait qui sort
+du cadre. Lohen y montera. [OBL] Jamais relie.
+[THEME] IL FAUT UNE BELLE CHOSE — S5. [THEME] DESSINER CE QU'ON A VU.
+
+§ 9 — DOD
+[ ] 7 m, 6 decals 4K, 580 px/m, dessin au vrai charbon sur vraie brique
+[ ] Main d'illustrateur imitant un enfant de 10-13 ans, jamais numerique
+[ ] Differences d'age obtenues physiquement, pas par variation d'alpha
+[ ] Changement de trait de la mer : ondulations puis hachures droites
+[ ] Trait du phare montant sur la voute, distorsion corrigee
+[ ] Deux figures seulement a droite : un enfant et un chien, main dans la main
+[ ] Aucun adulte, aucun troisieme personnage, sur les 7 m
+[ ] Lecture obligatoirement sequentielle a la lampe, en marchant
+[ ] M20 strictement inchangee, aucun theme, aucun commentaire

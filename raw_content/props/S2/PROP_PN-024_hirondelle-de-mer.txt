@@ -1,0 +1,110 @@
+===============================================================================
+PN-024 — L'HIRONDELLE DE MER, COQUE ET INCLINAISON
+===============================================================================
+Asset : SM_S2_Chalutier_Hirondelle · S2, sur la Maree, a 900 m du port ·
+~01:02 · prop narratif MAJEUR (decor jouable) · pas d'Echo propre ·
+LOD0 18 400 tris (le plus gros prop du chapitre)
+
+§ 1 — CE QU'ON VOIT
+Un chalutier de 22 m, coque bleue, superstructure blanche, nom peint a
+l'avant : L'HIRONDELLE DE MER — VELMORA.
+Il est pris dans le verre jusqu'a 1,10 m au-dessus de sa ligne de
+flottaison, et il est INCLINE A 23 DEGRES sur bribord.
+La Maree l'a saisi pendant qu'il gitait. Neuf secondes. Il a commence a
+gîter — une vague, une manoeuvre — et le monde a durci autour de lui.
+Le portique arriere est intact. Le chalut est a moitie remonte : il pend
+du treuil, a 4 m au-dessus du pont, plein. Il y a encore quelque chose
+dedans. Le filet est gonfle, lourd, immobile depuis trois ans.
+Sur le flanc, une echelle de coupee pend et touche le verre. C'est par la
+qu'on monte.
+Tout, a bord, est incline a 23 degres. Tout ce qui pouvait rouler a roule
+et s'est arrete contre la lisse bribord.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 18 400 pour l'ensemble navigable. Decoupe en 6 meshes (coque,
+superstructure, portique, chalut, pont, intérieur cabine) pour le culling.
+Atlas : 3 x 4K. Le nom peint est une texture dediee, avec un ecaillage
+sculpte dans l'alpha.
+[OBL] L'inclinaison de 23° est appliquee a la GEOMETRIE et au node racine,
+et le joueur marche dessus. Le controleur doit gerer une pente permanente
+de 23° dans toutes les directions : la marche, la course, l'arret, les
+transitions. Lohen se tient DE TRAVERS. Toutes ses animations de locomotion
+ont une variante `_tilt23` (LOH-LOC-140 a 158, 19 clips).
+[OBL] La camera compense de 6° seulement, pas de 23°. Le joueur doit sentir
+la gite. Test de confort obligatoire : 20 minutes de jeu sans nausee sur un
+panel de 8 personnes.
+Le chalut plein : mesh sculpte, aucune simulation, 2 200 tris a lui seul.
+Shader `hull_paint_salt` : peinture marine + depot de sel + rouille sous la
+ligne de flottaison ancienne (qui est maintenant a 23°, en biais — detail
+critique de credibilite).
+
+§ 3 — CE QUE CA DIT
+Un bateau rentrait au port. Le tampon du Registre (PN-010) s'est arrete sur
+« HIRON ». Il etait attendu. Il n'est jamais arrive.
+Le chalut a moitie remonte dit l'instant precis : ils etaient en train de
+virer le chalut, en manoeuvre, l'equipage sur le pont, le treuil en marche.
+Les 23 degres disent que le bateau a commence a se coucher. On ne sait pas
+pourquoi. On ne le saura pas.
+Le geste humain : remonter un filet. Ils travaillaient.
+[NAR] Ce bateau est le coeur de S2 et le lieu de trois des quatre Echos de
+la sequence. Le joueur y passe 25 minutes. Il l'explore de la cale au
+poste de pilotage. Il n'y trouvera pas un seul corps.
+
+§ 4 — ECHO
+NEANT sur la coque elle-meme (c'est un lieu, pas un objet personnel).
+Le navire PORTE trois Echos, qui sont des props distincts :
+  — E04, la veste d'Esteban (PN-025), dans la cabine
+  — E05, la barre (PN-026), au poste de pilotage
+  — et le mode C de PN-034 (la cloche de brume)
+[OBL] Ordre force : le joueur ne peut pas atteindre le poste de pilotage
+avant d'etre passe par la cabine. E04 avant E05, toujours. L'architecture
+du navire impose l'ordre ; aucun verrou scripte n'est utilise.
+
+§ 5 — MISE EN SCENE
+Approche : 400 m de marche sur le verre, le bateau grossissant. Il est
+visible depuis le depart de S2, minuscule, incline.
+[ART] 400 m sans rien. Aucun prop, aucun evenement, aucune musique, aucun
+dialogue, 4 minutes. C'est le plus long vide du chapitre et il est
+strictement necessaire : la traversee doit couter quelque chose.
+M07 « Neuf cents metres » entre a 260 m du bateau, une seule note tenue de
+violoncelle qui monte d'un demi-ton toutes les 40 secondes, quatre fois.
+L'inclinaison n'est pas lisible de face. Elle apparait d'un coup a 80 m,
+quand la perspective la revele. Beaucoup de testeurs s'arretent a ce
+moment-la.
+Montee par l'echelle de coupee : LOH-LOC-139, 6 s, a deux mains. Il a pose
+sa lampe ? Non — ici, il l'accroche a sa ceinture. Le seul endroit du jeu.
+
+§ 6 — AUDIO
+SFX(hull_steel_groan) : la coque travaille. Un son de tole sous contrainte,
+tres grave, toutes les 12-40 s. Elle est comprimee par le verre depuis
+trois ans. [OBL] Ce son est le plus fort de S2 (-11 dB) et il fait sursauter
+au premier passage. Ce n'est PAS un jump scare : il est aleatoire, non
+scripte, non correle a la position du joueur, et il continue quand il n'y a
+personne (verifiable au micro laisse en place).
+SFX(winch_creak) : le treuil, sous le poids du chalut, toutes les 25 s.
+Les pas : matiere `tole_peinte`, 8 variations, plus un son de semelle qui
+DERAPE legerement sur la pente, present dans 1 pas sur 4.
+Musique : M07 a l'approche, puis plus rien a bord jusqu'a E04.
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter des corps ou des restes · ouvrir le chalut ou reveler
+son contenu · redresser le bateau · le faire bouger, craquer, basculer ·
+compenser la camera au-dela de 6° · ajouter des mouettes ou des rats ·
+permettre de couler le chalut · expliquer la gite · mettre un radio/poste
+qui grésille (cliché interdit, 17.11) · faire de la coque un labyrinthe.
+
+§ 8 — LIENS
+PN-010 (« HIRON »). PN-027 (le carnet de bord, 23h39). PN-013 (« MER BELLE.
+RIEN A SIGNALER. »). PN-025, PN-026, PN-034, PN-035, PN-028, PN-029, PN-036
+— sept des quinze props de S2 sont a bord.
+[THEME] LE TRAVAIL INTERROMPU, ici a l'echelle d'un equipage de six hommes.
+
+§ 9 — DOD
+[ ] 23° appliques a la geometrie, 19 clips de locomotion `_tilt23`
+[ ] Camera compensee a 6° max ; test de confort 20 min / 8 personnes
+[ ] Ligne de flottaison ancienne en biais par rapport au verre
+[ ] Chalut plein sculpte, jamais ouvert
+[ ] 400 m d'approche sans aucun contenu, M07 a 260 m
+[ ] hull_steel_groan aleatoire, non correle au joueur, verifie au micro fixe
+[ ] E04 atteignable avant E05 par architecture, sans verrou scripte
+[ ] Zero corps, zero reste, a bord comme dessous

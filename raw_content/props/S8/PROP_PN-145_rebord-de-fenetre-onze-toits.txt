@@ -1,0 +1,120 @@
+===============================================================================
+PN-145 — LE REBORD DE FENETRE ET SES ONZE TOITS
+===============================================================================
+Asset : SM_S8_Rebord_Fenetre · S8, fenetre de la chambre, au-dessus de la
+table · ~06:35 · prop narratif · pas d'Echo · LOD0 1 400 tris
+
+§ 1 — CE QU'ON VOIT
+Au-dessus de la table, une fenetre. Volets de bois, fermes de l'intérieur
+par une barre.
+[OBL] Le joueur peut les ouvrir. LOH-ACT-242, 2,6 s. C'est la derniere
+interaction de la chambre.
+Il souleve la barre. Il pousse les deux volets.
+Dehors : le ciel etoile et la mer de brume (PN-135).
+Et sur le rebord de pierre, a l'exterieur, il y a des objets.
+[OBL] ONZE petites maisons. Onze maquettes de toits.
+Elles font 4 a 9 cm. Elles sont en VERRE. Souffle, transparent, avec des
+bulles.
+[OBL] Ce sont des toits de Velmora. Onze toits reconnaissables : le kiosque
+a musique (PN-113), le clocher penche (PN-055), la halle, la Bibliotheque
+des Eaux et sa coupole (PN-066), le Meridien (PN-101), la criee, le Marche
+suspendu (PN-038), la capitainerie (PN-015), la grue (PN-054), l'atelier
+(PN-117), et une maison ordinaire.
+Elles sont alignees sur le rebord, face a la ville.
+[OBL] La ville n'est plus visible : il y a 60 m de brume en dessous.
+Elles regardent de la brume.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 400 pour 11 maquettes (moyenne 110 tris) + le rebord et les volets.
+[OBL] Les 11 sont soufflees a la main dans la fiction : shader
+`blown_glass_clear` (PN-028), avec des bulles, des epaisseurs inegales, et
+des bases plates ou le verre a ete coupe a chaud et poli.
+[OBL] Chacune doit etre RECONNAISSABLE : un joueur qui a fait le chapitre
+doit identifier au moins 6 des 11 batiments.
+[OBL] Elles sont simplifiees — ce sont des maquettes de 6 cm, pas des
+modeles. Mais leur silhouette est exacte.
+[OBL] Le clocher est penche a 9 degres. [OBL] Il a donc ete souffle APRES
+la Maree.
+[ART] C'est le detail. Une des onze a ete faite apres.
+Elles sont mouillees et brillantes : il a plu. [OBL] Il ne pleut plus ici,
+on est au-dessus de la couche. Elles ont l'humidite de la brume.
+Anim : NEANT.
+
+§ 3 — CE QUE CA DIT
+[OBL] Anselme Roux a souffle onze toits de Velmora en verre et quelqu'un
+les a alignes sur un rebord de fenetre a 207 metres.
+[OBL] Jamais dit. Jamais confirme. Aucun dialogue, aucun texte.
+[NAR] Le joueur a vu le verre d'Anselme Roux quatre fois : les bouees
+(PN-028), la serre (PN-065), le vitrail (PN-071), l'atelier (PN-117).
+Il reconnait la matiere, ou il ne la reconnait pas.
+Le geste humain : aligner onze objets sur un rebord.
+Le clocher penche : quelqu'un a apporte a Anselme Roux, apres la Maree, la
+description d'une ville qui avait change, et Anselme Roux l'a soufflee.
+[OBL] Et Esteban les a mises sur son rebord, face a la ville.
+[OBL] Ou bien quelqu'un d'autre. [OBL] Jamais dit.
+
+§ 4 — ECHO
+NEANT. [OBL] Le verre ne garde rien (PN-011, PN-116, PN-135).
+[OBL] Et E31 vient d'avoir lieu. C'etait le dernier. Il n'y en a plus.
+[ART] Le systeme est termine. Le joueur a vu trente et un Echos. Il n'y en
+aura plus jamais dans ce chapitre.
+
+§ 5 — MISE EN SCENE
+[OBL] Les volets sont fermes. Rien n'indique qu'on peut les ouvrir.
+[OBL] Le prompt apparait au contact, comme partout.
+[OBL] Zone entierement facultative. Le joueur peut redescendre sans jamais
+ouvrir les volets.
+Taux d'ouverture : 57-70 %.
+[OBL] Et donc : un joueur sur trois environ terminera le chapitre 1 sans
+jamais voir les onze toits.
+[OBL] C'est apres la lettre. Il vient de lire la lettre. La voix d'Esteban
+est peut-etre encore en train de parler (PN-143 § 6 : elle dure 4 min 20).
+[ART] Il ouvre des volets pendant que la voix de l'homme qu'il cherchait
+finit de lire sa propre lettre, et il trouve onze maisons en verre qui
+regardent de la brume.
+[OBL] Aucun plan, aucune camera, aucun ralenti.
+[OBL] Il ne peut pas les prendre. Aucun prompt. Il regarde.
+
+§ 6 — AUDIO
+[OBL] A l'ouverture des volets, le son de l'exterieur ENTRE.
+Le vent a 207 m : SFX(wind_high_open), -19 dB. Une note ample, propre, sans
+sifflement (il n'y a pas d'obstacle : c'est le vent libre).
+[OBL] Il n'y a AUCUN autre son. Pas de pluie (on est au-dessus). Pas de
+ville (elle est sous la brume, a 60 m). Pas de mer (elle est solide).
+[ART] Le vent seul, a deux cents metres, au-dessus de tout.
+SFX(shutter_wood_open) : les volets, une fois.
+[OBL] Si la voix d'Esteban est encore en cours, elle continue par-dessus.
+[OBL] Elle n'est pas attenuee par l'ouverture. Elle n'est pas dans la
+piece : elle est dans la tete du joueur, ou dans celle de Lohen, ou nulle
+part. [OBL] Jamais explique.
+
+§ 7 — INTERDICTIONS
+Interdit de : prendre une maquette · la casser · en ajouter une douzieme ·
+retirer le clocher penche · le redresser · expliquer qui les a soufflees ·
+expliquer qui les a posees · faire commenter · ajouter de la musique ·
+dissiper la brume · rendre la ville visible · ajouter un Echo · ajouter un
+plan · refermer les volets automatiquement.
+[OBL] Les volets restent ouverts pour le reste du chapitre.
+
+§ 8 — LIENS
+PN-028 (les bouees de verre vert, S2), PN-065 (la serre), PN-071 (le
+vitrail), PN-117 (l'atelier), PN-135 (la lentille) : le verre du chapitre.
+PN-055 (le clocher penche a 9 degres) : la maquette est penchee aussi.
+PN-110 (les onze hautes fenetres de la salle de bal, S6) : [OBL] ONZE,
+encore. [OBL] Jamais relie.
+PN-088 (les onze objets coinces dans la grille), PN-121 (les onze objets
+poses par les Figures), PN-111 (les onze traits d'essai de mine).
+[OBL] Cinq occurrences du nombre onze dans le chapitre. Aucune n'est
+reliee. Aucune n'est un systeme. C'est une texture, comme le sept (PN-057).
+[THEME] LE VERRE COMME METIER. [THEME] REGARDER UNE VILLE QU'ON NE VOIT PLUS.
+
+§ 9 — DOD
+[ ] 11 maquettes de verre souffle, 4 a 9 cm, bases coupees a chaud et polies
+[ ] 6 batiments sur 11 identifiables par un joueur ayant fini le chapitre
+[ ] Clocher penche a 9 degres, coherent avec PN-055
+[ ] Volets ouvrables, zone facultative, taux 57-70 %
+[ ] Ciel etoile et mer de brume a 60 m, ville invisible
+[ ] Vent libre a -19 dB, aucun autre son exterieur
+[ ] Voix d'Esteban continuant par-dessus sans attenuation
+[ ] Aucune prise possible, aucun Echo, aucune musique
+[ ] Volets restant ouverts jusqu'a la fin

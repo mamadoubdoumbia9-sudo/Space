@@ -1,0 +1,112 @@
+===============================================================================
+PN-103 — LE PIANO A QUEUE DE L'ORCHESTRE
+===============================================================================
+Asset : SM_S6_Piano_Queue · S6, estrade d'orchestre, fond de la salle ·
+~04:47 · prop narratif INTERACTIF · pas d'Echo propre · LOD0 7 200 tris
+
+§ 1 — CE QU'ON VOIT
+Sur une estrade de 40 cm, au fond de la salle, un piano a queue.
+Noir, laque, 2,40 m. Le couvercle est OUVERT, releve sur sa bequille.
+On voit les cordes, la table d'harmonie, les marteaux.
+Il joue.
+[OBL] Il joue tout seul. Les touches s'enfoncent. Les marteaux frappent.
+Il n'y a personne devant.
+Ce n'est pas un piano mecanique : il n'y a ni rouleau, ni mecanisme, ni
+manivelle. [OBL] Le joueur peut regarder sous le clavier, derriere, dessous.
+Il n'y a rien.
+Il joue M21, en boucle, doucement.
+Sur le pupitre, une partition ouverte. Manuscrite. Ecrite a la main.
+Devant le piano, le tabouret est ecarte de 40 cm et tourne de 30 degres.
+Quelqu'un s'est leve et n'a pas remis le tabouret.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 7 200 (caisse 2 800 + mecanique visible 2 900 + 88 touches 1 100 +
+tabouret 400).
+[OBL] Les 88 touches sont individuellement animables. Les marteaux aussi
+(88 marteaux modelises).
+Anim : PROP-812 `piano_selfplay` — [OBL] l'animation des touches et des
+marteaux est SYNCHRONISEE A LA NOTE PRES sur la piste M21. C'est un export
+MIDI converti en courbes d'animation. Aucune approximation. Un joueur qui
+connait le piano doit pouvoir verifier que la touche qui descend est la
+note qu'il entend.
+[OBL] Les pedales bougent aussi : la pedale forte suit le sustain du MIDI.
+La partition manuscrite : texture 4K, une vraie partition ecrite a la main
+par un copiste, correspondant reellement a M21. [OBL] Lisible et jouable.
+INTERACTION : le joueur peut appuyer sur les touches. LOH-ACT-198.
+[OBL] Une seule touche a la fois, celle que Lohen atteint. Le piano
+continue de jouer par-dessus.
+[ART] On peut faire une fausse note dans une musique qui joue toute seule.
+
+§ 3 — CE QUE CA DIT
+[OBL] Le piano joue tout seul. C'est le seul evenement inexplicable du
+chapitre 1 qui soit ACTIF et PRESENT, et non une trace.
+[OBL] Il n'est jamais explique. Ni ici, ni en S7, ni en S8, ni dans les six
+lettres suivantes.
+[OBL] Aucun personnage ne le commente. Sol passe a cote sans le regarder.
+[NAR] Pour Sol, c'est normal. Ca joue depuis trois ans. Il a 13 ans, il
+vit dans les conduits, et le piano de la salle de bal joue. C'est le monde.
+Le geste humain : le tabouret ecarte et tourne. Quelqu'un s'est leve.
+Et la partition sur le pupitre, ecrite a la main.
+
+§ 4 — ECHO
+NEANT propre. [OBL] Le piano est le declencheur SONORE de E21 (PN-112) mais
+ne le porte pas.
+[ART] Le joueur, a 4 h 47, cherchera un Echo ici avec certitude. Il n'y en
+a pas. Le piano joue deja : il n'a pas besoin de se souvenir.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur entend M21 depuis le conduit (PN-099). Il entre. Il cherche
+d'ou ca vient. Il traverse 28 m de salle de bal. Il arrive a l'estrade.
+Il n'y a personne.
+[OBL] Aucun plan scripte. Aucune revelation. Aucune camera. Il arrive, il
+voit les touches bouger, et c'est tout.
+[OBL] Il peut faire le tour. Il peut regarder dessous. Il peut se pencher
+sur la mecanique. Rien n'est cache : il n'y a pas de truc.
+[OBL] Lohen ne reagit pas. Aucune animation, aucune ligne, aucun
+ralentissement. Il regarde un piano qui joue seul et il continue.
+Si le joueur appuie sur une touche : le son sort, dissonant, par-dessus
+M21. Le piano ne s'arrete pas. [OBL] Aucune reaction, aucun evenement.
+
+§ 6 — AUDIO
+[OBL] M21 « La salle » est DIEGETIQUE et SPATIALISEE sur le piano.
+Elle s'attenue avec la distance, elle est filtree par les obstacles, elle
+change de reverb selon la position du joueur dans les 448 m².
+[OBL] C'est la seule musique spatialisee du jeu avec PN-064.
+Tempo : lent. 52 BPM. Une valse, en 3/4. [OBL] Une valse — c'est une salle
+de bal. Elle est en RE MINEUR.
+[OBL] Elle ne contient PAS le motif d'Esteban. Verifier note a note.
+Duree de la boucle : 4 min 12. [OBL] Assez longue pour que le joueur ne
+percoive pas la boucle pendant les 22 minutes de S6.
+SFX(piano_key_press) : les touches sous le doigt de Lohen. Vrai piano,
+enregistre note par note, 88 echantillons.
+SFX(piano_mechanism) : le bruit mecanique des marteaux et des etouffoirs,
+audible a moins de 2 m, sous la musique. [OBL] Ce detail est ce qui rend le
+piano physique.
+
+§ 7 — INTERDICTIONS
+Interdit de : expliquer pourquoi il joue · arreter le piano · montrer un
+pianiste · montrer un fantome · ajouter un mecanisme cache · faire reagir
+Lohen ou Sol · desynchroniser les touches de la musique · jouer le motif
+d'Esteban · ajouter une reaction a la fausse note · en faire une enigme ·
+le resoudre dans les six lettres suivantes.
+[OBL] Le piano joue encore en S7 (audible de loin depuis la Descente) et en
+S8 (inaudible, trop loin). Il n'est jamais explique.
+
+§ 8 — LIENS
+PN-040 (le piano droit cadenasse, S3) : muet, ferme a cle, sous une pierre.
+[OBL] Deux pianos dans le chapitre : l'un est enchaine et silencieux,
+l'autre est ouvert et joue seul. Jamais relies, jamais compares.
+PN-112 (le sol apres l'Echo). PN-106 (le carton d'invitation).
+PN-101 (les lustres). PN-104 (les rideaux).
+[THEME] LE MONDE NE DOIT PAS DE COMPTES. [THEME] IL FAUT UNE BELLE CHOSE.
+
+§ 9 — DOD
+[ ] 88 touches et 88 marteaux animes, synchronises au MIDI a la note pres
+[ ] Pedale forte suivant le sustain
+[ ] Partition manuscrite reelle, correspondant a M21, lisible et jouable
+[ ] Tabouret ecarte de 40 cm et tourne de 30 degres
+[ ] Aucun mecanisme cache, verifiable sous et derriere l'instrument
+[ ] M21 diegetique, spatialisee, 52 BPM, 3/4, re mineur, boucle 4 min 12
+[ ] Motif d'Esteban absent, verifie note a note
+[ ] Bruit de mecanique audible a moins de 2 m
+[ ] Fausse note possible, aucune reaction

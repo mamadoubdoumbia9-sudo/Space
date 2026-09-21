@@ -1,0 +1,106 @@
+===============================================================================
+  A-230   idle_back_turned_distant
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 230 / 744
+  Partie 2 — ESTEBAN
+  Categorie : IDLE / REPOS / ATTENTE
+  Fichier source  : A_Esteban_Idl_idle_back_turned_distant_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 8.000 s  (240 frames a 30 fps)
+  Type .................. BOUCLE
+  Root motion ........... RM-NONE
+  Blend in / out ........ 0.40 s / 0.40 s
+  Couche AnimationTree .. L0
+  Priorite .............. 6 — locomotion de fond (bande 0-19, bareme 0.05)
+  Poids compresse cible . ~88 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      pelvis, spine_01-03, neck, clavicules, appuis de jambes, doigts au
+      repos
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  ESTEBAN — 31 ans, accordeur de cloches. Plus grand que Lohen, roux.
+
+  Il ne tient pas en place. Il parle avec LES DEUX mains (Lohen n'en utilise
+  qu'une). Il est en avance sur le temps, jamais en retard. Gestes signature
+  : E1 il range sa meche et il RATE, E2 il sourit du cote gauche seulement,
+  E3 il tapote deux fois avant de parler serieusement. [OBL] Seul personnage
+  du jeu SANS REVERB, en toutes circonstances (11.06). [OBL] Aucun Echo ne
+  le montre, sauf E21.
+
+  Rig et costume :
+      gilet (cloth simule dans E21), crayon de charpentier derriere
+      l'oreille, carnet en poche de poitrine, montre
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  LA SILHOUETTE DE DOS A 60 M (06.11). Visible une seule fois dans le
+  chapitre, en S3, sur une passerelle lointaine, pendant 4 secondes, avant
+  qu'un linge ne passe devant. Le joueur n'est jamais sur de ce qu'il a vu.
+  [OBL] Le mesh utilise est le LOD2 (25 % des tris). L'eclairage ambre du
+  sternum est DESACTIVE (on ne voit que le dos). Aucun marqueur. Aucune
+  musique. Rien ne le signale.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Cyclage [OBL 0.03] : la frame 0 et la frame 240 sont identiques
+  a 0.001 pres. Verifie par `tools/loop_check.py`, qui echoue le
+  build en cas de saut.
+
+  Evenements de timeline :
+      aucun
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      declenche par un volume de trigger, une seule fois
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · cyclage frame 0 == frame 240 (tolerance 0.001)
+      · les clauses [OBL] de la section 3 sont verifiees en revue, pas
+      seulement en lecture
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-230
+===============================================================================

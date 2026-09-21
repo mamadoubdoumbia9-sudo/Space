@@ -1,0 +1,95 @@
+===============================================================================
+PN-140 — LES CHAUSSURES RANGEES COTE A COTE
+===============================================================================
+Asset : SM_S8_Chaussures_Rangees · S8, chambre du gardien, au pied du lit ·
+~06:25 · prop narratif · pas d'Echo · LOD0 760 tris
+
+§ 1 — CE QU'ON VOIT
+Au pied du lit, sur le plancher, une paire de chaussures.
+Des souliers de ville d'homme, cuir brun, lacets.
+[OBL] Pointure 44. Semelle lisse.
+[OBL] La MEME paire que les empreintes de la salle de bal (PN-112).
+Elles sont rangees cote a cote. Parfaitement paralleles. Talons alignes.
+Les lacets sont defaits, et ranges a l'intérieur de chaque chaussure.
+[OBL] Exactement comme le pardessus plie sur la bitte (PN-032, S2).
+[OBL] Le joueur a vu ce geste a 1 h 42, il y a 4 h 43. Il n'y a AUCUN lien :
+ce n'est pas la meme personne, pas les memes chaussures, pas le meme
+endroit. [OBL] C'est simplement une facon de ranger ses chaussures.
+[ART] Et le joueur va y penser quand meme. C'est le dernier faux lien du
+chapitre et il est cruel.
+Les semelles sont usees. Beaucoup. La droite plus que la gauche.
+Elles sont propres. Cirees. Recemment.
+Et elles sont VIDES.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 760 (2 x 380).
+[OBL] Sculpt dedie, dans l'etat « portees puis rangees » : le cuir garde la
+forme du pied, le contrefort est affaisse, le dessus est plisse a la
+flexion.
+[OBL] L'usure des semelles : geometrie, avec une usure asymetrique — la
+droite est plus usee sur le bord externe.
+[OBL] Cette asymetrie correspond a la demarche d'Esteban telle que definie
+dans ANIM_MANIFEST (EST-LOC-230 a 240). Coherence avec le rig.
+Les lacets : 2 x 90 tris, ranges en boucle a l'intérieur.
+Shader `leather_polished_worn`.
+[OBL] Elles sont ECLAIREES EN AMBRE (PN-137). Comme tout dans la piece.
+Collision : boite. [OBL] Non prenables. Aucun prompt. Aucun Echo.
+
+§ 3 — CE QUE CA DIT
+Il a range ses chaussures.
+Le geste humain : mettre ses lacets a l'intérieur.
+[OBL] C'est tout.
+[NAR] Quelqu'un s'est deshabille, a range ses chaussures cote a cote, et
+n'est plus la.
+[OBL] Il n'y a pas de corps dans la chambre. Il n'y en aura pas.
+[OBL] Il n'y a pas d'explication. La lettre (PN-143) ne dit pas ou il est
+alle. Elle ne dit pas ce qu'il a fait. Elle dit autre chose.
+[OBL] Et aucun des six chapitres suivants ne le dit.
+
+§ 4 — ECHO
+NEANT. [OBL] Objets personnels d'Esteban, dans la piece ou il a vecu, et
+aucun Echo. Comme le mur (PN-139), comme le gilet (PN-107), comme la veste
+(PN-025 — [OBL] NON : celle-la en avait un, E04, mode C, sans visuel).
+[OBL] Correction de canon : E04 est le SEUL Echo lie a Esteban, et il ne le
+montre pas. Il fait entendre sa voix a travers une cloison, incomprehensible.
+[OBL] Sur 31 Echos, un seul concerne Esteban, et il est en mode C.
+
+§ 5 — MISE EN SCENE
+[OBL] Au pied du lit. Le joueur les voit quand il s'approche pour E29
+(PN-138).
+[OBL] Elles sont a 40 cm de l'endroit ou la silhouette d'E29 etait assise.
+[ART] Il declenche l'Echo, il voit un homme assis au bord du lit la tete
+dans les mains, et quand la silhouette s'efface, les chaussures sont
+toujours la, au meme endroit, vides.
+[OBL] Aucun plan, aucun LookAt, aucun son, aucune musique.
+Taux de detection : 71-83 %.
+
+§ 6 — AUDIO
+NEANT.
+
+§ 7 — INTERDICTIONS
+Interdit de : les prendre · les deplacer · reveler ou il est alle · ajouter
+un corps · ajouter une deuxieme paire · ajouter des chaussettes · les faire
+porter · relier explicitement a PN-032 ou PN-112 · donner un Echo · ajouter
+un prompt · faire commenter.
+
+§ 8 — LIENS
+PN-112 (les empreintes de la salle de bal, S6) : meme pointure, meme
+semelle lisse. [OBL] Coherence obligatoire du modele d'usure.
+PN-032 (le pardessus plie, S2) : meme geste de rangement, aucun lien.
+PN-001 (les quarante bottes, S1), PN-063 (les 118 chaussures d'enfants, S3),
+PN-116 (la chaussure scellee dans la coulee, S7), PN-088 (les objets de la
+grille).
+[OBL] Les chaussures traversent le chapitre. Ce sont les premieres choses
+que le joueur voit (PN-001, a 6 minutes) et parmi les dernieres (PN-140, a
+6 h 25).
+[THEME] CE QUI RESTE QUAND LES GENS PARTENT.
+
+§ 9 — DOD
+[ ] Pointure 44, semelle lisse, coherente avec PN-112
+[ ] Usure asymetrique coherente avec la demarche EST-LOC du rig
+[ ] Lacets defaits et ranges a l'intérieur
+[ ] Cuir gardant la forme du pied, contrefort affaisse
+[ ] Cirees recemment, eclairees en ambre
+[ ] Zero prompt, zero Echo, zero son, zero commentaire
+[ ] Aucun corps dans la chambre, dans les 7 chapitres

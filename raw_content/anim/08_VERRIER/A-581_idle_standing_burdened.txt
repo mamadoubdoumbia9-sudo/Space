@@ -1,0 +1,102 @@
+===============================================================================
+  A-581   idle_standing_burdened
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 581 / 744
+  Partie 8 — LE VERRIER (ANSELME ROUX)
+  Categorie : LOCOMOTION
+  Fichier source  : A_Le_Loc_idle_standing_burdened_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+  Identifiant precedent : A-584 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 14.000 s  (420 frames a 30 fps)
+  Type .................. BOUCLE
+  Root motion ........... RM-NONE
+  Couche AnimationTree .. L0
+  Priorite .............. 5 — locomotion de fond (bande 0-19, bareme 0.05)
+  Poids compresse cible . ~308 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      240 os dont 74 pour la coulee (jiggle-bones), visage humain intact,
+      machoire bloquee
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  LE VERRIER (ANSELME ROUX) — 52 ans, maitre verrier. 2,6 m.
+
+  [ART][OBL] CE N'EST PAS UN MONSTRE. C'est un homme fatigue avec quelque
+  chose de tres lourd sur le dos. Chaque mouvement doit exprimer LE POIDS et
+  la LENTEUR. LE VISAGE HUMAIN EST INTACT ET CALME, et c'est ce qui est
+  insupportable. Il ne peut plus parler : sa machoire est prise. Il
+  communique en montrant. Il a lu le meme Echo 4 000 fois — celui de sa
+  fille.
+
+  Rig et costume :
+      86 000 tris, 240 os dont 74 pour la coulee (chaine de jiggle-bones)
+      qui forme une aile, un manteau ou une vague selon l'angle
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  debout sous la pluie, la coulee pendante. Il respire — on voit le torse
+  humain bouger sous le verre. La tete est legerement inclinee vers l'avant.
+  Il regarde le sol a 3 m devant lui. La coulee ondule de 6 cm en continu.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Cyclage [OBL 0.03] : la frame 0 et la frame 420 sont identiques
+  a 0.001 pres. Verifie par `tools/loop_check.py`, qui echoue le
+  build en cas de saut.
+
+  Evenements de timeline :
+      SFX(glass_settle_slow) f120, f300 · SFX(rain_on_glass) continu
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- etat courant de l'IA (`ai_state`) ; -> retour a l'idle de la
+      creature, ou enchainement declare par le comportement
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · cyclage frame 0 == frame 420 (tolerance 0.001)
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-581
+===============================================================================

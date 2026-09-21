@@ -1,0 +1,123 @@
+===============================================================================
+PN-045 — LE POSTE DE MILICE DE TALLEC
+===============================================================================
+Asset : SM_S3_Poste_Milice · S3, plateforme haute du Marche, niveau 3 ·
+~02:24 · PORTEUR D'ECHO E10 · LIEU DE LA PREMIERE RENCONTRE AVEC TALLEC ·
+LOD0 8 700 tris
+
+§ 1 — CE QU'ON VOIT
+Une cabane de planches et de tole, 5 x 4 m, construite APRES : le bois est
+recent, les clous ne sont pas rouilles, l'assemblage est solide et laid.
+Elle est posee sur la plateforme la plus haute du Marche, celle qui voit
+tout : les trois niveaux, les six passerelles d'acces, et 400 m de verre.
+Un homme l'a construite pour surveiller.
+Dedans : une table, deux chaises, un poele a bois qui fonctionne (il y a de
+la braise), un lit de camp, et un MUR.
+Le mur du fond porte un plan de Velmora dessine a la main sur six feuilles
+assemblees. Pas une carte : un plan de securite. Des zones hachurees. Des
+croix. Des annotations.
+[OBL] Le plan est illisible en detail. Il est dessine dans une notation
+personnelle que personne d'autre ne comprend. Le joueur voit un systeme
+sans pouvoir le lire.
+Sur la table : un registre ouvert, une lampe, et une prothese de bras
+posee a plat, demontee, avec ses sangles ouvertes.
+Ce n'est pas celle que Tallec porte. C'est une deuxieme.
+Tallec est dehors, sur la plateforme, dos a la cabane, et il a entendu le
+joueur arriver depuis quatre minutes.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 8 700 (structure 3 200 + intérieur 3 100 + plan mural 400 + mobilier
+2 000). Deux atlas 4K.
+[OBL] Le plan mural : texture 4K, dessine a la main a l'encre par un
+illustrateur, sur six feuilles reellement assemblees au scotch, avec une
+notation inventee, coherente, et jamais expliquee. 140 symboles, 9 types.
+Le poele : la braise est une lumiere (OmniLight 1 900 K, rayon 3 m,
+flicker 6 %) + un mesh de braise avec emissive. [OBL] Non-ambre, verifie.
+Shader `wood_new_rough` pour la cabane — le seul bois NEUF du chapitre.
+[ART] Il ne suinte pas. Il n'a pas de mousse. Il tranche violemment avec
+tout le reste de la ville.
+Collision : praticable. Le joueur entre.
+
+§ 3 — CE QUE CA DIT
+Un homme a construit un poste d'observation au point le plus haut du
+Marche, y a installe un poele, un lit et un registre, et surveille une
+ville vide.
+Le geste humain : construire. C'est le seul prop du chapitre qui soit une
+CONSTRUCTION d'apres, pas une modification.
+La deuxieme prothese demontee sur la table dit qu'il en entretient une de
+rechange. Qu'il prevoit de durer.
+Le registre ouvert dit qu'il note. Tous les jours. Des choses.
+[NAR] Tallec, 44 ans, prothese de bois et laiton. Il n'est pas un
+survivant : il est celui qui est reste. Il n'attend personne.
+Sa premiere replique du jeu, TAL-DLG-301, sera prononcee dos au joueur,
+sans se retourner : « Vous etes le quatrieme cette annee. »
+
+§ 4 — ECHO
+ECHO E10 — « Le poste » — 24 secondes, mode A.
+[OBL] Cet Echo est unique : il se declenche sur un objet de la cabane, mais
+il ne montre PAS l'avant de la Maree. C'est le seul Echo du chapitre a
+montrer un moment d'apres.
+Explication canonique, jamais enoncee : l'Echo est sur la PLATEFORME, pas
+sur la cabane. Le lieu existait avant. Ce qu'il montre est donc antérieur.
+[OBL] Ce qu'on voit : la plateforme nue, sans cabane. Quatre silhouettes
+debout, en cercle, tres serrees, penchees vers le centre. Elles regardent
+quelque chose au sol qu'on ne voit pas — leurs corps le cachent.
+Elles restent 16 secondes ainsi. Aucun mouvement, sauf une, la deuxieme en
+partant de la gauche, qui porte la main a sa bouche a 11 s.
+A 16 s, trois d'entre elles se redressent et s'ecartent.
+La quatrieme reste penchee.
+[OBL] Quand les trois s'ecartent, on voit le sol au centre : il est vide.
+Il n'y a rien. Il n'y a jamais rien eu.
+A 21 s, elles s'effacent toutes les quatre en meme temps.
+Musique : NEANT. Silence complet pendant 24 secondes.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+Montee par une echelle de 6 m depuis le niveau 2. En haut, la plateforme.
+[OBL] Tallec est visible AVANT d'arriver en haut : depuis l'echelle, le
+joueur voit d'abord ses bottes, puis son dos. Il ne bouge pas.
+[OBL] Il ne se retourne pas avant la 4e replique de la scene.
+L'Echo E10 est declenchable AVANT ou APRES la conversation. Les deux sont
+valides et rien ne change.
+[ART] Si le joueur le declenche pendant que Tallec est a 3 m : Tallec ne
+reagit pas, ne le voit pas, ne le mentionne jamais. Les Echos ne sont pas
+partages. Personne d'autre que Lohen n'en a jamais vu. Ce n'est jamais dit.
+
+§ 6 — AUDIO
+SFX(stove_wood_crack) : le poele, 3-9 s, irregulier. Le premier feu vivant
+du chapitre. -20 dB.
+[ART] Apres 2 h 24 de froid, le joueur entend du bois qui brule. La
+temperature du son change tout.
+SFX(plank_new_creak) : le bois neuf craque differemment — plus aigu, plus
+sec. 6 variations.
+Le vent, ici, est au maximum du chapitre (-12 dB) : on est au point le plus
+haut et le plus expose.
+Pendant E10 : silence TOTAL. Y compris le vent, y compris le poele.
+[OBL] 24 secondes de silence numerique quasi total (-58 dB de plancher).
+C'est le deuxieme plus long silence du jeu, apres CIN-211 (3,5 s de silence
+absolu) — non : le plus long. Verifier au mix.
+
+§ 7 — INTERDICTIONS
+Interdit de : rendre le plan mural lisible ou dechiffrable · permettre de
+prendre le registre, la prothese, une arme · expliquer ce que les quatre
+silhouettes regardaient · faire reagir Tallec a l'Echo · faire mentionner
+les Echos par un PNJ, ici ou ailleurs · faire se retourner Tallec avant la
+4e replique · ajouter de la musique a E10 · rendre E10 rejouable ·
+chauffer visuellement la cabane en ambre.
+
+§ 8 — LIENS
+PN-046 (l'ancre du harnais, ramassable, dans la cabane).
+PN-047 (la prothese de rechange, sur la table).
+TAL-DLG-301 a 348 (la scene de la premiere rencontre, 6 min 20).
+TAL-DLG-311 : « Je ne t'aide pas a le trouver. Je t'aide a arreter. »
+TAL-ANI-522 : les deux coups sur la prothese avant chaque decision (11×).
+[THEME] CELUI QUI EST RESTE.
+
+§ 9 — DOD
+[ ] Bois neuf, non suintant, tranchant avec toute la ville
+[ ] Plan mural : 140 symboles, 9 types, notation coherente et indechiffrable
+[ ] Poele allume, 1 900 K, non-ambre, valide par la CI
+[ ] Tallec dos tourne, visible depuis l'echelle, se retourne a la 4e replique
+[ ] E10 : 4 silhouettes, 16 s penchees, sol vide revele, effacement simultane
+[ ] Silence a -58 dB pendant 24 s, vent et poele coupes
+[ ] Aucun PNJ ne mentionne jamais les Echos, dans tout le chapitre

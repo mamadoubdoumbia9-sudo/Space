@@ -1,0 +1,103 @@
+===============================================================================
+  A-147   charge_cancel
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 147 / 744
+  Partie 1 — LOHEN
+  Categorie : COMBAT
+  Fichier source  : A_Lohen_Cbt_charge_cancel_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 0.400 s  (12 frames a 30 fps)
+  Type .................. ONE-SHOT
+  Root motion ........... RM-NONE
+  Blend in / out ........ 0.04 s / 0.10 s
+  Couche AnimationTree .. L0
+  Priorite .............. 43 — combat (bande 40-59, bareme 0.05)
+  Poids compresse cible . ~6 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      corps complet, bras d'arme, hanches (rotation motrice), appuis, nuque
+      (regard cible)
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  LOHEN — 27 ans, 1,74 m, sec, entraine, fatigue.
+
+  Il a du POIDS. Chaque mouvement a un cout visible. Reference : un grimpeur
+  professionnel en fin de journee de travail. Il ne fait jamais un geste
+  gratuit, sauf trois tics (L2 le lacet, L3 le col, L5 la sacoche) qui sont
+  tout le personnage. Il ne sait pas bien lire. Il a deux sourires dans tout
+  le chapitre. Matricule 0114 brode sur la veste, dans l'albedo, et il doit
+  s'user. Epaule droite abimee « depuis Saint-Jerome » — jamais defini,
+  interdit de le definir.
+
+  Rig et costume :
+      veste de relayeur (cloth simule, 1 des 6 pieces reelles du chapitre),
+      harnais, sacoche, gants, lacet au poignet gauche
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  abandon de la charge. Il baisse le harpon et expire d'un coup par le nez.
+  [OBL] Frustration CONTENUE : pas de juron corporel, pas de secouement de
+  tete. Les epaules retombent de 3 cm. Le joueur a annule, il le sait deja,
+  le personnage n'a pas a le lui reprocher.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Clip ONE-SHOT : pas de contrainte de cyclage. La derniere frame
+  doit poser une silhouette blendable vers les etats de sortie.
+
+  Evenements de timeline :
+      BREATH_OUT f2 (soulagement/depit) · SFX(cloth_release) f3
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- strike_heavy_charge ; -> guard_idle
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · les clauses [OBL] de la section 3 sont verifiees en revue, pas
+      seulement en lecture
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-147
+===============================================================================

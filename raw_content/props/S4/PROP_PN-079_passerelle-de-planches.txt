@@ -1,0 +1,95 @@
+===============================================================================
+PN-079 — LA PASSERELLE DE PLANCHES
+===============================================================================
+Asset : SM_S4_Passerelle_Planches · S4, du seuil de la bibliotheque a la
+table de Mireille · ~03:15 · prop narratif INTERACTIF (traversee) ·
+pas d'Echo · LOD0 3 900 tris
+
+§ 1 — CE QU'ON VOIT
+Une passerelle de planches posee sur des cales, qui traverse la rotonde
+inondee du seuil jusqu'a la table de Mireille, au fond. 19 metres.
+Elle fait 45 cm de large. Une seule planche de large, par endroits deux.
+Elle est a 9 cm au-dessus de l'eau : juste assez pour rester seche.
+Les cales sont faites de tout : des briques, des livres empiles (des livres
+deja pourris, utilises comme parpaings), des boites de conserve remplies de
+pierres, un annuaire, un pied de chaise.
+Les planches sont clouees aux cales. Certaines bougent quand meme.
+Elle ne va pas droit. Elle fait un coude a mi-parcours, pour contourner le
+tas d'eclats de verre (PN-066).
+[OBL] Elle est TRES bien faite. C'est solide, c'est stable, c'est pense.
+Quelqu'un a construit ca avec soin, sur plusieurs jours.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 900 (41 planches + 63 cales de 9 types).
+[OBL] Les 63 cales sont placees a la main. Les livres-parpaings sont les
+memes sculpts que PN-078, reutilises.
+Marche : [OBL] le joueur DOIT marcher dessus ou dans l'eau. Les deux sont
+possibles.
+  — sur la passerelle : vitesse normale, pas secs, silhouette droite
+  — dans l'eau : vitesse reduite de 22 %, pas mouilles, LOH-LOC-181
+    (demarche genee, genoux plus hauts)
+[OBL] Aucune penalite, aucun message, aucun degat. Le joueur peut passer
+50 minutes dans l'eau s'il veut.
+Anim : PROP-791 — 4 planches sur 41 basculent legerement au passage (3 mm).
+Toujours les memes quatre.
+
+§ 3 — CE QUE CA DIT
+Mireille a construit un chemin sec de 19 metres dans sa bibliotheque
+inondee, avec des livres pourris comme parpaings.
+Le geste humain : caler une planche avec un livre.
+[OBL] C'est l'image la plus dure de la sequence, et elle est presentee sans
+aucun commentaire : les livres qu'elle n'a pas pu sauver servent a
+supporter le chemin qui lui permet de continuer a venir.
+Le coude pour contourner les eclats de verre : elle n'a pas ramasse le
+verre, elle a construit autour.
+
+§ 4 — ECHO
+NEANT. Geste d'apres (PN-015) et objet d'une vivante (PN-046).
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur entre dans la bibliotheque et la passerelle est devant lui.
+Elle traverse le rai de lumiere (PN-066) a mi-parcours.
+19 metres, 45 cm de large, dans une rotonde de 22 m. Le joueur est sur un
+fil.
+[ART] Il n'y a aucun risque. Aucune chute, aucune punition, aucune
+mecanique d'equilibre. C'est juste etroit. Et il marche lentement quand
+meme, parce que c'est etroit. Le corps decide tout seul.
+[OBL] Aucun garde-corps, aucune signalisation, aucun prompt.
+Mireille est au bout, assise, visible depuis le seuil. Elle ne se leve pas.
+Elle ne fait pas signe. [OBL] Elle ne le regarde pas approcher : elle
+regarde sa tasse. Il traverse 19 m et elle ne leve pas les yeux.
+Elle parle la premiere, quand il est a 3 m, sans lever les yeux :
+MIR-DLG-351 — « Vous marchez dans l'eau ou sur les planches ? »
+[OBL] Cette replique est jouee dans les deux cas, identique. Elle a entendu.
+
+§ 6 — AUDIO
+SFX(plank_dry_step) : les pas sur la passerelle. 10 variations.
+[OBL] Avec une resonance de planche sur cale : chaque pas produit un
+« toc » sourd sous la planche, decale de 0,03 s.
+SFX(plank_tilt) : les 4 planches qui basculent, un petit clac.
+SFX(step_water_shallow) : dans l'eau, 12 variations (partage avec PN-066).
+[OBL] Le contraste entre les deux est enorme et c'est le point : le joueur
+entend s'il marche sec ou mouille, et Mireille aussi.
+Dans la reverb de 3,4 s, chaque pas remplit la rotonde.
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter une mecanique d'equilibre · faire tomber Lohen ·
+ajouter un garde-corps · punir la marche dans l'eau · assecher la rotonde ·
+faire lever les yeux a Mireille avant sa replique · modifier MIR-DLG-351
+selon le trajet · reparer la passerelle · donner un Echo · faire commenter
+la construction.
+
+§ 8 — LIENS
+PN-078 (les livres-parpaings viennent de la). PN-066 (le coude contourne
+les eclats). PN-085 (la chaise de Mireille, au bout).
+PN-006 (le ponton brise, S1) : l'autre marche etroite au-dessus du vide.
+[THEME] SE DEBROUILLER AVEC CE QU'IL Y A. [THEME] CE QU'ON NE REPARE PAS.
+
+§ 9 — DOD
+[ ] 19 m, 45 cm de large, 9 cm au-dessus de l'eau, coude a mi-parcours
+[ ] 63 cales de 9 types, dont des livres pourris de PN-078
+[ ] Marche dans l'eau possible, -22 % de vitesse, aucune penalite
+[ ] 4 planches basculantes sur 41, toujours les memes
+[ ] Resonance de cale a 0,03 s sous chaque pas
+[ ] Mireille ne leve pas les yeux pendant les 19 m
+[ ] MIR-DLG-351 identique dans les deux cas

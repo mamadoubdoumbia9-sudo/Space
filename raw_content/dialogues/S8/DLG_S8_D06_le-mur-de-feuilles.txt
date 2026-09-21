@@ -1,0 +1,170 @@
+===============================================================================
+DLG · S8 · D06 — LE MUR DE FEUILLES : 32 FRAGMENTS QU'ON LIT ET QU'ON
+N'ENTEND JAMAIS
+32 entrees, toutes S8. EST 32, TOUTES SANS VO. Contribution : 32.
+[OBL] Contenu OPTIONNEL a 100 %. Aucun joueur n'est oblige d'en lire un
+seul. Le taux mesure : 61 % en lisent au moins trois, 7 % les lisent
+tous.
+===============================================================================
+
+--- LA REGLE [OBL] --------------------------------------------------------------------------------
+
+[OBL] Les 32 fragments sont ECRITS sur les feuilles punaisees du mur
+(19.03 point 3-4). Ils sont lisibles par zoom, dans l'ecriture
+manuscrite d'Esteban. [OBL] AUCUN N'EST LU A VOIX HAUTE. Job CI
+`wall-no-vo` : aucun fichier audio ne peut porter un id `S8_EST_L249`
+a `S8_EST_L280`.
+
+[OBL] POURQUOI : la lettre est lue par une voix parfaite alors que
+Lohen lit mal (D05). [OBL] Le mur, lui, est lu par le JOUEUR, avec ses
+propres yeux, a son rythme, dans une ecriture difficile. [OBL] Le joueur
+fait ici l'effort que fait Lohen en permanence. [OBL] C'est la seule
+fois du jeu ou il partage ce handicap, et rien ne le lui dit.
+
+[OBL] LISIBILITE : l'ecriture est REELLEMENT difficile. Le shader
+`letter_paper` n'est pas adouci pour ces textures. [OBL] Interdit
+absolu : ne jamais proposer d'option « transcrire en caracteres
+d'imprimerie », ni dans l'accessibilite, ni ailleurs. [OBL] En revanche
+le zoom va jusqu'a 400 % et le contraste est accessible : la difficulte
+doit venir de l'ECRITURE, jamais de la resolution.
+
+[OBL] AUCUNE DE CES 32 FEUILLES NE DIT OU IL EST PARTI, NI S'IL EST
+VIVANT (20.05).
+
+--- § 1 — LES LISTES (8 fragments) ----------------------------------------------------------------
+
+    [S8_EST_L249]  « Colonne 4, ligne 337. Pas de croix. Verifie le 3 mars. »
+        dir : [OBL][NAR] IL EST DESCENDU. [OBL] Il est alle au mur de
+              la place verifier que son propre nom n'etait pas barre.
+              [OBL] Le 3 mars — LOHEN Y ETAIT EN MARS AUSSI
+              (S7_LOH_L079 : « Comme en mars. »). [OBL] Aucune date
+              precise n'est donnee pour Lohen. [OBL] Les deux hommes
+              ont peut-etre ete devant le meme mur le meme jour.
+              [OBL] LE JEU NE LE DIRA JAMAIS. Job CI `march-unmarked`.
+
+    [S8_EST_L250]  « 641. J'en connais 84. J'en ai accorde le piano de 11. »
+
+    [S8_EST_L251]  « Liste des gens qui montent au Phare : (vide) »
+
+    [S8_EST_L252]  « Liste des gens qui pourraient monter : 1. »
+
+    [S8_EST_L253]  « Liste des raisons de descendre : 1. La meme. »
+
+    [S8_EST_L254]  « Jours ou j'ai failli descendre : 41. Jours ou je suis descendu : 6. »
+
+    [S8_EST_L255]  « Les 6 fois, je suis alle au mur et je suis remonte. »
+
+    [S8_EST_L256]  « 1 038 marches. A la descente c'est pire. Personne ne le croit. »
+        dir : [OBL] QUATRIEME OCCURRENCE DU NOMBRE. [OBL] Toujours
+              aucun lien avec les 1 038 traits du conduit de S5.
+              Interdit 21.08.
+
+--- § 2 — LES CARTES (6 fragments) ----------------------------------------------------------------
+
+    [S8_EST_L257]  « Rue des Lavandieres — 11 toits. Le notre : 4e depuis la grue. »
+        dir : [OBL][NAR] LE TOIT QUE LOHEN N'A PAS RECONNU
+              (S8_LOH_L080). [OBL] La feuille est punaisee a 1,40 m,
+              bien visible. [OBL] Un joueur peut lire ceci APRES avoir
+              entendu Lohen dire qu'il ne connait pas ce toit.
+              [OBL] Job CI `roof-unmarked` : aucune ligne, aucun
+              marqueur, aucun succes ne relie les deux.
+
+    [S8_EST_L258]  « De la fenetre ouest : la Bibliotheque, la grue, la Halle, le bal. »
+
+    [S8_EST_L259]  « Le bal a un trou dans le toit depuis 'vingt-quatre. Il pleut sur le parquet. »
+        dir : [OBL][NAR] IL SAIT QUE LE PARQUET PREND L'EAU. [OBL] Il a
+              ferme les fenetres le 14 octobre pour le proteger
+              (S6_EST_L192) et trois ans plus tard le toit s'est
+              ouvert. [OBL] Il n'a rien pu faire. [OBL] Aucun
+              commentaire. C'est une note de carte.
+
+    [S8_EST_L260]  « Distance Phare — rue des Lavandieres : 9,2 km. A pied : 2 h 40. »
+
+    [S8_EST_L261]  « Je connais le chemin par coeur et je ne l'ai fait que 6 fois. »
+
+    [S8_EST_L262]  « Croquis : la porte de chez nous. J'ai oublie de quel cote s'ouvre le loquet. »
+        dir : [OBL][NAR] LE FRAGMENT LE PLUS DUR DU MUR. [OBL] Il y a
+              effectivement un croquis, maladroit, avec le loquet
+              dessine deux fois, dans les deux sens, et un point
+              d'interrogation. [OBL] 7 % des joueurs le verront.
+              [OBL] Aucune musique, aucun effet, aucune ligne.
+
+--- § 3 — LES CALCULS (6 fragments) ----------------------------------------------------------------
+
+    [S8_EST_L263]  « Altitude lentille : 212 m. Altitude chambre : 206 m. »
+
+    [S8_EST_L264]  « Portee du faisceau par temps clair : 31 km. Par brume : 400 m. »
+
+    [S8_EST_L265]  « Donc, 340 jours par an, personne ne le voit. »
+
+    [S8_EST_L266]  « Je l'entretiens quand meme. Ce n'est pas un raisonnement, c'est un travail. »
+
+    [S8_EST_L267]  « Huile : 1,1 litre par nuit. Reserve : 480 litres. Donc 436 nuits. »
+
+    [S8_EST_L268]  « J'ai arrete de calculer combien il en reste. »
+        dir : [OBL][NAR] LA LAMPE EST ALLUMEE QUAND LOHEN ARRIVE, ET
+              ELLE A DEUX HEURES D'HUILE (S8_LOH_L100). [OBL] 480
+              litres = 436 nuits. Le carnet s'arrete au jour 1 049.
+              [OBL] LES CHIFFRES NE TOMBENT PAS JUSTE. [OBL] Quelqu'un
+              a rapporte de l'huile. [OBL] Aucune reponse avant le
+              chapitre 4 (20.05). [OBL] Interdit absolu d'indice
+              supplementaire.
+
+--- § 4 — LES 0114 (12 fragments) ------------------------------------------------------------------
+
+[OBL] 19.03 point 4 : sur 31 feuilles, le meme mot repete en marge :
+« 0114 ». [OBL] Les 12 fragments ci-dessous sont les seuls ou le
+matricule est accompagne de quelque chose. Les 19 autres marges ne
+portent que les quatre chiffres, seuls, sans texte : elles ne sont pas
+des entrees de dialogue et ne sont pas comptees.
+
+    [S8_EST_L269]  « 0114 — commence une lettre. »
+    [S8_EST_L270]  « 0114 — pas aujourd'hui. »
+    [S8_EST_L271]  « 0114 — trop long, recommencer. »
+    [S8_EST_L272]  « 0114 — enlever la phrase sur la salle de bal. »
+    [S8_EST_L273]  « 0114 — non, la garder. »
+    [S8_EST_L274]  « 0114 — il ne saura pas lire « imbecile ». Le laisser quand meme. »
+        dir : [OBL][NAR] IL A PENSE A ENLEVER LES MOTS DIFFICILES ET
+              IL A DECIDE DE NE PAS LE FAIRE. [OBL] C'est le plus grand
+              respect qu'on montre a quelqu'un dans tout le chapitre.
+              [OBL] Le mot « imbecile » est effectivement dans la
+              lettre (S8_EST_L192). [OBL] Aucun personnage ne le
+              soulignera jamais.
+    [S8_EST_L275]  « 0114 — trouver un autre mot que « mon amour ». »
+    [S8_EST_L276]  « 0114 — il n'y en a pas d'autre. »
+        dir : [OBL][NAR] LA DEUXIEME OCCURRENCE DU MOT « AMOUR » DU
+              CHAPITRE EST DANS LA LETTRE (S8_EST_L225). [OBL] CELLES-
+              CI SONT ECRITES, PAS PRONONCEES. [OBL] Job CI
+              `word-amour` compte les occurrences PARLEES : exactement
+              2 (S4_MIR_L140, S8_EST_L225). [OBL] Les occurrences
+              ecrites du mur ne sont pas comptees et ne violent pas la
+              regle. [OBL] Cette exception est declaree dans
+              VALIDATION_2840 § 3. [OBL] Elle est volontaire : un mot
+              qu'on n'arrive pas a dire, on l'ecrit plusieurs fois
+              avant.
+    [S8_EST_L277]  « 0114 — ne pas dire qu'il est en retard. »
+    [S8_EST_L278]  « 0114 — le dire a la fin, en riant. »
+        dir : [OBL] LE POST-SCRIPTUM A ETE PREMEDITE. [OBL] La chose la
+              plus legere de la lettre est celle qu'il a travaillee le
+              plus. [OBL] 20.04 : « la tendresse qui essaie de faire
+              comme si ».
+    [S8_EST_L279]  « 0114 — 314 feuilles. Arreter de compter. »
+    [S8_EST_L280]  « 0114 — »
+        dir : [OBL][NAR] DERNIER FRAGMENT DU MUR. [OBL] Le matricule,
+              un tiret, et rien. [OBL] La feuille est vierge en
+              dessous. [OBL] Elle est punaisee au centre du mur, a
+              hauteur d'yeux, et c'est la premiere que le faisceau
+              eclaire pendant S8_EST_L228. [OBL] Aucun effet, aucune
+              musique, aucune ligne.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] 32 fragments ecrits, aucun fichier audio — CI `wall-no-vo`
+[ ] Ecriture reellement difficile, aucune option de transcription
+[ ] Zoom 400 %, contraste accessible : la difficulte vient de l'ecriture
+[ ] L249 / L257 : jamais relies a L079 et L080 — CI `march-unmarked`,
+    CI `roof-unmarked`
+[ ] L268 : les chiffres d'huile ne tombent pas juste, aucun indice ajoute
+[ ] L275/L276 : « amour » ecrit, non compte — exception declaree
+[ ] L280 : feuille vierge, premiere eclairee par le faisceau
+[ ] Aucune feuille ne dit ou il est parti ni s'il est vivant

@@ -1,0 +1,101 @@
+===============================================================================
+PN-032 — LE PARDESSUS PLIE SUR UNE BITTE
+===============================================================================
+Asset : SM_S2_Pardessus_Bitte · S2, rive nord, sur une bitte d'amarrage
+emergeant du verre · ~01:42 · prop narratif · pas d'Echo · LOD0 2 800 tris
+
+§ 1 — CE QU'ON VOIT
+Une bitte d'amarrage de fonte, comme celle de la barque de Lohen (PN-005),
+qui depasse du verre de 40 cm.
+Dessus, un pardessus d'homme, gris anthracite, laine epaisse, col montant.
+Il est PLIE. Soigneusement. En trois, doubles sur lui-meme, pose a plat sur
+la tete de la bitte, les manches rentrees vers l'intérieur.
+Sur le pardessus, posee dessus, une paire de lunettes, branches repliees.
+A cote, sur le verre, alignees, parfaitement paralleles, a 8 cm l'une de
+l'autre : une paire de chaussures de ville. Cirees. Lacets defaits, lacets
+ranges a l'intérieur de chaque chaussure.
+Les chaussettes sont dans les chaussures, roulees.
+Et c'est tout. Il n'y a rien d'autre sur trente metres.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 800. Le pardessus est un mesh sculpte pli par pli.
+[OBL] Les plis sont GEOMETRIQUEMENT PARFAITS : angles droits, aretes
+marquees, symetrie. C'est le contraire de la veste d'Esteban (PN-025), dont
+les plis sont approximatifs. Deux hommes, deux facons de plier.
+Shader `wool_heavy_damp` : laine, roughness 0,81, avec une couche
+d'humidite superficielle et un leger duvet en normal map. La laine mouillee
+depuis trois ans est LOURDE : le mesh doit peser.
+Lunettes : 320 tris, verres avec transmission, une branche legerement
+tordue.
+Chaussures : 2 x 380 tris, cuir cire, shader `leather_polished_dull`.
+Collision : capsules. Rien n'est prenable, rien n'est deplacable.
+Anim : NEANT. Aucun mouvement, meme au vent. La laine trempee ne bouge pas.
+
+§ 3 — CE QUE CA DIT
+Un homme s'est deshabille, a plie ses affaires, a range ses lacets dans ses
+chaussures, a pose ses lunettes, et est parti a pied sur la Maree.
+[OBL] Le jeu ne dit rien, ne juge rien, ne nomme rien. Il n'y a pas de mot
+pour ca dans le chapitre. Personne n'en parle.
+Le geste humain : ranger ses lacets dans ses chaussures. C'est un geste de
+propriete, de politesse, presque de civilite. Quelqu'un qui ne veut pas
+laisser de desordre.
+[NAR] Ce n'est PAS lie a la Maree. Ce pardessus n'a pas trois ans : il en a
+peut-etre six mois. La laine est humide mais pas pourrie. Les chaussures
+sont encore cirees. Cet homme est parti recemment.
+Velmora est vide depuis trois ans. Quelqu'un y est venu, il y a quelques
+mois, et a fait ca.
+Le joueur n'est pas le premier a chercher ici.
+
+§ 4 — ECHO
+NEANT. [OBL] Geste d'apres la Maree (regle PN-015) ET sur la Maree
+(regle PN-011). Meme double impossibilite que PN-020, la croix.
+[ART] Le joueur qui connait maintenant les deux regles sait avant
+d'approcher qu'il n'y aura rien. Il approche quand meme. Encore.
+
+§ 5 — MISE EN SCENE
+Sur le chemin, cette fois. Incontournable. A 3 m du passage.
+[OBL] Aucun cadrage, aucune lumiere, aucune composition. Le prop est pose
+banalement, comme un tas d'affaires sur une bitte.
+[ART] C'est precisement ce qui le rend terrible : rien ne le presente.
+Le joueur passe a cote de quatre objets ordinaires bien ranges.
+Le pardessus est gris sur un fond gris, sous un ciel gris. Il ne se detache
+pas. Beaucoup de joueurs passent sans s'arreter — et se retournent trois
+pas plus loin.
+Lohen ne ralentit pas, ne regarde pas, ne dit rien.
+[OBL] Faux positif n°4 du chapitre, de la categorie la plus dure : un prop
+majeur, sur le chemin, qui pourrait porter un Echo, et qui n'en a pas et
+n'aura jamais d'explication.
+
+§ 6 — AUDIO
+NEANT. Aucun son propre. Aucune musique.
+L'ambiance de la rive nord continue : vent, bruit rose de la Maree, le
+craquement du givre sous les pas.
+[OBL] Rien ne change a l'approche. Ni volume, ni filtre, ni couche. Verifier
+au metre : la courbe de mix est parfaitement plate sur 40 m.
+
+§ 7 — INTERDICTIONS
+Interdit de : donner un Echo · ajouter un portefeuille, une lettre, une
+photo, un nom, un papier d'identite · permettre de fouiller · reveler qui
+c'est · le mentionner dans un dialogue · ajouter des traces de pas sur le
+givre · montrer une silhouette au loin · resoudre ce prop dans les six
+lettres suivantes · ajouter un second cas ailleurs (celui-ci est unique) ·
+faire pleuvoir dessus · le faire bouger.
+
+§ 8 — LIENS
+PN-025 (la veste d'Esteban, pliee aussi — mais mal). Le joueur a vu les
+deux a trente minutes d'intervalle. La comparaison des pliages est la seule
+chose que le jeu offre, et il ne la souligne pas.
+PN-014 (la couverture pliee du landau). PN-002 (la valise triee par taille).
+[THEME] PLIER. Quatre props du chapitre reposent sur ce verbe : le landau,
+la valise, la veste, le pardessus. Quatre facons de mettre de l'ordre avant
+de ne plus pouvoir.
+[THEME] LE JOUEUR N'EST PAS LE PREMIER.
+
+§ 9 — DOD
+[ ] Plis geometriquement parfaits, en opposition explicite a PN-025
+[ ] Lacets ranges a l'intérieur, chaussettes roulees dedans
+[ ] Chaussures paralleles a 8 cm, alignement verifie
+[ ] Laine humide mais NON pourrie : etat de 6 mois, pas de 3 ans
+[ ] Aucune signalisation : courbe de mix plate, aucun cadrage, aucun LookAt
+[ ] Zero objet identifiant, zero fouille possible
+[ ] Jamais mentionne dans aucun dialogue du chapitre

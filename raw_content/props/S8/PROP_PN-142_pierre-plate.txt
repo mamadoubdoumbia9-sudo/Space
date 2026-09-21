@@ -1,0 +1,102 @@
+===============================================================================
+PN-142 — LA PIERRE PLATE
+===============================================================================
+Asset : SM_Pierre_Plate · S8, chambre du gardien, sur la table, posee sur
+la lettre · ~06:27 · prop RAMASSABLE (7 des 9) · pas d'Echo · LOD0 60 tris
+
+§ 1 — CE QU'ON VOIT
+Sur la table, a cote du carnet, il y a une feuille de papier.
+[OBL] C'est LA LETTRE (PN-143). Elle est posee a plat.
+Et dessus, il y a une pierre.
+Une pierre plate. Grise. Ovale. 9 cm de long, 6 de large, 1,5 d'epaisseur.
+Un galet de riviere, ou de plage. Lisse. Use par l'eau.
+[OBL] C'est un presse-papier.
+[OBL] ET C'EST LE MEME ASSET QUE LA PIERRE PLATE DE SOL (PN-087, S5, sur la
+caisse a cote de son matelas).
+[OBL] Meme modele, meme forme, meme materiau, meme texture.
+[OBL] Aucun lien n'est etabli. Jamais. Ce sont deux galets.
+[ART] Le joueur l'a vue il y a 2 h 16. S'il s'en souvient, il aura tort. Ou
+raison. Personne ne le lui dira.
+Elle est posee au centre de la feuille.
+[OBL] Il faut la soulever pour prendre la lettre.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 60 tris. Un galet. Le plus simple asset du jeu.
+[OBL] Texture 2K quand meme : le grain d'un galet lisse, avec ses veines de
+quartz et ses micro-piqures, doit tenir a 20 cm.
+[OBL] Shader `stone_river_smooth`, roughness 0,38, avec un leger sheen
+(les galets lisses ont une reflexion diffuse particuliere).
+Elle est eclairee en ambre (PN-137).
+RAMASSABLE : LOH-ACT-236, 1,6 s. Il la prend de la main droite.
+[OBL] Il la POSE a cote. Il ne la garde pas.
+[OBL] Il ne la met PAS dans sa poche. C'est le seul des 9 ramassables qu'il
+repose immediatement.
+[OBL] Correction de canon : PN-142 est comptabilise dans les 9 ramassables
+parce que le joueur execute l'action de ramassage. Il ne le conserve pas.
+[OBL] Elle reste sur la table, a cote, pour le reste du chapitre.
+
+§ 3 — CE QUE CA DIT
+Il a mis une pierre sur la lettre pour qu'elle ne s'envole pas.
+Le geste humain : poser un poids.
+[OBL] Dans une piece aux volets fermes, ou il n'y a pas de vent.
+[OBL] Exactement comme Mireille a pose un verre sur sa lettre a Anselme
+(PN-120, S7), dans une piece sans vent.
+[OBL] Jamais relie.
+[NAR] On ne met pas un poids sur une lettre contre le vent. On le met pour
+qu'elle reste. Pour qu'elle soit encore la. Pour qu'on soit sur.
+Il ne savait pas quand Lohen viendrait. Il ne savait pas si Lohen viendrait.
+Il a mis une pierre dessus.
+
+§ 4 — ECHO
+NEANT. [OBL] Objet du present d'Esteban ? Non : objet inanime sans histoire.
+[OBL] Et surtout : E31 est a 2 centimetres. La lettre.
+Le systeme ne place pas deux Echos a 2 cm.
+
+§ 5 — MISE EN SCENE
+[OBL] C'est le dernier obstacle du chapitre. Une pierre de 9 cm.
+[OBL] Le joueur doit la soulever pour atteindre la lettre.
+[OBL] Le prompt de la pierre apparait AVANT celui de la lettre. Il faut
+faire les deux, dans l'ordre.
+[ART] Apres six heures vingt-sept, apres 4 kilometres de verre, un pont
+casse et 1 038 marches, le dernier geste avant la lettre est de soulever un
+galet.
+[OBL] Aucun plan, aucune camera, aucun ralenti, aucune musique.
+[OBL] LOH-ACT-236 : il la prend, il la regarde 0,4 seconde, il la pose a
+cote.
+[OBL] 0,4 seconde. Pas plus. Il ne s'attarde pas.
+
+§ 6 — AUDIO
+SFX(stone_lift_paper) : la pierre soulevee du papier. [OBL] Un son double :
+la pierre qui quitte le papier, et le papier qui se detend d'un millimetre.
+-31 dB.
+SFX(stone_set_wood) : la pierre posee sur la table. Un son mat, sec, plein.
+[OBL] Aucune musique. Le silence dure depuis 6 minutes.
+[OBL] C'est le dernier son avant E31.
+
+§ 7 — INTERDICTIONS
+Interdit de : la garder · la mettre en poche · la jeter · la relier a
+PN-087 · l'expliquer · ajouter une gravure, une marque, un dessin · en
+ajouter une deuxieme · ajouter de la musique · ajouter un plan · faire
+durer le regard de Lohen au-dela de 0,4 s · permettre de prendre la lettre
+sans soulever la pierre.
+
+§ 8 — LIENS
+PN-087 (la pierre plate de Sol, S5) : meme asset, aucun lien etabli.
+PN-120 (le verre presse-papier de Mireille, S7) : le meme geste.
+PN-040 (la pierre sur le couvercle du piano, S3) : le meme geste, encore.
+[OBL] TROIS presse-papiers dans le chapitre, tous les trois dans des
+endroits sans vent. Jamais relies.
+PN-018 (le jeton), PN-046 (l'ancre), PN-108 (la liste), PN-119 (le dossier),
+PN-121 (l'objet des Figures) : les objets que Lohen porte. Celui-ci, il ne
+le porte pas.
+PN-143 (LA LETTRE, dessous).
+[THEME] POSER UN POIDS POUR QUE CA RESTE.
+
+§ 9 — DOD
+[ ] Galet de 9 x 6 x 1,5 cm, meme asset que PN-087
+[ ] Texture 2K tenant a 20 cm, veines de quartz, micro-piqures
+[ ] Ramassable, regarde 0,4 s, repose a cote, jamais conserve
+[ ] Prompt obligatoirement avant celui de la lettre
+[ ] Son double au soulevement : pierre + papier qui se detend
+[ ] Zero musique, zero plan, zero relation etablie avec PN-087
+[ ] Reste sur la table pour le reste du chapitre

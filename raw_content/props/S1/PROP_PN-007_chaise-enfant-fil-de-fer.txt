@@ -1,0 +1,95 @@
+===============================================================================
+PN-007 — LA CHAISE D'ENFANT ATTACHEE AU FIL DE FER
+===============================================================================
+Asset : SM_S1_Chaise_Enfant_Attachee · S1, garde-corps du quai est, plein
+chemin, altitude 3 m · ~00:16 · prop narratif · pas d'Echo · LOD0 2 100 tris
+
+§ 1 — CE QU'ON VOIT
+Une petite chaise en bois pour enfant de 3-4 ans, hauteur d'assise 26 cm,
+peinte en vert d'eau, la peinture ecaillee sur les bords d'usage. Un dossier
+a barreaux, dont un est casse et recolle avec de la ficelle.
+Elle est ATTACHEE au garde-corps du quai, face a la mer, par SEPT TOURS de
+fil de fer galvanise, serres a la pince, autour des deux pieds arriere et
+du montant du garde-corps. Le fil de fer est neuf par rapport a tout le
+reste : il n'a que trois ans, il rouille a peine.
+La chaise est orientee exactement vers le large. Pas vers le quai. Pas de
+biais. Vers le large.
+Sur l'assise, rien. L'assise est usee en son centre, polie par l'usage.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 100 (chaise 1 400 + fil de fer 700, 7 tours en geometrie reelle,
+non texturee). Atlas 2K. Shader `paint_chipped.gdshader` : masque d'usure
+concentre sur les aretes et le centre de l'assise.
+Le fil de fer est modelise tour par tour, avec les torsades de serrage
+visibles aux deux extremites. [OBL] Pas de decal, pas de texture : de la
+geometrie. On doit pouvoir compter les tours en zoom.
+Collision : boite. Non deplacable, non montable (trop petite).
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a attache une chaise d'enfant a un garde-corps, face a la mer,
+avec sept tours de fil de fer serres a la pince.
+Pourquoi attacher une chaise ? Pour qu'elle ne parte pas. Pour qu'elle
+reste exactement la. Pour que si quelqu'un revient, elle soit encore la.
+Sept tours, ce n'est pas de la fixation. C'est de l'insistance.
+Le geste humain : un adulte est venu ici, apres, avec une pince et du fil
+de fer, et a immobilise pour toujours le siege d'un enfant face a l'endroit
+ou l'enfant a disparu.
+[NAR] Le jeu ne le dit pas. Il n'y a pas de plaque, pas de fleurs, pas de
+nom. C'est une tombe qui ne se declare pas comme telle.
+L'usure au centre de l'assise dit que l'enfant s'y asseyait vraiment, et
+souvent. Ce n'est pas un objet symbolique : c'est SA chaise.
+
+§ 4 — ECHO
+NEANT. Raison [OBL] : c'est le choix le plus difficile de la sequence 1, et
+il est definitif. Donner un Echo a cette chaise permettrait de voir
+l'enfant. Le joueur le voudrait. Le refus est le sujet : certaines choses
+ne se rejouent pas, et le jeu ne les rendra pas.
+Techniquement, l'interaction n'est meme pas proposee : aucun prompt
+n'apparait. Lohen ne tend pas la main. Il regarde et il passe.
+[NAR] Un joueur attentif remarquera que c'est le seul prop de cette force
+sans prompt d'Echo. Il en tirera ses conclusions.
+
+§ 5 — MISE EN SCENE
+Plein chemin, a 1,2 m du passage. Impossible a manquer. Le joueur passe a
+cote a hauteur de hanche.
+[OBL] La camera ne fait RIEN. Pas de ralentissement, pas de recadrage, pas
+de bascule de focus. Lohen ne tourne pas la tete (aucun LookAt scripte).
+Le jeu refuse absolument de souligner. C'est le test le plus pur de la
+regle 09.21 : si le joueur ne voit pas, il ne voit pas.
+Lumiere : la chaise est dans l'ombre du hangar, mais le fil de fer accroche
+un eclat speculaire — sept petits eclats alignes. C'est ca qu'on voit
+d'abord, a 12 m : sept points brillants sur un garde-corps.
+Derriere : le vide, le verre, rien.
+
+§ 6 — AUDIO
+NEANT propre. La chaise ne fait aucun bruit. Le fil de fer ne grince pas
+(il est trop serre). Le vent ne la fait pas bouger.
+[ART] C'est le seul prop majeur de S1 totalement silencieux. Dans une
+sequence ou tout craque, grince et goutte, ce silence est ce qui le rend
+present.
+Aucune musique, jamais, a aucun moment, sur ce prop.
+
+§ 7 — INTERDICTIONS
+Interdit de : donner un Echo · afficher un prompt d'interaction · faire
+regarder Lohen · ajouter des fleurs, un jouet, un nom, une peluche, une
+photo · faire bouger la chaise · faire grincer le fil de fer · la faire
+commenter par qui que ce soit · en faire une entree de journal · ajouter
+une seconde chaise ailleurs dans le jeu.
+[OBL] Sept tours de fil de fer. Pas six, pas huit.
+
+§ 8 — LIENS
+PN-014 (le landau vide) — a 40 m, dans la meme sequence. Les deux props ne
+sont JAMAIS dans le meme cadre. Le joueur les relie lui-meme, a retardement.
+PN-063 (le tas de chaussures d'enfants, S3).
+PN-118 (la canne de souffleur taille enfant, S7) — la fille du Verrier.
+VER-ECH-634 : la seule fantome du jeu qui regarde Lohen est une enfant.
+[THEME] LES ENFANTS ABSENTS, motif tenu sur tout le chapitre, jamais
+verbalise une seule fois par aucun personnage.
+
+§ 9 — DOD
+[ ] 7 tours de fil de fer en geometrie, comptables en zoom
+[ ] Orientation exacte vers le large, verifiee a 2 degres pres
+[ ] Usure centrale de l'assise visible
+[ ] Aucun prompt, aucun LookAt, aucun son, aucune musique
+[ ] Jamais dans le meme cadre que PN-014
+[ ] Test aveugle : 3 testeurs sur 5 s'arretent sans qu'on leur demande

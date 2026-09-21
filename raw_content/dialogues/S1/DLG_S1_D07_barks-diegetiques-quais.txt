@@ -1,0 +1,86 @@
+===============================================================================
+DLG · S1 · D07 — LES 10 LIGNES DIEGETIQUES DES QUAIS (hors barks systeme)
+10 lignes · PAL 4 / LOH 6 · declencheurs d'observation
+Note : ces 10 lignes NE SONT PAS dans les 340 barks. Elles sont ecrites,
+placees, uniques, et comptent dans les 118 de S1.
+===============================================================================
+
+--- REGLE ----------------------------------------------------------------------
+
+[OBL] Lohen ne commente jamais le decor pour informer le joueur. Ces dix
+lignes sont declenchees par des gestes, pas par des regards. Il faut
+TOUCHER pour que Lohen parle. Regarder ne suffit jamais. C'est le seul
+systeme de commentaire du jeu et il coute un geste.
+
+Cooldown : 90 s entre deux lignes de cette liste, quelle qu'elle soit.
+
+--- LES 10 LIGNES --------------------------------------------------------------
+
+    [S1_LOH_L093]  LOHEN · 1,3 s · plat · p0,0
+        « Encore une qui n'a pas de nom. »
+        dir : declenchee en touchant une des 6 caisses de courrier non
+              adressees du hangar. Ne se joue qu'une fois sur les six.
+
+    [S1_LOH_L094]  LOHEN · 1,0 s · plat · p0,0
+        « Trente-neuf. »
+        dir : declenchee en touchant la 40e botte de PN-016. Il en compte
+              trente-neuf parce qu'une paire est depareillee. [OBL] Le
+              joueur peut verifier. Il y a bien 39 bottes appariables et
+              une seule orpheline. Modelisee.
+
+    [S1_LOH_L095]  LOHEN · 1,7 s · plat · p0,0
+        « Sangle, crochet, mousqueton. Dans cet ordre. »
+        dir : en touchant le harnais mural du hangar. Il recite. C'est un
+              homme qui a appris un metier par la main.
+
+    [S1_LOH_L096]  LOHEN · 1,1 s · sec · p0,0
+        « Trop tard pour celle-la. »
+        dir : en touchant une boite aux lettres noyee de verre.
+
+    [S1_PAL_L097]  PALLAS · 1,5 s · plat · p0,0
+        « Touche pas, c'est pas a toi. »
+        dir : si le joueur touche la caisse de couture de Pallas pendant
+              qu'elle est presente. Elle ne s'enerve pas.
+
+    [S1_PAL_L098]  PALLAS · 1,2 s · moqueur · p0,0
+        « Tu veux ma place ? »
+        dir : deuxieme fois qu'il y touche.
+
+    [S1_PAL_L099]  PALLAS · 0,9 s · plat · p0,0
+        « ... »
+        dir : troisieme fois. C'est une ligne SILENCIEUSE, enregistree :
+              un souffle nasal de 0,9 s. [OBL] Elle compte dans les 2 840.
+              C'est le seul cas du jeu ou un silence est un fichier VO.
+              Le comedien doit l'enregistrer. Le sous-titre affiche
+              « (Pallas souffle.) » — unique derogation a la regle
+              `sub-match`, declaree ici, whitelist du job CI.
+
+    [S1_PAL_L100]  PALLAS · 2,2 s · sec · p0,0
+        « Quatrieme fois. Va-t'en. »
+        dir : elle ne se leve pas. Le joueur peut continuer a toucher :
+              plus rien ne se declenche, jamais. Le systeme s'eteint.
+
+    [S1_LOH_L101]  LOHEN · 1,4 s · plat · p0,0
+        « L'echelle sud. Non. »
+        dir : en posant la main sur l'echelle sud (celle que Pallas a
+              deconseillee). Il retire la main de lui-meme. Le joueur peut
+              quand meme monter : trois barreaux, puis chute de 2,4 m,
+              aucun degat, une anim de rattrapage moche (LOH-FAL-131) et
+              Pallas qui ne dit rien du tout. [OBL] Surtout pas de « je
+              t'avais dit ». L'echec doit etre moche et silencieux.
+
+    [S1_LOH_L102]  LOHEN · 1,9 s · plat · p0,0
+        « Il pleuvait comme ca, ce matin-la aussi. »
+        dir : declenchee UNE seule fois, en touchant la bitte d'amarrage
+              du bout du ponton, et seulement si le joueur a ecoute le
+              monologue long (L007-L014). Sinon elle n'existe pas.
+              [NAR] « ce matin-la » n'est pas le matin de la Maree. C'est
+              le matin du bal + 1. Rien ne le dit. Rien ne le dira.
+
+--- CHECKLIST ------------------------------------------------------------------
+
+[ ] Toucher declenche, regarder ne declenche jamais
+[ ] L094 : 39 bottes appariables + 1 orpheline, verifie dans la scene
+[ ] L099 : fichier VO existant, sous-titre whitelist
+[ ] Echelle sud : chute sans degat, sans commentaire
+[ ] L102 conditionnee au monologue long

@@ -1,0 +1,261 @@
+===============================================================================
+DLG · S6 · D06 — LA DISSOLUTION, LES 4 BARKS, LES VARIANTES, LE COMPTAGE
+52 entrees, toutes S6. EST 20 · LOH 32. Contribution : 52.
++ 4 barks S6_BK (hors total). [OBL] Dernier document de S6. Ferme la
+sequence a 236.
+===============================================================================
+
+--- § 1 — LES VINGT DERNIERES LIGNES D'ESTEBAN (la dissolution) --------------------------------
+
+[OBL] MECANIQUE DE LA DISSOLUTION, exactement (22 s, non skippable,
+aucune commande active) :
+  t+0,0  : Esteban est a 11 m, de dos, il leve une main (EST-WAV-002).
+  t+2,0  : la saturation commence a redescendre, 70 % → 22 %, sur 18 s,
+           courbe LINEAIRE (les autres Echos utilisent un ease-out ;
+           celui-ci est lineaire, c'est plus froid, c'est voulu).
+  t+3,0  : M22 ne s'arrete pas. [OBL] ELLE CONTINUE ET S'ELOIGNE : le
+           bus est passe en mono, puis filtre passe-bas a 900 Hz, puis
+           a 300 Hz, comme si l'orchestre jouait derriere une porte.
+           [OBL] Le dernier son audible du bal est la contrebasse.
+  t+4,0  → t+16,0 : les 41 invites disparaissent UN PAR UN, dans un
+           ordre fixe, 0,29 s d'ecart. [OBL] Le vieux couple (point 6)
+           est l'avant-dernier. [OBL] L'homme qui range les chaises
+           (le Verrier) est le DERNIER. Il finit son geste avant de
+           disparaitre.
+  t+17,0 : Esteban est encore la, seul debout, a 11 m, de dos.
+  t+18,0 → t+20,0 : il disparait en 2 s. [OBL] Pas de fondu par
+           transparence : il s'eteint par la meme methode que les 30
+           autres Echos, exactement, sans privilege.
+  t+20,0 : la pluie revient aux deux fenetres cassees. Les deux flaques
+           se reforment. [OBL] En dernier, a t+21,4 : le parquet.
+  t+22,0 : silence. Lohen est a genoux au milieu du parquet, les gants
+           dans la main. [OBL] La camera recule sur 22 s (09.15).
+
+[OBL] PENDANT LES 22 s : Esteban dit ses vingt dernieres lignes. Elles
+sont mixees DE PLUS EN PLUS LOIN, en meme temps que l'orchestre, et les
+six dernieres sont inintelligibles. [OBL] ELLES SONT QUAND MEME
+ENREGISTREES, JOUEES ET SOUS-TITREES — voir l'exception ci-dessous.
+
+[OBL] EXCEPTION DE SOUS-TITRAGE : les sous-titres de L217 a L222 sont
+affiches NORMALEMENT alors que l'audio est incomprehensible. [OBL] Le
+joueur LIT ce qu'il n'entend pas. [OBL] C'est l'inverse de la regle du
+jeu (S5_BK ambiants : entendus, non sous-titres). [OBL] Les deux
+exceptions se repondent et ne sont jamais expliquees.
+
+    [S6_EST_L185]  2,0 s · chaud · « Deux minutes ! »
+        dir : [OBL] crie par-dessus l'orchestre, de dos, joyeux.
+    [S6_EST_L186]  2,4 s · chaud · « Bouge pas ! »
+    [S6_EST_L187]  1,8 s · chaud · « Je reviens ! »
+        dir : [OBL][NAR] TROIS PROMESSES EN SIX SECONDES, TOUTES
+              FAUSSES. [OBL] Aucune musique ne change. Aucun plan.
+              [OBL] Interdit absolu de ralentir, d'isoler ou de
+              repeter ces trois lignes, dans ce chapitre ou un autre.
+    [S6_EST_L188]  2,2 s · chaud · « La fenetre est coincee, attendez— »
+    [S6_EST_L189]  2,6 s · chaud · « Non, laissez, je connais le truc. »
+    [S6_EST_L190]  2,0 s · chaud · « Il faut soulever et pousser. »
+    [S6_EST_L191]  2,4 s · chaud · « Voila. »
+    [S6_EST_L192]  2,8 s · chaud · « Celle-la aussi, sinon ca goutte sur le parquet. »
+        dir : [OBL][NAR] IL FERME LES FENETRES POUR PROTEGER LE
+              PARQUET. [OBL] C'est pour ca que le parquet est intact
+              dans le present, trois ans plus tard, et que Lohen le
+              constate en D01 (L009/L010) sans comprendre.
+              [OBL] LES DEUX FENETRES QUI SONT CASSEES DANS LE PRESENT
+              SONT LES DEUX QU'IL N'A PAS EU LE TEMPS DE FERMER.
+              [OBL] Personne ne le dit. Jamais. Aucun chapitre.
+              [OBL] Job CI `windows-two` : les deux fenetres cassees du
+              present portent les memes index que les deux dernieres
+              de sa tournee.
+    [S6_EST_L193]  2,2 s · chaud · « Ca prend trois secondes et personne le fait. »
+    [S6_EST_L194]  2,6 s · chaud · « C'est toujours moi. »
+    [S6_EST_L195]  2,0 s · chaud · « Je me plains pas, hein. »
+    [S6_EST_L196]  2,4 s · chaud · « Enfin si, un peu. »
+    [S6_EST_L197]  2,8 s · chaud · « Lohen, tu m'ecoutes ou tu regardes le plafond ? »
+        dir : [OBL][NAR] LA SEULE FOIS DE TOUT LE CHAPITRE 1 OU
+              QUELQU'UN PRONONCE LE PRENOM « LOHEN » AVEC AFFECTION.
+              [OBL] Il est a 14 m, de dos, dans une dissolution, la
+              saturation est deja tombee a 41 %. [OBL] Le joueur peut
+              effectivement etre en train de regarder le plafond : la
+              camera est libre. [OBL] Aucun recadrage automatique.
+    [S6_EST_L198]  2,2 s · chaud · « Tu regardes le plafond. »
+    [S6_EST_L199]  2,6 s · chaud · « Bon. Le plafond est bien, c'est vrai. »
+    [S6_EST_L200]  3,0 s · chaud · « Il a ete refait en 'quatorze, apres l'incendie. »
+        dir : [OBL] derniere information factuelle sur Velmora donnee
+              par un vivant. Elle ne sert a rien. C'est exactement
+              pour ca qu'elle est la.
+    [S6_EST_L201]  2,4 s · chaud · « Deux minutes, j'ai dit. »
+    [S6_EST_L202]  2,0 s · chaud · « Une. »
+
+    -- [OBL] a partir d'ici, filtre passe-bas progressif --
+
+    [S6_EST_L203]  2,6 s · chaud · « Garde ma place. »
+    [S6_EST_L204]  3,0 s · chaud · « Et mets ta veste dessus, sinon ils vont s'asseoir. »
+        dir : [OBL][NAR] 20e ET DERNIERE LIGNE D'ESTEBAN VIVANT.
+              [OBL] Elle est deja a moitie inintelligible : filtre a
+              520 Hz, -11 dB, mono. [OBL] Le sous-titre est affiche en
+              entier, net, pendant 3,0 s.
+              [OBL] Le joueur LIT la derniere phrase d'Esteban et ne
+              l'entend pas. [OBL] C'est la these de tout le chapitre
+              en un seul reglage de mixage.
+              [OBL] Il disparait 1,2 s apres la fin de la ligne.
+
+--- § 2 — LES TRENTE-DEUX LIGNES DE LOHEN APRES (a genoux, puis debout) ------------------------
+
+[OBL] Les 22 s de recul camera (09.15) sont SILENCIEUSES. Ces lignes
+commencent apres. [OBL] Le joueur a repris la main mais Lohen ne bouge
+pas tant que le joueur n'avance pas. Il peut rester a genoux
+indefiniment. 8 % des joueurs restent plus de 2 minutes.
+
+    [S6_LOH_L205]  0,0 s · — · (slot sans VO)
+        dir : [OBL] 4,0 s. Rien.
+    [S6_LOH_L206]  1,4 s · bas · « Bon. »
+    [S6_LOH_L207]  2,0 s · bas · « J'ai les gants. »
+    [S6_LOH_L208]  1,6 s · bas · « Je les avais deja. »
+    [S6_LOH_L209]  2,4 s · bas · « Je les avais avant d'entrer, meme. »
+    [S6_LOH_L210]  1,8 s · bas · « Donc il s'est rien passe. »
+    [S6_LOH_L211]  2,2 s · bas · « Donc il s'est passe quelque chose et j'ai rien gagne. »
+    [S6_LOH_L212]  1,4 s · bas · « C'est pareil. »
+    [S6_LOH_L213]  2,6 s · bas · « Non. C'est pas pareil. »
+    [S6_LOH_L214]  1,8 s · bas · « Je me leve. »
+    [S6_LOH_L215]  2,0 s · bas · « Dans une minute. »
+    [S6_LOH_L216]  2,4 s · bas · « La salle est bleue. »
+    [S6_LOH_L217]  1,6 s · bas · « Il pleut dedans, encore. »
+    [S6_LOH_L218]  2,2 s · bas · « Par les deux memes fenetres. »
+        dir : [OBL] IL EST A UN MOT DE COMPRENDRE. [OBL] Il ne
+              comprend pas. [OBL] Aucune musique, aucun plan, aucun
+              indice visuel. [OBL] Certains joueurs comprendront a sa
+              place. C'est tout ce que le jeu leur offre.
+    [S6_LOH_L219]  1,4 s · bas · « Bon. »
+    [S6_LOH_L220]  2,8 s · bas · « Il a dit qu'il revenait dans deux minutes. »
+    [S6_LOH_L221]  2,0 s · bas · « Ca fait trois ans. »
+    [S6_LOH_L222]  1,6 s · bas · « C'est long, deux minutes. »
+        dir : [OBL][NAR] LA LIGNE. [OBL] Direction : ce n'est pas de
+              l'ironie et ce n'est pas un sanglot. C'est une
+              constatation de relayeur sur une duree. [OBL] 0,7 de
+              gain. Aucune musique. Prise refusee si elle est jouee
+              amere.
+    [S6_LOH_L223]  0,0 s · — · (slot sans VO)
+        dir : [OBL] 3,4 s. Il se leve. Anim LOH-STD-018, lente, une
+              main au sol, l'epaule droite.
+    [S6_LOH_L224]  1,8 s · bas · « Les chaises sont contre le mur. »
+    [S6_LOH_L225]  2,4 s · bas · « Il y en a une qui est pas alignee. »
+        dir : [OBL][NAR] LA CHAISE QUE LE VERRIER N'A PAS FINI DE
+              RANGER. [OBL] Elle est a 30 cm de l'alignement, dans le
+              present. [OBL] Dans l'Echo, on l'a vu la pousser et
+              disparaitre avant de finir. [OBL] AUCUN LIEN N'EST FAIT.
+    [S6_LOH_L226]  2,0 s · bas · « Je vais pas la ranger. »
+    [S6_LOH_L227]  1,4 s · bas · « Si. »
+        dir : [OBL] IL LA RANGE. Anim LOH-ACT-119, 2,6 s. [OBL] C'est
+              le deuxieme meuble qu'il redresse du chapitre (le
+              premier : la chaise de Mireille, S4_LOH_L328).
+              [OBL] Personne ne le voit. Personne ne le remercie.
+    [S6_LOH_L228]  2,2 s · bas · « Voila. »
+    [S6_LOH_L229]  1,6 s · bas · « La porte du fond. »
+    [S6_LOH_L230]  2,4 s · bas · « Les cuisines. C'est pas interessant. »
+        dir : [OBL][NAR] IL CITE ESTEBAN SANS SAVOIR QU'IL LE CITE.
+              [OBL] Cette ligne se declenche MEME SI le joueur n'a pas
+              vu le point 7 en D03. [OBL] C'est assume : le joueur qui
+              a manque le point trouve la ligne banale. Celui qui l'a
+              vu recoit un coup. [OBL] Aucune variante.
+    [S6_LOH_L231]  2,0 s · bas · « Il faut monter. »
+    [S6_LOH_L232]  1,8 s · bas · « Le Phare est a l'est. »
+    [S6_LOH_L233]  2,6 s · bas · « Et pour aller a l'est, il faut d'abord redescendre. »
+        dir : [OBL] annonce de S7. [OBL] Aucune carte, aucun marqueur,
+              aucun objectif affiche. Cette ligne EST l'objectif.
+    [S6_LOH_L234]  1,4 s · bas · « Bon. »
+    [S6_LOH_L235]  2,2 s · bas · « Je garde les gants. »
+        dir : [OBL][NAR] PN-021 entre dans les possessions de Lohen et
+              n'en sort jamais. [OBL] Ils sont visibles a sa ceinture
+              pendant tout S7 et S8. [OBL] Il ne les met JAMAIS.
+              [OBL] Job CI `gloves-never-worn`.
+    [S6_LOH_L236]  0,0 s · — · (slot sans VO)
+        dir : [OBL] DERNIERE LIGNE DE S6. 2,0 s. Il sort par la porte
+              est. [OBL] La musique de S7 (M23, la pluie) commence
+              AVANT que la porte s'ouvre — 1,4 s avant. [OBL] Seule
+              anticipation musicale du chapitre.
+
+--- § 3 — LES QUATRE BARKS DE S6 (hors total) ---------------------------------------------------
+
+[OBL] S6 est la sequence la plus pauvre en barks du jeu : QUATRE. [OBL]
+Raison : pendant E21 il n'y en a aucun (le bal fournit l'ambiance), et
+apres E21 Lohen est seul dans une salle vide pendant 90 secondes.
+[OBL] Cooldown porte a 20 min en S6 — ils ne peuvent donc pas tous se
+declencher dans une meme partie. [OBL] Un joueur normal en entend un ou
+deux. C'est volontaire.
+
+    [S6_BK_L237]  1,2 s · « Hm. »
+    [S6_BK_L238]  1,6 s · « Ca resonne. »
+    [S6_BK_L239]  1,4 s · « Y'a personne. »
+    [S6_BK_L240]  2,0 s · « J'entends mes pas. »
+        dir : [OBL] les quatre sont post-E21. [OBL] Aucun bark ne peut
+              se declencher pendant l'Echo. Job CI `no-bark-in-e21`.
+
+--- § 4 — LA VARIANTE « RESTER ASSIS » (annoncee en D03, L094) ---------------------------------
+
+[OBL] Si le joueur s'est assis avec Esteban (point 12) et n'a plus
+bouge, il RATE la danse (D04) et le motif (D05 § 1). [OBL] Le jeu ne le
+previent pas et ne le penalise pas.
+
+[OBL] CE QU'IL OBTIENT A LA PLACE : les 41 invites partent un par un sur
+6 minutes reelles, en temps reel, pendant que les deux restent assis par
+terre contre le mur. Esteban commente les departs. [OBL] Ces commentaires
+REUTILISENT les lignes de D03 non encore entendues, dans l'ordre des
+points, sans aucune ligne supplementaire. [OBL] Aucun asset nouveau :
+c'est une reorganisation du pool.
+
+[OBL] L'ENCHAINEMENT : quand le pool est epuise, Esteban se leve, dit
+L161 (« Bon. Je vais fermer les fenetres. ») et la sequence reprend son
+cours normal a partir du CHOIX 32. [OBL] Le joueur a donc vu la MEME
+FIN, sans avoir danse. [OBL] Il ne saura jamais qu'il y avait une danse.
+
+[OBL] REGLE DE PRODUCTION : ne JAMAIS ajouter d'indication, de succes,
+de statistique de fin de chapitre ou de message « vous avez manque » qui
+revelerait l'existence de D04 a ce joueur. [OBL] Le chapitre 2 ne devra
+pas non plus y faire allusion. Job CI `no-missed-content-report`.
+
+--- § 5 — TABLE DE COMPTAGE DE S6 [OBL] --------------------------------------------------------
+
+    D01 la-salle-vide ........................... 22
+    D02 la-bascule .............................. 18
+    D03 le-tour-de-la-salle ..................... 54
+    D04 la-danse ................................ 44
+    D05 le-faux-choix ........................... 46
+    D06 la-dissolution-et-comptage .............. 52
+                                                 ----
+                                     TOTAL S6 =  236   [OBL] conforme
+
+    Barks S6 (hors total) : 4 — ids S6_BK_L237 a S6_BK_L240. [OBL] conforme
+
+    Ventilation par locuteur :
+      EST ............ 118   (exactement la moitie de la sequence)
+      LOH ............ 118
+                       ----
+                        236
+
+    [OBL] SEULE SEQUENCE DU JEU A DEUX LOCUTEURS. Aucun ECH, aucun
+    secondaire, aucun bark de PNJ. Les 41 invites ne parlent pas : ils
+    produisent une nappe de foule non sous-titree, sans ligne assignee.
+
+    Slots muets (sans VO, comptes) : S6_LOH_L022, L181, L205, L223, L236
+    et S6_EST_L178 → compteur studio S6 = 230 lignes enregistrees.
+
+    COMMANDE DE VERIFICATION :
+      tools/count_dialogue.py --seq S6 --expect 236 --studio 230 --barks 4
+
+    Choix de S6 : 4 — n° 30, 31 (vrais, minuscules) · 32 (LE faux choix)
+    · 33 (appeler / ne pas appeler). [OBL] conforme
+    Echos de S6 : 1 — E21, 9 min, jouable, le seul du jeu. [OBL] conforme
+
+--- CHECKLIST DE SEQUENCE ----------------------------------------------------------------------
+
+[ ] 236 lignes, 4 barks, 4 choix, 1 Echo, 6 slots muets
+[ ] EST 118 / LOH 118, aucun autre locuteur
+[ ] Dissolution 22 s, courbe LINEAIRE, le Verrier disparait en dernier
+[ ] L204 : sous-titree nette, audio inintelligible — exception inverse de S5
+[ ] L192 : les deux fenetres — CI `windows-two`, jamais explique
+[ ] L222 : « C'est long, deux minutes. » — jouee sans amertume
+[ ] L235 : les gants gardes, jamais portes — CI `gloves-never-worn`
+[ ] Aucun bark pendant E21 — CI `no-bark-in-e21`
+[ ] Variante « rester assis » : aucun rapport de contenu manque — CI
+    `no-missed-content-report`
+[ ] Esteban n'est jamais dit mort — CI `no-death-told`
+[ ] Le mot « Echo » n'est pas prononce — CI `no-echo-word`

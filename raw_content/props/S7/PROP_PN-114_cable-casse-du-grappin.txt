@@ -1,0 +1,99 @@
+===============================================================================
+PN-114 — LE CABLE CASSE DU GRAPPIN
+===============================================================================
+Asset : SM_S7_Cable_Grappin · S7, descente des escaliers de l'Ancienne
+Halle · ~05:14 · prop narratif · pas d'Echo · LOD0 2 300 tris
+
+§ 1 — CE QU'ON VOIT
+La Descente est un escalier public de 180 marches qui relie la ville haute
+a la ville basse, sur 40 m de denivele.
+A mi-hauteur, une plateforme de repos. Depuis cette plateforme, quelqu'un a
+lance un grappin.
+Le grappin est encore plante : dans une poutre, 14 m plus bas et 20 m plus
+loin, au-dessus des toits.
+Le cable qui y menait est CASSE. Il pend dans le vide sur 9 m depuis le
+point d'ancrage haut, et sur 6 m depuis le grappin.
+[OBL] Il s'est rompu au milieu. Les torons sont eclates en pinceau sur
+20 cm des deux cotes : une rupture en traction, pas une coupure.
+Le point d'ancrage haut est un anneau de la balustrade. Il est TORDU.
+Il a pris une charge enorme.
+Au sol, sur la plateforme, il y a une tache. Sombre, large de 40 cm,
+lavee par trois ans de pluie mais encore visible dans les joints des pavés.
+[OBL] Ce n'est pas du sang. C'est de l'huile : il y a une burette
+renversee a 60 cm, et le trajet de la coulee est coherent.
+[OBL] Le joueur croira que c'est du sang. La burette est la pour qu'il
+puisse verifier. Il ne verifiera probablement pas.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 300 (cable 15 m en spline 900 + grappin 400 + anneau tordu 200 +
+burette 300 + torons eclates 500).
+[OBL] Les torons eclates : 34 brins individuels en geometrie par extremite,
+recourbes differemment. Une rupture de cable est un objet spectaculaire et
+elle doit etre modelisee.
+L'anneau tordu : sculpt, deformation plastique visible, avec l'ecaillage de
+la peinture aux points de contrainte.
+La tache : decal 2K, avec un masque de penetration dans les joints.
+Anim : PROP-824 — les deux brins de cable oscillent au vent, 12 cm et 8 cm,
+periodes differentes. [OBL] Ils sont LOURDS : mouvement lent, amorti.
+Collision : aucune.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a voulu descendre en tyrolienne depuis la plateforme jusqu'aux
+toits de la ville basse.
+Le cable a casse.
+Le geste humain : lancer un grappin. Et faire confiance a un cable.
+[OBL] Ce qui est arrive a la personne : jamais dit. Il n'y a pas de corps,
+pas de vetement, pas de trace, pas de nom. Il y a une tache d'huile et une
+burette renversee.
+[NAR] L'huile : on huile un cable avant de l'utiliser, pour que la poulie
+glisse. La burette etait ouverte sur la plateforme au moment de la rupture.
+[OBL] Aucun indice ne permet de conclure. Aucune des sept lettres n'en
+parle.
+
+§ 4 — ECHO
+NEANT. Geste d'apres (PN-015).
+[ART] Et le joueur, a 5 h 14, n'attend plus d'Echo sur les gestes d'apres.
+Il regarde un cable casse et il sait qu'il n'aura rien.
+
+§ 5 — MISE EN SCENE
+[OBL] La plateforme de repos est incontournable : c'est le seul palier des
+180 marches.
+Le joueur s'y arrete forcement, parce que la camera s'ouvre : depuis la
+plateforme, on voit toute la ville basse, les toits, la Maree, et le Phare
+qui se rapproche.
+[ART] C'est le point de vue le plus large du chapitre apres le sommet du
+Phare.
+Le cable est a droite, dans le champ.
+[OBL] Il pleut. Le cable ruisselle. Les gouttes suivent les brins eclates
+et tombent en chapelet.
+Aucun prompt, aucun LookAt, aucun son de signalisation, aucune musique.
+
+§ 6 — AUDIO
+SFX(cable_wind_low) : les deux brins qui oscillent. Deux notes graves,
+desaccordees d'un quart de ton.
+SFX(rain_on_steel_cable) : la pluie sur le cable, un crepitement fin.
+Aucune musique liee. [OBL] M23 « La Descente » joue, une nappe de cordes
+graves, sans melodie, qui ne s'arrete pas pendant les 180 marches.
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter un corps · ajouter du sang · ajouter un vetement ·
+reveler ce qui est arrive · permettre d'utiliser le grappin · reparer le
+cable · descendre en rappel · ajouter une seconde tentative · faire
+commenter · donner un Echo · retirer la burette (elle est la preuve
+verifiable et elle doit rester).
+
+§ 8 — LIENS
+PN-033 (le harpon plante, S2) : l'autre tentative violente et ratee.
+PN-096 (la corde de Sol) : celle-la tient.
+PN-049 (le monte-charge). PN-127 (le pont casse, a 300 m).
+PN-032 (le pardessus plie) : le joueur n'est pas le premier.
+[THEME] LE JOUEUR N'EST PAS LE PREMIER. [THEME] ESSAYER ET RATER.
+
+§ 9 — DOD
+[ ] 34 brins eclates par extremite, en geometrie, recourbes differemment
+[ ] Anneau tordu par deformation plastique, peinture ecaillee
+[ ] Burette renversee a 60 cm, coulee coherente avec la tache
+[ ] Tache d'huile et non de sang, verifiable
+[ ] Oscillation lourde et amortie, 12 cm et 8 cm
+[ ] Chapelet de gouttes suivant les brins
+[ ] Zero corps, zero sang, zero resolution

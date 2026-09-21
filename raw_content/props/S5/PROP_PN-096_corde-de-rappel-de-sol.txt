@@ -1,0 +1,111 @@
+===============================================================================
+PN-096 — LA CORDE DE RAPPEL DE SOL
+===============================================================================
+Asset : SM_S5_Corde_Rappel · S5, puits vertical entre le niveau -2 et le
+niveau -3 · ~04:31 · prop narratif INTERACTIF · pas d'Echo · LOD0 900 tris
+
+§ 1 — CE QU'ON VOIT
+Un puits vertical de 6 metres, section 1,10 m, avec des echelons de fer
+scelles dans la paroi.
+Les echelons sont RONGES. Sur les six premiers metres, quatre echelons sur
+onze ont disparu — il ne reste que les trous et des moignons de fer rouille.
+A cote des echelons, une corde. Elle descend du haut jusqu'en bas.
+Elle est neuve. Nylon tresse, 12 mm, bleu — [OBL] le meme bleu que la corde
+a linge de PN-044 et que les cordages du jeu de PN-050. C'est la meme
+provenance : un stock de cordage du port.
+En haut, elle est fixee a une poutrelle par SEPT tours et un noeud.
+[OBL] Sept tours. Comme le fil de fer de la chaise d'enfant (PN-007).
+[OBL] Aucun lien. Ce n'est pas la meme personne. C'est simplement ce que
+font les gens quand ils ne sont pas surs de leur noeud.
+Tous les 50 cm, sur toute la longueur, la corde a un NOEUD. Douze noeuds.
+Des noeuds de pied, pour ne pas glisser.
+Ils sont uses. Le nylon est peluche a chaque noeud.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 900 (corde 6 m en spline 400 tris + 12 noeuds modelises + echelons).
+[OBL] Les 12 noeuds sont sculptes individuellement, avec des usures
+differentes : les noeuds 3, 4 et 5 (hauteur de main) sont les plus peluches.
+Les echelons manquants : 4 trous avec des moignons de fer oxyde, sculpts.
+INTERACTION : la descente. LOH-LOC-193 `rope_descend`, 8 secondes.
+[OBL] Lohen doit poser sa lampe. [OBL] TROISIEME et derniere fois du
+chapitre (apres PN-021 et PN-065).
+Il la pose en haut. Il descend dans le noir. La lumiere reste au-dessus de
+lui et s'eloigne.
+[OBL] En bas, il fait NOIR. Le joueur ne voit rien pendant 4 secondes,
+jusqu'a ce que Sol, deja en bas, allume sa bougie.
+[OBL] La lampe reste en haut du puits pour le reste de la sequence. Lohen
+ne la recupere jamais. Les 14 dernieres minutes de S5 se jouent a la
+bougie de Sol.
+
+§ 3 — CE QUE CA DIT
+Sol a installe une corde a noeuds pour descendre un puits dont les echelons
+ont pourri.
+Le geste humain : faire un noeud tous les 50 cm.
+[OBL] Douze noeuds, un travail de plusieurs heures, fait par un enfant de
+13 ans pour pouvoir continuer a descendre chez lui.
+Les noeuds 3, 4 et 5 plus uses : c'est la ou il pose les mains en
+descendant. Il fait toujours le meme geste.
+[NAR] Et il a fait sept tours en haut. Parce qu'il avait peur.
+
+§ 4 — ECHO
+NEANT. Objet d'un vivant, geste d'apres, enfant.
+
+§ 5 — MISE EN SCENE
+[OBL] Sol descend le premier, sans la corde. Il utilise les echelons
+restants et saute les manquants. SOL-LOC-474, 5 secondes. Il est rapide.
+Il disparait dans le noir.
+Lohen ne peut pas faire ca. [OBL] Il pese 40 kg de plus, il a une epaule
+abimee, et les echelons ne tiendraient pas.
+Il pose sa lampe. Il prend la corde.
+[OBL] Pendant les 8 secondes de descente, le joueur voit : ses mains sur la
+corde en bas de l'ecran, la paroi qui defile, et le halo de la lampe qui
+retrecit au-dessus.
+[ART] Le jeu lui a fait porter cette lumiere pendant 3 h 30. Il la laisse.
+[OBL] Aucun message, aucun avertissement, aucune option de la reprendre.
+En bas, 4 secondes de noir. Puis SOL-ANI-478 : la bougie.
+[OBL] Le visage de Sol, eclaire par en dessous par une bougie, est la
+premiere chose que le joueur voit. C'est le seul gros plan non scripte du
+personnage de tout le chapitre.
+
+§ 6 — AUDIO
+SFX(rope_nylon_slide) : les mains sur le nylon. 8 variations. Un son fin,
+qui chauffe.
+SFX(knot_pass_hand) : le passage de chaque noeud sous la main. [OBL] 12
+occurrences pendant la descente, a intervalles reguliers de 0,62 s. C'est
+le metronome de la descente.
+SFX(loh_effort_grunt_single) : une fois, au 8e noeud. [OBL] Une seule.
+L'epaule droite.
+Pendant les 4 s de noir : [OBL] on entend Sol respirer a 1,5 m. C'est la
+seule fois du chapitre ou l'on entend la respiration d'un autre personnage
+que Lohen.
+Puis l'allumette.
+Musique : M20 s'arrete pendant la descente. [OBL] Silence integral pendant
+les 8 s + les 4 s de noir. Elle ne reprend pas : les 14 dernieres minutes
+de S5 sont SANS MUSIQUE.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre de descendre avec la lampe · permettre de la
+recuperer · ajouter un message · faire tomber Lohen · ajouter un QTE ·
+ajouter une barre d'endurance · faire glisser la corde · faire ceder le
+noeud · faire parler Sol pendant la descente · eclairer le bas avant la
+bougie · remettre la musique avant la fin de S5 · ajouter un 13e noeud.
+
+§ 8 — LIENS
+PN-009 (la lampe-tempete) : elle reste en haut, definitivement.
+PN-021 (l'echelle brisee, S1) et PN-065 (la serre, S3) : les deux autres
+fois ou il faut la poser. [OBL] Progression : la premiere fois il la
+reprend, la deuxieme aussi, la troisieme il ne la reprend pas.
+PN-086 (la lanterne eteinte, E18 et ses 6 s de noir) : la preparation.
+PN-007 (les sept tours de fil de fer) : [OBL] faux lien volontaire.
+PN-137 (la lampe a huile allumee, S8) : la prochaine lumiere qu'il tiendra.
+[THEME] PORTER LA LUMIERE — et la poser.
+
+§ 9 — DOD
+[ ] 12 noeuds sculptes, usure maximale sur les noeuds 3, 4 et 5
+[ ] 7 tours au point d'ancrage, jamais relies a PN-007
+[ ] 4 echelons manquants sur 11, moignons oxydes sculptes
+[ ] Lampe posee en haut, jamais recuperee, 14 minutes sans elle
+[ ] 8 s de descente, 12 passages de noeud a 0,62 s, 1 grognement au 8e
+[ ] 4 s de noir total, respiration de Sol audible a 1,5 m
+[ ] Premier et seul gros plan non scripte de Sol, eclaire par en dessous
+[ ] Aucune musique jusqu'a la fin de S5

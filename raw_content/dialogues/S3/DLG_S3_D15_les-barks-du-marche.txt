@@ -1,0 +1,142 @@
+===============================================================================
+DLG · S3 · D15 — LES 96 BARKS DU MARCHE : LE LOT BK_S3
+73 entrees de bark ecrites ici (les 23 autres sont domiciliees dans D01,
+D02 et D08 : 22 + 1 + 0, voir INDEX § 6.00). Total lot BK_S3 : 96.
+Contribution au total S3 : 0 — les barks sont dans les 340.
+Reference maitre : 09.12 « 96 barks ecrits », 12.07.
+===============================================================================
+
+--- SYSTEME --------------------------------------------------------------------------
+
+Filtres de contexte disponibles : altitude (18-62 m par tranches de 10),
+meteo (sec / crachin / averse), heure de jeu, proximite d'une Figure
+(jamais en S3 : les Figures ne montent pas au-dessus de 40 m), presence
+de Sol a moins de 12 m, progression (avant Tallec / apres Tallec).
+
+[OBL] Un bark ne s'adresse jamais au joueur. Aucun PNJ ne dit « eh, toi ».
+Le joueur traverse des conversations qui ne le concernent pas. C'est la
+regle qui rend la ville habitee plutot que peuplee.
+
+[OBL] Aucun bark ne contient d'information utile a la progression.
+[OBL] Aucun bark ne parle d'Esteban. Les miettes sur Esteban sont dans
+les dialogues ecrits (Brel, Hanno, Tallec), jamais dans l'aleatoire :
+une information importante ne doit pas dependre d'un tirage.
+
+--- LOT A — COMMERCE ET TRAVAIL (18) ---------------------------------------------------
+
+    [S3_BK_L472]  « Corde de six, corde de dix, crochet neuf ! »          1,3 s
+    [S3_BK_L473]  « Deux pieces, pas trois, deux. »                        1,1 s
+    [S3_BK_L474]  « Il est ou, mon crochet ? »                             1,0 s
+    [S3_BK_L475]  « Dans ta main. »                                        0,8 s
+    [S3_BK_L476]  « Ah. »                                                  0,5 s
+    [S3_BK_L477]  « Ca chauffe ! Ecartez-vous ! »                          1,4 s
+    [S3_BK_L478]  « Treuil cinq bloque ! Thea ! »                          1,5 s
+    [S3_BK_L479]  « Thea est au trois ! »                                  1,2 s
+    [S3_BK_L480]  « Alors elle est pas au cinq ! »                         1,3 s
+    [S3_BK_L481]  « Poisson sale, dernier du mois ! »                      1,6 s
+    [S3_BK_L482]  « Dernier du mois, c'est ce que tu dis tous les mois. »  2,2 s
+    [S3_BK_L483]  « Et c'est vrai tous les mois. »                         1,8 s
+    [S3_BK_L484]  « Qui a pris ma lime ? »                                 1,1 s
+    [S3_BK_L485]  « Personne prend rien ici, on emprunte. »                2,0 s
+    [S3_BK_L486]  « Rendez ma lime ! »                                     1,2 s
+    [S3_BK_L487]  « Quatre-vingts kilos, quatre-vingts ! Pas cent ! »      2,1 s
+    [S3_BK_L488]  « C'est cent dix. »                                      1,0 s
+    [S3_BK_L489]  « Chut. »                                                0,6 s
+        dir : [OBL] L487-L489 sont un trio : Thea ment sur le poids
+              devant un porteur, comme elle le dira a Lohen en L268.
+              Le joueur peut l'entendre AVANT ou APRES. Les deux ordres
+              fonctionnent. C'est la seule blague longue distance du lot.
+
+--- LOT B — VOISINAGE ET FAMILLE (20) ----------------------------------------------------
+
+    [S3_BK_L490]  « Rentre avant la nuit. »                                1,0 s
+    [S3_BK_L491]  « Je rentre jamais avant la nuit. »                      1,4 s
+    [S3_BK_L492]  « Je sais. Je le dis quand meme. »                       1,7 s
+    [S3_BK_L493]  « Ton linge touche par terre ! »                         1,3 s
+    [S3_BK_L494]  « Il touche pas ! »                                      1,0 s
+    [S3_BK_L495]  « Il touche, Odile ! »                                   1,2 s
+    [S3_BK_L496]  « Elle mange plus, je crois. »                           1,5 s
+    [S3_BK_L497]  « Elle mangeait deja pas avant. »                        1,8 s
+    [S3_BK_L498]  « Avant c'etait pareil, oui. »                           1,6 s
+    [S3_BK_L499]  « Y'a une fuite au six. »                                1,2 s
+    [S3_BK_L500]  « Y'a toujours eu une fuite au six. »                    1,9 s
+    [S3_BK_L501]  « Ma soeur en recoit, du courrier. »                     1,6 s
+    [S3_BK_L502]  « Ta soeur habite a trente metres. »                     1,8 s
+    [S3_BK_L503]  « Et alors ? Elle ecrit. »                               1,4 s
+    [S3_BK_L504]  « Passe-moi le petit, j'ai les mains prises. »           2,0 s
+    [S3_BK_L505]  « Il dort. »                                             0,8 s
+    [S3_BK_L506]  « Passe-le quand meme. »                                 1,3 s
+    [S3_BK_L507]  « De mon temps on descendait au port. »                  1,9 s
+    [S3_BK_L508]  « De ton temps y'avait un port. »                        1,7 s
+    [S3_BK_L509]  « Oui. »                                                 0,6 s
+        dir : [OBL] L507-L509 : le vieux ne se vexe pas. Il dit oui. On
+              ne se dispute pas sur la Maree au Marche. C'est acte.
+
+--- LOT C — LA MAREE, DE BIAIS (16) -------------------------------------------------------
+
+[OBL] Aucun de ces barks n'explique la Maree, n'avance de theorie, ne
+parle de « ce qui s'est passe ». Ils parlent de logistique d'apres.
+
+    [S3_BK_L510]  « Le verre est monte de deux doigts cette annee. »       2,2 s
+    [S3_BK_L511]  « Il monte pas, c'est nous qui tassons. »                2,0 s
+    [S3_BK_L512]  « C'est pareil. »                                        0,9 s
+    [S3_BK_L513]  « Troisieme annee. »                                     1,0 s
+    [S3_BK_L514]  « Deja. »                                                0,7 s
+    [S3_BK_L515]  « Les listes, c'est au Registre, et le Registre est
+                    dessous. »                                            2,4 s
+    [S3_BK_L516]  « Y'a des copies a la Bibliotheque. »                    1,8 s
+    [S3_BK_L517]  « Y'a des copies de rien du tout. »                      1,9 s
+    [S3_BK_L518]  « Moi j'ai arrete de compter. »                          1,6 s
+    [S3_BK_L519]  « T'as jamais compte. »                                  1,3 s
+    [S3_BK_L520]  « J'ai compte une fois. Ca suffit. »                     2,1 s
+    [S3_BK_L521]  « Ils ont barre deux cents noms sur l'affiche. »         2,3 s
+    [S3_BK_L522]  « Barre veut pas dire retrouve. »                        2,0 s
+    [S3_BK_L523]  « Barre veut dire quoi, alors ? »                        1,7 s
+    [S3_BK_L524]  « Barre veut dire barre. »                               1,5 s
+        dir : [OBL][NAR] L521-L524 : la seule fois du chapitre ou
+              quelqu'un pose la vraie question sur les croix. La reponse
+              est un mur. Le joueur aura la reponse en S7 (PN-077,
+              PN-081) et elle est pire que tout ce qu'il imagine ici.
+    [S3_BK_L525]  « Parle d'autre chose. »                                 1,2 s
+
+--- LOT D — ENFANTS ET JEUX (10) ------------------------------------------------------------
+
+    [S3_BK_L526]  « A toi ! A toi ! »                                      0,9 s
+    [S3_BK_L527]  « Wenna a triche ! »                                     1,1 s
+    [S3_BK_L528]  « C'est pas de la triche, c'est une regle ! »            1,8 s
+    [S3_BK_L529]  « Un, deux, trois, la corde ! »                          1,4 s
+    [S3_BK_L530]  « Descends de la ! »                                     1,0 s
+    [S3_BK_L531]  « Y'a rien en dessous ! »                                1,3 s
+    [S3_BK_L532]  « C'est bien le probleme ! »                             1,6 s
+    [S3_BK_L533]  « Tu cours comme un sac. »                               1,2 s
+    [S3_BK_L534]  « Toi tu cours comme deux sacs. »                        1,5 s
+    [S3_BK_L535]  « C'est meme pas une insulte. »                          1,7 s
+
+--- LOT E — LE RELAYEUR QUI PASSE (9) ---------------------------------------------------------
+
+Filtres : se declenchent uniquement dans les 8 s ou Lohen passe a moins
+de 3 m d'un PNJ. [OBL] Ils parlent DE lui, jamais A lui.
+
+    [S3_BK_L536]  « C'est un relayeur. »                                   1,1 s
+    [S3_BK_L537]  « Y'a plus de courrier. »                                1,2 s
+    [S3_BK_L538]  « Y'en a, la, visiblement. »                             1,6 s
+    [S3_BK_L539]  « Il a la sacoche pleine. »                              1,4 s
+    [S3_BK_L540]  « Pleine de quoi ? »                                     1,0 s
+    [S3_BK_L541]  « De gens qui repondent pas. »                           1,8 s
+    [S3_BK_L542]  « Zero cent quatorze, c'est lui ? »                      1,7 s
+    [S3_BK_L543]  « C'est un numero, pas un nom. »                         1,5 s
+    [S3_BK_L544]  « Ici c'est pareil. »                                    1,2 s
+        dir : [OBL] L541 et L544 sont les deux barks les plus durs du
+              lot. Ils se declenchent dans le dos de Lohen, une seule
+              fois chacun par partie, et jamais a moins de 14 minutes
+              d'intervalle. Le joueur les entendra peut-etre. Lohen ne
+              reagit jamais a un bark. Aucune animation de tete.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] 96 barks au total pour BK_S3 : 73 ici + 22 en D01 + 1 en D02
+[ ] Aucun bark ne s'adresse au joueur
+[ ] Aucun bark ne parle d'Esteban
+[ ] Aucun bark ne porte d'information de progression
+[ ] Cooldown 8 min, pas de repetition a moins de 6 m dans la session
+[ ] Lohen ne tourne jamais la tete vers un bark

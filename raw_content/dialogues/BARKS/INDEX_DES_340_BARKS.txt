@@ -1,0 +1,101 @@
+===============================================================================
+BARKS · INDEX DES 340 BARKS — TABLE DE RENVOI
+Annexe C. [OBL] CE DOCUMENT NE CONTIENT AUCUNE LIGNE. Il renvoie aux
+domiciles. Reference INDEX § 6.00 : « une ligne de VO n'existe qu'a un
+seul endroit dans cette annexe ».
+===============================================================================
+
+--- 1. POURQUOI CE DOSSIER NE CONTIENT PAS LES BARKS [OBL] ---------------------------------------
+
+Un bark mal ecrit est un bark ecrit loin de sa scene. [OBL] Chaque bark
+du chapitre 1 est donc redige DANS le document de la scene ou il se
+declenche, avec le role `BK`, et il est exclu du total de la sequence.
+
+[OBL] Recopier ici les 340 lignes creerait une seconde source de verite.
+[OBL] Job CI `bark-single-source` : un texte de bark present dans deux
+fichiers casse le build.
+
+--- 2. TABLE DE RENVOI -----------------------------------------------------------------------------
+
+  SEQ  NB   IDS                        DOMICILE                                REGIME
+  ---  ---  -------------------------  --------------------------------------  ----------------------
+  S1    26  S1_BK_L117 .. L142         S1/DLG_S1_D10_les-26-barks-des-quais    cooldown 11 min, gain 0,75
+  S2    10  S2_BK_L006..L011, L077..80 S2/D01 et S2/D07                        voix lointaines, non duckees
+  S3    96  S3_BK_*                    S3/DLG_S3_D15_les-barks-du-marche       cooldown 8 min, foule
+  S4    38  S4_BK_L351 .. L388         S4/DLG_S4_D13_echo-19-et-barks          exception declaree L371-373
+  S5    44  S5_BK_L357 .. L400         S5/DLG_S5_D09_barks-des-conduits        gain plafonne 0,55
+  S6     4  S6_BK_L237 .. L240         S6/DLG_S6_D06_la-dissolution            cooldown 20 min
+  S7    74  S7_BK_L275 .. L348         S7/DLG_S7_D09_barks-et-comptage         cooldown 4 min 30, gain plein
+  S8    48  S8_BK_L475 .. L522         S8/DLG_S8_D10_les-lignes-rares          aucun dans la chambre
+                                                                               -----
+                                                                        TOTAL    340   [OBL] conforme
+
+--- 3. LES SIX REGIMES DE COOLDOWN [OBL] -----------------------------------------------------------
+
+  11 min  S1   la premiere heure doit etre silencieuse
+   8 min  S3   standard (reference INDEX § 6.01)
+   8 min  S4   standard, UNE exception declaree : le lecteur S4_BK_L371-373
+   8 min  S5   standard, mais gain 0,55 et exclusion totale pendant D04
+   8 min  S8   standard, exclusion totale dans la chambre et la scene finale
+  20 min  S6   quatre barks, tous post-E21
+   4 min 30  S7   la sequence la plus longue et la plus seule
+
+  [OBL] Le systeme tient un historique de 64 entrees en anneau (§ 6.01).
+  [OBL] Un bark dit a moins de 6 m du joueur ne se repete pas de la
+  session.
+
+--- 4. LES QUATRE FAMILLES DE BARKS ----------------------------------------------------------------
+
+4.01 EFFORT ET DEPLACEMENT (LOH) — 142 barks.
+     Un a trois mots. Jamais d'information. Jamais de direction.
+
+4.02 COMMENTAIRE D'UN COMPAGNON (SOL en S5, PAL en S1/S2) — 34 barks.
+     [OBL] § 6.02 : les barks de Sol ne sont PAS comptes dans ses lignes
+     de dialogue. Ce sont des lignes que Lohen n'ecoute pas.
+
+4.03 VOIX DE MONDE SOUS-TITREES (S2, S3, S7) — 118 barks.
+     Des gens reels, a portee de voix, qui ne s'adressent jamais a
+     Lohen et ne reagissent pas s'il s'approche.
+
+4.04 VOIX DE MONDE NON SOUS-TITREES (S5) — 12 barks.
+     [OBL] Job CI `no-subtitle-bk-s5-ambient`. [OBL] Le joueur les
+     entend et ne peut pas les lire. [OBL] L'exception inverse existe
+     en S8 (le sous-titre net sur un audio inintelligible, S8 via
+     S6_EST_L204). Les deux se repondent et ne sont jamais expliquees.
+
+     [OBL] Repartition : 142 + 34 + 118 + 12 = 306. Les 34 restants sont
+     les barks mixtes de S4 et S6, classes au cas par cas dans leurs
+     documents.
+
+--- 5. LES SEPT BARKS QUI COMPTENT [OBL] -----------------------------------------------------------
+
+[OBL] Sept barks portent une information ou un effet qu'aucune autre
+ligne ne porte. [OBL] Un joueur median en entend UN. Ils sont
+maintenus au meme standard que la lettre.
+
+  S4_BK_L371-373  le lecteur — seule exception de cooldown declaree
+  S5_BK_L391      le seul rire anonyme du chapitre, -22 dB, derriere un mur
+  S5_BK_L396      quatre notes du motif, la cinquieme manque (18e occurrence)
+  S5_BK_L398      deux mots dont un ressemble a un prenom — jamais « Esteban »
+  S5_BK_L400      un bark VIDE : il consomme un cooldown et ne produit rien
+  S7_BK_L308      « Manquait que ca. » — la seule plainte du chapitre
+  S7_BK_L333      « Je les compterai. » — promesse jamais tenue
+  S7_BK_L342      « Il pleut depuis trois jours. » — Lohen l'ignore
+  S8_BK_L504      « Bizarre. » — le seul mot d'etonnement du chapitre
+
+--- 6. INTERDICTIONS [OBL] ---------------------------------------------------------------------------
+
+  · aucun bark ne donne une direction, un objectif ou un indice de
+    resolution — [OBL] job CI `bark-no-hint`
+  · aucun bark ne nomme Esteban
+  · aucun bark n'est joue pendant un Echo, un choix, une scene scriptee
+  · aucun bark n'est joue pendant S5/D04 ni dans la chambre du Phare
+  · les « bon » et « ca va » des barks ne sont comptes ni dans les 47
+    « bon » ni dans les 11 « ca va aller » du chapitre
+  · aucun bark n'est ajoute en localisation
+
+--- 7. VERIFICATION -----------------------------------------------------------------------------------
+
+    tools/count_dialogue.py --barks-total 340 --check-domiciles
+    tools/bark_audit.py --cooldowns s1=660 s3=480 s4=480 s5=480 s6=1200 \
+                        s7=270 s8=480 --ring 64

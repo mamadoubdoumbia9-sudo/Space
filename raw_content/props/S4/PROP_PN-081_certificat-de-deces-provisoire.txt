@@ -1,0 +1,94 @@
+===============================================================================
+PN-081 — LE CERTIFICAT DE DECES PROVISOIRE
+===============================================================================
+Asset : SM_S4_Certificat · S4, sur la table de Mireille, sous le registre ·
+~03:46 · prop a TEXTE LISIBLE · pas d'Echo · LOD0 12 tris
+
+§ 1 — CE QU'ON VOIT
+Une feuille de papier administratif, format 21 x 30, imprimee, posee sur la
+table, partiellement glissee sous le registre (PN-077).
+On en voit les deux tiers.
+En-tete imprime, dans la police d'imprimerie du projet :
+     CERTIFICAT DE DECES — PROVISOIRE
+     Delivre en l'absence de corps, article 14
+Puis des champs remplis a la main, a l'encre, de la main gauche de Mireille.
+NOM : [un nom, lisible]
+NE LE : [une date]
+DISPARU LE : 14 octobre [l'annee]
+DECLARE PAR : [un nom]
+Et, en bas, une ligne :
+     SIGNATURE DE L'OFFICIER D'ETAT CIVIL
+Elle est vide.
+Il n'y a plus d'officier d'etat civil a Velmora.
+Le certificat n'a aucune valeur. Il n'a jamais ete envoye nulle part. Il
+est sur une table, dans une bibliotheque inondee, depuis des mois.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 12 tris (quad legerement gondole).
+[OBL] Texture 4K. Densite 700 px/m. Lisible a 40 cm sur la partie visible.
+Le tiers cache sous le registre ne contient rien d'essentiel — [OBL] mais
+il est quand meme texture completement, au cas ou un bug de camera le
+revelerait. Rigueur de production.
+L'imprime : police d'imprimerie unique du projet (cf. PN-068).
+Les champs manuscrits : ecriture de la main gauche de Mireille, la meme que
+les pages recentes de PN-077. [OBL] Coherence graphologique verifiee.
+Le nom du certificat vient de `content/victims_641.csv`. [OBL] C'est le
+MEME nom que la 22e ligne de PN-077, celle dont la mention est « PERSONNE ».
+[OBL] Et sur ce certificat, le champ DECLARE PAR n'est PAS vide : il porte
+le nom de Mireille.
+Le joueur qui lit les deux props decouvre que Mireille a declare elle-meme
+un disparu que personne d'autre n'a declare.
+Collision : aucune. Non prenable, non deplacable.
+
+§ 3 — CE QUE CA DIT
+Mireille remplit des certificats de deces qu'elle ne peut pas signer, pour
+une administration qui n'existe plus, dans une ville ou il n'y a personne.
+Le geste humain : remplir un formulaire.
+[NAR] Et elle en a rempli un pour quelqu'un que personne n'est venu
+declarer. Elle a mis son propre nom dans la case DECLARE PAR.
+[OBL] Le jeu ne dit jamais qui est cette personne pour elle. Aucun dialogue.
+Aucune reaction si le joueur lit. Aucune option pour demander.
+[OBL] Ce n'est pas Esteban.
+La signature vide en bas de la page est le dernier mot du prop : meme en
+faisant tout correctement, elle ne peut pas terminer. Il manque une
+autorite qui n'existera plus jamais.
+
+§ 4 — ECHO
+NEANT. Objet d'une vivante (PN-046).
+
+§ 5 — MISE EN SCENE
+Sur la table, sous le registre, a 20 cm de la tasse (PN-070).
+[OBL] Il est partiellement cache. Le joueur doit se pencher et l'angle doit
+etre bon. Il ne peut pas deplacer le registre.
+Taux de lecture cible : 22-31 %.
+[ART] C'est le texte le plus dur de la sequence 4 et il est a moitie cache
+sous un autre texte, sur une table ou une femme sert du the.
+[OBL] Si le joueur le lit pendant que Mireille parle, elle continue de
+parler. Aucune interruption, aucune reaction, aucun dialogue alternatif.
+Elle ne sait pas ce qu'il regarde. Ou elle s'en moque.
+
+§ 6 — AUDIO
+NEANT.
+
+§ 7 — INTERDICTIONS
+Interdit de : deplacer le registre · prendre le certificat · le signer ·
+reveler qui est la personne · permettre de demander · faire reagir Mireille
+· ajouter un deuxieme certificat · en faire un pour Esteban · le mentionner
+dans un dialogue · ajouter une signature · expliquer l'article 14.
+
+§ 8 — LIENS
+PN-077 (le registre, 22e ligne, « PERSONNE ») : coherence obligatoire.
+PN-068 (la chemise cartonnee vide, aux quatre lignes non remplies).
+PN-003 (l'affiche des 641). PN-058 (le tableau de rationnement).
+PN-067 (le tiroir vide).
+[THEME] CE QU'ON NE PEUT PAS ECRIRE. [THEME] LES NOMS ECRITS A LA MAIN.
+
+§ 9 — DOD
+[ ] Police d'imprimerie unique du projet, en-tete et article 14
+[ ] Champs remplis de la main gauche, coherence graphologique avec PN-077
+[ ] Nom identique a la 22e ligne de PN-077
+[ ] DECLARE PAR : Mireille elle-meme
+[ ] Signature de l'officier d'etat civil : vide
+[ ] Partiellement cache, non deplacable, taux de lecture 22-31 %
+[ ] Aucune reaction de Mireille, aucun dialogue alternatif
+[ ] Texture complete y compris la partie cachee

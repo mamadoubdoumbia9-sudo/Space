@@ -1,0 +1,125 @@
+===============================================================================
+DLG · S7 · D04 — LES SIX COMBATS : CE QU'ON DIT QUAND ON SE BAT
+40 entrees, toutes S7. LOH 40. Contribution : 40.
+[OBL] 6 des 14 combats du chapitre sont en S7 (09.16, densite maximale).
+===============================================================================
+
+--- REGLE DU COMBAT DANS CE JEU [OBL] ------------------------------------------------------------
+
+[OBL] RAPPEL BLOC 12 : AUCUNE LIGNE SUR ECHEC. Si Lohen perd un combat,
+il ne dit rien, il n'y a pas d'ecran de mort commente, pas de « encore
+une fois ». Le monde recharge au checkpoint en 1,1 s, en silence.
+
+[OBL] REGLE DE S7 : Lohen ne parle JAMAIS pendant un combat. Les 40
+lignes de ce document sont toutes AVANT ou APRES. [OBL] Pendant : il
+souffle, il grogne, il encaisse. Ce sont des efforts vocaux, pas des
+lignes, et ils ne sont pas comptes dans les 2 840.
+
+[OBL] CONTRE QUOI SE BAT-IL : des chiens. [OBL] Pas des monstres, pas
+des infectes, pas des soldats. Des chiens redevenus sauvages, par
+groupes de 2 a 5, maigres, rapides, qui attaquent parce qu'ils ont faim.
+[OBL] Il n'y a PAS d'ennemi humain dans le chapitre 1 hors le Verrier.
+[OBL] Interdit absolu : aucun chien ne s'appelle Pomme, aucun chien ne
+ressemble a Pomme (pelage, taille, collier). Job CI `no-pomme-dog`.
+
+[OBL] MORT DES CHIENS : ils ne « disparaissent » pas. Le corps reste,
+toute la sequence, sous la pluie. [OBL] Le joueur qui refait un chemin
+repasse devant. [OBL] Aucune ligne ne le commente sauf L127.
+
+--- § 1 — AVANT LE PREMIER (8 lignes) ------------------------------------------------------------
+
+    [S7_LOH_L089]  1,8 s · bas · « J'entends quelque chose. »
+    [S7_LOH_L090]  2,2 s · bas · « Trois. Peut-etre quatre. »
+    [S7_LOH_L091]  1,4 s · bas · « Des chiens. »
+    [S7_LOH_L092]  2,6 s · bas · « Ils sont plus dangereux qu'avant parce qu'ils ont plus peur. »
+    [S7_LOH_L093]  2,0 s · bas · « Nous non plus, remarque. »
+    [S7_LOH_L094]  1,6 s · bas · « Je prends la barre. »
+        dir : [OBL] PN-057, une barre de fer de 71 cm. [OBL] C'est la
+              seule arme du chapitre 1. Elle n'a pas de statistiques,
+              pas d'amelioration, pas de durabilite. Elle est juste
+              lourde. [OBL] Interdit : aucun systeme d'equipement.
+    [S7_LOH_L095]  2,4 s · bas · « Une main. L'autre tient rien. »
+        dir : [OBL] l'epaule droite, encore. Il se bat a une main et le
+              jeu ne le dit jamais en systeme : l'animation de frappe
+              est simplement a une main, toujours.
+    [S7_LOH_L096]  1,2 s · bas · « Bon. »
+
+--- § 2 — ENTRE LES COMBATS (16 lignes, declenchement aleatoire non repete) ----------------------
+
+    [S7_LOH_L097]  2,0 s · souffle · « Ca va. »
+    [S7_LOH_L098]  1,6 s · souffle · « L'epaule tient. »
+    [S7_LOH_L099]  2,4 s · souffle · « Elle tiendra jusqu'en bas. »
+    [S7_LOH_L100]  1,8 s · souffle · « Apres on verra. »
+    [S7_LOH_L101]  2,2 s · souffle · « Y'en avait quatre. »
+    [S7_LOH_L102]  1,4 s · souffle · « Y'en a trois qui sont partis. »
+        dir : [OBL][NAR] TROIS DES QUATRE S'ENFUIENT TOUJOURS. [OBL] Le
+              jeu ne force jamais l'extermination d'un groupe. Les
+              chiens rompent le combat a 40 % de leurs points, fuient,
+              et ne reviennent pas de la partie. [OBL] Le joueur qui
+              les poursuit ne les rattrape pas : ils sont plus rapides.
+    [S7_LOH_L103]  2,6 s · souffle · « Je les poursuis pas. »
+    [S7_LOH_L104]  2,0 s · souffle · « Ils reviendront quand je serai loin. »
+    [S7_LOH_L105]  1,6 s · souffle · « Tant mieux pour eux. »
+    [S7_LOH_L106]  2,4 s · bas · « J'ai mal quelque part et je sais pas ou. »
+    [S7_LOH_L107]  1,8 s · bas · « Ca arrive. »
+    [S7_LOH_L108]  2,2 s · bas · « Ca passera ou ca passera pas. »
+    [S7_LOH_L109]  1,4 s · bas · « Je pose la barre deux minutes. »
+    [S7_LOH_L110]  2,8 s · bas · « Deux minutes, c'est long, je me suis laisse dire. »
+        dir : [OBL][NAR] RACCORD S6_LOH_L222. [OBL] Il se cite
+              lui-meme, en plaisantant, et il ne sourit pas.
+              [OBL] Rappel canon : Lohen ne rit jamais, 2 sourires dans
+              tout le chapitre. [OBL] CE N'EST PAS L'UN DES DEUX.
+    [S7_LOH_L111]  2,0 s · bas · « Bon. »
+    [S7_LOH_L112]  1,6 s · bas · « Je reprends. »
+
+--- § 3 — LES CORPS (8 lignes) ----------------------------------------------------------------
+
+    [S7_LOH_L113]  2,2 s · bas · « Il est maigre. »
+    [S7_LOH_L114]  2,6 s · bas · « On lui voit tout. »
+    [S7_LOH_L115]  1,8 s · bas · « Il avait un collier. »
+    [S7_LOH_L116]  2,4 s · bas · « Y'a plus le nom dessus, la plaque est usee. »
+        dir : [OBL] CINQUIEME OBJET ILLISIBLE DU CHAPITRE (la gamelle
+              de S5, la plaque ici, les trois autres en S3 et S8).
+              [OBL] Le jeu refuse systematiquement de rendre un nom.
+              Sauf un : MAREK, sur un mur, non barre.
+    [S7_LOH_L117]  2,0 s · bas · « Quelqu'un lui a mis un collier, un jour. »
+    [S7_LOH_L118]  1,6 s · bas · « Bon. »
+    [S7_LOH_L119]  2,8 s · bas · « Je le laisse pas au milieu du chemin, au moins. »
+        dir : [OBL] IL DEPLACE LE CORPS. Anim LOH-ACT-127, 4,1 s, a une
+              main, penible. [OBL] Facultatif : le joueur declenche par
+              interaction, 22 % le font. [OBL] Aucune recompense.
+              [OBL] S'il le fait pour un chien, il peut le faire pour
+              les six. Le jeu ne compte pas.
+    [S7_LOH_L120]  2,2 s · bas · « Voila. »
+
+--- § 4 — APRES LE SIXIEME (8 lignes) -----------------------------------------------------------
+
+    [S7_LOH_L121]  2,0 s · souffle · « C'est le dernier. »
+    [S7_LOH_L122]  1,6 s · souffle · « Enfin, je sais pas. »
+    [S7_LOH_L123]  2,4 s · souffle · « Y'a plus de bruit, c'est tout ce que je sais. »
+    [S7_LOH_L124]  1,8 s · bas · « Trente-huit metres. »
+    [S7_LOH_L125]  2,2 s · bas · « La place est en bas. »
+    [S7_LOH_L126]  2,6 s · bas · « Y'a quelqu'un debout au milieu, sous la pluie. »
+        dir : [OBL][NAR] PREMIERE VUE DU VERRIER. [OBL] Il est immobile
+              depuis un temps indetermine. [OBL] Il ne bouge pas
+              pendant les 40 s ou le joueur descend vers lui.
+              [OBL] Aucune musique n'entre. La pluie continue.
+    [S7_LOH_L127]  2,4 s · bas · « Y'a six chiens morts derriere moi et un homme devant. »
+        dir : [OBL] seule ligne qui compte les corps. [OBL] Elle dit
+              SIX meme si le joueur en a tue moins (les chiens fuient).
+              [OBL] C'est une erreur assumee : Lohen exagere. Un homme
+              fatigue compte mal ses propres degats. [OBL] Ne pas
+              « corriger » par une variante dynamique.
+    [S7_LOH_L128]  1,4 s · bas · « Bon. »
+        dir : [OBL] fin du document. Le combat contre le Verrier
+              commence 12 s plus tard. Voir D05 et D06.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] Aucune ligne pendant un combat, aucune ligne sur echec
+[ ] Ennemis = chiens affames, aucun humain hors le Verrier
+[ ] Aucun chien ne ressemble a Pomme — CI `no-pomme-dog`
+[ ] Les chiens fuient a 40 %, ne reviennent pas, ne sont pas rattrapables
+[ ] Les corps restent toute la sequence
+[ ] L119 : deplacer un corps est facultatif, non compte, non recompense
+[ ] L127 : dit « six » quoi qu'il arrive, aucune variante dynamique

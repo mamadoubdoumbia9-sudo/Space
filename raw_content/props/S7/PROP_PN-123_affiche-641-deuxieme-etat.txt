@@ -1,0 +1,112 @@
+===============================================================================
+PN-123 — L'AFFICHE 641 NOMS, DEUXIEME ETAT
+===============================================================================
+Asset : SM_S7_Affiche_641_B · S7, mur du front de mer, ville basse ·
+~05:49 · prop a TEXTE LISIBLE · pas d'Echo · LOD0 40 tris
+
+§ 1 — CE QU'ON VOIT
+La meme affiche qu'en S1 (PN-003). Le meme format, le meme papier, la meme
+impression : RECHERCHE — 641 NOMS, et les 641 noms en six colonnes.
+C'est un deuxieme exemplaire, colle sur un autre mur, a 4 kilometres et
+5 heures 44 de la premiere.
+Elle est dans un etat different : celle de S1 etait sous un auvent, celle-ci
+est en plein vent et en pleine pluie depuis trois ans. Le papier est gondole,
+dechire en bas a droite, et une colonne entiere est illisible.
+[OBL] La colonne illisible est la SIXIEME. Pas la troisieme.
+Et les croix.
+En S1, il y en avait DEUX CENTS.
+[OBL] Ici, il y en a DEUX CENT UNE.
+La deux cent unieme est recente. L'encre est differente : plus noire, plus
+fraiche, moins delavee que les deux cents autres.
+Elle a ete tracee il y a quelques mois.
+[OBL] Elle n'est PAS sur MAREK Esteban.
+[OBL] Le nom de MAREK Esteban, colonne 3 ligne 88, n'est toujours PAS barre.
+Il ne le sera jamais, dans aucun des sept chapitres.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 40 tris (quad gondole).
+[OBL] Texture 8K, la MEME base que PN-003, avec :
+  — un masque de degradation different (pluie battante, pas d'auvent)
+  — la sixieme colonne effacee par l'eau
+  — une 201e croix, dans une troisieme encre (les 200 sont en deux encres)
+[OBL] Les 641 noms sont IDENTIQUES a PN-003, dans le meme ordre. Verifier
+par diff de texture.
+[OBL] Les 200 premieres croix sont aux memes emplacements qu'en S1.
+Verifier par script : coordonnees identiques.
+La 201e est nouvelle.
+[OBL] Le nom qu'elle barre est celui de la 22e ligne du registre de
+Mireille (PN-077, mention « PERSONNE ») et du certificat de deces (PN-081).
+[OBL] Coherence a trois props, verifiee par script.
+Densite : 620 px/m. Lisible ligne par ligne a 1,2 m.
+
+§ 3 — CE QUE CA DIT
+Une croix a ete ajoutee.
+Le geste humain : tracer une croix rouge sur un nom.
+[OBL] Mireille. La meme personne qui a rempli le certificat, ecrit le
+registre, et declare ce nom elle-meme parce que personne d'autre ne l'avait
+fait.
+Elle est venue ici, a quatre kilometres de la bibliotheque, a pied, avec sa
+canne pied-de-biche, sous la pluie, pour tracer une croix sur une affiche.
+[OBL] Jamais dit. Aucun dialogue, aucune confirmation.
+Et le nom de MAREK Esteban n'est pas barre.
+[OBL] Le joueur a vu cette affiche a la 24e minute du jeu. Il l'a peut-etre
+lue. Il a peut-etre cherche MAREK. Il l'a peut-etre trouve, colonne 3,
+ligne 88, non barre.
+Cinq heures vingt-cinq plus tard, il revoit la meme affiche, et le nom est
+toujours la, et il n'est toujours pas barre.
+[OBL] Aucune camera, aucune musique, aucun soulignement.
+
+§ 4 — ECHO
+NEANT. [OBL] Geste d'apres (PN-015). Et PN-003 n'en avait pas non plus.
+
+§ 5 — MISE EN SCENE
+Sur le mur du front de mer, en plein vent, sous la pluie.
+[OBL] Elle est mouillee. Le papier ruisselle. Lire est difficile.
+[ART] En S1, il faisait sec et le joueur avait une lampe. Ici il pleut, il
+n'a plus de lampe depuis 1 h 20, et il fait nuit.
+[OBL] La seule lumiere est le reflet de la Maree (PN-122) : 4 kilometres
+de miroir qui renvoient le peu de ciel.
+[OBL] Aucun prompt, aucun LookAt, aucun zoom, aucun overlay.
+Taux de lecture : 31-42 %. Taux de detection de la 201e croix : 8-14 %.
+[OBL] Un joueur sur dix environ remarquera qu'il y a une croix de plus.
+[OBL] Aucun rattrapage, aucun indice, aucun succes, aucune mention.
+
+§ 6 — AUDIO
+SFX(paper_wet_flap) : le coin decolle en bas a droite bat au vent.
+[OBL] Un claquement de papier TREMPE : lourd, mat, sans aucun aigu. Rien a
+voir avec le papier sec.
+La pluie sur le mur, la pluie sur la Maree a 12 m (PN-122, -8 dB).
+[OBL] Aucune musique. Le front de mer est sans musique (PN-122).
+
+§ 7 — INTERDICTIONS
+Interdit de : barrer MAREK Esteban · ajouter une 202e croix · modifier
+l'ordre des noms · modifier les 200 premieres croix · ajouter un nom ·
+rendre la sixieme colonne lisible · ajouter un prompt · ajouter un succes
+pour avoir detecte la 201e · faire commenter · confirmer que c'est Mireille
+· ajouter de la musique · ajouter un plan.
+[OBL] MAREK Esteban n'est barre sur aucune affiche, dans aucun des sept
+chapitres. C'est definitif.
+
+§ 8 — LIENS
+PN-003 (le premier etat, S1, 5 h 25 plus tot) : meme texture de base,
+memes 641 noms, memes 200 croix.
+PN-077 (le registre, 22e ligne, « PERSONNE »).
+PN-081 (le certificat de deces, meme nom, declare par Mireille).
+[OBL] Trois props, trois sequences, un seul nom. Coherence par script.
+PN-012 (les 19 casiers, S1) : 14 barres / 5 non.
+PN-058 (le tableau de rationnement) : 10 non barres / 1 barre.
+PN-059 (les six lettres) : 5 barres / 1 non.
+[OBL] Toutes ces coherences sont verifiees par un script unique de
+validation croisee sur `content/victims_641.csv`.
+[THEME] LES NOMS ECRITS A LA MAIN. [THEME] LE NOM QUI N'EST PAS BARRE.
+
+§ 9 — DOD
+[ ] 641 noms identiques a PN-003, verifies par diff
+[ ] 200 croix aux coordonnees identiques, verifiees par script
+[ ] 201e croix, troisieme encre, sur le nom de PN-077 l.22 et PN-081
+[ ] MAREK Esteban colonne 3 ligne 88, non barre
+[ ] Sixieme colonne effacee par l'eau
+[ ] Degradation de plein vent, differente de PN-003
+[ ] Claquement de papier trempe, sans aigus
+[ ] Zero prompt, zero succes, zero musique
+[ ] Script de validation croisee vert sur les 6 props lies au CSV

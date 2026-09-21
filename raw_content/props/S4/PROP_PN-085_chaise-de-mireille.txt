@@ -1,0 +1,112 @@
+===============================================================================
+PN-085 — LA CHAISE DE MIREILLE, FACE AU CASIER 4
+===============================================================================
+Asset : SM_S4_Chaise_Mireille · S4, dans l'eau, face au casier 4 rangee M ·
+~03:22 · prop narratif · pas d'Echo · DERNIER PROP DE S4 · LOD0 900 tris
+
+§ 1 — CE QU'ON VOIT
+Une chaise de bois ordinaire, a barreaux, sans accoudoirs.
+Elle est dans l'eau, pieds dans les 4 cm, face au casier 4 de la rangee M,
+a 80 cm du meuble.
+Les quatre pieds ont gonfle et noirci sur leurs 4 premiers centimetres. Le
+bois s'est feuillete par le bas.
+L'assise est seche, et elle est POLIE. Un creux, un seul, au centre.
+Le dossier est poli aussi, sur deux barreaux — la ou un dos s'appuie.
+[OBL] La chaise n'est pas sur la passerelle de planches (PN-079). Elle est
+dans l'eau, hors du chemin sec. Pour s'y asseoir, il faut marcher dans
+l'eau et rester les pieds mouilles.
+Elle l'a fait pendant des mois.
+Sur le sol, sous l'eau, autour de la chaise, il y a une zone plus claire :
+le depot brun du fond a ete use par le frottement des pieds. Un halo de
+60 cm autour de chaque pied.
+La chaise a ete deplacee, repositionnee, des centaines de fois.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 900. [OBL] Le gonflement des pieds : geometrie, avec un renflement de
++18 % de diametre sur les 4 premiers cm et un feuilletage sculpte.
+Le creux de l'assise : 5 mm, geometrie, roughness 0,12.
+Les deux barreaux polis du dossier : roughness 0,15 contre 0,54.
+Le halo au sol : 4 decals de 60 cm, sous l'eau, avec la refraction.
+[OBL] Les 4 halos se CHEVAUCHENT partiellement : la chaise a ete bougee
+dans un rayon de 30 cm, pas plus. Elle est revenue presque au meme endroit,
+des centaines de fois.
+Shader `wood_swollen_base`.
+Collision : boite. [OBL] Non deplacable par le joueur. Non assise.
+
+§ 3 — CE QUE CA DIT
+Elle venait tous les jours. Elle marchait dans l'eau. Elle s'asseyait face
+a un tiroir vide. Elle restait.
+Le geste humain : s'asseoir.
+[OBL] Combien de temps, chaque fois ? Assez pour que le dossier se polisse
+sur deux barreaux. Assez pour que le creux de l'assise fasse 5 mm.
+Assez pour user le depot du fond sur 60 cm autour de chaque pied.
+[NAR] Et elle a arrete. MIR-DLG-389 (cf. PN-067) : « Je ne vais plus. C'est
+fini. Mais je n'ai pas enleve la chaise. »
+[OBL] La chaise est le seul objet du chapitre dont un personnage explique
+le sens. Une fois. En trois phrases. A 3 h 48.
+Et ce qu'elle explique, ce n'est pas le tiroir. C'est pourquoi elle n'a pas
+enleve la chaise.
+
+§ 4 — ECHO
+NEANT. Objet d'une vivante (PN-046).
+[OBL] Mais E13 (PN-067) est a 80 cm, et il montre une silhouette DEBOUT
+devant le tiroir. Jamais assise.
+[ART] L'Echo montre l'epoque ou elle restait debout et ouvrait le tiroir
+trois fois. La chaise est venue apres, quand elle a arrete d'ouvrir et
+commence a rester. Le jeu ne dit rien de cette chronologie. Elle est
+lisible dans les objets.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur la voit AVANT de rencontrer Mireille. Il entre, il longe la
+passerelle, il regarde a droite, et il y a une chaise dans l'eau face a un
+meuble.
+Il ne sait pas a qui elle est. Il ne sait pas ce que c'est.
+Il rencontre Mireille 4 minutes plus tard, a 19 m de la.
+Il apprend, 26 minutes plus tard, que c'est la sienne.
+[OBL] Cette structure — objet vu, personne rencontree, lien etabli une
+demi-heure plus tard par trois phrases — est la seule de ce type dans le
+chapitre. Elle est reservee a Mireille.
+[OBL] Apres MIR-DLG-389, si le joueur retourne voir la chaise, rien n'a
+change. Aucun nouveau prompt, aucune nouvelle animation, aucune musique.
+Il regarde une chaise dans l'eau.
+[ART] Mais ce n'est plus la meme chaise. C'est tout ce que le jeu voulait.
+
+§ 6 — AUDIO
+NEANT propre.
+[OBL] Si le joueur s'approche a moins de 50 cm, le bois gonfle craque
+faiblement sous les vibrations de ses pas dans l'eau. -30 dB, 3 variations.
+C'est le seul son de la chaise et il n'est present que quand quelqu'un
+marche a cote.
+[ART] Elle ne fait du bruit que quand on s'approche. Pendant trois ans,
+elle n'en a pas fait.
+
+§ 7 — INTERDICTIONS
+Interdit de : la deplacer · s'y asseoir · l'enlever · la mettre sur la
+passerelle · la secher · donner un Echo · ajouter un objet dessus ou
+dessous · faire revenir Mireille s'y asseoir · faire commenter une seconde
+fois · ajouter de la musique · ajouter une animation de Lohen ·
+la faire disparaitre en S7.
+[OBL] En S7, la bibliotheque est vide, Mireille n'y est plus, et la chaise
+est toujours la, a la meme place, dans l'eau.
+
+§ 8 — LIENS
+PN-067 (le casier 4, E13, a 80 cm). PN-070 (les deux tasses).
+PN-060 (la chaise du barbier, S3) : une chaise posee face a une vitrine
+pour regarder un fauteuil vide. [OBL] Le meme geste, a 40 minutes
+d'intervalle, par deux personnes differentes, dans deux sequences
+differentes. Jamais relies.
+PN-057 (la septieme chaise, en retrait). PN-007 (la chaise d'enfant
+attachee au fil de fer, S1).
+[OBL] Quatre chaises seules dans le chapitre : PN-007, PN-057, PN-060,
+PN-085. Aucune n'est jamais occupee. Aucune n'est reliee aux autres.
+[THEME] S'ASSEOIR DEVANT. [THEME] LES CREUX QUE LES CORPS LAISSENT.
+
+§ 9 — DOD
+[ ] Pieds gonfles de +18 %, feuilletes, sur 4 cm
+[ ] Creux d'assise de 5 mm, deux barreaux de dossier polis
+[ ] 4 halos de 60 cm au sol sous l'eau, chevauchants, rayon de 30 cm
+[ ] Dans l'eau, hors de la passerelle, jamais deplacable
+[ ] Vue avant la rencontre, expliquee 26 minutes plus tard en 3 phrases
+[ ] Aucun changement d'etat apres MIR-DLG-389
+[ ] Craquement uniquement a l'approche, -30 dB
+[ ] Presente et identique en S7

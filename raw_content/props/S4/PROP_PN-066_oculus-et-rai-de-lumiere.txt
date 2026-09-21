@@ -1,0 +1,113 @@
+===============================================================================
+PN-066 — L'OCULUS ET SON RAI DE LUMIERE
+===============================================================================
+Asset : SM_S4_Oculus · S4, Bibliotheque des Eaux, coupole, 16 m au-dessus
+du sol · ~03:14 · prop narratif ENVIRONNEMENTAL · pas d'Echo ·
+LOD0 2 400 tris
+
+§ 1 — CE QU'ON VOIT
+La Bibliotheque des Eaux est une rotonde de 22 m de diametre, coiffee d'une
+coupole. Au sommet, un oculus : un cercle de verre de 3,40 m.
+Il est casse. Il manque un quart : un morceau en secteur, comme une part
+tiree d'un camembert, s'est detache et est tombe.
+[OBL] Les morceaux sont en bas, au centre du sol de la rotonde. Ils y sont
+encore. Personne ne les a ramasses. Un tas d'eclats de 2 m de large, au
+milieu de la piece principale.
+Par le quart manquant, la lumiere entre. Un seul rai, oblique, de 3 m de
+large a la base, qui traverse 16 m d'air poussiereux et frappe le sol.
+Il frappe exactement le tas d'eclats de verre.
+Les eclats renvoient la lumiere. Ils la cassent, la dispersent, et
+projettent au plafond et sur les rayonnages un reseau de taches claires
+mobiles.
+[OBL] Elles bougent. Parce que l'eau, au sol, bouge — cf. § 2.
+C'est la piece la plus belle du chapitre et elle est entierement faite de
+degats.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 400 (structure de l'oculus + arete de cassure).
+[OBL] Le rai de lumiere est un VOLUMETRIQUE, pas un billboard. Godot
+`VolumetricFog` local, densite 0,06, avec 1 200 particules de poussiere
+lentes (vitesse 0,02 m/s, mouvement brownien).
+Le sol de la rotonde est couvert de 4 cm d'eau (la bibliotheque a ete
+inondee, 09.12). L'eau est calme mais pas immobile : ondulation de 2 mm,
+periode 6 s, generee par les gouttes qui tombent de la coupole.
+[OBL] Les caustiques de cette eau sont REELLES (screen-space, 0,4 ms) et
+elles se combinent aux reflets des eclats. C'est le seul endroit du jeu
+avec des caustiques — [OBL] rappel : interdites sur la Maree (PN-023),
+autorisees ici, parce que c'est de l'EAU.
+Cout total de l'effet : 1,4 ms. Le plus cher de S4, budgete.
+Les eclats au sol : 180 meshes individuels, 40 a 200 tris.
+
+§ 3 — CE QUE CA DIT
+Le toit s'est casse et personne ne l'a repare.
+Le geste humain : AUCUN. [OBL] C'est le troisieme et dernier prop du
+chapitre sans geste humain (apres PN-030 et PN-037). Ici, c'est assume
+autrement : ce prop ne raconte pas, il PERMET. Il fait la lumiere de toute
+la sequence 4.
+[NAR] Mais il y a une information : personne n'a ramasse les eclats.
+Mireille vit ici. Elle a 58 ans. Elle marche dans 4 cm d'eau tous les
+jours, et il y a un tas de verre casse au milieu de la piece, et elle ne
+l'a pas enleve.
+Elle le contourne. Depuis trois ans. Il y a un chemin dans l'eau, un
+passage plus clair au fond, use par ses pas, qui fait le tour du tas.
+
+§ 4 — ECHO
+NEANT. Element d'architecture (regle PN-055).
+
+§ 5 — MISE EN SCENE
+[OBL] Le rai est la premiere chose que le joueur voit en entrant. La porte
+de la bibliotheque s'ouvre sur la rotonde, et au fond, a 14 m, il y a une
+colonne de lumiere de 16 m de haut.
+[ART] C'est le plan de la sequence 4 et l'une des trois images de la
+boutique.
+Composition en trois plans : la porte en amorce (sombre) / le rai (clair) /
+les rayonnages noyes derriere (sombre).
+[OBL] La direction du rai est FIXE (pas de cycle jour/nuit, 05.09). Il
+frappe le meme point toute la sequence, pendant 50 minutes.
+Quand le joueur traverse le rai, il est eclaire violemment pendant 1,5 s :
+son ombre s'allonge de 11 m derriere lui, sur l'eau.
+[OBL] Traverser le rai n'est pas obligatoire mais 96 % des joueurs le font.
+Le personnage de Mireille, quand elle marche, ne le traverse jamais.
+[OBL] Son pathfinding l'evite. Elle fait le tour. Ce n'est jamais explique
+et personne ne le remarque.
+
+§ 6 — AUDIO
+SFX(water_drip_dome) : les gouttes qui tombent de la coupole dans l'eau.
+[OBL] Sept points de chute distincts, sept rythmes irreguliers, sept
+hauteurs de goutte (la hauteur de chute change le son). C'est la nappe
+sonore de toute la sequence 4 et elle doit etre variee, non bouclee de
+facon percevable (cycle de 4 min 30 minimum).
+SFX(step_water_shallow) : les pas dans 4 cm d'eau. 12 variations.
+[OBL] Le son le plus caracteristique de S4. Le joueur passe 50 minutes a
+marcher dans l'eau et il ne doit jamais s'en lasser.
+Reverb : la rotonde a un RT60 de 3,4 s. [OBL] Le plus long du jeu.
+Chaque pas dans l'eau resonne pendant plus de trois secondes sous une
+coupole de 22 m. C'est physique, c'est immense, et ca change tout apres
+3 h de vent et d'exterieur.
+Musique : M16 « La Bibliotheque », un seul violoncelle, tres espace, avec
+des silences de 12 a 20 secondes entre les phrases.
+
+§ 7 — INTERDICTIONS
+Interdit de : reparer l'oculus · ramasser les eclats · faire bouger le rai
+· ajouter un cycle de lumiere · faire traverser le rai par Mireille ·
+ajouter des godrays multiples · ajouter de la pluie qui tombe par l'oculus
+· mettre des caustiques ailleurs qu'ici · faire tomber un morceau
+supplementaire · rendre les eclats dangereux · ajouter du sang.
+
+§ 8 — LIENS
+PN-071 (le vitrail brise, E15). PN-078 (les rayonnages noyes).
+PN-093 (la flaque permanente, S5). PN-135 (la lentille de Fresnel, S8) :
+l'autre grand objet de verre qui fait de la lumiere, et celui-la fonctionne.
+[THEME] IL FAUT UNE BELLE CHOSE — S4.
+[THEME] CE QU'ON NE REPARE PAS.
+
+§ 9 — DOD
+[ ] Quart manquant, eclats presents au sol, jamais ramasses
+[ ] Rai volumetrique reel, 1 200 particules de poussiere, 16 m
+[ ] Caustiques screen-space, uniques dans le jeu, 0,4 ms
+[ ] Ondulation de 2 mm entretenue par 7 points de chute de gouttes
+[ ] RT60 3,4 s, le plus long du jeu
+[ ] 7 rythmes de goutte, cycle non percevable avant 4 min 30
+[ ] Mireille evite le rai par pathfinding, jamais explique
+[ ] Chemin use dans l'eau contournant le tas d'eclats
+[ ] 1,4 ms total, valide sur Adreno 640

@@ -1,0 +1,106 @@
+===============================================================================
+  A-317   idle_hide_burned_hand
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 317 / 744
+  Partie 3 — MIREILLE VANDECK
+  Categorie : IDLE / REPOS / ATTENTE
+  Marqueur   : GESTE SIGNATURE M2
+  Fichier source  : A_Mireille_Idl_idle_hide_burned_hand_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+  Identifiant precedent : A-320 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 2.200 s  (66 frames a 30 fps)
+  Type .................. ONE-SHOT
+  Root motion ........... RM-NONE
+  Couche AnimationTree .. L1
+  Priorite .............. 9 — locomotion de fond (bande 0-19, bareme 0.05)
+  Poids compresse cible . ~24 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      pelvis, spine_01-03, neck, clavicules, appuis de jambes, doigts au
+      repos
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006 (chaines de doigts dominantes sur ce clip)
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  MIREILLE VANDECK — 58 ans, gardienne de la Bibliotheque des Eaux.
+
+  Elle est ECONOME. Elle a mal partout et elle ne le montre pas. Chaque
+  mouvement est calcule pour depenser le minimum. Elle ne se leve jamais
+  sans raison. Elle ne hausse JAMAIS la voix : quand elle appuie, elle
+  RALENTIT. Gestes signature : M1 elle tourne sa tasse de 90 deg avant de
+  boire, M2 elle cache sa main brulee quand on la regarde. Elle ment une
+  fois.
+
+  Rig et costume :
+      manteau rapiece (14 pieces, 15 apres le clip A-371), lunettes a un
+      seul verre, canne qui est un pied de biche, tasse
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  elle rentre sa main brulee dans sa manche. Mouvement bref, presque
+  imperceptible. [OBL] Declenche AUTOMATIQUEMENT quand la camera ou le
+  regard de Lohen se pose sur sa main gauche pendant plus de 1,2 s. Le
+  systeme surveille le cone de vision du joueur. Si le joueur regarde, elle
+  cache. S'il ne regarde pas, elle laisse. C'est 20 lignes de code et c'est
+  le personnage entier.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Clip ONE-SHOT : pas de contrainte de cyclage. La derniere frame
+  doit poser une silhouette blendable vers les etats de sortie.
+
+  Evenements de timeline :
+      SFX(fabric_slide) f14 · Face : `neutral` (elle ne reagit pas
+      emotionnellement, elle corrige juste)
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- stop_walk, land_soft, sortie de combat ; -> tout etat
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · les clauses [OBL] de la section 3 sont verifiees en revue, pas
+      seulement en lecture
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-317
+===============================================================================

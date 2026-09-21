@@ -1,0 +1,103 @@
+===============================================================================
+PN-059 — LES SIX LETTRES A LIVRER
+===============================================================================
+Asset : SM_Lettres_Six · S3, dans la sacoche de Lohen, vues pendant 3 s
+apres E11 · ~02:32 · prop RAMASSABLES (3 des 9, mais jamais sorties) ·
+pas d'Echo propre · LOD0 340 tris par enveloppe
+
+§ 1 — CE QU'ON VOIT
+Six enveloppes, debout, rangees par la tranche dans le fond de la sacoche.
+Elles sont de six papiers differents : deux blanches, une creme, une grise,
+une de papier d'emballage brun plie et colle, une bleu pale.
+Elles sont GONDOLEES. Trois ans dans une sacoche de cuir, contre le corps
+d'un homme qui marche, sous la pluie, dans le froid. Elles ont pris la
+forme de sa hanche.
+Les rabats sont fermes. Aucune n'a ete ouverte.
+Les adresses sont ecrites a la main, six ecritures differentes. Elles sont
+pales : l'encre a passe. Sur deux d'entre elles, l'adresse a coule et n'est
+plus qu'a moitie lisible.
+Sur la troisieme en partant de la gauche, il y a une tache. Ronde, brune,
+de 2 cm. Du cafe, ou du sang, ou de l'eau sale.
+Toutes les six portent, en haut a droite, un timbre. Aucun n'est oblitere.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 340 tris par enveloppe (gondolement en geometrie, 6 formes distinctes).
+[OBL] Six textures 4K distinctes. Les six adresses sont ecrites a la main
+par six personnes reelles, sur six papiers reellement differents, puis
+vieillies physiquement (humidite, frottement, pression) avant numerisation.
+Les six destinataires viennent de `content/victims_641.csv`. Les six
+adresses sont des rues reelles de la carte de Velmora et correspondent a
+des batiments existants dans les scenes S3, S5, S6 et S7.
+[OBL] Coherence verifiee par script : chaque adresse pointe vers un
+batiment reellement modelise et atteignable ou visible dans le jeu.
+Le timbre : un seul modele, 6 exemplaires, dessine pour le projet (une
+mouette stylisee, valeur « 4 »). [OBL] Non-ambre.
+Visibles uniquement pendant les 3 secondes de PROP-756 (cf. PN-048).
+
+§ 3 — CE QUE CA DIT
+Six personnes ont ecrit a six autres personnes. Elles ont paye un timbre.
+Elles ont fait confiance au systeme.
+Le systeme, c'est Lohen.
+Le geste humain : poster une lettre. Le geste le plus banal du monde.
+[NAR] Les six expediteurs sont peut-etre vivants. Les six destinataires
+sont morts — [OBL] les six figurent sur l'affiche PN-003, et cinq d'entre
+eux sont barres d'une croix rouge. Le sixieme ne l'est pas.
+[OBL] Le sixieme n'est pas Esteban. C'est quelqu'un d'autre, dont le corps
+n'a pas ete declare, comme 441 autres. Interdiction absolue de faire de ce
+detail un indice.
+Lohen porte depuis trois ans six lettres qu'il ne peut pas livrer et qu'il
+ne peut pas rendre.
+
+§ 4 — ECHO
+NEANT propre. Les six lettres sont couvertes par E11 (PN-048), qui est
+l'Echo de la sacoche.
+[OBL] Elles ne portent pas d'Echo individuel. Aucun des 31 Echos du
+chapitre n'est sur un objet que Lohen porte, sauf E11.
+
+§ 5 — MISE EN SCENE
+[OBL] Elles ne sont visibles QUE pendant les 3 secondes qui suivent E11,
+quand le rabat s'ouvre seul.
+Trois secondes. Le joueur voit six tranches d'enveloppes gondolees dans un
+fond de cuir. Il n'a pas le temps de lire les adresses.
+[OBL] Il ne peut pas zoomer, pas mettre en pause utilement (le jeu se met
+en pause mais la camera ne bouge pas), pas revenir.
+[ART] C'est deliberé : le joueur SAIT qu'il y a six lettres. Il ne sait pas
+pour qui. Il ne le saura jamais.
+Aucun prompt. Aucun inventaire. Aucune entree de journal.
+Apres, Lohen referme (LOH-ACT-217). Le rabat ne se rouvrira plus.
+
+§ 6 — AUDIO
+SFX(paper_stack_shift) : les six enveloppes qui bougent quand le rabat
+s'ouvre. Un son de papier sec et raide, tres bref, -25 dB.
+[OBL] C'est le seul son qu'elles font dans tout le jeu. Le reste du temps,
+elles sont muettes dans la sacoche : elles sont comprimees, elles ne
+bruissent pas.
+Aucune musique. Le silence de 4 s apres E11 (cf. PN-048) couvre ce moment.
+
+§ 7 — INTERDICTIONS
+Interdit de : ouvrir une lettre · lire une adresse en entier · livrer une
+lettre · les rendre · les jeter · les perdre · les compter en interface ·
+en ajouter une septieme (la septieme, « 0114 », est PN-005 et n'est pas une
+des six) · en faire un systeme de quetes · en faire une collection · les
+montrer une seconde fois · les mentionner dans un dialogue.
+[OBL] Aucun des sept chapitres ne livre ces six lettres. C'est une decision
+de canon definitive. Un chapitre ulterieur peut y faire allusion ; aucun ne
+les resout.
+
+§ 8 — LIENS
+PN-048 (la sacoche, E11). PN-005 (l'enveloppe « 0114 » de la barque, la
+septieme, au fond, a plat). PN-041 (la boite aux lettres ambre, ouverte et
+vide, a 40 m — [OBL] Lohen passe devant avec six lettres dans sa sacoche et
+ne s'arrete pas). PN-042 (l'anneau 12). PN-018 (la borne).
+PN-143 (LA LETTRE) : « Des mains qui portent le courrier de toute une ville
+et qui ne recoivent jamais rien. »
+[THEME] PORTER POUR LES AUTRES.
+
+§ 9 — DOD
+[ ] 6 papiers reellement differents, 6 ecritures de 6 personnes reelles
+[ ] Vieillissement physique reel, gondolement en geometrie, 6 formes
+[ ] 6 destinataires du CSV, 5 barres / 1 non barre sur PN-003
+[ ] 6 adresses pointant vers des batiments reellement modelises (script)
+[ ] Visibles 3 s exactement, une seule fois, sans zoom ni pause utile
+[ ] Aucun inventaire, aucun journal, aucune quete, aucune livraison
+[ ] Un seul SFX dans tout le jeu

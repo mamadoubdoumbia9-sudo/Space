@@ -1,0 +1,107 @@
+===============================================================================
+PN-132 — LES CLOCHES ACCORDEES
+===============================================================================
+Asset : SM_S8_Cloches_Detail · S8, palier des cloches, 156 m · ~06:11 ·
+prop narratif (detail de PN-131) · pas d'Echo · LOD0 partage
+
+§ 1 — CE QU'ON VOIT
+Les trois cloches, vues de pres.
+[OBL] Elles portent des inscriptions. Chacune la sienne, coulee dans le
+bronze au moment de la fonte, en relief, en capitales.
+
+Sur la grande (SOL) :
+     SAINT-AMBRE — 1871 — JE SONNE POUR CEUX QUI NE VOIENT PAS
+
+Sur la moyenne (SI bemol) :
+     SAINT-AMBRE — 1871 — JE SONNE POUR CEUX QUI REVIENNENT
+
+Sur la petite (RE) :
+     SAINT-AMBRE — 1871 — JE SONNE POUR LES AUTRES
+
+[OBL] Trois inscriptions. La troisieme est plus courte que les deux autres.
+[OBL] « LES AUTRES » n'est pas explique. C'est une formule de fondeur du
+XIXe siecle et elle signifiait : ceux qui ne reviennent pas.
+[OBL] Le jeu ne l'explique jamais.
+Sur la petite cloche, sous l'inscription, il y a une FELURE.
+Une fissure de 22 cm, du bord vers le haut.
+Elle sonne quand meme. [OBL] Mais faux : le RE est baisse de 40 cents.
+L'accord mineur est legerement dissonant.
+Personne ne s'en apercoit, parce que personne ne connait l'accord d'origine.
+
+§ 2 — FICHE TECHNIQUE
+Partage le LOD0 de PN-131.
+[OBL] Les trois inscriptions sont en GEOMETRIE (relief de 3 mm), coulees,
+avec les defauts de fonte : des lettres legerement inegales, des bavures de
+moule, un « M » qui a coule.
+[OBL] Elles suivent la courbure de la panse. Le texte est deforme par la
+forme de la cloche. Un decal plat est interdit.
+Densite : lisible a 60 cm.
+La felure : geometrie, 22 cm, avec les levres ecartees de 0,6 mm.
+[OBL] AUDIO : le RE de la petite cloche est reellement enregistre sur une
+cloche felee, ou desaccorde de -40 cents en post-production, ET avec un
+battement caracteristique (deux frequences proches qui interferent, 3,2 Hz
+de battement).
+[ART] Une cloche felee ne fait pas une note fausse : elle fait DEUX notes.
+C'est le detail qui doit etre entendu sans etre identifie.
+
+§ 3 — CE QUE CA DIT
+« JE SONNE POUR CEUX QUI NE VOIENT PAS. »
+« JE SONNE POUR CEUX QUI REVIENNENT. »
+« JE SONNE POUR LES AUTRES. »
+Le geste humain : couler trois phrases dans du bronze, en 1871.
+[OBL] Le jeu n'ajoute rien. Les trois phrases sont la depuis 155 ans et
+elles n'ont pas ete ecrites pour cette histoire.
+[NAR] Et la troisieme cloche est felee.
+[OBL] Jamais souligne. Aucune camera, aucune musique, aucun dialogue.
+
+§ 4 — ECHO
+NEANT. [OBL] Couvert par E27 (PN-131).
+
+§ 5 — MISE EN SCENE
+[OBL] Les inscriptions ne sont lisibles que de PRES et sous le bon angle :
+le texte suit la courbure et la lumiere des meurtrieres est rasante.
+Il faut faire le tour de chaque cloche.
+[OBL] La troisieme inscription, « JE SONNE POUR LES AUTRES », est sur la
+face de la petite cloche qui est TOURNEE VERS LE MUR.
+[OBL] Il faut passer entre la cloche et le mur — 50 cm — pour la lire.
+Taux de lecture des trois : 23-33 %.
+Taux de lecture des deux premieres : 51-63 %.
+[ART] Le joueur qui lit les deux premieres et part rate la troisieme, qui
+est la seule qui compte.
+[OBL] Aucun indice, aucun prompt, aucune aide.
+
+§ 6 — AUDIO
+[OBL] Cf. PN-131. Ici, un seul ajout :
+Si le joueur sonne (LOH-ACT-227), les trois cloches sonnent, et la petite
+produit son battement de 3,2 Hz.
+[OBL] Le battement est audible : la note « ondule ». C'est physique et
+c'est la seule imperfection sonore volontaire du jeu.
+
+§ 7 — INTERDICTIONS
+Interdit de : reparer la felure · accorder la petite cloche · expliquer
+« LES AUTRES » · ajouter une quatrieme cloche · ajouter une inscription ·
+tourner la petite cloche pour rendre le texte lisible · ajouter un prompt ·
+faire commenter · souligner par la musique · dater autrement que 1871 ·
+supprimer le battement de 3,2 Hz.
+
+§ 8 — LIENS
+PN-131 (le palier, E27, les 411 barres).
+PN-034 (la cloche de brume du chalutier, S2) : « L'HIRONDELLE DE MER —
+19__ », les deux derniers chiffres illisibles.
+[OBL] Deux cloches gravees dans le chapitre. L'une est datee 1871 et dit
+pour qui elle sonne. L'autre a perdu sa date et ne dit rien.
+PN-126 (la statue : « A NOS MARINS QUI SONT PARTIS », 1886).
+[OBL] Trois inscriptions du XIXe siecle dans le chapitre, toutes les trois
+sur des monuments maritimes, toutes les trois exactes.
+[THEME] LES MONUMENTS QUI DISENT CE QU'IL FAUT — et le seul qui le dit est
+tourne vers le mur et il est fele.
+
+§ 9 — DOD
+[ ] 3 inscriptions en geometrie, relief 3 mm, suivant la courbure
+[ ] Defauts de fonte : lettres inegales, bavures, un M coule
+[ ] Lisibles a 60 cm en lumiere rasante, jamais en decal plat
+[ ] Troisieme inscription tournee vers le mur, passage de 50 cm
+[ ] Felure de 22 cm, levres ecartees de 0,6 mm
+[ ] RE desaccorde de -40 cents avec battement reel de 3,2 Hz
+[ ] Taux de lecture des trois mesure entre 23 et 33 %
+[ ] Zero explication de « LES AUTRES »

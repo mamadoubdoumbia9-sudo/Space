@@ -1,0 +1,146 @@
+===============================================================================
+PN-039 — LA PHOTO 300 — LOHEN ET ESTEBAN
+===============================================================================
+Asset : SM_S3_Photo_300 · S3, mur des photos, 1,55 m du sol, a 6,20 m de
+l'entree du mur · ~02:01 · PROP CENTRAL DU CHAPITRE · pas d'Echo ·
+LOD0 12 tris
+
+§ 1 — CE QU'ON VOIT
+Au milieu des trois cents, une photo.
+Elle est plus petite que les autres : 6 x 9 cm. Elle est fixee par UNE
+punaise, en haut a gauche, et elle pend de travers, de 11 degres.
+Dessus : deux hommes, dehors, debout, devant un mur de brique. Ils ne
+posent pas : quelqu'un les a pris sans prevenir. L'un regarde l'objectif
+avec une seconde de retard, la bouche ouverte, en train de parler.
+L'autre ne regarde pas l'objectif. Il regarde le premier.
+Le premier, c'est Lohen. Plus jeune. Quatre ans de moins. Il rit.
+Le second, c'est Esteban. Il sourit du cote gauche.
+[OBL] Il n'y a pas de nom ecrit dessous. Le mur en est couvert, de noms.
+Sous celle-la, rien. La brique est nue.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 12 tris (quad courbe, gondole).
+[OBL] Texture 4K DEDIEE pour 6 x 9 cm. Densite 3 700 px/m. C'est la plus
+haute densite de tout le jeu, sur le plus petit objet.
+Justification : le joueur va coller son ecran dessus. Il va chercher le
+visage d'Esteban, qu'il n'a jamais vu, pendant deux heures de jeu. Cette
+photo est la premiere image d'Esteban et elle doit tenir a 15 cm.
+[OBL] PRISE DE VUE REELLE. Les deux comediens (celui de Lohen, celui
+d'Esteban), dans les costumes, devant un vrai mur de brique, photographies
+en argentique par un photographe, avec la consigne exacte : « Ne posez pas.
+Parlez. Je prends quand je veux. » Choisir parmi 200 prises celle ou
+Esteban regarde Lohen.
+Vieillissement physique : la photo est punaisee sur un vrai mur humide
+pendant six semaines avant numerisation.
+[OBL] AUCUNE retouche, aucun filtre, aucune generation, aucun rendu 3D.
+Le modele 3D d'Esteban (EST-MDL-002) est sculpte D'APRES cette photo, et
+non l'inverse.
+[OBL] Le sourire du cote gauche doit etre visible et mesurable : coin
+gauche de la bouche 4 mm plus haut que le droit.
+Shader `photo_paper_damp`. Inclinaison de 11° figee, jamais animee.
+
+§ 3 — CE QUE CA DIT
+Ils etaient ensemble. Ils etaient heureux. Quelqu'un les a pris en photo.
+Esteban regardait Lohen quand Lohen ne regardait pas.
+[NAR] Et cette photo est sur le mur des disparus.
+Ce qui veut dire que quelqu'un, a Velmora, a punaise la photo d'Esteban sur
+ce mur — donc quelqu'un savait qu'il avait disparu, donc quelqu'un le
+connaissait, donc quelqu'un ici a pense a lui.
+Mais il n'y a pas de nom ecrit dessous.
+[OBL] Deux lectures coexistent, et le jeu ne tranche jamais :
+  — celui qui l'a punaisee ne connaissait pas son nom
+  — celui qui l'a punaisee ne pouvait pas l'ecrire
+[NAR] Mireille l'a punaisee. Elle ne le dira jamais. Sa main droite est
+brulee. Elle ecrit tres mal depuis. Le joueur qui la rencontrera en S4 et
+qui verra sa main pourra le deviner deux heures plus tard, ou jamais.
+Le geste humain : punaiser une photo sans savoir quoi ecrire dessous.
+
+§ 4 — ECHO
+NEANT. [OBL] C'est le refus le plus important du chapitre apres PN-007.
+Le joueur vient de trouver la premiere image d'Esteban. Il veut l'Echo. Le
+systeme l'a entraine pendant deux heures a attendre l'Echo.
+Il n'y en a pas. Parce que c'est un geste d'apres. La regle s'applique,
+mecaniquement, froidement, comme partout ailleurs.
+[ART] Le systeme ne fait pas d'exception pour le personnage principal. Rien
+dans ce monde ne s'adapte a ce que Lohen veut. C'est toute la these.
+
+§ 5 — MISE EN SCENE
+[OBL] Ce qui suit est le pivot dramatique du chapitre 1. Chaque detail est
+obligatoire.
+1. La photo n'est PAS dans la bande de lumiere. Elle est dans la penombre,
+   a 1,10 m du bord de la bande. Il faut la lampe (PN-009) pour la voir.
+2. Elle n'est pas a hauteur d'yeux : 1,55 m, soit 12 cm sous le regard de
+   Lohen. Il doit baisser la tete.
+3. Aucun prompt. Aucun LookAt scripte. Aucun ralentissement de camera.
+   Aucun changement de musique (elle est deja coupee, cf. PN-038).
+4. Si le joueur passe sans la voir : IL PASSE SANS LA VOIR. Il n'y a aucun
+   rattrapage, aucun retour scripte, aucun PNJ qui la mentionne.
+   [OBL] Taux de decouverte mesure : 72-84 %. Un joueur sur cinq environ
+   terminera le chapitre 1 sans jamais avoir vu le visage d'Esteban avant
+   la cinematique finale. C'est accepte. C'est meme, pour ces joueurs, une
+   experience differente et valide.
+5. SI le joueur s'arrete a moins de 90 cm, face a la photo, plus de 2,5 s :
+   LOH-ACT-208 se declenche. 6,3 secondes.
+   Lohen leve la main gauche. Il redresse la photo. Il la met droite.
+   Il retire sa main. La photo reste droite.
+   Il ne la prend pas. Il ne la decroche pas. Il ne la touche plus.
+   [OBL] Le joueur ne peut pas annuler cette animation. C'est la deuxieme
+   et derniere perte de controle non mecanique du chapitre, apres
+   LOH-ACT-166 (la veste). Elle dure 6,3 s.
+   [OBL] Pas de gros plan. Pas de changement de camera. La camera reste
+   exactement ou le joueur l'avait laissee. S'il regardait mal, il verra
+   mal. Le jeu ne corrige pas son cadrage.
+6. La photo reste droite pour le reste de la partie. Definitivement.
+   Si le joueur revient : elle est droite. C'est la seule chose que Lohen
+   change dans le monde de tout le chapitre.
+
+§ 6 — AUDIO
+[OBL] Pendant LOH-ACT-208 : le motif d'Esteban, LA-DO-MI-RE-LA, joue au
+piano, UNE seule note a la fois, et il s'arrete apres la quatrieme note.
+LA - DO - MI - RE. Puis rien. La cinquieme note (le LA) n'est pas jouee.
+C'est la 9e des 23 occurrences incompletes du chapitre.
+Volume : -22 dB. Tres discret. Beaucoup de joueurs ne l'entendront pas
+consciemment.
+SFX(pin_paper_slide) : le frottement du papier sur la punaise quand il
+redresse. Un son minuscule, sec, -26 dB. Il doit etre parfait.
+Apres : silence complet pendant 4 s. Puis l'ambiance du marche revient.
+[OBL] Aucune reprise musicale. M10 ne redemarre que 20 m plus loin, comme
+prevu, sans modification.
+
+§ 7 — INTERDICTIONS
+Interdit de : donner un Echo · permettre de prendre ou decrocher la photo ·
+ajouter un nom dessous · faire parler Lohen · faire pleurer Lohen · zoomer
+· deplacer la camera · ajouter un flash-back · ajouter une voix off · jouer
+le motif en entier · signaler la photo d'une maniere quelconque · la rendre
+obligatoire · la placer dans la lumiere · reveler que c'est Mireille qui
+l'a punaisee, ici ou dans une des six lettres suivantes · rendre
+LOH-ACT-208 rejouable · remettre la photo de travers.
+[OBL] Interdiction absolue de generer cette image. Si la prise de vue reelle
+est impossible, le prop est reporte, jamais substitue.
+
+§ 8 — LIENS
+PN-038 (le mur qui la contient). PN-025 (la veste : la preuve materielle).
+PN-035 (la photo de la cabine : la fausse alerte, 48 minutes plus tot).
+MIR-MDL-003 (la main brulee de Mireille, S4).
+EST-MDL-002 (le modele d'Esteban, sculpte d'apres cette photo).
+PN-143 (LA LETTRE) : « Ne me cherche plus dans les objets, mon amour. »
+[OBL] Cette photo est l'objet. C'est celui-la, plus que la veste, plus que
+le gilet, plus que tout le reste. Le joueur qui a redresse une photo de
+travers a 2 h 01 comprendra la phrase a 3 h 25.
+[THEME] CHERCHER DANS LES OBJETS. [THEME] REGARDER QUELQU'UN QUI NE
+REGARDE PAS.
+
+§ 9 — DOD
+[ ] Prise de vue argentique reelle, deux comediens, 200 prises minimum
+[ ] Esteban regarde Lohen ; Lohen regarde l'objectif en parlant
+[ ] Sourire du cote gauche mesurable : coin gauche +4 mm
+[ ] Vieillissement physique reel, 6 semaines sur mur humide
+[ ] 4K sur 6 x 9 cm, densite 3 700 px/m, lisible a 15 cm
+[ ] EST-MDL-002 sculpte d'apres cette photo, ressemblance validee a 3 vues
+[ ] Aucun nom ecrit dessous, brique nue
+[ ] Hors de la bande de lumiere, a 1,55 m, penombre, lampe necessaire
+[ ] Zero prompt, zero LookAt, zero mouvement de camera
+[ ] LOH-ACT-208 : 6,3 s, non annulable, camera inchangee, sans gros plan
+[ ] Motif joue LA-DO-MI-RE, quatrieme note finale, cinquieme absente
+[ ] Photo droite de facon permanente apres l'animation
+[ ] Taux de decouverte mesure entre 70 et 85 % sur 25 testeurs

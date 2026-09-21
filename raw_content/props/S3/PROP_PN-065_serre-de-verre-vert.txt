@@ -1,0 +1,119 @@
+===============================================================================
+PN-065 — LA SERRE DE VERRE VERT
+===============================================================================
+Asset : SM_S3_Serre_Verte · S3, toit-terrasse au-dessus du niveau 3 ·
+~03:10 · prop narratif · pas d'Echo · DERNIER PROP DE S3 · LOD0 7 400 tris
+
+§ 1 — CE QU'ON VOIT
+Sur le toit du batiment le plus haut du Marche, une serre.
+Structure de fer, 6 x 4 m, toit a deux pans, 3 m au faitage.
+Les vitres sont VERTES. Pas sales : teintees. C'est du verre vert bouteille,
+le meme que les bouees de PN-028, souffle a la main et coupe en panneaux
+irreguliers. Quelqu'un a construit une serre avec du verre de recuperation
+de verrerie.
+Il manque quatorze panneaux sur cent six. Les trous sont bouches par des
+planches, des sacs, une plaque de tole.
+Dedans : des bacs de terre, des etageres, des pots.
+Tout est mort. Les plantes sont des squelettes bruns, des tiges seches,
+des racines a l'air. Il y a trois ans de mort seche la-dedans.
+Sauf dans un bac. Le troisieme a gauche.
+Dans ce bac-la, il y a de la terre retournee, humide, noire. Et neuf
+pousses vertes de 6 centimetres, alignees en deux rangees.
+Quelqu'un plante des choses.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 7 400 (structure 2 200 + 106 panneaux de verre 1 900 + intérieur
+3 300). [OBL] Les 106 panneaux ont des teintes legerement differentes
+(variation de +/- 8 % sur la saturation et l'epaisseur). Du verre souffle
+recupere n'est jamais homogene.
+Shader `blown_glass_green` (partage avec PN-028), transmission 0,54.
+[OBL] La lumiere qui traverse est VERTE et elle eclaire l'intérieur en
+vert. C'est une lumiere coloree reelle : light cookie teinte + GI locale.
+Cout : 0,7 ms. Budgete.
+Les plantes mortes : 34 meshes distincts, cartes d'alpha + geometrie sur
+les tiges principales.
+Les neuf pousses : 9 meshes minuscules, 60 tris chacun, avec un materiau
+vert SATURE (le seul vert vivant du chapitre).
+La terre retournee : sculpt avec traces d'outil (une truelle, ou une main).
+Collision : praticable. Le joueur entre dans la serre.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un cultive.
+Dans une ville morte, sur un toit, dans une serre en verre de recuperation,
+il y a neuf pousses de six centimetres dans un bac de terre retournee.
+Le geste humain : semer.
+[OBL] C'est le seul acte tourne vers l'avenir de tout le chapitre 1.
+Tout le reste — les Echos, les objets, les gestes d'apres, la croix, le
+harpon, les seaux, le pardessus — regarde en arriere. Ici, neuf graines.
+[NAR] Qui ? Tallec entretient le monte-charge. Sol trie des boutons. L'un
+des deux, ou les deux, ou quelqu'un d'autre. [OBL] Jamais dit.
+Ce ne sont pas des fleurs. [OBL] Ce sont des legumes : des radis. Le level
+artist doit pouvoir le confirmer, et le joueur, s'il s'y connait, aussi.
+Des fleurs seraient un symbole. Des radis sont un repas.
+
+§ 4 — ECHO
+NEANT. Geste d'apres (PN-015), et le plus recent du chapitre : moins de
+trois semaines.
+[ART] Le dernier prop de S3 est le seul qui parle d'avenir, et le systeme
+qui montre le passe n'a rien a en dire. C'est la bonne note pour finir la
+sequence.
+
+§ 5 — MISE EN SCENE
+[OBL] Zone facultative, accessible depuis le niveau 3, par une echelle de
+toit de 4 m. Il faut poser la lampe (PN-009), comme pour PN-021 en S1 :
+[OBL] deuxieme et derniere fois du chapitre.
+Taux de decouverte cible : 42-53 %.
+[ART] Le joueur entre dans une serre verte. Apres 3 h 10 de gris, de brun,
+de noir et de blanc, il entre dans un volume de 24 m² entierement baigne de
+lumiere verte.
+C'est la plus forte rupture chromatique du chapitre 1. Elle dure le temps
+qu'il veut.
+Les neuf pousses sont dans le troisieme bac, a gauche, a 1,10 m du sol,
+donc a hauteur de regard baisse. Elles ne sont pas eclairees specialement.
+Elles sont vertes dans une lumiere verte : [OBL] c'est le contraire d'une
+mise en valeur. Le joueur doit les distinguer du fond, et il ne les verra
+que s'il s'approche.
+Depuis la serre, par le verre vert, on voit Velmora, la grue rouge et le
+Phare. Tout est vert. [ART] Le seul moment du jeu ou le monde a une autre
+couleur.
+Aucun prompt, aucun LookAt, aucune musique ajoutee.
+
+§ 6 — AUDIO
+SFX(glass_pane_hum) : les 106 panneaux vibrent au vent. Une nappe aigue,
+fine, continue, faite de 106 micro-resonances. -23 dB.
+[OBL] C'est le seul son continu et AGREABLE du chapitre. Le verre chante.
+SFX(plant_dry_rustle) : les plantes mortes, par courants d'air, sec.
+SFX(tarp_flap) : les bouchages de fortune aux 14 trous.
+Musique : [OBL] M10 s'arrete quand le joueur entre dans la serre, en 3 s.
+Rien ne la remplace. Le joueur reste dans le silence vert, avec le chant du
+verre. Elle reprend a la sortie, en 4 s.
+[ART] C'est la seule fois de S3 ou la musique s'arrete pour quelque chose
+qui n'est ni un Echo ni le mur des photos.
+
+§ 7 — INTERDICTIONS
+Interdit de : arracher, prendre, arroser, compter les pousses en interface ·
+donner un Echo · reveler qui cultive · ajouter des fleurs · ajouter un
+outil de jardinage identifiable comme appartenant a quelqu'un · casser le
+verre · ajouter une dixieme pousse · faire mourir les pousses · les faire
+grandir entre S3 et S7 · faire commenter · ajouter de la musique.
+[OBL] Les neuf pousses sont identiques en S7 quand le joueur passe en
+contrebas. Elles n'ont pas grandi. Ce n'est pas un compteur de temps.
+
+§ 8 — LIENS
+PN-028 (les bouees de verre vert, S2) : le meme verre, le meme atelier,
+la meme main. PN-116, PN-117, PN-119 (l'atelier d'Anselme Roux, S7) : c'est
+LUI qui a souffle ce verre, il y a vingt ans. [OBL] Jamais dit.
+PN-056 (la baleine) : l'autre beaute de S3.
+PN-090 (la reserve de nourriture de Sol, S5).
+[THEME] IL FAUT UNE BELLE CHOSE. [THEME] SEMER.
+
+§ 9 — DOD
+[ ] 106 panneaux, teintes variant de +/- 8 %, verre souffle non homogene
+[ ] Lumiere traversante verte reelle (cookie + GI), 0,7 ms
+[ ] 9 pousses de radis, 6 cm, deux rangees, bac 3 a gauche
+[ ] Terre retournee avec traces d'outil
+[ ] Lampe a poser pour monter (2e et derniere fois du chapitre)
+[ ] Pousses non eclairees specialement, vertes sur fond vert
+[ ] M10 coupee en 3 s a l'entree, reprise en 4 s a la sortie
+[ ] Chant du verre : 106 micro-resonances, -23 dB
+[ ] Pousses identiques en S7, aucune croissance

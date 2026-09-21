@@ -1,0 +1,248 @@
+===============================================================================
+DLG · S5 · D06 — LES QUATRE ECHOS DES CONDUITS (E20a a E20d)
+52 entrees, toutes S5. ECH 52. Contribution : 52.
+[OBL] Les conduits sont le seul endroit du jeu ou les Echos ne viennent
+pas de la vie d'avant : ils viennent de la vie D'APRES. Ce sont les
+premiers Echos post-Maree du chapitre — et les seuls.
+===============================================================================
+
+--- L'EXCEPTION MAJEURE DE R2 ------------------------------------------------------------
+
+[OBL] R2 : « rien d'apres le 14 octobre ». Les quatre Echos de S5 la
+cassent tous les quatre. [OBL] CE N'EST PAS UNE ERREUR. La justification
+est dans le monde, pas dans le systeme : les objets des conduits ont ete
+touches par des vivants APRES la Maree, et ces vivants sont morts depuis,
+dans les trois annees qui ont suivi, de faim, de froid, de chute. Velmora
+a continue de perdre des gens apres le 14 octobre et personne n'en parle,
+parce que 641 d'un coup, c'est un evenement, et onze par an, c'est la vie.
+
+[OBL] Le joueur qui a integre R2 depuis S1 va ressentir un malaise
+systemique ici. C'est l'effet. [OBL] Aucun personnage ne l'explique.
+[OBL] Cette exception est documentee dans VALIDATION_CROISEE_147 § 1.
+
+--- E20a — LA COUVERTURE (12 lignes, 48 s) --------------------------------------------------
+
+Une couverture pliee dans une niche, a 40 cm du sol. Sur le chemin. 81 %.
+Deux voix : une femme d'environ 30 ans, un homme d'environ 60.
+
+    [S5_ECH_L201]  LA FEMME · 2,0 s · plat · p0,8
+        « Y'a de la place pour deux. »
+
+    [S5_ECH_L202]  L'HOMME · 1,4 s · las · p0,9
+        « Y'a de la place pour un et demi. »
+
+    [S5_ECH_L203]  LA FEMME · 1,8 s · plat · p0,7
+        « Alors soyez le demi. »
+
+    [S5_ECH_L204]  L'HOMME · 2,4 s · las · p1,0
+        « Je suis un grand demi. »
+
+    [S5_ECH_L205]  LA FEMME · 2,2 s · plat · p0,8
+        « Combien de nuits vous avez tenu, dehors ? »
+
+    [S5_ECH_L206]  L'HOMME · 1,6 s · las · p1,1
+        « Onze. »
+
+    [S5_ECH_L207]  LA FEMME · 2,6 s · plat · p0,9
+        « Moi trente-quatre. Alors c'est moi qui commande. »
+
+    [S5_ECH_L208]  L'HOMME · 2,0 s · las · p1,2
+        « D'accord. »
+
+    [S5_ECH_L209]  LA FEMME · 2,8 s · plat · p0,8
+        « Regle un : on parle pas de novembre. »
+
+    [S5_ECH_L210]  L'HOMME · 1,4 s · las · p1,0
+        « D'accord. »
+        dir : [OBL][NAR] NOVEMBRE. Un mois apres la Maree. Le jeu ne
+              dira jamais ce qui s'est passe en novembre. [OBL] Il n'y
+              a AUCUN document, AUCUN prop, AUCUN dialogue sur
+              novembre dans tout le chapitre. Le mot apparait deux
+              fois : ici et en S7 (S7_ODI_L3xx). Jamais de contenu.
+              [OBL] Interdit de production : ne jamais ecrire ce qui
+              s'est passe en novembre, meme en note interne.
+
+    [S5_ECH_L211]  LA FEMME · 2,4 s · plat · p0,9
+        « Regle deux : si un des deux part, l'autre garde la
+          couverture. »
+
+    [S5_ECH_L212]  L'HOMME · 2,2 s · las · p0,0
+        « C'est une bonne regle. »
+        dir : [OBL] dissolution. LA COUVERTURE EST LA, pliee, propre,
+              seule. [OBL] Le joueur ne saura jamais lequel des deux
+              est parti. [OBL] Elle n'est pas ramassable. Lohen ne la
+              touche pas deux fois.
+
+--- E20b — LA GAMELLE (12 lignes, 41 s) -------------------------------------------------------
+
+Une gamelle de fer-blanc, avec un nom grave au clou : trois lettres
+illisibles. 46 %.
+
+    [S5_ECH_L213]  VOIX 1 · 1,8 s · plat · p0,8
+        « Tu graves quoi ? »
+
+    [S5_ECH_L214]  VOIX 2 · 1,2 s · plat · p0,9
+        « Mon nom. »
+
+    [S5_ECH_L215]  VOIX 1 · 2,4 s · moqueur · p0,7
+        « Y'a personne pour te la voler. »
+
+    [S5_ECH_L216]  VOIX 2 · 2,0 s · plat · p1,0
+        « C'est pas pour ca. »
+
+    [S5_ECH_L217]  VOIX 1 · 1,6 s · plat · p0,8
+        « C'est pour quoi ? »
+
+    [S5_ECH_L218]  VOIX 2 · 2,8 s · plat · p1,2
+        « Pour qu'il y ait mon nom quelque part. »
+
+    [S5_ECH_L219]  VOIX 1 · 2,2 s · plat · p1,0
+        « Y'a ton nom sur les listes. »
+
+    [S5_ECH_L220]  VOIX 2 · 2,6 s · sec · p1,4
+        « Sur les listes des morts. Je suis pas mort. »
+
+    [S5_ECH_L221]  VOIX 1 · 3,0 s · plat · p1,1
+        « Ils t'ont mis dessus ? »
+
+    [S5_ECH_L222]  VOIX 2 · 2,4 s · plat · p1,3
+        « Troisieme colonne. J'y suis alle voir. »
+        dir : [OBL][NAR] UNE DES 641 « VICTIMES » EST VIVANTE EN
+              NOVEMBRE. [OBL] Cette information n'est jamais confirmee
+              ni infirmee ailleurs. [OBL] Le fichier
+              `content/victims_641.csv` contient bien un nom en
+              troisieme colonne dont la fiche a la Bibliotheque porte
+              une annotation au crayon : « revu ? ». Aucun personnage
+              n'en parle.
+
+    [S5_ECH_L223]  VOIX 1 · 2,0 s · plat · p1,2
+        « Tu leur as dit ? »
+
+    [S5_ECH_L224]  VOIX 2 · 2,8 s · plat · p0,0
+        « J'ai fait la queue une heure et apres je suis parti. »
+        dir : [OBL] dissolution. [OBL] Le nom grave sur la gamelle
+              reelle est illisible : trois lettres rongees. Le joueur
+              peut zoomer. Il ne lira rien. [OBL] Ne jamais rendre ces
+              lettres lisibles dans un patch.
+
+--- E20c — LA PERCHE (14 lignes, 57 s) ---------------------------------------------------------
+
+La perche qui sert a recuperer la lanterne apres les passages dans le
+noir. [OBL] Le joueur l'utilise trois fois AVANT de pouvoir declencher
+l'Echo : il faut avoir fait les trois passages. 34 %.
+
+    [S5_ECH_L225]  UN HOMME · 2,2 s · pratique · p0,8
+        « Tu la poses, tu montes, tu la reprends. »
+
+    [S5_ECH_L226]  UN ENFANT · 1,4 s · prudent · p0,9
+        « Et si je la fais tomber ? »
+
+    [S5_ECH_L227]  UN HOMME · 2,0 s · pratique · p0,7
+        « Tu redescends. »
+
+    [S5_ECH_L228]  UN ENFANT · 1,8 s · prudent · p1,0
+        « Dans le noir ? »
+
+    [S5_ECH_L229]  UN HOMME · 1,2 s · pratique · p1,2
+        « Oui. »
+
+    [S5_ECH_L230]  UN ENFANT · 2,4 s · prudent · p0,9
+        « J'aime pas. »
+
+    [S5_ECH_L231]  UN HOMME · 2,8 s · pratique · p1,1
+        « Personne aime. C'est pas une question d'aimer. »
+
+    [S5_ECH_L232]  UN ENFANT · 2,0 s · prudent · p1,0
+        « Toi t'as peur ? »
+
+    [S5_ECH_L233]  UN HOMME · 1,6 s · pratique · p1,4
+        « Oui. »
+        dir : [OBL] il repond oui tout de suite. [OBL] C'est le
+              meilleur adulte du chapitre et on ne saura jamais qui
+              c'est.
+
+    [S5_ECH_L234]  UN ENFANT · 2,2 s · prudent · p1,0
+        « Alors pourquoi tu y vas ? »
+
+    [S5_ECH_L235]  UN HOMME · 3,0 s · pratique · p1,2
+        « Parce que la peur, ca compte pas dans les decisions. Ca
+          compte apres. »
+
+    [S5_ECH_L236]  UN ENFANT · 2,4 s · prudent · p1,1
+        « Ca compte quand, apres ? »
+
+    [S5_ECH_L237]  UN HOMME · 2,8 s · pratique · p1,3
+        « Quand t'es en haut et que tu trembles. La, ca compte. Mais
+          t'es en haut. »
+
+    [S5_ECH_L238]  UN ENFANT · 1,8 s · prudent · p0,0
+        « D'accord. »
+        dir : [OBL][NAR] Dissolution. [OBL] L'enfant de cet Echo n'est
+              PAS Sol : il a une voix de garcon d'environ neuf ans, et
+              Sol en avait dix a la Maree. [OBL] Beaucoup de joueurs
+              croiront que c'est Sol. Le jeu ne les detrompera jamais.
+              [OBL] Interdit : ne jamais confirmer ni infirmer, dans
+              aucun chapitre.
+
+--- E20d — LES MUES (14 lignes, 62 s) ------------------------------------------------------------
+
+Les 340 plaques de mue (PN-094). [OBL] L'Echo le plus long de S5 et le
+seul qui parle des Mueurs. [OBL] IL NE LES MONTRE PAS. Deux hommes
+parlent d'eux. On ne voit rien. Canon PN-094 : le Mueur n'apparait jamais.
+
+    [S5_ECH_L239]  HOMME A · 2,0 s · plat · p0,8
+        « Compte-les. »
+
+    [S5_ECH_L240]  HOMME B · 2,4 s · plat · p0,9
+        « Trois cent quarante, comme la semaine derniere. »
+
+    [S5_ECH_L241]  HOMME A · 1,8 s · plat · p1,0
+        « Donc y'en a pas de nouvelles. »
+
+    [S5_ECH_L242]  HOMME B · 2,2 s · plat · p0,8
+        « Donc y'a plus rien qui mue. »
+
+    [S5_ECH_L243]  HOMME A · 2,6 s · plat · p1,1
+        « Ou y'a plus rien tout court. »
+
+    [S5_ECH_L244]  HOMME B · 2,0 s · plat · p1,2
+        « C'est ce que je dis depuis un an. »
+
+    [S5_ECH_L245]  HOMME A · 2,8 s · plat · p0,9
+        « Les gens en haut y croient encore. »
+
+    [S5_ECH_L246]  HOMME B · 2,4 s · sec · p1,0
+        « Les gens en haut ont besoin d'un truc a craindre qui a une
+          forme. »
+
+    [S5_ECH_L247]  HOMME A · 3,0 s · plat · p1,3
+        « Et nous on craint quoi ? »
+
+    [S5_ECH_L248]  HOMME B · 2,6 s · plat · p1,4
+        « Le plafond. L'eau. Fevrier. »
+
+    [S5_ECH_L249]  HOMME A · 2,0 s · plat · p1,1
+        « Fevrier c'est loin. »
+
+    [S5_ECH_L250]  HOMME B · 2,4 s · plat · p1,2
+        « Fevrier est jamais loin. »
+
+    [S5_ECH_L251]  HOMME A · 2,8 s · plat · p1,0
+        « Bon. On remonte les peaux ou on les laisse ? »
+
+    [S5_ECH_L252]  HOMME B · 3,2 s · plat · p0,0
+        « On les laisse. Si quelqu'un passe, il verra qu'y a eu
+          quelque chose. »
+        dir : [OBL][NAR] LES 340 MUES SONT UN MESSAGE. Quelqu'un les a
+              laissees exprès pour que le suivant sache. [OBL] Lohen
+              est le suivant. Il ne comprend pas. Le joueur, si.
+              [OBL] Dissolution. Mix strictement plat. Aucune note.
+              [OBL] Le Mueur n'apparait jamais. CI `no-mueur`.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] 4 Echos post-Maree : exception R2 documentee, jamais expliquee
+[ ] « Novembre » : cite 2 fois dans le jeu, jamais decrit — interdit
+[ ] E20b : les 3 lettres de la gamelle restent illisibles, a jamais
+[ ] E20c : l'enfant n'est pas Sol, jamais confirme ni infirme
+[ ] E20d : le Mueur n'apparait pas, mix plat, CI `no-mueur`

@@ -1,0 +1,100 @@
+===============================================================================
+PN-033 — LE HARPON PLANTE DANS LA MAREE
+===============================================================================
+Asset : SM_S2_Harpon_Plante · S2, sur la Maree, a 25 m de la rive ·
+~01:44 · prop narratif · pas d'Echo · LOD0 1 200 tris
+
+§ 1 — CE QU'ON VOIT
+Un harpon de peche a la baleine, ancien, 1,90 m, hampe de frene, tete de
+fer forge a deux barbelures.
+Il est plante dans le verre, debout, a 62 degres.
+La pointe est entree de 14 cm. Autour, le verre est etoile de fractures
+blanches sur 40 cm. Ce n'est pas un impact unique : ce sont VINGT-TROIS
+impacts superposes. Quelqu'un a frappe vingt-trois fois au meme endroit,
+et la vingt-troisieme fois la pointe est restee.
+La hampe est fendue sur 60 cm. Elle a cede a la force des coups.
+Au sol, autour : des eclats de verre blanc, une centaine, projetes en
+etoile jusqu'a 3 m. Ils sont encore la. Il n'y a pas de vent qui les
+deplace, pas de pluie qui les lave. Ils sont dans la position exacte ou ils
+sont retombes.
+Et le trou fait 14 cm. La Maree fait, ici, 4 metres d'epaisseur.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 200 (harpon 500 + fractures 400 + eclats 300, 40 eclats en geometrie
++ 60 en billboard).
+Les fractures : shader `maree_glass` variante `fractured` (la meme que
+PN-020, la croix). [OBL] Les 23 impacts doivent etre modelises comme 23
+cratères superposes, pas comme une texture d'etoile. Le level artist doit
+pouvoir les compter en zoom. Cela demande une passe de sculpt dediee.
+La fente de la hampe : geometrie, 60 cm, avec les fibres du frene qui se
+separent.
+Shader `iron_forged` + `ash_wood_split`.
+Collision : capsule. [OBL] Le harpon n'est pas prenable. Lohen ne peut pas
+l'arracher, ni essayer, ni y toucher. Aucun prompt.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a essaye d'ouvrir la mer.
+Vingt-trois coups. Avec un harpon. A la main. Sur du verre de quatre metres.
+Il a gagne quatorze centimetres.
+Le geste humain : frapper. C'est le seul geste de VIOLENCE de tout le
+chapitre 1, et il est adresse a une matiere qui ne sent rien.
+[NAR] Ce prop est le portrait de Lohen avant qu'il n'arrive. C'est ce que
+font les gens. C'est ce qu'il va faire pendant 3 h 30, avec des questions
+au lieu d'un harpon.
+Tallec le dira en S4 : « Je ne t'aide pas a le trouver. Je t'aide a
+arreter. » Le joueur aura vu ce harpon deux heures plus tot.
+Le jeu ne fait jamais le lien. Il n'a pas besoin.
+
+§ 4 — ECHO
+NEANT. Sur la Maree (PN-011) et geste d'apres (PN-015). Troisieme double
+impossibilite du chapitre, apres PN-020 et PN-032.
+[ART] Les trois props les plus charges emotionnellement de S1-S2 — la
+croix, le pardessus, le harpon — sont les trois qui ne peuvent
+structurellement pas repondre. Ce n'est pas une coincidence : le systeme
+des Echos ne touche jamais au deuil lui-meme, seulement a la vie d'avant.
+
+§ 5 — MISE EN SCENE
+A 25 m de la rive, sur le chemin du retour, legerement a droite, visible.
+Le joueur arrive de 900 m de marche. Le harpon est la derniere chose de la
+Maree avant de retrouver la terre ferme.
+[ART] Sequence de retour composee en trois temps : le puits de chaleur
+(le monde ne repond pas), la main (les gens ne sont nulle part), le harpon
+(on a essaye quand meme). Trois props sur 900 m, aucun mot, aucune musique.
+C'est la these du chapitre livree sans une phrase.
+Lumiere : les fractures blanches sont la seule chose CLAIRE dans le cadre.
+Elles brillent, en bas, dans le noir. A contre-jour, elles s'allument.
+Les eclats projetes forment un halo blanc autour du point d'impact — le
+seul « halo » du jeu, et il est fait de debris.
+
+§ 6 — AUDIO
+SFX(glass_shard_crunch) : le joueur marche DANS les eclats. C'est le seul
+endroit du chapitre ou le sol crisse. Matiere `eclats_verre`, 8 variations,
+un son fin, aigu, desagreable. -14 dB.
+[ART] Le joueur entend qu'il marche sur la tentative de quelqu'un.
+SFX(iron_wind_low) : le vent sur la tete de fer, une note grave, 0,5 Hz,
+irreguliere, -27 dB.
+Aucune musique.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre de prendre, toucher ou arracher le harpon · faire
+frapper Lohen · ajouter un prompt · reveler qui a frappe · relier
+explicitement a Tallec ou a quiconque · nettoyer les eclats · fracturer le
+verre ailleurs (hors PN-020 et PN-033 : la Maree est intacte partout) ·
+faire commenter par un PNJ · en faire une arme, un outil, un objet
+utilisable, ici ou dans les six lettres suivantes.
+
+§ 8 — LIENS
+PN-020 (la croix : l'autre fracture, l'autre obstination, 45 minutes plus
+tot, et le joueur ne les relie probablement pas).
+PN-030 (le puits de chaleur). PN-031 (la main).
+TAL-DLG-311 (S4) : « Je ne t'aide pas a le trouver. Je t'aide a arreter. »
+PN-143 (LA LETTRE) : « Ne me cherche plus dans les objets, mon amour. »
+[THEME] FRAPPER CE QUI NE SENT RIEN. [THEME] LES GESTES D'APRES.
+
+§ 9 — DOD
+[ ] 23 cratères superposes, comptables en zoom, sculptes un par un
+[ ] Pointe entree de 14 cm exactement, hampe fendue sur 60 cm
+[ ] Une centaine d'eclats, positions de retombee, jamais deplaces
+[ ] Sol crissant : matiere eclats_verre, 8 variations, unique dans le jeu
+[ ] Aucune interaction, aucun prompt, aucun contact possible
+[ ] Seules fractures de la Maree du chapitre : PN-020 et PN-033, verifie

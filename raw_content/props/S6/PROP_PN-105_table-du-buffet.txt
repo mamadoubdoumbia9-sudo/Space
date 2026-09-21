@@ -1,0 +1,105 @@
+===============================================================================
+PN-105 — LA TABLE DU BUFFET, INTACTE
+===============================================================================
+Asset : SM_S6_Table_Buffet · S6, mur ouest de la salle de bal · ~04:49 ·
+prop narratif · pas d'Echo · LOD0 6 300 tris
+
+§ 1 — CE QU'ON VOIT
+Une table de banquet de 9 metres, dressee.
+Nappe blanche, tombante, repassee. Soixante-dix couverts. Assiettes de
+porcelaine a filet dore, verres a pied, couverts d'argent alignes au
+millimetre. Serviettes pliees en eventail.
+Des plats de service, vides. Des saucieres, vides. Des compotiers, vides.
+Trois candelabres, eteints.
+Tout est en place. Rien n'a bouge.
+[OBL] Il n'y a pas de nourriture. Il n'y en a jamais eu : c'est un service
+dresse AVANT le service, pas un repas abandonne. Il n'y a pas une miette,
+pas une tache, pas un verre a moitie bu.
+La nappe est blanche. Elle a jauni legerement, uniformement, en trois ans.
+La poussiere s'est deposee dessus : une couche fine, reguliere, non
+derangee.
+[OBL] Sauf a un endroit. A l'extremite droite de la table, il y a un
+rond propre dans la poussiere. Le diametre d'une assiette.
+Quelqu'un a pris une assiette, une fois, il y a longtemps.
+Il n'y a que soixante-neuf assiettes.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 6 300 (table + nappe 1 800 + 70 couverts a 62 tris + candelabres).
+[OBL] La nappe est sculptee, avec ses plis de repassage encore visibles en
+geometrie (les marques de pliage en croix, tous les 60 cm).
+Les 70 couverts : 1 module de couvert (assiette + 3 verres + 4 pieces +
+serviette), instancie 69 fois, avec des rotations de +/- 2 degres.
+[OBL] Un couvert manque. Le 70e emplacement est vide, avec le rond propre.
+La poussiere : shader `dust_settled`, masque procedural + un decal circulaire
+de 24 cm pour le rond propre.
+L'argenterie : shader `silver_tarnished`, avec un ternissement plus fort
+sur les pieces exposees. [OBL] L'argent noircit differemment selon qu'il
+touche la nappe ou pas.
+Collision : boite unique. [OBL] Rien n'est prenable. Aucun couvert ne bouge.
+
+§ 3 — CE QUE CA DIT
+Il y avait un bal le 14 octobre. La table etait dressee pour soixante-dix.
+Le bal n'a pas eu lieu.
+Le geste humain : plier soixante-dix serviettes en eventail.
+[OBL] Quelqu'un a passe des heures a dresser cette table. Le soir meme.
+Et personne n'est venu.
+Le rond propre a l'extremite : quelqu'un a pris UNE assiette, apres.
+[NAR] Sol. Ou quelqu'un d'autre. [OBL] Jamais dit.
+Une seule assiette, sur soixante-dix, prise une fois.
+[OBL] Il n'a pas pris les couverts d'argent. Il n'a pas pris les verres.
+Il n'a pas renverse la table. Il a pris une assiette.
+
+§ 4 — ECHO
+NEANT. [OBL] C'est le refus le plus contre-intuitif de S6.
+Une salle de bal, une table dressee pour 70, un soir de fete annule : c'est
+l'endroit le plus evident du chapitre pour un Echo de foule.
+Il n'y en a pas. [OBL] Parce que le bal n'a pas eu lieu. Il n'y a rien a
+rejouer. Les Echos montrent ce qui a ete, pas ce qui aurait du etre.
+[ART] C'est la regle la plus subtile du systeme et elle n'est enoncee
+nulle part. E21 (PN-112) montre autre chose, cf. sa fiche.
+
+§ 5 — MISE EN SCENE
+Le long du mur ouest, sur 9 m. Le joueur passe devant.
+[OBL] La table est eclairee par les lustres (PN-101). Le blanc de la nappe
+et l'argent renvoient la lumiere : c'est la zone la plus claire de la salle.
+[ART] Neuf metres de blanc et d'argent, dresses pour soixante-dix personnes,
+sous trois lustres allumes, dans une ville vide.
+Aucun plan, aucune camera, aucun ralenti, aucun prompt.
+[OBL] Le rond propre est a l'extremite droite, donc au bout du parcours. Le
+joueur longe 9 m de perfection et trouve un trou a la fin.
+Taux de detection du rond : 51-64 %.
+
+§ 6 — AUDIO
+NEANT propre. [OBL] La table est totalement muette. Aucun tintement, aucun
+cristal, aucun frottement.
+[ART] Soixante-dix couverts de verre et d'argent, et pas un son. Le
+contraste avec les pampilles des lustres (PN-101), qui tintent en
+permanence, est deliberé.
+M21 joue, spatialisee depuis le piano a 22 m.
+
+§ 7 — INTERDICTIONS
+Interdit de : prendre un couvert · casser un verre · deranger la nappe ·
+ajouter de la nourriture · ajouter une tache · ajouter un verre bu ·
+ajouter une chaise renversee · compter autrement que 69 + 1 manquant ·
+expliquer qui a pris l'assiette · donner un Echo · faire un Echo de bal ·
+ajouter un son de vaisselle · ajouter des mouches, des insectes, des rats.
+
+§ 8 — LIENS
+PN-106 (le carton d'invitation, sur la table). PN-109 (la pendule arretee a
+23h41). PN-112 (le sol apres l'Echo).
+PN-090 (la reserve de Sol : il mange dans des boites de conserve, avec une
+assiette de porcelaine a filet dore).
+[OBL] Le joueur qui a vu la reserve en S5 et le rond propre en S6 peut
+faire le lien. Il n'y a pas d'assiette visible dans la reserve : elle est
+ailleurs, dans un endroit du jeu qu'on ne visite pas.
+[THEME] CE QUI N'A PAS EU LIEU.
+
+§ 9 — DOD
+[ ] 9 m, 69 couverts poses + 1 emplacement vide
+[ ] Nappe sculptee avec marques de pliage en croix tous les 60 cm
+[ ] 70 serviettes en eventail, rotations +/- 2 degres
+[ ] Rond propre de 24 cm dans la poussiere, extremite droite
+[ ] Argent terni differemment selon le contact avec la nappe
+[ ] Zero nourriture, zero tache, zero verre entame
+[ ] Silence total, aucun tintement
+[ ] Aucun Echo de bal, jamais

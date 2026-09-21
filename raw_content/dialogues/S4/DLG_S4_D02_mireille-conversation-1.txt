@@ -1,0 +1,190 @@
+===============================================================================
+DLG · S4 · D02 — MIREILLE, PREMIERE CONVERSATION : LA MAIN DANS LA MANCHE
+32 entrees, toutes S4. MIR 20 · LOH 12. Contribution : 32.
+Reference maitre : 09.13 « Trois conversations, dont une ou elle ment. »
+Props : PN-085 (la chaise de Mireille), PN-067 (casier 4, rangee M).
+Gestes : M1 (tourner la tasse de 90 deg), M2 (cacher la main brulee).
+===============================================================================
+
+--- LE PERSONNAGE ---------------------------------------------------------------------
+
+Mireille Vandeck, 58 ans, archiviste. Main droite brulee — elle ecrit de
+la gauche. Elle a trace les 200 croix rouges de l'affiche PN-003 et
+personne dans le jeu ne le dit jamais.
+
+[OBL] GESTE M1 : elle tourne sa tasse de 90 degres avant chaque gorgee.
+Toujours dans le meme sens. 31 fois dans la sequence. Personne ne le
+commente. C'est modelise, anime, et compte.
+[OBL] GESTE M2 : elle rentre sa main droite dans sa manche des qu'une
+conversation devient personnelle. 9 fois. Le joueur finira par le lire
+comme un signal. C'est le but, et ce n'est jamais explique.
+
+[OBL] Mireille reste ASSISE de toute la sequence sauf 22 secondes
+(D07, quand elle va chercher la cle). Le comedien enregistre assis
+(13.33).
+
+--- LES 32 LIGNES -----------------------------------------------------------------------
+
+    [S4_MIR_L019]  MIREILLE · 2,0 s · plat · p1,1
+        « Vous etes remonte. Personne ne remonte le meme jour. »
+        dir : M1 avant la ligne.
+
+    [S4_LOH_L020]  LOHEN · 1,4 s · plat · p0,8
+        « J'ai trouve le metier. »
+
+    [S4_MIR_L021]  MIREILLE · 1,6 s · surpris · p1,0
+        « Deja ? »
+
+    [S4_LOH_L022]  LOHEN · 1,8 s · plat · p0,7
+        « Accordeur. C'etait dans la liste des metiers rares. »
+
+    [S4_MIR_L023]  MIREILLE · 2,4 s · plat · p1,3
+        « Il y a onze metiers rares et neuf d'entre eux n'existent
+          plus. »
+
+    [S4_MIR_L024]  MIREILLE · 2,8 s · plat · p0,9
+        « Asseyez-vous. Vous me faites mal au cou. »
+        dir : [OBL] il y a une deuxieme chaise. Elle est la depuis le
+              debut. Elle n'etait pas la avant la Maree : c'est la
+              chaise de quelqu'un. Prop PN-085 bis. Personne ne le dit.
+
+    [S4_LOH_L025]  LOHEN · 1,0 s · plat · p1,2
+        « Merci. »
+
+    [S4_MIR_L026]  MIREILLE · 2,2 s · sec · p0,8
+        « Du the. Il est mauvais. Je le fais mauvais exprès pour qu'on
+          ne revienne pas. »
+
+    [S4_LOH_L027]  LOHEN · 1,2 s · plat · p0,9
+        « Ca marche ? »
+
+    [S4_MIR_L028]  MIREILLE · 1,6 s · plat · p1,4
+        « Vous etes la. »
+        dir : M1. [OBL] Elle boit son propre the mauvais. Tous les
+              jours. Le joueur peut le voir 31 fois.
+
+    -- Le canon 12.13 commence ici --
+
+    [S4_MIR_L029]  MIREILLE · 3,2 s · plat · p1,0
+        « Vous avez les mains d'un homme qui touche trop de choses. »
+        dir : [OBL] CANON 12.13, premiere ligne. [NAR] Le mot
+              « mains » est le mot-motif d'Esteban (la lettre entiere
+              tourne autour des mains de Lohen). Mireille le prononce
+              trois heures avant. Elle ne sait rien. C'est une
+              coincidence de vieille dame observatrice, et c'est plus
+              fort que si elle savait.
+
+    [S4_LOH_L030]  LOHEN · 1,2 s · plat · p0,9
+        « C'est mon travail. »
+
+    [S4_MIR_L031]  MIREILLE · 4,2 s · plat · p1,1
+        « Non. Votre travail, c'est de porter. Toucher, c'est autre
+          chose. Toucher, c'est de la gourmandise. »
+        dir : CANON. 4,2 s, sous le plafond de 4,5.
+
+    [S4_LOH_L032]  LOHEN · 1,4 s · plat · p0,8
+        « Vous en avez lu, vous ? »
+        dir : CANON. [OBL] « en » = des Echos. Le mot « Echo » n'est
+              jamais prononce par un personnage du jeu. Jamais. Ils
+              disent « en lire un », « toucher », « ca ». Job CI
+              `no-echo-word` : le mot n'apparait dans aucun texte
+              affiche ni aucune VO.
+
+    [S4_MIR_L033]  MIREILLE · 2,6 s · retenu · p1,3
+        « Un. Une fois. Ca suffit largement. »
+        dir : CANON. M2 juste avant la ligne : elle cache sa main
+              brulee. 1re des 9 occurrences.
+
+    [S4_LOH_L034]  LOHEN · 1,6 s · plat · p1,0
+        « Qu'est-ce que vous avez vu ? »
+        dir : CANON.
+
+    [S4_MIR_L035]  MIREILLE · 2,8 s · plat · p0,7
+        « Rien que je ne savais deja. C'est ca le pire, jeune homme. »
+        dir : CANON.
+
+    [S4_MIR_L036]  MIREILLE · 3,4 s · plat · p0,9
+        « On ne trouve jamais rien de neuf la-dedans. »
+        dir : CANON.
+
+    [S4_MIR_L037]  MIREILLE · 3,0 s · plat · p1,6
+        « On trouve seulement la meme chose, mais en plus fort. »
+        dir : [OBL] CANON. C'est la definition du systeme d'Echos du
+              point de vue d'un personnage, et c'est aussi la
+              definition du deuil. Elle la donne en buvant du mauvais
+              the. Pause 1,6 s ecrite (« un temps » du maitre).
+
+    [S4_MIR_L038]  MIREILLE · 3,6 s · plat · p0,8
+        « Le dossier que vous cherchez existe. Casier 4, rangee M,
+          troisieme tiroir. »
+        dir : [OBL] CANON. C'est l'information. Elle la donne tout de
+              suite, gratuitement, sans epreuve. [OBL] Aucune quete
+              de faveur, aucun service a rendre. Ce jeu ne monnaie pas
+              l'information.
+
+    [S4_LOH_L039]  LOHEN · 0,8 s · plat · p1,0
+        « Merci. »
+        dir : CANON.
+
+    [S4_MIR_L040]  MIREILLE · 1,8 s · sec · p1,2
+        « Ne me remerciez pas encore. »
+        dir : CANON.
+
+    [S4_LOH_L041]  LOHEN · 1,0 s · plat · p0,9
+        « Pourquoi ? »
+        dir : CANON.
+
+    [S4_MIR_L042]  MIREILLE · 4,4 s · plat · p0,0
+        « Parce que je viens de vous mentir sur une chose, et que vous
+          allez mettre trois heures a comprendre laquelle. »
+        dir : [OBL] CANON, derniere ligne de 12.13. 4,4 s : a egalite
+              avec S3_TAL_L108 pour la plus longue ligne du chapitre.
+              [OBL] M1 APRES la ligne, pas avant. Elle tourne sa tasse
+              et boit. Elle ne le regarde pas partir.
+              [NAR] LE MENSONGE : ce n'est pas le casier (il est exact).
+              C'est « Un. Une fois. » (L033). Elle en a lu neuf. La
+              reponse est dans PN-085 et dans E13, et elle n'est jamais
+              dite a voix haute par personne.
+
+    -- Les 8 lignes d'apres-canon (extension) --
+
+    [S4_LOH_L043]  LOHEN · 1,4 s · plat · p1,1
+        « Vous allez me dire laquelle ? »
+
+    [S4_MIR_L044]  MIREILLE · 1,2 s · sec · p1,3
+        « Non. »
+
+    [S4_LOH_L045]  LOHEN · 1,8 s · plat · p0,9
+        « Alors pourquoi me le dire ? »
+
+    [S4_MIR_L046]  MIREILLE · 3,8 s · plat · p1,4
+        « Parce que je suis vieille et que je ne veux pas mourir en
+          ayant menti sans le dire. Le dire suffit. »
+        dir : M2, 2e occurrence.
+
+    [S4_LOH_L047]  LOHEN · 1,6 s · plat · p1,0
+        « C'est pas une vraie confession, ca. »
+
+    [S4_MIR_L048]  MIREILLE · 2,4 s · sec · p1,2
+        « Non. C'en est une petite. J'en fais tous les jours. »
+
+    [S4_LOH_L049]  LOHEN · 1,2 s · plat · p0,8
+        « A qui ? »
+
+    [S4_MIR_L050]  MIREILLE · 3,0 s · plat · p0,0
+        « Aux gens qui entrent. Vous etes le troisieme ce mois-ci. »
+        dir : [OBL] fin du document. Elle ment aussi la-dessus : Lohen
+              est le premier depuis six semaines. Le registre des
+              entrees (PN-072) est lisible et donne la date de la
+              derniere visite. 9 % des joueurs iront verifier. Le jeu
+              ne les felicite pas.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] 12.13 reproduit mot pour mot
+[ ] M1 : 31 occurrences, meme sens, jamais commentees
+[ ] M2 : 9 occurrences, jamais expliquees
+[ ] Le mot « Echo » n'est prononce par aucun personnage — CI `no-echo-word`
+[ ] L038 : information donnee gratuitement, aucune contrepartie
+[ ] Le mensonge est L033, jamais revele a voix haute
+[ ] PN-072 verifiable et contredit L050

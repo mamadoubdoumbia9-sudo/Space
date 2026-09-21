@@ -1,0 +1,36 @@
+{
+  "commentaire": "12.06 INTERRUPTION — chaque PNJ majeur a 3 lignes d'abandon ecrites. Le joueur peut s'eloigner pendant un dialogue non scripte : le personnage s'arrete au milieu de sa phrase. Ces lignes ne sont jamais des reproches, ce sont des gens qui ont l'habitude qu'on parte.",
+  "version": 1,
+  "abandons": {
+    "TALLEC": [
+      {"id": "S3_TALLEC_AB1", "text": "…Bon. Tu reviendras quand tu auras fini de courir.", "direction": "il ne se retourne pas, continue de nettoyer sa prothese"},
+      {"id": "S3_TALLEC_AB2", "text": "Je ne t'aide pas a le trouver. Je t'aide a arreter. Tu fais ce que tu veux.", "direction": "deux coups secs sur la prothese"},
+      {"id": "S3_TALLEC_AB3", "text": "Voila. Encore un qui part avant la fin de la phrase.", "direction": "il s'assoit de travers, jamais face a la porte"}
+    ],
+    "MIREILLE": [
+      {"id": "S4_MIREILLE_AB1", "text": "…Le the va refroidir.", "direction": "elle tourne sa tasse de 90 degres, ne boit pas"},
+      {"id": "S4_MIREILLE_AB2", "text": "Ce n'est pas grave. Les gens partent toujours au mauvais endroit de la phrase.", "direction": "elle regarde le point de fuite"},
+      {"id": "S4_MIREILLE_AB3", "text": "Si tu reviens, la fiche sera encore la. Elles ne bougent pas, elles.", "direction": "elle cache sa main brulee dans sa manche"}
+    ],
+    "SOL": [
+      {"id": "S3_SOL_AB1", "text": "He ! Je parlais, la.", "direction": "Sol s'arrete net, parfaitement immobile"},
+      {"id": "S5_SOL_AB2", "text": "Tu fais comme les grands, tu t'en vas quand ca devient interessant.", "direction": "se balance d'un pied sur l'autre"},
+      {"id": "S8_SOL_AB3", "text": "Moi je reste. J'ai rien d'autre a faire que d'etre la.", "direction": "ne suit pas, attend"}
+    ],
+    "VERRIER": [
+      {"id": "S7_VERRIER_AB1", "text": "", "direction": "il ne parle pas. Il tend la main, encore, vers l'endroit ou tu etais."},
+      {"id": "S7_VERRIER_AB2", "text": "", "direction": "sa machoire est prise. Il pose le dossier par terre, a plat, bien aligne."},
+      {"id": "S7_VERRIER_AB3", "text": "", "direction": "il reste a genoux. Il ne se relevera pas avant que tu reviennes."}
+    ],
+    "LOHEN_VO": [
+      {"id": "VO_AB1", "text": "…Je reviens. Je reviens toujours.", "direction": "voix interieure, souffle court"},
+      {"id": "VO_AB2", "text": "Pas maintenant.", "direction": "voix interieure"},
+      {"id": "VO_AB3", "text": "Il y a autre chose a voir, d'abord.", "direction": "voix interieure"}
+    ],
+    "DEFAUT": [
+      {"id": "GEN_AB1", "text": "…", "direction": "la personne s'arrete au milieu de sa phrase, regarde l'endroit vide"},
+      {"id": "GEN_AB2", "text": "On finira plus tard.", "direction": "haussement d'epaules"},
+      {"id": "GEN_AB3", "text": "Comme tu veux.", "direction": "retour au travail"}
+    ]
+  }
+}

@@ -1,0 +1,210 @@
+===============================================================================
+LOHEN — ANNEXE B — VALIDATION CROISEE DES 147 PROPS NARRATIFS
+Document de cloture. A lire apres INDEX_PROPS_NARRATIFS.txt.
+===============================================================================
+
+0 — ETAT DE LIVRAISON
+-------------------------------------------------------------------------------
+147 fiches autonomes, une par prop, reparties en 8 dossiers.
+Chaque fiche comporte les 10 sections obligatoires du standard (IDENTITE,
+§1 CE QU'ON VOIT, §2 FICHE TECHNIQUE, §3 CE QUE CA DIT, §4 ECHO,
+§5 MISE EN SCENE, §6 AUDIO, §7 INTERDICTIONS, §8 LIENS, §9 DOD).
+Aucune section vide. Tout NEANT est justifie.
+
+  S1  Les quais bas ............ 22  PN-001 a PN-022
+  S2  Le verre et le bateau .... 15  PN-023 a PN-037
+  S3  Le marche suspendu ....... 28  PN-038 a PN-065
+  S4  La Bibliotheque des Eaux . 20  PN-066 a PN-085
+  S5  Les Conduits ............. 14  PN-086 a PN-099
+  S6  La salle de bal .......... 13  PN-100 a PN-112
+  S7  La Descente .............. 16  PN-113 a PN-128
+  S8  La montee au Phare ....... 19  PN-129 a PN-147
+
+===============================================================================
+1 — LES REGLES IMPLICITES DU SYSTEME D'ECHOS
+Jamais enoncees en jeu. Deduites par le joueur. Absolues en production.
+===============================================================================
+
+R1  Rien sur la Maree. Le verre ne garde pas, il prend.
+    Etablie : PN-011. Etendue au verre non-Maree : PN-116, PN-128, PN-135.
+
+R2  Rien d'apres le 14 octobre. Les Echos ne montrent que l'avant.
+    Etablie : PN-015. Appliquee 31 fois.
+
+R3  Un Echo exige un proprietaire unique. Les objets collectifs ne gardent
+    rien. Etablie : PN-016. Verifiable sur les 31.
+
+R4  Aucun objet d'un personnage vivant ne porte d'Echo.
+    Etablie : PN-046. Exception unique et assumee : E13 (PN-067, Mireille),
+    justifiee par le fait qu'elle a cesse le geste montre.
+
+R5  Aucun Echo ne contient d'animal. Etablie : PN-029. Zero exception.
+
+R6  Aucune silhouette de moins de 1,20 m. Etablie : PN-007.
+    EXCEPTION UNIQUE DU JEU : E23, la fille d'Anselme Roux, 1,15 m (PN-117).
+
+R7  Les Echos montrent ce qui a ete, jamais ce qui aurait du etre.
+    Etablie : PN-105 (le bal), confirmee : PN-107 (le gilet).
+
+R8  Distance minimale entre deux Echos : 25 m ou 90 s de jeu.
+    Etablie : PN-035. Exception validee : E16/E17 (altitudes differentes).
+
+R9  Aucun Echo dans un rayon de 10 m d'un portail de streaming.
+    Contrainte technique, jamais justifiee narrativement : PN-099.
+
+R10 Plafond de 17 silhouettes. Etabli : E01.
+    EXCEPTION UNIQUE : E22, 43 silhouettes, ou la masse est le sujet (PN-113).
+
+===============================================================================
+2 — LES SEPT FAUX POSITIFS
+Props cochant tous les criteres d'un Echo et n'en portant pas, places
+deliberement pour empecher le systeme de devenir previsible.
+===============================================================================
+  1  PN-019  Le panier de linge (S1)
+  2  PN-022  Le miroir de barbier (S1)
+  3  PN-028  Les bouees de verre (S2)
+  4  PN-032  Le pardessus plie (S2)
+  5  PN-036  Les seaux en cercle (S2)
+  6  PN-040  Le piano cadenasse (S3)
+  7  PN-041  La boite aux lettres ambre (S3)
+Apres PN-041, le joueur a integre le systeme. Les refus suivants
+(PN-039, PN-057, PN-063, PN-107, PN-124, PN-139) sont percus comme des
+refus, plus comme des erreurs de lecture.
+
+===============================================================================
+3 — LES TROIS OCCURRENCES DE #FFA33C
+CI `amber-guard`. Toute quatrieme occurrence fait echouer le build.
+===============================================================================
+  PN-041  La boite aux lettres repeinte      02:08   surface
+  PN-107  Le lisere du gilet d'Esteban       04:52   surface (geometrie)
+  PN-137  Le verre de la lampe a huile       06:22   LUMIERE
+Ecart entre la 1re et la 2e : 2 h 44. Entre la 2e et la 3e : 1 h 30.
+Huit fiches contiennent une INTERDICTION explicite d'usage de la valeur
+(PN-009, PN-018, PN-025, PN-043, PN-051, PN-086, PN-099, PN-101).
+
+===============================================================================
+4 — LES TROIS SEULS PROPS COMMENTES PAR UN PERSONNAGE
+Les 144 autres ne sont jamais mentionnes par qui que ce soit.
+===============================================================================
+  PN-046  L'ancre du harnais   par Tallec    TAL-DLG-338   5 phrases
+  PN-052  La veste de Sol      par Sol       SOL-DLG-472   3 lignes
+  PN-067  Le tiroir / la chaise par Mireille MIR-DLG-389   3 phrases
+Aucune des trois ne peut faire l'objet d'une question du joueur : il
+n'existe aucune option de dialogue correspondante.
+
+===============================================================================
+5 — LES ONZE PROPS A TEXTE LISIBLE
+===============================================================================
+  PN-003  L'affiche 641 NOMS                    641 noms, 200 croix
+  PN-010  Le tampon dateur                      22 lignes + « HIRON »
+  PN-013  Le tableau des marees                 « MER BELLE. RIEN A SIGNALER. »
+  PN-027  Le carnet de bord                     4 lignes, « 23h4 »
+  PN-058  Le tableau de rationnement            11 noms, 1 barre
+  PN-064  La pancarte                           « NE PAS DESCENDRE »
+  PN-077  Le registre volume 3                  22 noms, 1 « PERSONNE »
+  PN-081  Le certificat de deces                signature vide
+  PN-106  Le carton d'invitation                « il ne viendra pas »
+  PN-120  La lettre de Mireille                 7 lignes, non signee
+  PN-143  LA LETTRE                             recto-verso, signee
+Plus deux textes hors quota, courts et non narratifs : PN-123 (2e etat de
+PN-003), PN-139 (314 fois le meme nombre), PN-108 (7 lignes de liste),
+PN-111 (deux caracteres), PN-132 (trois inscriptions de 1871).
+
+===============================================================================
+6 — LES NEUF RAMASSABLES
+===============================================================================
+  1  PN-009  La lampe-tempete        00:21   posee definitivement en S5
+  2  PN-018  Le jeton 0114           00:40   consomme en S8 (PN-141)
+  3  PN-046  L'ancre de Tallec       02:27   gardee, sans fonction
+  4  PN-059  Les six lettres         02:32   jamais sorties de la sacoche
+  5  PN-108  La liste d'Esteban      04:53   gardee, consultable
+  6  PN-119  Le dossier de Mireille  05:34   garde, jamais ouvert
+  7  PN-121  Un objet des Figures    05:41   un seul sur onze, sans fonction
+  8  PN-142  La pierre plate         06:27   ramassee puis reposee
+  9  PN-143  LA LETTRE               06:28   gardee, non reconsultable
+Aucun des neuf n'a de fonction mecanique. Aucun n'apparait dans un menu :
+il n'y a pas d'inventaire.
+
+===============================================================================
+7 — LES QUATRE COMPTAGES, JAMAIS EXPLIQUES, JAMAIS RELIES
+===============================================================================
+  PN-036   38 barres gravees sur des seaux         S2
+  PN-061   73 encoches sur un cadre de puits       S3
+  PN-089    4 marques a la craie au-dessus d'un lit S5
+  PN-131  411 barres gravees dans du mortier       S8
+Et, hors comptage mais de meme nature : PN-051 (38 couches de peinture),
+PN-139 (314 feuilles).
+
+===============================================================================
+8 — LES SIX ECRITURES DU CHAPITRE
+Le joueur en voit cinq avant la lettre. La sixieme est la lettre.
+===============================================================================
+  1  Lohen                PN-005                    minute zero
+  2  Le fonctionnaire     PN-008                    00:21
+  3  Le patron du bateau  PN-027                    01:20
+  4  Mireille (gauche)    PN-077, PN-081, PN-119, PN-120
+  5  Le graveur / divers  PN-058, PN-064, PN-089
+  6  ESTEBAN              PN-108, PN-111, PN-139, PN-143
+L'ecriture d'Esteban est definie a 04:53 (PN-108) et reconnue a 06:28.
+Meme calligraphe, meme plume, inclinaison 14 degres. Coherence obligatoire.
+
+===============================================================================
+9 — LES CINQ MECANISMES ARRETES
+===============================================================================
+  PN-055  L'horloge du clocher            4h15
+  PN-084  Le compteur d'eau               47 291,3 m3
+  PN-097  Le compteur electrique          disque a 40 % de tour
+  PN-109  La pendule de la salle de bal   23h41 (la seule)
+  PN-134  La machinerie du Phare          poids en bas, compteur entre deux
+Une ville ne meurt pas d'un evenement. Elle meurt d'une serie d'arrets.
+
+===============================================================================
+10 — LES NEUF CREUX LAISSES PAR LES CORPS
+===============================================================================
+  PN-021  Le 9e barreau poli               PN-072  Le banc, 2 creux a 46 cm
+  PN-026  La roue, 10 h et 2 h             PN-085  La chaise de Mireille
+  PN-043  Le comptoir, 2 coudes a 42 cm    PN-124  Le banc, 2 creux a 51 cm
+  PN-060  Le fauteuil du barbier           PN-129  La premiere marche, 4 cm
+  PN-142  (aucun — c'est le contre-exemple)
+Progression des bancs a deux places : PN-043 (rires), PN-072 (une main
+touchee 1,2 s), PN-124 (une main posee, jamais prise). Jamais relies.
+
+===============================================================================
+11 — LES SCRIPTS DE VALIDATION A EXECUTER EN CI
+===============================================================================
+V1  `amber-guard`   — #FFA33C present sur exactement 3 assets.
+V2  `victims-csv`   — coherence croisee de content/victims_641.csv avec
+                      PN-003, PN-012, PN-038, PN-058, PN-059, PN-077,
+                      PN-081, PN-118, PN-123.
+                      Verifie : 200 croix en S1, 201 en S7, MAREK Esteban
+                      jamais barre, les deux ROUX jamais barres.
+V3  `echo-rules`    — aucun Echo ne viole R1 a R10. Distances verifiees.
+V4  `handwriting`   — les 4 props de la main d'Esteban utilisent le meme
+                      jeu de glyphes source.
+V5  `no-bird`       — zero fichier audio contenant bird/gull/wing/chirp/caw.
+V6  `no-religion`   — zero occurrence de Dieu/priere/ame/au-dela dans les
+                      1 400 lignes de dialogue.
+V7  `no-prosthesis` — zero occurrence de bras/main/prothese/accident dans
+                      les dialogues (PN-047).
+V8  `no-mueur`      — zero occurrence de « Mueur » dans tous les textes du
+                      chapitre 1 (PN-094).
+V9  `budget-props`  — somme des LOD0 des 147 props <= 486 000 tris,
+                      poids texture <= 64 Mo.
+V10 `perf-adreno`   — 30 fps sur Adreno 640 aux 5 points les plus couteux :
+                      PN-023 (1,9 ms), PN-066 (1,4 ms), PN-101 (2,1 ms),
+                      PN-122 (2,4 ms), PN-135 (3,1 ms).
+
+===============================================================================
+12 — LES QUATRE INTERDITS DE FIN
+Rappel du BLOC 21.08 applique a l'annexe B.
+===============================================================================
+  1  Ne jamais expliquer la Maree. Aucun temoin, aucune analyse, aucun
+     presage. Le carnet de bord (PN-027) est le document le plus proche de
+     l'evenement et il ne contient aucune information sur l'evenement.
+  2  Ne jamais barrer MAREK Esteban. PN-003 et PN-123.
+  3  Ne jamais allumer le Phare. PN-134, PN-135, PN-146.
+  4  Ne jamais rendre la fin plus heureuse. PN-147.
+
+===============================================================================
+FIN DE L'ANNEXE B — 147 props, 16 755 lignes avec l'index.
+===============================================================================

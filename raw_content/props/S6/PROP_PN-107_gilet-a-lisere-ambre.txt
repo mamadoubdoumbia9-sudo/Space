@@ -1,0 +1,135 @@
+===============================================================================
+PN-107 — LE GILET A LISERE AMBRE D'ESTEBAN
+===============================================================================
+Asset : SM_S6_Gilet_Esteban · S6, derriere la cinquieme paire de rideaux ·
+~04:52 · PROP MAJEUR · 2 DES 3 PROPS PORTANT #FFA33C · pas d'Echo ·
+LOD0 3 800 tris
+
+§ 1 — CE QU'ON VOIT
+Derriere le rideau ferme, dans l'espace de 60 cm entre le velours et la
+fenetre, il y a un portemanteau. Un simple portemanteau de bois, a pied,
+avec quatre patères.
+Il y a un gilet dessus.
+Un gilet d'homme, de costume. Laine fine, gris sombre, cinq boutons, deux
+poches, un dos de satin avec une boucle de reglage.
+Sur les bords — l'encolure, les emmanchures, les bords de poches, la
+boutonniere — il y a un LISERE. Un passepoil, de 3 mm.
+Il est ambre. #FFA33C.
+[OBL] C'est la deuxieme occurrence de cette couleur dans le chapitre. La
+premiere etait la boite aux lettres repeinte (PN-041), il y a 2 h 44.
+Le gilet est propre. Brosse. Il n'a pas trois ans de poussiere.
+Il est boutonne. Tous les cinq boutons. Sur un portemanteau.
+[OBL] On ne boutonne pas un gilet qu'on accroche. On le boutonne quand on
+le prepare pour quelqu'un.
+Dans la poche gauche, il y a quelque chose. Un coin de papier depasse.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 800 (gilet sculpte 2 900 + portemanteau 900).
+[OBL] Le gilet est SCULPTE dans sa forme portee — il a la forme d'un torse,
+pas celle d'un tissu qui pend. Il garde la memoire du corps.
+[OBL] Le lisere ambre : c'est une GEOMETRIE separee (un tube de 3 mm suivant
+tous les bords, 1 100 tris), avec son propre materiau. Ce n'est pas une
+bande dans la texture.
+Justification : le passepoil doit accrocher la lumiere en relief et etre
+identifiable a 4 m dans la penombre rouge derriere le rideau.
+[OBL] Couleur exacte #FFA33C = (1.000, 0.639, 0.235) sRGB. Aucune variation,
+aucun gradient, aucun bruit. Verifie par la CI `amber-guard`.
+[OBL] CRITIQUE : l'espace derriere le rideau est eclaire en ROUGE (la
+lumiere traverse le velours). Un ambre sous une lumiere rouge devient
+orange-rouge et se confond.
+Solution imposee : la fenetre derriere n'est pas entierement couverte par
+le rideau — un interstice de 6 cm sur le cote laisse passer la lumiere
+doree des lustres reflechie par la vitre. [OBL] Cet interstice est calibre
+pour eclairer EXACTEMENT le gilet, et rien d'autre.
+Le joueur voit un gilet gris dans une lumiere rouge, avec un lisere ambre
+qui brille dans un rai dore de 6 cm.
+Anim : NEANT. [OBL] Aucune. Le gilet ne bouge pas.
+
+§ 3 — CE QUE CA DIT
+[OBL] Le joueur n'a jamais vu Esteban porter cette couleur. Il n'a vu
+l'ambre qu'une fois, sur une boite aux lettres, il y a presque trois heures.
+Il ne sait toujours pas que c'est la couleur d'Esteban.
+[OBL] Et le jeu ne le lui dira JAMAIS explicitement. Aucun dialogue, aucun
+texte, aucune voix off ne dit « l'ambre, c'etait sa couleur ».
+[NAR] Ce qui le lui dit, c'est la lettre (PN-143), a 3 h 25 de la, et
+seulement s'il y pense.
+Le gilet est boutonne sur un portemanteau, derriere un rideau, dans une
+salle de bal ou le bal n'a pas eu lieu, le 14 octobre.
+Esteban devait aller au bal. Il a prepare son gilet. Il l'a boutonne. Il
+l'a accroche.
+Il n'y est pas alle.
+[OBL] Pourquoi : jamais explique. Le carton (PN-106) dit « il ne viendra
+pas », ecrit par quelqu'un d'autre, sur une invitation vierge.
+[OBL] Les deux props ne sont jamais relies par le jeu.
+
+§ 4 — ECHO
+NEANT. [OBL] C'est le refus le plus violent du chapitre apres PN-039.
+Le joueur trouve un vetement d'Esteban, personnel, charge, boutonne. Le
+systeme a passe 4 h 52 a lui apprendre que ce genre d'objet repond.
+Aucun prompt n'apparait.
+[OBL] Justification interne, jamais enoncee : Esteban n'a jamais porte ce
+gilet. Il l'a prepare et il n'est pas venu. Il n'y a pas de moment a
+rejouer. Comme la table du buffet (PN-105) : les Echos montrent ce qui a
+ete, pas ce qui aurait du etre.
+[ART] Le joueur ne comprendra pas pourquoi il n'y a pas d'Echo. Il sera
+frustre. C'est correct.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur ecarte le rideau (PN-104, LOH-ACT-201). Le velours se
+referme derriere lui. Le monde s'etouffe (RT60 0,6 s, M21 a -11 dB).
+Il est dans 60 cm de large, dans une lumiere rouge, devant un portemanteau.
+[OBL] LOH-ACT-206 se declenche : 2,6 secondes de perte de controle.
+[OBL] TROISIEME et derniere perte de controle non mecanique du chapitre,
+apres LOH-ACT-166 (la veste, S2) et LOH-ACT-208 (la photo, S3).
+Il s'arrete. Il ne bouge pas. La camera ne bouge pas.
+[OBL] La duree augmente a chaque fois : 1,8 s / 6,3 s / 2,6 s. [OBL] NON.
+Corriger : 1,8 s (veste) / 6,3 s (photo) / 2,6 s (gilet). La troisieme est
+plus courte que la deuxieme. C'est voulu : il s'habitue. Il est plus dur.
+Puis il recupere le controle.
+[OBL] Il ne touche pas le gilet. Il ne le decroche pas. Il ne le prend pas.
+[OBL] Mais il peut prendre ce qu'il y a dans la poche : PN-108.
+
+§ 6 — AUDIO
+[OBL] Pendant LOH-ACT-206 : le motif d'Esteban, LA-DO-MI-RE-LA, joue au
+piano — [OBL] MAIS c'est le piano de la salle (PN-103) qui le joue, de
+l'autre cote du rideau, filtre a 2 kHz et attenue de 11 dB.
+[OBL] Il joue LA-DO-MI-RE. Quatre notes. La cinquieme n'est pas jouee.
+C'est la 17e des 23 occurrences incompletes du chapitre.
+[OBL] Et M21 reprend immediatement apres, exactement ou elle en etait, comme
+si rien n'avait eu lieu. Le motif s'est glisse dedans.
+[ART] Le piano qui joue tout seul depuis trois ans joue le motif d'Esteban
+pendant 4 secondes quand Lohen trouve son gilet, et personne ne le
+remarquera consciemment.
+[OBL] Ce n'est jamais explique. Ce n'est jamais repete.
+Aucun autre son. Le velours etouffe tout.
+
+§ 7 — INTERDICTIONS
+Interdit de : prendre, decrocher, toucher, deboutonner le gilet · le faire
+porter par Lohen · le faire porter par Esteban en cinematique [OBL —
+EST-MDL-002 porte la veste de PN-025, jamais ce gilet] · donner un Echo ·
+ajouter un parfum, une odeur, un souvenir · ajouter un nom cousu · utiliser
+#FFA33C ailleurs que sur PN-041, PN-107, PN-137 · expliquer la couleur ·
+relier explicitement a PN-106 · jouer le motif en entier · rendre le motif
+audible en dehors des 4 secondes.
+
+§ 8 — LIENS
+PN-041 (la boite aux lettres ambre, S3) : la premiere occurrence. Le joueur
+la revoit mentalement ici, ou jamais.
+PN-137 (la lampe a huile, S8) : la troisieme et derniere.
+PN-025 (la veste d'Esteban, S2, E04, mode C, sans ambre).
+PN-108 (la quatrieme lettre, dans la poche gauche).
+PN-106 (le carton, « il ne viendra pas »).
+PN-143 (LA LETTRE).
+[THEME] L'AMBRE EST A ESTEBAN. [THEME] CE QUI N'A PAS EU LIEU.
+
+§ 9 — DOD
+[ ] Gilet sculpte en forme de torse, boutonne aux 5 boutons
+[ ] Lisere ambre en geometrie (tube 3 mm, 1 100 tris), materiau separe
+[ ] #FFA33C exact, aucune variation, CI amber-guard verte (3 occurrences)
+[ ] Interstice de 6 cm eclairant exactement le gilet en lumiere doree
+[ ] Lisere identifiable a 4 m dans la penombre rouge
+[ ] LOH-ACT-206 : 2,6 s, sans camera, sans mouvement, non annulable
+[ ] Motif LA-DO-MI-RE joue par le piano de PN-103, filtre 2 kHz, -11 dB
+[ ] M21 reprend exactement a sa position
+[ ] Aucun Echo, aucun prompt sur le gilet
+[ ] Gilet jamais porte, jamais touche, jamais en cinematique

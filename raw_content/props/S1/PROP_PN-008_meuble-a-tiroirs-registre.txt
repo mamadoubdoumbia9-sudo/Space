@@ -1,0 +1,105 @@
+===============================================================================
+PN-008 — LE MEUBLE A TIROIRS DU REGISTRE DES DISPARUS
+===============================================================================
+Asset : SM_S1_Meuble_Registre · S1, bureau du Registre (interieur),
+altitude 3 m · ~00:21 · PORTEUR D'ECHO E02 · LOD0 5 400 tris
+
+§ 1 — CE QU'ON VOIT
+Un meuble de classement en chene sombre, 2,10 m de haut, 1,60 m de large,
+composé de 84 petits tiroirs de 18 x 12 cm, sept rangees de douze. Chaque
+tiroir porte un porte-etiquette de laiton avec une bande de carton ecrite a
+la main : « AA-AL », « AM-AZ », « BA-BE »...
+SOIXANTE-DIX-NEUF tiroirs sont fermes. CINQ sont ouverts, a des hauteurs
+differentes, tires de 8 a 22 cm. Ils sont ouverts depuis trois ans.
+Les cinq tiroirs ouverts : « DU-EA », « MA-ME », « RE-RO », « SA-SE »,
+« VA-VI ». Ils sont VIDES. Les fiches qu'ils contenaient ne sont pas
+tombees par terre : elles ont ete emportees.
+Sur le dessus du meuble, une pile de 11 fiches bristol, alignee au
+millimetre, avec un presse-papier de verre pose dessus. Quelqu'un a
+interrompu un travail methodique et a pris le temps de ranger avant.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 5 400 (corps 1 800 + 84 faces de tiroir instanciees + 5 tiroirs
+ouverts en geometrie pleine + laitons 900).
+[OBL] Les 84 etiquettes sont une seule texture 4K lisible : les intervalles
+alphabetiques doivent etre coherents et sans doublon. Redigees a la main,
+pas generees.
+Les 5 tiroirs ouverts ont leur interieur modelise (fond, glissieres,
+poussiere accumulee en fond de caisson).
+Shader `wood_polished` + `brass_tarnish` (05.19).
+Anim : PROP-711 `drawer_echo_shudder` — pendant E02 uniquement, les cinq
+tiroirs ouverts reculent de 2 cm et s'arretent. Ils ne se referment PAS.
+Une seule fois, non rejouable.
+
+§ 3 — CE QUE CA DIT
+Le Registre des Disparus de Velmora existait AVANT la Maree — c'etait un
+bureau municipal ordinaire, pour les marins perdus en mer, quelques dizaines
+de fiches par decennie.
+Le 14 octobre a 23h41, il est devenu autre chose.
+Les cinq tiroirs ouverts sont les cinq tranches alphabetiques que quelqu'un
+a consultees en urgence, dans les heures qui ont suivi. « MA-ME » contient
+MAREK. Le tiroir est vide. Quelqu'un a pris la fiche d'Esteban Marek.
+[NAR] Le jeu ne le dira jamais. Le joueur qui lit les etiquettes le voit.
+Ceux qui ne lisent pas voient juste cinq tiroirs ouverts.
+Le geste humain : la pile rangee et le presse-papier. Un fonctionnaire a
+range son travail de la journee, a 23h30, et est rentre chez lui.
+
+§ 4 — ECHO
+ECHO E02 — « Le fonctionnaire » — 38 secondes, mode A (silhouettes).
+Ce que le joueur voit : le bureau, en plein jour, occupe. UNE silhouette
+derriere le meuble, de dos, qui classe. Elle prend une fiche sur la pile,
+ouvre un tiroir, la glisse, referme. Elle recommence. Onze fois.
+Le rythme est parfaitement regulier : 3,1 secondes par fiche.
+A la onzieme, elle s'arrete. Elle ne referme pas le tiroir. Elle reste
+immobile 6 secondes, face au meuble. Puis elle s'efface.
+[OBL] Les onze fiches de l'Echo sont exactement les onze fiches de la pile
+du present. L'Echo montre le travail QUI N'A PAS ETE FAIT.
+Le 2e etage de lecture : la silhouette range onze fiches dans l'Echo, mais
+onze fiches sont encore sur le meuble au present. L'Echo n'est pas un
+souvenir de ce qui s'est passe. C'est le souvenir d'un geste habituel,
+repete des milliers de fois, que l'objet a garde — pas d'un soir precis.
+Musique : M04 « Classement », piano seul, 11 notes, une par fiche, la
+onzieme n'est pas jouee. Silence de 6 s. Puis rien.
+Rituel d'entree : 2,44 s, identique aux 30 autres (NAR-171+172+173).
+
+§ 5 — MISE EN SCENE
+Le meuble occupe tout le mur du fond du bureau. Le joueur entre par une
+porte face a lui : le meuble est le premier et le seul chose qu'il voit.
+Eclairage : PN-009 (la lampe-tempete) est la seule source. Elle est posee
+a gauche, donc les 84 porte-etiquettes de laiton font une grille de reflets
+qui s'etage — le motif graphique de la piece.
+Les cinq tiroirs ouverts creent cinq trous noirs dans cette grille.
+[ART] Composer pour que « MA-ME » soit le tiroir ouvert le plus proche de
+la hauteur des yeux de Lohen. Sans l'eclairer davantage.
+
+§ 6 — AUDIO
+SFX(drawer_wood_slide) : 11 fois pendant l'Echo, echantillons distincts,
+jamais le meme deux fois de suite.
+SFX(brass_tick) sur chaque porte-etiquette qui vibre — tres bas, -32 dB.
+Ambiance interieure : le vent exterieur passe a -14 dB, la piece a une
+reverb courte et seche (0,4 s). C'est le premier interieur du jeu : le
+contraste avec les 20 minutes de dehors doit etre physique.
+Apres l'Echo : silence total pendant 4 s avant la reprise de l'ambiance.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre d'ouvrir les 79 tiroirs fermes · permettre de
+ramasser les 11 fiches · montrer le visage du fonctionnaire · faire
+refermer les tiroirs par l'Echo · nommer MAREK ailleurs que sur
+l'etiquette de tranche « MA-ME » · ajouter un journal, une note explicative,
+un sous-titre · rendre E02 rejouable · faire commenter par Lohen.
+
+§ 8 — LIENS
+PN-003 (l'affiche 641) : meme bureaucratie, deux echelles. PN-010 (le
+tampon dateur, sur le meme bureau). PN-009 (la lampe). PN-090 (le meuble
+identique, S5, a la mairie, intact et poussiereux — aucun tiroir ouvert :
+personne n'y a cherche personne).
+[THEME] LE TRAVAIL INTERROMPU. [THEME] CHERCHER DANS DES OBJETS — annonce
+ici la phrase de la lettre : « Ne me cherche plus dans les objets. »
+
+§ 9 — DOD
+[ ] 84 etiquettes coherentes, lisibles, ecrites a la main
+[ ] Exactement 5 tiroirs ouverts, profondeurs 8/13/17/20/22 cm
+[ ] « MA-ME » a hauteur des yeux, non eclaire specialement
+[ ] E02 : 11 fiches, 3,1 s chacune, la 11e note absente, 6 s d'immobilite
+[ ] Rituel d'entree 2,44 s exact
+[ ] Aucun tiroir ne se referme, jamais

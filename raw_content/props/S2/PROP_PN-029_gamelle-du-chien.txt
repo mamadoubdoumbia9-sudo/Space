@@ -1,0 +1,95 @@
+===============================================================================
+PN-029 — LA GAMELLE DU CHIEN DE BORD
+===============================================================================
+Asset : SM_S2_Gamelle_Chien · S2, coursive tribord de L'Hirondelle, au pied
+de la cloison · ~01:26 · prop narratif · pas d'Echo · LOD0 420 tris
+
+§ 1 — CE QU'ON VOIT
+Une gamelle en fer emaille blanc, ebrechee, 22 cm, VISSEE au plancher par
+trois vis a travers un rebord perce a la main. Sur un bateau, tout est fixe.
+Elle est pleine d'eau. De l'eau de pluie, entree par une ecoutille ouverte,
+qui s'est accumulee. Elle est a 23 degres comme tout le reste, donc l'eau
+touche le bord bas et laisse le bord haut a sec sur 4 cm — [OBL] le niveau
+de l'eau est HORIZONTAL, pas parallele a la gamelle. Detail de credibilite
+absolu : si l'eau est parallele au bord, tout le prop ment.
+A cote, a meme le plancher, un vieux bout de couverture roule en nid, use,
+creuse au centre.
+Sur la cloison, a 40 cm du sol, la peinture est usee sur une bande de 30 cm.
+Un chien s'est frotte la, tous les jours, pendant des annees.
+Et a hauteur d'homme, au marqueur, sur la cloison, un seul mot :
+        MOUSSE
+
+§ 2 — FICHE TECHNIQUE
+LOD0 420. Emaille ebreche : shader `enamel_chipped` (partage avec PN-017),
+avec 6 eclats modelises en geometrie sur le bord.
+[OBL] L'eau : plan d'eau avec normale monde verrouillee sur Y, jamais sur
+la normale locale de l'objet. Un shader de liquide qui ignore l'inclinaison
+est un bug de credibilite majeur, et sur un bateau a 23° il se voit
+immediatement.
+Le nid de couverture : mesh sculpte, avec le creux central.
+L'usure de la cloison : decal 1K, bande de 30 x 12 cm, avec un gradient
+d'intensite plus marque au centre.
+« MOUSSE » : texture manuscrite, marqueur noir, lettres de 6 cm, un peu
+maladroites, avec le S final plus petit parce qu'il manquait de place.
+Collision : aucune.
+
+§ 3 — CE QUE CA DIT
+Il y avait un chien a bord. Il s'appelait Mousse.
+Le geste humain : percer le rebord d'une gamelle et la visser au plancher
+pour qu'elle ne glisse pas. Quelqu'un a pris ce temps-la. Pour un chien.
+La bande usee sur la cloison a 40 cm du sol dit sa taille et ses annees.
+[NAR] Le jeu ne dira jamais ce qu'est devenu Mousse. Il n'y a pas de
+cadavre de chien, pas d'os, pas de collier. Comme les 641, il n'est nulle
+part.
+[OBL] Interdiction absolue de resoudre. Aucun chien mort, aucun chien
+retrouve, aucun aboiement lointain, aucun indice, dans aucune sequence.
+
+§ 4 — ECHO
+NEANT. Raison : la gamelle appartient a un chien. [OBL] Aucun Echo du jeu
+ne montre un animal. Les Echos sont humains. Sans exception, sur 31.
+[ART] Ce refus est tres douloureux, et c'est pourquoi on le tient : le
+joueur veut voir le chien. Il ne le verra pas. Le jeu ne donne pas de
+consolation facile, ni ici, ni a la fin.
+
+§ 5 — MISE EN SCENE
+Dans une coursive etroite, au sol, a hauteur de pied. Le joueur passe
+DESSUS pour aller de la cabine a l'echelle de la timonerie. Il l'enjambe.
+[ART] Placement au sol deliberé : le joueur ne le voit que s'il baisse la
+tete, et il baisse la tete parce que la coursive est basse et inclinee et
+qu'il fait attention ou il met les pieds. Le level design produit le regard.
+Le mot MOUSSE est a hauteur d'homme, en face, et il est le premier element
+lisible. Le joueur lit d'abord le nom, puis cherche l'objet.
+Lumiere : une seule ampoule cassee, donc rien. La lampe portee (PN-009)
+est la seule source. Le halo balaie la gamelle quand Lohen passe.
+
+§ 6 — AUDIO
+SFX(water_bowl_lap) : NON. [OBL] Aucun son d'eau dans la gamelle. L'eau est
+immobile. Rien ne la trouble.
+SFX(enamel_foot_clink) : si le joueur touche la gamelle du pied, un tintement
+d'email sur acier, tres court, sec. Une seule fois par passage.
+[OBL] Aucun aboiement, aucun gemissement, aucun son de chien, nulle part
+dans le chapitre 1. Sauf UN, et il est reserve : Pomme, le chien de Sol,
+en S6. Le joueur qui a vu la gamelle a 1h26 et qui entend Pomme a 2h40
+ressentira quelque chose que personne n'aura ecrit.
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter un collier, une laisse, des poils, des traces de
+pattes · resoudre le sort de Mousse · faire aboyer quoi que ce soit ·
+donner un Echo · vider la gamelle · rendre l'eau parallele au bord ·
+permettre de prendre la gamelle · ajouter un deuxieme animal dans S1/S2 ·
+faire commenter Lohen.
+
+§ 8 — LIENS
+Pomme, le chien de Sol (S6) — le seul chien vivant du chapitre.
+SOL-DLG-498 : « le chien s'appelait Pomme », dite en rythme de liste de
+courses. Le joueur a deja lu un nom de chien au marqueur sur une cloison.
+PN-036 (les seaux retournes en cercle, a 12 m).
+[THEME] ZERO CORPS, etendu aux betes. [THEME] LES NOMS ECRITS A LA MAIN.
+
+§ 9 — DOD
+[ ] Gamelle vissee, 3 vis, rebord perce a la main
+[ ] Niveau d'eau HORIZONTAL (normale monde Y), verifie a 23°
+[ ] Bande d'usure de cloison a 40 cm du sol, gradient central
+[ ] « MOUSSE » manuscrit, S final plus petit
+[ ] Zero son de chien dans tout le chapitre avant Pomme en S6
+[ ] Aucun collier, aucun os, aucune resolution

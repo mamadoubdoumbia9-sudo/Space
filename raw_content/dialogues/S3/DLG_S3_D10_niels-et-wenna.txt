@@ -1,0 +1,143 @@
+===============================================================================
+DLG · S3 · D10 — NIELS ET WENNA : LE JEU DE CORDES
+28 entrees, toutes S3. NIE 12 · WEN 12 · LOH 4. Contribution : 28.
+Reference maitre : 09.12 « deux enfants qui jouent a un jeu de cordes ».
+Prop : PN-050 (le jeu de cordes des enfants — cf. annexe B).
+===============================================================================
+
+--- LE JEU DE CORDES ---------------------------------------------------------------
+
+Niels (11 ans) et Wenna (9 ans) jouent a un jeu de ficelle entre leurs
+doigts, sur une caisse, toute la sequence. Ils ont invente les regles.
+Les regles changent. Wenna gagne toujours parce qu'elle change les regles
+plus vite.
+
+[OBL] Les deux enfants sont joues par deux comediens enfants reels.
+Sessions de 90 minutes maximum, une seule journee, jamais separes : ils
+enregistrent ENSEMBLE, en se repondant, micros distincts. Les
+chevauchements sont gardes. C'est la seule scene du jeu enregistree en
+duplex.
+
+[OBL] Aucun des deux n'est orphelin, malade, ou en danger. Ils vont bien.
+Ils sont bruyants et penibles. Dans un jeu ou 641 personnes sont mortes,
+mettre deux enfants qui vont parfaitement bien est un acte de mise en
+scene. Ne pas les rendre tristes. Jamais.
+
+--- LES 28 LIGNES --------------------------------------------------------------------
+
+    [S3_WEN_L326]  WENNA · 1,1 s · joueur · p0,3
+        « Non, ca c'est le pont. »
+
+    [S3_NIE_L327]  NIELS · 1,3 s · agace · p0,4
+        « C'etait le pont hier. »
+
+    [S3_WEN_L328]  WENNA · 1,0 s · joueur · p0,3
+        « C'est encore le pont. »
+
+    [S3_NIE_L329]  NIELS · 1,6 s · agace · p0,5
+        « Alors c'est quoi le truc en croix ? »
+
+    [S3_WEN_L330]  WENNA · 1,2 s · joueur · p0,4
+        « Le grand pont. »
+
+    [S3_NIE_L331]  NIELS · 2,0 s · agace · p0,6
+        « Y'a pas deux ponts dans un jeu ! »
+
+    [S3_WEN_L332]  WENNA · 1,4 s · joueur · p0,5
+        « Y'en a trois. »
+
+    -- Lohen s'approche --
+
+    [S3_LOH_L333]  LOHEN · 1,2 s · poli · p0,5
+        « C'est quoi, comme jeu ? »
+
+    [S3_NIE_L334]  NIELS · 1,0 s · plat · p0,3
+        « Ca s'appelle rien. »
+
+    [S3_WEN_L335]  WENNA · 1,5 s · joueur · p0,4
+        « Ca s'appelle le jeu. »
+
+    [S3_NIE_L336]  NIELS · 1,8 s · agace · p0,5
+        « Elle dit ca parce qu'elle a pas de nom pour. »
+
+    [S3_LOH_L337]  LOHEN · 1,3 s · plat · p0,6
+        « Qui gagne ? »
+
+    [S3_WEN_L338]  WENNA · 0,9 s · joueur · p0,3
+        « Moi. »
+
+    [S3_NIE_L339]  NIELS · 2,2 s · las · p0,7
+        « Elle gagne parce qu'elle change. Quand je vais gagner, elle
+          change. »
+
+    [S3_LOH_L340]  LOHEN · 1,6 s · plat · p0,5
+        « Et tu joues quand meme. »
+
+    [S3_NIE_L341]  NIELS · 2,4 s · plat · p0,9
+        « Bah oui. Sinon je joue a quoi. »
+        dir : [OBL][NAR] Cette ligne est le theme du chapitre, dite par
+              un enfant de onze ans qui parle de ficelle. Personne ne la
+              releve. Aucune musique. Lohen ne repond pas. La scene
+              continue immediatement sur Wenna qui triche encore.
+
+    [S3_WEN_L342]  WENNA · 1,1 s · joueur · p0,3
+        « A toi. »
+
+    [S3_NIE_L343]  NIELS · 1,4 s · agace · p0,4
+        « C'est pas a moi, t'as pas fini. »
+
+    [S3_WEN_L344]  WENNA · 1,0 s · joueur · p0,4
+        « J'ai fini. »
+
+    -- Si Lohen reste --
+
+    [S3_WEN_L345]  WENNA · 1,7 s · joueur · p0,5
+        « Toi, t'as des grandes mains. Tu peux faire le double pont. »
+
+    [S3_LOH_L346]  LOHEN · 1,4 s · plat · p0,6
+        « Je connais pas le double pont. »
+
+    [S3_WEN_L347]  WENNA · 1,2 s · joueur · p0,4
+        « Moi non plus, on va voir. »
+
+    -- Mini-interaction optionnelle de 22 s : le joueur tend les mains,
+       les deux enfants passent la ficelle. Trois pressions, aucun echec
+       possible. [OBL] Aucune recompense, aucun succes, aucun objet.
+       C'est le seul moment du chapitre ou Lohen joue. 61 % des joueurs
+       le font. Ceux qui passent leur chemin ne perdent rien de mesurable.
+
+    [S3_NIE_L348]  NIELS · 1,6 s · rieur · p0,4
+        « C'est nul ! »
+
+    [S3_WEN_L349]  WENNA · 1,3 s · rieur · p0,5
+        « C'est tres nul ! »
+
+    [S3_LOH_L350]  LOHEN · 1,1 s · plat · p0,7
+        « Oui. »
+        dir : [OBL] il ne rit pas. Lohen ne rit jamais dans le chapitre 1.
+              Pas une fois, pas ici, pas au bal. Il sourit deux fois et
+              la lettre dira qu'il a ri UNE fois en quatre ans, en mars,
+              dans un escalier. Le joueur ne l'aura jamais entendu rire.
+              C'est pour ca que la phrase de la lettre fonctionne.
+
+    [S3_NIE_L351]  NIELS · 2,0 s · joueur · p0,4
+        « Revenez demain, on aura change les regles. »
+
+    [S3_WEN_L352]  WENNA · 1,8 s · joueur · p0,5
+        « On les a deja changees. »
+
+    [S3_NIE_L353]  NIELS · 1,5 s · agace · p0,0
+        « WENNA. »
+        dir : [OBL] derniere ligne. Le cri le plus fort de S3 (-14 dB)
+              est un gamin qui engueule sa soeur. C'est volontaire :
+              dans cette sequence, le son le plus fort est de la vie
+              ordinaire, pas du drame.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] Enregistrement en duplex, chevauchements conserves
+[ ] Les deux enfants vont bien, aucune ligne triste
+[ ] L341 sans appui, sans reponse de Lohen
+[ ] Mini-jeu de ficelle : aucune recompense
+[ ] Lohen ne rit pas
+[ ] L353 = son de voix le plus fort de S3

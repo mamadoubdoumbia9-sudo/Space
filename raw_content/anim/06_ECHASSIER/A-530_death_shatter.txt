@@ -1,0 +1,102 @@
+===============================================================================
+  A-530   death_shatter
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 530 / 744
+  Partie 6 — FIGURE — L'ECHASSIER
+  Categorie : COMBAT
+  Fichier source  : A_Figure_Cbt_death_shatter_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+  Identifiant precedent : A-533 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 2.600 s  (78 frames a 30 fps)
+  Type .................. ONE-SHOT
+  Root motion ........... RM-NONE
+  Couche AnimationTree .. L0
+  Priorite .............. 66 — reaction / degats (bande 60-79, bareme 0.05)
+  Poids compresse cible . ~36 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      4 pattes (5 os chacune), corps central, renflement, mesh de coeur
+      interne
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  FIGURE — L'ECHASSIER. 3,1 m debout, quatre pattes, corps a 2,1 m.
+
+  Sa signature est la STABILITE HORIZONTALE : le corps ne monte ni ne
+  descend, il glisse. C'est ce qui le rend faux — aucun animal ne se deplace
+  comme ca. Le renflement remplace la tete et il pivote comme un regard.
+  [OBL] Le coeur interne est le seul tell de la fenetre de riposte : aucune
+  UI, aucun contour, aucun son dedie (CI no-parry-ui).
+
+  Rig et costume :
+      corps de verre, 4 pattes de 5 os, renflement, mesh de coeur interne a
+      0.82 d'echelle (figure_core.gdshader)
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  la mort. Les pattes lachent une par une (f0, f8, f14, f20), le corps
+  tombe, et le mesh est remplace a f26 par 47 fragments physiques (pool
+  preinstancie, 05.18). Les fragments s'immobilisent en 2 s et RESTENT dans
+  la zone pour toute la session. [NAR] Un objet tombe a f40 : une cle, un
+  bouton, un peigne (10.03). Il tinte differemment des fragments de verre.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Clip ONE-SHOT : pas de contrainte de cyclage. La derniere frame
+  doit poser une silhouette blendable vers les etats de sortie.
+
+  Evenements de timeline :
+      SFX(shatter_full) f26 · VFX(V18) f26 · CAM_SHAKE(0.5) f26
+      SFX(object_fall_metal) f40 · GAMEPLAY(drop_item) f40
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- etat courant de l'IA (`ai_state`) ; -> retour a l'idle de la
+      creature, ou enchainement declare par le comportement
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-530
+===============================================================================

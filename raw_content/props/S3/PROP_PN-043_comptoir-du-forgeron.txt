@@ -1,0 +1,118 @@
+===============================================================================
+PN-043 — LE COMPTOIR DU FORGERON
+===============================================================================
+Asset : SM_S3_Comptoir_Forgeron · S3, echoppe du niveau 1, sous le Marche ·
+~02:15 · PORTEUR D'ECHO E08 · LOD0 6 100 tris
+
+§ 1 — CE QU'ON VOIT
+Une echoppe ouverte sur la passerelle, 4 x 3 m. Une forge eteinte, un
+soufflet de cuir creve, une enclume, un baquet de trempe, et un comptoir.
+Le comptoir est un billot de chene de 8 cm d'epaisseur, pose sur deux
+piliers de brique.
+Sa surface est CREUSEE. Pas usee : creusee. Il y a un creux de 3 cm de
+profondeur, ovale, de 40 x 25 cm, au centre. Des decennies de pieces posees,
+frappees, poussees, reprises.
+Dans le creux, il y a de la limaille. Une couche de poussiere de fer, fine,
+noire, qui a rouille et pris en croute.
+Sur le bord du comptoir, cote client, il y a AUTRE CHOSE : deux creux plus
+petits, ronds, de 8 cm, espaces de 42 cm. Polis, pas creuses.
+Ce sont des coudes. Des gens se sont accoudes la, du cote client, pendant
+des annees, en attendant, en parlant.
+Le baquet de trempe est plein d'une eau noire et immobile.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 6 100 (comptoir 900 + forge 1 800 + soufflet 700 + enclume 400 +
+baquet 500 + outils 1 800).
+[OBL] Le creux central et les deux creux de coudes sont en GEOMETRIE, avec
+un gradient de roughness distinct (creux central 0,71 rugueux a cause de la
+limaille ; creux de coudes 0,19, polis par le tissu et la peau).
+La limaille : shader `iron_dust_rusted`, masque contraint a la cavite.
+Le soufflet creve : 3 dechirures modelisees, cuir en double face.
+L'eau du baquet : plan noir, transmission 0,02, reflexion speculaire
+uniquement. [OBL] Totalement immobile. Aucune ondulation, jamais.
+Anim : PROP-747 — pendant E08 seulement, la braise de la forge s'allume.
+Collision : praticable, le joueur entre dans l'echoppe.
+
+§ 3 — CE QUE CA DIT
+Un homme a travaille ici toute sa vie et des gens sont venus lui parler.
+Le geste humain : s'accouder a un comptoir pour parler a quelqu'un qui
+travaille.
+[NAR] Les deux creux de coudes sont le vrai sujet. Le creux du forgeron est
+un creux de travail. Les creux des coudes sont des creux de conversation.
+Quarante-deux centimetres d'ecart : c'est la largeur d'un homme accoude.
+C'est toujours la meme personne, ou presque. Quelqu'un venait tous les jours
+s'accouder a ce comptoir et parler au forgeron pendant qu'il travaillait.
+Le jeu ne dira jamais qui.
+
+§ 4 — ECHO
+ECHO E08 — « L'echoppe » — 41 secondes, mode B (lumiere + silhouettes).
+La forge s'allume. L'echoppe devient orange-rouge (2 100 K) — [OBL] chaude,
+mais PAS ambre : c'est du feu, teinte (1.00, 0.42, 0.16), hors du domaine
+de #FFA33C, validee par amber-guard comme source lumineuse et non comme
+couleur d'asset.
+Deroulement : une silhouette derriere le comptoir, penchee, qui frappe.
+Une silhouette devant, accoudee, exactement dans les deux creux.
+Le forgeron frappe. Sept coups. Puis il s'arrete, se redresse, regarde
+l'autre. L'autre parle (on n'entend pas les mots). Le forgeron rit — on le
+voit aux epaules, pas au visage.
+Il se repenche. Sept coups. Il s'arrete. Il ecoute. Il rit.
+Trois cycles. Vingt-et-un coups.
+Au troisieme cycle, le forgeron ne se repenche pas. Il reste redresse.
+Les deux silhouettes restent face a face, immobiles, 9 secondes.
+Puis la lumiere baisse, de la forge vers les bords, en 5 s.
+[OBL] Aucun mot n'est prononce. Aucun rire n'est entendu. Le rire est
+UNIQUEMENT visuel — un mouvement d'epaules. [ART] Le joueur voit rire sans
+entendre. C'est plus fort.
+Musique : M12 « L'enclume », percussion seule. Les 21 coups de marteau SONT
+la musique : ils sont accordes (fa - fa - la bemol - fa - do - fa - fa) et
+constituent la seule piste rythmique du chapitre.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+L'echoppe est en contrebas de la passerelle : on y descend par trois
+marches. [ART] Le joueur quitte le chemin pour y entrer. Zone semi-optionnelle,
+taux d'entree cible 80 %.
+L'intérieur est sombre. La lampe (PN-009) est necessaire.
+Le comptoir est au centre, et le joueur arrive par le cote CLIENT. Il se
+retrouve naturellement debout devant les deux creux de coudes.
+[OBL] Le prompt d'Echo apparait quand il est a la place du client. Pas
+derriere le comptoir. Il vit l'Echo depuis la place de celui qui venait
+parler.
+Apres E08 : la forge est eteinte, froide, noire. Le contraste est brutal
+et aucune transition ne l'adoucit.
+
+§ 6 — AUDIO
+Hors Echo : l'echoppe est sourde (RT60 0,5 s). SFX(bellows_leather_sag),
+le soufflet creve qui s'affaisse tout seul, toutes les 40-90 s, tres bas.
+Un objet qui expire lentement depuis trois ans.
+SFX(water_black_still) : NEANT. Le baquet est muet.
+Pendant E08 : les 21 coups (M12), le souffle du soufflet, le grésillement
+de la trempe une fois (a 24 s), et la rumeur d'une ville habitee a -30 dB.
+[OBL] Zero voix. Zero rire audible. Zero mot.
+Apres : 6 s de silence total.
+
+§ 7 — INTERDICTIONS
+Interdit de : allumer la forge hors Echo · permettre de prendre un outil ·
+faire parler les silhouettes · rendre le rire audible · montrer les visages
+· identifier l'homme accoude · vider le baquet · faire ondulier l'eau ·
+ajouter une arme forgee · donner un objet au joueur · rendre E08 rejouable ·
+utiliser #FFA33C pour la lumiere de forge.
+
+§ 8 — LIENS
+PN-124 (le banc a deux creux polis, S7) : deux creux, encore. Le joueur
+aura vu les creux de coudes deux heures plus tot. Aucun lien n'est enonce.
+PN-046 (l'ancre du harnais de Tallec) : forgee ici, probablement. Jamais dit.
+PN-022 (le miroir : un autre homme seul, un autre metier).
+[THEME] LES CREUX QUE LES CORPS LAISSENT. Motif materiel present sur 9 props
+du chapitre : PN-021 (barreau poli), PN-026 (roue usee), PN-043, PN-060,
+PN-072, PN-085, PN-124, PN-129, PN-142.
+
+§ 9 — DOD
+[ ] Creux central 3 cm en geometrie, roughness 0,71 (limaille)
+[ ] Deux creux de coudes a 42 cm, ronds, 8 cm, roughness 0,19
+[ ] Baquet noir, transmission 0,02, immobile a 100 %
+[ ] E08 : 3 cycles de 7 coups, le 3e sans reprise, 9 s d'immobilite
+[ ] Les 21 coups sont accordes et constituent M12 en entier
+[ ] Rire visuel uniquement, zero voix, zero mot
+[ ] Prompt d'Echo disponible uniquement cote client
+[ ] Lumiere de forge (1.00, 0.42, 0.16), validee non-ambre par la CI

@@ -1,0 +1,107 @@
+===============================================================================
+PN-094 — LES PLAQUES DE MUEUR AU SOL
+===============================================================================
+Asset : SM_S5_Plaques_Mueur · S5, conduit -2, secteur est, sur 40 m ·
+~04:22 · prop narratif · pas d'Echo · LOD0 4 900 tris
+
+§ 1 — CE QU'ON VOIT
+Sur le sol du conduit, a partir d'un certain point, il y a des PLAQUES.
+Des feuilles fines, translucides, grises, de 20 a 60 cm, posees a plat ou
+recroquevillees sur elles-memes.
+Elles ressemblent a du papier huile, ou a de la mue de serpent, ou a une
+peau seche.
+Elles craquent sous les pieds.
+Il y en a de plus en plus a mesure qu'on avance : d'abord une ou deux, puis
+une dizaine, puis le sol en est couvert sur les 12 derniers metres.
+Sur les parois, plus loin, il y en a aussi : collees, a mi-hauteur, comme
+si quelque chose de large etait passe en frottant.
+[OBL] Elles ne sont ni organiques ni vivantes au sens biologique. Elles ne
+bougent pas, ne respirent pas, ne se decomposent pas. Elles sont seches et
+inertes.
+Sous la lampe, elles sont legerement irisees.
+[OBL] Le Mueur n'apparait JAMAIS dans le chapitre 1. Ni ici, ni ailleurs.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 4 900 pour 340 plaques. 22 modeles, 340 placements a la main avec
+densite croissante.
+[OBL] Shader `shed_membrane` : translucidite (SSS court, 0,8 cm), teinte
+gris-perle, et une IRISATION par interference en couche mince (film
+thickness variant de 380 a 720 nm). C'est le seul effet iriese du jeu.
+[OBL] L'irisation n'est visible QUE sous la lampe portee, a moins de 3 m,
+et sous un angle rasant. Le joueur la decouvre par accident.
+Cout : 0,5 ms.
+Anim : NEANT. [OBL] Aucune plaque ne bouge jamais, sous aucun pretexte, y
+compris au passage du joueur. Elles craquent mais ne remuent pas.
+Collision : aucune (le joueur marche dessus, elles ne le genent pas).
+
+§ 3 — CE QUE CA DIT
+[OBL] Il y a quelque chose dans les Conduits. Ce n'est pas humain. Ce n'est
+pas explique. Ce n'est pas rencontre.
+Le geste humain : aucun.
+[OBL] LE MUEUR N'EST JAMAIS VU, JAMAIS DECRIT, JAMAIS NOMME, JAMAIS
+ENTENDU, JAMAIS RENCONTRE dans le chapitre 1. Ni en combat, ni en fuite,
+ni en cinematique, ni en silhouette, ni en ombre, ni en son.
+Il existe comme 340 plaques de mue sur un sol et rien d'autre.
+[OBL] Les 39 clips d'animation du Mueur (MUE-001 a 039, cf. ANIM_MANIFEST)
+sont produits pour le chapitre 2 et ne sont PAS utilises au chapitre 1.
+[ART] Le joueur passe 40 m sur un sol couvert de mue, avec une lampe, en
+sachant qu'il y a quelque chose, et il ne se passe rien. Absolument rien.
+C'est un choix de design assume : le chapitre 1 ne contient aucune menace.
+
+§ 4 — ECHO
+NEANT. [OBL] Les Echos sont humains (PN-029). Rigoureusement.
+
+§ 5 — MISE EN SCENE
+[OBL] La densite croissante est toute la mise en scene. Le joueur remarque
+la premiere plaque sans y penser. A la dixieme, il ralentit. Aux douze
+derniers metres, il marche sur un tapis.
+Il n'y a aucun changement de musique, aucun stinger, aucune vignette,
+aucun ralentissement de camera, aucun message.
+[OBL] Sol continue de marcher normalement. Il ne ralentit pas, ne regarde
+pas, ne commente pas. [OBL] Pour lui, c'est le chemin habituel.
+[ART] C'est la seule chose qui rassure le joueur, et elle ne le rassure
+pas du tout.
+[OBL] Si le joueur s'arrete, rien n'arrive. S'il attend 5 minutes, rien
+n'arrive. S'il rebrousse chemin, rien n'arrive.
+A la fin des 40 m, les plaques s'arretent. [OBL] Net, en 2 m. On sort.
+
+§ 6 — AUDIO
+SFX(membrane_crackle) : le craquement sous les pieds. [OBL] 18 variations.
+Un son sec, fin, desagreable — entre la feuille morte et le cartilage.
+[OBL] Il est FORT : -13 dB. Le joueur s'entend marcher dessus. Il ne peut
+pas marcher silencieusement.
+[ART] Il essaiera. Il n'y a pas de mode furtif dans ce jeu.
+[OBL] AUCUN autre son. Pas de respiration lointaine, pas de frottement,
+pas de grattement, pas de sub-bass, pas de silence anormal, pas de
+suspension du vent.
+Musique : M20 « Les Conduits » continue, [OBL] strictement inchangee.
+Aucune variation, aucun instrument ajoute, aucune montee, aucune baisse.
+Verifier la courbe de mix : plate sur les 40 m.
+[ART] Le refus total de la grammaire de l'horreur est le prop.
+
+§ 7 — INTERDICTIONS
+Interdit de : montrer le Mueur · le suggerer par un son · le suggerer par
+une ombre · ajouter un stinger · modifier la musique · ajouter un
+ralentissement · faire reagir Sol · faire reagir Lohen · ajouter un mode
+furtif · ajouter un danger · faire bouger une plaque · en ramasser une ·
+ajouter des traces de griffes, du sang, des os, des restes · ajouter un
+nid · nommer le Mueur dans un dialogue ou un texte du chapitre 1.
+[OBL] Le mot « Mueur » n'existe nulle part dans le chapitre 1, ni en
+dialogue, ni en texte lisible, ni en sous-titre, ni en credits.
+
+§ 8 — LIENS
+PN-092 (le conduit mure et son courant d'air). PN-098 (le passage trop
+etroit). PN-030 (le puits de chaleur, S2) et PN-037 (la Figure immobile) :
+les trois autres anomalies non humaines du chapitre.
+[OBL] Aucune n'est reliee aux autres. Aucune n'est expliquee.
+[THEME] LE MONDE NE DOIT PAS DE COMPTES.
+
+§ 9 — DOD
+[ ] 340 plaques, 22 modeles, densite croissante sur 40 m, arret net en 2 m
+[ ] Irisation par couche mince, visible uniquement a la lampe en rasant
+[ ] Zero animation, jamais, y compris au passage
+[ ] Craquement a -13 dB, 18 variations, marche silencieuse impossible
+[ ] Courbe de mix strictement plate sur les 40 m
+[ ] Sol marche normalement, aucune reaction
+[ ] Zero apparition, zero son, zero suggestion du Mueur
+[ ] grep : 0 occurrence de « Mueur » dans tous les textes du chapitre 1

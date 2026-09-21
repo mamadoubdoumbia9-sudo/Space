@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Deux couleurs seulement, et elles viennent de la palette du chapitre 1
+  (BLOC 05) : la nuit de Velmora et l'ambre d'Esteban.
+-->
+<resources>
+    <!-- la nuit de Velmora : jamais un noir pur (05.03) -->
+    <color name="lohen_night">#FF060A12</color>
+    <!-- l'ambre d'Esteban, reserve a sa lumiere (05.06) -->
+    <color name="lohen_amber">#FFFFA33C</color>
+    <!-- fond de l'icone adaptative : la meme nuit -->
+    <color name="lohen_icon_bg">#FF060A12</color>
+</resources>

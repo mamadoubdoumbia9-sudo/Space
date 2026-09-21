@@ -1,0 +1,216 @@
+===============================================================================
+DLG · S4 · D08 — LES QUATRE AUTRES ECHOS DE LA BIBLIOTHEQUE (E14 a E17)
+46 entrees, toutes S4. ECH 46. Contribution : 46.
+[OBL] Aucun ne montre Esteban. Aucune silhouette ne regarde Lohen.
+Tous se declenchent dans le silence total de la sequence.
+===============================================================================
+
+--- E14 — LE PUPITRE DU DEUXIEME ETAGE (10 lignes, 39 s) ---------------------------------
+
+Un pupitre de lecture, use au coude gauche. Sur le chemin. 89 %.
+Un homme apprend a lire a un adulte. Trois silhouettes : le professeur,
+l'eleve, et une femme qui attend au fond et ne dit rien.
+
+[OBL] Cet Echo existe pour une seule raison : le joueur vient d'entendre
+Lohen dechiffrer des etiquettes pendant dix minutes. E14 lui montre que
+ce n'etait pas rare. [OBL] Aucun personnage ne fera le lien.
+
+    [S4_ECH_L197]  PROFESSEUR · 2,2 s · doux · p0,9
+        « Encore. Sans le doigt, cette fois. »
+
+    [S4_ECH_L198]  L'ELEVE · 2,6 s · prudent · p0,8
+        « Le... ba... teau. Le bateau. »
+
+    [S4_ECH_L199]  PROFESSEUR · 1,8 s · doux · p1,1
+        « Voila. »
+
+    [S4_ECH_L200]  L'ELEVE · 3,0 s · agace · p1,0
+        « J'ai quarante-six ans. »
+
+    [S4_ECH_L201]  PROFESSEUR · 2,4 s · plat · p1,2
+        « Et alors ? Le bateau n'a pas d'age. »
+
+    [S4_ECH_L202]  L'ELEVE · 2,8 s · amer · p0,9
+        « Les gens savent, dehors. Ils savent que je viens ici. »
+
+    [S4_ECH_L203]  PROFESSEUR · 3,2 s · doux · p1,4
+        « Les gens savent que vous venez ici. Ils ne savent pas
+          pourquoi. Ils croient que vous rendez des livres. »
+
+    [S4_ECH_L204]  L'ELEVE · 2,0 s · plat · p1,1
+        « Je rends des livres. »
+
+    [S4_ECH_L205]  PROFESSEUR · 1,6 s · doux · p1,3
+        « Voila. »
+
+    [S4_ECH_L206]  L'ELEVE · 2,4 s · prudent · p0,0
+        « Le... ba-teau... part. Le bateau part. »
+        dir : [OBL] dissolution sur la phrase reussie. [OBL] Aucun
+              triomphe, aucune musique (il n'y en a pas). La femme du
+              fond n'a pas dit un mot de tout l'Echo. Elle est la
+              chaque semaine. Personne n'explique qui elle est.
+
+--- E15 — LA FLAQUE DU TROISIEME (12 lignes, 47 s) ------------------------------------------
+
+Un seau, sous la fuite de l'oculus. 44 %. Deux employes de nuit.
+
+    [S4_ECH_L207]  EMPLOYE 1 · 1,8 s · las · p0,8
+        « Elle a encore debordé. »
+
+    [S4_ECH_L208]  EMPLOYE 2 · 1,4 s · las · p0,9
+        « Elle deborde tous les jeudis. »
+
+    [S4_ECH_L209]  EMPLOYE 1 · 2,2 s · las · p1,0
+        « Alors on met deux seaux le jeudi. »
+
+    [S4_ECH_L210]  EMPLOYE 2 · 2,6 s · plat · p1,1
+        « On a demande deux seaux. On nous a donne un seau plus grand. »
+
+    [S4_ECH_L211]  EMPLOYE 1 · 1,6 s · las · p0,9
+        « Il deborde aussi. »
+
+    [S4_ECH_L212]  EMPLOYE 2 · 2,0 s · plat · p1,2
+        « Il deborde plus tard. C'est deja ca. »
+
+    [S4_ECH_L213]  EMPLOYE 1 · 2,8 s · las · p1,0
+        « Combien de fiches perdues cette annee ? »
+
+    [S4_ECH_L214]  EMPLOYE 2 · 1,4 s · plat · p1,3
+        « Onze. »
+
+    [S4_ECH_L215]  EMPLOYE 1 · 2,4 s · plat · p1,1
+        « Onze personnes qui existent plus sur papier. »
+
+    [S4_ECH_L216]  EMPLOYE 2 · 3,0 s · sec · p1,2
+        « Elles existent. C'est le papier qui existe plus. »
+
+    [S4_ECH_L217]  EMPLOYE 1 · 2,2 s · las · p1,0
+        « Tu dis ca et tu remplis quand meme le formulaire de perte. »
+
+    [S4_ECH_L218]  EMPLOYE 2 · 2,6 s · plat · p0,0
+        « Bien sur que je le remplis. C'est mon travail de dire des
+          betises par ecrit. »
+        dir : [OBL] dissolution. [NAR] Cette conversation est d'avant
+              la Maree. Onze fiches perdues par une fuite d'eau en
+              temps de paix. Trois ans plus tard, il y a 641 noms et
+              un batiment inonde. Personne ne fait le rapprochement.
+
+--- E16 — L'ESCALIER DU QUATRIEME (12 lignes, 53 s) --------------------------------------------
+
+[OBL] Au quatrieme, celui dont Mireille a dit que le plancher est mange.
+Il l'est : le joueur peut tomber. La chute fait 4 m, ne tue pas, coute
+26 secondes de remontee, et n'est accompagnee d'AUCUN commentaire.
+31 % des joueurs montent. 12 % tombent.
+
+Une silhouette seule : une jeune femme qui range des livres en chantant
+sans paroles.
+
+    [S4_ECH_L219]  JEUNE FEMME · 3,2 s · doux · p1,1
+        (elle fredonne — pas de texte)
+        dir : [OBL][NAR] ELLE FREDONNE LE MOTIF. LA-DO-MI-RE-LA. Elle
+              s'arrete a la quatrieme note. C'est la 9e des 23
+              occurrences incompletes. [OBL] Aucune n'est complete
+              avant la lettre, en S8, a 3:00, sur « Tu as les mains
+              sales. »
+
+    [S4_ECH_L220]  JEUNE FEMME · 1,6 s · plat · p0,9
+        « Non. »
+
+    [S4_ECH_L221]  JEUNE FEMME · 2,8 s · doux · p1,0
+        (elle reprend — s'arrete encore a la quatrieme note)
+
+    [S4_ECH_L222]  JEUNE FEMME · 2,0 s · agace · p1,2
+        « C'est pas ca. »
+
+    [S4_ECH_L223]  JEUNE FEMME · 2,4 s · plat · p1,1
+        « Il l'a jouee deux fois et je l'ai pas retenue. »
+        dir : [OBL][NAR] « Il ». Un accordeur, sans doute. Peut-etre
+              Esteban, peut-etre un autre des quatre accordeurs de la
+              fiche L063. [OBL] AUCUNE CONFIRMATION N'EXISTE. Le jeu ne
+              tranchera jamais, dans aucun chapitre.
+
+    [S4_ECH_L224]  JEUNE FEMME · 1,8 s · plat · p1,3
+        « Tant pis. »
+
+    [S4_ECH_L225]  JEUNE FEMME · 2,6 s · doux · p1,0
+        (elle reprend, plus lentement — quatre notes, toujours)
+
+    [S4_ECH_L226]  JEUNE FEMME · 2,2 s · plat · p1,1
+        « Rangement, maintenant. »
+
+    [S4_ECH_L227]  JEUNE FEMME · 3,0 s · plat · p0,9
+        « Sept cent douze, sept cent treize, sept cent quatorze. »
+
+    [S4_ECH_L228]  JEUNE FEMME · 2,4 s · las · p1,2
+        « Et il en reste deux mille. »
+
+    [S4_ECH_L229]  JEUNE FEMME · 2,0 s · doux · p1,0
+        (quatre notes)
+
+    [S4_ECH_L230]  JEUNE FEMME · 2,8 s · doux · p0,0
+        « Demain je demanderai a quelqu'un. »
+        dir : [OBL] dissolution. Elle n'a demande a personne. La
+              cinquieme note n'existe nulle part dans le chapitre
+              jusqu'a la lettre.
+
+--- E17 — LE BUREAU DES ENTREES (12 lignes, 44 s) -----------------------------------------------
+
+Le comptoir d'accueil, au rez. Sur le chemin de sortie. 76 %.
+Une employee et une file de gens. On n'entend que l'employee : les
+visiteurs sont hors du champ sonore de l'Echo (choix de mise en scene
+declare, R-mix).
+
+    [S4_ECH_L231]  EMPLOYEE · 2,0 s · poli · p0,8
+        « Nom, prenom, quartier. »
+
+    [S4_ECH_L232]  EMPLOYEE · 1,6 s · poli · p0,9
+        « Nom, prenom, quartier. »
+
+    [S4_ECH_L233]  EMPLOYEE · 2,4 s · poli · p1,0
+        « Le quartier aussi, madame. Sinon je ne peux pas chercher. »
+
+    [S4_ECH_L234]  EMPLOYEE · 1,8 s · poli · p0,8
+        « Nom, prenom, quartier. »
+
+    [S4_ECH_L235]  EMPLOYEE · 2,6 s · faux_poli · p1,1
+        « Je comprends. Nom, prenom, quartier. »
+
+    [S4_ECH_L236]  EMPLOYEE · 2,2 s · poli · p0,9
+        « Suivant. »
+
+    [S4_ECH_L237]  EMPLOYEE · 2,8 s · faux_poli · p1,0
+        « Monsieur, il y a trente personnes derriere vous. »
+
+    [S4_ECH_L238]  EMPLOYEE · 1,4 s · poli · p1,2
+        « Suivant. »
+
+    [S4_ECH_L239]  EMPLOYEE · 3,0 s · plat · p1,1
+        « Nom, prenom... »
+
+    [S4_ECH_L240]  EMPLOYEE · 2,0 s · plat · p1,4
+        « Pardon. Nom, prenom, quartier. »
+
+    [S4_ECH_L241]  EMPLOYEE · 2,6 s · plat · p1,2
+        « Non, je ne pleure pas. Nom, prenom, quartier. »
+        dir : [OBL][NAR] C'est le 15 octobre. Le lendemain. Le joueur
+              peut le deduire de la file et de rien d'autre. [OBL]
+              Aucune date n'est prononcee. Aucun autre indice.
+              [OBL] REGLE DE L'ANNEXE A : « on ne regarde pas les gens
+              pleurer ». La silhouette de l'employee est de dos pendant
+              cette ligne. Son visage n'est jamais visible de tout
+              l'Echo.
+
+    [S4_ECH_L242]  EMPLOYEE · 1,8 s · plat · p0,0
+        « Suivant. »
+        dir : [OBL] dissolution. Le comptoir reel est vide, couvert de
+              formulaires vierges. Le joueur peut en prendre un. Il
+              n'est pas ramassable. Lohen le repose.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] 4 Echos, 46 lignes, aucune silhouette ne regarde Lohen
+[ ] E14 : personne ne fait le lien avec l'illettrisme de Lohen
+[ ] E16 : motif incomplet (4 notes), 9e des 23 occurrences
+[ ] E16 : « il » jamais identifie, dans aucun chapitre
+[ ] E17 : l'employee est de dos sur L241, visage jamais visible
+[ ] Chute du 4e : 4 m, aucun commentaire, 26 s de remontee

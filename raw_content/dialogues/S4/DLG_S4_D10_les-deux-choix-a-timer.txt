@@ -1,0 +1,167 @@
+===============================================================================
+DLG · S4 · D10 — LES DEUX SEULS CHOIX A TIMER DU CHAPITRE
+17 entrees, toutes S4. LOH 9 · MIR 4 · ECH 4 (dont 2 slots muets). Contribution : 17.
+Reference maitre : 12.05 « Pas de timer, sauf 2 fois, et c'est signale par
+un effet visuel. » Choix n° 17 et n° 18 du chapitre.
+===============================================================================
+
+--- L'EFFET VISUEL DU TIMER -----------------------------------------------------------
+
+[OBL] Pas de barre qui se vide. Pas de compte a rebours. Pas de couleur
+rouge. L'effet est le suivant : les options de dialogue perdent leur
+opacite, lineairement, de 100 % a 0 % sur la duree du timer. Quand elles
+sont a zero, elles disparaissent et le jeu continue.
+
+[OBL] Ce systeme est utilise DEUX fois dans tout le chapitre, toutes deux
+en S4, et il n'est explique nulle part. Un joueur qui laisse filer la
+premiere comprend le systeme pour la seconde.
+
+[OBL] Les deux timers sont LONGS : 9,4 s et 14,2 s. Ce n'est pas un test
+de reflexe. C'est un test d'hesitation. Le temps est calibre pour qu'un
+joueur qui reflechit vraiment le laisse expirer.
+
+--- CHOIX 17 — pendant la deuxieme conversation (timer 9,4 s) ----------------------------
+
+Declencheur : apres S4_MIR_L143 (« La mienne est fausse et elle tient
+depuis huit ans »).
+
+    > CHOIX 17 — timer 9,4 s
+      [1] « Huit ans ? Vous avez dit quatre, tout a l'heure. »
+      [2] « Je peux la connaitre ? »
+      [ expiration ] : le silence.
+
+    -- branche [1] : le joueur a releve l'incoherence. Mireille a dit
+       « quatre ans pour m'entrainer » (L129) et son mari est mort en
+       'onze : ca fait huit. Les deux chiffres sont exacts et ne
+       parlent pas de la meme chose. Le joueur a cru trouver un
+       mensonge. Il s'est trompe.
+    [S4_LOH_L259]  LOHEN · 3,0 s · plat · p0,0
+        « Huit ans ? Vous avez dit quatre, tout a l'heure. »
+    [S4_MIR_L260]  MIREILLE · 3,4 s · plat · p0,0
+        « Quatre ans d'entrainement et huit ans de veuvage. Vous
+          comptez bien et vous ecoutez mal. »
+        dir : [OBL] elle ne se vexe pas. Elle corrige. [OBL] C'est la
+              seule fois du chapitre ou le jeu punit legerement la
+              suspicion, et la punition est une phrase.
+
+    -- branche [2]
+    [S4_LOH_L261]  LOHEN · 1,6 s · plat · p0,0
+        « Je peux la connaitre ? »
+    [S4_MIR_L262]  MIREILLE · 1,2 s · sec · p0,0
+        « Non. »
+        dir : identique a L145. [OBL] Le joueur qui prend cette branche
+              obtient le meme refus qu'en ne la prenant pas. C'est
+              voulu : certaines portes sont fermees des deux cotes.
+
+    -- expiration (le joueur n'a rien choisi) --
+    [S4_MIR_L263]  MIREILLE · 2,8 s · plat · p0,0
+        « Voila. C'est exactement ce qu'il fallait repondre. »
+        dir : [OBL][NAR] LA MEILLEURE BRANCHE EST LE SILENCE, et elle
+              n'etait pas affichee. [OBL] Aucun succes, aucune
+              recompense, aucun changement de scene. Juste une vieille
+              dame qui approuve un homme qui s'est tu.
+    [S4_MIR_L264]  MIREILLE · 3,2 s · plat · p0,0
+        « Les gens posent toujours une question apres une phrase comme
+          celle-la. Vous, non. Vous etes reposant. »
+        dir : [NAR] « reposant » — le mot exact d'Esteban au bal :
+              « Tu es tellement previsible que c'en est reposant. »
+              [OBL] Coincidence assumee. Jamais soulignee. Deux
+              personnes qui ne se sont jamais rencontrees emploient le
+              meme adjectif pour le meme homme, a deux heures
+              d'intervalle de jeu.
+
+--- CHOIX 18 — devant le dossier vide (timer 14,2 s) ---------------------------------------
+
+Declencheur : pendant les 6,4 s de silence de S4_LOH_L103, prolonge.
+[OBL] Le timer commence APRES le silence scripte : le joueur a 14,2 s
+supplementaires. Total : 20,6 s devant une chemise vide.
+
+    > CHOIX 18 — timer 14,2 s
+      [1] « (Retourner la chemise.) »
+      [2] « (Chercher dans les tiroirs voisins.) »
+      [3] « (Reposer la chemise.) »
+      [ expiration ] : il la garde.
+
+    -- branche [1] : il la retourne. Il y a quelque chose au dos.
+    [S4_LOH_L265]  LOHEN · 2,4 s · prudent · p0,0
+        « Y'a une date au dos. »
+    [S4_LOH_L266]  LOHEN · 3,0 s · prudent · p0,0
+        « Onze... onze du huit. Cette annee. »
+        dir : [OBL][NAR] Le dossier a ete vide le 11 aout de l'annee en
+              cours — il y a neuf semaines. [OBL] C'est la seule
+              information datee du chapitre sur le vol du dossier.
+              Elle ne mene a rien. Elle n'est utilisee par aucune
+              scene ulterieure. Elle existe parce que le joueur qui
+              retourne une chemise merite de trouver quelque chose.
+    [S4_LOH_L267]  LOHEN · 1,8 s · plat · p0,0
+        « Neuf semaines. »
+
+    -- branche [2] : les tiroirs voisins. Trois fiches. Rien.
+    [S4_LOH_L268]  LOHEN · 2,2 s · plat · p0,0
+        « Ma-rec. Ma-reck. Ma-ray. »
+        dir : [OBL] il cherche des orthographes voisines. Un homme qui
+              lit mal envisage d'avoir mal lu. C'est intelligent et
+              c'est inutile.
+    [S4_LOH_L269]  LOHEN · 1,6 s · plat · p0,0
+        « Non. »
+
+    -- branche [3] : il repose la chemise dans le tiroir.
+    [S4_LOH_L270]  LOHEN · 0,0 s · — · p0,0
+        (slot sans VO)
+        dir : [OBL] il la repose et referme le tiroir. [OBL] IL PEUT
+              REVENIR LA CHERCHER a tout moment de la sequence. Si le
+              joueur quitte S4 sans la chemise, PN-119 n'est pas dans
+              la sacoche en S7 et le Verrier lui tend le CONTENU sans
+              contenant. La scene 12.16 fonctionne identiquement.
+              [OBL] Aucune ligne, aucune animation ne differe. 6 % des
+              joueurs sont dans ce cas.
+
+    -- expiration : il la garde sans rien dire. --
+    [S4_LOH_L271]  LOHEN · 0,0 s · — · p0,0
+        (slot sans VO)
+        dir : [OBL] il plie la chemise en deux et la met dans la
+              sacoche. Anim LOH-ACT-069, 3,4 s. [OBL] C'est le geste
+              exact qu'il fait avec les lettres non remises depuis le
+              debut du jeu. Le joueur l'a vu quatre fois. Il le
+              reconnait. Personne ne le commente.
+
+--- LES 4 LIGNES D'ECHO DE E18 (debloque par le CHOIX 18, branche [1]) ------------------------
+
+Toucher la date au dos declenche un Echo de 18 s. Le plus court du jeu.
+Une seule silhouette : une main qui ecrit une date au crayon.
+
+    [S4_ECH_L272]  VOIX (une femme, tres proche) · 1,4 s · plat · p0,8
+        « Onze du huit. »
+
+    [S4_ECH_L273]  VOIX · 2,0 s · plat · p1,0
+        « Non, pas de nom. Il a pas voulu. »
+
+    [S4_ECH_L274]  VOIX · 2,6 s · plat · p1,2
+        « Un grand type. Tres grand. Il parle pas. »
+        dir : [OBL][NAR] LE VERRIER. C'est la seule description
+              d'Anselme Roux donnee avant sa rencontre en S7, et elle
+              est donnee par une employee anonyme dans un Echo de
+              18 secondes cache derriere un choix a timer derriere un
+              zoom optionnel. [OBL] Environ 4 % des joueurs
+              l'entendront. Pour eux, l'apparition du Verrier en S7
+              sera une confirmation au lieu d'une surprise, et ce sera
+              mieux.
+
+    [S4_ECH_L275]  VOIX · 2,2 s · plat · p0,0
+        « J'ai note la date, c'est tout ce que je pouvais faire. »
+        dir : dissolution. [OBL] C'est Mireille. Sa voix a 58 ans, il y
+              a neuf semaines. [OBL] Elle n'a donc pas menti en L116
+              (« ce n'est pas moi ») : elle a seulement laisse faire, et
+              note la date. Le joueur qui a tout trouve sait maintenant
+              exactement de quoi elle s'accusait en L042. Le jeu ne le
+              lui confirmera jamais.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] 2 timers seulement dans tout le chapitre, tous deux en S4
+[ ] Effet visuel : opacite lineaire, jamais de barre ni de rouge
+[ ] Timers longs (9,4 s / 14,2 s), calibres pour expirer
+[ ] CHOIX 17 : la meilleure reponse est le silence, non affichee
+[ ] L264 : « reposant », echo involontaire d'Esteban, non souligne
+[ ] Chemise non emportee : S7 fonctionne a l'identique
+[ ] E18 : 4 % des joueurs, la seule description prealable du Verrier

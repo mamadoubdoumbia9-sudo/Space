@@ -1,0 +1,107 @@
+===============================================================================
+DLG · S1 · D05 — LES DEUX CHOIX DE S1, ET POURQUOI ILS NE SERVENT A RIEN
+16 lignes · LOHEN 6 / PALLAS 10
+Reference : INDEX § 7 (38 choix). Choix n° 01 et n° 02 du chapitre.
+===============================================================================
+
+--- INTENTION [OBL] -------------------------------------------------------------
+
+Les deux premiers choix du jeu ne changent rien. Pas « presque rien » :
+rien. C'est une decision de design contractuelle. Un joueur venu d'autres
+jeux passe les 30 premieres minutes a chercher le systeme de karma. On lui
+donne deux choix tres visibles, tres charges, et on ne lui rend aucune
+monnaie. A partir de S2, il arrete de calculer et il commence a repondre
+ce qu'il pense. Tout le reste du chapitre depend de ca.
+
+Le jeu n'affichera JAMAIS « X se souviendra de cela » (12.05).
+
+--- CHOIX 01 — devant l'affiche des 641 noms ------------------------------------
+
+Declencheur : le joueur zoome sur PN-003 plus de 4 s. Pallas est arrivee
+derriere lui sans bruit (elle a fini sa couture).
+
+    [S1_PAL_L065]  PALLAS · 1,8 s · plat · p0,6
+        « Deux cents. Il en reste quatre cent quarante et un. »
+        dir : elle ne dit pas ce que les croix signifient. Le joueur
+              suppose « retrouves ». Il a tort. Il l'apprendra en S7.
+
+    > CHOIX 01 (aucun timer)
+      [1] « Qui les barre ? »
+      [2] « Vous en connaissez combien ? »
+      [3] (Ne rien dire et continuer a lire.)
+
+    -- branche [1]
+    [S1_LOH_L066]  LOHEN · 1,1 s · plat · p0,4
+        « Qui les barre ? »
+    [S1_PAL_L067]  PALLAS · 2,4 s · sec · p0,7
+        « Quelqu'un qui a une meilleure ecriture que toi et moi. »
+        dir : elle ne sait pas non plus. Elle ne l'avoue pas.
+
+    -- branche [2]
+    [S1_LOH_L068]  LOHEN · 1,4 s · plat · p0,4
+        « Vous en connaissez combien ? »
+    [S1_PAL_L069]  PALLAS · 2,9 s · plat · p0,7
+        « Neuf. Et j'en ai barre zero, si c'est la question. »
+        dir : elle repond a la question que le joueur n'a pas posee. Elle
+              sait laquelle il voulait poser.
+
+    -- branche [3] : silence. Pallas attend 2,2 s, puis :
+    [S1_PAL_L070]  PALLAS · 1,6 s · plat · p0,5
+        « Prends ton temps. Elle bouge pas. »
+
+    -- convergence, toutes branches :
+    [S1_PAL_L071]  PALLAS · 2,1 s · sec · p0,0
+        « Bon. L'echelle nord. Je te l'ai dit deux fois. »
+        dir : [OBL] cette ligne est identique dans les trois branches, et
+              elle arrive avec le meme timing. Le joueur qui rejoue le
+              verra. On veut qu'il le voie.
+
+--- CHOIX 02 — au pied de l'echelle nord ----------------------------------------
+
+Declencheur : Lohen pose la main sur le premier barreau. Pallas est a 4 m.
+
+    [S1_PAL_L072]  PALLAS · 1,3 s · plat · p0,5
+        « Lohen. »
+
+    > CHOIX 02 (aucun timer)
+      [1] « Je sais ce que vous allez dire. »
+      [2] « Dites-le. »
+
+    -- branche [1]
+    [S1_LOH_L073]  LOHEN · 1,5 s · sec · p0,4
+        « Je sais ce que vous allez dire. »
+    [S1_PAL_L074]  PALLAS · 1,2 s · sec · p0,6
+        « Alors je le dis pas. »
+
+    -- branche [2]
+    [S1_LOH_L075]  LOHEN · 0,7 s · plat · p0,4
+        « Dites-le. »
+    [S1_PAL_L076]  PALLAS · 1,1 s · sec · p0,6
+        « Non. »
+        dir : [OBL] les deux branches aboutissent a Pallas qui ne dit
+              pas la chose. Le joueur ne saura jamais ce qu'elle allait
+              dire. Aucune scene ulterieure ne le revele. Ce n'est pas un
+              teasing : c'est une femme de 61 ans qui se ravise.
+
+    -- convergence :
+    [S1_LOH_L077]  LOHEN · 0,9 s · plat · p0,5
+        « Pallas. »
+    [S1_PAL_L078]  PALLAS · 2,3 s · doux · p0,4
+        « Monte. Trois barreaux sur quatre. Le quatrieme est pourri,
+          toujours. »
+    [S1_LOH_L079]  LOHEN · 0,6 s · plat · p0,7
+        « Je sais. »
+    [S1_PAL_L080]  PALLAS · 1,4 s · plat · p0,0
+        « Je sais que tu sais. Je le dis quand meme. »
+        dir : [NAR] c'est exactement ce que fera Esteban dans la lettre,
+              cinq heures de jeu plus tard : dire une chose inutile parce
+              que la dire est le seul geste qui reste. Personne ne
+              soulignera le parallele.
+
+--- CHECKLIST ------------------------------------------------------------------
+
+[ ] Choix 01 : trois branches, convergence a L071 au meme timing
+[ ] Choix 02 : deux branches, Pallas ne dit jamais la chose
+[ ] Aucun feedback visuel de « choix important »
+[ ] Aucun succes/trophee lie a ces choix
+[ ] L080 en place, aucun dialogue ulterieur ne la commente

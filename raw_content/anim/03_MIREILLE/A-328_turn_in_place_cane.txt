@@ -1,0 +1,103 @@
+===============================================================================
+  A-328   turn_in_place_cane
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 328 / 744
+  Partie 3 — MIREILLE VANDECK
+  Categorie : LOCOMOTION
+  Fichier source  : A_Mireille_Loc_turn_in_place_cane_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste · densifiee (CI no-filler)
+  Identifiant precedent : A-331 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 1.400 s  (42 frames a 30 fps)
+  Type .................. ONE-SHOT
+  Root motion ........... RM-ROT
+  Couche AnimationTree .. L0
+  Priorite .............. N/A — non applicable (clip sans priorite d'etat)
+  Poids compresse cible . ~31 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      jambes completes, pelvis, spine_01-03, bras contrebalances, IK de pied
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  MIREILLE VANDECK — 58 ans, gardienne de la Bibliotheque des Eaux.
+
+  Elle est ECONOME. Elle a mal partout et elle ne le montre pas. Chaque
+  mouvement est calcule pour depenser le minimum. Elle ne se leve jamais
+  sans raison. Elle ne hausse JAMAIS la voix : quand elle appuie, elle
+  RALENTIT. Gestes signature : M1 elle tourne sa tasse de 90 deg avant de
+  boire, M2 elle cache sa main brulee quand on la regarde. Elle ment une
+  fois.
+
+  Rig et costume :
+      manteau rapiece (14 pieces, 15 apres le clip A-371), lunettes a un
+      seul verre, canne qui est un pied de biche, tasse
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  elle pivote autour de la canne comme autour d'un axe, en trois petits pas.
+  Le corps ne se souleve pas. [ART] Economie totale : la rotation coute deux
+  appuis et rien d'autre, la ou Lohen en depense quatre et Tallec cinq. Les
+  trois demi-tours du jeu racontent trois corps.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Clip ONE-SHOT : pas de contrainte de cyclage. La derniere frame
+  doit poser une silhouette blendable vers les etats de sortie.
+
+  Evenements de timeline :
+      FOOTSTEP_L / FOOTSTEP_R aux poses de pied (son matiere 13.28 +
+      haptique) · CLOTH_RUSTLE · RIG_CLINK selon la charge
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- transition de demarrage correspondante ; -> autre vitesse du
+      BlendSpace2D, ou transition d'arret
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · seule la rotation vient de l'anim ; la translation est pilotee par
+      le code (reactivite prioritaire)
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-328
+===============================================================================

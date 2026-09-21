@@ -1,0 +1,101 @@
+===============================================================================
+PN-077 — LE REGISTRE DES NOMS, VOLUME 3
+===============================================================================
+Asset : SM_S4_Registre_Vol3 · S4, sur la table de Mireille, ouvert ·
+~03:40 · prop a TEXTE LISIBLE · pas d'Echo · LOD0 1 800 tris
+
+§ 1 — CE QU'ON VOIT
+Un grand registre relie, 34 x 48 cm, dos de toile, plats de carton marbre.
+Sur le dos, une etiquette : REGISTRE DES NOMS — III
+Il est ouvert au milieu, a plat, sur la table de Mireille.
+La page de gauche et la page de droite sont couvertes de noms, ecrits a la
+main, un par ligne, dans une colonne, avec en face une date et une mention.
+L'ecriture des 40 premieres pages est REGULIERE, penchee, elegante.
+Celle des pages suivantes ne l'est pas. Elle est grosse, tremblee,
+laborieuse. Les lettres sont mal formees. Certaines lignes montent, d'autres
+descendent.
+C'est la meme personne. C'est la main gauche.
+Sur la page ouverte, il y a vingt-deux noms.
+Le dernier de la colonne de droite est le plus recent. Apres lui, la page
+est blanche.
+En face de chaque nom, dans la colonne de droite, une mention manuscrite :
+« DECLARE PAR » suivie d'un autre nom.
+En face du vingt-deuxieme, la mention est : « PERSONNE ».
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 800. Pages gondolees en geometrie (l'humidite de la rotonde).
+[OBL] Texture 8K pour la double page. Densite 640 px/m. Les 22 noms et
+leurs mentions sont lisibles a 40 cm.
+[OBL] Ecriture manuscrite reelle, DEUX etats de la meme main :
+  — l'ecriture de droite (avant), regulière, par un calligraphe droitier
+  — l'ecriture de gauche (apres), par le MEME calligraphe ecrivant de la
+    main gauche, sans entrainement
+C'est la seule facon d'obtenir la degradation juste. Un faux tremblement se
+voit.
+[OBL] Les 22 noms viennent de `content/victims_641.csv`. Les 22 « DECLARE
+PAR » viennent aussi du CSV, et sont des survivants ou d'autres victimes —
+coherence verifiee par script.
+Collision : aucune. [OBL] Non tournable. On ne voit que ces deux pages.
+
+§ 3 — CE QUE CA DIT
+Mireille tient le registre des disparus de Velmora. A la main. Depuis trois
+ans. Toute seule.
+Le geste humain : ecrire un nom.
+Chaque nom a ete DECLARE par quelqu'un. Quelqu'un est venu, a dit un nom,
+et Mireille l'a ecrit. C'est tout ce qui reste de l'etat civil de cette
+ville : une femme de 58 ans, une table, et un cahier.
+[OBL] Le vingt-deuxieme nom : « PERSONNE » dans la colonne DECLARE PAR.
+Ce nom-la, personne n'est venu le declarer. Mireille l'a ecrit toute seule,
+parce qu'elle savait.
+[OBL] Ce n'est PAS Esteban. Le nom de la 22e ligne est un autre nom du CSV.
+Esteban Marek ne figure PAS dans le registre. Interdiction absolue de l'y
+mettre : le tiroir MAQ-MAS est vide (PN-067), le nom n'est pas barre sur
+l'affiche (PN-003), et il n'est pas dans le registre.
+Le jeu tient cette absence sur trois props, pendant 3 h 40.
+
+§ 4 — ECHO
+NEANT. Objet d'une vivante, en cours d'utilisation (PN-046).
+
+§ 5 — MISE EN SCENE
+Sur la table, entre Lohen et Mireille, pendant toute la conversation.
+[OBL] Il est ouvert devant le joueur pendant 50 minutes. Il peut le lire a
+tout moment, en se penchant, pendant qu'elle parle.
+[ART] Le jeu ne l'arrete pas et ne le signale pas. Beaucoup de joueurs ne
+le liront jamais parce qu'ils regardent Mireille.
+Taux de lecture cible : 47-60 %.
+[OBL] Aucun zoom, aucun mode examen, aucun overlay, aucun surlignage.
+Lohen ne le lit pas. [OBL] Il ne sait pas bien lire (01.06). Le joueur, si.
+C'est le seul endroit du chapitre ou le joueur en sait plus que Lohen parce
+qu'il sait lire.
+[OBL] Mireille ne propose jamais de le lire a Lohen. Elle ne sait pas qu'il
+ne sait pas lire. Personne ne le sait dans le chapitre.
+
+§ 6 — AUDIO
+NEANT. Le registre est muet. On ne tourne pas ses pages.
+
+§ 7 — INTERDICTIONS
+Interdit de : tourner les pages · y ajouter Esteban Marek · le refermer ·
+le prendre · expliquer la 22e ligne · nommer la personne de la 22e ligne
+dans un dialogue · faire lire Lohen · afficher un overlay · permettre au
+joueur d'ecrire · reveler les volumes I et II (ils n'existent pas comme
+props et ne doivent pas etre crees) · faire commenter par Mireille.
+[OBL] Mireille ne parle jamais du registre. Elle ne dit pas ce que c'est.
+Le joueur le comprend en le lisant, ou jamais.
+
+§ 8 — LIENS
+PN-003 (l'affiche des 641). PN-008 (le meuble du Registre, S1).
+PN-058 (le tableau de rationnement). PN-081 (le certificat de deces
+provisoire, a 20 cm sur la meme table).
+PN-067 (le tiroir MAQ-MAS, vide). PN-123 (l'affiche, 2e etat, S7).
+PN-139 (le mur des 314 feuilles « 0114 », S8) : l'autre ecriture repetee
+des centaines de fois, et celle-la est d'Esteban.
+[THEME] LES NOMS ECRITS A LA MAIN. [THEME] CE QU'ON NE PEUT PAS ECRIRE.
+
+§ 9 — DOD
+[ ] Deux etats d'ecriture par le meme calligraphe, droite puis gauche
+[ ] 22 noms + 22 mentions DECLARE PAR, issus du CSV, coherence par script
+[ ] 22e mention : « PERSONNE », jamais expliquee
+[ ] Esteban Marek absent du registre, verifie
+[ ] 8K, 640 px/m, lisible a 40 cm, sans overlay ni zoom
+[ ] Non tournable, non prenable, jamais commente par Mireille
+[ ] Lohen ne le lit jamais

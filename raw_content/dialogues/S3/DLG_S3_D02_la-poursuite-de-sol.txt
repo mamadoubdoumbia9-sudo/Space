@@ -1,0 +1,180 @@
+===============================================================================
+DLG · S3 · D02 — SOL VOLE LA SACOCHE : LA POURSUITE DE 90 SECONDES
+32 entrees : 31 lignes S3 (SOL 19 · LOH 12) + 1 bark (BK_S3). Contribution : 31.
+Reference maitre : 09.12. « Le joueur ne peut pas gagner. »
+Anim : SOL-RUN-012..028, LOH-RUN-040..047, SOL-IDL-004.
+===============================================================================
+
+--- LA REGLE DE LA POURSUITE ------------------------------------------------------
+
+[OBL] Le joueur NE PEUT PAS rattraper Sol. La distance est verrouillee
+entre 7 et 14 m par un systeme de caoutchouc (rubber-banding) invisible,
+et Sol s'arrete d'iel-meme a 90 s, sur un toit choisi, parce qu'iel a lu
+le matricule 0114 sur la sacoche.
+
+[OBL] Aucun echec possible. Si le joueur s'arrete completement, Sol
+s'arrete aussi, se retourne, attend, et lance une des lignes L041-L044.
+Si le joueur abandonne et part ailleurs, Sol le suit a distance et
+recommence la poursuite 40 s plus tard, jusqu'a trois fois. A la
+quatrieme, iel vient poser la sacoche par terre devant lui et s'assoit
+a cote. Cette branche existe. Elle a coute du travail. 4 % des joueurs
+la verront.
+
+[OBL] Sol ne dit jamais « attrape-moi » ni aucune ligne de provocation
+de jeu. Iel commente le monde en courant. C'est un enfant qui a treize
+ans et qui parle trop quand iel a peur.
+
+--- LES 20 LIGNES DE SOL PENDANT LA COURSE -----------------------------------------
+
+Toutes marquees `essouffle` sauf mention. Toutes enregistrees en
+mouvement : le comedien de Sol court dans le studio. [OBL] Trois
+sessions de 2 h maximum (INDEX § 9.03) ; celle-ci est la plus courte
+des trois, 70 minutes, et elle est enregistree en premier.
+
+    [S3_SOL_L027]  SOL · 1,0 s · joueur · p0,0
+        « Pardon ! »
+        dir : dit en volant la sacoche. Iel s'excuse. C'est la premiere
+              chose que le joueur entend de Sol.
+
+    [S3_SOL_L028]  SOL · 1,3 s · essouffle · p0,0
+        « C'est pas contre toi ! »
+
+    [S3_SOL_L029]  SOL · 1,6 s · essouffle · p0,0
+        « Y'a rien dedans, de toute facon ! »
+
+    [S3_SOL_L030]  SOL · 1,1 s · essouffle · p0,0
+        « Enfin j'espere ! »
+
+    [S3_SOL_L031]  SOL · 1,8 s · essouffle · p0,0
+        « A gauche c'est mieux ! Je te dis ca pour toi ! »
+        dir : [OBL] c'est un vrai conseil. La gauche est vraiment plus
+              rapide. Sol aide le joueur a la poursuivre. Iel ne se rend
+              pas compte.
+
+    [S3_SOL_L032]  SOL · 1,2 s · essouffle · p0,0
+        « Ah non, pas a gauche ! »
+
+    [S3_SOL_L033]  SOL · 1,4 s · essouffle · p0,0
+        « Brel ! Il me court apres ! »
+
+    [S3_BK_L034]  BREL (hors champ) · 1,1 s · plat · p0,0
+        « C'est normal. »
+
+    [S3_SOL_L035]  SOL · 1,7 s · essouffle · p0,0
+        « Tu cours bien, pour un vieux ! »
+
+    [S3_SOL_L036]  SOL · 1,0 s · essouffle · p0,0
+        « T'as quel age ? »
+
+    [S3_SOL_L037]  SOL · 2,1 s · essouffle · p0,0
+        « Vingt-sept ? Non. Trente. »
+        dir : [OBL] Lohen a 27 ans. Sol devine juste puis se corrige et
+              se trompe. Aucune correction n'arrivera jamais : l'age de
+              Lohen n'est dit nulle part dans le jeu.
+
+    [S3_SOL_L038]  SOL · 1,3 s · essouffle · p0,0
+        « La corde ! Prends la corde ! »
+
+    [S3_SOL_L039]  SOL · 1,5 s · essouffle · p0,0
+        « Bien joue ! »
+        dir : declenchee si le joueur reussit le premier saut au
+              grappin. Un enfant qui felicite celui qui le poursuit.
+
+    [S3_SOL_L040]  SOL · 1,2 s · essouffle · p0,0
+        « Pas par la, c'est chez Odile, elle va crier ! »
+
+    -- Lignes d'attente (le joueur s'est arrete) --
+
+    [S3_SOL_L041]  SOL · 1,4 s · plat · p0,0
+        « Bah alors. »
+
+    [S3_SOL_L042]  SOL · 1,9 s · plat · p0,0
+        « Tu fais quoi. Tu boudes ? »
+
+    [S3_SOL_L043]  SOL · 2,3 s · plat · p0,0
+        « Si tu cours pas, c'est pas du vol, c'est un cadeau. Je veux
+          pas de cadeau. »
+        dir : [OBL] la ligne qui definit le personnage. Un enfant qui
+              refuse la charite au milieu d'un vol.
+
+    [S3_SOL_L044]  SOL · 1,1 s · agace · p0,0
+        « Cours ! »
+        dir : 4e ligne d'attente. Apres celle-ci, si le joueur ne bouge
+              toujours pas pendant 20 s, Sol revient et pose la sacoche
+              (branche des 4 %).
+
+    -- Fin de course, sur le toit --
+
+    [S3_SOL_L045]  SOL · 1,6 s · essouffle · p0,7
+        « Ah. »
+        dir : iel vient de voir le matricule. L'anim SOL-IDL-004 : iel
+              s'arrete de bouger completement, ce qui pour Sol est
+              enorme.
+
+    [S3_SOL_L046]  SOL · 1,2 s · plat · p0,0
+        « Zero. Un. Un. Quatre. »
+        dir : [OBL] RACCORD CANON avec 12.12 du document maitre. Ces
+              mots sont les premiers de la scene S3-SOL-01, qui se
+              poursuit en D03. Ne pas les reecrire ailleurs.
+
+--- LES 12 LIGNES DE LOHEN ----------------------------------------------------------
+
+[OBL] Lohen dit onze fois moins de mots que Sol. Il court. Il ne menace
+pas. Il ne crie jamais « voleur ».
+
+    [S3_LOH_L047]  LOHEN · 0,7 s · surpris · p0,0
+        « Eh. »
+
+    [S3_LOH_L048]  LOHEN · 1,0 s · presse · p0,0
+        « Eh ! »
+
+    [S3_LOH_L049]  LOHEN · 1,3 s · essouffle · p0,0
+        « Pardon, pardon. »
+        dir : aux PNJ qu'il bouscule. Il s'excuse en poursuivant un
+              voleur. Deux fois dans la sequence.
+
+    [S3_LOH_L050]  LOHEN · 1,1 s · essouffle · p0,0
+        « Rends-la. »
+
+    [S3_LOH_L051]  LOHEN · 1,6 s · essouffle · p0,0
+        « Y'a rien dedans qui te sert. »
+
+    [S3_LOH_L052]  LOHEN · 1,2 s · essouffle · p0,0
+        « Rien du tout. »
+
+    [S3_LOH_L053]  LOHEN · 1,9 s · essouffle · p0,0
+        « Je te suivrai jusqu'a ce soir s'il faut. »
+        dir : dit platement, sans menace. C'est une information.
+
+    [S3_LOH_L054]  LOHEN · 1,4 s · essouffle · p0,0
+        « J'ai toute la journee. »
+
+    [S3_LOH_L055]  LOHEN · 1,0 s · essouffle · p0,0
+        « Non. »
+        dir : declenchee si Sol saute un ecart de 3,4 m que Lohen ne
+              peut pas franchir. Il contourne. Il perd 9 secondes. Le
+              rubber-banding les lui rend. [OBL] Le joueur ne doit pas
+              le sentir.
+
+    [S3_LOH_L056]  LOHEN · 1,7 s · essouffle · p0,0
+        « L'anneau. »
+        dir : il utilise un anneau qu'il a pose lui-meme, il y a des
+              annees, pour rattraper un enfant. Rien ne le souligne.
+
+    [S3_LOH_L057]  LOHEN · 1,2 s · essouffle · p0,0
+        « Attends. »
+        dir : declenchee quand Sol s'arrete. Le mot arrive trop tard :
+              Sol s'est deja arretee.
+
+    [S3_LOH_L058]  LOHEN · 2,0 s · essouffle · p0,0
+        « C'est mon matricule. »
+        dir : [OBL] RACCORD CANON, 12.12. La scene D03 commence ici.
+
+--- CHECKLIST --------------------------------------------------------------------
+
+[ ] Distance verrouillee 7-14 m, invisible au joueur
+[ ] Aucun echec, aucune mort, aucun timer affiche
+[ ] Branche des 4 % implementee (Sol pose la sacoche)
+[ ] Lohen ne crie jamais « voleur », ne menace jamais
+[ ] L046 et L058 raccordent exactement au texte canonique 12.12
+[ ] Session studio de Sol : 70 min, enregistree en premier

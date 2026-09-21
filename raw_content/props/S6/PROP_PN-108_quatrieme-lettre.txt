@@ -1,0 +1,126 @@
+===============================================================================
+PN-108 — LA QUATRIEME LETTRE DANS LA POCHE GAUCHE
+===============================================================================
+Asset : SM_S6_Lettre_Quatre · S6, poche gauche du gilet (PN-107) ·
+~04:53 · prop RAMASSABLE (4 des 9) + TEXTE LISIBLE · pas d'Echo ·
+LOD0 90 tris
+
+§ 1 — CE QU'ON VOIT
+Dans la poche gauche du gilet, un papier plie en quatre. Un coin depasse
+de 1,5 cm.
+Le joueur peut le prendre. C'est la premiere chose qu'il ramasse depuis
+l'ancre de Tallec (PN-046), il y a 2 h 26.
+Deplie, c'est une demi-feuille, 15 x 21, papier ordinaire.
+Ce n'est pas une lettre d'amour. C'est une LISTE.
+Ecrite a la main, a l'encre, d'une ecriture rapide, penchee a droite,
+serree. [OBL] C'est l'ecriture d'Esteban. Le joueur la voit pour la
+premiere fois.
+
+     cordage 40 m
+     deux lampes
+     le registre (demander a M.)
+     pain
+     dire a L. pour le 14
+     huile
+     la clef du haut
+
+Sept lignes. La cinquieme, « dire a L. pour le 14 », est BARREE.
+Un seul trait, net, tire au meme moment que le reste (meme encre).
+Il l'a barree en l'ecrivant, ou juste apres.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 90 tris (plie) / 24 tris (deplie, quad gondole).
+[OBL] Texture 4K. Densite 1 300 px/m. Les sept lignes sont lisibles a 30 cm.
+[OBL] L'ecriture d'Esteban est definie ICI, pour la premiere fois, et elle
+doit etre STRICTEMENT identique a celle de la lettre finale (PN-143) et des
+314 feuilles (PN-139). Meme calligraphe, meme plume, meme encre, meme
+inclinaison (14 degres a droite), meme liaison des lettres.
+[OBL] Elle doit etre visiblement differente de : PN-005 (Lohen), PN-008
+(le fonctionnaire), PN-027 (le patron de L'Hirondelle), PN-077 (Mireille).
+Le joueur a vu quatre ecritures. Voici la cinquieme, et c'est la sienne.
+RAMASSABLE : LOH-ACT-212, 3,1 s — il sort le papier, le deplie, le tient.
+[OBL] Il reste dans sa main pendant qu'il le regarde. Le joueur controle la
+camera. Il peut le lire aussi longtemps qu'il veut.
+Puis LOH-ACT-213, 2,4 s : il le replie et le met dans sa sacoche.
+[OBL] Il ne le repose pas. Il le garde. C'est le 4e des 9 ramassables.
+Consultable par appui long : LOH-ACT-144, a l'infini.
+
+§ 3 — CE QUE CA DIT
+[OBL] Une liste de courses. Le premier objet d'Esteban qui parle, et c'est
+une liste de courses.
+Le geste humain : faire une liste.
+Ligne par ligne :
+  — « cordage 40 m », « deux lampes », « huile » : il preparait quelque
+    chose. Un voyage, ou un travail, en hauteur, dans le noir.
+  — « le registre (demander a M.) » : M. = Mireille. [OBL] Jamais confirme.
+    Il voulait consulter le registre de la bibliotheque.
+  — « la clef du haut » : [OBL] jamais explique. Quelle clef. Quel haut.
+  — « dire a L. pour le 14 » : L. = Lohen. Le 14, c'est le 14 octobre.
+    Le bal. Ou autre chose.
+    [OBL] ET ELLE EST BARREE.
+Il a ecrit qu'il devait dire quelque chose a Lohen, et il l'a rayee.
+[OBL] Jamais explique. Ni dans ce chapitre, ni dans les six suivants.
+[OBL] La lettre finale (PN-143) n'y fait aucune allusion.
+
+§ 4 — ECHO
+NEANT. [OBL] Objet que Lohen porte des qu'il l'a pris (regle PN-005).
+Et avant de le prendre, il est dans une poche : pas de ligne de vue.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur est derriere le rideau, dans 60 cm, en lumiere rouge, avec
+un rai dore de 6 cm sur le gilet.
+Il vient de subir LOH-ACT-206 (2,6 s d'immobilite).
+Le coin de papier depasse de la poche gauche. Le prompt apparait.
+[OBL] Il peut ne pas le prendre. Il peut ressortir. Taux de prise : 91-96 %.
+[OBL] Aucun rattrapage : s'il ressort sans le prendre, il peut revenir. Le
+papier reste dans la poche pour toute la partie.
+Quand il le deplie : [OBL] il le tient a 35 cm de la camera, dans le rai
+dore de 6 cm. C'est la seule lumiere. Le reste est rouge.
+[OBL] Lohen ne le lit pas. [OBL] Il ne sait pas bien lire. Il le regarde.
+Le joueur lit.
+[ART] Un homme tient une liste de courses ecrite par celui qu'il cherche
+depuis trois ans, dans un rai de lumiere de six centimetres, derriere un
+rideau, et il ne peut pas la lire.
+[OBL] Aucune voix off. Aucun sous-titre. Aucun commentaire. Aucune musique
+supplementaire.
+
+§ 6 — AUDIO
+SFX(paper_unfold_single) : le depliage. Un papier plie en quatre depuis
+trois ans : il craque aux plis. -21 dB, dans un espace a RT60 0,6 s.
+[OBL] C'est un son SEC et PRECIS, et c'est le seul son de la scene.
+M21 continue, filtree a 2 kHz, -11 dB.
+[OBL] Le motif d'Esteban ne rejoue PAS ici. Il a joue 40 secondes plus tot
+(PN-107). Une fois suffit.
+SFX(paper_fold_back) : le repliage, 2,4 s plus tard.
+
+§ 7 — INTERDICTIONS
+Interdit de : expliquer la ligne barree · expliquer « la clef du haut » ·
+confirmer que M. est Mireille · confirmer que L. est Lohen · faire lire
+Lohen a voix haute · ajouter une voix off · ajouter un sous-titre · ajouter
+une huitieme ligne · dater la liste · la faire commenter par un PNJ ·
+permettre de la montrer a Mireille ou a Tallec · la perdre · la jeter ·
+ajouter de la musique · rejouer le motif.
+[OBL] La liste reste dans la sacoche jusqu'a la fin du chapitre. Elle n'est
+jamais montree a personne. Aucune option n'existe.
+
+§ 8 — LIENS
+PN-107 (le gilet). PN-025 (la veste, S2). PN-039 (la photo 300, S3).
+PN-143 (LA LETTRE, S8) : la MEME ecriture. Le joueur l'a vue ici, a 4 h 53,
+et il la reverra a 8 h... non : a 5 h 40 environ. [OBL] 47 minutes plus
+tard. Il la reconnaitra instantanement.
+PN-139 (les 314 feuilles « 0114 », S8) : la meme ecriture, 314 fois.
+PN-048 (la sacoche : la liste y rejoint les six lettres non livrees).
+PN-018 (le jeton), PN-046 (l'ancre) : les objets de poche de Lohen. Il en a
+maintenant trois.
+[THEME] LES ECRITURES. [THEME] CE QU'IL N'A PAS DIT.
+
+§ 9 — DOD
+[ ] Ecriture d'Esteban definie ici, inclinaison 14°, identique a PN-143/139
+[ ] Visiblement differente des 4 ecritures precedentes du chapitre
+[ ] 7 lignes, la 5e barree d'un trait de la meme encre
+[ ] 4K, 1 300 px/m, lisible a 30 cm
+[ ] Ramassable, garde dans la sacoche, consultable a l'infini
+[ ] Tenu a 35 cm dans le rai dore de 6 cm, reste en lumiere rouge
+[ ] Lohen ne lit jamais a voix haute
+[ ] Aucun motif rejoue, aucune musique ajoutee, aucun sous-titre
+[ ] Jamais montree a aucun personnage, aucune option

@@ -1,0 +1,122 @@
+===============================================================================
+PN-138 — LA COUVERTURE PLIEE
+===============================================================================
+Asset : SM_S8_Couverture_Pliee · S8, lit de la chambre du gardien ·
+~06:23 · PORTEUR D'ECHO E29 · LOD0 2 400 tris
+
+§ 1 — CE QU'ON VOIT
+Contre le mur courbe, un lit. Un chassis de fer, un matelas mince.
+Le lit est fait.
+Et sur le lit, au pied, il y a une couverture PLIEE.
+[OBL] Pliee en quatre. Un rectangle net. Les angles sont droits.
+C'est une couverture de laine grise, ordinaire, avec deux bandes bordeaux
+aux extremites.
+[OBL] Elle est pliee de la meme facon que la couverture du landau (PN-014,
+S1, a 5 h 45 de la).
+[OBL] Et de la meme facon que la veste d'Esteban dans la cabine (PN-025, S2)
+— [OBL] NON. Celle-la etait pliee approximativement, mal, vite.
+Celle-ci est parfaite.
+[OBL] Elle est pliee comme le pardessus sur la bitte (PN-032, S2). Angles
+droits, aretes marquees, symetrie.
+Le lit n'a pas ete defait depuis longtemps. La poussiere s'est deposee en
+couche fine et reguliere sur le drap.
+[OBL] Sauf sur la couverture pliee. Elle est propre.
+Quelqu'un la prend, s'en sert, et la replie.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 400 (couverture 1 400 + lit 1 000).
+[OBL] La couverture est SCULPTEE dans son etat plie. Aucune simulation.
+Les quatre epaisseurs sont visibles sur la tranche, avec les deux bandes
+bordeaux qui reapparaissent aux bons endroits.
+[OBL] La logique du pliage doit etre verifiable : si on deplie mentalement
+le rectangle, les bandes doivent tomber aux extremites d'une couverture de
+200 x 140 cm.
+Shader `wool_clean` + `dust_settled` sur le drap, masque au contour de la
+couverture.
+Anim : PROP-847 — pendant E29.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un dort ici. Ou a dormi. Et plie sa couverture.
+Le geste humain : PLIER. Pour la cinquieme et derniere fois du chapitre.
+[OBL] Les cinq pliages du chapitre :
+  PN-014 — la couverture du landau (S1) : pliee, dans un landau vide
+  PN-025 — la veste d'Esteban (S2) : mal pliee, sur une couchette
+  PN-032 — le pardessus (S2) : parfaitement plie, sur une bitte
+  PN-002 — la valise triee (S1) : rangee par taille
+  PN-138 — cette couverture (S8)
+[OBL] Le jeu ne les relie jamais.
+[NAR] Et le lit est fait, et la poussiere est dessus, et la couverture est
+propre.
+Il ne dort plus dedans. Il dort dessus, enroule dans la couverture, et il
+la replie.
+
+§ 4 — ECHO
+ECHO E29 — « Le lit » — 23 secondes, mode A.
+[OBL] Le premier des trois derniers Echos du chapitre.
+Ce qu'on voit : une silhouette. Assise au bord du lit. De dos.
+[OBL] Elle est deja la. Pas d'apparition.
+Elle est immobile pendant 14 secondes.
+[OBL] Quatorze secondes. Un homme assis au bord d'un lit, de dos, qui ne
+fait rien.
+A 14 s, elle se penche en avant. Les coudes sur les genoux. La tete dans
+les mains.
+[OBL] Elle ne pleure pas. Il n'y a aucun mouvement d'epaules, aucun
+tremblement, aucun son.
+[OBL] Rappel de la regle d'animation n°9 (ANIM_MANIFEST annexe D) : on ne
+regarde pas les gens pleurer. [OBL] Elle ne pleure pas, et on ne saurait
+pas si elle pleurait.
+Elle reste ainsi 6 secondes.
+A 20 s, elle se redresse.
+A 21 s, elle s'efface.
+[OBL] La couverture, au pied du lit, BOUGE pendant l'Echo : elle est
+depliee, sur le lit, en desordre. A l'effacement de la silhouette, elle
+redevient pliee.
+[OBL] Pas d'animation de pliage. Elle change d'etat entre deux images.
+Musique : NEANT. [OBL] M24 est arretee. Il n'y a rien.
+Le seul son : la meche de la lampe (PN-137) a -34 dB.
+Rituel d'entree : 2,44 s.
+[OBL] C'est l'Echo le plus silencieux du chapitre.
+
+§ 5 — MISE EN SCENE
+[OBL] Le lit est a droite en entrant. Le joueur le voit en premier ou en
+deuxieme, selon l'endroit ou il tourne la tete.
+[OBL] Il n'y a aucun ordre impose dans la chambre. Les trois Echos
+(E29, E30, E31) peuvent etre declenches dans n'importe quel ordre.
+[OBL] SAUF E31 (la lettre) : [OBL] elle n'apparait qu'apres que le joueur
+a declenche E29 ET E30. Cf. PN-143 § 5.
+[OBL] Aucun plan, aucune camera, aucune musique, aucun dialogue.
+[OBL] Lohen ne s'assoit pas sur le lit. Il n'y a pas de commande pour
+s'asseoir (PN-036).
+
+§ 6 — AUDIO
+[OBL] Pendant E29 : rien. Absolument rien de nouveau.
+La meche continue. Le vent continue. Le verre de cheminee tique.
+[OBL] La silhouette ne fait aucun bruit : pas de respiration, pas de
+craquement de lit, pas de froissement de laine, pas de vetement.
+[ART] Vingt-trois secondes ou il ne se passe aucun son.
+Le changement d'etat de la couverture, a 21 s : [OBL] silencieux.
+
+§ 7 — INTERDICTIONS
+Interdit de : faire pleurer la silhouette · ajouter un son · ajouter un
+sanglot · ajouter une respiration · ajouter de la musique · montrer le
+visage · faire tourner la silhouette · s'asseoir sur le lit · deplier la
+couverture · l'emporter · animer le repliage · rendre E29 rejouable ·
+ajouter un objet sous l'oreiller.
+
+§ 8 — LIENS
+PN-014, PN-025, PN-032, PN-002 (les pliages du chapitre).
+PN-087 (le matelas de Sol, S5, E19) : un autre lit fait au carre.
+PN-147 (la veste 0114 posee sur Sol, S8) : le dernier geste du chapitre est
+de poser un vetement sur quelqu'un qui dort.
+PN-140 (les chaussures rangees cote a cote).
+[THEME] PLIER. [THEME] ON NE REGARDE PAS LES GENS PLEURER.
+
+§ 9 — DOD
+[ ] Couverture sculptee pliee en quatre, logique de pliage verifiable
+[ ] Bandes bordeaux tombant correctement une fois deplie mentalement
+[ ] Poussiere sur le drap, absente sur la couverture
+[ ] E29 : 14 s d'immobilite assise, 6 s tete dans les mains, zero tremblement
+[ ] Changement d'etat de la couverture entre deux images, sans animation
+[ ] Zero son nouveau pendant les 23 secondes
+[ ] Zero musique, zero visage, zero sanglot
+[ ] Aucune commande pour s'asseoir

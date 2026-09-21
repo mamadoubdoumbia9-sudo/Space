@@ -1,0 +1,102 @@
+===============================================================================
+PN-126 — LA STATUE SANS TETE
+===============================================================================
+Asset : SM_S7_Statue · S7, terre-plein du front de mer, avant le pont ·
+~05:53 · prop narratif · pas d'Echo · LOD0 5 800 tris
+
+§ 1 — CE QU'ON VOIT
+Sur un terre-plein, un socle de granit de 2,20 m et, dessus, une statue de
+bronze.
+Un homme en pied, en vareuse de marin, 2,10 m. Il regarde la mer. Une main
+en visiere au-dessus des yeux.
+[OBL] Il n'a pas de tete.
+Elle a ete arrachee. Pas sciee, pas fondue : ARRACHEE. La cassure au niveau
+du cou est irreguliere, le bronze est etire, tordu vers le haut.
+[OBL] Il a fallu une force considerable.
+La main en visiere est toujours la, levee, a l'endroit ou etaient les yeux.
+Elle protege du soleil un visage qui n'existe plus.
+Sur le socle, une plaque de bronze. Elle est intacte.
+     A NOS MARINS
+     QUI SONT PARTIS
+[OBL] Cinq mots. La plaque a ete posee en 1886.
+La tete n'est nulle part. [OBL] Elle n'est dans aucune scene du jeu.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 5 800 (statue 4 200 + socle 900 + plaque 200 + cassure 500).
+[OBL] La cassure du cou : sculpt dedie, 500 tris, avec le bronze etire en
+languettes de 1 a 4 cm, tordues VERS LE HAUT.
+[ART] La direction de la deformation est l'information : on a tire vers le
+haut. Un vandale frappe et fait tomber. Ici, on a arrache en tirant.
+Shader `bronze_patina_marine` : une patine verte inegale, avec des coulures
+noires sous les creux et un bronze nu poli sur les zones exposees a la
+pluie battante.
+[OBL] Les languettes de la cassure sont en bronze NU. La cassure est
+recente a l'echelle du bronze : moins de cinq ans.
+La plaque : texture 2K, lettres en relief de 2 mm, lisible a 2 m.
+Collision : boite. Non escaladable.
+
+§ 3 — CE QUE CA DIT
+Un monument aux marins disparus, de 1886, a perdu sa tete.
+Le geste humain : arracher.
+[OBL] Jamais explique. Ni par qui, ni quand, ni pourquoi.
+[OBL] Et surtout : ce n'est PAS lie a la Maree. Le bronze de la cassure est
+trop peu patine — c'est recent, mais rien ne dit que c'est apres.
+« A NOS MARINS QUI SONT PARTIS ». Cinq mots, graves en 1886, pour des marins
+morts en mer au XIXe siecle.
+[OBL] Le jeu ne fait aucun commentaire sur la resonance de cette plaque avec
+641 disparus. Aucune camera, aucune musique, aucun dialogue.
+[ART] Elle est juste la, et elle est de 1886, et elle dit exactement ce
+qu'il faut, et personne ne l'a mise la pour ca.
+
+§ 4 — ECHO
+NEANT. [OBL] Monument public (PN-016). Et : PN-020 (la croix, S2) avait
+etabli que le chapitre contient TROIS monuments prives et ZERO monument
+public. Celui-ci est le seul monument public du jeu, il a 140 ans, il ne
+concerne pas la Maree, et il n'a pas de tete.
+
+§ 5 — MISE EN SCENE
+[OBL] Elle est sur le chemin du pont. Incontournable.
+Le joueur passe a 4 m.
+[OBL] La statue regarde la mer. Le joueur marche vers le pont, donc il
+passe DERRIERE elle et voit son dos, puis son profil.
+[ART] Il voit un homme de bronze sans tete qui fait un geste pour se
+proteger d'un soleil qui n'existe pas, sous la pluie, face a quatre
+kilometres de verre.
+[OBL] Aucun plan, aucun cadrage, aucun LookAt, aucun ralenti.
+La plaque est lisible depuis le chemin, a 4 m, sans detour.
+Taux de lecture : 61-73 %.
+[OBL] Lohen ne s'arrete pas.
+
+§ 6 — AUDIO
+SFX(rain_on_bronze) : la pluie sur la statue. Un son SOURD et plein — le
+bronze massif ne resonne pas comme la tole.
+[OBL] Distinct des 34 chaises de fer (PN-113) et du zinc du kiosque.
+SFX(water_run_bronze) : l'eau qui court dans les plis de la vareuse et
+tombe du bras leve. Une goutte reguliere depuis la main en visiere.
+[ART] La main en visiere goutte. C'est le seul mouvement de la statue.
+Aucune musique.
+
+§ 7 — INTERDICTIONS
+Interdit de : retrouver la tete · l'ajouter dans une scene · expliquer
+l'arrachement · dater precisement · relier a la Maree · ajouter un
+graffiti · ajouter des fleurs · ajouter une couronne · faire commenter ·
+donner un Echo · ajouter un plan · escalader · modifier les cinq mots.
+
+§ 8 — LIENS
+PN-020 (la croix plantee dans le verre, S2) : le monument prive, anonyme,
+et celui-la parle des 641.
+PN-007 (la chaise attachee au fil de fer). PN-131 (le palier des cloches,
+S8) : les trois monuments prives du chapitre.
+PN-003, PN-123 (les affiches).
+PN-056 (la baleine de bois, S3) : l'autre sculpture du chapitre, intacte,
+belle, sans tragedie.
+[THEME] LES MONUMENTS QUI NE DISENT PAS CE QU'IL FAUT.
+
+§ 9 — DOD
+[ ] Cassure du cou sculptee, languettes tordues VERS LE HAUT
+[ ] Bronze nu a la cassure, patine ailleurs : rupture recente a l'echelle
+[ ] Main en visiere conservee, gouttant en permanence
+[ ] Plaque de 1886, cinq mots, lisible a 4 m depuis le chemin
+[ ] Tete absente de toutes les scenes du jeu
+[ ] Son de bronze massif, distinct du fer et du zinc
+[ ] Zero plan, zero commentaire, zero lien etabli avec la Maree

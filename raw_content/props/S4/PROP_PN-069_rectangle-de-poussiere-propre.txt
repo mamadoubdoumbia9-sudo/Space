@@ -1,0 +1,86 @@
+===============================================================================
+PN-069 — LE RECTANGLE DE POUSSIERE PROPRE
+===============================================================================
+Asset : DECAL_S4_Rectangle_Propre · S4, sur le dessus du casier 7, rangee M
+· ~03:24 · prop narratif (decal pur) · pas d'Echo · 0 tris
+
+§ 1 — CE QU'ON VOIT
+Sur le dessus du casier 7 de la rangee M, dans la poussiere qui couvre tout
+le meuble depuis trois ans, il y a un rectangle propre.
+24 x 32 cm. Les bords sont NETS. Quelque chose de rectangulaire et plat a
+ete pose la, longtemps, et a ete enleve.
+Recemment : le rectangle n'a pas commence a se recouvrir. Il est parfaitement
+net. Quelques jours, au plus quelques semaines.
+A cote du rectangle, dans la poussiere, trois traces de doigts. Trois
+doigts, glisses, sur 6 cm. Quelqu'un a pousse l'objet avant de le soulever.
+Il n'y a rien d'autre.
+[OBL] Il n'y a pas d'objet. Le rectangle EST le prop.
+
+§ 2 — FICHE TECHNIQUE
+0 tris. C'est un DECAL, projete sur le dessus du casier.
+Decal 1K, 24 x 32 cm, avec un masque d'alpha aux bords nets (transition de
+2 mm, pas plus) et les trois traces de doigts.
+[OBL] L'ordre de rendu doit placer ce decal SOUS la couche de poussiere
+procedurale du meuble, en la masquant, et non par-dessus. Sinon les bords
+bavent et l'effet est detruit.
+[OBL] La poussiere du dessus des meubles de la rangee M est une couche
+dediee (masque vertical + bruit), pas une texture d'atlas. Cette couche
+doit etre presente sur les 14 casiers de la rangee pour que le rectangle
+propre du casier 7 se lise comme une anomalie.
+Visible depuis : la mezzanine uniquement (comme PN-068).
+Cout : 0,04 ms.
+
+§ 3 — CE QUE CA DIT
+Il y avait quelque chose ici. Ce n'est plus la.
+24 x 32 cm : le format d'un registre. Ou d'un grand cahier. Ou d'un carton
+a dessin. Ou d'un cadre.
+[OBL] Le jeu ne dit jamais ce que c'etait. Aucune option, aucun indice,
+aucune resolution, ni dans ce chapitre ni dans les six suivants.
+Le geste humain : glisser trois doigts sous un objet plat pour le soulever.
+[NAR] Le point est ailleurs : le joueur a passe trois heures a lire des
+objets. Voici la trace d'un objet qui n'est plus la. Le systeme de lecture
+du jeu est pousse jusqu'a son terme logique — on peut lire une absence.
+[OBL] C'est le seul prop du chapitre qui n'a aucune matiere.
+
+§ 4 — ECHO
+NEANT. Il n'y a pas d'objet. [OBL] Aucun prompt n'apparait, evidemment :
+le systeme d'Echo requiert une cible physique. Cette limite technique est
+ici un enonce narratif.
+
+§ 5 — MISE EN SCENE
+Depuis la mezzanine, a 9 m, en plongee. Le joueur voit les dessus de 14
+meubles poussiereux, et sur le septieme, un rectangle net.
+[ART] Il est plus visible que la chemise cartonnee (PN-068), parce que le
+contraste poussiere/propre en plongee accroche mieux l'oeil qu'un objet
+beige sur du bois sombre.
+Taux de decouverte cible : 44-55 %.
+[OBL] Il est inatteignable. Le joueur ne peut ni monter sur les meubles, ni
+les approcher d'en haut. Il voit, et c'est tout.
+Aucun prompt, aucun LookAt, aucun son, aucune musique.
+
+§ 6 — AUDIO
+NEANT. Un decal ne fait pas de bruit.
+
+§ 7 — INTERDICTIONS
+Interdit de : reveler ce qui etait pose la · retrouver l'objet ailleurs dans
+le jeu · le nommer · faire commenter · ajouter un deuxieme rectangle ·
+permettre d'atteindre le dessus du meuble · ajouter un prompt · en faire un
+indice · le resoudre dans les six lettres suivantes.
+[OBL] Rappel : PN-069 et l'objet manquant de PN-119 (le dossier d'Esteban,
+S7) ne sont PAS lies. Le dossier d'Esteban n'a jamais ete ici. Toute
+production qui etablirait ce lien est une erreur de canon.
+
+§ 8 — LIENS
+PN-068 (la chemise vide, sur le casier 4). PN-051 (le rectangle clair de la
+plaque retiree, S3). PN-060 (le rectangle clair du second miroir, S3).
+[OBL] Trois rectangles vides dans le chapitre, trois absences d'objet.
+Aucun n'est resolu. Aucun n'est relie aux autres.
+[THEME] LIRE UNE ABSENCE.
+
+§ 9 — DOD
+[ ] Decal 1K, bords nets a 2 mm, trois traces de doigts sur 6 cm
+[ ] Rendu SOUS la couche de poussiere procedurale, pas par-dessus
+[ ] Couche de poussiere presente sur les 14 casiers de la rangee M
+[ ] Visible uniquement depuis la mezzanine, inatteignable
+[ ] Aucun prompt, aucun son, jamais resolu
+[ ] Aucun lien etabli avec PN-119

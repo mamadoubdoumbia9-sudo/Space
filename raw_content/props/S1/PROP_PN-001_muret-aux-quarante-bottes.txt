@@ -1,0 +1,218 @@
+===============================================================================
+PN-001 — LE MURET AUX QUARANTE BOTTES
+===============================================================================
+Asset        : SM_S1_Muret_Bottes_40
+Sequence     : S1 — Les Quais Bas
+Position     : quai nord, 40 m apres le point de depart, cote gauche du
+               chemin principal, altitude 2 m
+Timing       : rencontre a ~00:06 de jeu
+Statut       : prop narratif majeur · PORTEUR D'ECHO E01
+Unicite      : exemplaire unique
+LODs         : 4 · LOD0 8 400 tris (40 bottes) · cull a 90 m
+
+-------------------------------------------------------------------------------
+§ 1 — CE QU'ON VOIT
+-------------------------------------------------------------------------------
+Un muret de pierre calcaire de 14 m de long, 0,60 m de haut, 0,45 m de
+large, qui borde le quai cote mer. Il est humide sur sa face nord, sec sur
+sa face sud.
+
+Sur ce muret sont alignees QUARANTE BOTTES. Quarante exactement.
+Elles ne sont pas jetees. Elles ne sont pas en tas. Elles sont POSEES,
+debout, semelle contre la pierre, tige verticale, orientees toutes dans le
+meme sens : ouverture vers la mer.
+
+Elles sont depareillees. Ce sont des bottes de peche, de travail, de
+ville. Il y a :
+  - 14 paires completes, chaque paire cote a cote
+  - 12 bottes seules, sans leur jumelle
+  - 3 bottes d'enfant, dont une paire rose delavee, taille 28
+  - 1 botte de femme a talon bas, en cuir souple, incongrue
+Les tailles vont du 28 au 47.
+
+Etat : elles ont pris trois ans de crachin. Le cuir a blanchi par endroits,
+il a verdi a la base. Les lacets pendent, defaits, jamais coupes. Trois
+d'entre elles contiennent de l'eau de pluie stagnante et une pellicule
+verte. Une quatrieme contient une petite plante qui a pousse dedans —
+une seule, et elle est vivante.
+
+Sous le muret, cote mer, le verre noir de la Maree commence a 2 m.
+Il n'y a aucune trace de pas dans le verre. Il n'y en a jamais eu.
+
+-------------------------------------------------------------------------------
+§ 2 — FICHE TECHNIQUE
+-------------------------------------------------------------------------------
+Polycount     LOD0 8 400 / LOD1 4 600 / LOD2 2 100 / LOD3 780
+              (14 modeles de bottes uniques, reutilises avec rotation,
+              deformation de tige et variation de teinte par instance)
+Muret         geometrie separee, kit K1, 1 200 tris, triplanaire
+Textures      atlas dedie 4K `T_S1_Bottes_Atlas` (albedo + normal + ORM)
+              1 masque de salissure 2K pilote par instance
+Shader        `leather_weathered.gdshader` (derive de stone_wet, param
+              d'absorption d'eau par hauteur)
+Instanciation INTERDITE en MultiMesh — chaque botte a une rotation, une
+              inclinaison et un affaissement de tige uniques, places a la
+              main. [OBL] Aucune botte ne partage sa transform avec une
+              autre. C'est verifie par `tools/repetition_audit.py`.
+Collision     boite unique sur le muret (grimpable, 09.25). Les bottes
+              n'ont pas de collision individuelle.
+Physique      aucune. Elles ne tombent pas. Elles ne bougent pas.
+Anim          PROP-736 `boots_row_still` — clip de 1 frame. Voir § 7.
+Interaction   Echo E01 sur la 17e botte en partant de la gauche (une
+              botte d'homme, taille 44, la plus usee de toutes)
+Cout GPU      0,21 ms sur MID
+
+-------------------------------------------------------------------------------
+§ 3 — CE QUE CA DIT
+-------------------------------------------------------------------------------
+Les gens ont retire leurs chaussures avant de descendre sur le verre.
+
+C'est tout. C'est toute l'information. Et elle est terrible, parce qu'elle
+implique :
+  - qu'ils y sont alles VOLONTAIREMENT ;
+  - qu'ils ont pris le temps ;
+  - qu'ils l'ont fait proprement, en alignant, comme on entre dans une
+    maison, dans une mosquee, dans un lit ;
+  - qu'ils ont considere le verre comme un endroit ou l'on ne va pas
+    chausse ;
+  - et qu'aucun n'est revenu les chercher.
+
+Le geste humain a l'origine de l'objet (0.03) : quelqu'un s'est assis sur
+ce muret, a delace ses bottes, les a posees debout, s'est leve pieds nus,
+et a marche vers la mer solidifiee.
+Puis quarante personnes l'ont fait.
+Puis plus personne n'est venu.
+
+[NAR] Le jeu n'explique JAMAIS pourquoi ils sont descendus. Ce n'est pas
+un mystere a resoudre : c'est le premier fait du monde. Certains joueurs
+penseront a un suicide collectif. D'autres a une evacuation. D'autres a un
+rituel. Toutes ces lectures sont valides et aucune n'est confirmee.
+
+C'est le PREMIER prop narratif du jeu, rencontre a la sixieme minute. Il
+etablit le contrat : ici, les objets parlent, et personne ne traduit.
+
+-------------------------------------------------------------------------------
+§ 4 — ECHO E01 — « LE MURET AUX BOTTES »
+-------------------------------------------------------------------------------
+ID            E01 · Mode A (contemplatif) · Duree 0:50 · OBLIGATOIRE
+Cout          -18 Souffle
+Objet porteur la 17e botte (homme, 44, cuir noir crevasse, lacet rouge
+              remplace par de la ficelle)
+Position      la main se pose sur la tige, pas sur la semelle
+
+CONTENU DE LA MEMOIRE :
+Il fait jour. La brume est plus claire qu'aujourd'hui. Le quai est plein de
+monde — dix-sept silhouettes, rendues en materiau `memory_person`
+(05.19) : presences pleines, sans visage, sans ombre portee.
+
+Elles ne se parlent pas.
+Elles font la QUEUE.
+Une file calme, ordonnee, de dix-sept personnes le long du muret.
+
+Chacune arrive, s'assoit, retire ses bottes, les pose debout, se releve,
+et descend les trois marches vers le verre. La personne suivante s'avance.
+Le cycle dure environ 22 secondes par personne. On en voit trois complets.
+
+Une seule chose sort de l'ordre : la quatrieme personne de la file, une
+silhouette petite (un enfant), hesite. Elle reste assise 4 secondes de
+plus. Une main adulte se pose sur son epaule. L'enfant se leve et descend.
+
+Il n'y a AUCUN son de voix. On entend : le crachin, le cuir, les lacets,
+les pas nus sur la pierre mouillee, et le silence du verre.
+
+A la 47e seconde, l'Echo se dissout (VFX V11). Les silhouettes se defont
+en lignes verticales, du bas vers le haut.
+Les bottes restent.
+
+[OBL] Aucune de ces silhouettes n'est Esteban. Aucune n'a de lisere ambre.
+Le joueur va chercher. Il ne trouvera pas. C'est le premier Echo et il
+etablit aussi cela : tous les Echos ne parlent pas de lui.
+
+-------------------------------------------------------------------------------
+§ 5 — MISE EN SCENE
+-------------------------------------------------------------------------------
+APPROCHE : le chemin principal longe le muret par la droite. Le joueur
+marche PARALLELEMENT a la rangee pendant 14 metres. Il ne decouvre pas les
+bottes d'un coup : il les voit defiler.
+[OBL] Le cadrage ne fait jamais un plan large de la rangee entiere. Jamais
+de plan « regardez comme c'est triste ». Le joueur additionne lui-meme.
+
+LUMIERE : aube grise, soleil a 12 deg derriere-gauche. Les bottes
+projettent quarante ombres paralleles de 1,10 m vers le joueur. Ces ombres
+sont ce qu'on voit en premier, avant les bottes elles-memes, quand on
+arrive par la courbe du quai.
+La botte porteuse d'Echo (la 17e) n'est PAS eclairee differemment. Elle
+est reperable uniquement par le contraste d'humidite du shader (09.21) :
+la pierre sous elle est legerement plus seche.
+
+TROIS PLANS (05.03) :
+  premier plan   — un bollard de fonte et un cordage, sombres
+  plan moyen     — le muret et les bottes
+  arriere-plan   — la brume, la Maree, et le Phare tout en haut
+
+CE QU'IL Y A DERRIERE : rien. La mer de verre, jusqu'a l'horizon. Aucune
+structure, aucun repere. C'est le seul endroit de S1 ou le fond est vide.
+
+DUREE D'ARRET OBSERVEE en playtest cible : 40 a 90 secondes. Si les
+testeurs passent en moins de 20 s, le level art a echoue : on augmente le
+contraste des ombres, jamais un prompt.
+
+-------------------------------------------------------------------------------
+§ 6 — AUDIO
+-------------------------------------------------------------------------------
+Ambiance      lit A01 « quai nord » : crachin fin, ressac absent (il n'y a
+              plus de ressac — c'est la premiere anomalie sonore du jeu et
+              elle est silencieuse)
+Propre        SFX(leather_creak_wind) declenche 1 fois toutes les 12 a 20 s
+              sur une botte aleatoire, volume -22 dB. Une seule botte
+              bouge un peu au vent. Jamais deux en meme temps.
+              SFX(water_in_boot) tres discret sur les trois bottes pleines
+Musique       M02 « Les bottes » — 1:20, piano seul, ONZE NOTES.
+              [OBL] La musique ne demarre PAS a l'approche. Elle demarre a
+              la premiere note de l'Echo E01, et elle s'arrete a la fin de
+              l'Echo. Si le joueur ne lit pas l'Echo, il n'entend jamais
+              M02 de tout le jeu.
+Reverb        bus `exterieur_ouvert`, IR « falaise »
+
+-------------------------------------------------------------------------------
+§ 7 — INTERDICTIONS
+-------------------------------------------------------------------------------
+[OBL] Il est interdit de :
+  - faire tomber une botte au passage du joueur. Elles ne bougent pas.
+  - ajouter un os, un squelette, un corps, une trace de sang.
+  - ajouter une note ecrite, une plaque, une inscription.
+  - faire commenter la scene par un personnage, maintenant ou plus tard.
+  - eclairer la rangee avec une source dediee.
+  - faire jouer M02 en approche.
+  - depasser quarante bottes. Ni trente-neuf, ni quarante et une.
+  - rendre la 17e botte visuellement distincte (pas de lueur, pas de
+    couleur, pas de position decalee).
+  - reutiliser un seul de ces 14 modeles de bottes ailleurs dans le jeu.
+  - permettre au joueur d'en ramasser une.
+  - animer la plante qui pousse dans la botte. Elle est immobile.
+
+-------------------------------------------------------------------------------
+§ 8 — LIENS
+-------------------------------------------------------------------------------
+PN-063  Le tas de chaussures d'enfants (S3) — l'echo formel de ce prop,
+        mais en desordre. Le contraste dit que le Marche, lui, a panique.
+PN-140  Les chaussures rangees cote a cote (S8) — LE RAPPEL FINAL.
+        Esteban a range ses chaussures dans la chambre du Phare, exactement
+        comme les quarante ici. [NAR] Le joueur qui fait le lien comprend
+        quelque chose que le jeu ne dira jamais : Esteban savait.
+PN-031  La main dans le verre (S2) — les pieds nus, plus tard.
+ECHO E01 → premier maillon de la matrice d'information (11.05).
+DIALOGUE : aucun. Personne n'en parle. Jamais (5.06).
+
+-------------------------------------------------------------------------------
+§ 9 — DOD
+-------------------------------------------------------------------------------
+[ ] 40 bottes exactement, 14 modeles, 40 transforms uniques
+[ ] `repetition_audit.py` au vert sur ce cadre
+[ ] Les 40 ombres sont visibles depuis le point d'approche a 30 m
+[ ] Echo E01 jouable, 50 s, 17 silhouettes, 3 cycles complets
+[ ] Aucune silhouette de l'Echo ne porte d'ambre
+[ ] M02 ne se declenche que dans l'Echo
+[ ] Test aveugle : 4 testeurs sur 5 s'arretent plus de 20 secondes
+[ ] Test aveugle : au moins 3 testeurs sur 5 formulent spontanement
+    « ils ont enleve leurs chaussures »

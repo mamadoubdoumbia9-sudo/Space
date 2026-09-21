@@ -1,0 +1,116 @@
+===============================================================================
+DLG · S1 · D01 — OUVERTURE : LA SEULE VOIX OFF DU JEU
+14 lignes · LOHEN seul · 22 secondes de parole sur 41 secondes de plan
+Reference maitre : 12.10. Reference anim : CIN-201, LOH-IDL-001, LOH-WLK-012.
+===============================================================================
+
+--- CONTEXTE -------------------------------------------------------------------
+
+Le ponton brise des Quais bas, 06:12. Brume a 70 m. Crachin V02. M01
+« Velmora, 06:12 » (violoncelle + verres) est deja en cours depuis 14 s
+quand la premiere ligne tombe. Lohen marche vers le bout du ponton et
+s'arrete a 2,10 m du bord. Il ne regarde pas la Maree : il regarde la
+brume au-dessus.
+
+[OBL] C'est la SEULE voix interieure du chapitre 1. Elle ne revient jamais,
+pas une fois, pas en S8, pas pendant la lettre. Si l'agent ajoute une
+deuxieme pensee interieure ou que ce soit, il a casse le personnage :
+Lohen est un homme qui ne se raconte pas. On a droit a 22 secondes, une
+fois, au tout debut, parce qu'apres il faudra 3 h 30 pour le comprendre
+par ses mains.
+
+REGLE DE PRISE : debout, micro 18 cm, souffle audible, pas de proximite
+intime — ce n'est pas un chuchotement de confidence, c'est un homme qui
+recite une regle de metier a personne.
+
+--- LES 14 LIGNES --------------------------------------------------------------
+
+    [S1_LOH_L001]  LOHEN (int) · 2,1 s · plat · p0,6
+        « Il y a une regle chez les relayeurs. »
+        dir : il marche encore. La ligne commence AVANT qu'il s'arrete.
+
+    [S1_LOH_L002]  LOHEN (int) · 1,9 s · plat · p0,4
+        « Une lettre non remise, tu la gardes. »
+        dir : il s'arrete sur « gardes ». Le pas et le mot tombent ensemble.
+
+    [S1_LOH_L003]  LOHEN (int) · 2,8 s · plat · p0,3
+        « Tu la gardes jusqu'a ce que tu trouves la personne, »
+        dir : rien ne bouge. La camera non plus.
+
+    [S1_LOH_L004]  LOHEN (int) · 2,6 s · plat · p1,4
+        « ou jusqu'a ce que tu trouves quelqu'un qui l'a connue. »
+        dir : sur « connue », il met la main a plat sur la sacoche.
+              Il ne l'ouvre pas. Pause longue justifiee : 1,4 s, ecrite,
+              c'est le trou du chapitre entier.
+
+    [S1_LOH_L005]  LOHEN (int) · 1,7 s · plat · p0,8
+        « J'en ai une depuis trois ans. »
+        dir : rien. Surtout rien.
+
+    [S1_LOH_L006]  LOHEN (int) · 1,2 s · retenu · p0,0
+        « Elle est de moi. »
+        dir : il ferme la bouche avant la fin du souffle. La derniere
+              syllabe est mangee. On garde la prise ou elle est mangee.
+
+    -- Les huit lignes suivantes ne sont PAS dans le monologue. Elles sont
+       le meme enregistrement, decoupe autrement : le jeu peut jouer la
+       version courte (6 lignes) ou la version longue (14) selon que le
+       joueur avance ou reste immobile sur le ponton. S'il avance avant
+       L004, L007..L014 ne se declenchent jamais. 71 % des joueurs les
+       entendent. Les 29 % restants ont un jeu qui commence plus vite et
+       c'est tres bien aussi. [OBL] Aucun rappel, aucune seconde chance.
+
+    [S1_LOH_L007]  LOHEN (int) · 2,4 s · plat · p0,5
+        « On nous apprend a ne jamais lire ce qu'on porte. »
+        dir : declenche si le joueur est encore immobile 1,2 s apres L006.
+
+    [S1_LOH_L008]  LOHEN (int) · 1,8 s · sec · p0,4
+        « Moi je ne sais pas lire. »
+        dir : dit comme une information administrative. Aucun apitoiement.
+              C'est la premiere fois, et le jeu ne le redira que deux fois
+              en 3 h 30 : ici, en S3 par Sol, et dans la lettre.
+
+    [S1_LOH_L009]  LOHEN (int) · 2,2 s · sec · p0,3
+        « Enfin. Pas bien. Pas vite. »
+        dir : trois blocs, trois durees differentes. « Pas vite » est le
+              plus court.
+
+    [S1_LOH_L010]  LOHEN (int) · 2,9 s · plat · p0,6
+        « Alors la regle, chez moi, elle est facile a tenir. »
+        dir : un demi-sourire qui ne monte pas jusqu'aux yeux. Clip
+              LOH-FAC-004, amplitude 0,3 maximum.
+
+    [S1_LOH_L011]  LOHEN (int) · 2,0 s · plat · p0,4
+        « Trois ans que je la porte d'un bout a l'autre de la ville. »
+        dir : il tourne la tete vers la falaise, vers le haut. 6 frames
+              d'avance de la tete (regle d'animation 07.xx).
+
+    [S1_LOH_L012]  LOHEN (int) · 1,6 s · retenu · p0,7
+        « Elle commence par son nom. »
+        dir : immobile.
+
+    [S1_LOH_L013]  LOHEN (int) · 1,4 s · retenu · p0,5
+        « Je sais ecrire son nom. »
+        dir : immobile. C'est la ligne la plus importante du monologue et
+              elle dure 1,4 s.
+
+    [S1_LOH_L014]  LOHEN (int) · 1,1 s · plat · p0,0
+        « C'est deja ca. »
+        dir : il repart. Le pas couvre la fin de la ligne. M01 remonte de
+              3 dB exactement sur ce pas.
+
+--- MIX ------------------------------------------------------------------------
+
+[OBL] La voix interieure n'a AUCUNE reverb, aucun pre-delay, aucun filtre.
+Elle est plus proche que tout le reste du jeu et elle ne le sera plus
+jamais. Duck de M01 : -7 dB, attaque 40 ms, release 350 ms (13.32).
+Le crachin V02 n'est PAS ducke. On entend la pluie par-dessus la pensee.
+
+--- CHECKLIST ------------------------------------------------------------------
+
+[ ] 14 lignes, toutes marquees (int), aucune autre ligne (int) dans le jeu
+[ ] Version courte (L001-L006) testee : elle se suffit
+[ ] L006 : prise avec la derniere syllabe mangee, validee
+[ ] L008 : zero apitoiement au playback casque ET haut-parleur
+[ ] Aucun rappel de la version longue si ratee
+[ ] Le mot « Esteban » n'est PAS prononce (il ne le sera qu'en S3)

@@ -1,0 +1,97 @@
+===============================================================================
+DLG · S3 · D13 — LA LETTRE LUE A VOIX HAUTE PAR UN ENFANT DE ONZE ANS
+16 entrees, toutes S3. NIE 10 · WEN 2 · LOH 4. Contribution : 16.
+Branche [2] du CHOIX 05 (D05) uniquement. 31 % des joueurs la voient.
+===============================================================================
+
+--- POURQUOI CETTE SCENE EXISTE ------------------------------------------------------
+
+Le joueur a tendu une lettre a un enfant en lui disant « Lis-la, toi. »
+Il croit avoir choisi la facilite. Il vient en fait de demander a un
+gamin de lire le courrier d'un pere a un fils, a voix haute, devant onze
+enfants, dont aucun n'est le destinataire.
+
+[OBL] La lettre n'est PAS tragique. Le pere n'est pas mort. C'est une
+lettre completement banale, et c'est la banalite qui fait le travail :
+elle rappelle a quoi ressemble une lettre ordinaire, deux heures et
+demie avant celle d'Esteban.
+
+[OBL] Niels lit MAL. Il bute, il recommence, il ignore la ponctuation.
+C'est ecrit dans le texte de la ligne, pas laisse au comedien : les
+hesitations sont typographiees et font partie du fichier de VO.
+
+--- LES 16 LIGNES -----------------------------------------------------------------------
+
+    [S3_NIE_L432]  NIELS · 2,4 s · prudent · p0,6
+        « Mon... mon grand. Ou mon gars. Y'a une tache. »
+
+    [S3_LOH_L433]  LOHEN · 1,2 s · plat · p0,5
+        « Continue. »
+
+    [S3_NIE_L434]  NIELS · 3,4 s · prudent · p0,5
+        « Mon gars. Ici il pleut. Ici il pleut depuis... depuis
+          jeudi ? Depuis jeudi. »
+
+    [S3_NIE_L435]  NIELS · 3,0 s · prudent · p0,6
+        « La chienne a eu ses petits. Six. Y'en a un qui... qui a la
+          patte tordue mais il court plus vite que les autres. »
+
+    [S3_WEN_L436]  WENNA · 1,1 s · joueur · p0,4
+        « C'est quoi son nom ? »
+
+    [S3_NIE_L437]  NIELS · 1,6 s · agace · p0,5
+        « Y'a pas les noms des chiens dans les lettres. »
+
+    [S3_NIE_L438]  NIELS · 3,2 s · prudent · p0,6
+        « Ta mere dit que tu manges pas. Je lui ai dit que tu mangeais.
+          Je sais pas si tu manges. »
+
+    [S3_NIE_L439]  NIELS · 2,8 s · prudent · p0,7
+        « Si tu manges pas, mange. Si tu manges, dis-le-lui, parce
+          que moi j'ai menti. »
+
+    [S3_WEN_L440]  WENNA · 1,4 s · rieur · p0,5
+        « Il a menti ! »
+
+    [S3_NIE_L441]  NIELS · 2,6 s · prudent · p0,6
+        « Le toit tient. La passerelle tient. Tout tient. »
+
+    [S3_NIE_L442]  NIELS · 3,6 s · prudent · p0,8
+        « Reviens quand tu veux, ou reviens pas, mais ecris, parce
+          que ta mere elle regarde par la fenetre le mardi et c'est
+          long, un mardi. »
+        dir : [OBL] la plus longue ligne lue par un enfant du chapitre.
+              3,6 s. Il ne comprend pas ce qu'il lit. Il lit vite pour
+              en finir.
+
+    [S3_NIE_L443]  NIELS · 1,8 s · prudent · p0,9
+        « Ton pere. »
+
+    [S3_NIE_L444]  NIELS · 2,0 s · plat · p0,7
+        « C'est pas pour moi. »
+        dir : [OBL] deçu, sans drame. Il rend la lettre.
+
+    [S3_LOH_L445]  LOHEN · 1,4 s · plat · p0,6
+        « Non. »
+
+    [S3_NIE_L446]  NIELS · 2,2 s · plat · p0,5
+        « Y'a un autre petit sur la passerelle neuf, mais il est parti
+          l'annee derniere. »
+        dir : [OBL] l'information arrive APRES la lecture, trop tard,
+              par un enfant qui n'y pensait pas. C'est ainsi que les
+              choses se savent dans cette ville.
+
+    [S3_LOH_L447]  LOHEN · 1,7 s · plat · p0,0
+        « Alors je la garde. »
+        dir : [OBL][NAR] LA REGLE DU RELAYEUR, appliquee a voix haute
+              pour la premiere fois depuis le monologue de S1. Il range
+              la lettre. Elle sera encore dans la sacoche a la fin du
+              chapitre. [OBL] Aucune musique. La scene se termine sur
+              Wenna qui reclame son tour de ficelle.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] Lettre banale, pere vivant, aucun pathos
+[ ] Hesitations typographiees dans le texte de VO
+[ ] L442 : 3,6 s, lue trop vite
+[ ] L447 : aucune musique, enchainement immediat sur le jeu de ficelle

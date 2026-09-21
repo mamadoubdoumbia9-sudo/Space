@@ -1,0 +1,191 @@
+===============================================================================
+DLG · S7 · D09 — LES 74 BARKS DE LA PLUIE + LA TABLE DE COMPTAGE
+0 entree comptee. 74 barks S7_BK (hors total). Contribution : 0.
+[OBL] Document de service. Il ne contient aucune ligne des 2 840 : il
+contient les 74 barks de S7 et l'audit de la sequence.
+Reference INDEX § 6.00 (domicile des barks) et § 6.01 (cooldown).
+===============================================================================
+
+--- POURQUOI S7 A 74 BARKS (le maximum du chapitre) --------------------------------------------
+
+[OBL] S7 dure 41 minutes, Lohen y est seul 33 minutes, il pleut sans
+arret et il n'y a presque pas de musique. [OBL] Sans les barks, la
+sequence serait un tunnel sonore de pluie. [OBL] Cooldown abaisse a
+4 min 30 (contre 8 min ailleurs) — c'est la seule sequence ou le
+cooldown est raccourci. [OBL] Un joueur normal en entend 8 a 11.
+
+[OBL] MIX : contrairement a S5 (gain plafonne a 0,55), les barks de S7
+sont a gain PLEIN (1,0) et duckent la pluie de -7 dB comme les vraies
+lignes. [OBL] Raison : sous 78 dB de pluie sur tole, un murmure est
+inaudible. Lohen parle plus fort quand il pleut, comme tout le monde.
+
+-- Groupe A · effort et marche (20) --
+
+    [S7_BK_L275]  0,9 s · « Hop. »
+    [S7_BK_L276]  1,2 s · « Ca glisse. »
+    [S7_BK_L277]  1,0 s · « Doucement. »
+    [S7_BK_L278]  1,4 s · « Voila. »
+    [S7_BK_L279]  0,8 s · « Bon. »
+    [S7_BK_L280]  1,1 s · « Encore. »
+    [S7_BK_L281]  1,3 s · « Pas par la. »
+    [S7_BK_L282]  1,0 s · « Par la. »
+    [S7_BK_L283]  1,2 s · « Ca descend. »
+    [S7_BK_L284]  0,9 s · « Attends. »
+    [S7_BK_L285]  1,4 s · « C'est loin. »
+    [S7_BK_L286]  1,1 s · « J'y suis presque. »
+    [S7_BK_L287]  1,0 s · « Non. »
+    [S7_BK_L288]  1,3 s · « Si. »
+    [S7_BK_L289]  0,8 s · « Ha. »
+    [S7_BK_L290]  1,2 s · « Ca tient. »
+    [S7_BK_L291]  1,4 s · « Ca tient pas. »
+    [S7_BK_L292]  1,0 s · « L'epaule. »
+    [S7_BK_L293]  1,1 s · « Ca passe. »
+    [S7_BK_L294]  1,3 s · « J'avance. »
+
+-- Groupe B · la pluie (16) --
+
+    [S7_BK_L295]  1,2 s · « Ca tombe dru. »
+    [S7_BK_L296]  1,0 s · « J'ai de l'eau dans le col. »
+    [S7_BK_L297]  1,4 s · « Mes bottes sont pleines. »
+    [S7_BK_L298]  1,1 s · « Tant pis. »
+    [S7_BK_L299]  1,3 s · « Ca va s'arreter. »
+    [S7_BK_L300]  1,0 s · « Ou pas. »
+    [S7_BK_L301]  1,2 s · « J'y vois rien. »
+    [S7_BK_L302]  1,4 s · « J'essuie. »
+    [S7_BK_L303]  0,9 s · « Voila. »
+    [S7_BK_L304]  1,1 s · « Ca recommence. »
+    [S7_BK_L305]  1,3 s · « Sous l'auvent deux minutes. »
+    [S7_BK_L306]  1,0 s · « Non, j'avance. »
+    [S7_BK_L307]  1,2 s · « Y'a du vent en plus. »
+    [S7_BK_L308]  1,4 s · « Manquait que ca. »
+        dir : [OBL] LA SEULE PLAINTE DU CHAPITRE. Une. En 2 840
+              lignes. [OBL] Elle est dans un bark, donc 87 % des
+              joueurs ne l'entendront jamais.
+    [S7_BK_L309]  1,1 s · « Bon. »
+    [S7_BK_L310]  1,3 s · « Ca fait du bruit, la pluie. »
+
+-- Groupe C · combat, avant et apres (14) --
+
+    [S7_BK_L311]  1,0 s · « Y'a du mouvement. »
+    [S7_BK_L312]  1,2 s · « Deux. »
+    [S7_BK_L313]  1,4 s · « Trois. »
+    [S7_BK_L314]  0,9 s · « La barre. »
+    [S7_BK_L315]  1,1 s · « Recule. »
+    [S7_BK_L316]  1,3 s · « Va-t'en. »
+        dir : [OBL] il parle aux chiens. [OBL] Il leur dit de partir
+              avant de frapper. [OBL] Aucun systeme ne le recompense :
+              les chiens n'ecoutent pas.
+    [S7_BK_L317]  1,0 s · « Pars. »
+    [S7_BK_L318]  1,2 s · « Bon. »
+    [S7_BK_L319]  1,4 s · « C'est fini. »
+    [S7_BK_L320]  1,1 s · « Ils sont partis. »
+    [S7_BK_L321]  1,3 s · « Je souffle. »
+    [S7_BK_L322]  1,0 s · « Ca va. »
+    [S7_BK_L323]  1,2 s · « J'ai rien. »
+    [S7_BK_L324]  1,4 s · « Presque rien. »
+
+-- Groupe D · le Phare qui grossit (12) --
+
+    [S7_BK_L325]  1,2 s · « Il grossit. »
+    [S7_BK_L326]  1,4 s · « Encore loin. »
+    [S7_BK_L327]  1,0 s · « Moins loin. »
+    [S7_BK_L328]  1,3 s · « La lumiere est toujours la. »
+    [S7_BK_L329]  1,1 s · « Toujours. »
+    [S7_BK_L330]  1,4 s · « Bon. »
+    [S7_BK_L331]  1,0 s · « Deux cent douze metres. »
+    [S7_BK_L332]  1,2 s · « Mille trente-huit marches. »
+    [S7_BK_L333]  1,3 s · « Je les compterai. »
+        dir : [OBL][NAR] IL NE LES COMPTERA PAS. [OBL] En S8, Lohen ne
+              compte aucune marche. [OBL] Le joueur qui a entendu ce
+              bark attendra un comptage qui ne viendra jamais.
+              [OBL] Interdit : ne jamais ajouter de compteur de
+              marches, ni diegetique ni d'interface.
+    [S7_BK_L334]  1,1 s · « Ou pas. »
+    [S7_BK_L335]  1,4 s · « C'est haut. »
+    [S7_BK_L336]  1,2 s · « Tant mieux. »
+
+-- Groupe E · les autres voix (12, non attribuees a Lohen) --
+
+[OBL] Contrairement a S5, ceux-ci sont SOUS-TITRES : ce sont des gens
+reels, dans la rue, a portee de voix. [OBL] Ils ne s'adressent jamais a
+Lohen et ne reagissent pas s'il s'approche.
+
+    [S7_BK_L337]  1,4 s · (une femme) « Rentre ! »
+    [S7_BK_L338]  1,2 s · (un homme) « Ferme la porte, tu inondes tout. »
+    [S7_BK_L339]  1,6 s · (une femme) « Je t'ai dit de pas sortir. »
+    [S7_BK_L340]  1,3 s · (un homme) « Y'a plus de toile pour la bache. »
+    [S7_BK_L341]  1,1 s · (un enfant) « Attends-moi ! »
+    [S7_BK_L342]  1,5 s · (une femme) « Il pleut depuis trois jours. »
+        dir : [OBL] IL PLEUT DEPUIS TROIS JOURS. [OBL] Lohen croyait
+              que la pluie avait commence ce matin (L002/L003). [OBL]
+              Il etait dessous, dans la Bibliotheque et les conduits.
+              [OBL] Aucune correction, aucun personnage ne le detrompe.
+    [S7_BK_L343]  1,2 s · (un homme) « Le quai est coupe. »
+    [S7_BK_L344]  1,4 s · (une femme) « Passe par le haut. »
+    [S7_BK_L345]  1,6 s · (un vieil homme) « J'ai connu pire. »
+    [S7_BK_L346]  1,3 s · (une femme) « Tout le monde a connu pire. »
+    [S7_BK_L347]  1,1 s · (un homme) « Bonne nuit. »
+    [S7_BK_L348]  1,5 s · (une femme) « Bonne nuit. »
+        dir : [OBL] DERNIER BARK DE S7. [OBL] Deux inconnus se
+              souhaitent bonne nuit, sous la pluie, dans une ville
+              morte, pendant que le joueur marche vers un phare.
+              [OBL] Aucune musique. [OBL] Il est 21 h 20 dans la
+              fiction.
+
+--- TABLE DE COMPTAGE DE S7 [OBL] ---------------------------------------------------------------
+
+    D01 le-cable-casse .......................... 26
+    D02 tallec-sous-la-pluie .................... 34
+    D03 les-201-croix ........................... 28
+    D04 les-six-combats ......................... 40
+    D05 le-verrier .............................. 39
+    D06 les-gens-de-la-pluie .................... 28
+    D07 les-echos-de-la-pluie ................... 32
+    D08 le-pied-du-phare ........................ 47
+    D09 barks-et-comptage (ce document) .........  0
+                                                 ----
+                                     TOTAL S7 =  274   [OBL] conforme
+
+    Barks S7 (hors total) : 74 — ids S7_BK_L275 a S7_BK_L348. [OBL] conforme
+
+    Ventilation par locuteur :
+      LOH ............ 196
+      ECH ............  32   (E22·8 E23·8 E24·8 E25·8)
+      TAL ............  20   (dernieres du chapitre, sur 236)
+      SOL ............   9
+      ODI ............   7   (5 en D03 + 2 en D06)
+      BRE ............   5   (sur 13 au total, 8 en S2)
+      PAL ............   3
+      VER ............   2   (toutes deux sans VO)
+                       ----
+                        274
+
+    Slots muets (sans VO, comptes) : S7_LOH_L013, L163, L167, L274 ·
+    S7_VER_L132, L156 · S7_ECH_L222, L225 · S7_LOH_L185, L187
+      → 10 slots. Compteur studio S7 = 264 lignes enregistrees.
+
+    COMMANDE DE VERIFICATION :
+      tools/count_dialogue.py --seq S7 --expect 274 --studio 264 --barks 74
+
+    Choix de S7 : 2 — n° 34 (prendre le dossier) · 35 (achever ou partir).
+    [OBL] conforme. C'est la sequence la plus longue du chapitre et celle
+    qui a le moins de choix par minute. Volontaire : on ne choisit pas
+    grand-chose quand on redescend.
+
+    Echos de S7 : 4 — E22, E23, E24, E25. [OBL] conforme.
+    E23 = seule exception a « les fantomes ne regardent jamais Lohen ».
+    E24 = deuxieme exception a R2 (le lendemain de la Maree).
+
+--- CHECKLIST DE SEQUENCE ------------------------------------------------------------------------
+
+[ ] 274 lignes, 74 barks, 2 choix, 4 Echos, 10 slots muets
+[ ] Cooldown de bark a 4 min 30, gain plein, ducking -7 dB
+[ ] Aucune ligne pendant les combats, aucune ligne sur echec
+[ ] L308 : une seule plainte dans tout le chapitre, cachee dans un bark
+[ ] L333 : promesse de compter les marches, jamais tenue, aucun compteur
+[ ] L342 : il pleut depuis 3 jours, Lohen ne le sait pas, personne ne corrige
+[ ] Segment cotier : exception `pacing-exempt-s7-coast` obligatoire
+[ ] MAREK Esteban non barre — CI `marek-unmarked`
+[ ] Personne ne dit a Lohen qu'Esteban est mort — CI `no-death-told`
+[ ] Le mot « Echo » n'est jamais prononce — CI `no-echo-word`
+[ ] Le mot « amour » n'apparait pas en S7

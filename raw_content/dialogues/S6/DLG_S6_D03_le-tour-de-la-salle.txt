@@ -1,0 +1,200 @@
+===============================================================================
+DLG · S6 · D03 — LE TOUR DE LA SALLE : 54 LIGNES D'ESTEBAN QUI PARLE
+54 entrees, toutes S6. EST 36 · LOH 18. Contribution : 54.
+[OBL] Sept minutes de liberte. Esteban suit. Ces lignes se declenchent
+par PROXIMITE d'un point de la salle, dans n'importe quel ordre.
+===============================================================================
+
+--- REGLE DE DECLENCHEMENT [OBL] -----------------------------------------------------------------
+
+[OBL] Il n'y a AUCUN ordre impose. Les 12 points d'interet de la salle
+portent chacun un petit paquet de lignes. Le joueur en verra entre 5 et
+12 selon son parcours. [OBL] La moyenne mesuree en playtest : 8,3.
+[OBL] Le jeu n'indique jamais qu'il en reste.
+
+[OBL] INTERDIT : aucun compteur, aucun succes, aucune ligne de Lohen du
+type « il doit y avoir autre chose ». Le joueur part quand il veut.
+
+[OBL] Esteban ne repete JAMAIS une ligne. Si le joueur repasse au meme
+endroit, Esteban se tait. [OBL] Le silence d'Esteban est donc un
+indicateur diegetique d'epuisement du contenu, et personne ne le dit.
+
+--- POINT 1 · LE PIANO (5 lignes) ------------------------------------------------------------
+
+    [S6_EST_L041]  2,4 s · chaud · « Celui-la, je l'ai accorde mardi. »
+    [S6_EST_L042]  2,0 s · chaud · « Il tient trois jours et il redescend. »
+    [S6_LOH_L043]  1,6 s · plat  · « Pourquoi ? »
+    [S6_EST_L044]  2,8 s · chaud · « L'humidite. La ville est posee sur de l'eau, tout redescend. »
+        dir : [NAR] la seule phrase du jeu qui approche une explication
+              geologique de Velmora. [OBL] Elle est fausse, ou
+              incomplete, et jamais confirmee.
+    [S6_EST_L045]  2,2 s · chaud · « C'est pour ca que j'ai du travail. »
+
+--- POINT 2 · LES MIROIRS (5 lignes) -----------------------------------------------------------
+
+    [S6_EST_L046]  2,0 s · chaud · « Tu te regardes ? »
+    [S6_LOH_L047]  1,2 s · plat  · « Non. »
+    [S6_EST_L048]  2,6 s · chaud · « Tu devrais. Tu es bien, ce soir. »
+        dir : [OBL] Direction : dit en passant, sans s'arreter, comme
+              on donne l'heure. [OBL] Pas de plan de reaction.
+              [OBL] Lohen ne repond pas. Le silence dure 1,8 s.
+    [S6_EST_L049]  2,2 s · chaud · « Tu as mis la chemise. »
+    [S6_LOH_L050]  1,4 s · plat  · « J'ai qu'elle. »
+        dir : [OBL][NAR] LE MIROIR DE S6 EST LE MEME QUE CELUI DE D01.
+              Le joueur peut se placer au meme endroit qu'a L012 et se
+              voir a 24 ans, propre, en chemise. [OBL] Le reflet
+              d'Esteban est A COTE. [OBL] C'est la seule image du
+              chapitre 1 ou Lohen et Esteban sont visibles ensemble.
+              [OBL] Elle n'est ni filmee, ni soulignee, ni obligatoire.
+              38 % des joueurs la trouvent. [OBL] Interdit d'ajouter
+              un succes, un plan ou une musique.
+
+--- POINT 3 · LA TABLE DES VERRES (4 lignes) -----------------------------------------------------
+
+    [S6_EST_L051]  2,4 s · chaud · « Prends-en un, ils sont deja payes. »
+    [S6_LOH_L052]  1,6 s · plat  · « Par qui ? »
+    [S6_EST_L053]  2,8 s · chaud · « Par la Compagnie. Une fois par an, elle nous aime. »
+    [S6_EST_L054]  2,0 s · chaud · « Demain elle nous aimera plus. »
+        dir : [OBL] 1re des 2 occurrences du verbe « aimer » hors le
+              nom « amour ». [OBL] Job CI `word-amour` compte le NOM
+              seul (2 : S4_MIR_L140, PN-143). Le verbe n'est pas
+              contraint. [OBL] Ici il est utilise pour parler d'un
+              employeur. C'est volontaire.
+
+--- POINT 4 · LA FENETRE OUEST (5 lignes) -------------------------------------------------------
+
+    [S6_EST_L055]  2,2 s · chaud · « On voit le Phare, d'ici. »
+    [S6_LOH_L056]  1,4 s · plat  · « Il est eteint. »
+    [S6_EST_L057]  2,6 s · chaud · « Depuis quatre ans. Personne monte plus. »
+    [S6_LOH_L058]  1,8 s · plat  · « Toi tu monterais ? »
+    [S6_EST_L059]  3,0 s · chaud · « Mille trente-huit marches, et en haut y'a rien. Non merci. »
+        dir : [OBL][NAR] LE NOMBRE. Dit ici, en passant, par Esteban,
+              trois ans avant que Lohen les monte. [OBL] Le joueur qui
+              a compte les traits du conduit en S5 (PN-088) a le
+              chiffre en tete. [OBL] AUCUN LIEN N'EST FAIT, ni ici,
+              ni jamais. Interdit 21.08.
+              [OBL] « en haut y'a rien » : il y aura une lettre de lui.
+
+--- POINT 5 · LES MUSICIENS (5 lignes) -----------------------------------------------------------
+
+    [S6_EST_L060]  2,0 s · chaud · « Le contrebassiste est ivre. »
+    [S6_LOH_L061]  1,2 s · plat  · « Ca s'entend. »
+    [S6_EST_L062]  2,4 s · chaud · « Non, ca s'entend pas. C'est pour ca qu'il est bon. »
+    [S6_EST_L063]  2,8 s · chaud · « Ils vont jouer un truc a la fin que tout le monde connait. »
+    [S6_EST_L064]  2,2 s · chaud · « Tu verras. Meme toi tu le connais. »
+        dir : [OBL][NAR] ANNONCE DU MOTIF LA-DO-MI-RE-LA. [OBL] Il sera
+              joue en D05, incomplet (4 notes, la 5e couverte par un
+              rire). [OBL] 19e des 23 occurrences incompletes.
+
+--- POINT 6 · LE VIEUX COUPLE (4 lignes) --------------------------------------------------------
+
+    [S6_EST_L065]  2,6 s · chaud · « Eux, ils dansent ensemble depuis quarante ans. »
+    [S6_LOH_L066]  1,6 s · plat  · « Ils dansent mal. »
+    [S6_EST_L067]  2,4 s · chaud · « Ils dansent pareil. C'est pas la meme chose que bien. »
+    [S6_EST_L068]  2,8 s · chaud · « Dans quarante ans, on dansera aussi mal qu'eux. »
+        dir : [OBL][NAR] LA PHRASE LA PLUS CRUELLE DE LA SEQUENCE et
+              elle est joyeuse. [OBL] Aucun changement de mix. M22
+              continue. [OBL] Lohen ne repond pas. [OBL] Interdit de
+              filmer la reaction de Lohen ici.
+              [OBL] Le vieux couple figure dans `victims_641.csv` :
+              VANTHIER Odile et VANTHIER Marc, lignes 388 et 389,
+              barres tous les deux. Un joueur peut le verifier en S7.
+              [OBL] Aucun dialogue ne le mentionne.
+
+--- POINT 7 · LA PORTE DU FOND (4 lignes) ------------------------------------------------------
+
+    [S6_LOH_L069]  1,4 s · plat  · « Y'a quoi derriere ? »
+    [S6_EST_L070]  2,0 s · chaud · « Les cuisines. »
+    [S6_LOH_L071]  1,6 s · plat  · « On peut y aller ? »
+    [S6_EST_L072]  2,4 s · chaud · « On peut. C'est pas interessant. »
+        dir : [OBL] LE JOUEUR PEUT Y ALLER. C'est effectivement pas
+              interessant : une cuisine, des plats, deux figurants qui
+              fument. [OBL] Aucune ligne, aucun objet, aucun Echo.
+              [OBL] 12 % y vont. [OBL] Esteban attend a la porte et ne
+              commente pas au retour.
+
+--- POINT 8 · LE LUSTRE CENTRAL (4 lignes) ------------------------------------------------------
+
+    [S6_EST_L073]  2,2 s · chaud · « Il tombera un jour. »
+    [S6_LOH_L074]  1,4 s · plat  · « Sur quelqu'un ? »
+    [S6_EST_L075]  2,6 s · chaud · « Sur personne. Les choses tombent quand y'a personne. »
+    [S6_EST_L076]  2,0 s · chaud · « C'est ce qu'elles ont de bien. »
+        dir : [OBL][NAR] IL A TORT. [OBL] Le lustre est intact dans le
+              present (D01, L006). [OBL] La Maree a pris 641 personnes
+              et pas un lustre. [OBL] Aucun personnage ne releve.
+
+--- POINT 9 · LES CHAISES CONTRE LE MUR (4 lignes) ----------------------------------------------
+
+    [S6_LOH_L077]  1,6 s · plat  · « Pourquoi elles sont toutes dans le meme sens ? »
+    [S6_EST_L078]  2,4 s · chaud · « Parce que quelqu'un les a rangees. »
+    [S6_LOH_L079]  1,2 s · plat  · « Qui ? »
+    [S6_EST_L080]  2,8 s · chaud · « Un type qui parle pas. Il fait ca tous les soirs. »
+        dir : [OBL][NAR] LE VERRIER, TROIS ANS AVANT, VIVANT, EMPLOYE
+              DE LA SALLE. [OBL] Anselme Roux. [OBL] Il est dans la
+              piece : un figurant, au fond a droite, qui range. Le
+              joueur peut s'en approcher. Il ne dit rien (il est muet
+              deja). [OBL] AUCUNE LIGNE, aucun nom, aucun Echo.
+              [OBL] Le joueur qui le tuera en S7 ne saura jamais qu'il
+              l'a croise ici. [OBL] Interdit absolu de le signaler.
+              Job CI `verrier-unmarked-s6`.
+
+--- POINT 10 · LE BUFFET (4 lignes) -------------------------------------------------------------
+
+    [S6_EST_L081]  2,0 s · chaud · « Mange quelque chose. »
+    [S6_LOH_L082]  1,2 s · plat  · « J'ai pas faim. »
+    [S6_EST_L083]  2,6 s · chaud · « T'as jamais faim et tu manges quand meme. C'est ton systeme. »
+    [S6_EST_L084]  2,2 s · chaud · « Prends le pain. »
+        dir : [NAR] RACCORD S5 : Sol mange pendant la pire scene du
+              chapitre. [OBL] Manger est, dans ce jeu, ce que font les
+              gens qui tiennent. Jamais dit.
+
+--- POINT 11 · LA FENETRE EST, LA PLUIE (5 lignes) ----------------------------------------------
+
+    [S6_EST_L085]  2,4 s · chaud · « Il va pleuvoir apres minuit. »
+    [S6_LOH_L086]  1,4 s · plat  · « Comment tu sais ? »
+    [S6_EST_L087]  2,8 s · chaud · « Les cordes descendent. Un demi-ton en deux heures, c'est de la pluie. »
+    [S6_LOH_L088]  1,8 s · plat  · « Tu lis la meteo dans un piano. »
+    [S6_EST_L089]  2,2 s · chaud · « Je lis tout dans un piano. C'est mon probleme. »
+        dir : [OBL][NAR] A 23 h 41 il n'a pas plu. [OBL] Il y a eu la
+              Maree. [OBL] Son instrument l'a prevenu de quelque chose
+              et il a lu « pluie ». [OBL] Personne ne dira jamais ca.
+              Interdit 21.08 : aucun presage.
+              [OBL] ATTENTION PRODUCTION : cette ligne est a la limite
+              de l'interdit. Elle passe parce qu'Esteban se trompe, et
+              que rien ne suggere qu'il ait senti autre chose. Si un
+              relecteur y voit un presage, la ligne est coupee.
+
+--- POINT 12 · RIEN (5 lignes) --------------------------------------------------------------------
+
+Declencheur : le joueur s'arrete au centre de la salle et ne bouge plus
+pendant 40 s.
+
+    [S6_EST_L090]  2,0 s · chaud · « Tu fais quoi ? »
+    [S6_LOH_L091]  1,4 s · plat  · « Rien. »
+    [S6_EST_L092]  2,4 s · chaud · « Bien. »
+        dir : [OBL] Esteban s'assoit par terre a cote de lui. Anim
+              EST-SIT-004, 2,8 s. [OBL] Au milieu d'un bal, en
+              chemise, par terre.
+    [S6_EST_L093]  2,8 s · chaud · « On peut rester la jusqu'a ce qu'ils partent tous. »
+    [S6_LOH_L094]  1,6 s · plat  · « D'accord. »
+        dir : [OBL][NAR] LE JOUEUR PEUT EFFECTIVEMENT RESTER. [OBL] Si
+              le joueur ne bouge plus, l'Echo continue : les invites
+              partent un par un sur 6 minutes reelles, les musiciens
+              rangent, les lustres s'eteignent, et E21 se termine avec
+              les deux assis par terre dans une salle vide.
+              [OBL] 2 % des joueurs font ca. Ils ratent la danse
+              (D04). [OBL] LE JEU NE LES PUNIT PAS ET NE LES PREVIENT
+              PAS. Une variante de sortie complete est ecrite pour eux
+              en D06 § 4.
+              [OBL] C'est la depense de production la plus deraisonnable
+              du chapitre. Elle est obligatoire.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] 12 points, ordre libre, aucun compteur, aucune relance
+[ ] Esteban ne repete jamais une ligne
+[ ] L050 : seul plan possible des deux ensemble, non souligne, 38 %
+[ ] L059 : 1 038, jamais relie aux traits du conduit
+[ ] L080 : le Verrier present, muet, non signale — CI `verrier-unmarked-s6`
+[ ] L089 : verifiee comme non-presage, coupee si un relecteur doute
+[ ] L094 : branche « rester assis », variante de sortie en D06 § 4

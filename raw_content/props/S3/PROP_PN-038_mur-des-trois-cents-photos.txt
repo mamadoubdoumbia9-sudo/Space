@@ -1,0 +1,121 @@
+===============================================================================
+PN-038 — LE MUR DES TROIS CENTS PHOTOS
+===============================================================================
+Asset : SM_S3_Mur_Photos · S3, Marche suspendu, niveau 1, paroi est ·
+~01:58 · prop a TEXTE LISIBLE + porteur d'ECHO partiel · LOD0 2 200 tris
+
+§ 1 — CE QU'ON VOIT
+Un mur de brique de 9 m de long sur 3,40 m de haut, entierement couvert de
+photographies. Il y en a TROIS CENTS exactement.
+Elles sont fixees de toutes les facons possibles : punaises, clous, scotch,
+ficelle, epingles a linge sur des fils tendus, colle. Certaines sont
+encadrees, la plupart non. Certaines sont des tirages de studio, d'autres
+des instantanes flous, d'autres des morceaux decoupes dans des photos de
+groupe — on voit les ciseaux, on voit l'epaule du voisin coupee.
+Elles sont a toutes les hauteurs, de 30 cm du sol a 3,20 m. Les plus hautes
+ont ete posees par quelqu'un sur une chaise.
+Sous chacune, ou presque, un nom ecrit a la main. Sur le mur directement,
+au crayon, au fusain, a la craie, a l'encre. Trente-deux ecritures
+differentes.
+Trois ans de suintement ont coule sur le mur. Des trainees brunes tombent
+du haut vers le bas et passent sur les visages.
+En bas, le long du mur, sur toute la longueur : des objets poses au sol.
+Pas des offrandes rituelles — des choses. Une pipe. Un peigne. Un chausson.
+Un couteau. Une paire de lunettes. Une balle en caoutchouc.
+Quarante-et-un objets.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 200 pour la structure + 300 quads (4 tris chacun, certains courbes
+a 12 tris pour les photos gondolees).
+[OBL] Les 300 photos sont portees par SIX atlas 4K. Densite 620 px/m.
+Chaque photo est lisible individuellement a 80 cm.
+[OBL] Les 300 visages doivent etre reels et distincts. Methode de
+production imposee (cf. § 9) : banque de portraits sous licence + seance
+photo dediee, vieillissement physique par lots, aucune generation, aucun
+visage repete, aucun visage celebre, aucun membre de l'equipe.
+Les 32 ecritures de noms : 32 personnes reelles ecrivent les noms a la main
+sur papier, scan, report en decal. [OBL] Les noms proviennent de
+`content/victims_641.csv`. Tous les 300 y figurent.
+Les 41 objets au sol : 41 meshes uniques, 180 a 600 tris, budget 12 400 tris.
+Shader `photo_paper_damp` (partage avec PN-035) + `brick_seep` pour le mur.
+Anim : PROP-736 — 9 photos seulement battent legerement (elles ne tiennent
+que par une punaise). 3 cm, 0,4 Hz irregulier.
+
+§ 3 — CE QUE CA DIT
+Les gens de Velmora ont fait ca eux-memes.
+Ce n'est pas un memorial officiel. Il n'y a pas de plaque, pas
+d'inauguration, pas d'ordre alphabetique, pas de symetrie. C'est un mur ou
+trois cents personnes different ont punaise une photo et ecrit un nom.
+Le geste humain : monter sur une chaise pour mettre la photo de quelqu'un
+le plus haut possible, parce qu'en bas il n'y avait plus de place.
+[NAR] 300 photos sur 641 disparus. Il en manque 341. Parce que tout le
+monde n'avait pas de photo. Parce que ceux qui auraient pu l'apporter ont
+disparu aussi. Parce que des familles entieres sont parties d'un coup et
+qu'il ne restait personne pour punaiser.
+Le joueur ne comptera pas. Mais s'il compte, c'est exact.
+
+§ 4 — ECHO
+[OBL] Statut particulier : le mur lui-meme n'a PAS d'Echo. C'est un geste
+d'apres (regle PN-015).
+Mais UNE photo du mur en porte un, et c'est PN-039, la photo 300, qui est
+traitee comme un prop autonome.
+[ART] Consequence : le joueur peut passer une demi-heure devant ce mur sans
+qu'un seul prompt n'apparaisse. Puis, a un endroit precis, sur une photo
+precise, un prompt. C'est le moment le plus important de S3.
+
+§ 5 — MISE EN SCENE
+Le Marche suspendu est une structure de passerelles et de plateformes
+accrochees aux facades, a 4-12 m au-dessus du verre. On y circule sur du
+bois et de la tole.
+Le mur des photos est sur le niveau 1, le plus bas, et le chemin longe le
+mur sur 9 m. [OBL] Il n'y a pas d'autre chemin. Le joueur marche le long
+des trois cents visages pendant tout le temps qu'il lui faut.
+Largeur de la passerelle a cet endroit : 1,40 m. Le joueur est a 70 cm du
+mur. Il ne peut pas prendre de recul. Il ne verra jamais les 300 photos
+d'un coup ; il les voit par groupes de 20.
+[ART] La composition d'ensemble n'existe pas. C'est deliberé : un memorial
+qu'on ne peut pas embrasser du regard. Il faut marcher.
+Lumiere : le jour gris tombe d'en haut, entre les batiments, en une bande
+verticale de 2 m de large qui se deplace... non. [OBL] La lumiere ne se
+deplace pas : il n'y a pas de cycle jour/nuit dans le chapitre 1 (05.09).
+La bande est fixe, au tiers du mur. Les photos dedans sont claires. Les
+autres sont dans une penombre ou il faut approcher la lampe.
+[OBL] Lohen ne ralentit pas, ne regarde pas, ne commente pas.
+
+§ 6 — AUDIO
+SFX(paper_flutter_soft) : les 9 photos qui battent, -29 dB, irregulier.
+C'est le son du mur et il est presque inaudible.
+La passerelle : matiere `bois_planche_suspendue`, 8 variations, avec une
+resonance de structure suspendue (un leger « boum » sous chaque pas, 0,15 s
+de retard, -24 dB). [OBL] Le joueur doit entendre qu'il marche sur quelque
+chose qui pend dans le vide.
+Ambiance S3 : le vent est plus fort ici (on est en hauteur, entre les
+batiments), avec des sifflements dans les cables. -16 dB.
+Musique : NEANT sur le mur. M10 « Le marche » s'arrete 20 m avant et
+reprend 20 m apres. [ART] Le silence musical est la seule chose que le jeu
+fait pour marquer ce lieu.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre de prendre, decrocher, retourner une photo ·
+permettre de prendre un des 41 objets · ajouter des bougies, des fleurs,
+des rubans, des messages ecrits (uniquement des noms) · donner un Echo au
+mur · faire commenter Lohen · afficher un compteur · mettre Esteban sur ce
+mur [OBL — il n'y est pas, et c'est le sujet de PN-039] · generer les
+visages · repeter un visage · utiliser des visages reconnaissables.
+
+§ 8 — LIENS
+PN-003 (l'affiche des 641 : la version administrative du meme deuil).
+PN-035 (la photo de la cabine : un visage, il y a 45 minutes).
+PN-039 (la photo 300) — le prop suivant, a 6 m sur ce meme mur.
+PN-123 (l'affiche, deuxieme etat, S7).
+[THEME] 641 HISTOIRES DONT ON NE SUIT QU'UNE. [THEME] LES GESTES D'APRES.
+
+§ 9 — DOD
+[ ] 300 photos, 300 visages distincts, aucune generation, aucune repetition
+[ ] 6 atlas 4K, densite 620 px/m, lisibles a 80 cm
+[ ] 300 noms issus du CSV, 32 ecritures manuscrites reelles
+[ ] 41 objets uniques au sol, aucun prenable
+[ ] Passerelle a 1,40 m : recul impossible, vue d'ensemble impossible
+[ ] 9 photos animees seulement, 3 cm, 0,4 Hz
+[ ] M10 coupee sur 40 m centres sur le mur
+[ ] Esteban absent du mur, verifie photo par photo

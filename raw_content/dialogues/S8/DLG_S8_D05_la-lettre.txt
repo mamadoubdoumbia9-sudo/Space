@@ -1,0 +1,329 @@
+===============================================================================
+DLG · S8 · D05 — LA LETTRE : LE DECOUPAGE EN ENTREES DE VOIX
+68 entrees, toutes S8. EST 55 · LOH 13 (toutes sans VO). Contribution : 68.
+[OBL] TEXTE CANONIQUE — BLOC 20 DU MASTER. NE PAS REECRIRE, NE PAS
+RACCOURCIR, NE PAS REFORMULER. Ce document ne contient PAS le texte : il
+contient son DECOUPAGE en entrees de voix, ses durees, ses coupures
+camera et ses points de synchronisation musicale.
+===============================================================================
+
+--- POURQUOI CE DOCUMENT NE RECOPIE PAS LA LETTRE [OBL] --------------------------------------
+
+[OBL] 20.01 : le texte est fixe et ne peut etre ni raccourci, ni resume,
+ni « ameliore ». [OBL] La recopier ici creerait une deuxieme source de
+verite et donc, tot ou tard, une divergence. [OBL] SOURCE UNIQUE :
+`LOHEN_PROMPT_MASTER.txt`, BLOC 20.03.
+[OBL] Job CI `letter-single-source` : le texte de la lettre n'existe
+qu'a un seul endroit du depot ; toute duplication casse le build.
+
+[OBL] Ce document assigne a chaque segment du texte canonique :
+un identifiant `S8_EST_Lxxx`, une duree, un reglage de voix, et le cas
+echeant une coupure camera ou un evenement musical. [OBL] Le segment est
+designe par ses premiers mots, entre chevrons, jamais reproduit en
+entier au-dela de ce qui est necessaire a l'identification.
+
+--- LES REGLES DE LA LECTURE [OBL] ----------------------------------------------------------------
+
+[OBL] 19.08. Rappels contraignants :
+  · La voix est CELLE D'ESTEBAN. Pas Lohen. C'est la derniere fois qu'on
+    l'entend du chapitre.
+  · AUCUN TRAITEMENT AUDIO. Pas de reverb, pas de filtre, pas de
+    telephone, pas de lointain. Seche, proche, presente. [OBL] Rappel
+    S6 : Esteban etait deja le seul personnage sans reverb dans la salle
+    de bal (CI `esteban-dry`). La regle etablie depuis 3 heures paie ici.
+  · CE N'EST PAS UNE CINEMATIQUE. Le joueur fait defiler a son rythme.
+    [OBL] S'il s'arrete, LA VOIX S'ARRETE, au mot. [OBL] S'il repart,
+    elle repart au mot suivant. Job CI `voice-follows-scroll`.
+  · Le texte est LISIBLE A L'ECRAN, dans l'ecriture manuscrite
+    d'Esteban, shader `letter_paper` retroeclaire par la lampe.
+  · [OBL] LOHEN NE LIT PAS BIEN (canon). Le joueur entend une lecture
+    parfaite. L'asymetrie n'est jamais expliquee. Voir D04/L175.
+  · Duree de reference a vitesse moyenne : 4 min 10, alignee sur M18.
+    [OBL] Un joueur lent peut mettre 9 minutes. La musique ATTEND aux
+    trois points d'ancrage (voir ci-dessous) et jamais ailleurs.
+
+[OBL] TROIS POINTS D'ANCRAGE MUSICAUX (M18, 19.09) — la musique se
+recale ici, jamais entre :
+  A1 · entree du violoncelle, sur `<Je voulais commencer cette lettre>`
+  A2 · entree du piano, sur `<Tu n'as jamais eu besoin>`
+  A3 · LA CLOCHE ET LES CINQ NOTES, sur `<J'ai dit : « Tu as les mains
+       sales. »>` — [OBL] synchronisation a la frame, non negociable.
+
+[OBL] TROIS COUPURES CAMERA (1,2 s chacune, 19.08) :
+  C1 · sur `<Des mains qui portent le courrier>` — il ne pleure pas, il
+       serre la machoire (blendshape `jaw_clench`, 0,8 s)
+  C2 · sur A3 — il ferme les yeux
+  C3 · entre `<Tu m'as trouve.>` et `<Tu peux la garder.>` — [OBL] la
+       camera est DEJA en mouvement de recul quand on voit le visage.
+       On ne le regarde pas pleurer. On lui laisse ca.
+
+--- § 1 — LES 55 ENTREES D'ESTEBAN ---------------------------------------------------------------
+
+[OBL] Durees indicatives a vitesse de defilement moyenne. Elles
+s'etirent avec le defilement du joueur ; les RAPPORTS entre elles sont
+conserves.
+
+    [S8_EST_L181]  3,0 s · sec · <Lohen,>
+        dir : [OBL] 20.04 : TROIS SECONDES DE SILENCE APRES. La camera
+              ne bouge pas. [OBL] Le defilement est bloque pendant ces
+              3 s : c'est la seule fois. Le joueur ne peut pas presser.
+    [S8_EST_L182]  6,2 s · sec · <Je t'ecris depuis le seul endroit>
+    [S8_EST_L183]  9,4 s · sec · <Je sais que c'est idiot.>
+    [S8_EST_L184]  7,8 s · sec · <comme si tu avais peur qu'on te reprenne le chemin>
+        dir : [OBL] 20.04 : LA VOIX SOURIT ICI. C'est la seule fois.
+              Esteban trouve ca tendre. [OBL] Direction : le sourire
+              s'entend, il ne s'annonce pas. Aucun rire.
+    [S8_EST_L185]  6,6 s · sec · <Mais je regarde quand meme.>
+    [S8_EST_L186]  5,4 s · sec · <On s'invente des metiers pour tenir debout.>
+    [S8_EST_L187]  7,2 s · sec · <Je voulais commencer cette lettre>
+        dir : [OBL] ANCRAGE A1. Violoncelle seul, note tenue qui ne
+              resout pas (motif de Lohen, 13.04). [OBL] -22 dB.
+    [S8_EST_L188]  6,8 s · sec · <J'ai essaye trois fois.>
+    [S8_EST_L189]  5,0 s · sec · <tu as toujours dit que j'ecrivais trop>
+    [S8_EST_L190]  3,4 s · sec · <Tu ne m'as pas dit non, ce soir-la.>
+        dir : [OBL][NAR] LE SOIR-LA EST S6. [OBL] Le joueur y etait. Il
+              y a vingt-cinq minutes. [OBL] Il ne se souvient pas
+              d'avoir dit « je suis d'ici » — PARCE QUE CE N'ETAIT PAS
+              DANS LA SCENE JOUEE. [OBL] E21 s'arrete a 22 h 40. Cette
+              conversation-la a eu lieu apres, hors champ, et n'est
+              jouable dans aucun chapitre. [OBL] Interdit absolu : ne
+              jamais la montrer. Job CI `no-scene-je-suis-dici`.
+    [S8_EST_L191]  2,8 s · sec · <Tu as dit « je suis d'ici ».>
+    [S8_EST_L192]  9,8 s · sec · <Et moi, comme un imbecile,>
+    [S8_EST_L193]  6,4 s · sec · <J'ai mis onze mois a comprendre ca.>
+    [S8_EST_L194]  2,2 s · sec · <Onze mois, Lohen.>
+        dir : [OBL] 20.04 : LA SEULE FOIS OU IL DIT SON PRENOM A VOIX
+              HAUTE DANS LA LETTRE. Il l'a ecrit deux fois. Il le dit
+              une fois. [OBL] Aucun effet. Aucune coupure camera.
+    [S8_EST_L195]  5,6 s · sec · <ici, les journees sont tres longues>
+    [S8_EST_L196]  7,4 s · sec · <Je veux que tu saches une chose,>
+    [S8_EST_L197]  4,8 s · sec · <alors je vais l'ecrire lentement>
+        dir : [OBL] IL ANNONCE QUE SA MAIN TREMBLE. [OBL] Sur le papier
+              a l'ecran, l'ecriture des trois lignes suivantes est
+              effectivement plus appuyee et plus lente : variante de
+              texture `letter_paper_slow`, 1 seule zone.
+              [OBL] 14 % des joueurs le remarquent.
+    [S8_EST_L198]  4,2 s · sec · <Tu n'as jamais eu besoin de savoir lire>
+        dir : [OBL] ANCRAGE A2. Le piano entre : TROIS notes du motif
+              d'Esteban. Trois. Comme les 22 fois precedentes.
+              [OBL] Jamais cinq. Pas encore.
+    [S8_EST_L199]  8,6 s · sec · <Tu lisais les objets.>
+        dir : [OBL][NAR] LE JEU VIENT D'ETRE DECRIT PAR UN PERSONNAGE.
+              [OBL] « Tu posais ta main sur une rampe, sur une porte,
+              sur mon dos quand je ne dormais pas, et tu savais. »
+              [OBL] C'est la mecanique des Echos, enoncee comme un
+              trait de caractere, sans que le mot « Echo » soit
+              prononce (CI `no-echo-word`). [OBL] Aucune emphase
+              musicale. Le piano continue ses trois notes.
+    [S8_EST_L200]  6,0 s · sec · <Toute cette ville a passe trois ans>
+    [S8_EST_L201]  3,6 s · sec · <capable de lire une chaise>
+        dir : [OBL] 20.04 : NE PAS JOUER LA BLAGUE. La jouer comme un
+              fait. C'est plus drole et c'est plus triste.
+              [OBL] Raccord silencieux : Lohen a redresse deux chaises
+              dans le chapitre (S4_LOH_L328, S6_LOH_L227). [OBL] Aucun
+              rappel visuel. Job CI `no-chair-callback`.
+    [S8_EST_L202]  5,2 s · sec · <Moi j'ai appris les mots.>
+    [S8_EST_L203]  4,6 s · sec · <J'ai toujours pense qu'on avait fait un echange honnete.>
+    [S8_EST_L204]  7,0 s · sec · <Il y a des choses que je n'ai pas eu le temps>
+    [S8_EST_L205]  3,8 s · sec · <Que tu ronfles, mais seulement quand tu es heureux.>
+    [S8_EST_L206]  8,2 s · sec · <Que tu poses toujours ton pouce sur le bord des tasses>
+        dir : [OBL][NAR] LE GESTE DE MIREILLE. [OBL] Rappel S4 : geste
+              M1, la tasse tournee de 90°, 31 fois, explique uniquement
+              par S4_ECH_L160. [OBL] CE N'EST PAS LE MEME GESTE et le
+              joueur va croire que si. [OBL] On laisse. [OBL] Interdit
+              de clarifier.
+    [S8_EST_L207]  9,0 s · sec · <Que tu as ri une seule fois devant moi>
+        dir : [OBL][NAR] CANON : LOHEN NE RIT JAMAIS. [OBL] Le rire
+              dont parle Esteban a eu lieu avant le debut du jeu, en
+              mars, dans un escalier. [OBL] Le joueur ne l'entendra
+              jamais. [OBL] Rappel : les deux seuls rires du build sont
+              celui d'Esteban (S6_EST_L138) et celui, anonyme, derriere
+              un mur (S5_BK_L391). CI `laugh-inventory`.
+              [OBL] Interdit absolu : ne jamais produire un asset de
+              rire de Lohen, dans aucun chapitre.
+    [S8_EST_L208]  4,4 s · sec · <Que tu as des mains impossibles.>
+    [S8_EST_L209]  6,8 s · sec · <Des mains qui portent le courrier de toute une ville>
+        dir : [OBL] COUPURE CAMERA C1, 1,2 s, sur le visage de Lohen.
+              [OBL] IL NE PLEURE PAS. Blendshape `jaw_clench`, 0,8 s.
+              [OBL] Reference `/docs/jaw_clench_lines.md`.
+    [S8_EST_L210]  5,8 s · sec · <Tu te souviens de ce que je t'ai dit,>
+    [S8_EST_L211]  2,6 s · sec · <J'ai dit : « Tu as les mains sales. »>
+        dir : [OBL][NAR] ANCRAGE A3. LE CENTRE DE GRAVITE DU JEU.
+              [OBL] UNE CLOCHE. Puis, pour la premiere fois en 3 h 40 :
+              LES CINQ NOTES COMPLETES. LA - DO - MI - RE - LA.
+              [OBL] 23 occurrences incompletes ont precede (CI
+              `motif-incomplete-23`). Celle-ci est la seule complete du
+              chapitre. [OBL] Synchronisation a la frame.
+              [OBL] COUPURE CAMERA C2 : il ferme les yeux.
+              [OBL] RAPPEL S4 : Mireille avait annonce « Toutes les
+              phrases d'amour sont courtes, jeune homme. »
+              (S4_MIR_L140). Quatre mots. [OBL] Elle ne parlait pas de
+              ca. Elle ne savait rien. [OBL] Jamais relie.
+    [S8_EST_L212]  3,2 s · sec · <Je voulais dire : garde-les comme ca.>
+    [S8_EST_L213]  3,0 s · sec · <Je voulais dire : c'est la plus belle chose>
+    [S8_EST_L214]  1,8 s · sec · <Je voulais dire : reviens.>
+        dir : [OBL] Direction : les trois « je voulais dire » RACCOUR-
+              CISSENT. 3,2 / 3,0 / 1,8. [OBL] Le dernier est presque
+              coupe. [OBL] Aucun silence apres : l'entree suivante
+              arrive a 0,3 s.
+    [S8_EST_L215]  7,6 s · sec · <Je n'ai pas dit ca.>
+    [S8_EST_L216]  4,0 s · sec · <et la mer a durci a vingt-trois heures quarante et une>
+        dir : [OBL][NAR] SEULE MENTION DE 23 H 41 DANS UNE VOIX DU
+              CHAPITRE. [OBL] Le jeu n'a jamais montre l'heure (cf.
+              S6_EST_L160). [OBL] Aucun effet. La musique continue.
+              [OBL] Interdit absolu : ne jamais montrer la Maree, ni
+              ici ni ailleurs. Interdit 21.08.
+    [S8_EST_L217]  8,4 s · sec · <Alors voila ce que je fais maintenant.>
+    [S8_EST_L218]  5,6 s · sec · <Ce n'est pas une vie triste.>
+    [S8_EST_L219]  3,4 s · sec · <je n'ai plus peur du soir>
+    [S8_EST_L220]  9,2 s · sec · <Si tu lis ceci, c'est que tu es monte.>
+        dir : [OBL][NAR] « avec ton epaule droite qui ne suit plus
+              depuis Saint-Jerome » — SEULE EXPLICATION DE L'EPAULE DU
+              CHAPITRE ENTIER. [OBL] Elle est partielle : on ne saura
+              jamais ce qu'est Saint-Jerome. [OBL] Interdit absolu :
+              ne jamais definir Saint-Jerome, dans aucun chapitre,
+              aucun document, aucune interview.
+              [OBL] « ta manie de ne jamais t'arreter au bon palier » :
+              rappel muet de S8_LOH_L069. CI `no-callback-l069` — pas
+              de flashback, pas de reprise audio, rien.
+    [S8_EST_L221]  6,2 s · sec · <Je t'imagine debout dans ma chambre,>
+        dir : [OBL] « tes gants dans la main gauche » — [OBL] ILS Y
+              SONT. Depuis S6. [OBL] Le joueur peut baisser les yeux
+              pendant cette ligne : le modele de main gauche tient bien
+              les gants. [OBL] Aucun plan ne le montre. 9 % regardent.
+    [S8_EST_L222]  1,6 s · sec · <Tu as le droit.>
+    [S8_EST_L223]  2,4 s · sec · <Tu as toujours eu le droit.>
+    [S8_EST_L224]  6,0 s · sec · <La couverture est pliee parce que je savais>
+        dir : [OBL] CI `blanket-first` : mesure de playtest, > 70 % des
+              joueurs ont effectivement regarde la couverture en
+              premier. [OBL] Esteban avait raison sur le joueur.
+    [S8_EST_L225]  4,2 s · sec · <Ne me cherche plus dans les objets, mon amour.>
+        dir : [OBL][NAR] SECONDE ET DERNIERE OCCURRENCE DU MOT
+              « AMOUR » DU CHAPITRE 1 (CI `word-amour`, exactement 2).
+              [OBL] 20.04 : le volume de la voix BAISSE DE 2 dB sur
+              cette ligne. [OBL] L'acteur NE DOIT PAS L'APPUYER.
+              SURTOUT PAS. [OBL] Aucune coupure camera. Aucun
+              changement musical.
+              [OBL] C'est aussi la reponse au rituel rate de D04, et
+              elle arrive sans que rien ne la presente comme telle.
+              CI `no-ritual-explainer`.
+    [S8_EST_L226]  7,8 s · sec · <Je n'y suis pas.>
+    [S8_EST_L227]  9,6 s · sec · <Cherche-moi la ou je t'ai mis, exactement :>
+    [S8_EST_L228]  5,4 s · sec · <trois cent quatorze fois,>
+        dir : [OBL][NAR] LE PLAN LE PLUS IMPORTANT DU CHAPITRE.
+              [OBL] 20.04 : pendant cette ligne, le faisceau du Phare
+              passe par la fenetre et eclaire le mur de feuilles
+              punaisees derriere Lohen. LE JOUEUR VOIT LES 314 PAPIERS
+              D'UN COUP. [OBL] Scripte a la frame pres.
+              [OBL] Le faisceau passe toutes les 20 s (19.04) : le
+              script AVANCE OU RETARDE le passage d'au plus 9 s pour
+              tomber juste. [OBL] Job CI `beam-sync-314`.
+              [OBL] Aucune coupure camera. Le joueur est libre de
+              regarder ailleurs et de le rater. 4 % le ratent.
+    [S8_EST_L229]  6,6 s · sec · <Je ne sais pas si je serai encore la>
+    [S8_EST_L230]  4,8 s · sec · <Mais j'ai laisse la lampe allumee,>
+    [S8_EST_L231]  4,0 s · sec · <une lettre non remise, on la garde>
+        dir : [OBL][NAR] LA REGLE DU METIER, CINQUIEME ET DERNIER
+              ENONCE DU CHAPITRE (S1 Tallec, S3 Pallas, S5 Sol, S7
+              E24, ici). [OBL] C'est Esteban qui la dit a la fin, a un
+              relayeur, dans une lettre. [OBL] Il l'avait apprise de
+              lui. [OBL] Jamais dit.
+    [S8_EST_L232]  1,4 s · sec · <Tu m'as trouve.>
+        dir : [OBL] 20.04 : SILENCE TOTAL DE 2,5 s APRES.
+              [OBL] COUPURE CAMERA C3 : la camera est DEJA en
+              mouvement de recul quand on voit le visage. On ne
+              s'attarde pas. [OBL] Il pleure ici, et seulement ici, et
+              on ne le regarde pas.
+    [S8_EST_L233]  1,8 s · sec · <Tu peux la garder.>
+    [S8_EST_L234]  2,2 s · sec · <Esteban>
+        dir : [OBL] la signature est LUE. [OBL] Direction : comme on
+              signe, pas comme on se presente.
+    [S8_EST_L235]  5,0 s · sec · <P.-S. — Tu es en retard de trois ans.>
+        dir : [OBL][NAR] 55e ET DERNIERE ENTREE PARLEE D'ESTEBAN DU
+              CHAPITRE 1.
+              [OBL] 20.04 : la voix reprend un ton LEGER, PRESQUE
+              ENJOUE. « C'est ce qui casse le joueur. Les gens ne
+              pleurent pas sur la tristesse, ils pleurent sur la
+              tendresse qui essaie de faire comme si. »
+              [OBL] RACCORD MUET : « Tu es en retard » est la phrase de
+              la femme de E23 (S7_ECH_L204) et celle de Sol au pied du
+              Phare (S7_SOL_L242). Trois fois dans le chapitre, par
+              trois personnes qui ne se connaissent pas.
+              [OBL] Job CI `late-line` : les trois partagent le tag
+              `motif:retard`. [OBL] AUCUN JOUEUR N'EST CENSE LE
+              REMARQUER CONSCIEMMENT.
+              [OBL] M18 : coupure nette a 4:10. Silence. Le vent
+              revient.
+
+--- § 2 — OU SONT LES AUTRES ENTREES D'ESTEBAN EN S8 ---------------------------------------------
+
+[OBL] PRECISION DE COMPTAGE, a lire avant tout audit :
+
+  · 55 entrees ici — la lettre, lue a voix haute.
+  · 6 entrees en D07 — les extraits du carnet (E30, 19.05), lus a voix
+    haute eux aussi, mais portant un id `S8_ECH_*` et non `S8_EST_*` :
+    elles sont comptees avec les Echos parce que le carnet EST un Echo
+    (le 30e). [OBL] La voix est pourtant bien celle d'Esteban.
+  · 32 entrees en D06 — les fragments du mur de feuilles. [OBL] CELLES-
+    CI N'ONT AUCUN FICHIER AUDIO : elles sont ECRITES, lisibles a
+    l'ecran par zoom, et jamais prononcees. Elles comptent parmi les
+    2 840 comme les slots muets de Lohen comptent depuis S1.
+
+  → Entrees portant l'id `S8_EST_*` : 55 + 32 = 87, dont 55 avec VO.
+  → Voix d'Esteban reellement entendue en S8 : 55 + 6 = 61 fichiers.
+  → Entrees `EST` sur tout le chapitre 1 : 118 (S6) + 87 (S8) = 205,
+    auxquelles s'ajoutent les 6 extraits du carnet domicilies en `ECH`,
+    soit 211 apparitions vocales ou ecrites d'Esteban au total.
+  [OBL] Tout audit qui compte les `EST` trouvera 205 et devra lire cette
+  note. Elle est repetee a l'identique dans D10 § 3 et dans
+  VALIDATION_2840 § 3.
+
+--- § 3 — LES TREIZE ENTREES DE LOHEN PENDANT LA LECTURE ---------------------------------------
+
+[OBL] Il ne parle pas. [OBL] Les treize entrees ci-dessous sont TOUTES
+des slots sans VO : ce sont des temps de jeu, des gestes et des
+silences, identifies pour que le comptage des 2 840 reste exact et pour
+que personne n'y mette de dialogue plus tard.
+
+[OBL] REGLE ABSOLUE : AUCUNE LIGNE DE LOHEN PENDANT LA LECTURE DE LA
+LETTRE. [OBL] Job CI `silent-reader` : tout ajout d'un fichier VO sur
+l'un de ces treize ids casse le build.
+
+    [S8_LOH_L236]  0,0 s · — · (3,0 s de blocage apres <Lohen,>)
+    [S8_LOH_L237]  0,0 s · — · (il rapproche la lettre de la lampe)
+    [S8_LOH_L238]  0,0 s · — · (il change de main, la gauche tient les gants)
+    [S8_LOH_L239]  0,0 s · — · (il recule d'un pas vers le mur)
+    [S8_LOH_L240]  0,0 s · — · (C1 · `jaw_clench`, 0,8 s)
+    [S8_LOH_L241]  0,0 s · — · (il ferme les yeux — C2, sur les cinq notes)
+    [S8_LOH_L242]  0,0 s · — · (il rouvre les yeux, 1,1 s plus tard)
+    [S8_LOH_L243]  0,0 s · — · (le faisceau passe, il ne se retourne pas)
+        dir : [OBL][NAR] IL NE SE RETOURNE PAS. [OBL] Les 314 feuilles
+              sont eclairees DERRIERE lui. [OBL] LE JOUEUR LES VOIT.
+              LOHEN NON. [OBL] C'est le seul moment du chapitre ou le
+              joueur sait quelque chose que le personnage ignore.
+              [OBL] Interdit absolu : ne jamais lui faire tourner la
+              tete, dans aucune version, aucun patch.
+    [S8_LOH_L244]  0,0 s · — · (2,5 s de silence entre C3 et la derniere ligne)
+    [S8_LOH_L245]  0,0 s · — · (il baisse la lettre de 20 cm)
+    [S8_LOH_L246]  0,0 s · — · (6 s d'immobilite, controle retire — 19.10)
+    [S8_LOH_L247]  0,0 s · — · (le controle revient, sans transition ni indication)
+    [S8_LOH_L248]  0,0 s · — · (il ne bouge pas : 10 a 30 s en moyenne)
+        dir : [OBL] 19.10 : « C'est prevu. Il n'y a aucun prompt,
+              aucune incitation, rien. » [OBL] Critere 20.06 : au moins
+              7 playtesteurs sur 10 restent immobiles plus de 8 s.
+              [OBL] Si le seuil n'est pas atteint, ce n'est pas la
+              lettre qu'on corrige : c'est les trois heures qui la
+              precedent.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] Le texte n'existe qu'au BLOC 20.03 — CI `letter-single-source`
+[ ] Voix d'Esteban, aucun traitement audio — CI `esteban-dry`
+[ ] La voix suit le defilement, s'arrete au mot — CI `voice-follows-scroll`
+[ ] A3 : cinq notes completes, synchro frame, unique du chapitre
+[ ] C3 : on ne le regarde pas pleurer, camera deja en recul
+[ ] L225 : 2e et derniere occurrence d'« amour », -2 dB, non appuyee
+[ ] L228 : les 314 feuilles revelees par le faisceau — CI `beam-sync-314`
+[ ] L243 : Lohen ne se retourne jamais
+[ ] Aucune ligne de Lohen pendant la lecture — CI `silent-reader`
+[ ] Saint-Jerome n'est jamais defini

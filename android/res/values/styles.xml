@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Un seul theme, plein ecran, sans barre de titre : le jeu est son propre
+  chrome (14.01). Le fond de fenetre est la nuit de Velmora, pour que le tout
+  premier pixel affiche ne soit jamais un blanc de systeme.
+-->
+<resources>
+    <style name="LohenTheme" parent="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@color/lohen_night</item>
+        <item name="android:colorBackground">@color/lohen_night</item>
+        <item name="android:navigationBarColor">@color/lohen_night</item>
+        <item name="android:statusBarColor">@color/lohen_night</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+</resources>

@@ -1,0 +1,617 @@
+{
+ "chapter": 1,
+ "nodes": [
+  {
+   "id": "S1_arrival",
+   "seq": "S1",
+   "kind": "cinematic",
+   "cine": "C01",
+   "next": [
+    "S1_walk"
+   ],
+   "objective": null
+  },
+  {
+   "id": "S1_walk",
+   "seq": "S1",
+   "kind": "beat",
+   "verb": "walk",
+   "objective": "obj.S1.registre",
+   "next": [
+    "S1_first_echo"
+   ],
+   "teach": [
+    "marcher",
+    "camera"
+   ]
+  },
+  {
+   "id": "S1_first_echo",
+   "seq": "S1",
+   "kind": "echo",
+   "echo": "E01",
+   "forced": true,
+   "next": [
+    "S1_jump_teach"
+   ],
+   "teach": [
+    "interagir"
+   ]
+  },
+  {
+   "id": "S1_jump_teach",
+   "seq": "S1",
+   "kind": "beat",
+   "verb": "jump",
+   "prop": "PN-006",
+   "next": [
+    "S1_climb_teach"
+   ],
+   "teach": [
+    "sauter"
+   ]
+  },
+  {
+   "id": "S1_climb_teach",
+   "seq": "S1",
+   "kind": "beat",
+   "verb": "climb",
+   "prop": "PN-021",
+   "next": [
+    "S1_pallas"
+   ],
+   "teach": [
+    "grimper"
+   ]
+  },
+  {
+   "id": "S1_pallas",
+   "seq": "S1",
+   "kind": "dialogue",
+   "scene": "S1_D02",
+   "choices": [
+    "S1_D05_C01",
+    "S1_D05_C02"
+   ],
+   "next": [
+    "S1_roof_exit"
+   ]
+  },
+  {
+   "id": "S1_roof_exit",
+   "seq": "S1",
+   "kind": "beat",
+   "verb": "climb",
+   "next": [
+    "S1_to_S2"
+   ],
+   "checkpoint": "CP-004"
+  },
+  {
+   "id": "S1_to_S2",
+   "seq": "S1",
+   "kind": "corridor",
+   "corridor": "T1",
+   "next": [
+    "S2_glass"
+   ]
+  },
+  {
+   "id": "S2_glass",
+   "seq": "S2",
+   "kind": "beat",
+   "rule": "glass_no_grapple",
+   "objective": "obj.S2.hirondelle",
+   "next": [
+    "S2_grapple_refus"
+   ]
+  },
+  {
+   "id": "S2_grapple_refus",
+   "seq": "S2",
+   "kind": "teach",
+   "lesson": "le verre refuse le grappin",
+   "duration_s": 12,
+   "next": [
+    "S2_heat_wells"
+   ]
+  },
+  {
+   "id": "S2_heat_wells",
+   "seq": "S2",
+   "kind": "beat",
+   "rule": "heat_wells",
+   "next": [
+    "S2_tramway"
+   ],
+   "cinematic": "C02"
+  },
+  {
+   "id": "S2_tramway",
+   "seq": "S2",
+   "kind": "spectacle",
+   "echo": "E06",
+   "optional": true,
+   "next": [
+    "S2_cabin"
+   ]
+  },
+  {
+   "id": "S2_cabin",
+   "seq": "S2",
+   "kind": "echo",
+   "echo": "E04",
+   "major": true,
+   "next": [
+    "S2_escape"
+   ]
+  },
+  {
+   "id": "S2_escape",
+   "seq": "S2",
+   "kind": "beat",
+   "rule": "urgent_escape",
+   "combat": "F01",
+   "next": [
+    "S2_to_S3"
+   ],
+   "figure_watches": true
+  },
+  {
+   "id": "S2_to_S3",
+   "seq": "S2",
+   "kind": "corridor",
+   "corridor": "T2",
+   "next": [
+    "S3_arrival"
+   ]
+  },
+  {
+   "id": "S3_arrival",
+   "seq": "S3",
+   "kind": "cinematic",
+   "cine": "C03",
+   "objective": "obj.S3.montechage",
+   "next": [
+    "S3_sol_chase"
+   ]
+  },
+  {
+   "id": "S3_sol_chase",
+   "seq": "S3",
+   "kind": "beat",
+   "rule": "chase_90s",
+   "unwinnable": true,
+   "next": [
+    "S3_sol_dialogue"
+   ],
+   "dialogue": "S3_D06"
+  },
+  {
+   "id": "S3_sol_dialogue",
+   "seq": "S3",
+   "kind": "dialogue",
+   "scene": "S3_D06",
+   "next": [
+    "S3_pendulum"
+   ]
+  },
+  {
+   "id": "S3_pendulum",
+   "seq": "S3",
+   "kind": "beat",
+   "rule": "pendulum_rings",
+   "rings": 60,
+   "next": [
+    "S3_tallec"
+   ],
+   "teach": [
+    "grappin pendule"
+   ]
+  },
+  {
+   "id": "S3_tallec",
+   "seq": "S3",
+   "kind": "dialogue",
+   "scene": "S3_D03",
+   "cinematic": "C04",
+   "combat": "F02_parry_lesson",
+   "next": [
+    "S3_letters"
+   ],
+   "reward": "ancre_harnais"
+  },
+  {
+   "id": "S3_letters",
+   "seq": "S3",
+   "kind": "delivery",
+   "letters": 4,
+   "next": [
+    "S3_counterweights"
+   ]
+  },
+  {
+   "id": "S3_counterweights",
+   "seq": "S3",
+   "kind": "puzzle",
+   "rule": "pull_three_counterweights",
+   "next": [
+    "S3_to_S4"
+   ]
+  },
+  {
+   "id": "S3_to_S4",
+   "seq": "S3",
+   "kind": "corridor",
+   "corridor": "T3",
+   "next": [
+    "S4_arrival"
+   ]
+  },
+  {
+   "id": "S4_arrival",
+   "seq": "S4",
+   "kind": "beat",
+   "music": "M08_empty",
+   "objective": "obj.S4.dossier",
+   "next": [
+    "S4_search"
+   ]
+  },
+  {
+   "id": "S4_search",
+   "seq": "S4",
+   "kind": "puzzle",
+   "rule": "file_search_900",
+   "clues": [
+    "date",
+    "quartier",
+    "metier"
+   ],
+   "next": [
+    "S4_mireille_1"
+   ]
+  },
+  {
+   "id": "S4_mireille_1",
+   "seq": "S4",
+   "kind": "dialogue",
+   "scene": "S4_D04",
+   "next": [
+    "S4_empty_file"
+   ]
+  },
+  {
+   "id": "S4_empty_file",
+   "seq": "S4",
+   "kind": "cinematic",
+   "cine": "C05",
+   "echo": "E13",
+   "major": true,
+   "next": [
+    "S4_mireille_2"
+   ]
+  },
+  {
+   "id": "S4_mireille_2",
+   "seq": "S4",
+   "kind": "dialogue",
+   "scene": "S4_D07",
+   "lie": true,
+   "next": [
+    "S4_to_S5"
+   ],
+   "reward": "cle_mireille"
+  },
+  {
+   "id": "S4_to_S5",
+   "seq": "S4",
+   "kind": "corridor",
+   "corridor": "T4",
+   "next": [
+    "S5_arrival"
+   ]
+  },
+  {
+   "id": "S5_arrival",
+   "seq": "S5",
+   "kind": "beat",
+   "rule": "carry_lantern",
+   "objective": "obj.S5.traversee",
+   "next": [
+    "S5_stealth"
+   ]
+  },
+  {
+   "id": "S5_stealth",
+   "seq": "S5",
+   "kind": "beat",
+   "rule": "light_repels_4m",
+   "combat": "F05",
+   "next": [
+    "S5_dark_8m"
+   ]
+  },
+  {
+   "id": "S5_dark_8m",
+   "seq": "S5",
+   "kind": "beat",
+   "rule": "lantern_down_8m",
+   "cinematic": "C06",
+   "next": [
+    "S5_sol_pomme"
+   ]
+  },
+  {
+   "id": "S5_sol_pomme",
+   "seq": "S5",
+   "kind": "dialogue",
+   "scene": "S5_D05",
+   "music": "M11",
+   "next": [
+    "S5_to_S6"
+   ]
+  },
+  {
+   "id": "S5_to_S6",
+   "seq": "S5",
+   "kind": "corridor",
+   "corridor": "T5",
+   "next": [
+    "S6_arrival"
+   ]
+  },
+  {
+   "id": "S6_arrival",
+   "seq": "S6",
+   "kind": "beat",
+   "silence_s": 5.0,
+   "objective": "obj.S6.bal",
+   "next": [
+    "S6_echo21"
+   ]
+  },
+  {
+   "id": "S6_echo21",
+   "seq": "S6",
+   "kind": "echo_playable",
+   "echo": "E21",
+   "cinematic": "C07",
+   "duration_s": 540,
+   "next": [
+    "S6_dance"
+   ]
+  },
+  {
+   "id": "S6_dance",
+   "seq": "S6",
+   "kind": "minigame",
+   "rule": "dance_4_press",
+   "no_fail": true,
+   "music": "M12",
+   "next": [
+    "S6_argument"
+   ]
+  },
+  {
+   "id": "S6_argument",
+   "seq": "S6",
+   "kind": "dialogue",
+   "scene": "S6_D03",
+   "fake_choice": true,
+   "next": [
+    "S6_collapse"
+   ]
+  },
+  {
+   "id": "S6_collapse",
+   "seq": "S6",
+   "kind": "cinematic",
+   "cine": "C08",
+   "vfx": "V25",
+   "next": [
+    "S6_to_S7"
+   ]
+  },
+  {
+   "id": "S6_to_S7",
+   "seq": "S6",
+   "kind": "corridor",
+   "corridor": "T6",
+   "next": [
+    "S7_arrival"
+   ]
+  },
+  {
+   "id": "S7_arrival",
+   "seq": "S7",
+   "kind": "beat",
+   "rule": "rain",
+   "objective": "obj.S7.descendre",
+   "next": [
+    "S7_snap"
+   ]
+  },
+  {
+   "id": "S7_snap",
+   "seq": "S7",
+   "kind": "scripted",
+   "anim": "grapple_snap",
+   "at_minute": 3,
+   "next": [
+    "S7_combats"
+   ]
+  },
+  {
+   "id": "S7_combats",
+   "seq": "S7",
+   "kind": "combat_chain",
+   "encounters": [
+    "F08",
+    "F09",
+    "F10",
+    "F11",
+    "F12"
+   ],
+   "next": [
+    "S7_boss"
+   ]
+  },
+  {
+   "id": "S7_boss",
+   "seq": "S7",
+   "kind": "boss",
+   "boss": "verrier",
+   "phases": 3,
+   "peaceful_possible": true,
+   "music": "M14",
+   "next": [
+    "S7_kneel"
+   ]
+  },
+  {
+   "id": "S7_kneel",
+   "seq": "S7",
+   "kind": "cinematic",
+   "cine": "C09",
+   "echo": "E23",
+   "next": [
+    "S7_dossier"
+   ],
+   "optional_echo": "E23bis"
+  },
+  {
+   "id": "S7_dossier",
+   "seq": "S7",
+   "kind": "beat",
+   "flag": "dossier_recu",
+   "choice_mercy": true,
+   "next": [
+    "S7_to_S8"
+   ]
+  },
+  {
+   "id": "S7_to_S8",
+   "seq": "S7",
+   "kind": "corridor",
+   "corridor": "T7",
+   "next": [
+    "S8_sol_repairs"
+   ]
+  },
+  {
+   "id": "S8_sol_repairs",
+   "seq": "S8",
+   "kind": "dialogue",
+   "scene": "S8_D02",
+   "duration_s": 90,
+   "reward": "grapple_repaired",
+   "next": [
+    "S8_climb"
+   ]
+  },
+  {
+   "id": "S8_climb",
+   "seq": "S8",
+   "kind": "beat",
+   "rule": "all_verbs",
+   "music": "M16",
+   "altitude_tiers": 6,
+   "objective": "obj.S8.monter",
+   "next": [
+    "S8_fog_below"
+   ]
+  },
+  {
+   "id": "S8_fog_below",
+   "seq": "S8",
+   "kind": "scripted",
+   "cine": "C10",
+   "at_altitude": 150,
+   "player_keeps_control": true,
+   "next": [
+    "S8_landing"
+   ]
+  },
+  {
+   "id": "S8_landing",
+   "seq": "S8",
+   "kind": "beat",
+   "at_altitude": 206,
+   "interaction": "push_door_2_2s",
+   "next": [
+    "S8_room"
+   ]
+  },
+  {
+   "id": "S8_room",
+   "seq": "S8",
+   "kind": "explore",
+   "discoveries": 7,
+   "echo_optional": "E30",
+   "next": [
+    "S8_letter"
+   ]
+  },
+  {
+   "id": "S8_letter",
+   "seq": "S8",
+   "kind": "letter",
+   "cine": "C11",
+   "echo": "E31",
+   "no_echo": true,
+   "music": "M18",
+   "next": [
+    "S8_fold"
+   ]
+  },
+  {
+   "id": "S8_fold",
+   "seq": "S8",
+   "kind": "beat",
+   "anim": "fold_and_store",
+   "next": [
+    "S8_descent"
+   ]
+  },
+  {
+   "id": "S8_descent",
+   "seq": "S8",
+   "kind": "beat",
+   "duration_s": 90,
+   "silent": true,
+   "next": [
+    "S8_sol_sleeps"
+   ]
+  },
+  {
+   "id": "S8_sol_sleeps",
+   "seq": "S8",
+   "kind": "ending",
+   "music": "M19",
+   "next": [
+    "CREDITS"
+   ]
+  },
+  {
+   "id": "CREDITS",
+   "seq": "S8",
+   "kind": "credits",
+   "music": "M20",
+   "unskippable_s": 60,
+   "next": []
+  }
+ ],
+ "flags_chapter2": [
+  "dossier_recu",
+  "verrier_acheve",
+  "verrier_epargne",
+  "e23bis_lu",
+  "objets_figures_11"
+ ],
+ "seven_letters": {
+  "slots": 7,
+  "filled_chapter1": 1,
+  "deliverable_chapter1": 6
+ }
+}

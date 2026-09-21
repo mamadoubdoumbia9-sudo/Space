@@ -1,0 +1,104 @@
+===============================================================================
+PN-050 — LE JEU DE CORDES DES ENFANTS
+===============================================================================
+Asset : SM_S3_Jeu_Cordes · S3, sous la passerelle du niveau 1, tendu entre
+deux poutres · ~02:21 · prop narratif · pas d'Echo · LOD0 1 100 tris
+
+§ 1 — CE QU'ON VOIT
+Sous la passerelle, dans le vide, entre deux poutres distantes de 3 m,
+quelqu'un a tendu un reseau de cordes.
+Ce n'est pas un filet de securite. C'est un JEU : neuf cordes tendues en
+etoile, nouees entre elles aux croisements, formant une toile irreguliere
+avec des mailles de tailles differentes — des grandes en bas, des petites
+en haut.
+On y grimpe. On passe par les trous. C'est une structure de jeu.
+Elle est faite de bouts de corde recuperes : du chanvre, du nylon bleu (le
+meme que PN-044), une longueur de filet de peche, une lanière de cuir.
+Douze noeuds differents, dont aucun n'est un noeud de marin correct.
+Ce sont des noeuds d'enfants : trop de tours, mal serres, doubles par
+precaution.
+Sous la toile, 7 metres plus bas : le verre.
+Sur la corde la plus basse, celle qu'on atteint depuis la passerelle, l'usure
+est nette : elle est lisse, brillante, decoloree sur 80 cm.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 100 (9 cordes en spline, 12 noeuds modelises individuellement).
+[OBL] Les 12 noeuds sont sculptes un par un, et ils doivent etre MAUVAIS :
+un noeud d'enfant a trop de tours, des boucles inegales, et il tient quand
+meme. Un rigger ou un artiste qui fait de beaux noeuds a rate le prop.
+Anim : PROP-763 — la toile entiere oscille de 4 cm, 0,15 Hz, avec une
+propagation entre les cordes (les noeuds transmettent le mouvement avec
+0,3 s de retard). [OBL] Simulation bakee, pas de solver runtime.
+Shader : quatre materiaux distincts sur la meme structure (chanvre, nylon,
+filet, cuir), car les cordes sont recuperees.
+Collision : AUCUNE. [OBL] Le joueur ne peut pas grimper dessus. Il n'y a
+pas de prompt, pas de point d'accroche, pas d'interaction.
+Lohen est un adulte de 27 ans avec une epaule abimee. Il ne grimpe pas dans
+un jeu d'enfants suspendu au-dessus du vide.
+
+§ 3 — CE QUE CA DIT
+Des enfants jouaient ici, a 7 metres au-dessus de la mer, dans une toile de
+cordes recuperees qu'ils avaient nouee eux-memes.
+Le geste humain : nouer douze mauvais noeuds et faire confiance a ses
+propres noeuds avec son propre corps au-dessus du vide.
+L'usure de 80 cm sur la corde basse : c'est par la qu'on entrait. Des
+centaines de fois.
+[NAR] Les adultes de Velmora ont laisse faire. Ils voyaient la toile. Ils
+passaient dessus tous les jours. Ils n'ont pas coupe les cordes.
+C'est une ville ou on laissait les enfants grimper au-dessus de la mer.
+[OBL] Le jeu ne dit rien. Il n'y a pas de nom, pas de jouet, pas de trace
+d'enfant a part l'usure de la corde.
+
+§ 4 — ECHO
+NEANT. [OBL] Regle des enfants (PN-007, PN-014) : on ne rejoue pas les
+enfants. Aucun Echo du chapitre ne contient de silhouette de moins de
+1,20 m, sauf VER-ECH-634 en S7.
+[ART] C'est la troisieme fois que le systeme refuse un enfant au joueur.
+A ce stade il a compris. Il ne s'approche meme plus en esperant.
+
+§ 5 — MISE EN SCENE
+[OBL] La toile est SOUS la passerelle. On ne la voit pas en marchant. Il
+faut se pencher au bord et regarder en dessous.
+Ce qui pousse a se pencher : rien de scripte. Mais la passerelle a un
+garde-corps bas (85 cm) et une planche manquante a cet endroit precis, qui
+oblige a regarder ou on met les pieds.
+[ART] Le level design produit le regard. Encore.
+Taux de decouverte cible : 38-47 %.
+Une fois vue : elle est au centre du champ, en contre-plongee, sur fond de
+verre noir a 7 m.
+Aucun LookAt, aucun son, aucun prompt, aucune musique.
+
+§ 6 — AUDIO
+SFX(rope_net_creak) : les douze noeuds travaillent, chacun avec son propre
+timbre (chanvre grince, nylon couine, cuir claque). Douze micro-sons
+irreguliers, -31 dB.
+[ART] Le son d'une toile d'enfants qui bouge toute seule au vent. Il n'y a
+personne dedans. C'est tout le prop.
+Aucune musique. M10 « Le marche » continue normalement : [OBL] elle ne
+s'arrete pas. Ce prop n'a droit a aucun traitement special.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre de grimper · ajouter un prompt · donner un Echo ·
+ajouter un jouet, une chaussure, un dessin, un nom · couper une corde ·
+faire tomber quoi que ce soit · faire commenter Lohen · faire de beaux
+noeuds · arreter la musique · ajouter un rire d'enfant, ici ou ailleurs
+dans le chapitre [OBL — il n'y a AUCUN son d'enfant dans le chapitre 1,
+sauf Sol, qui a 13 ans et dont la voix a mue].
+
+§ 8 — LIENS
+PN-007 (la chaise attachee). PN-014 (le landau). PN-063 (le tas de
+chaussures d'enfants, a 60 m). PN-044 (le nylon bleu : la meme corde, la
+meme recuperation, a 40 m).
+PN-053 (le nid de Sol dans la gaine) : un enfant vivant, qui grimpe encore,
+et le joueur le rencontrera dans 20 minutes.
+[THEME] LES ENFANTS ABSENTS.
+
+§ 9 — DOD
+[ ] 12 noeuds sculptes individuellement, tous mauvais, tous tenants
+[ ] 4 materiaux de corde differents sur la meme structure
+[ ] Usure lisse de 80 cm sur la corde d'entree
+[ ] Invisible sans se pencher ; planche manquante au bord
+[ ] Zero collision, zero prompt, zero possibilite de grimper
+[ ] 12 timbres de grincement distincts
+[ ] M10 non interrompue
+[ ] Aucun son d'enfant dans tout le chapitre hors Sol

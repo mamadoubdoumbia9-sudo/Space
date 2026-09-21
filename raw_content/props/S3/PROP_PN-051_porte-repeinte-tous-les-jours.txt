@@ -1,0 +1,102 @@
+===============================================================================
+PN-051 — LA PORTE REPEINTE TOUS LES JOURS
+===============================================================================
+Asset : SM_S3_Porte_Repeinte · S3, facade est, niveau 2, au bout d'une
+passerelle en cul-de-sac · ~02:38 · prop narratif · pas d'Echo ·
+LOD0 1 900 tris
+
+§ 1 — CE QU'ON VOIT
+Une porte d'appartement ordinaire, au bout d'une passerelle qui ne mene
+qu'a elle. Un cul-de-sac de 4 m.
+La porte est epaisse. Anormalement epaisse. Elle a 11 cm d'epaisseur la ou
+une porte en fait 4.
+Parce qu'elle a ete repeinte. Beaucoup.
+On compte les couches sur la tranche, la ou le bois a eclate : trente-huit
+couches de peinture, visibles en stratification, comme les anneaux d'un
+arbre. Verte, creme, verte, bleue, creme, grise, verte...
+La couche du dessus est grise. Elle est recente : moins d'un an.
+Elle est parfaitement lisse. Appliquee avec soin, au rouleau, sans coulure.
+La poignee de laiton est polie a blanc.
+La porte est FERMEE. Il n'y a pas de serrure : elle a ete condamnee de
+l'intérieur, on le voit aux deux vis qui traversent le montant.
+Sur le mur, a droite, a hauteur de main : un rectangle de peinture plus
+clair, 8 x 12 cm. Une plaque a ete enlevee. Le nom est parti avec.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 900. [OBL] La stratification des 38 couches est de la GEOMETRIE sur
+les zones d'eclat (4 zones, 900 tris au total). Chaque couche fait 0,25 mm.
+Le joueur peut compter. Le nombre exact est 38.
+Texture 4K sur la tranche, peinte a la main, 38 bandes de couleurs
+coherentes (une palette municipale d'epoque, pas de couleurs aleatoires).
+[OBL] Aucune des 38 couches n'est #FFA33C. Verifie par la CI.
+Shader `paint_stratified` avec un masque d'eclat controle.
+La poignee : roughness 0,14 sur la zone de prise, 0,52 ailleurs.
+Collision : boite. [OBL] Non ouvrable. Aucun prompt. Le joueur pousse : rien.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un repeint cette porte. Encore aujourd'hui. Dans une ville vide,
+derriere une porte condamnee de l'intérieur.
+Trente-huit couches, c'est plus qu'une vie d'entretien normal. C'est
+peut-etre trois fois par an pendant treize ans. C'est peut-etre une fois
+par mois pendant trois ans.
+Le geste humain : repeindre.
+[OBL] La derniere couche est POSTERIEURE a la condamnation. Quelqu'un a
+visse la porte de l'intérieur, et quelqu'un — le meme ? un autre ? — l'a
+repeinte apres, de l'exterieur.
+La plaque de nom a ete retiree. Le rectangle clair est net : elle a ete
+enlevee recemment, apres la derniere couche de peinture.
+[NAR] Le jeu n'explique rien. Ni qui est derriere. Ni si quelqu'un est
+derriere. Ni qui peint. La porte ne s'ouvre jamais, dans aucun des sept
+chapitres.
+
+§ 4 — ECHO
+NEANT. Geste d'apres (PN-015).
+[ART] Mais le joueur, a ce stade, a integre la regle et ne s'attend plus a
+un Echo sur les gestes d'apres. Ce qu'il attend ici, c'est que la porte
+s'ouvre. C'est un autre type de refus, et c'est le dernier cul-de-sac du
+chapitre.
+
+§ 5 — MISE EN SCENE
+Une passerelle de 4 m qui ne mene qu'a une porte. [OBL] Zone entierement
+facultative. Rien n'y mene, rien ne l'annonce, rien n'en sort.
+Taux d'entree cible : 29-38 %.
+[ART] Le joueur qui s'y engage le fait par completisme. Il marche 4 m, il
+trouve une porte, il ne peut pas l'ouvrir, il fait demi-tour. 20 secondes.
+C'est un des rares endroits du jeu qui ne donne strictement rien — sauf a
+celui qui regarde la tranche et compte.
+Lumiere : la porte est plein est, donc dans l'ombre toute la journee (pas
+de cycle, 05.09). La lampe de Lohen est necessaire pour voir les couches.
+[OBL] Aucun LookAt, aucun son a l'approche, aucune musique, aucun prompt.
+
+§ 6 — AUDIO
+NEANT. Silence. La porte ne fait aucun bruit, ne grince pas, ne vibre pas.
+[OBL] Aucun son ne vient de derriere. Jamais. Le joueur qui colle son
+oreille (ce qui n'est pas une mecanique — il n'y a pas de commande
+d'ecoute) n'entendra rien.
+Le vent dans le cul-de-sac est etouffe : -21 dB, un point mort acoustique.
+
+§ 7 — INTERDICTIONS
+Interdit de : ouvrir la porte, ici ou dans les six lettres suivantes ·
+ajouter un son derriere · faire bouger la poignee · ajouter un mot, un
+nom, une marque · reveler qui peint · compter autrement que 38 couches ·
+utiliser #FFA33C dans les couches · faire commenter · ajouter un prompt ·
+en faire un secret a debloquer · recompenser le joueur qui compte.
+
+§ 8 — LIENS
+PN-015 (la porte clouee de la capitainerie, S1) : l'autre porte qui ne
+s'ouvre pas. Deux portes, deux facons de dire non.
+PN-057 (la porte clouee de l'ecole) — [OBL] ce prop est PN-057 dans l'index
+sous le nom « Le brasero communal » ; la porte de l'ecole n'existe pas comme
+prop numerote et ne doit pas etre creee. Corriger toute reference contraire.
+PN-136 (la porte gonflee de la chambre, S8) : celle-la s'ouvre, et c'est la
+derniere du jeu.
+[THEME] LE REFUS. [THEME] LES GESTES D'APRES.
+
+§ 9 — DOD
+[ ] 38 couches comptables en geometrie, 0,25 mm chacune, palette coherente
+[ ] Derniere couche grise, lisse, recente, posterieure a la condamnation
+[ ] Deux vis de condamnation visibles dans le montant
+[ ] Rectangle clair de plaque retiree, 8 x 12 cm
+[ ] Aucune couche en #FFA33C, validee par la CI
+[ ] Zero son, zero prompt, zero ouverture, dans les 7 chapitres
+[ ] Point mort acoustique a -21 dB

@@ -1,0 +1,114 @@
+===============================================================================
+PN-127 — LE PONT CASSE
+===============================================================================
+Asset : SM_S7_Pont_Casse · S7, entre le front de mer et la jetee du Phare ·
+~05:56 · prop narratif INTERACTIF · pas d'Echo · LOD0 11 200 tris
+
+§ 1 — CE QU'ON VOIT
+Un pont de pierre a trois arches, 62 metres, qui relie le front de mer a la
+jetee qui mene au Phare.
+[OBL] C'est le seul chemin. Il n'y a pas d'autre acces au Phare.
+L'arche centrale est EFFONDREE.
+Il manque 11 metres de tablier. Les deux moities du pont s'arretent dans le
+vide, face a face, avec 11 m entre elles et la Maree 9 m plus bas.
+Les gravats de l'arche sont en bas, sur le verre : un tas de 40 tonnes de
+pierre de taille, empile de facon chaotique, qui monte a 5 m.
+[OBL] Et sur ce tas, il y a une PASSERELLE.
+Une passerelle de fortune : trois poutrelles de fer posees en travers, du
+haut du tas de gravats jusqu'a l'autre moitie du pont, avec des planches
+clouees dessus.
+Elle a ete construite. Recemment. Les clous ne sont pas rouilles.
+Pour l'emprunter, il faut DESCENDRE sur les gravats depuis la premiere
+moitie du pont, traverser le tas, monter sur la passerelle, et remonter de
+l'autre cote.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 11 200 (pont 6 400 + gravats 3 100 + passerelle 1 700).
+[OBL] Les gravats : 180 blocs de pierre de taille individuels, de 0,2 a
+1,4 m³, empiles avec un solveur physique puis figes (bake). Ils doivent
+avoir l'air instables et etre parfaitement stables.
+La passerelle : 3 poutrelles IPN de 6 m + 22 planches clouees.
+[OBL] Les 22 planches sont de largeurs et d'essences differentes : elles
+viennent d'ailleurs. Trois sont des lattes de banc. Deux sont des planches
+de caisse a poissons — [OBL] avec le pochoir « CRIEE DE VELMORA », le meme
+que PN-015 et PN-016 en S1.
+[ART] Le joueur marche sur des planches qu'il a peut-etre vues il y a
+cinq heures et demie.
+Traversee : LOH-LOC-207 a 211, 5 clips. 90 secondes en tout.
+[OBL] Aucun QTE, aucun equilibre, aucun risque de chute scriptee.
+[OBL] Le joueur PEUT tomber s'il saute a cote. 9 m, sur le verre, aucune
+mort (08.31), LOH-ANI-237 (la chute moche), 3 s au sol, et 2 minutes pour
+remonter par les gravats.
+
+§ 3 — CE QUE CA DIT
+Le pont est casse et quelqu'un a construit un passage.
+Le geste humain : clouer 22 planches sur trois poutrelles, au-dessus du
+vide, pour pouvoir traverser.
+[OBL] Qui ? Jamais dit.
+[NAR] Mais : les planches viennent de la criee, a 4 kilometres, en ville
+haute. Il a fallu les porter. Les poutrelles de 6 m pesent 180 kg chacune.
+Il a fallu les amener, les lever, les poser.
+[OBL] Ce n'est pas un travail d'enfant. Ce n'est pas un travail d'une
+personne seule, non plus, pour les poutrelles.
+[OBL] Jamais explique, jamais evoque, jamais attribue.
+Quelqu'un voulait pouvoir aller au Phare.
+
+§ 4 — ECHO
+NEANT. Geste d'apres (PN-015) et ouvrage public (PN-016).
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur arrive au bord du vide. 11 metres. Le Phare est de l'autre
+cote, a 400 m, noir contre un ciel noir.
+Il regarde en bas : des gravats, et une passerelle.
+[OBL] Il n'y a AUCUN prompt, aucun marqueur, aucune indication. Il doit
+comprendre qu'il faut descendre.
+[ART] C'est la derniere resolution de probleme du chapitre, et elle est
+purement spatiale : regarder, comprendre, descendre.
+Taux de blocage de plus de 60 secondes : 12-19 %.
+[OBL] Aucune aide, aucune camera, aucun indice, jamais, quel que soit le
+temps passe.
+La traversee, 90 secondes : [OBL] sous la pluie, sur des gravats glissants,
+puis sur 22 planches au-dessus de la Maree.
+[OBL] La pluie sur la Maree (PN-122) est a -8 dB, juste en dessous de lui.
+C'est le son le plus fort du jeu et il traverse dedans.
+
+§ 6 — AUDIO
+SFX(step_rubble_wet) : les pas sur les gravats. 14 variations. Instable,
+avec des petites pierres qui roulent.
+SFX(step_plank_hollow) : les 22 planches. [OBL] Chacune sonne differemment
+selon sa largeur et son essence. 22 sons distincts, identifiables.
+[ART] Le joueur traverse une passerelle et entend 22 planches differentes.
+SFX(ipn_steel_flex) : les poutrelles flechissent sous son poids. Un son
+grave, une seule fois au milieu de chaque poutrelle.
+[OBL] Elles flechissent VISUELLEMENT aussi : 4 cm au centre. Elles ne
+cassent jamais.
+Aucune musique. [OBL] Le front de mer et le pont sont sans musique.
+M24 « Le Phare » ne commence qu'a la premiere marche (PN-129).
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter un QTE · ajouter une jauge d'equilibre · faire ceder
+une planche · faire casser une poutrelle · tuer Lohen · ajouter un ecran
+d'echec · ajouter un prompt ou un marqueur · ajouter une camera d'aide ·
+donner un indice apres un temps de blocage · reparer le pont · ajouter un
+second passage · reveler qui a construit la passerelle · ajouter de la
+musique.
+
+§ 8 — LIENS
+PN-015, PN-016 (les caisses de la criee, S1) : deux des 22 planches.
+PN-114 (le cable casse du grappin) : l'autre tentative de franchissement,
+ratee. Celle-ci a reussi.
+PN-061 (le puits a poulie, S3) : l'autre chute possible du chapitre.
+PN-079 (la passerelle de planches de Mireille, S4).
+PN-129 (la premiere marche, de l'autre cote).
+[THEME] SE DEBROUILLER AVEC CE QU'IL Y A. [THEME] LE JOUEUR N'EST PAS LE
+PREMIER.
+
+§ 9 — DOD
+[ ] 180 blocs de gravats individuels, physiquement empiles puis figes
+[ ] 22 planches de largeurs et essences differentes, 22 sons distincts
+[ ] 2 planches au pochoir « CRIEE DE VELMORA », coherentes avec S1
+[ ] Poutrelles flechissant de 4 cm, ne cassant jamais
+[ ] Zero prompt, zero marqueur, zero aide, meme apres 5 minutes de blocage
+[ ] Chute possible sans mort, 3 s au sol, 2 min de remontee
+[ ] Zero musique jusqu'a PN-129
+[ ] Taux de blocage > 60 s mesure entre 12 et 19 %

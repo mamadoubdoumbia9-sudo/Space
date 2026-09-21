@@ -1,0 +1,92 @@
+===============================================================================
+PN-068 — LA CHEMISE CARTONNEE VIDE
+===============================================================================
+Asset : SM_S4_Chemise_Vide · S4, sur le dessus du casier 4, rangee M ·
+~03:23 · prop narratif · pas d'Echo · LOD0 180 tris
+
+§ 1 — CE QU'ON VOIT
+Posee a plat sur le dessus du casier 4, hors de l'eau, une chemise
+cartonnee. Format administratif, carton beige, avec deux rabats et une
+attache de ficelle.
+Elle est fermee. La ficelle est nouee, proprement, en huit autour des deux
+oeillets.
+Elle est PLATE. Completement. Il n'y a rien dedans.
+Sur la couverture, un cartouche imprime avec des lignes a remplir :
+     DOSSIER N° ______
+     NOM ______
+     OUVERT LE ______
+     CLOS LE ______
+Les quatre lignes sont vides. Aucune n'a jamais ete remplie.
+La chemise est neuve. Elle n'a pas trois ans : le carton est raide, les
+angles sont nets, la ficelle est propre.
+Elle a ete apportee ici, posee, nouee, et laissee.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 180 tris. Texture 2K.
+[OBL] Le cartouche imprime doit etre lisible a 60 cm. La typographie est
+celle des imprimes administratifs de Velmora — [OBL] une seule police
+d'imprimerie existe dans tout le jeu, dessinee pour le projet, utilisee sur
+PN-003, PN-058, PN-068, PN-077, PN-081, PN-106. Six occurrences. Toute
+autre typographie imprimee est interdite.
+Le noeud en huit : geometrie, 60 tris.
+Shader `cardboard_dry` : le carton est SEC, contrairement a tout le reste
+de la piece. Il est sur le meuble, hors d'eau.
+Collision : aucune. [OBL] Non ouvrable, non prenable, aucun prompt.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a pris une chemise cartonnee neuve, l'a nouee vide, et l'a posee
+sur le meuble.
+[OBL] Les quatre lignes sont vides. Pas de nom. Pas de numero. Pas de date
+d'ouverture. Pas de date de cloture.
+Le geste humain : nouer une chemise vide.
+[NAR] C'est un dossier qu'on n'a pas pu ouvrir. Parce qu'on ne savait pas
+quoi ecrire sur la ligne NOM. Ou parce qu'on ne pouvait plus ecrire.
+[OBL] Mireille a la main droite brulee. Elle ecrit tres mal.
+Le joueur ne le sait pas encore : il la rencontre dans 3 minutes.
+[OBL] Il ne pourra jamais confirmer le lien. Aucun dialogue, aucun indice
+explicite, aucune confirmation dans les six lettres suivantes.
+
+§ 4 — ECHO
+NEANT. Geste d'apres (PN-015) et objet d'une vivante (PN-046).
+
+§ 5 — MISE EN SCENE
+Sur le dessus du meuble, a 2,05 m — [OBL] au-dessus du regard de Lohen
+(1,78 m aux yeux). Il ne la voit pas en passant.
+Elle est visible depuis un seul endroit : la mezzanine du premier etage
+(PN-072), d'ou on plonge sur le dessus des casiers.
+[ART] Le joueur monte a la mezzanine pour une autre raison (PN-072, E16),
+regarde en bas, et voit le dessus des meubles : de la poussiere partout,
+et un rectangle de carton beige, propre, seul.
+Taux de decouverte cible : 31-40 %.
+[OBL] Depuis la mezzanine, il est a 9 m. Il voit un rectangle. Il ne peut
+pas lire le cartouche. Pour le lire, il faut redescendre et... il ne peut
+pas : c'est trop haut.
+[OBL] Le cartouche n'est JAMAIS lisible en jeu. Le joueur voit une chemise
+fermee et vide, et c'est tout ce qu'il aura.
+La texture 2K lisible a 60 cm existe pour la rigueur de production, pas
+pour le joueur.
+
+§ 6 — AUDIO
+NEANT. Totalement muet.
+
+§ 7 — INTERDICTIONS
+Interdit de : l'ouvrir · la prendre · la faire tomber · remplir une ligne ·
+la rendre lisible en jeu · ajouter un contenu · donner un Echo · la faire
+commenter · confirmer le lien avec Mireille · ajouter une deuxieme chemise
+· la placer a portee de main.
+
+§ 8 — LIENS
+PN-067 (le casier, juste en dessous). PN-085 (la chaise de Mireille).
+PN-081 (le certificat de deces provisoire) : celui-la, lui, est rempli —
+et pas pour Esteban.
+PN-003 (MAREK Esteban, colonne 3 ligne 88, non barre).
+MIR-MDL-003 (la main brulee).
+[THEME] CE QU'ON NE PEUT PAS ECRIRE.
+
+§ 9 — DOD
+[ ] Carton sec, neuf, raide, angles nets, hors d'eau
+[ ] Noeud en huit en geometrie, ficelle propre
+[ ] 4 lignes du cartouche vides, police d'imprimerie unique du projet
+[ ] Visible uniquement depuis la mezzanine, a 9 m, jamais lisible
+[ ] Zero interaction, zero son, zero commentaire
+[ ] Lien avec Mireille jamais confirme

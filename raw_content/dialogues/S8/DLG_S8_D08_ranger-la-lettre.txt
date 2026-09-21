@@ -1,0 +1,203 @@
+===============================================================================
+DLG · S8 · D08 — RANGER LA LETTRE : LE GESTE INVERSE
+58 entrees, toutes S8. LOH 58. Contribution : 58.
+Reference maitre 19.10 (apres la lecture) et 19.11 (la descente).
+===============================================================================
+
+--- LA SEULE INTERACTION DE LA PIECE [OBL] --------------------------------------------------------
+
+[OBL] 19.10 : quand le joueur decide enfin de bouger, UNE SEULE
+interaction existe dans toute la chambre : la sacoche. [OBL] Tout le
+reste est redevenu inerte : la couverture, le mur, le carnet, les
+chaussures, la lampe. [OBL] Le joueur peut encore les regarder, plus
+les toucher. [OBL] Aucun message ne l'explique. Job CI
+`room-inert-after`.
+
+[OBL] LE GESTE : Lohen plie la lettre en trois, exactement selon les
+memes plis, et la range dans la sacoche — la ou il met les lettres des
+autres. [OBL] Anim `fold_and_store`, 5,2 s, qui reprend A L'ENVERS,
+IMAGE PAR IMAGE, l'animation `unfold_letter`. [OBL] C'est le meme geste,
+inverse. [OBL] Job CI `fold-mirror` : comparaison frame a frame des deux
+courbes, tolerance nulle.
+
+[OBL] 19.10 : « C'est ce qui s'appelle faire son travail. »
+
+--- § 1 — LES SIX SECONDES ET LES TRENTE QUI SUIVENT (10 lignes) -------------------------------
+
+    [S8_LOH_L315]  0,0 s · — · (6 s d'immobilite, controle retire)
+    [S8_LOH_L316]  0,0 s · — · (le controle revient, aucune indication)
+    [S8_LOH_L317]  0,0 s · — · (il ne bouge pas)
+        dir : [OBL] duree reelle : decidee par le joueur. Mediane
+              mesuree 19 s. [OBL] Aucun prompt n'apparait jamais, meme
+              apres cinq minutes. [OBL] Job CI `no-idle-prompt-s8`.
+    [S8_LOH_L318]  2,4 s · bas · « Bon. »
+        dir : [OBL][NAR] PREMIER MOT APRES LA LETTRE. [OBL] C'est
+              « bon ». [OBL] Direction : identique aux 46 autres. Pas
+              plus lent, pas plus grave, pas casse. [OBL] Prise
+              refusee si elle differe des autres « bon » du chapitre.
+              [OBL] 47e et derniere occurrence — CI `bon-count`.
+    [S8_LOH_L319]  2,0 s · bas · « Il fait jour. »
+        dir : [OBL] 19.04 : l'aube monte de 0 a 0,6 EV pendant toute la
+              scene. [OBL] « A la fin de la lecture, il fait jour.
+              Personne ne l'aura vu arriver. » [OBL] Lohen non plus.
+    [S8_LOH_L320]  2,6 s · bas · « La lampe sert plus a rien. »
+    [S8_LOH_L321]  2,2 s · bas · « Je l'eteins pas. »
+        dir : [OBL][NAR] LA LAMPE RESTE ALLUMEE. [OBL] Le joueur PEUT
+              l'eteindre : l'interaction existe, elle est disponible,
+              elle n'est signalee nulle part. [OBL] 3 % l'eteignent.
+              [OBL] S'ils le font : aucune ligne, aucune musique,
+              aucune consequence, et la chambre devient grise.
+              [OBL] Flag enregistre pour le chapitre 2.
+              [OBL] Interdit : ne jamais juger ce choix, ni ici, ni
+              plus tard.
+    [S8_LOH_L322]  2,8 s · bas · « « C'est juste que je n'aime pas le noir. » »
+        dir : [OBL] il cite le carnet (jour 612). [OBL] UNIQUEMENT si
+              le joueur a lu E30 (94 %). [OBL] Sinon la ligne est
+              remplacee par un slot muet de 2,8 s — meme id, meme
+              duree. [OBL] Job CI `variant-same-id`.
+    [S8_LOH_L323]  2,0 s · bas · « Alors je la laisse. »
+    [S8_LOH_L324]  1,4 s · bas · « Voila. »
+
+--- § 2 — LE GESTE (8 entrees) ---------------------------------------------------------------------
+
+    [S8_LOH_L325]  2,2 s · bas · « Je la plie. »
+    [S8_LOH_L326]  0,0 s · — · (pli 1 — `fold_and_store`, t = 0 → 1,7 s)
+    [S8_LOH_L327]  0,0 s · — · (pli 2 — t = 1,7 → 3,4 s)
+    [S8_LOH_L328]  0,0 s · — · (pli 3 — t = 3,4 → 5,2 s)
+        dir : [OBL] LES MEMES PLIS. [OBL] Le joueur n'a pas a viser :
+              c'est scripte. [OBL] Il n'y a aucun mini-jeu. Interdit
+              absolu d'en ajouter un.
+    [S8_LOH_L329]  2,6 s · bas · « Dans la sacoche. »
+    [S8_LOH_L330]  2,0 s · bas · « Avec les autres. »
+        dir : [OBL][NAR] IL RANGE LA LETTRE D'ESTEBAN AVEC LE COURRIER
+              QU'IL N'A PAS ENCORE DISTRIBUE. [OBL] Le prop PN-118 (la
+              sacoche) contient, verifiable a l'inspection, 9 plis de
+              papier et le pain de Tallec (PN-112, CI `bread-in-coat`
+              — le pain est dans la veste, pas la sacoche ; les deux
+              props sont distincts et tous deux instancies).
+              [OBL] Aucun plan ne montre l'interieur.
+    [S8_LOH_L331]  2,4 s · bas · « Une lettre non remise, on la garde. »
+        dir : [OBL][NAR] SIXIEME ENONCE DE LA REGLE DU METIER — [OBL]
+              non : le cinquieme etait celui d'Esteban dans la lettre
+              (S8_EST_L231). [OBL] Celui-ci est le SIXIEME et il est
+              dit par Lohen, a voix haute, seul, en rangeant.
+              [OBL] Il termine la phrase d'Esteban. [OBL] Voir L332.
+    [S8_LOH_L332]  2,8 s · bas · « Jusqu'a ce qu'on trouve la personne. »
+        dir : [OBL][NAR] LA FIN DE LA REGLE. [OBL] Il l'a trouvee.
+              [OBL] Aucune musique. [OBL] La camera ne bouge pas.
+              [OBL] Direction : ce n'est pas une conclusion, c'est une
+              procedure. Il recite son metier. [OBL] Prise refusee si
+              elle est jouee comme une resolution.
+
+--- § 3 — LA DESCENTE (24 lignes) -------------------------------------------------------------------
+
+[OBL] 19.11 : 90 secondes, jouables, EN SILENCE. [OBL] Rien de neuf.
+L'escalier qu'il vient de monter. Il fait jour. La brume est partie.
+[OBL] On voit Velmora entiere, en bas, pour la premiere fois du jeu,
+sans brouillard. Elle est magnifique et vide. [OBL] Le joueur peut
+s'arreter et regarder aussi longtemps qu'il veut.
+
+[OBL] AUCUNE MUSIQUE PENDANT LA DESCENTE. M18 s'est coupee net a 4:10.
+M19 n'entre qu'au dernier plan (D09). [OBL] Entre les deux : le vent, et
+ces 24 lignes, TRES espacees — une toutes les 4 a 6 secondes au maximum,
+et le systeme en saute la moitie si le joueur descend vite.
+
+    [S8_LOH_L333]  2,0 s · bas · « La porte se referme toute seule. »
+    [S8_LOH_L334]  2,4 s · bas · « Le bois a gonfle, elle revient. »
+    [S8_LOH_L335]  1,8 s · bas · « Bien. »
+        dir : [OBL] ATTENTION : « Bien. » et non « Bon. ». [OBL] Le
+              compte des 47 « bon » est ferme depuis L318.
+              CI `bon-count`.
+    [S8_LOH_L336]  2,6 s · bas · « Deux cent six metres a descendre. »
+    [S8_LOH_L337]  2,2 s · bas · « C'est pire qu'a monter. »
+        dir : [OBL][NAR] LE MUR LE DISAIT (S8_EST_L256 : « A la
+              descente c'est pire. Personne ne le croit. »).
+              [OBL] Lohen le decouvre tout seul, cinquante minutes plus
+              tard. [OBL] 7 % des joueurs ont lu le fragment.
+              [OBL] Aucun lien. Aucune musique.
+    [S8_LOH_L338]  2,0 s · bas · « Les genoux, cette fois. »
+    [S8_LOH_L339]  2,8 s · bas · « L'epaule s'en fiche, a la descente. »
+    [S8_LOH_L340]  2,4 s · bas · « Chacun son tour. »
+    [S8_LOH_L341]  1,6 s · bas · « La brume est partie. »
+    [S8_LOH_L342]  2,2 s · bas · « On voit tout. »
+    [S8_LOH_L343]  2,6 s · bas · « La Halle. La Bibliotheque. La grue. »
+    [S8_LOH_L344]  3,0 s · bas · « Les toits de la rue des Lavandieres. Onze. »
+        dir : [OBL][NAR] IL LES COMPTE. [OBL] Lohen a refuse de compter
+              trois fois dans cette sequence (les marches, les 0114,
+              implicitement les pages). [OBL] Ici il compte, une fois,
+              onze toits, et il s'arrete la. [OBL] IL NE DIT PAS LEQUEL
+              EST LE SIEN. [OBL] Il ne dit pas non plus qu'il ne sait
+              pas. [OBL] Aucune musique. [OBL] Job CI `roof-unmarked` :
+              c'est la derniere occasion du chapitre et elle est ratee
+              volontairement.
+    [S8_LOH_L345]  2,0 s · bas · « Elle est belle, d'ici. »
+    [S8_LOH_L346]  2,8 s · bas · « De pres elle est cassee, mais d'ici elle est belle. »
+    [S8_LOH_L347]  2,4 s · bas · « C'est peut-etre pour ca qu'il restait en haut. »
+        dir : [OBL][NAR] LA SEULE HYPOTHESE QUE LOHEN FORMULE SUR
+              ESTEBAN DANS TOUT LE CHAPITRE. [OBL] Elle est fausse (le
+              carnet dit pourquoi : la lampe, les cloches, le travail).
+              [OBL] Personne ne le corrige. [OBL] Il a le droit d'avoir
+              une idee fausse et consolante. Le jeu la lui laisse.
+    [S8_LOH_L348]  1,8 s · bas · « Ou pas. »
+        dir : [OBL] il se la retire lui-meme, 1,8 s plus tard.
+    [S8_LOH_L349]  2,2 s · bas · « Cent metres. »
+    [S8_LOH_L350]  2,6 s · bas · « Le vent redescend avec moi. »
+    [S8_LOH_L351]  2,0 s · bas · « Cinquante. »
+    [S8_LOH_L352]  2,4 s · bas · « J'entends la mer. »
+    [S8_LOH_L353]  2,8 s · bas · « Non. J'entends le vent sur le verre. C'est pas pareil. »
+        dir : [OBL][NAR] RACCORD BREL (S7_BRE_L172 : « la maree. La
+              vraie. Celle qui monte et qui redescend. »). [OBL] Lohen
+              se corrige comme Brel refusait de se corriger. [OBL] Les
+              deux hommes attendent la meme chose et un seul l'admet.
+              [OBL] Jamais dit.
+    [S8_LOH_L354]  1,4 s · bas · « Vingt. »
+    [S8_LOH_L355]  2,0 s · bas · « La porte est en bas. »
+    [S8_LOH_L356]  2,6 s · bas · « Et derriere la porte, y'a quelqu'un qui dort. »
+        dir : [OBL][NAR] IL LE SAIT AVANT DE SORTIR. [OBL] Il n'y a
+              aucun moyen qu'il le sache. [OBL] Aucune fenetre ne donne
+              sur le porche. [OBL] Le jeu ne l'explique pas et
+              n'appelle pas l'attention dessus. [OBL] Interdit absolu :
+              ne jamais ajouter de plan, de son ou de ligne qui
+              justifierait cette phrase.
+
+--- § 4 — LES SEIZE LIGNES DE LA DERNIERE VOLEE ------------------------------------------------
+
+[OBL] Les seize dernieres marches. [OBL] Une ligne par marche, toutes
+tres courtes, toutes en dessous de 1,4 s. [OBL] Elles ne se declenchent
+QUE si le joueur descend lentement (< 0,9 m/s). [OBL] 41 % les
+entendent. [OBL] C'est le seul contenu du chapitre reserve aux joueurs
+qui ralentissent a la fin.
+
+    [S8_LOH_L357]  1,0 s · bas · « Seize. »
+    [S8_LOH_L358]  0,9 s · bas · « Quinze. »
+    [S8_LOH_L359]  1,1 s · bas · « Quatorze. »
+    [S8_LOH_L360]  0,8 s · bas · « Treize. »
+    [S8_LOH_L361]  1,0 s · bas · « Douze. »
+    [S8_LOH_L362]  0,9 s · bas · « Onze. »
+    [S8_LOH_L363]  1,2 s · bas · « Dix. »
+    [S8_LOH_L364]  0,8 s · bas · « Neuf. »
+    [S8_LOH_L365]  1,0 s · bas · « Huit. »
+    [S8_LOH_L366]  0,9 s · bas · « Sept. »
+    [S8_LOH_L367]  1,1 s · bas · « Six. »
+    [S8_LOH_L368]  0,8 s · bas · « Cinq. »
+    [S8_LOH_L369]  1,0 s · bas · « Quatre. »
+    [S8_LOH_L370]  0,9 s · bas · « Trois. »
+    [S8_LOH_L371]  1,2 s · bas · « Deux. »
+    [S8_LOH_L372]  1,4 s · bas · « Une. »
+        dir : [OBL][NAR] IL A COMPTE. [OBL] Pas les 1 038. Les seize
+              dernieres. [OBL] A rebours. [OBL] Il avait promis d'en
+              compter (S7_BK_L333) ; il tient sa promesse sur les seize
+              qui restent, dans l'autre sens, et personne ne le voit.
+              [OBL] Aucune musique. [OBL] La porte s'ouvre 1,1 s apres.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] Une seule interaction dans la chambre apres la lecture — CI `room-inert-after`
+[ ] `fold_and_store` = `unfold_letter` inversee, frame a frame — CI `fold-mirror`
+[ ] L318 : 47e et dernier « bon », joue comme les 46 autres
+[ ] L321 : la lampe peut etre eteinte, aucun jugement, flag chapitre 2
+[ ] L332 : la regle du metier terminee par Lohen, jouee comme une procedure
+[ ] Aucune musique de la coupure de M18 jusqu'a M19
+[ ] L344 : onze toits comptes, le sien jamais designe — CI `roof-unmarked`
+[ ] L356 : jamais justifie
+[ ] L357-L372 : reserve aux joueurs lents, 41 %

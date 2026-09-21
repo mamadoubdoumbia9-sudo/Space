@@ -1,0 +1,97 @@
+===============================================================================
+PN-047 — LA PROTHESE DE RECHANGE
+===============================================================================
+Asset : SM_S3_Prothese_Rechange · S3, table de la cabane de Tallec ·
+~02:25 · prop narratif · pas d'Echo · LOD0 3 400 tris
+
+§ 1 — CE QU'ON VOIT
+Un avant-bras et une main, en bois et laiton, poses a plat sur la table,
+paume vers le haut, a cote d'un chiffon et d'une petite burette d'huile.
+Le bois est du buis, tourne et sculpte. La main a cinq doigts articules,
+avec des phalanges retenues par des goupilles de laiton. Le pouce est
+opposable, commande par un cable qui remonte dans l'avant-bras.
+Elle est DEMONTEE en partie : le capot de l'avant-bras est ouvert, pose a
+cote, et on voit le mecanisme — douze pieces, ressorts, cables, une petite
+cremaillere.
+Le chiffon est noir de graisse. La burette est ouverte.
+Les sangles de cuir sont detendues et etalees.
+[OBL] Elle est FINIE. Ce n'est pas un prototype ni une ebauche : c'est une
+prothese complete, fonctionnelle, magnifiquement faite, en cours
+d'entretien. Quelqu'un l'a fabriquee avec un soin extreme.
+Sur l'intérieur de l'avant-bras, cote peau, grave dans le buis, en tout
+petit : deux lettres. Elles sont illisibles a l'oeil nu et ne le seront
+jamais.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 400 (avant-bras 1 100 + main articulee 1 400 + mecanisme 700 +
+sangles 200). [OBL] Le mecanisme est modelise entierement, piece par piece,
+car le capot est ouvert et le joueur peut approcher a 30 cm.
+Textures : atlas 4K dedie. Le buis a un grain fin et clair, tres different
+de tous les autres bois du jeu (qui sont sombres, mouilles, pourris).
+[ART] C'est le plus bel objet manufacture du chapitre, et il est pose a
+plat sur une table dans une cabane.
+Shader `boxwood_oiled` + `brass_polished`. Roughness du buis : 0,31, avec
+un sheen leger — le bois huile a la main.
+Anim : NEANT. [OBL] Elle ne bouge jamais. Aucun doigt, jamais, en aucune
+circonstance. Une prothese posee sur une table n'est pas un objet vivant.
+Collision : boite. Non prenable, non manipulable, aucun prompt.
+
+§ 3 — CE QUE CA DIT
+Tallec en a deux. Il porte l'une et entretient l'autre.
+Le geste humain : huiler le mecanisme d'une main qu'on ne porte pas
+aujourd'hui, en prevision du jour ou l'autre cassera.
+[NAR] C'est un homme qui prevoit de rester vivant longtemps, seul, dans une
+ville morte. Ce n'est pas du desespoir. C'est de la maintenance.
+Les deux lettres gravees a l'intérieur, cote peau : les initiales de celui
+qui l'a fabriquee. Ou de celle. [OBL] Jamais lisibles. Jamais evoquees.
+[OBL] Tallec ne mentionne JAMAIS sa prothese, ni celle-ci, ni celle qu'il
+porte. Aucune ligne de dialogue du chapitre 1 ne contient les mots
+« bras », « main », « prothese », « accident », « perdu ». Verifier au grep
+sur les 1 400 lignes de dialogue du chapitre.
+
+§ 4 — ECHO
+NEANT. Objet d'un vivant (regle PN-046).
+
+§ 5 — MISE EN SCENE
+Sur la table, au centre de la cabane, en pleine lumiere du poele et de la
+porte. [OBL] Elle est la premiere chose visible en entrant. Elle est
+impossible a manquer.
+[ART] Et Tallec est dehors, dos tourne. Le joueur entre dans la cabane
+d'un homme, voit sa main de rechange posee sur la table, ouverte, et cet
+homme ne sait pas qu'il est entre — ou le sait tres bien et s'en moque.
+Aucun LookAt, aucun prompt, aucun son, aucun ralenti.
+Si le joueur ressort et parle a Tallec, Tallec ne mentionne pas qu'il est
+entre. [OBL] Il ne dit jamais « vous avez fouille chez moi ». Il le sait.
+C'est tout.
+[OBL] Si le joueur entre dans la cabane AVANT de parler a Tallec (possible
+dans 100 % des cas), la scene de dialogue se joue a l'identique. Aucune
+variante. Aucune reconnaissance. Ce refus de reactivite est deliberé et
+doit resister a tous les retours de playtest.
+
+§ 6 — AUDIO
+NEANT propre. La prothese est silencieuse.
+Dans la cabane : le poele (PN-045), le bois neuf, et le vent attenue.
+
+§ 7 — INTERDICTIONS
+Interdit de : la faire bouger · permettre de la prendre ou de la toucher ·
+rendre les deux lettres lisibles · les nommer · expliquer qui l'a faite ·
+faire commenter Tallec · faire reagir Tallec a l'intrusion · ajouter un
+dialogue sur le bras · utiliser les mots bras/main/prothese/accident dans
+le chapitre · en faire un objet d'enigme · l'abimer · en montrer une
+troisieme.
+
+§ 8 — LIENS
+PN-046 (l'ancre). PN-045 (la cabane). TAL-ANI-522 (les deux coups sur la
+prothese avant chaque decision, 11 fois dans le chapitre — le joueur les
+entend sans jamais savoir pourquoi).
+PN-118 (la canne de souffleur taille enfant, S7) : l'autre objet du
+chapitre fabrique avec amour par quelqu'un pour quelqu'un d'autre.
+[THEME] LA MAINTENANCE COMME FORME DE COURAGE.
+
+§ 9 — DOD
+[ ] Mecanisme complet modelise, 12 pieces, visible capot ouvert a 30 cm
+[ ] Buis clair, grain fin, unique dans la palette bois du jeu
+[ ] Deux lettres gravees, presentes dans la texture, jamais lisibles
+[ ] Zero animation, zero interaction, zero prompt
+[ ] grep sur les dialogues du chapitre : 0 occurrence de bras/prothese
+[ ] Scene de Tallec strictement identique que le joueur soit entre ou non

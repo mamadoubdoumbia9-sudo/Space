@@ -1,0 +1,111 @@
+===============================================================================
+PN-063 — LE TAS DE CHAUSSURES D'ENFANTS
+===============================================================================
+Asset : SM_S3_Chaussures_Enfants · S3, angle mort du niveau 1, derriere
+l'escalier de la cooperative · ~03:02 · prop narratif · pas d'Echo ·
+LOD0 6 800 tris
+
+§ 1 — CE QU'ON VOIT
+Dans un angle, derriere un escalier, a l'abri de la pluie, il y a un tas.
+Des chaussures. Uniquement des chaussures d'enfants.
+Il y en a CENT DIX-HUIT. Elles ne sont pas par paires : elles sont en vrac,
+melangees, formant un monticule de 80 cm de haut sur 1,50 m de large.
+Des sabots, des bottines a lacets, des sandales, des chaussons de feutre,
+des galoches, deux paires de chaussures de ville minuscules et cirees.
+Elles vont du 19 au 34. Les plus petites tiennent dans une main.
+Elles sont abimees par le temps mais pas par l'usage recent : le cuir a
+durci, les semelles se sont decollees, le feutre a moisi.
+Elles sont RANGEES en tas. C'est-a-dire : elles ont ete apportees et
+posees, pas jetees. Le tas a une forme reguliere, conique. Quelqu'un les a
+empilees en cone, avec soin, pendant longtemps.
+Au sommet du tas, une seule chaussure, posee droite, semelle en bas.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 6 800 pour 118 chaussures. [OBL] 22 modeles distincts, 118 placements
+uniques a la main, 6 variantes de materiau chacune (couleur, usure,
+moisissure). [OBL] MultiMesh INTERDIT. Chaque chaussure a sa transform.
+Justification du cout : c'est un tas, donc l'oeil cherche la repetition, et
+il la trouvera si elle existe. Un tas de 118 objets avec 22 modeles
+instancies proprement est credible ; le meme tas en MultiMesh ne l'est pas.
+Textures : 3 atlas 4K partages, avec masques de variation par instance.
+Shader `leather_rotted` + `felt_mould`.
+Anim : NEANT. Absolument rien ne bouge.
+Collision : une seule capsule englobante. [OBL] Le joueur ne peut pas
+marcher dedans, pousser, deplacer, prendre.
+
+§ 3 — CE QUE CA DIT
+[OBL] Cette fiche ne propose aucune interpretation. Le prop est laisse
+entierement au joueur.
+Ce qu'on sait, materiellement, et rien de plus :
+  — 118 chaussures d'enfants, tailles 19 a 34
+  — apportees, pas jetees
+  — empilees en cone, avec regularite
+  — a l'abri de la pluie, dans un angle qu'on ne voit pas du chemin
+  — la derniere posee droite, au sommet
+Le geste humain : poser une chaussure droite sur un tas.
+[OBL] Aucun personnage n'en parle. Aucun texte. Aucune voix off. Aucun
+journal. Aucune musique. Aucun Echo. Aucune reaction de Lohen.
+[OBL] Interdiction absolue d'ajouter quoi que ce soit a ce prop, dans ce
+chapitre ou dans les six suivants.
+
+§ 4 — ECHO
+NEANT. [OBL] Regle des enfants (PN-007, PN-014, PN-050) et geste d'apres
+(PN-015). La quatrieme et derniere fois que le systeme refuse un enfant.
+
+§ 5 — MISE EN SCENE
+[OBL] Dans un angle mort. Derriere un escalier. Invisible depuis le chemin.
+Il faut quitter le trajet, contourner l'escalier, et entrer dans un recoin
+de 2 x 2 m qui ne mene nulle part.
+Rien n'y conduit. Aucune lumiere, aucun son, aucune composition, aucune
+ligne de fuite, aucun objet d'appel.
+Taux de decouverte cible : 18-26 %.
+[ART] C'est le prop le plus difficile a trouver du chapitre, et le plus
+dur a voir. Trois joueurs sur quatre finiront le chapitre sans savoir
+qu'il existe. C'est correct.
+[OBL] Si le joueur entre : aucune animation, aucun ralenti, aucun
+recadrage, aucune vignette, aucun filtre, aucun changement de musique.
+La camera reste exactement ou il l'a laissee.
+Il regarde. Il ressort. L'espace ne fait que 2 x 2 m : il doit reculer pour
+en sortir, ou faire demi-tour dans un espace etroit, ce qui l'oblige a
+balayer le tas une seconde fois.
+[OBL] Ce demi-tour force est le seul element de mise en scene du prop.
+
+§ 6 — AUDIO
+NEANT. Silence total.
+[OBL] Le recoin est un point mort acoustique : -24 dB sur l'ambiance
+generale, RT60 0,3 s. Le joueur entre et le monde se tait.
+M10 « Le marche » CONTINUE, non attenuee, non filtree, a plein volume.
+[OBL] C'est deliberé et contre-intuitif : la musique ne s'arrete pas, ne
+change pas, ne devient pas grave. Elle joue exactement comme si le joueur
+etait sur la passerelle en train de marcher.
+[ART] Le jeu ne reconnait pas ce qu'il montre. C'est ce qui le rend
+supportable et insupportable.
+
+§ 7 — INTERDICTIONS
+Interdit de : donner un Echo · faire commenter · ajouter une musique, un
+stinger, un silence · ajouter un mot, un nom, une plaque, une bougie, une
+fleur · permettre de toucher · faire reagir Lohen · afficher un succes ·
+compter en interface · ajouter des chaussures d'adulte · expliquer d'ou
+elles viennent · expliquer qui les a empilees · signaler l'emplacement ·
+en faire un objectif · l'utiliser dans une cinematique · le mentionner dans
+une des six lettres suivantes.
+[OBL] Ce prop est le seul du chapitre sur lequel aucune note de production,
+aucun commentaire de developpeur, aucun artbook et aucune communication
+externe ne doit s'exprimer. Il existe, et c'est tout.
+
+§ 8 — LIENS
+PN-007 (la chaise attachee au fil de fer). PN-014 (le landau).
+PN-050 (le jeu de cordes). PN-062 (les cages ouvertes).
+PN-001 (les quarante bottes, S1) : le premier tas de chaussures du jeu,
+a 3 heures d'ici, et celui-la avait un Echo.
+[THEME] LES ENFANTS ABSENTS.
+
+§ 9 — DOD
+[ ] 118 chaussures, 22 modeles, 118 transforms uniques, MultiMesh interdit
+[ ] Tailles 19 a 34, 6 variantes de materiau par modele
+[ ] Cone regulier, apportees et non jetees, une chaussure droite au sommet
+[ ] Angle mort total : invisible du chemin, taux de decouverte 18-26 %
+[ ] Demi-tour force dans un espace de 2 x 2 m
+[ ] Zero son, zero animation, zero reaction, zero interface
+[ ] M10 continue a plein volume, non modifiee
+[ ] Aucune mention dans les 6 chapitres suivants

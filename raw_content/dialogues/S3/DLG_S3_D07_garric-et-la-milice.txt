@@ -1,0 +1,197 @@
+===============================================================================
+DLG · S3 · D07 — GARRIC : LE MILICIEN QUI NE SE SOUVIENT PAS DE VOUS
+38 entrees, toutes S3. GAR 26 · LOH 12. Contribution : 38.
+[NAR] Meme comedien que la voix derriere la porte en S1 (S1_GAR_L056..063).
+Aucun raccord scenaristique : il ne s'en souvient pas. Canon D04 de S1.
+===============================================================================
+
+--- LE PERSONNAGE ---------------------------------------------------------------
+
+Garric a 36 ans. Il garde l'escalier du poste de milice, huit heures par
+jour, adosse au chambranle. Il ne bouge pas de la sequence. Il ne
+s'interpose jamais. Il a une matraque qu'il n'a jamais sortie.
+
+[OBL] Garric laisse TOUJOURS passer. Il n'y a pas d'epreuve, pas de
+persuasion, pas de test de reputation. Il parle en laissant passer. Toute
+mecanique de « convaincre le garde » est interdite dans ce jeu.
+
+[NAR] Il dort le jour au-dessus du Registre, en bas, dans les Quais.
+C'est sa chambre. Il monte au Marche a pied, 62 m, deux fois par jour.
+Rien ne le dit sauf trois lignes qu'il faut recouper (L214, L228, L239).
+
+--- LES 38 LIGNES -----------------------------------------------------------------
+
+    [S3_GAR_L210]  GARRIC · 1,2 s · las · p0,5
+        « Montez. »
+        dir : avant meme que Lohen demande. Il ne le regarde pas.
+
+    [S3_LOH_L211]  LOHEN · 1,0 s · surpris · p0,6
+        « Vous savez qui je suis ? »
+
+    [S3_GAR_L212]  GARRIC · 1,8 s · las · p0,4
+        « Non. Vous avez une sacoche. Les gens a sacoche montent. »
+
+    [S3_LOH_L213]  LOHEN · 1,3 s · plat · p0,7
+        « C'est un systeme. »
+
+    [S3_GAR_L214]  GARRIC · 2,6 s · las · p0,5
+        « J'ai huit heures a tenir et deux cent vingt marches a
+          redescendre apres. J'ai pas de systeme, j'ai de la fatigue. »
+        dir : [NAR] 220 marches : la hauteur exacte du Marche au Registre
+              par l'escalier est. Verifiable dans le level design.
+
+    [S3_GAR_L215]  GARRIC · 2,1 s · plat · p0,6
+        « Vous cherchez Tallec ou vous cherchez un nom ? »
+
+    [S3_LOH_L216]  LOHEN · 1,1 s · plat · p0,5
+        « Les deux. »
+
+    [S3_GAR_L217]  GARRIC · 1,7 s · sec · p0,8
+        « C'est jamais les deux. »
+
+    [S3_GAR_L218]  GARRIC · 2,9 s · las · p0,5
+        « Ceux qui cherchent Tallec repartent contents. Ceux qui
+          cherchent un nom repartent. »
+        dir : [OBL] la deuxieme proposition n'a pas d'adjectif. C'est
+              ecrit ainsi. Ne pas « completer » la phrase.
+
+    [S3_LOH_L219]  LOHEN · 1,4 s · plat · p0,6
+        « Il en vient beaucoup ? »
+
+    [S3_GAR_L220]  GARRIC · 2,3 s · las · p0,7
+        « Onze ce mois-ci. Huit le mois d'avant. Ca remonte. »
+
+    [S3_LOH_L221]  LOHEN · 1,6 s · plat · p0,5
+        « Ca remonte ? Trois ans apres ? »
+
+    [S3_GAR_L222]  GARRIC · 3,0 s · plat · p0,9
+        « La premiere annee, on cherche pas, on attend. La deuxieme, on
+          range. La troisieme, on cherche. »
+        dir : [OBL][NAR] LA STRUCTURE DU DEUIL, dite par un garde
+              fatigue, une fois, sans musique. C'est aussi la structure
+              du jeu : Lohen est pile dans la troisieme annee. Aucun
+              personnage ne le fera remarquer.
+
+    [S3_LOH_L223]  LOHEN · 1,2 s · plat · p0,8
+        « Et la quatrieme ? »
+
+    [S3_GAR_L224]  GARRIC · 1,9 s · las · p0,6
+        « Je sais pas. J'y suis pas. »
+
+    [S3_GAR_L225]  GARRIC · 2,4 s · plat · p0,5
+        « Personne y est. C'est la troisieme annee pour tout le monde
+          en meme temps. »
+        dir : [OBL] fait de monde majeur, dit en passant : toute la
+              ville vit le meme calendrier de deuil, a la semaine pres.
+              C'est pourquoi le Marche est comme ca : 400 personnes qui
+              se sont remises a chercher le meme mois.
+
+    [S3_LOH_L226]  LOHEN · 1,0 s · plat · p0,7
+        « Vous cherchez qui ? »
+
+    [S3_GAR_L227]  GARRIC · 1,5 s · sec · p0,9
+        « Non. »
+        dir : il repond « non » a une question en « qui ». [OBL] Ne pas
+              corriger. C'est un refus, pas une erreur d'ecriture.
+
+    [S3_GAR_L228]  GARRIC · 2,8 s · las · p0,4
+        « Je dors au-dessus du Registre. Je vois les fiches a travers
+          le verre tous les matins en me levant. Ca suffit. »
+        dir : [NAR] RACCORD S1 pour le joueur attentif : c'est lui,
+              derriere la porte. [OBL] Lohen ne fait pas le lien. Aucune
+              option ne le permet. Le joueur le fait seul ou pas.
+
+    [S3_LOH_L229]  LOHEN · 1,3 s · plat · p0,6
+        « Vous les lisez ? »
+
+    [S3_GAR_L230]  GARRIC · 2,2 s · plat · p0,5
+        « Les trois memes, tous les matins. Celles qui sont face au
+          plafond. »
+
+    [S3_GAR_L231]  GARRIC · 2,6 s · plat · p0,8
+        « Je connais trois noms par coeur et je les connaitrai jusqu'a
+          ma mort. Trois inconnus. »
+
+    [S3_LOH_L232]  LOHEN · 1,1 s · plat · p0,6
+        « Dites-les. »
+
+    [S3_GAR_L233]  GARRIC · 1,4 s · sec · p1,1
+        « Non. »
+        dir : [OBL] deuxieme refus. Il ne les dira jamais, dans aucune
+              branche, jamais en S7. [NAR] Le joueur peut les trouver :
+              ce sont trois des fiches lisibles de PN-012, et l'une
+              d'elles est un ROUX — pas Esteban, l'autre ROUX du canon
+              (les deux ROUX jamais barres). Personne ne le dira.
+
+    [S3_GAR_L234]  GARRIC · 2,0 s · las · p0,5
+        « Montez, maintenant. Vous me faites parler et j'aime pas ca. »
+
+    -- Lignes au retour (Lohen redescend apres Tallec) --
+
+    [S3_GAR_L235]  GARRIC · 1,6 s · las · p0,0
+        « Alors ? Content ou pas content. »
+
+    [S3_LOH_L236]  LOHEN · 1,2 s · plat · p0,0
+        « Pas content. »
+
+    [S3_GAR_L237]  GARRIC · 1,8 s · plat · p0,0
+        « Donc vous cherchiez un nom. »
+
+    [S3_GAR_L238]  GARRIC · 2,4 s · las · p0,0
+        « La Bibliotheque. Le monte-charge. Thea vous dira lequel des
+          deux marche. »
+
+    [S3_GAR_L239]  GARRIC · 2,7 s · plat · p0,0
+        « Et si vous redescendez aux Quais un jour, frappez pas a la
+          porte de service du Registre. »
+
+    [S3_LOH_L240]  LOHEN · 1,3 s · plat · p0,0
+        « Pourquoi ? »
+
+    [S3_GAR_L241]  GARRIC · 2,1 s · las · p0,0
+        « Parce que j'y dors et que je suis desagreable au reveil. »
+        dir : [OBL][NAR] TROISIEME RACCORD. Il vient de dire au joueur,
+              sans le savoir, qu'il etait la voix de S1. Lohen ne reagit
+              pas : pour lui, c'est une information de service.
+              [OBL] Aucune ligne, aucun son, aucun changement de camera
+              ne signale la revelation. Le joueur l'a ou il ne l'a pas.
+
+    [S3_LOH_L242]  LOHEN · 1,0 s · plat · p0,0
+        « D'accord. »
+
+    -- Les trois lignes d'abandon de Garric --
+
+    [S3_GAR_L243]  GARRIC · 1,1 s · las · p0,0
+        « Voila. »
+        dir : 1re fois. Il ne finit pas sa phrase et ne la reprendra pas.
+
+    [S3_GAR_L244]  GARRIC · 1,7 s · las · p0,0
+        « Tout le monde part au milieu. »
+        dir : 2e fois.
+
+    [S3_GAR_L245]  GARRIC · 2,2 s · plat · p0,0
+        « C'est bien. Moi aussi je voudrais. »
+        dir : [OBL] 3e fois. Il est adosse au meme chambranle depuis huit
+              heures. C'est la ligne d'abandon la plus triste du jeu et
+              elle appartient a un figurant. [NAR] C'est deliberé : dans
+              ce chapitre, les gens de passage ont des vies entieres.
+
+    [S3_GAR_L246]  GARRIC · 1,4 s · las · p0,0
+        « Montez. »
+        dir : [OBL] si le joueur revient une 4e fois et au-dela, Garric
+              ne dit plus que ce mot, indefiniment, exactement comme a
+              la premiere ligne. La boucle est fermee. Il est redevenu
+              un garde.
+
+    [S3_LOH_L247]  LOHEN · 0,9 s · plat · p0,0
+        « Merci. »
+        dir : [OBL] Lohen remercie a chaque fois, indefiniment, lui
+              aussi. Deux hommes polis coinces dans une boucle.
+
+--- CHECKLIST ----------------------------------------------------------------------
+
+[ ] Garric laisse toujours passer : aucune mecanique de persuasion
+[ ] L222 dite sans musique, jamais commentee
+[ ] L227 et L233 : deux refus definitifs, aucune branche ne les leve
+[ ] L241 : raccord S1 non signale par aucun moyen technique
+[ ] Boucle finale L246/L247 infinie et identique

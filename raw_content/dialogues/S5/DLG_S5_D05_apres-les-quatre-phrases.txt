@@ -1,0 +1,237 @@
+===============================================================================
+DLG · S5 · D05 — APRES : LA REDESCENTE, ET LE PREMIER CHOIX DIFFICILE
+44 entrees, toutes S5. SOL 23 · LOH 21 (dont 1 slot muet). Contribution : 44.
+Choix n° 24 a n° 26 du chapitre (3 des 6 choix de S5).
+[OBL] Les six choix de S5 changent tous une REPLIQUE, jamais une scene.
+Reference INDEX § 7 : « S5 6 choix — tous avec Sol. »
+===============================================================================
+
+--- LA REGLE DE LA REDESCENTE -------------------------------------------------------------
+
+[OBL] Apres D04, le jeu remonte en surface emotionnelle en huit minutes,
+sans blague forcee et sans silence pesant. La methode : Sol redevient
+penible. C'est la seule facon honnete de sortir de cette scene.
+
+--- LES 34 LIGNES ------------------------------------------------------------------------------
+
+    [S5_SOL_L157]  SOL · 2,0 s · plat · p0,8
+        « Bon. Faut y aller, y'a l'eau qui monte a la demie. »
+
+    [S5_LOH_L158]  LOHEN · 1,4 s · plat · p0,9
+        « L'eau monte ? »
+
+    [S5_SOL_L159]  SOL · 2,4 s · plat · p0,7
+        « Vingt centimetres. Deux fois par jour. Comme la mer, sauf
+          qu'y a plus de mer. »
+
+    [S5_LOH_L160]  LOHEN · 1,8 s · plat · p1,0
+        « Alors qu'est-ce qui monte ? »
+
+    [S5_SOL_L161]  SOL · 1,2 s · plat · p1,2
+        « L'eau. »
+        dir : [OBL] Sol ne sait pas. Sol s'en moque. [OBL] AUCUNE
+              EXPLICATION dans tout le jeu. [OBL] Interdit 21.08 : la
+              Maree n'est pas expliquee, et ce qui en decoule non plus.
+
+    [S5_SOL_L162]  SOL · 2,6 s · joueur · p0,8
+        « Tu marches trop lentement. T'es vieux ou t'es fatigue ? »
+
+    [S5_LOH_L163]  LOHEN · 1,6 s · plat · p1,0
+        « Fatigue. »
+
+    [S5_SOL_L164]  SOL · 1,4 s · joueur · p1,1
+        « Menteur. »
+        dir : [OBL][NAR] Le mot de Pallas en S1 (S1_PAL_L030), dit avec
+              la meme affection, par un enfant, huit heures de jeu plus
+              tard. [OBL] Aucun raccord signale.
+
+    > CHOIX 24 (aucun timer)
+      [1] « Les deux. »
+      [2] « J'ai vingt-sept ans. »
+      [3] (Ne rien dire et accelerer.)
+
+    -- branche [1]
+    [S5_LOH_L165]  LOHEN · 1,2 s · plat · p0,0
+        « Les deux. »
+    [S5_SOL_L166]  SOL · 2,2 s · joueur · p0,0
+        « Voila. C'etait pas dur. »
+
+    -- branche [2] : la seule fois ou Lohen corrige son age.
+    [S5_LOH_L167]  LOHEN · 1,8 s · plat · p0,0
+        « J'ai vingt-sept ans. »
+    [S5_SOL_L168]  SOL · 2,6 s · surpris · p0,0
+        « Non. »
+        dir : [OBL] Sol refuse l'information. [OBL] C'est la seule
+              correction d'age du chapitre et elle est rejetee par
+              l'interlocuteur. L'age de Lohen n'est donc JAMAIS
+              etabli dans le jeu autrement que par deduction
+              (S3_LOH_L604/L605). Job CI `age-never-stated`.
+    [S5_SOL_L169]  SOL · 2,0 s · joueur · p0,0
+        « Tu marches comme trente. »
+
+    -- branche [3]
+    [S5_LOH_L170]  LOHEN · 0,0 s · — · p0,0
+        (slot sans VO)
+    [S5_SOL_L171]  SOL · 2,4 s · joueur · p0,0
+        « Ah, il accelere. Donc c'est vieux. »
+        dir : [OBL] la branche silencieuse est la plus drole. Ce n'est
+              pas un hasard : dans ce jeu, se taire est presque
+              toujours la meilleure option, et ce n'est jamais dit.
+
+    -- Convergence --
+
+    [S5_SOL_L172]  SOL · 2,8 s · plat · p0,9
+        « Apres le Tordu y'a la grille. Apres la grille, y'a la
+          piece. »
+
+    [S5_LOH_L173]  LOHEN · 1,4 s · plat · p1,0
+        « Quelle piece ? »
+
+    [S5_SOL_L174]  SOL · 2,2 s · plat · p1,2
+        « La grande. La propre. »
+
+    [S5_LOH_L175]  LOHEN · 1,8 s · plat · p1,1
+        « Propre ? »
+
+    [S5_SOL_L176]  SOL · 3,0 s · plat · p1,4
+        « Y'a pas de poussiere dedans. Y'a rien de casse. Je sais pas
+          pourquoi. »
+        dir : [OBL][NAR] LA SALLE DE BAL, annoncee par un enfant qui ne
+              comprend pas ce qu'iel decrit. [OBL] La salle de bal
+              n'est PAS expliquee non plus, jamais. 09.15 : « La seule
+              piece propre de tout le jeu. »
+
+    [S5_LOH_L177]  LOHEN · 1,6 s · plat · p1,2
+        « Tu y vas souvent ? »
+
+    [S5_SOL_L178]  SOL · 1,2 s · plat · p1,6
+        « Non. »
+
+    > CHOIX 25 (aucun timer)
+      [1] « Pourquoi ? »
+      [2] « Moi non plus je n'irais pas. »
+
+    -- branche [1]
+    [S5_LOH_L179]  LOHEN · 1,0 s · plat · p0,0
+        « Pourquoi ? »
+    [S5_SOL_L180]  SOL · 3,2 s · plat · p0,0
+        « Parce que c'est trop propre et que j'ai les pieds sales. »
+        dir : [OBL][NAR] LA SEULE FOIS DE TOUT LE CHAPITRE OU SOL
+              MENTIONNE SES PIEDS NUS. Iel n'en fait pas une misere :
+              iel en fait une question de politesse.
+              [OBL] Lohen ne repond rien. Aucune ligne de reponse
+              n'existe.
+
+    -- branche [2]
+    [S5_LOH_L181]  LOHEN · 2,4 s · plat · p0,0
+        « Moi non plus je n'irais pas. »
+    [S5_SOL_L182]  SOL · 2,0 s · sec · p0,0
+        « Tu vas y aller. C'est par la. »
+        dir : [OBL] iel a raison, et la remarque de Lohen etait une
+              politesse creuse. Sol ne laisse pas passer les
+              politesses creuses. Jamais, de tout le jeu.
+
+    -- Convergence --
+
+    [S5_SOL_L183]  SOL · 2,6 s · plat · p0,9
+        « Moi je vais pas plus loin que la grille. »
+
+    [S5_LOH_L184]  LOHEN · 1,4 s · plat · p1,3
+        « Pourquoi ? »
+
+    [S5_SOL_L185]  SOL · 2,2 s · plat · p1,1
+        « Parce qu'apres c'est plus chez moi. »
+        dir : [OBL][NAR] Meme structure que Pallas en S1
+              (S1_PAL_L025 : « ton secteur c'est la Haute Ville, ca
+              c'est le secteur de personne ») et que Pallas en S3
+              (« apres c'est plus mon secteur non plus »).
+              [OBL] Trois personnes tracent une frontiere autour de
+              Lohen dans ce chapitre, et il les traverse toutes.
+              Aucun personnage ne le remarque.
+
+    > CHOIX 26 (aucun timer)
+      [1] « Viens quand meme. »
+      [2] « D'accord. »
+      [3] « Tu m'attends ? »
+
+    -- branche [1]
+    [S5_LOH_L186]  LOHEN · 1,4 s · plat · p0,0
+        « Viens quand meme. »
+    [S5_SOL_L187]  SOL · 1,8 s · sec · p0,0
+        « Non. »
+        dir : [OBL] refus net. [OBL] Aucune insistance possible. Aucune
+              option de persuasion. Le jeu n'a pas de systeme de
+              persuasion, ni ici ni ailleurs.
+
+    -- branche [2]
+    [S5_LOH_L188]  LOHEN · 1,0 s · plat · p0,0
+        « D'accord. »
+    [S5_SOL_L189]  SOL · 1,6 s · plat · p0,0
+        « Ok. »
+
+    -- branche [3] : la branche qui compte pour S8.
+    [S5_LOH_L190]  LOHEN · 1,6 s · plat · p0,0
+        « Tu m'attends ? »
+    [S5_SOL_L191]  SOL · 2,4 s · plat · p0,0
+        « Non. »
+    [S5_SOL_L192]  SOL · 2,8 s · plat · p0,0
+        « Mais je serai quelque part. »
+        dir : [OBL][NAR] SEUL EFFET INTER-SEQUENCE DE S5. Si le joueur
+              a pris cette branche, la derniere image du chapitre
+              (Sol endormi contre la porte du Phare, PN-147) est
+              precedee d'une ligne supplementaire de 1,4 s en S8.
+              Si le joueur ne l'a pas prise, Sol est la quand meme, en
+              silence. [OBL] Dans les deux cas, Sol attend. Le choix ne
+              change pas le monde : il change ce que le joueur a le
+              droit d'esperer.
+
+    -- Convergence, derniere ligne avant la grille --
+
+    [S5_SOL_L193]  SOL · 2,0 s · plat · p1,2
+        « Rends-moi la lanterne, par contre. »
+
+    [S5_LOH_L194]  LOHEN · 1,2 s · plat · p1,0
+        « C'est la tienne ? »
+
+    [S5_SOL_L195]  SOL · 1,8 s · plat · p1,4
+        « C'est la lanterne. »
+        dir : [OBL] iel n'admet toujours pas. Troisieme et derniere
+              esquive sur ce sujet.
+
+    [S5_LOH_L196]  LOHEN · 2,2 s · plat · p1,1
+        « Je la pose ici, alors. »
+        dir : [OBL][NAR] PN-009 EST POSEE DEFINITIVEMENT ICI. Canon
+              annexe B : « lampe posee definitivement en S5 ». [OBL]
+              Elle reste allumee. Le joueur la verra briller derriere
+              lui pendant les 40 premieres secondes de S6, de plus en
+              plus loin, jusqu'a disparaitre. [OBL] Elle n'est jamais
+              recuperable.
+
+    [S5_SOL_L197]  SOL · 1,4 s · plat · p1,3
+        « Voila. »
+
+    [S5_LOH_L198]  LOHEN · 1,0 s · plat · p1,6
+        « Sol. »
+
+    [S5_SOL_L199]  SOL · 1,2 s · plat · p1,2
+        « Quoi. »
+
+    [S5_LOH_L200]  LOHEN · 2,6 s · plat · p0,0
+        « Merci. »
+        dir : [OBL] fin du document. [OBL] Sol ne repond pas. Iel
+              hausse les epaules (SOL-SHR-021) et s'assoit a cote de
+              la lanterne. [OBL] Quand Lohen se retourne a 12 m, Sol
+              est encore la, assise, immobile, dans le rond de
+              lumiere. [OBL] Aucune musique. Le joueur peut revenir :
+              Sol ne dit plus rien. Plus une ligne de toute la
+              sequence.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] 3 choix, tous changent une replique, aucun ne change une scene
+[ ] L168 : la correction d'age est rejetee — CI `age-never-stated`
+[ ] L180 : seule mention des pieds nus de Sol, sans reponse
+[ ] L185 : troisieme frontiere tracee autour de Lohen, non commentee
+[ ] L192 : seul effet inter-sequence, Sol attend dans tous les cas
+[ ] L196 : PN-009 posee definitivement, reste allumee, visible en S6
+[ ] Apres L200, Sol ne dit plus rien de la sequence

@@ -1,0 +1,231 @@
+===============================================================================
+DLG · S3 · D09 — LES HABITANTS : HANNO, VANE, CARO, ODILE
+49 entrees non-BK (LOH 15 · HAN 11 · VAN 9 · CAR 7 · ODI 7, dont 1 slot muet L300). Contribution : 49.
+[OBL] Aucun de ces quatre PNJ ne donne d'information utile a la quete.
+Ils existent parce que la ville existe. C'est tout le budget qu'ils
+justifient et c'est le meilleur argent depense du chapitre.
+===============================================================================
+
+--- HANNO, MARCHAND DE SEL (14) -------------------------------------------------
+
+Hanno vend du sel gris. Il en vend depuis 31 ans. Il n'a jamais quitte
+sa terrasse, pas meme le 14 octobre.
+
+    [S3_HAN_L277]  HANNO · 1,4 s · clair · p0,0
+        « Du sel ! Deux pieces la mesure ! »
+
+    [S3_LOH_L278]  LOHEN · 1,0 s · poli · p0,5
+        « Je prends rien, pardon. »
+
+    [S3_HAN_L279]  HANNO · 1,7 s · plat · p0,6
+        « Personne prend rien. Je crie quand meme. »
+
+    [S3_HAN_L280]  HANNO · 2,3 s · plat · p0,5
+        « Si j'arrete de crier, les gens croient que je suis mort. »
+
+    [S3_HAN_L281]  HANNO · 2,8 s · plat · p0,7
+        « Ma voisine a arrete de crier en decembre. Trois jours apres,
+          ils ont enfonce sa porte. Elle dormait. »
+
+    [S3_LOH_L282]  LOHEN · 1,2 s · plat · p0,6
+        « Elle a du mal le prendre. »
+
+    [S3_HAN_L283]  HANNO · 2,0 s · moqueur · p0,8
+        « Elle a tres mal le pris. Elle crie plus fort que moi,
+          maintenant. »
+
+    [S3_HAN_L284]  HANNO · 2,6 s · plat · p0,5
+        « Le sel, ca se vend plus comme avant. Y'a plus de poisson a
+          saler. »
+
+    [S3_HAN_L285]  HANNO · 2,2 s · plat · p0,6
+        « Les gens en achetent pour le gout. C'est du luxe, maintenant,
+          le sel. C'est n'importe quoi. »
+
+    [S3_LOH_L286]  LOHEN · 1,5 s · plat · p0,5
+        « Vous en vendez combien par jour ? »
+
+    [S3_HAN_L287]  HANNO · 1,8 s · plat · p0,9
+        « Quatre mesures. »
+
+    [S3_HAN_L288]  HANNO · 2,4 s · plat · p0,5
+        « Avant, quatre-vingts. Je dis pas ca pour me plaindre, je dis
+          ca parce que c'est un chiffre marrant. »
+        dir : [OBL] il ne rit pas. C'est un homme qui trouve ca marrant
+              et qui ne rit pas. Le comedien ne doit pas sourire.
+
+    [S3_HAN_L289]  HANNO · 3,0 s · plat · p0,0
+        « Y'a un grand roux qui m'en prenait une mesure tous les mardis.
+          Pour rien. Il salait rien. Il aimait le bruit du sac. »
+        dir : [OBL][NAR] Quatrieme evocation d'Esteban par un tiers,
+              toujours par un detail idiot et vrai. [OBL] Ni Hanno ni
+              personne ne fait le lien avec la recherche de Lohen. Aucune
+              option de dialogue ne permet de demander « c'etait qui ? ».
+              Le joueur accumule des miettes pendant trois heures.
+
+    [S3_HAN_L290]  HANNO · 1,6 s · clair · p0,0
+        « Du sel ! Du sel gris ! »
+        dir : il reprend son cri au milieu du silence de Lohen.
+
+--- VANE, LA DOCTORESSE (12) -------------------------------------------------------
+
+Vane a 39 ans, elle soigne dans une cage d'escalier amenagee. Elle a
+quatre lits et onze patients.
+
+    [S3_VAN_L291]  VANE · 1,3 s · presse · p0,5
+        « Vous saignez pas, vous. Sortez. »
+
+    [S3_LOH_L292]  LOHEN · 1,0 s · plat · p0,6
+        « Non, je cherche quelqu'un. »
+
+    [S3_VAN_L293]  VANE · 1,7 s · sec · p0,4
+        « Tout le monde cherche quelqu'un et personne saigne. Sortez
+          quand meme. »
+
+    [S3_LOH_L294]  LOHEN · 1,4 s · plat · p0,7
+        « Votre epaule, la, a la femme. C'est une luxation ? »
+
+    [S3_VAN_L295]  VANE · 2,0 s · surpris · p0,6
+        « Vous etes quoi, vous ? »
+
+    [S3_LOH_L296]  LOHEN · 1,8 s · plat · p0,5
+        « Relayeur. On tombe beaucoup. »
+
+    [S3_VAN_L297]  VANE · 2,4 s · plat · p0,8
+        « Montrez-moi la votre, alors. La droite. Vous la portez
+          bizarrement depuis que vous etes entre. »
+        dir : [OBL][NAR] LE SEUL PERSONNAGE DU JEU QUI VOIT L'EPAULE.
+              Une doctoresse, en quatre secondes, sans qu'on lui demande.
+
+    > CHOIX 06 (aucun timer) — 2 options
+      [1] « Ce n'est rien. »
+      [2] (Enlever la veste.)
+
+    -- branche [1] : il refuse.
+    [S3_LOH_L298]  LOHEN · 1,1 s · sec · p0,0
+        « Ce n'est rien. »
+    [S3_VAN_L299]  VANE · 1,9 s · plat · p0,0
+        « D'accord. »
+        dir : [OBL] elle n'insiste pas une seconde. Pas de « allons,
+              laissez-moi voir ». Elle a onze patients.
+
+    -- branche [2] : il enleve la veste. 11 secondes, aucune coupe.
+    [S3_LOH_L300]  LOHEN · 0,0 s · — · p0,0
+        (aucun son — slot sans VO, whitelist `vo-orphan`)
+        dir : il enleve la veste. LOH-ACT-044, 4,8 s. La camera ne
+              cadre PAS l'epaule. Elle reste sur le visage de Vane.
+              [OBL] Le joueur ne verra jamais l'epaule de Lohen. Jamais,
+              dans aucun plan du chapitre.
+    [S3_VAN_L301]  VANE · 2,2 s · plat · p0,9
+        « Ah. »
+    [S3_VAN_L302]  VANE · 2,7 s · plat · p0,6
+        « Ca, ca s'est ressoude tout seul. Sans personne. »
+    [S3_LOH_L303]  LOHEN · 1,0 s · plat · p0,8
+        « Oui. »
+    [S3_VAN_L304]  VANE · 3,0 s · plat · p0,5
+        « Je peux rien faire. C'est vieux de trois ans et c'est fini. »
+        dir : [OBL][NAR] TROIS ANS. La doctoresse date la blessure a
+              l'age exact du deuil. Elle ne demande pas comment. Lohen
+              ne dit pas comment. AUCUNE explication ne sera donnee, ici
+              ou ailleurs, dans ce chapitre ou les suivants. Interdit de
+              canon absolu.
+    [S3_VAN_L305]  VANE · 2,3 s · sec · p0,0
+        « Remettez votre veste et allez chercher votre quelqu'un. »
+
+--- CARO, L'HOMME QUI REPEINT LA MEME PORTE (12) --------------------------------------
+
+Reference maitre 09.12 : « un homme qui repeint la meme porte tous les
+jours ». Le voila. Il s'appelle Caro. Il a 47 ans.
+
+    [S3_CAR_L306]  CARO · 1,2 s · plat · p0,0
+        « Attention, c'est frais. »
+
+    [S3_LOH_L307]  LOHEN · 1,0 s · poli · p0,5
+        « Belle couleur. »
+
+    [S3_CAR_L308]  CARO · 1,6 s · plat · p0,6
+        « C'est la meme que hier. »
+
+    [S3_LOH_L309]  LOHEN · 1,3 s · plat · p0,5
+        « Vous l'avez repeinte hier ? »
+
+    [S3_CAR_L310]  CARO · 1,1 s · plat · p0,7
+        « Et avant-hier. »
+
+    [S3_LOH_L311]  LOHEN · 1,4 s · plat · p0,6
+        « Pourquoi ? »
+
+    [S3_CAR_L312]  CARO · 2,8 s · plat · p0,9
+        « Parce que si je m'arrete un jour, il faudra que je fasse
+          autre chose, et j'ai pas trouve quoi. »
+        dir : [OBL] dit sans detresse. C'est une solution pratique a un
+              probleme pratique. Le jeu ne le traite pas comme un
+              symptome. Il n'y a pas de scene ou quelqu'un « aide Caro ».
+
+    [S3_CAR_L313]  CARO · 2,2 s · plat · p0,5
+        « J'ai quatre-vingt-onze couches. Je les compte. »
+
+    [S3_LOH_L314]  LOHEN · 1,7 s · plat · p0,6
+        « Ca doit epaissir. »
+
+    [S3_CAR_L315]  CARO · 2,4 s · plat · p0,7
+        « La porte ferme plus depuis la soixantieme. »
+
+    [S3_LOH_L316]  LOHEN · 1,2 s · plat · p0,8
+        « Et derriere ? »
+
+    [S3_CAR_L317]  CARO · 2,6 s · plat · p0,0
+        « Rien. C'est un mur. La porte donne sur rien depuis la Maree. »
+        dir : [OBL][NAR] Il repeint tous les jours une porte qui ne
+              s'ouvre sur rien et qui ne ferme plus. C'est le portrait
+              le plus dur du Marche et il tient en douze lignes sans un
+              mot de tristesse. [OBL] La porte est modelisee, la peinture
+              est epaisse de 4 cm (mesurable), et en S7 elle a une couche
+              de plus. Une seule. Quelqu'un a continue.
+
+--- ODILE, SUITE (8) ------------------------------------------------------------------
+
+Odile lave du linge pour 60 personnes. Ses 8 lignes ici sont
+independantes de la lettre de D05 : elles se declenchent si le joueur
+revient.
+
+    [S3_ODI_L318]  ODILE · 1,5 s · plat · p0,0
+        « Encore vous. »
+
+    [S3_ODI_L319]  ODILE · 2,1 s · plat · p0,0
+        « Je lave pour soixante personnes. Trente-deux draps par jour. »
+
+    [S3_ODI_L320]  ODILE · 2,7 s · plat · p0,0
+        « Y'en a onze qui sont a des gens qui sont plus la. Je les lave
+          quand meme. »
+
+    [S3_LOH_L321]  LOHEN · 1,3 s · plat · p0,0
+        « Pourquoi ? »
+
+    [S3_ODI_L322]  ODILE · 2,4 s · sec · p0,0
+        « Parce qu'ils vont moisir, sinon. »
+        dir : [OBL] la vraie raison, donnee tout de suite, et elle est
+              pratique. Cette ville ne fait pas de poesie sur son deuil.
+              C'est pour ca que le deuil passe.
+
+    [S3_ODI_L323]  ODILE · 2,0 s · plat · p0,0
+        « Et parce que ca fait du volume. Un fil de linge vide, c'est
+          laid. »
+
+    [S3_ODI_L324]  ODILE · 1,8 s · plat · p0,0
+        « Bon. Vous genez encore. »
+
+    [S3_ODI_L325]  ODILE · 1,4 s · plat · p0,0
+        « Vous genez tout le temps, vous. »
+        dir : [OBL] derniere ligne d'Odile en S3. Elle en a 40 en S7,
+              et en S7 elle ne dit plus « vous genez ». Le changement
+              n'est jamais commente.
+
+--- CHECKLIST ----------------------------------------------------------------------
+
+[ ] Aucun des quatre ne donne d'information de quete
+[ ] L289 : miette sur Esteban, aucune option pour creuser
+[ ] L297-L305 : l'epaule n'est jamais montree ni expliquee
+[ ] L300 : slot sans VO, camera sur Vane
+[ ] Porte de Caro : 4 cm de peinture, +1 couche en S7
+[ ] Odile change de formule en S7, sans commentaire

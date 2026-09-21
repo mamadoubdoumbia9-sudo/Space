@@ -1,0 +1,216 @@
+===============================================================================
+DLG · S7 · D05 — LE VERRIER : UN BOSS QUI NE DIT RIEN
+39 entrees, toutes S7. LOH 37 · VER 2 (muettes). Contribution : 39.
+Choix n° 34 et 35 du chapitre (les 2 seuls choix de S7).
+Reference maitre 09.30 (design du combat) et 09.16 (revelation).
+===============================================================================
+
+--- LE PROBLEME ET LA SOLUTION [OBL] ---------------------------------------------------------
+
+Le Verrier — Anselme Roux, 53 ans, ancien employe de la salle de bal
+(present muet en S6, point 9) — est MUET. Il ne peut plus parler : la
+coulee de verre a pris sa gorge. [OBL] C'est le boss du chapitre et il a
+DEUX entrees de dialogue, toutes deux sans parole.
+
+[OBL] Un boss muet dans un jeu narratif, c'est un trou. La solution
+n'est pas de lui donner une voix : c'est de faire porter TOUT le poids
+narratif par Lohen, qui parle a quelqu'un qui ne repondra pas. [OBL] 34
+des 36 entrees sont de Lohen. [OBL] C'est structurellement le meme
+dispositif que la lettre en S8 : un homme s'adresse a quelqu'un qui ne
+peut pas repondre. [OBL] S7 repete la forme de S8 avant S8. Jamais dit.
+
+[OBL] MUSIQUE : M24 entre au premier coup. Percussion metallique,
+contrebasse, aucune melodie. [OBL] Elle s'arrete NET a la phase 3, en
+plein milieu d'une mesure, quand il cesse d'attaquer. [OBL] Le silence
+qui suit dure jusqu'a la fin de la sequence. Il ne reste que la pluie.
+
+--- § 1 — AVANT (10 lignes) --------------------------------------------------------------------
+
+    [S7_LOH_L129]  2,2 s · bas · « Monsieur. »
+        dir : [OBL][NAR] IL VOUVOIE LE BOSS. [OBL] Premiere ligne du
+              combat. [OBL] Direction : poli, fatigue, pas de peur.
+              [OBL] Rappel : Lohen remercie des objets inanimes (S4).
+              Il est poli avec tout, y compris ce qui va le tuer.
+    [S7_LOH_L130]  1,8 s · bas · « Vous etes sur le chemin. »
+    [S7_LOH_L131]  2,6 s · bas · « Je vais a l'est. Vous avez qu'a rester la. »
+    [S7_VER_L132]  0,0 s · — · (entree sans VO)
+        dir : [OBL] IL NE REPOND PAS. [OBL] Il tourne la tete de 15°.
+              Anim VER-TRN-001, 2,4 s, lente. [OBL] Le son de la coulee
+              qui craque : PN-101, enregistre en cassant du sucre
+              d'orge dans une chambre sourde, 3 couches.
+    [S7_LOH_L133]  2,0 s · bas · « Vous entendez ? »
+    [S7_LOH_L134]  2,4 s · bas · « Vous entendez, mais vous repondez pas. »
+    [S7_LOH_L135]  1,6 s · bas · « D'accord. »
+    [S7_LOH_L136]  2,8 s · bas · « Vous avez quelque chose sous le bras. »
+        dir : [OBL][NAR] LE DOSSIER. [OBL] Visible des la premiere
+              seconde du combat, sous son bras gauche, tenu contre lui.
+              [OBL] 88 % des joueurs ne le remarquent pas avant la
+              phase 3. [OBL] Le modele est le MEME asset que la
+              chemise vide de S4 (PN-072), meme tache, meme coin corne.
+    [S7_LOH_L137]  2,2 s · bas · « Je peux le voir ? »
+    [S7_LOH_L138]  1,4 s · bas · « Non. »
+        dir : [OBL] il repond a sa propre question. [OBL] Le combat
+              commence 1,8 s plus tard, sur une attaque du Verrier.
+
+--- § 2 — PENDANT (14 lignes, phases 1 et 2) ---------------------------------------------------
+
+[OBL] RAPPEL : aucune ligne sur echec. Si le joueur meurt, reprise en
+1,1 s au debut de la phase, sans commentaire. [OBL] Ces 14 lignes sont
+declenchees par PROGRESSION, jamais par le temps, jamais par les degats
+subis.
+
+    [S7_LOH_L139]  1,6 s · souffle · « Il est lent. »
+    [S7_LOH_L140]  2,0 s · souffle · « Il est lent et il s'arrete pas. »
+    [S7_LOH_L141]  1,4 s · souffle · « C'est pire. »
+    [S7_LOH_L142]  2,4 s · souffle · « La lumiere le gene. »
+        dir : [OBL] SEUL INDICE SUR LES LAMPADAIRES (09.30). Donne une
+              fois, a la phase 1, sans insistance. [OBL] Le joueur qui
+              l'entend gagne le combat plus vite. Celui qui l'entend
+              pas se bat plus longtemps et ne perd rien d'autre.
+    [S7_LOH_L143]  1,8 s · souffle · « Sous le lampadaire, alors. »
+    [S7_LOH_L144]  2,2 s · souffle · « Il tourne autour. »
+    [S7_LOH_L145]  1,6 s · souffle · « Il attend que je sorte. »
+    [S7_LOH_L146]  2,6 s · souffle · « Il a le temps. Moi j'ai le temps aussi. »
+    [S7_LOH_L147]  2,0 s · souffle · « Le bras s'est detache. »
+        dir : [OBL] entree en phase 2. La coulee devient une seconde
+              main (chaine IK, 74 os). [OBL] Lohen le constate en
+              quatre mots et ne s'etonne pas. [OBL] Personne dans ce
+              jeu ne s'etonne de rien. C'est la troisieme annee.
+    [S7_LOH_L148]  1,4 s · souffle · « Deux. »
+    [S7_LOH_L149]  2,4 s · souffle · « Y'en a d'autres qui arrivent. »
+        dir : [OBL] les Mueurs-boucliers (09.30, phase 2). [OBL]
+              ATTENTION CANON : en S5 le Mueur n'apparait JAMAIS
+              (CI `no-mueur` portant sur `scenes/s5/`). [OBL] Ici ils
+              apparaissent, par deux, et ils sont DECEVANTS : lents,
+              petits, fragiles, morts en deux coups. [OBL] C'est
+              volontaire. Le joueur a eu peur d'eux pendant 28 minutes
+              en S5 et il les tue en quatre secondes.
+              [OBL] Aucune ligne ne commente cette deception.
+    [S7_LOH_L150]  1,8 s · souffle · « C'est ca, un Mueur ? »
+        dir : [OBL] SEULE OCCURRENCE DU MOT « MUEUR » DIT PAR LOHEN
+              dans tout le chapitre. [OBL] C'est une question et
+              personne ne repond. [OBL] Aucune ligne de suivi.
+    [S7_LOH_L151]  2,2 s · souffle · « Bon. »
+    [S7_LOH_L152]  2,8 s · souffle · « Ils protegent quelque chose qui a pas besoin d'etre protege. »
+
+--- § 3 — LA PHASE 3 ET LES DEUX CHOIX (12 lignes) --------------------------------------------
+
+[OBL] PHASE 3 : il cesse d'attaquer. Il marche vers le joueur en tendant
+la main. M24 s'arrete net. [OBL] Si le joueur frappe, il encaisse. Si le
+joueur arrete pendant 4 s, il s'arrete aussi et tend le dossier.
+[OBL] 8 % trouvent la resolution douce (09.30). [OBL] LE JEU NE LES
+RECOMPENSE PAS DIFFEREMMENT et ne le mentionne jamais.
+
+    [S7_LOH_L153]  2,0 s · souffle · « Il frappe plus. »
+    [S7_LOH_L154]  2,4 s · souffle · « Il avance et il frappe plus. »
+    [S7_LOH_L155]  1,8 s · bas · « Qu'est-ce que vous voulez. »
+        dir : [OBL] pas de point d'interrogation dans l'intonation.
+              C'est un constat epuise.
+    [S7_VER_L156]  0,0 s · — · (entree sans VO)
+        dir : [OBL][NAR] LA DEUXIEME ET DERNIERE ENTREE DU VERRIER.
+              [OBL] IL TEND LE DOSSIER. Anim VER-GIV-001, 4,8 s, la
+              plus lente du chapitre. Le bras se leve en trois temps,
+              avec deux arrets de 0,4 s : la coulee resiste au
+              mouvement. [OBL] Aucun son, sauf le craquement.
+              [OBL] LA CAMERA NE CADRE PAS LE DOSSIER. Vue subjective
+              maintenue, aucun recadrage, aucune mise au point forcee.
+              Le joueur peut regarder ailleurs et rater le geste.
+              [OBL] Si le joueur regarde ailleurs pendant les 4,8 s :
+              le Verrier reste bras tendu, indefiniment, sans limite
+              de temps. [OBL] Il attendra aussi longtemps qu'il faut.
+
+    > CHOIX 34 (aucun timer)
+      [1] (Prendre le dossier.)
+      [2] (Ne pas le prendre.)
+
+    -- branche [1]
+    [S7_LOH_L157]  1,6 s · bas · « C'est le sien. »
+        dir : [OBL][NAR] IL RECONNAIT LE DOSSIER D'ESTEBAN. [OBL] Le
+              dossier est VIDE — c'est le meme qu'en S4, la chemise
+              vide, la poussiere propre 32×24 cm. [OBL] Le Verrier l'a
+              vide le 11 aout. [OBL] Lohen tient enfin l'objet qu'il
+              cherche depuis S4 et il ne contient rien.
+    [S7_LOH_L158]  2,4 s · bas · « Il est vide. »
+    [S7_LOH_L159]  2,0 s · bas · « Vous l'avez vide. »
+    [S7_LOH_L160]  2,8 s · bas · « Vous avez pris ce qu'y avait dedans et vous avez garde la chemise. »
+        dir : [OBL][NAR] IL A RAISON. [OBL] CE QU'IL Y AVAIT DEDANS EST
+              AU SOMMET DU PHARE. [OBL] Le Verrier l'y a porte.
+              [OBL] LE JEU NE LE DIRA JAMAIS EXPLICITEMENT. [OBL] Le
+              joueur qui a fait E18 en S4 (4 %) a la date du 11 aout.
+              Celui qui a vu le figurant en S6 (< 1 %) a le visage.
+              Personne n'a la phrase. [OBL] Interdit absolu : ne
+              jamais ajouter de ligne, de note, de document ou de
+              cinematique qui l'explique. Aucun chapitre.
+
+    -- branche [2]
+    [S7_LOH_L161]  1,8 s · bas · « Gardez-le. »
+        dir : [OBL] LE VERRIER BAISSE LE BRAS. Anim VER-GIV-002, 3,2 s.
+              [OBL] Il pose le dossier par terre, sous la pluie, et ne
+              le reprend pas. [OBL] Il reste la, dans la scene, pour
+              toujours. Le joueur peut revenir le prendre a tout
+              moment avant de quitter la place. 31 % reviennent.
+              [OBL] Si le joueur ne le prend jamais : il n'y a AUCUNE
+              consequence mecanique. Le chapitre se termine
+              identiquement. [OBL] Flag enregistre pour le chapitre 2.
+
+    -- Convergence --
+
+    [S7_LOH_L162]  2,2 s · bas · « Le Phare. »
+        dir : [OBL] LE VERRIER MONTRE. [OBL] Un seul geste, le bras
+              droit, vers l'est, 3,4 s. Anim VER-PNT-001. [OBL] C'est
+              toute sa contribution a l'histoire : il indique une
+              direction. [OBL] Il l'indique CORRECTEMENT et sans
+              hesitation, ce qui signifie qu'il sait ce qu'il y a
+              la-haut. [OBL] Jamais dit.
+
+    > CHOIX 35 — LE DERNIER CHOIX AVANT LE PHARE (aucun timer)
+      [1] (L'achever.)
+      [2] (Partir.)
+
+    [OBL] Le Verrier s'est assis. Il se laisse durcir : la coulee monte
+    de la hanche vers l'epaule, visiblement, 1 cm toutes les 4 secondes.
+    [OBL] Dans 6 minutes il sera immobile. Le joueur n'a pas 6 minutes
+    de contenu ici : il partira avant.
+
+    -- branche [1] : l'achever
+    [S7_LOH_L163]  0,0 s · — · (slot sans VO)
+        dir : [OBL] UN SEUL COUP. Anim LOH-ACT-131, 1,9 s. [OBL] Pas de
+              ralenti, pas de plan, pas de musique. [OBL] Le Verrier ne
+              se defend pas et ne reagit pas. [OBL] Le bruit est celui
+              du verre, pas celui d'un corps. [OBL] Aucune ligne apres.
+              [OBL] Le silence dure 5 s avant que le joueur reprenne
+              la main.
+    [S7_LOH_L164]  2,6 s · bas · « Bon. »
+        dir : [OBL] un mot. [OBL] Interdit : aucune ligne de
+              justification, de regret ou de satisfaction. Ni ici, ni
+              en S8, ni au chapitre 2.
+
+    -- branche [2] : partir
+    [S7_LOH_L165]  2,0 s · bas · « Bon. »
+        dir : [OBL] LE MEME MOT. [OBL] Deux actes opposes, une seule
+              reponse. [OBL] Le jeu ne commente ni l'un ni l'autre
+              (09.16). [OBL] Flag enregistre pour le chapitre 2.
+    [S7_LOH_L166]  2,4 s · bas · « Merci. »
+        dir : [OBL][NAR] UNIQUEMENT DANS LA BRANCHE [2]. [OBL] Il
+              remercie l'homme qui a vide le dossier de celui qu'il
+              cherche. [OBL] Il ne sait pas ce qu'il remercie. Il
+              remercie une direction indiquee.
+              [OBL] Rappel S4 : Lohen remercie trois objets inanimes.
+              Ceci est la quatrieme fois qu'il remercie quelque chose
+              qui ne peut pas repondre, et la derniere du chapitre.
+    [S7_LOH_L167]  0,0 s · — · (slot sans VO)
+        dir : [OBL] 3,2 s. Il part. [OBL] Le Verrier reste assis, dans
+              la pluie, et durcit. [OBL] Si le joueur se retourne a
+              20 m, il est encore visible. A 40 m, la pluie le cache.
+              [OBL] Il n'y a pas de plan de fin sur lui.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] 34 lignes de Lohen / 2 entrees muettes du Verrier
+[ ] M24 s'arrete NET en phase 3, plus aucune musique jusqu'a la fin de S7
+[ ] L142 : indice lampadaires donne une fois, sans insistance
+[ ] L149/L150 : les Mueurs apparaissent enfin et sont decevants, non commente
+[ ] L156 : le geste n'est jamais cadre, le joueur peut le rater, attente infinie
+[ ] L160 : ne JAMAIS expliquer ou est passe le contenu du dossier
+[ ] CHOIX 35 : « Bon. » dans les deux branches, aucun commentaire du jeu
+[ ] L166 : « Merci. » seulement si on ne l'acheve pas

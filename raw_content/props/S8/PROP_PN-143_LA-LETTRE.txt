@@ -1,0 +1,285 @@
+===============================================================================
+PN-143 — LA LETTRE
+===============================================================================
+Asset : SM_S8_La_Lettre · S8, chambre du gardien, sur la table, sous la
+pierre plate · ~06:28 · PORTEUR D'ECHO E31 + TEXTE LISIBLE ·
+RAMASSABLE (8 des 9) · LE PROP POUR LEQUEL LE JEU EXISTE · LOD0 28 tris
+
+                    ------------------------------------
+                    CE DOCUMENT EST LE PLUS CONTRAIGNANT
+                    DU PROJET. AUCUNE LIGNE N'EST
+                    NEGOCIABLE. CF. BLOC 20 DU MASTER.
+                    ------------------------------------
+
+§ 1 — CE QU'ON VOIT
+Une feuille de papier. Une seule. 21 x 30.
+Elle est ecrite recto, et le verso porte six lignes.
+Le papier est ordinaire. Pas beau. Pas ancien. Du papier de bureau, un peu
+jauni, avec une trace de pli en quatre qui a ete DEFAIT — [OBL] la lettre a
+ete pliee, puis depliee, et reposee a plat. Les plis sont marques.
+[OBL] Elle a ete relue. Plusieurs fois. Par celui qui l'a ecrite.
+L'ecriture est celle d'Esteban. Penchee a 14 degres, serree, rapide.
+[OBL] Elle n'est pas soignee. Il n'a pas fait d'effort de calligraphie.
+Il y a trois ratures. [OBL] Trois. Pas une de plus.
+La derniere ligne du recto s'arrete au milieu de la page : il a manque de
+place et il a retourne la feuille.
+Le verso a six lignes et beaucoup de blanc en dessous.
+Elle est signee.
+[OBL] Elle est eclairee en ambre (PN-137). C'est la seule lumiere.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 28 tris (quad legerement gondole par les plis defaits).
+[OBL] DEUX textures 8K : recto et verso. Densite 940 px/m.
+[OBL] Le texte doit etre lisible INTEGRALEMENT et CONFORTABLEMENT sur un
+ecran de telephone, a la distance ou Lohen la tient (32 cm de la camera).
+[OBL] C'est la seule contrainte de lisibilite absolue du projet. Si le
+joueur doit plisser les yeux, c'est un bug bloquant.
+[OBL] ECRITURE : a la main, a l'encre, par le calligraphe du projet, celui
+de PN-108, PN-111, PN-139. Sur du vrai papier. Plie en quatre, range trois
+semaines, deplie, scanne.
+[OBL] Les trois ratures sont de vraies ratures faites pendant l'ecriture.
+On ne les simule pas.
+[OBL] ACCESSIBILITE (14.20) : une option « texte agrandi » double la taille
+du rendu de la lettre dans un SubViewport, sans changer la mise en scene.
+[OBL] Elle est desactivee par defaut et proposee UNE FOIS, dans le menu, au
+lancement du jeu. Jamais en jeu, jamais a ce moment.
+RAMASSABLE : LOH-ACT-238. Cf. § 5.
+
+§ 3 — CE QUE CA DIT
+[OBL] LE TEXTE INTEGRAL, VERROUILLE. Aucune modification, aucune coupe,
+aucun ajout, aucune traduction libre. Les traductions sont validees une par
+une par l'auteur.
+
+     Lohen,
+
+     Onze mois, Lohen.
+
+     Je t'ai attendu onze mois avant de comprendre que tu ne savais
+     pas ou j'etais, et quatre mois de plus avant de comprendre que
+     ca ne changeait rien, parce que tu serais venu quand meme, et
+     que c'est exactement le probleme.
+
+     Tu es capable de lire une chaise. Tu es capable de regarder un
+     muret et de savoir combien d'hommes se sont assis dessus. Mais
+     tu n'as jamais su lire ce que je te disais, et je ne te le
+     reproche pas, parce que je ne te l'ai jamais dit correctement.
+
+     J'ai regarde tes mains pendant six ans. Des mains qui portent le
+     courrier de toute une ville et qui ne recoivent jamais rien.
+
+     Le soir du quatorze, a neuf heures cinquante, je t'ai dit :
+     « Tu as les mains sales. »
+     Je t'ai regarde les essuyer sur ta veste et partir.
+     Je ne voulais pas dire que tu avais les mains sales.
+     Je voulais dire : reviens.
+
+     Tu vas trouver le mur. Je ne vais pas m'excuser pour le mur.
+
+     Ne me cherche plus dans les objets, mon amour.
+
+                                   (verso)
+
+     Tu m'as trouve. Tu peux la garder.
+
+     Je ne sais pas ce que tu vas faire maintenant et ce n'est plus
+     mon travail de le savoir.
+
+     Esteban
+
+     P.-S. — Tu es en retard de trois ans.
+
+[OBL] Le mot « amour » apparait ici pour la DEUXIEME et DERNIERE fois du
+chapitre. [OBL] Rappel canon : exactement deux occurrences dans tout le
+chapitre 1. La premiere est en S4 (MIR-DLG-372).
+[OBL] La lettre ne dit pas ou est Esteban. Elle ne dit pas ce qu'il est
+devenu. Elle ne dit pas s'il est vivant. Elle ne dit pas ce qui s'est passe
+le 14 octobre a 23h41. Elle n'explique pas la Maree.
+[OBL] Interdiction absolue d'ajouter une ligne qui repondrait a l'une de
+ces questions, dans ce chapitre ou dans les six suivants.
+
+§ 4 — ECHO
+ECHO E31 — « La lettre » — LE DERNIER DES 31.
+[OBL] Il n'est PAS un Echo au sens des trente autres.
+[OBL] Il n'y a pas de silhouette. Pas de lumiere qui change. Pas de mode A,
+B ou C.
+[OBL] Le rituel de 2,44 secondes se joue. Identique. Pour la 31e fois.
+[OBL] NAR-171 + NAR-172 + NAR-173. Exactement les memes images. Exactement
+la meme duree. Le joueur l'a vu trente fois.
+Et apres le rituel : il n'y a rien.
+[OBL] Le monde ne change pas. La chambre reste la chambre. La lampe reste
+allumee. Le silence reste le silence.
+[OBL] Lohen tient la lettre et il la regarde.
+[ART] Le systeme surnaturel du jeu, apres six heures et demie, se declenche
+une derniere fois et ne produit rien. Il n'y avait rien a faire revenir.
+La lettre est du present. Elle attendait.
+Duree de E31 : 2,44 secondes. [OBL] C'est le plus court des 31. C'est le
+rituel, et rien.
+
+§ 5 — MISE EN SCENE
+[OBL] CHAQUE POINT DE CETTE SECTION EST OBLIGATOIRE ET A ETE ARBITRE.
+
+1. CONDITIONS. E31 n'est disponible qu'apres E29 (PN-138) et E30 (PN-141).
+   [OBL] La lettre est visible et lisible avant, mais le prompt n'apparait
+   pas. Le joueur peut se pencher et la lire depuis la table.
+   [OBL] S'IL LA LIT COMME CA, C'EST VALIDE. Il n'a pas triche. Le jeu ne
+   l'empeche pas et ne le penalise pas. Il lira la meme chose.
+   [ART] Environ 7 % des joueurs liront la lettre penches sur une table
+   avant de la prendre. C'est leur droit.
+
+2. LA PIERRE. Il faut soulever PN-142 d'abord.
+
+3. LA PRISE. LOH-ACT-238, 3,4 secondes.
+   [OBL] Il la prend a DEUX MAINS. C'est le seul objet du chapitre qu'il
+   prend a deux mains.
+   Il la leve a 32 cm de son visage.
+   [OBL] La camera passe en vue subjective. [OBL] SEULE ET UNIQUE FOIS DU
+   CHAPITRE. Pendant tout le jeu, la camera est a la troisieme personne,
+   derriere lui. Ici, pour la premiere et derniere fois, on voit par ses
+   yeux.
+   [OBL] La transition dure 1,1 seconde et elle est continue : pas de coupe,
+   pas de fondu.
+
+4. LA LECTURE. [OBL] Le joueur lit. Il n'y a aucune limite de temps.
+   [OBL] Il n'y a pas de bouton « suivant ». Il n'y a pas de defilement
+   automatique. Il n'y a pas de sous-titre.
+   [OBL] Il peut retourner la feuille : LOH-ACT-239, 1,2 s. Manuellement.
+   [OBL] Il peut la retourner autant de fois qu'il veut.
+   [OBL] Il peut rester 40 minutes. Rien ne se passe.
+
+5. LA VOIX. [OBL] Il n'y a PAS de voix off pendant que le joueur lit.
+   [OBL] Le silence total, sauf § 6.
+   [OBL] Lohen ne lit pas a voix haute. Il ne sait pas bien lire.
+   [OBL] Et pourtant il lit celle-la. [OBL] Lentement. Le joueur ne
+   l'entend pas, mais la duree minimale avant que LOH-ACT-240 puisse se
+   declencher est de 95 secondes.
+   [OBL] Si le joueur veut partir avant 95 secondes, il ne peut pas. Le
+   prompt de fin n'existe pas encore.
+   [ART] Il faut au moins une minute trente-cinq a un homme qui lit mal
+   pour lire quatre cent vingt mots.
+
+6. LA FIN. Apres 95 secondes, si le joueur baisse la lettre :
+   LOH-ACT-240, 6,8 secondes. [OBL] La camera revient a la troisieme
+   personne, en 1,4 s, continue.
+   [OBL] Il plie la lettre. En quatre. Dans les plis existants.
+   [OBL] Il la met dans sa sacoche, avec les six lettres non livrees.
+   [OBL] IL NE PLEURE PAS. Aucun sanglot, aucune larme, aucun tremblement
+   d'epaules, aucun son de gorge.
+   [OBL] Regle d'animation n°9 : on ne regarde pas les gens pleurer.
+   [OBL] Et il ne pleure pas. Ce n'est pas une pudeur de cadrage : il ne
+   pleure pas.
+   [OBL] Interdiction absolue, sous toutes les pressions de production, de
+   playtest ou de direction, d'ajouter une larme.
+
+7. LE DOD DE BLOC 20. [OBL] Rappel :
+   >= 7 testeurs sur 10 restent IMMOBILES plus de 8 secondes apres
+   LOH-ACT-240.
+   [OBL] EN CAS D'ECHEC : on corrige les trois heures precedentes.
+   PAS LA LETTRE. Jamais la lettre.
+
+§ 6 — AUDIO
+[OBL] IL N'Y A PAS DE MUSIQUE PENDANT LA LECTURE.
+[OBL] Le silence dure depuis PN-136, soit 7 minutes.
+Ce qu'on entend pendant les 95+ secondes :
+  — SFX(lamp_wick_hiss), -34 dB
+  — SFX(wind_tower_muffled), -29 dB
+  — SFX(paper_hold_micro), le papier qui bouge imperceptiblement dans les
+    mains, -37 dB, irregulier
+[OBL] Trois sources. Rien d'autre. Aucune respiration de Lohen.
+
+[OBL] ET PUIS, A UN MOMENT PRECIS, IL Y A LA MUSIQUE.
+[OBL] M25 « La lettre », piano seul.
+[OBL] Elle commence a 3 minutes exactement apres le debut de LOH-ACT-238.
+[OBL] Si le joueur a fini de lire avant 3 minutes et a baisse la lettre,
+elle commence quand meme, sur LOH-ACT-240.
+[OBL] Si le joueur lit plus longtemps, elle commence a 3:00 et continue.
+
+[OBL] ET A 3:00, LE MOTIF D'ESTEBAN EST JOUE EN ENTIER.
+[OBL] LA - DO - MI - RE - LA.
+[OBL] Les cinq notes. Pour la premiere et unique fois des 24 occurrences du
+chapitre. Les 23 autres etaient incompletes.
+[OBL] Il est joue sur la phrase « Tu as les mains sales. »
+[OBL] C'est-a-dire : si le joueur lit a la vitesse moyenne mesuree, son
+regard est sur cette ligne a 3:00.
+[OBL] Cette synchronisation est APPROXIMATIVE et assumee : elle fonctionne
+pour environ 40 % des joueurs. Pour les autres, le motif arrive ailleurs.
+[OBL] On ne la force pas. On ne detecte pas le regard. On ne scripte pas.
+[ART] Quarante pour cent, c'est enorme pour un hasard organise.
+
+[OBL] LA VOIX. Apres le motif, a 3:14, la VOIX D'ESTEBAN commence.
+[OBL] Elle lit la lettre. En entier. 4 minutes 20.
+[OBL] Rappel canon absolu : UNE SEULE PRISE. Le comedien lit la lettre en
+entier, une fois, et c'est cette prise.
+[OBL] AUCUN TRAITEMENT. Pas de reverb, pas de compression, pas d'EQ, pas de
+de-esser, pas d'edit, pas de raccord.
+[OBL] Les respirations restent. Les hesitations restent. Si sa voix se
+casse quelque part, elle se casse dans le jeu.
+[OBL] Niveau : -19 dB. Proche. Comme s'il etait a un metre.
+[OBL] Elle n'est PAS synchronisee avec la lecture du joueur. Elle commence
+a 3:14 et elle va a son rythme. Le joueur peut avoir fini. Il peut etre au
+milieu. Il peut entendre la fin de la lettre pendant qu'il lit le debut.
+[OBL] C'est accepte. C'est meme le point : ce n'est pas une narration,
+c'est quelqu'un qui parle pendant qu'on lit.
+[OBL] Si le joueur baisse la lettre pendant la voix, ELLE CONTINUE. Il
+range la lettre, il se releve, et la voix continue jusqu'au bout.
+[OBL] Elle ne peut pas etre coupee, sautee, accelere ou arretee.
+
+§ 7 — INTERDICTIONS
+[OBL] LISTE ABSOLUE. Chaque point a ete debattu et tranche.
+Interdit de : modifier une seule ligne du texte · ajouter une phrase ·
+retirer une phrase · ajouter une quatrieme rature · expliquer ou est
+Esteban · expliquer ce qu'il est devenu · dire s'il est vivant · expliquer
+la Maree · ajouter une larme a Lohen · ajouter un sanglot · ajouter un
+tremblement · ajouter un gros plan sur son visage · sortir de la vue
+subjective pendant la lecture · ajouter un bouton « suivant » · ajouter un
+defilement automatique · ajouter des sous-titres pendant la lecture ·
+limiter le temps de lecture · empecher de retourner la feuille · traiter la
+voix · faire deux prises · couper la voix · permettre de la sauter ·
+ajouter de la musique avant 3:00 · jouer le motif une 25e fois · rendre le
+motif complet ailleurs · rendre E31 rejouable · permettre de relire la
+lettre apres l'avoir rangee [OBL — elle est dans la sacoche, elle n'est
+plus consultable ; contrairement aux autres ramassables, il n'y a pas
+d'appui long sur la lettre] · ajouter une reponse de Lohen · ajouter un
+choix de dialogue · ajouter une fin alternative · RENDRE LA FIN PLUS
+HEUREUSE.
+
+§ 8 — LIENS
+[OBL] La lettre est la destination de tout le chapitre. Les liens sont
+innombrables et voici les treize qui doivent etre verifies un par un :
+PN-001 — « lire un muret » : les quarante bottes, E01, a 6 minutes de jeu.
+PN-005 — l'enveloppe « 0114 », l'ecriture de Lohen, minute zero.
+PN-018 — le jeton, « des mains qui portent le courrier ».
+PN-025 — la veste d'Esteban, E04, sa voix inintelligible.
+PN-039 — la photo 300 : « ne me cherche plus dans les objets ».
+PN-048 — la sacoche et les six lettres jamais livrees.
+PN-107 — le gilet a lisere ambre.
+PN-108 — la liste, la premiere fois qu'on voit son ecriture.
+PN-111 — le « 14 » au crayon de charpentier.
+PN-137 — la lampe ambre qui l'eclaire.
+PN-139 — « Tu vas trouver le mur. »
+PN-141 — le carnet ferme, a 60 cm, qui ne s'ouvrira jamais.
+PN-147 — la veste 0114 posee sur Sol, dans quatre minutes.
+[OBL] Et ACT-268 : « Tu as les mains sales », joue sans sous-texte par le
+comedien d'Esteban, dans une scene que le joueur ne verra jamais.
+
+§ 9 — DOD
+[ ] Texte strictement conforme, verrouille, 3 ratures reelles
+[ ] Ecriture manuscrite reelle, meme main que PN-108, PN-111, PN-139
+[ ] Papier plie en quatre, range 3 semaines, deplie, scanne
+[ ] 2 x 8K, 940 px/m, lisible confortablement sur telephone a 32 cm
+[ ] Le mot « amour » : 2e et derniere occurrence du chapitre
+[ ] E31 : rituel de 2,44 s identique aux 30 autres, puis RIEN
+[ ] Disponible apres E29 et E30 ; lisible sur la table avant, sans penalite
+[ ] Prise a deux mains, unique du chapitre
+[ ] Vue subjective : unique du chapitre, transition continue de 1,1 s
+[ ] Aucun bouton, aucun defilement, aucun sous-titre, aucune limite de temps
+[ ] Duree minimale de 95 s avant que LOH-ACT-240 soit disponible
+[ ] Retournement manuel, illimite
+[ ] Lohen ne pleure pas : zero larme, zero sanglot, zero tremblement
+[ ] Mix a 3 sources sous -29 dB pendant la lecture
+[ ] M25 a 3:00 exactement
+[ ] Motif LA-DO-MI-RE-LA COMPLET, unique fois des 24 occurrences
+[ ] Voix a 3:14, UNE SEULE PRISE, zero traitement, -19 dB
+[ ] Voix non synchronisee, non coupable, non sautable, continue apres rangement
+[ ] Lettre rangee dans la sacoche, jamais reconsultable
+[ ] TEST FINAL : >= 7 testeurs sur 10 immobiles > 8 s apres LOH-ACT-240
+[ ] En cas d'echec : corriger les 3 heures precedentes, jamais la lettre

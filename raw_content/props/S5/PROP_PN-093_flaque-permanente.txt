@@ -1,0 +1,107 @@
+===============================================================================
+PN-093 — LA FLAQUE PERMANENTE
+===============================================================================
+Asset : SM_S5_Flaque · S5, point bas du conduit principal, niveau -2 ·
+~04:18 · prop narratif ENVIRONNEMENTAL · pas d'Echo · LOD0 600 tris
+
+§ 1 — CE QU'ON VOIT
+Le conduit descend, puis remonte. Au point bas, il y a de l'eau.
+Une flaque de 11 metres de long, sur toute la largeur du conduit, profonde
+de 40 cm au centre.
+Il faut la traverser. Il n'y a pas d'autre chemin.
+L'eau est NOIRE et parfaitement immobile. Elle est si calme qu'elle fait
+miroir : le plafond voute s'y reflete a l'identique.
+[OBL] Le reflet est net. C'est un miroir parfait. Un conduit voute et son
+reflet forment un cercle complet : le joueur voit un tunnel circulaire dont
+la moitie basse est un mensonge.
+Sur les parois, une ligne de depot brun a 62 cm : l'eau est montee plus
+haut, avant, et elle est redescendue.
+Au fond de l'eau, visibles par transparence quand la lampe eclaire : des
+objets. Pas beaucoup. Une chaussure. Un seau. Une chaine. Un panneau de
+signalisation tombe, illisible.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 600 (le plan d'eau + le lit du conduit).
+[OBL] L'eau doit faire miroir. Utiliser une planar reflection (0,9 ms) et
+non une SSR : le conduit est voute, la SSR echoue sur les bords et le
+resultat est immediatement faux.
+Transmission : 0,30 avec Beer-Lambert brun (0,18 / 0,11 / 0,06). On voit
+le fond a 40 cm avec la lampe, pas sans.
+[OBL] Ondulation : ZERO au repos. L'eau est absolument plate.
+Quand le joueur entre : ondes circulaires reelles, propagation 1,1 m/s,
+reflexion sur les parois, amortissement en 9 secondes.
+[OBL] Le reflet du plafond se BRISE quand il marche. C'est l'evenement
+visuel du prop et il est produit par le joueur lui-meme.
+Cout : 1,1 ms. Le plus cher de S5.
+Marche : LOH-LOC-188 `wade_deep`, vitesse reduite de 46 %, genoux hauts,
+bras ecartes pour l'equilibre. 11 m a cette vitesse : 19 secondes.
+
+§ 3 — CE QUE CA DIT
+Il y a un point bas et l'eau s'y accumule.
+Le geste humain : aucun.
+[OBL] Fonction : c'est le seul obstacle PHYSIQUE du chapitre. Pas une
+enigme, pas un danger : un inconfort. 19 secondes de marche lente dans
+40 cm d'eau noire et froide, a 4 h 18 de jeu.
+[NAR] Et le joueur le fait avec une lampe dans une main, une sacoche
+pleine de lettres, et une epaule abimee.
+[ART] Le prop existe pour que la sequence 5 COUTE quelque chose. Sans lui,
+les Conduits ne sont qu'un couloir sombre.
+Les objets au fond : tombes, ou jetes, ou emportes. Rien a en tirer.
+
+§ 4 — ECHO
+NEANT. Element d'environnement (PN-055).
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur arrive, la lampe eclaire, et il voit un tunnel circulaire
+parfait : la voute et son reflet.
+[ART] C'est la plus belle image de S5 et elle dure jusqu'a ce qu'il mette
+un pied dedans. Ensuite, elle est detruite pour 9 secondes.
+S'il attend que l'eau se recalme, elle redevient un miroir.
+[OBL] Certains joueurs feront l'aller-retour pour recasser le reflet.
+C'est prevu, c'est gratuit, ca ne donne rien.
+Sol traverse EN PREMIER. [OBL] SOL-LOC-470 : il traverse plus vite que
+Lohen (il est plus leger, il connait le fond). Il arrive de l'autre cote et
+il attend, sans un mot, pendant les 19 secondes.
+[OBL] Il ne dit pas « depechez-vous ». Il ne dit rien du tout. Il attend.
+Le joueur traverse une flaque de 11 m en etant regarde par un enfant.
+
+§ 6 — AUDIO
+SFX(water_wade_deep) : la marche dans 40 cm. 14 variations. [OBL] Un son
+lourd, resistant, avec le remous qui revient contre les jambes.
+SFX(water_drip_ceiling) : 4 points de chute dans la flaque, qui sont ce qui
+entretient l'eau. [OBL] Chaque goutte produit une onde visible a la surface,
+synchronisee au son. Quatre gouttes, quatre ondes, en permanence.
+[ART] L'eau n'est jamais parfaitement plate, en fait : elle a quatre
+anneaux permanents de 2 mm. Le miroir est brise en quatre points, tout le
+temps, et le joueur ne le remarque qu'en regardant longtemps.
+La reverb du conduit : RT60 2,1 s, avec un flutter echo caracteristique
+(parois paralleles) : [OBL] un battement de 14 Hz audible sur les sons secs.
+Musique : M20 « Les Conduits » — une nappe grave, sans melodie, qui ne
+s'arrete jamais pendant la traversee.
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter un danger · noyer Lohen · ajouter une creature ·
+ajouter un objet ramassable au fond · reveler le panneau de signalisation ·
+ajouter un chemin alternatif · ajouter une planche, une corde, un moyen
+d'eviter · faire parler Sol pendant l'attente · faire presser Sol ·
+accelerer la traversee · supprimer les 4 gouttes.
+
+§ 8 — LIENS
+PN-066 et PN-079 (l'eau de la bibliotheque, S4) : le joueur a deja marche
+dans 4 cm. Ici, 40. La progression est physique.
+PN-078 (les rayonnages noyes). PN-084 (le compteur d'eau).
+PN-022, PN-060, PN-102 (les miroirs du chapitre) : [OBL] celui-ci est le
+troisieme, et c'est le seul qui reflete parfaitement. Il ne reflete pas
+Lohen : il reflete le plafond.
+[THEME] CE QUI COUTE. [THEME] IL FAUT UNE BELLE CHOSE — S5 partage entre
+PN-093 et PN-095.
+
+§ 9 — DOD
+[ ] Planar reflection, miroir net du plafond, jamais SSR
+[ ] Zero ondulation au repos, sauf les 4 anneaux permanents de 2 mm
+[ ] Ondes reelles du joueur, 1,1 m/s, reflexion sur parois, 9 s
+[ ] 11 m, 40 cm, vitesse -46 %, 19 secondes de traversee
+[ ] Sol traverse en premier et attend en silence
+[ ] 4 gouttes synchronisees son/onde
+[ ] Flutter echo de 14 Hz, RT60 2,1 s
+[ ] Aucun danger, aucun objet, aucun chemin alternatif

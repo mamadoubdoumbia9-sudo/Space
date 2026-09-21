@@ -1,0 +1,73 @@
+===============================================================================
+PN-004 — LES FILETS SUSPENDUS
+===============================================================================
+Asset : SM_S1_Filets_Suspendus · S1, portique du hangar a filets, altitude
+5-11 m, au-dessus du chemin · ~00:09 · prop narratif · pas d'Echo
+Unicite : 6 filets uniques · LOD0 4 100 tris · cull 110 m
+
+§ 1 — CE QU'ON VOIT
+Six grands filets de peche hisses en position de sechage sur un portique de
+bois de 11 m. Ils pendent en nappes verticales, la maille ouverte, sur 6 m
+de haut. Ils sont HISSES, pas tombes : les cordes de levage sont tendues,
+les taquets sont bloques, les noeuds sont propres.
+Trois ans de crachin les ont noircis. Ils ont durci. La maille n'est plus
+souple : elle a pris sa forme et ne bougera plus. Des algues seches y sont
+prises, quelques plumes, un morceau de voile bleu, et — a 7 m de haut,
+dans le filet n°4 — une chaussure d'homme, prise dans la maille, qui n'est
+jamais redescendue.
+Sous les filets, le sol est plus sec que partout ailleurs : ils font toit.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 4 100 tris (cartes d'alpha doubles faces + cordes en geometrie).
+Atlas 2K partage avec le kit K1. Shader `net_alpha.gdshader` : alpha-hash
+plutot qu'alpha-blend (pas de tri de transparence, gain de 0,3 ms).
+Cloth : AUCUNE. Vertex-anim de 1,5 cm d'amplitude, 0,08 Hz, sur les bords
+uniquement. Les filets ont durci ; ils fremissent, ils ne flottent pas.
+Collision : aucune. Le joueur passe dessous, jamais dedans.
+Cout GPU 0,18 ms.
+
+§ 3 — CE QUE CA DIT
+Le travail s'est arrete au milieu. On hisse les filets le soir pour qu'ils
+sechent la nuit et on les redescend le matin. Ceux-la ont ete hisses le soir
+du 14 octobre. Personne n'est venu les redescendre.
+Le geste humain : quelqu'un a fini sa journee normalement.
+La chaussure a 7 m dit autre chose : quelqu'un a grimpe dans les filets,
+apres. Pourquoi, jamais explique.
+
+§ 4 — ECHO
+NEANT. Raison : les filets ont ete touches par des mains de travail
+quotidien, pas par un moment. Trop de mains, trop souvent, pendant trente
+ans. Un Echo ici serait un brouhaha. [NAR] Regle implicite du systeme :
+les objets trop utilises ne gardent rien. Elle n'est jamais enoncee.
+
+§ 5 — MISE EN SCENE
+Le chemin passe DESSOUS. Le joueur traverse 14 m sous les nappes. La
+lumiere d'aube les traverse et projette au sol un quadrillage mouvant de
+mailles — le seul motif graphique fort de S1. Il bouge de 2 cm.
+C'est le premier moment « beau » du jeu, a 9 minutes, et il dure 8 secondes.
+Trois plans : les cordes tendues en amorce / la nappe / le Phare derriere.
+La chaussure n'est visible que si le joueur leve les yeux.
+
+§ 6 — AUDIO
+SFX(net_stiff_creak) toutes les 11-18 s, -24 dB, un seul filet a la fois.
+Le son est SEC, pas souple : un filet dur. Sous les filets, l'ambiance perd
+2 dB et gagne un leger etouffement : on sent le toit. Aucune musique.
+
+§ 7 — INTERDICTIONS
+Interdit de : simuler les filets en cloth · les faire onduler amplement ·
+permettre de grimper dedans · rendre la chaussure ramassable ou la
+signaler · ajouter un corps, un oiseau mort, un poisson fossilise · faire
+tomber un filet au passage du joueur.
+
+§ 8 — LIENS
+PN-001 (les bottes) : encore des chaussures qui restent. PN-016 (caisses a
+poissons seches) : meme metier interrompu. PN-716 (anim) : `net_hang_drift`.
+[THEME] LE TRAVAIL INTERROMPU, motif qui culmine avec PN-131, le palier des
+cloches, ou Esteban, lui, a continue de travailler pour rien.
+
+§ 9 — DOD
+[ ] 6 filets, formes uniques, cordes tendues et taquets bloques
+[ ] Vertex-anim <= 1,5 cm, aucune simulation
+[ ] Le quadrillage de lumiere au sol est visible et mobile
+[ ] La chaussure est a 7 m, non signalee, non ramassable
+[ ] Alpha-hash, pas d'alpha-blend, 0,18 ms max

@@ -1,0 +1,105 @@
+===============================================================================
+PN-125 — LE PAVE DESCELLE
+===============================================================================
+Asset : SM_S7_Pave_Descelle · S7, quai du front de mer, a 14 m du banc ·
+~05:51 · prop narratif INTERACTIF · pas d'Echo · LOD0 340 tris
+
+§ 1 — CE QU'ON VOIT
+Un pave. Un seul, parmi des milliers.
+Il est descelle : il bouge sous le pied. Quand le joueur marche dessus, il
+bascule de 4 mm et fait un bruit.
+[OBL] Il n'est pas signale. Il n'est pas different des autres. Il est
+exactement de la meme pierre, de la meme taille, de la meme couleur.
+Le joueur le decouvre en marchant dessus.
+S'il le souleve — [OBL] et il peut, il y a un prompt une fois qu'il a
+bascule dessus — il y a un creux en dessous.
+Un creux de 12 x 8 x 6 cm, creuse dans la terre sous le pave.
+Dedans, il y a : une piece de monnaie, un bouton de nacre, un petit soldat
+de plomb sans tete, et un bout de papier plie en huit, pourri, illisible.
+[OBL] C'est une CACHETTE D'ENFANT. Le plus vieux type de cachette du monde.
+Elle a peut-etre vingt ans. Elle a peut-etre trois ans.
+Le papier est illisible. Definitivement. Il est en bouillie.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 340 (pave 60 + creux 80 + 4 objets 200).
+[OBL] Le pave descelle doit etre INDISCERNABLE des autres visuellement.
+Meme mesh, meme texture, meme rotation aleatoire. Verifier sur 20 testeurs :
+zero ne doit le reperer a l'oeil.
+Il se revele UNIQUEMENT par le son et le basculement quand on marche dessus.
+Physique : RigidBody contraint, bascule de 4 mm, retour amorti.
+[OBL] Le joueur peut ne jamais marcher dessus. Taux de decouverte cible :
+28-39 %. [OBL] Il est place sur la trajectoire la plus probable, mais elle
+fait 4 m de large.
+Le papier pourri : sculpt, shader `paper_pulped`, aucune texture de texte.
+[OBL] Il n'y a PAS de texte dans la texture. Rien n'est cache. Il n'y a
+rien a extraire, rien a restaurer, rien a decouvrir.
+Interaction : LOH-ACT-224, 3,2 s. Il souleve, il regarde, il repose.
+[OBL] Il ne prend rien. Aucun des 4 objets n'est ramassable.
+[OBL] Il REPOSE le pave. Exactement comme il etait.
+
+§ 3 — CE QUE CA DIT
+Un enfant a cache quatre choses sous un pave, il y a longtemps.
+Le geste humain : creuser un trou sous un pave et y mettre ce qu'on a de
+plus precieux.
+[OBL] Rien n'est explique. Ni qui, ni quand, ni pourquoi.
+Le soldat de plomb n'a pas de tete : [OBL] il l'avait deja perdue avant
+d'etre cache. On cache ce qui est casse aussi.
+Le papier illisible : [OBL] il y avait quelque chose d'ecrit dessus. Ce
+n'est plus lisible et ca ne le sera jamais.
+[ART] C'est le dernier faux espoir du chapitre : un papier plie, cache,
+secret — et il est en bouillie.
+Et Lohen le repose et remet le pave.
+
+§ 4 — ECHO
+NEANT. [OBL] Enfant (regle PN-007). Quatriemement et dernierement.
+[OBL] Et il n'y a pas de prompt d'Echo, ce qui est la cinquieme fois que le
+jeu refuse un enfant. E23 (PN-117) a eu lieu 20 minutes plus tot : le jeu a
+deja fait son exception. Il n'en fera pas deux.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur marche sur le quai, sous la pluie, en direction du pont.
+Un pave bascule sous son pied.
+[ART] C'est le seul evenement du chapitre declenche par le HASARD du
+deplacement. Tout le reste est place, cadre, compose. Ici : il a marche au
+bon endroit.
+[OBL] Le prompt apparait APRES le basculement, pas avant. Il n'y a aucun
+moyen de savoir avant de marcher dessus.
+S'il continue sans s'arreter, le prompt disparait apres 3 secondes et ne
+revient que s'il remarche dessus.
+[OBL] Aucun son, aucune musique, aucune camera, aucune reaction de Lohen.
+Quand il repose le pave, il est exactement comme avant. [OBL] Rien n'a
+change dans le monde. Le joueur peut le rebasculer. Indefiniment.
+
+§ 6 — AUDIO
+SFX(cobble_rock) : le basculement. [OBL] Un son de pierre sur pierre, mat,
+avec un petit claquement d'eau (il y a de l'eau dessous).
+C'est le seul indice. Il doit etre distinct des pas normaux sur pave
+mouille.
+SFX(cobble_lift_suction) : le pave souleve — il y a de la succion, il est
+scelle par l'eau. Un son epais.
+SFX(cobble_set_back) : repose.
+[OBL] Aucune musique, jamais. Le front de mer est sans musique (PN-122).
+
+§ 7 — INTERDICTIONS
+Interdit de : signaler le pave visuellement · ajouter un marqueur · rendre
+le papier lisible · y cacher un indice · rendre les objets ramassables ·
+ajouter un cinquieme objet · ajouter un autre pave descelle · faire
+commenter Lohen · donner un Echo · afficher un succes · empecher de
+rebasculer le pave · modifier l'etat du monde apres l'ouverture.
+
+§ 8 — LIENS
+PN-053, PN-090 (les tris de Sol) : un autre enfant, d'autres objets ranges.
+PN-121 (les onze objets poses, a 200 m) : [OBL] aucun lien.
+PN-088 (les onze objets coinces dans la grille, S5) : [OBL] aucun lien.
+PN-007, PN-014, PN-050, PN-063, PN-118 (les enfants du chapitre).
+[THEME] LES ENFANTS ABSENTS. [THEME] CE QU'ON NE SAURA PAS.
+
+§ 9 — DOD
+[ ] Indiscernable visuellement : 0/20 testeurs le reperent a l'oeil
+[ ] Revele uniquement par le son et le basculement de 4 mm
+[ ] 4 objets, aucun ramassable, soldat de plomb sans tete
+[ ] Papier pourri sans aucun texte dans la texture
+[ ] Prompt apres basculement seulement, disparait en 3 s
+[ ] Pave repose a l'identique, rebasculable indefiniment
+[ ] Son de basculement distinct des pas sur pave mouille
+[ ] Zero musique, zero succes, zero changement d'etat

@@ -1,0 +1,132 @@
+===============================================================================
+PN-048 — LA SACOCHE DE LOHEN
+===============================================================================
+Asset : SM_Sacoche_Lohen · S3, portee par Lohen depuis le plan 1 du jeu ·
+~02:31 · PORTEUR D'ECHO E11 · SEUL ECHO SUR UN OBJET DU PRESENT ·
+LOD0 2 900 tris
+
+§ 1 — CE QU'ON VOIT
+La sacoche que Lohen porte depuis la premiere seconde du jeu. Le joueur
+l'a vue 40 000 fois : elle est dans le cadre en permanence, sur sa hanche
+gauche, elle bat contre lui a chaque pas.
+Cuir brun, rabat, une boucle, une bandouliere passee en travers du buste.
+Elle est usee comme un objet de metier : les angles sont ronds, le rabat a
+blanchi, la boucle a use le cuir en dessous sur 6 cm, et la bandouliere a
+un point de reprise cousu au gros fil noir.
+A l'intérieur — et pour la premiere fois, le joueur va voir dedans :
+six lettres, debout, rangees par la tranche.
+Et, au fond, a plat, une septieme. Celle de la barque. Marquee « 0114 ».
+Le cuir du fond est deforme : il a pris la forme des six lettres.
+Elles sont la depuis longtemps.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 900. [OBL] La sacoche est un asset PERSONNAGE, attache au squelette
+de Lohen (bone `hip_L_bag`), avec un jiggle physique a 2 os et une
+contrainte de collision contre la cuisse.
+Elle est visible dans 100 % des plans du jeu et donc budgetee comme un
+element de personnage, pas comme un prop d'environnement.
+Textures : atlas 4K dedie, partage avec le costume de Lohen.
+Pour E11 : le rabat s'ouvre (PROP-756, 1,4 s) et l'intérieur est modelise —
+six enveloppes en geometrie, 340 tris chacune, + la septieme.
+[OBL] Les six enveloppes portent des adresses lisibles. Six noms, six
+adresses de Velmora. Ecriture manuscrite reelle, six mains differentes
+(ce sont six expediteurs differents). Issues de `content/victims_641.csv`.
+Shader `leather_worn_daily`.
+
+§ 3 — CE QUE CA DIT
+Lohen porte six lettres a livrer. Elles sont adressees a des gens de
+Velmora.
+[OBL] Il les a acceptees il y a trois ans, avant la Maree. Il etait en
+tournee. Il devait les livrer le 15 octobre.
+Le geste humain : ne pas rendre les lettres. Ne pas les jeter. Les garder
+dans sa sacoche pendant trois ans et les porter tous les jours.
+[NAR] C'est la raison officielle de sa venue. C'est ce qu'il dirait si on
+lui demandait : « Je viens livrer du courrier. »
+[OBL] Personne ne lui demande. Aucun PNJ ne pose la question. Le joueur le
+comprend seul, en voyant les six lettres, a 2 h 31.
+Et les six destinataires sont morts. Il le sait. Il les porte quand meme.
+
+§ 4 — ECHO
+ECHO E11 — « La tournee » — 36 secondes, mode A.
+[OBL] C'est le SEUL Echo du chapitre sur un objet du present, et il viole
+la regle etablie (PN-005, PN-009, PN-046). Cette violation est unique,
+deliberee, et jamais expliquee.
+[NAR] Justification interne, jamais enoncee : l'objet est du present, mais
+les six lettres, elles, viennent d'avant.
+Ce qu'on voit : la passerelle du Marche, en plein jour, habitee. Des
+silhouettes passent. Beaucoup — onze, le maximum apres E01.
+Elles vont et viennent, vite, sans se voir, dans les deux sens.
+Au milieu, immobile, une silhouette avec une sacoche sur la hanche gauche.
+C'est un relayeur. Ce n'est pas Lohen : la silhouette est plus petite, plus
+large d'epaules, et elle porte la sacoche du cote droit... non.
+[OBL] Elle porte la sacoche a GAUCHE, comme Lohen. Elle a exactement sa
+silhouette. Le joueur croira que c'est lui.
+Ce n'en est pas un : Lohen n'est jamais venu a Velmora avant. Il le dit en
+S4 (LOH-DLG-402 : « Je n'etais jamais venu. »).
+C'est un autre relayeur, avec le meme metier, la meme sacoche, la meme
+position. Le jeu ne le corrige jamais.
+La silhouette distribue. Elle tend une lettre a quelqu'un. La personne la
+prend. Elles se separent. Elle en tend une autre. Six fois.
+A la septieme, elle tend une lettre et personne ne la prend. Elle reste le
+bras tendu, 5 secondes.
+Elle range la lettre dans sa sacoche.
+Elle continue.
+Musique : M11 « Deux qui se manquent » (la meme que E07), mais cette fois
+LES DEUX lignes de clarinette jouent — [OBL] et elles ne se rejoignent
+toujours pas : elles sont decalees d'une mesure du debut a la fin.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+[OBL] E11 ne se declenche pas par proximite d'un objet : il se declenche
+quand Lohen s'arrete au centre exact de la grande passerelle du niveau 2,
+un carrefour de six directions, et reste immobile 4 secondes.
+C'est le seul Echo du jeu declenche par une POSITION et une IMMOBILITE.
+Rien ne l'indique. Taux de decouverte cible : 51-62 %.
+Pendant l'Echo, la camera est libre : le joueur peut tourner sur lui-meme
+et voir les onze silhouettes passer autour de lui, de tous les cotes.
+[OBL] Aucune ne le traverse. Elles le contournent — sans le voir, mais en
+le contournant. C'est la seule fois du chapitre ou les silhouettes
+reagissent a la presence physique de Lohen. Ce n'est jamais explique.
+Apres : le rabat de la sacoche s'ouvre tout seul (PROP-756), reste ouvert
+3 s, et Lohen le referme. LOH-ACT-217, 2,1 s. Le joueur voit les six
+lettres pendant exactement 3 secondes.
+[OBL] C'est la seule fois. Il ne peut jamais rouvrir la sacoche.
+
+§ 6 — AUDIO
+Hors Echo : SFX(bag_leather_step), la sacoche qui bat contre la hanche.
+[OBL] Present a chaque pas depuis 2 h 31, a -34 dB. C'est le son le plus
+repete du jeu (environ 41 000 occurrences sur une partie). Il doit avoir
+16 variations et une legere desynchronisation (0,08 s apres le pas).
+Pendant E11 : onze jeux de pas, spatialises, qui passent autour du joueur.
+La rumeur de ville habitee, cette fois a -22 dB (le plus fort du chapitre).
+Des voix : [OBL] indistinctes, jamais un mot.
+A la 7e lettre non prise : tout s'arrete sauf les pas. 5 secondes de pas
+qui continuent autour d'un homme au bras tendu.
+Apres : 4 s de silence. Puis le son de la sacoche qui s'ouvre — un cuir qui
+craque, une boucle. Le joueur ne l'a jamais entendu.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre d'ouvrir la sacoche · lire les six lettres · reveler
+leur contenu · les livrer · les jeter · faire commenter Lohen · confirmer
+ou infirmer que la silhouette est Lohen · faire traverser Lohen par une
+silhouette · rendre E11 rejouable · signaler le declencheur · superposer
+les deux lignes de M11 · ouvrir la septieme enveloppe (« 0114 »).
+[OBL] Les six lettres ne sont JAMAIS livrees, dans aucun des sept chapitres.
+
+§ 8 — LIENS
+PN-005 (l'enveloppe « 0114 » de la barque : c'est la septieme, au fond).
+PN-042 (la sacoche de l'anneau 12). PN-059 (les six lettres a livrer, prop
+distinct, S3 : ce sont CELLES-CI, vues de plus pres).
+PN-018 (le jeton). PN-143 : « Des mains qui portent le courrier de toute
+une ville et qui ne recoivent jamais rien. »
+[THEME] PORTER POUR LES AUTRES. [THEME] SE MANQUER.
+
+§ 9 — DOD
+[ ] Asset personnage, jiggle 2 os, visible dans 100 % des plans
+[ ] Six enveloppes avec adresses manuscrites, six mains differentes, CSV
+[ ] E11 declenche par position + 4 s d'immobilite, sans aucun indice
+[ ] 11 silhouettes, contournement physique de Lohen, aucune traversee
+[ ] 7e lettre : bras tendu 5 s, pas qui continuent, tout le reste coupe
+[ ] Les deux lignes de M11 decalees d'une mesure, jamais superposees
+[ ] Rabat ouvert 3 s exactement, une seule fois dans la partie
+[ ] bag_leather_step : 16 variations, -34 dB, desync 0,08 s

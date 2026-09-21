@@ -1,0 +1,109 @@
+===============================================================================
+PN-098 — LE PASSAGE TROP ETROIT
+===============================================================================
+Asset : SM_S5_Passage_Etroit · S5, fin du conduit -3, avant la sortie ·
+~04:40 · prop narratif INTERACTIF · pas d'Echo · LOD0 3 100 tris
+
+§ 1 — CE QU'ON VOIT
+Le conduit se retrecit. Une voute partiellement effondree a reduit la
+section : il reste un passage de 48 cm de large sur 1,10 m de haut, sur
+une longueur de 4 metres.
+Il faut se mettre de cote et avancer en crabe.
+Les gravats qui bouchent le reste sont anciens et tasses. Ce n'est pas
+recent.
+Sur les deux parois du passage, a hauteur d'epaule, la pierre est POLIE.
+Deux bandes lisses, sur 4 metres, luisantes.
+[OBL] Elles sont a 1,25 m de haut. C'est la hauteur d'epaule d'un enfant
+de 13 ans, pas d'un adulte.
+Il y a aussi des marques plus hautes, a 1,45 m : des eraflures, du tissu
+accroche, des traces. Quelqu'un de plus grand est passe, quelques fois, et
+ca ne s'est pas bien passe.
+Au sol, dans le passage : un bouton. Un bouton de veste, arrache.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 100 (gravats 1 900 + parois 1 200).
+Les deux bandes polies : masque de roughness (0,16 contre 0,72) + un
+creusement de 1 mm sur 4 m. [OBL] Elles sont continues, sans interruption :
+un corps qui frotte ne saute pas de zones.
+Les eraflures hautes : 22 marques individuelles en geometrie, avec 4 fibres
+de tissu accrochees (cartes d'alpha, 0,2 mm).
+Le bouton au sol : 40 tris. [OBL] Il est du MEME modele que les boutons de
+la veste de relayeur de Lohen. Le joueur peut comparer : il en manque un a
+sa propre veste depuis... [OBL] NON. Aucun bouton ne manque a la veste de
+Lohen. Le bouton du sol vient de la veste de SOL (PN-052), a qui il manque
+trois boutons sur cinq.
+[OBL] Verifier la coherence : les 3 boutons manquants de PN-052 sont
+justifies, et celui-ci est l'un d'eux.
+TRAVERSEE : LOH-LOC-197 `squeeze_sideways`, 4 m, 14 secondes.
+[OBL] Camera bloquee de face contre la paroi pendant 2 des 14 secondes.
+Le joueur voit de la pierre a 15 cm de l'ecran. C'est deliberement
+desagreable.
+
+§ 3 — CE QUE CA DIT
+Sol passe ici tous les jours. Lohen passe difficilement.
+Le geste humain : frotter. Quatre metres de pierre polie par un corps
+d'enfant, sur des centaines de passages.
+Les marques hautes : d'autres adultes sont passes. Peu. Et ils se sont
+accroches.
+[OBL] Jamais explique qui. Il n'y a pas de nombre, pas de date, pas de nom.
+Le bouton de Sol au sol : il l'a perdu ici et ne l'a pas ramasse.
+[NAR] Le detail qui compte : Sol a un chemin quotidien qui exclut la
+plupart des adultes. Il vit dans un espace dimensionne pour lui.
+
+§ 4 — ECHO
+NEANT. Element d'environnement (PN-055) et geste d'apres.
+[OBL] Techniquement : le passage fait 48 cm, le systeme d'Echo requiert
+2 m de recul (PN-060). Impossible.
+
+§ 5 — MISE EN SCENE
+[OBL] Sol passe en premier, en marchant presque normalement. 4 secondes.
+Il ressort de l'autre cote.
+Lohen met 14 secondes.
+[OBL] Pendant ces 14 secondes : la bougie de Sol est de l'autre cote. Le
+passage est eclaire par elle, de loin, donc tres faiblement, en contre-jour.
+Lohen avance vers une petite lumiere, en crabe, dans 48 cm.
+[OBL] Deux fois pendant la traversee, sa sacoche (PN-048) accroche. Il
+s'arrete, la degage, continue. LOH-ANI-241 et 242. Aucun son de voix.
+[OBL] Il ne lache PAS la sacoche. Il ne la passe pas devant. Il ne la pose
+pas. Il se coince et il se degage.
+[ART] Un homme qui porte six lettres qu'il ne peut pas livrer se coince
+dans un passage de 48 cm et ne pose pas son sac.
+Aucun dialogue. Aucune musique (S5 est sans musique depuis PN-096).
+
+§ 6 — AUDIO
+SFX(cloth_stone_scrape) : le tissu contre la pierre, continu pendant les
+14 s. [OBL] C'est le son dominant, -15 dB, et il est genant.
+SFX(bag_leather_catch) : les deux accrochages de la sacoche.
+SFX(loh_breath_tight) : [OBL] la respiration de Lohen est audible pendant
+toute la traversee, a -22 dB. TROISIEME et derniere fois du chapitre
+(apres PN-022 et PN-053).
+[OBL] Elle n'est pas haletante. Elle est CONTROLEE et courte. Un homme qui
+n'aime pas ca et qui gere.
+L'acoustique : RT60 0,08 s. [OBL] Le plus mat du jeu. Les sons meurent
+instantanement. Apres la traversee, la reverb revient a 1,4 s et le
+soulagement est physique.
+
+§ 7 — INTERDICTIONS
+Interdit de : elargir le passage · degager les gravats · permettre de poser
+la sacoche · ajouter une crise d'angoisse · ajouter un QTE · ajouter une
+barre de souffle · faire paniquer Lohen · faire parler Sol · ramasser le
+bouton · le relier a la veste de Lohen · ajouter un chemin alternatif ·
+ajouter de la musique · accelerer la traversee.
+
+§ 8 — LIENS
+PN-052 (la veste de Sol, 3 boutons manquants) : le bouton du sol est l'un
+des trois. Coherence obligatoire.
+PN-053 (le rampement de 12 m dans la gaine, S3) : le premier inconfort.
+Celui-ci est le second et le pire.
+PN-048 (la sacoche qui accroche). PN-093 (la flaque).
+[THEME] CE QUI COUTE. [THEME] UN MONDE DIMENSIONNE POUR UN ENFANT.
+
+§ 9 — DOD
+[ ] 48 x 110 cm sur 4 m, traversee en crabe, 14 secondes
+[ ] Deux bandes polies continues a 1,25 m, roughness 0,16
+[ ] 22 eraflures hautes a 1,45 m, 4 fibres de tissu accrochees
+[ ] Bouton au sol coherent avec les 3 manquants de PN-052
+[ ] Deux accrochages de sacoche, jamais posee
+[ ] Respiration controlee a -22 dB, 3e et derniere fois du chapitre
+[ ] RT60 0,08 s, le plus mat du jeu
+[ ] Camera contre la paroi pendant 2 s, deliberement genant

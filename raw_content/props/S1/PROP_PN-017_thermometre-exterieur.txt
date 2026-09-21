@@ -1,0 +1,77 @@
+===============================================================================
+PN-017 — LE THERMOMETRE EXTERIEUR
+===============================================================================
+Asset : SM_S1_Thermometre · S1, montant de l'auvent de la criee ·
+~00:37 · prop narratif · pas d'Echo · LOD0 260 tris
+
+§ 1 — CE QU'ON VOIT
+Un thermometre a alcool publicitaire, plaque emaillee bleue de 40 x 9 cm,
+vissee a un montant. Une reclame pour une marque de cirage de bottes,
+« BRILLANT DES QUAIS », avec un dessin de botte lustree.
+Le tube de verre est intact. La colonne d'alcool rouge est visible.
+Elle indique 4 degres.
+La plaque a une trace d'impact : un eclat d'email de la taille d'un pouce,
+en haut a gauche, avec la tole nue qui rouille dessous.
+C'est tout. C'est le plus petit prop narratif du chapitre.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 260 tris. Plaque 4 tris + tube 180 + vis 76.
+Texture 2K dediee (l'email exige une texture propre : les emaux anciens ont
+une profondeur speculaire specifique, roughness 0,12 avec une couche de
+micro-rayures a 0,4).
+Le tube : geometrie cylindrique creuse, avec la colonne rouge en mesh
+interieur. [OBL] Pas une texture. La refraction du verre sur la colonne
+rouge est ce qui rend ce prop credible a 50 cm.
+Shader `enamel_chipped` + `glass_tube`.
+Collision : aucune. Cull a 22 m.
+[OBL] Statique absolu. La colonne ne bouge JAMAIS, a aucune heure, dans
+aucune sequence. Il fait 4 degres a Velmora depuis trois ans.
+
+§ 3 — CE QUE CA DIT
+Il fait froid. Quatre degres. Le joueur sait maintenant ce que Lohen
+ressent sous sa veste, et pourquoi la brume ne se leve pas.
+[NAR] Fonction reelle : c'est le seul element du chapitre qui donne au
+joueur une donnee PHYSIQUE, chiffree, objective, sur le monde. Tout le
+reste est atmosphere, suggestion, ambiguite. Ici, un chiffre. Cela ancre.
+Un monde ou tout est symbolique n'est pas credible. Il faut un thermometre.
+Le geste humain : quelqu'un a visse une reclame de cirage a bottes a
+l'entree de la criee, parce que les pecheurs ciraient leurs bottes.
+Le joueur a vu quarante bottes il y a une demi-heure (PN-001).
+Et sur la plaque, une botte, dessinee, brillante, neuve, joyeuse.
+
+§ 4 — ECHO
+NEANT. Raison : objet publicitaire industriel, aucun proprietaire.
+
+§ 5 — MISE EN SCENE
+A hauteur d'yeux, sur le montant que le joueur frole en entrant dans la
+criee. Il passe a 60 cm. La plaque est bleue vif — l'unique tache de bleu
+SATURE de toute la sequence 1, dans une palette de gris-vert desatures.
+[ART] Le joueur la voit forcement. Elle est trop propre, trop coloree, trop
+commerciale. Elle vient d'un monde ou on vend des choses. Ce monde n'existe
+plus, et une plaque emaillee lui survit parce que l'email ne pourrit pas.
+La botte dessinee est ce que le joueur regarde en dernier.
+
+§ 6 — AUDIO
+NEANT. Aucun son. Aucune interaction. Aucune musique.
+
+§ 7 — INTERDICTIONS
+Interdit de : faire varier la temperature · ajouter un cycle jour/nuit
+thermique · afficher la valeur en interface · faire commenter · casser le
+tube · ajouter d'autres plaques publicitaires ailleurs (celle-ci est la
+SEULE reclame visible du chapitre, sa raretee est sa force) · saturer une
+autre surface du meme bleu.
+
+§ 8 — LIENS
+PN-001 (les quarante bottes) — le lien silencieux, a 25 minutes d'ecart.
+PN-039 (le panneau emaille de la pharmacie, S3) : NON, ce prop n'existe pas
+et ne doit pas etre cree ; la reclame reste unique.
+[THEME] CE QUI SURVIT. L'email, le laiton, le verre et la fonte survivent.
+Le bois, le tissu, le papier et les gens, non. Cette hierarchie des
+matieres est un principe de direction artistique applique partout (05.11).
+
+§ 9 — DOD
+[ ] Colonne d'alcool en geometrie, refractee par le verre, fixee a 4°
+[ ] Email roughness 0,12 + micro-rayures, eclat avec tole rouillee dessous
+[ ] Unique tache de bleu sature de S1, verifiee sur toute la palette
+[ ] Botte dessinee lisible a 60 cm
+[ ] Zero son, zero interaction, zero variation

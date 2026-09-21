@@ -1,0 +1,112 @@
+===============================================================================
+PN-116 — LA COULEE DE VERRE DU VERRIER
+===============================================================================
+Asset : SM_S7_Coulee_Verre · S7, du bas de la Descente jusqu'a l'atelier ·
+~05:22 · prop narratif · pas d'Echo · LOD0 8 900 tris (sur 120 m)
+
+§ 1 — CE QU'ON VOIT
+Au bas des 180 marches, sur les pavés, il y a du verre.
+Pas des debris : une COULEE. Une trainee de verre solidifie, large de 40 a
+90 cm, epaisse de 2 a 11 cm, qui court sur les pavés, contourne un angle,
+monte trois marches, et continue.
+Elle est translucide, gris-vert, avec des bulles emprisonnees.
+Elle a coule et elle a fige. On voit le sens de l'ecoulement : les rides de
+surface sont perpendiculaires au mouvement, comme sur de la lave.
+Elle epouse tout : les joints des pavés, une bouche d'egout, le pied d'un
+banc. Elle a coule AUTOUR d'une chaussure abandonnee, qui est maintenant
+scellee dedans, visible.
+[OBL] Elle vient d'un endroit et va vers un autre. Le joueur peut suivre le
+sens.
+Elle mene a l'atelier (PN-117).
+En la suivant, elle devient plus large et plus epaisse.
+[OBL] Elle est FROIDE. Depuis longtemps. Elle n'a pas trois ans : elle en a
+peut-etre six mois.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 8 900 pour 120 m de coulee. Decoupee en 14 segments modulaires + 9
+segments uniques (les passages autour d'obstacles).
+[OBL] Le shader `molten_glass_cooled` : translucidite (SSS 2 cm), bulles
+internes (parallax + une texture 3D de bulles), et une surface a rides
+figees (normal map dirigee).
+[OBL] Elle doit etre lisible comme du VERRE, pas comme de la resine ou de
+la glace. Difference : l'indice de refraction (1,52), le manque de
+givre, et les bulles spheriques piegees.
+[OBL] Le joueur MARCHE DESSUS. Collision praticable, mais la surface est
+irreguliere : LOH-LOC-203 `walk_uneven_glass`, vitesse -14 %, avec des
+micro-ajustements de pied.
+Cout : 1,2 ms (SSS + parallax sur 120 m).
+
+§ 3 — CE QUE CA DIT
+Quelque chose de fondu a coule ici, il y a environ six mois, sur 120 metres,
+depuis l'atelier vers la ville.
+Le geste humain : aucun. Ce n'est pas un geste.
+[OBL] Et ce n'est pas la Maree : la Maree a trois ans, et elle est NOIRE.
+Cette coulee est gris-vert et elle a six mois.
+[NAR] C'est du verre de four. C'est ce qui sort d'un creuset qu'on a
+laisse deborder, ou renverse, ou qui a fondu son propre four.
+[OBL] Le Verrier. Le joueur va le rencontrer dans quelques minutes.
+[OBL] Le jeu n'etablit jamais explicitement que la coulee vient de lui, ni
+qu'elle sort de son corps, ni qu'elle est produite par lui.
+Elle sort de l'atelier. C'est tout ce qu'on sait.
+La chaussure scellee dedans : quelqu'un etait la quand ca a coule.
+[OBL] Il n'y a pas de pied dans la chaussure. Elle est vide.
+
+§ 4 — ECHO
+NEANT. [OBL] Rappel : le verre ne garde rien (regle PN-011, etablie en S2
+sur la Maree). Cette coulee est du verre. Elle ne garde rien non plus.
+[ART] Le joueur qui a compris la regle a 3 heures de jeu la voit s'appliquer
+ici a une matiere qui n'est pas la Maree. La regle est sur le verre, pas
+sur la mer. Il l'apprend maintenant.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur descend 180 marches sous la pluie. En bas, ses pieds
+touchent du verre.
+[ART] Il ne le remarque pas tout de suite : il pleut, il fait sombre, le
+pave est noir et brillant. Puis le son de ses pas change.
+[OBL] C'est l'AUDIO qui le lui apprend, pas l'image. Le pas sur le pave
+mouille devient un pas sur du verre.
+Il baisse les yeux.
+[OBL] La coulee le GUIDE. C'est le seul element de guidage explicite du
+chapitre, et il est entierement diegetique : une trainee au sol qu'on suit.
+[OBL] Elle ne brille pas, ne pulse pas, n'a pas de halo. Elle est juste la
+et elle va quelque part.
+Sur 120 m, la pluie tombe dessus et ruisselle : [OBL] l'eau court sur le
+verre plus vite que sur le pave. Des rigoles se forment et suivent la
+coulee. On voit le chemin par l'eau qui y coule.
+
+§ 6 — AUDIO
+SFX(step_glass_thick) : les pas sur le verre epais. [OBL] 12 variations,
+un son CLAIR, plein, avec une resonance courte. Distinct de la Maree
+(PN-020, verre massif, pas de resonance) et du pave.
+SFX(rain_on_glass_flow) : la pluie sur la coulee. Plus aigu, plus net que
+sur la pierre.
+[ART] Le joueur entend la coulee avant de la voir, et il l'entend a chaque
+pas pendant 120 m.
+M23 « La Descente » continue. [OBL] Elle ne change pas.
+
+§ 7 — INTERDICTIONS
+Interdit de : chauffer la coulee · la casser · en prendre un morceau ·
+reveler son origine · montrer le Verrier en train de la produire · ajouter
+un corps dans la coulee · ajouter un pied dans la chaussure · la faire
+briller · la faire pulser · ajouter un halo · lui donner un Echo · la
+relier explicitement a la Maree · ajouter de la vapeur.
+
+§ 8 — LIENS
+PN-117 (l'atelier, au bout). PN-128 (les fragments du Verrier).
+PN-028 (les bouees de verre vert, S2) et PN-065 (la serre) : le meme
+artisan, vingt ans plus tot.
+PN-020, PN-033 (les seules fractures de la Maree) : [OBL] la coulee n'est
+PAS de la Maree. Couleur, age, comportement differents.
+PN-011 (« le verre ne garde rien »).
+[THEME] LE VERRE COMME METIER. [THEME] SUIVRE UNE TRACE.
+
+§ 9 — DOD
+[ ] 120 m, 14 modules + 9 segments uniques, largeur 40 a 90 cm
+[ ] Rides figees perpendiculaires au sens d'ecoulement, lisibles
+[ ] SSS 2 cm, bulles spheriques piegees, IOR 1,52, jamais de givre
+[ ] Chaussure scellee et vide
+[ ] Praticable, LOH-LOC-203, vitesse -14 %
+[ ] Son de pas distinct de la Maree ET du pave, 12 variations
+[ ] Rigoles d'eau suivant la coulee
+[ ] Zero halo, zero brillance, zero pulsation
+[ ] Gris-vert, jamais noir ; age visible de 6 mois, pas 3 ans

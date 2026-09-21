@@ -1,0 +1,350 @@
+################################################################################
+#                                                                              #
+#   ANNEXE C — LES 2 840 LIGNES DE DIALOGUE, UNE PAR UNE                       #
+#   « LOHEN — LES SEPT LETTRES DE VELMORA » — CHAPITRE 1                       #
+#                                                                              #
+#   INDEX MAITRE + STANDARD DE FICHE + CASTING + REPARTITION                   #
+#   Reference : LOHEN_PROMPT_MASTER.txt, BLOC 12 et 13.33.                     #
+#   Documents autonomes : dialogues/S1..S8, dialogues/BARKS, dialogues/SYSTEME #
+#   Version 1.0 — CONTRACTUEL                                                  #
+#                                                                              #
+################################################################################
+
+
+===============================================================================
+1. CE QUE CE DOCUMENT EST, ET CE QU'IL N'EST PAS
+===============================================================================
+
+1.01 Le document maitre annonce, en 13.33 : « Total de lignes FR : 2 840. »
+     Ce chiffre n'etait pas une estimation. C'est un contrat. Cette annexe
+     l'honore : elle ecrit les 2 840, une par une, avec identifiant stable,
+     duree, emotion, direction d'acteur et condition de declenchement.
+
+1.02 Une « ligne » = un fichier de VO = un `id` dans le JSON = une entree de
+     la feuille de depouillement du comedien. Deux phrases dites d'un seul
+     souffle dans la meme prise = UNE ligne. Une phrase coupee par une
+     reaction de l'interlocuteur = DEUX lignes.
+     Cette definition est la seule autorisee. Elle est ce qui rend le
+     chiffre 2 840 verifiable par `tools/count_vo_lines.py`.
+
+1.03 Ce document ne contient PAS :
+     - les textes lus a l'ecran non doubles (etiquettes, affiches, fiches) :
+       ils sont dans l'annexe B, props, § 6 de chaque fiche ;
+     - la lettre d'Esteban (BLOC 20 du maitre, et PN-143) : elle compte pour
+       1 ligne de VO dans le decompte — une seule prise de 4 minutes — et
+       son texte ne se reecrit pas ici ;
+     - les cris, souffles, efforts, grognements de traversee. Ce sont des
+       SFX vocaux (banque `vox_effort`, 214 samples), pas des lignes.
+       Un effort n'est pas du dialogue. Un soupir ecrit DANS une replique,
+       si.
+
+1.04 [OBL] Aucune ligne de cette annexe n'existe pour atteindre 2 840.
+     Si une ligne peut etre coupee sans que la scene perde quelque chose,
+     elle doit etre coupee et le total tombe a 2 839. Le chiffre sert la
+     scene, jamais l'inverse. Le job CI `vo-orphan` signale toute ligne
+     jamais atteignable : une ligne orpheline est un bug, pas un bonus.
+
+
+===============================================================================
+2. STANDARD DE FICHE — LIRE AINSI CHAQUE ENTREE
+===============================================================================
+
+2.01 FORME CANONIQUE (3 lignes de document par ligne de VO)
+
+     [S3_TAL_L014]  TALLEC · 3,4 s · dur_mais_doux · p0,7
+         « Je ne t'aide pas a le trouver. Je t'aide a arreter. »
+         dir : il ne le regarde pas. Il regarde ses propres mains.
+
+     Champ 1 : identifiant. Format `S<seq>_<ROLE3>_L<NNN>`. STABLE A VIE.
+               Un id n'est jamais renomme, jamais recycle, jamais comble.
+               Si une ligne est coupee, son id devient un trou. Les trous
+               sont normaux et documentes en fin de fiche.
+     Champ 2 : role (voir casting § 4).
+     Champ 3 : duree cible en secondes. Plafond absolu 4,5 s (12.04).
+     Champ 4 : emotion — un mot du vocabulaire ferme de § 3.
+     Champ 5 : `pN,N` = silence ECRIT apres la ligne, en secondes
+               (`pause_after` du JSON). Entre 0,25 et 0,9 sauf mention.
+               Une pause superieure a 0,9 est toujours justifiee en dir.
+     Ligne 2 : le texte francais canonique, entre guillemets francais.
+     Ligne 3 : `dir :` direction d'acteur. Elle dit ce que le corps fait,
+               jamais ce que le personnage ressent. « Il a de la peine »
+               est interdit. « Il remet sa sangle qui ne glisse pas » est
+               une direction.
+
+2.02 VARIANTES DE MARQUAGE
+
+     (off)        voix off ou hors-champ
+     (int)        pensee interieure — 22 secondes en tout dans le chapitre,
+                  uniquement S1_LOH_L001..L014. Aucune autre. Jamais.
+     (murm)       murmure, sous le niveau du pas. Duck de -4 dB de moins.
+     (sup)        ligne superposee : peut demarrer avant la fin de la
+                  precedente. Signale au montage, jamais au hasard.
+     (cut)        ligne que l'interlocuteur coupe. Le comedien enregistre
+                  la phrase ENTIERE, on coupe au montage : la respiration
+                  de fin de phrase doit exister sous la coupe.
+     (x3)         trois variantes a enregistrer, tirees au hasard en jeu.
+                  Une variante = une ligne supplementaire au decompte, avec
+                  suffixe /a /b /c. Le total 2 840 les compte.
+
+2.03 CE QUI N'APPARAIT JAMAIS DANS UNE FICHE
+     - Aucune indication de sous-titre differente du texte dit. Le
+       sous-titre EST la ligne. Job CI `sub-match`.
+     - Aucune balise d'emotion dans le texte affiche (« [en colere] »).
+     - Aucune didascalie visible par le joueur.
+     - Aucune ligne qui explique la Maree (interdit 21.08).
+     - Aucune ligne qui prononce le mot « amour » hors des deux
+       occurrences autorisees : MIR-DLG-372 (S4) et la lettre (S8).
+       Job CI `word-amour` : exactement 2, sinon build rouge.
+
+
+===============================================================================
+3. VOCABULAIRE FERME DES EMOTIONS (28 entrees, aucune autre admise)
+===============================================================================
+
+     plat · retenu · las · sec · doux · dur_mais_doux · amer · tendre
+     presse · essouffle · bas · froid · poli · faux_poli · agace
+     moqueur · joueur · rieur · surpris · fige · prudent · bute
+     chaud · casse · clair · lointain · pratique · tendu
+
+3.01 Interdits de direction : « triste », « emu », « bouleverse »,
+     « au bord des larmes ». Ces mots produisent du surjeu. 13.33 l'interdit
+     deja pour la prise ; on l'interdit ici pour l'ecrit, parce qu'un
+     comedien joue ce qu'il lit.
+
+3.02 LOHEN n'a jamais l'emotion `rieur`. Une seule fois `chaud`
+     (S6_LOH_L092, pendant la danse). Une seule fois `casse`
+     (S8_LOH_L206, apres la lettre, quatre mots). C'est tout le personnage.
+
+3.03 ESTEBAN n'a jamais l'emotion `amer`. Jamais. Meme dans la lettre.
+     C'est la decision la plus importante du casting : il ne reproche rien.
+
+
+===============================================================================
+4. CASTING ET REPARTITION DES 2 840 LIGNES
+===============================================================================
+
+4.01 ROLES MAJEURS — 1 786 lignes
+
+     LOH  LOHEN                        648   debout, micro 18 cm, souffle audible
+     SOL  SOL                          402   13 ans, comedien non adulte OBLIGATOIRE
+     MIR  MIREILLE VANDECK             289   assise, tasse reelle dans la main
+     TAL  ORVAL TALLEC                 236   assis 80 %, prothese reelle sur table
+     EST  ESTEBAN MAREK                211   enregistre en DERNIER (13.33)
+                                     -----
+                                      1 786
+
+4.02 ROLES SECONDAIRES — 714 lignes, 11 comediens
+
+     PAL  PALLAS, relayeuse, 61 ans     79   S1, S3, S7. Premier humain du jeu.
+     BRE  BREL, le forgeron             74   S3, S7
+     GAR  GARRIC, milicien de Tallec    71   S3, S7
+     THE  THEA, treuilliste             69   S3, S4
+     ODI  ODILE, la laveuse             68   S3, S7
+     HAN  HANNO, marchand de sel        66   S3
+     VAN  VANE, la doctoresse           63   S3, S5
+     ORE  ORENN, passeur des Conduits   59   S5
+     CAR  CARO, l'homme a la porte      58   S3, S7
+     NIE  NIELS, enfant                 55   S3, S7
+     WEN  WENNA, enfant                 52   S3, S7
+                                     -----
+                                        714
+
+4.03 VOIX D'AMBIANCE — 340 lignes (les barks de 12.07), 22 comediens
+     non credites individuellement, tous enregistres en 2 journees.
+     Repartition par zone en § 6.
+
+4.03bis LES VOIX D'ECHO. Les morts qui parlent dans les 31 Echos sont
+     joues par ces memes 22 comediens, mais leurs lignes ne sont PAS des
+     barks : elles sont ecrites, placees a la frame, non aleatoires, et
+     comptees dans le total de leur sequence. Code de role `ECH`, numerote
+     par sequence (`S1_ECH_L003`). Traitement de mix impose : passe-bas
+     a 5,2 kHz, pre-delay 90 ms, jamais de reverb de piece — ils ne sont
+     pas dans la piece.
+     [OBL] Aucune voix d'Echo n'est celle d'Esteban (canon 11.xx).
+     Le job CI `echo-rules` verifie qu'aucun fichier `*_ECH_*` n'est
+     assigne au comedien d'Esteban.
+
+4.04 LE VERRIER (ANSELME ROUX) — ZERO LIGNE.
+     [OBL] Aucune VO. Aucun grognement. Aucun souffle traite. Il est muet
+     et le fichier de casting ne contient pas son nom. Si un jour un
+     fichier `vo/fr/VER_*.ogg` apparait dans le depot, le job CI
+     `no-verrier-vo` echoue le build. Son silence est un personnage.
+
+4.05 CONTROLE
+     1 786 + 714 + 340 = 2 840.  [OBL] Ce total est verifie a chaque push
+     par `tools/count_vo_lines.py --expect 2840`.
+
+
+===============================================================================
+5. REPARTITION PAR SEQUENCE (hors barks)
+===============================================================================
+
+     S1  LES QUAIS BAS            118 lignes    9 documents
+     S2  LE VERRE ET LE BATEAU     96 lignes    8 documents
+     S3  LE MARCHE SUSPENDU       512 lignes   18 documents
+     S4  LA BIBLIOTHEQUE          388 lignes   14 documents
+     S5  LES CONDUITS             402 lignes   13 documents
+     S6  LA SALLE DE BAL          236 lignes    9 documents
+     S7  LA DESCENTE              274 lignes   12 documents
+     S8  LA MONTEE AU PHARE       474 lignes   15 documents
+                                -------
+                                 2 500 lignes  98 documents de scene
+
+5.01 LECTURE DE LA COURBE. S1 et S2 sont pauvres en paroles (214 lignes
+     pour 48 minutes) : c'est la solitude qui installe le personnage.
+     S3 explose (512 en 34 minutes) : la ville parle, elle est vivante,
+     elle est bruyante, et c'est un choc apres 48 minutes de vide.
+     S4 redescend en densite mais monte en longueur de ligne (Mireille
+     parle en paragraphes). S5 est la sequence la plus bavarde par minute
+     du jeu, et c'est un enfant qui la porte. S6 est courte et tout y est
+     leger sauf les 40 dernieres secondes. S7 est un effondrement :
+     274 lignes pour 30 minutes, dont 62 barks — les gens ne parlent plus
+     a Lohen de la meme facon apres ce qu'ils ont vu. S8 remonte, puis se
+     tait completement sur les 1 038 marches.
+
+5.02 [OBL] Aucune sequence n'a de « scene de recap ». Le jeu ne resume
+     jamais son intrigue a voix haute. Si l'agent ecrit une ligne du type
+     « Donc, si je comprends bien, Esteban... », il la supprime.
+
+
+===============================================================================
+6. REPARTITION DES 340 BARKS
+===============================================================================
+
+     BK_S1   Les quais bas                 26   vent, mouettes absentes, bois
+     BK_S2   Le verre                      10   les 10 seules voix de S2
+     BK_S3   Le Marche suspendu            96   (chiffre canonique 09.12)
+     BK_S4   La Bibliotheque               38   chuchotes, tous sous -22 dB
+     BK_S5   Les Conduits                  44   dont 31 de Sol (voir § 6.02)
+     BK_S6   La salle de bal                4   quatre, et on les entend a peine
+     BK_S7   La descente                   74   la ville apres
+     BK_S8   Le pied du Phare              48   puis plus rien au-dessus de 40 m
+                                        -----
+                                          340
+
+6.00 OU VIVENT LES BARKS [OBL]. Un bark dont l'ecriture depend etroitement
+     d'une scene est ecrit DANS le document de cette scene, avec un id de
+     role `BK` (ex. `S3_BK_L001`). Il reste compte dans les 340, jamais
+     dans le total de la sequence. Les documents de dialogues/BARKS/
+     renvoient a ces domiciles au lieu de recopier les lignes : une ligne
+     de VO n'existe qu'a un seul endroit dans cette annexe.
+     Consequence de numerotation : dans une sequence, les ids courent
+     L001..LNNN toutes familles confondues ; le total annonce de la
+     sequence ne compte QUE les ids non-BK. Exemple S3 : 608 ids, dont
+     96 `BK`, donc 512.
+
+6.01 REGLE DE COOLDOWN [OBL] : un bark ne se repete pas dans les 8 minutes.
+     Un bark dit a moins de 6 m du joueur ne se repete pas dans la session.
+     Le systeme tient un historique de 64 entrees en anneau.
+
+6.02 Les 31 barks de Sol en S5 ne sont PAS comptes dans ses 402 lignes.
+     Ils sont dans les 340. Raison technique : ils sont pilotes par le
+     systeme de bark (cooldown, filtre de contexte), pas par le graphe de
+     dialogue. Raison de fond : ce sont des lignes que Lohen n'ecoute pas.
+
+6.03 [OBL] Aucun bark au-dessus de 40 m d'altitude en S8. Le silence de la
+     montee est un acquis de design (BLOC 19). Un bark y serait une faute.
+
+
+===============================================================================
+7. LES 38 CHOIX DE DIALOGUE — TABLE DE REFERENCE
+===============================================================================
+
+     Detail complet : dialogues/SYSTEME/LES_38_CHOIX.txt
+
+     S1   2 choix      aucun ne change rien, et c'est voulu : on apprend
+                       que le jeu ne recompense pas le choix.
+     S2   1 choix      le seul choix a option unique du jeu (§ 7.03).
+     S3  11 choix      dont le choix [3] silencieux de TALLEC (12.11).
+     S4   7 choix      dont les 2 seuls choix a timer du chapitre.
+     S5   6 choix      tous avec Sol. Tous changent une replique, aucun
+                       ne change une scene.
+     S6   4 choix      dont le faux choix du bal (12.15).
+     S7   2 choix      dont « Poser la main » (E23bis, 3 % des joueurs).
+     S8   5 choix      dont le dernier, qui n'en est pas un.
+        ----
+          38
+
+7.01 [OBL] 22 changent une scene, 11 changent une replique, 5 debloquent
+     un Echo optionnel. Aucun ne change la fin (12.05). Le job CI
+     `choice-audit` recompte ces trois familles a chaque push.
+
+7.02 Le texte d'une option est mot pour mot ce que Lohen dira. Jamais de
+     resume. Une option entre parentheses est une action muette, et alors
+     Lohen ne dit rien du tout : il fait.
+
+7.03 Le choix unique de S2 : une seule option, « (Ouvrir la veste.) ».
+     Le joueur doit la toucher. Le jeu ne continue pas sans. C'est le
+     seul moment ou le jeu force la main, et il le fait une fois, pour
+     que le joueur sente que quelqu'un, quelque part, a decide.
+
+
+===============================================================================
+8. TROIS LIGNES D'ABANDON PAR PNJ MAJEUR (12.06)
+===============================================================================
+
+8.01 Chaque PNJ majeur a 3 lignes dites quand le joueur s'eloigne pendant
+     qu'il parle. Elles sont comptees dans son total. Elles sont ecrites
+     au § 9 du document de scene ou le PNJ apparait la premiere fois.
+
+8.02 Elles ne sont jamais des reproches generiques (« Ou tu vas ? »).
+     TALLEC arrete sa phrase et ne la reprend pas : la ligne suivante,
+     si on revient, commence ailleurs. MIREILLE finit sa phrase toute
+     seule, a voix normale, dans la piece vide. SOL suit — Sol est le
+     seul qui suive, et iel ne dit rien pendant six secondes.
+     ESTEBAN n'a pas de ligne d'abandon : on ne s'eloigne pas d'un Echo,
+     l'Echo se coupe (11.xx) et c'est pire.
+
+
+===============================================================================
+9. STANDARD TECHNIQUE DE PRODUCTION VO
+===============================================================================
+
+9.01 Format livre : WAV 48 kHz 24 bits mono, tete 300 ms, queue 500 ms,
+     -18 dBFS RMS moyen, aucun traitement, aucune reduction de bruit.
+     Conversion moteur : Ogg Vorbis q4 (118 Mo au budget, 16.xx).
+
+9.02 Nommage : `vo/<lang>/<ID>.ogg`, l'ID en minuscules. Un fichier
+     manquant fait echouer `vo-state-report` (13.34).
+
+9.03 Ordre d'enregistrement impose :
+     1. les 340 barks (2 jours, 22 voix) — pour rôder les studios ;
+     2. les 11 secondaires ;
+     3. Tallec, puis Mireille ;
+     4. Sol, en trois sessions de 2 h maximum, jamais plus (13 ans) ;
+     5. Lohen, en dernier des vivants ;
+     6. ESTEBAN, seul, apres que tout le reste existe ;
+     7. LA LETTRE, une prise, autant de sessions que necessaire.
+
+9.04 [OBL] Le comedien de Lohen enregistre debout et porte quelque chose
+     de lourd a l'epaule droite pendant les sessions de S7 et S8. Le
+     souffle doit etre vrai. On ne le simule pas.
+
+9.05 DIRECTION GENERALE, une phrase a afficher dans la cabine :
+     « Personne ici ne cherche a etre compris. Ils cherchent a finir
+       leur phrase. »
+
+
+===============================================================================
+10. CARTE DES DOCUMENTS DE CETTE ANNEXE
+===============================================================================
+
+     dialogues/INDEX_DIALOGUES_2840.txt      ce fichier
+     dialogues/S1/…  9 documents             118 lignes
+     dialogues/S2/…  8 documents              96
+     dialogues/S3/… 18 documents             512
+     dialogues/S4/… 14 documents             388
+     dialogues/S5/… 13 documents             402
+     dialogues/S6/…  9 documents             236
+     dialogues/S7/… 12 documents             274
+     dialogues/S8/… 15 documents             474
+     dialogues/BARKS/…  8 documents          340
+     dialogues/SYSTEME/LES_38_CHOIX.txt      table + arbres
+     dialogues/SYSTEME/LIGNES_ABANDON.txt    les 12 lignes d'abandon
+     dialogues/VALIDATION_2840.txt           cloture et comptages
+
+10.01 Chaque document de scene est autonome : il rappelle en tete son
+      contexte, sa lumiere, sa musique, ses props (references PN-xxx) et
+      ses clips d'animation (references de l'annexe A), puis donne ses
+      lignes, puis sa checklist. On doit pouvoir le donner seul a un
+      comedien ou a un integrateur sans rien d'autre.

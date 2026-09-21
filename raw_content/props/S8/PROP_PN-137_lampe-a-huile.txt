@@ -1,0 +1,118 @@
+===============================================================================
+PN-137 — LA LAMPE A HUILE ALLUMEE
+===============================================================================
+Asset : SM_S8_Lampe_Huile · S8, chambre du gardien, sur la table ·
+~06:22 · 3 DES 3 PROPS PORTANT #FFA33C · DERNIERE OCCURRENCE ·
+pas d'Echo · LOD0 1 600 tris
+
+§ 1 — CE QU'ON VOIT
+La chambre fait 3,80 m de diametre. Elle est ronde, comme tout ici.
+Sur une table contre le mur, il y a une lampe.
+Une lampe a huile de table. Pied de laiton, reservoir de verre, meche
+plate, verre de cheminee cylindrique.
+Elle est ALLUMEE.
+[OBL] Le verre de cheminee est teinte. Pas sale : teinte, a la fabrication.
+Il est AMBRE. #FFA33C.
+[OBL] TROISIEME ET DERNIERE OCCURRENCE DE CETTE COULEUR DANS LE CHAPITRE.
+La premiere etait une boite aux lettres repeinte, a 2 h 08 (PN-041).
+La deuxieme etait un lisere de gilet, a 4 h 52 (PN-107).
+La troisieme est la lumiere de cette piece.
+[OBL] Toute la chambre est eclairee en ambre. Les murs, la table, le lit,
+les objets, le mur de feuilles, la lettre. Tout.
+Le reservoir est aux trois quarts plein.
+La meche est nette, taillee droit, recemment.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 600. Le verre de cheminee : geometrie, avec une transmission de 0,74
+et une teinte exacte.
+[OBL] LA COULEUR : le verre est #FFA33C. La lumiere qui le traverse prend
+cette teinte. [OBL] La lampe est donc une OmniLight de couleur
+(1.000, 0.639, 0.235), rayon 5 m, intensite 2,4, avec ombres.
+[OBL] La CI `amber-guard` valide ceci comme la 3e et derniere occurrence.
+[OBL] Et c'est la SEULE des trois qui soit une LUMIERE et non une surface.
+[ART] Les deux premieres etaient des objets ambre. Celle-ci baigne une
+piece entiere.
+Flicker : 7 %, boucle non aleatoire de 9,1 s.
+[OBL] Elle est la seule source de la chambre. Les volets sont fermes
+(PN-145 : le rebord de fenetre est a l'exterieur, cf. sa fiche).
+Cout : 0,5 ms (une lumiere a ombres dans une petite piece).
+Anim : PROP-845 — la flamme, 24 frames.
+[OBL] Non prenable. Aucun prompt. Elle reste sur la table.
+
+§ 3 — CE QUE CA DIT
+[OBL] La couleur d'Esteban eclaire la piece ou il a vecu.
+[OBL] Et le jeu ne le dit pas. Il ne l'a jamais dit. Il ne le dira jamais.
+Le joueur a vu cette couleur trois fois en six heures et vingt-deux
+minutes. Il ne sait peut-etre pas qu'il l'a remarquee.
+Le geste humain : tailler une meche droit.
+[OBL] Le reservoir est aux trois quarts plein et la lampe brule.
+[OBL] Elle brulait quand Lohen a pousse la porte. Elle brulait quand il
+montait les 1 038 marches. Elle brulait quand il traversait le pont casse.
+[OBL] Jamais explique.
+[NAR] Il n'y a personne dans la chambre.
+
+§ 4 — ECHO
+NEANT. [OBL] Objet du present (PN-005, PN-009).
+[OBL] Et : les trois derniers Echos du chapitre sont dans cette piece, et
+ils sont sur la couverture (E29, PN-138), le carnet (E30, PN-141) et la
+lettre (E31, PN-143). Pas sur la lampe.
+
+§ 5 — MISE EN SCENE
+[OBL] La porte s'ouvre (PN-136). M24 s'arrete. Il n'y a plus de musique.
+Et il y a de la lumiere ambre.
+[OBL] La camera est derriere Lohen, ou elle etait. Elle ne bouge pas.
+[OBL] Le joueur voit ce qu'il voit depuis le seuil : une partie de la
+chambre, eclairee en ambre, avec une lampe sur une table.
+[OBL] Il doit ENTRER pour voir le reste.
+[ART] Le jeu ne lui montre pas la chambre. Il la lui laisse.
+[OBL] Aucun plan, aucun panoramique, aucun ralenti, aucun fondu, aucune
+musique, aucune voix off, aucun sous-titre.
+[OBL] Lohen ne dit rien. Il n'y a AUCUN dialogue dans les 6 minutes qui
+suivent, jusqu'a PN-143.
+
+§ 6 — AUDIO
+[OBL] SILENCE. M24 s'est arretee.
+Ce qui reste :
+  — SFX(lamp_wick_hiss) : la meche. -34 dB. Un souffle minuscule.
+  — SFX(wind_tower_muffled) : le vent, dehors, tres attenue par les volets.
+    -29 dB.
+  — SFX(glass_chimney_tick) : le verre de cheminee qui travaille sous la
+    chaleur. Toutes les 30-90 s. -32 dB.
+[OBL] Trois sources, toutes sous -29 dB.
+[ART] C'est le mix le plus silencieux du jeu. Le joueur vient d'entendre
+une pluie a -8 dB et des cloches a -6 dB. Il entre dans une piece ou le son
+le plus fort est une meche qui brule.
+[OBL] Et il n'y aura pas de musique pendant six minutes.
+
+§ 7 — INTERDICTIONS
+Interdit de : eteindre la lampe · la prendre · la deplacer · remplir le
+reservoir · changer la teinte du verre · utiliser #FFA33C ailleurs ·
+expliquer pourquoi elle brule · ajouter une musique · ajouter une voix off
+· ajouter un plan de la chambre · deplacer la camera · faire parler Lohen ·
+donner un Echo.
+[OBL] Elle brule encore a la fin du chapitre. Elle brule quand Lohen
+redescend. Elle brule sur le dernier plan.
+
+§ 8 — LIENS
+PN-041 (la boite aux lettres repeinte, S3) : premiere occurrence.
+PN-107 (le lisere du gilet, S6) : deuxieme occurrence.
+PN-009 (la lampe-tempete, S1, laissee en S5) : la premiere lumiere du
+chapitre, et elle etait 2 400 K, jamais ambre.
+PN-086 (la lanterne eteinte). PN-101 (les 72 bougies). PN-115 (le
+lampadaire a gaz).
+PN-135 (le brûleur du Phare, vide) : [OBL] il y a de l'huile dans la
+chambre et pas dans le Phare. Jamais souligne.
+PN-143 (LA LETTRE) : elle est lue a cette lumiere.
+[THEME] L'AMBRE EST A ESTEBAN. [THEME] PORTER LA LUMIERE.
+
+§ 9 — DOD
+[ ] Verre de cheminee teinte #FFA33C exact, transmission 0,74
+[ ] OmniLight (1.000, 0.639, 0.235), rayon 5 m, ombres, intensite 2,4
+[ ] CI amber-guard : 3e et derniere occurrence, aucune autre dans le projet
+[ ] Seule source de la chambre, toute la piece en ambre
+[ ] Reservoir aux 3/4, meche taillee droit
+[ ] Flicker 7 %, boucle 9,1 s non aleatoire
+[ ] Mix a 3 sources, toutes sous -29 dB
+[ ] Zero musique pendant 6 minutes apres l'ouverture
+[ ] Zero plan, zero camera, zero dialogue
+[ ] Allumee sur le dernier plan du chapitre

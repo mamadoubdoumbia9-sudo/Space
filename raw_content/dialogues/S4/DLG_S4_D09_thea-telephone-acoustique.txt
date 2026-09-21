@@ -1,0 +1,101 @@
+===============================================================================
+DLG · S4 · D09 — LES 12 LIGNES DE THEA AU TELEPHONE ACOUSTIQUE
+16 entrees, toutes S4. THE 12 · LOH 4. Contribution : 16.
+[NAR] Thea a 69 lignes au total (S3 + S4). Les 57 de S3 sont dans D08 et
+D17 de S3. Les 12 dernieres sont ici, et elle n'est pas dans la piece.
+Prop : PN-076 (le tube acoustique de la Bibliotheque, 62 m de conduit).
+===============================================================================
+
+--- LE TELEPHONE ACOUSTIQUE -------------------------------------------------------------
+
+Un tube de cuivre de 62 m relie la Bibliotheque a la plateforme de treuil
+du Marche. On parle dedans. Ca marche. Ca marchait avant l'electricite et
+ca marche encore apres.
+
+[OBL] TRAITEMENT SONORE : enregistrement reel a travers un tube de cuivre
+de 40 m (le studio en louera un, ou empruntera un tuyau d'orgue). Aucun
+filtre logiciel. La bande passante reelle du tube est 280 Hz - 3,1 kHz et
+elle a une resonance a 640 Hz qu'aucun EQ ne reproduit correctement.
+[OBL] Budget : deux jours de studio. Non negociable. C'est trois minutes
+de jeu et c'est le meilleur son du chapitre apres le verre.
+
+[OBL] Le joueur trouve le tube ou ne le trouve pas. Aucun prompt. Il est
+dans un renfoncement du rez, derriere une pile de caisses, et il fait
+un leger sifflement continu (-38 dB) quand on passe a moins de 3 m.
+41 % des joueurs le trouvent.
+
+--- LES 16 LIGNES ------------------------------------------------------------------------
+
+    [S4_LOH_L243]  LOHEN · 1,4 s · plat · p1,8
+        « Allo ? »
+        dir : [OBL] il dit « allo » dans un tuyau. Il n'a jamais
+              utilise de telephone de sa vie : le mot est venu tout
+              seul, il l'a entendu quelque part. Personne ne se moque.
+
+    [S4_THE_L244]  THEA (tube) · 2,0 s · presse · p1,1
+        « Quoi. »
+
+    [S4_LOH_L245]  LOHEN · 1,2 s · surpris · p1,0
+        « Thea ? »
+
+    [S4_THE_L246]  THEA (tube) · 2,4 s · presse · p1,2
+        « Qui d'autre. Y'a que moi au bout. Quoi. »
+
+    [S4_LOH_L247]  LOHEN · 1,6 s · plat · p1,3
+        « Rien. Je testais. »
+
+    [S4_THE_L248]  THEA (tube) · 2,8 s · agace · p1,1
+        « Vous testez un tube qui marche depuis quatre-vingts ans. »
+
+    [S4_THE_L249]  THEA (tube) · 2,2 s · plat · p1,4
+        « Bon. Vous avez trouve votre fiche ? »
+
+    [S4_LOH_L250]  LOHEN · 1,8 s · plat · p1,2
+        « Le dossier est vide. »
+
+    [S4_THE_L251]  THEA (tube) · 3,0 s · plat · p1,6
+        « Ah. »
+        dir : [OBL] 1,6 s de pause ecrite. Dans un tube de cuivre, un
+              silence a une texture : on entend le souffle de l'air, la
+              resonance a 640 Hz qui continue toute seule. C'est pour ca
+              qu'on enregistre en vrai.
+
+    [S4_THE_L252]  THEA (tube) · 2,6 s · plat · p1,3
+        « Vous savez ce que ca veut dire, un dossier vide ? »
+
+    [S4_LOH_L253]  LOHEN · 1,4 s · plat · p1,1
+        « Non. »
+
+    [S4_THE_L254]  THEA (tube) · 3,2 s · plat · p1,5
+        « Moi non plus. Je demandais. »
+        dir : [OBL] elle n'a pas de theorie. Personne n'a de theorie
+              dans ce jeu. [OBL] Aucun personnage ne formule jamais
+              d'hypothese sur le vol du dossier. Le joueur en formulera
+              sept. Le jeu n'en confirme aucune, jamais, meme en S7 :
+              on voit qui l'a rendu, jamais pourquoi il l'avait pris.
+
+    [S4_THE_L255]  THEA (tube) · 2,4 s · presse · p1,2
+        « J'ai un treuil qui attend. »
+
+    [S4_LOH_L256]  LOHEN · 1,2 s · plat · p1,3
+        « Thea. »
+
+    [S4_THE_L257]  THEA (tube) · 1,8 s · plat · p1,6
+        « Quoi encore. »
+
+    [S4_THE_L258]  THEA (tube) · 3,4 s · plat · p0,0
+        « ... Non. Je vous l'ai dit en bas et c'est pareil en haut.
+          Je vous dirai rien. »
+        dir : [OBL][NAR] Elle repond avant qu'il pose la question.
+              [OBL] DERNIERE LIGNE DE THEA DU JEU. Elle raccroche —
+              c'est-a-dire qu'elle s'eloigne du tube, et le sifflement
+              de -38 dB reprend tout seul. [OBL] Aucun « au revoir ».
+              Le joueur ne la reverra pas, ni en S7 ni ailleurs.
+              La lettre sans nom au dos ne sera jamais expliquee.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] Tube enregistre en reel, 2 jours de studio, aucun filtre logiciel
+[ ] Tube trouvable sans prompt, sifflement -38 dB a moins de 3 m
+[ ] L254 : aucune theorie sur le dossier vide, jamais, par personne
+[ ] L258 : derniere ligne de Thea du jeu, aucun adieu

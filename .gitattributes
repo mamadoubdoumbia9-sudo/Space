@@ -1,0 +1,14 @@
+* text=auto eol=lf
+*.java text
+*.py text
+*.json text
+*.md text
+*.glsl text
+*.frag text
+*.vert text
+*.xml text
+*.ttf  binary
+*.png  binary
+*.wav  binary
+*.ogg  binary
+*.apk  binary

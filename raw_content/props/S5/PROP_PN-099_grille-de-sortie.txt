@@ -1,0 +1,109 @@
+===============================================================================
+PN-099 — LA GRILLE DE SORTIE VERS LE MERIDIEN
+===============================================================================
+Asset : SM_S5_Grille_Sortie · S5, extremite du conduit -3 · ~04:44 ·
+prop narratif INTERACTIF · pas d'Echo · DERNIER PROP DE S5 · LOD0 2 600 tris
+
+§ 1 — CE QU'ON VOIT
+Au bout du conduit, une grille. Verticale, cette fois, dans le mur de fond.
+Barreaux de fer de 20 mm, espaces de 12 cm, dans un cadre scelle.
+Elle a ete SCIEE. Trois barreaux, au centre, sont coupes en bas et en haut,
+et l'ensemble a ete plie vers l'intérieur pour faire une ouverture de
+36 x 70 cm.
+Les coupes sont propres : a la scie a metaux, lentement, patiemment. On voit
+les stries de lame. [OBL] Six coupes. Chacune a pris des heures.
+Les bords sont limes : quelqu'un a pris le temps d'arrondir les aretes
+tranchantes pour ne pas se blesser en passant.
+Derriere la grille : de la lumiere.
+Pas du jour. Une lumiere differente, plus chaude, plus ample. Elle vient
+d'en haut, de loin, et elle est ORANGE-DORE.
+C'est la salle de bal du Meridien. Le joueur ne le sait pas encore.
+Et il entend, tres faiblement, de la musique.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 600. Les 6 coupes de scie : [OBL] geometrie, avec les stries de lame
+modelisees (0,1 mm, orientation coherente avec un mouvement de sciage
+horizontal) et un leger bleuissement du metal aux points de coupe.
+Les bords limes : chanfreins de 1,5 mm sur les 6 sections.
+[OBL] La lumiere derriere : c'est le premier apercu du volume de S6. Le
+portail de streaming de la sequence 6 est ici, et la salle doit etre
+chargee et eclairee AVANT que le joueur n'arrive, pour que la lumiere passe
+par la grille sur les 8 derniers metres du conduit.
+Budget : chargement anticipe de 340 Mo, declenche 90 secondes avant.
+Franchissement : LOH-LOC-199 `crawl_through_grate`, 5 secondes.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a scie trois barreaux et lime les bords.
+Le geste humain : limer. On scie parce qu'on veut passer. On lime parce
+qu'on compte repasser souvent, et parce qu'on ne veut pas se couper.
+[NAR] Sol a ouvert un chemin entre son souterrain et la salle de bal.
+[OBL] Pourquoi il va la-bas : jamais dit, ici. Le joueur le comprendra en
+S6, en voyant ce qu'il y a dans la salle.
+Six coupes de scie a metaux dans du fer de 20 mm, par un enfant : c'est
+peut-etre trente heures de travail.
+
+§ 4 — ECHO
+NEANT. Geste d'apres, objet d'un vivant.
+[OBL] Et surtout : c'est un seuil. Le systeme d'Echo est desactive sur les
+6 derniers metres du conduit — [OBL] regle technique de production : aucun
+Echo dans un rayon de 10 m d'un portail de streaming, pour eviter un
+chargement pendant un rituel de 2,44 s.
+Cette contrainte technique n'a jamais eu besoin d'etre justifiee
+narrativement : aucun joueur ne cherche d'Echo devant une sortie.
+
+§ 5 — MISE EN SCENE
+[OBL] Les 8 derniers metres du conduit sont le meilleur moment de S5.
+Le joueur marche depuis 42 minutes dans le noir, sans musique depuis 14
+minutes, derriere une bougie.
+Devant lui, la lumiere doree grandit. Elle vient par une ouverture de
+36 x 70 cm dans une grille.
+Et la musique commence a etre audible. [OBL] C'est M21 « La salle » et elle
+est DIEGETIQUE : elle vient physiquement de derriere la grille. Filtree,
+attenuee, reverberee par 8 m de conduit.
+[OBL] Sol passe en premier. Il ne se retourne pas.
+Lohen se met a genoux. Il passe. 5 secondes.
+[OBL] Pendant le franchissement, la camera est au ras du sol, et la lumiere
+doree monte progressivement jusqu'a la saturation. Le joueur sort d'un
+souterrain dans une salle de bal eclairee.
+[OBL] Il n'y a aucune coupure, aucun fondu au noir, aucun ecran de
+chargement. C'est un plan continu de 4 h 44 a 4 h 45.
+
+§ 6 — AUDIO
+[OBL] La transition sonore est le sujet. Sur les 8 derniers metres :
+  — RT60 passe de 1,4 s a 3,1 s progressivement (le volume de la salle
+    commence a dominer)
+  — M21 monte de -48 dB a -18 dB, avec un filtre passe-bas qui s'ouvre de
+    600 Hz a 14 kHz
+  — les pas de Lohen changent de resonance
+Au franchissement : [OBL[ le filtre s'ouvre completement en 0,8 s. La
+musique arrive en pleine bande. C'est le choc sonore du chapitre.
+SFX(iron_bar_ring) : si le joueur frole un barreau scie, le fer chante —
+une note claire, longue, parce qu'il est libre a une extremite.
+[ART] Le joueur peut jouer avec les trois barreaux. Trois notes. Gratuit.
+[OBL] Ces trois notes ne forment PAS le motif d'Esteban. Verifier.
+
+§ 7 — INTERDICTIONS
+Interdit de : refermer la grille · ajouter un ecran de chargement · ajouter
+un fondu au noir · couper la musique · rendre M21 non diegetique avant le
+franchissement · faire parler Sol · ajouter un dialogue · ajouter un plan
+de decouverte scripte · faire s'arreter Lohen · ajouter un Echo · faire
+produire le motif d'Esteban par les barreaux.
+
+§ 8 — LIENS
+PN-088 (la grille du puits, E20) : celle-la ne s'ouvrait pas.
+PN-086 (la lanterne eteinte). PN-096 (la lampe laissee en haut du puits).
+PN-101 (les trois lustres, S6) : la source de la lumiere doree.
+PN-103 (le piano a queue) : la source de M21.
+[OBL] La lumiere de S6 est DOREE (3 200 K) et non ambre. amber-guard doit
+la valider explicitement : (1.00, 0.78, 0.52), hors du domaine #FFA33C.
+[THEME] SORTIR.
+
+§ 9 — DOD
+[ ] 6 coupes de scie en geometrie, stries de lame, bleuissement du metal
+[ ] Chanfreins de 1,5 mm sur les 6 sections, bords limes
+[ ] Salle S6 chargee et eclairee 90 s avant, lumiere passant par la grille
+[ ] M21 diegetique, montee -48 a -18 dB, filtre 600 Hz a 14 kHz sur 8 m
+[ ] RT60 progressif de 1,4 a 3,1 s
+[ ] Plan continu, zero chargement, zero fondu, zero coupure
+[ ] 3 barreaux sonnants, ne produisant jamais LA-DO-MI-RE-LA
+[ ] Lumiere doree (1.00, 0.78, 0.52) validee non-ambre par la CI

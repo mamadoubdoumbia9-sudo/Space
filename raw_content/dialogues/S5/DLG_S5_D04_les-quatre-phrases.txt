@@ -1,0 +1,199 @@
+===============================================================================
+DLG · S5 · D04 — LES QUATRE PHRASES : « MA MERE, MON FRERE, MA TANTE,
+ET LE CHIEN. »
+26 entrees, toutes S5. SOL 15 · LOH 11. Contribution : 26.
+SCENE CANONIQUE 12.14 du document maitre — texte fixe.
+Reference maitre : 09.14 « C'est le moment le plus dur du jeu avant la fin. »
+===============================================================================
+
+--- AVERTISSEMENT DE CANON ------------------------------------------------------------------
+
+[OBL] Les lignes L131 a L146 reprennent MOT POUR MOT la scene 12.14. Elles
+ne sont ni reecrites, ni allongees. Ce document leur donne ids, durees,
+emotions et directions, et ajoute dix lignes d'extension (L147-L156) qui
+sont nouvelles.
+
+--- MISE EN SCENE [OBL] ---------------------------------------------------------------------
+
+La lanterne est POSEE entre eux, au sol. C'est la seule scene du chapitre
+eclairee par en dessous. Les deux visages sont eclaires a contre-emploi :
+ombres montantes, orbites sombres. C'est laid. C'est exactement ce qu'il
+faut.
+
+[OBL] AUCUNE MUSIQUE. M17 (la note de contrebasse) se coupe 6 s avant
+L136 et ne revient qu'a la fin de D05. C'est le seul arret de M17 de la
+sequence.
+
+[OBL] LA CAMERA NE BOUGE PAS. Un seul plan, fixe, large, les deux
+personnages accroupis de part et d'autre de la lanterne. Aucun champ-
+contrechamp. Aucun gros plan. Duree du plan : 2 min 14. C'est le plan le
+plus long du chapitre 1 hors cinematiques.
+
+[OBL] REGLE DE L'ANNEXE A : « on ne regarde pas les gens pleurer ».
+Personne ne pleure ici. Ni Sol, ni Lohen. C'est pour ca que le plan peut
+rester.
+
+--- LA SCENE CANONIQUE (12.14) ------------------------------------------------------------------
+
+    [S5_SOL_L131]  SOL · 1,2 s · plat · p0,8
+        « Tu dors ou. »
+        dir : [OBL] CANON. Pas d'intonation montante. Iel mange.
+
+    [S5_LOH_L132]  LOHEN · 1,8 s · plat · p0,7
+        « Nulle part. J'arrive ce matin. »
+        dir : CANON.
+
+    [S5_SOL_L133]  SOL · 1,4 s · plat · p0,9
+        « Alors tu dors ici. »
+        dir : CANON.
+
+    [S5_LOH_L134]  LOHEN · 0,8 s · plat · p1,1
+        « Non. »
+        dir : CANON.
+
+    [S5_SOL_L135]  SOL · 2,2 s · plat · p1,6
+        « Tout le monde dit non la premiere nuit. »
+        dir : [OBL] CANON. « (un temps. Iel mache.) » du maitre = la
+              pause de 1,6 s. [OBL] Le bruit de mastication est dans le
+              mix, a -18 dB, non ducke. On mange pendant la pire scene
+              du chapitre. C'est ce qui la rend supportable.
+
+    [S5_SOL_L136]  SOL · 3,4 s · plat · p0,6
+        « Moi c'etait quatre. Ma mere, mon frere, ma tante, et le
+          chien. »
+        dir : [OBL][NAR] CANON. LA LIGNE. [OBL] Direction absolue :
+              AUCUNE EMOTION. Le comedien enfant enregistre cette
+              ligne comme on recite une liste de courses. [OBL] Si la
+              voix tremble, la prise est refusee. Autant de prises que
+              necessaire. C'est le S5 equivalent de la regle de la
+              lettre en S8 (13.33).
+              [OBL] Le rythme est de quatre blocs egaux. « Ma mere »
+              n'est pas plus long que « le chien ». C'est la
+              typographie du canon et elle est respectee a la frame.
+
+    [S5_SOL_L137]  SOL · 1,6 s · plat · p2,4
+        « Le chien s'appelait Pomme. »
+        dir : [OBL] CANON. [OBL] IMPARFAIT. Le joueur a entendu Sol
+              parler de Pomme au present pendant douze minutes (D03,
+              sujet 2). Il vient de comprendre, a la troisieme
+              syllabe, ce qu'il entendait depuis le debut.
+              [OBL] Pause de 2,4 s apres. La plus longue du chapitre
+              hors S8. [OBL] Pendant ces 2,4 s : rien. Pas de musique,
+              pas de mouvement de camera, pas d'animation faciale
+              particuliere. Sol mache.
+
+    [S5_LOH_L138]  LOHEN · 0,0 s · — · p3,2
+        (slot sans VO — whitelist `vo-orphan`)
+        dir : [OBL] CANON : « (il ne dit rien) ». C'est ecrit dans le
+              document maitre comme une ligne de dialogue. C'en est
+              une. Elle dure 3,2 s. [OBL] Le joueur n'a AUCUNE option
+              pendant ces 3,2 s. Le jeu ne lui demande pas quoi
+              repondre. Il n'y a rien a repondre.
+
+    [S5_SOL_L139]  SOL · 1,2 s · plat · p0,9
+        « Tu dis rien ? »
+        dir : CANON.
+
+    [S5_LOH_L140]  LOHEN · 3,0 s · plat · p1,1
+        « Je cherche quelque chose a dire qui soit pas idiot. »
+        dir : CANON.
+
+    [S5_SOL_L141]  SOL · 1,0 s · plat · p1,3
+        « Y'en a pas. »
+        dir : CANON.
+
+    [S5_LOH_L142]  LOHEN · 0,8 s · plat · p1,6
+        « Je sais. »
+        dir : CANON.
+
+    [S5_SOL_L143]  SOL · 2,8 s · plat · p0,0
+        « C'est deja mieux que les gens qui trouvent. »
+        dir : [OBL] CANON, derniere ligne de 12.14. « (iel hausse les
+              epaules) » : anim SOL-SHR-021, 1,1 s, AVANT la ligne.
+              [OBL] Fin de l'extrait canonique.
+
+--- L'EXTENSION (13 lignes, nouvelles) --------------------------------------------------------------
+
+[OBL] La scene ne se termine pas sur le canon. Ces treize lignes sont la
+redescente, et elles sont indispensables : sans elles, la scene est un
+coup de poing sans suite, et le jeu devient indecent.
+
+    [S5_SOL_L144]  SOL · 2,0 s · plat · p1,2
+        « Les gens qui trouvent, ils disent tous la meme chose. »
+
+    [S5_LOH_L145]  LOHEN · 1,2 s · plat · p1,0
+        « Quoi ? »
+
+    [S5_SOL_L146]  SOL · 2,6 s · plat · p1,4
+        « « Au moins ils sont ensemble. » »
+        dir : [OBL] Sol cite les autres. La voix change legerement :
+              iel fait une imitation minuscule, une demi-seconde de
+              voix d'adulte. [OBL] Puis iel redevient iel.
+
+    [S5_LOH_L147]  LOHEN · 1,6 s · plat · p1,3
+        « C'est idiot. »
+
+    [S5_SOL_L148]  SOL · 2,2 s · plat · p1,1
+        « Bah oui. »
+
+    [S5_SOL_L149]  SOL · 3,0 s · plat · p1,6
+        « Ils etaient deja ensemble avant. C'est meme pour ca qu'ils
+          sont tous les quatre. »
+        dir : [OBL][NAR] LA PHRASE LA PLUS DURE DU CHAPITRE 1 AVANT
+              LA LETTRE. [OBL] Elle est dite platement, par un enfant,
+              en machant. [OBL] Aucune musique. Aucun plan. La camera
+              est toujours au meme endroit depuis 1 min 40.
+
+    [S5_LOH_L150]  LOHEN · 0,0 s · — · p2,0
+        (slot sans VO)
+        dir : [OBL] deuxieme silence. 2,0 s.
+
+    [S5_SOL_L151]  SOL · 1,8 s · plat · p1,0
+        « T'en as combien, toi ? »
+
+    [S5_LOH_L152]  LOHEN · 1,2 s · plat · p1,4
+        « Un. »
+        dir : [OBL][NAR] LA PREMIERE FOIS QUE LOHEN COMPTE ESTEBAN
+              PARMI LES MORTS. [OBL] Un seul mot. [OBL] Aucune reaction
+              de Sol. Aucune musique. Aucun plan.
+              [OBL] Le joueur qui attendait une confirmation depuis S2
+              vient de l'avoir, en une syllabe, par accident, au milieu
+              d'une conversation sur un chien.
+
+    [S5_SOL_L153]  SOL · 1,6 s · plat · p1,2
+        « Un c'est nul. »
+
+    [S5_LOH_L154]  LOHEN · 1,0 s · plat · p1,3
+        « Pourquoi ? »
+
+    [S5_SOL_L155]  SOL · 3,2 s · plat · p1,8
+        « Parce qu'avec un, tu peux encore croire que tu vas le
+          retrouver. Avec quatre, tu arretes. »
+        dir : [OBL][NAR] Un enfant de treize ans vient d'expliquer a un
+              adulte de vingt-sept ans pourquoi il est encore en train
+              de chercher. [OBL] Direction : ce n'est pas de la
+              cruaute. Sol le dit avec une pointe d'envie. Iel
+              voudrait avoir le droit de chercher encore.
+
+    [S5_LOH_L156]  LOHEN · 2,4 s · plat · p0,0
+        « Ca va aller. »
+        dir : [OBL][NAR] 5e occurrence de la formule, et la premiere
+              qu'il adresse a quelqu'un d'autre. 2,4 s : la plus longue
+              des onze. Il la dit lentement, pour Sol.
+              [OBL] Sol ne repond pas. Iel ramasse la lanterne et la
+              tend a Lohen. Anim SOL-ACT-034, 2,6 s. La scene se
+              termine sur ce geste, sans ligne.
+              [OBL] M17 reprend 4 s apres, sur une note plus basse
+              qu'avant. Une seule fois de la sequence, elle change de
+              hauteur au milieu d'une phrase musicale.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] 12.14 reproduit mot pour mot
+[ ] L136 : aucune emotion, quatre blocs egaux, prises refusees si tremblement
+[ ] L137 : imparfait, pause 2,4 s, mastication non duckee
+[ ] L138 et L150 : slots muets scriptes, aucune option pour le joueur
+[ ] Plan fixe unique de 2 min 14, aucun champ-contrechamp
+[ ] L152 : « Un. » — premiere fois que Lohen compte Esteban parmi les morts
+[ ] L156 : 5e « ca va aller », la premiere adressee a quelqu'un
+[ ] Personne ne pleure

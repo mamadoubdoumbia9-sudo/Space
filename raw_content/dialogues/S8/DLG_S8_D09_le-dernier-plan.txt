@@ -1,0 +1,223 @@
+===============================================================================
+DLG · S8 · D09 — LE DERNIER PLAN : LA VESTE, LE SOLEIL, SIX LETTRES
+48 entrees, toutes S8. LOH 40 · SOL 8. Contribution : 48.
+Reference maitre 19.12 (le dernier plan) et PN-147.
+[OBL] Dernieres lignes du chapitre 1. Rien de ce qui suit n'est
+modifiable sans l'accord du directeur narratif.
+===============================================================================
+
+--- LA SCENE [OBL] ---------------------------------------------------------------------------------
+
+[OBL] 19.12, integralement contraignant :
+  · En bas de la porte du Phare, Sol dort, assis, dos contre le bois,
+    les bras autour des genoux. Iel a attendu toute la nuit.
+  · Lohen s'arrete. Il retire sa veste — la veste de relayeur,
+    matricule 0114 — et il la pose sur Sol.
+  · Sol ne se reveille pas.
+  · Lohen s'assoit a cote, dos a la porte, et regarde le soleil.
+  · La camera recule lentement pendant 24 secondes, jusqu'a un plan tres
+    large : deux silhouettes minuscules au pied d'une tour, sur une
+    ville de pierre posee sur un miroir noir qui, POUR LA PREMIERE FOIS
+    DU JEU, reflete un ciel bleu.
+  · Musique M19. Fondu.
+  · Carton : « CHAPITRE 1 — LA VILLE QUI RETIENT SON SOUFFLE »
+  · Puis : « FIN DU CHAPITRE 1 »
+  · Puis, apres 4 secondes de noir, une derniere ligne, en bas a droite,
+    dans l'ecriture d'Esteban, tres petite : « Il reste six lettres. »
+
+[OBL] LE GESTE DE LA VESTE EST L'EXECUTION D'UNE CONSIGNE DONNEE PAR
+ESTEBAN TROIS ANS PLUS TOT (S6_EST_L175 : « Alors tu mets ta veste
+dessus. Ca parle pour toi. »). [OBL] Lohen ne le sait pas. Il garde une
+place. [OBL] JAMAIS SOULIGNE. Job CI `veste-echo` : les deux assets
+partagent le tag `motif:veste`, et rien d'autre ne les relie.
+
+[OBL] LE PAIN DE TALLEC (PN-112) EST DANS LA VESTE. [OBL] Lohen la pose
+sur Sol avec le pain dedans. [OBL] Sol le trouvera au chapitre 2.
+[OBL] Aucun plan ne le montre. Job CI `bread-in-coat`.
+
+--- § 1 — SORTIR (12 lignes) --------------------------------------------------------------------
+
+    [S8_LOH_L373]  2,0 s · bas · « Il fait jour depuis longtemps. »
+    [S8_LOH_L374]  2,6 s · bas · « Le soleil est deja haut d'un doigt. »
+    [S8_LOH_L375]  2,2 s · bas · « Donc il est cinq heures et demie, six heures. »
+        dir : [OBL] il lit l'heure au soleil, correctement. [OBL] Un
+              homme qui ne sait pas lire les mots sait lire le ciel.
+              [OBL] Aucun commentaire.
+    [S8_LOH_L376]  1,8 s · bas · « J'ai marche toute la nuit. »
+    [S8_LOH_L377]  2,4 s · bas · « Vingt-trois heures depuis ce matin. »
+    [S8_LOH_L378]  2,0 s · bas · « C'est une longue journee, meme pour un relayeur. »
+    [S8_LOH_L379]  2,8 s · bas · « La pluie s'est arretee pendant que j'etais dedans. »
+        dir : [OBL][NAR] IL AVAIT PREDIT EXACTEMENT CA (S7_LOH_L273).
+              [OBL] Il ne le releve pas. [OBL] Il n'a pas raison :
+              M23 s'est coupee a la fermeture de la porte parce qu'ils
+              etaient a l'interieur. La pluie, elle, a continue quatre
+              heures. [OBL] Rien ne le dit.
+    [S8_LOH_L380]  2,2 s · bas · « Le sol seche. »
+    [S8_LOH_L381]  1,6 s · bas · « Bien. »
+    [S8_LOH_L382]  2,6 s · bas · « Y'a quelqu'un contre la porte. »
+    [S8_LOH_L383]  2,0 s · bas · « Iel a attendu. »
+        dir : [OBL][NAR] LE PRONOM. [OBL] Lohen utilise le pronom de
+              Sol, correctement, une fois, a la fin du chapitre, sans
+              que personne le lui ait jamais appris ni demande.
+              [OBL] Job CI `sol-pronoun` : verification de toutes les
+              occurrences du chapitre. [OBL] Aucun personnage ne s'est
+              jamais trompe, aucun n'en a jamais parle, aucune ligne
+              n'a jamais explique. [OBL] C'est la seule maniere
+              acceptable de traiter ca.
+    [S8_LOH_L384]  2,4 s · bas · « Toute la nuit. »
+
+--- § 2 — LES HUIT LIGNES DE SOL (qui n'en sont pas) ---------------------------------------------
+
+[OBL] Sol DORT. [OBL] Les huit entrees ci-dessous sont des bruits de
+sommeil : une respiration, deux mouvements, un mot indistinct. [OBL] Ils
+sont comptes dans les 2 840 parce qu'ils sont enregistres par la
+comedienne, en studio, le meme jour que le reste, et parce que les
+compter oblige a les traiter comme du texte : avec attention.
+
+[OBL] AUCUN N'EST SOUS-TITRE. Job CI `no-subtitle-sleep`.
+
+    [S8_SOL_L385]  2,2 s · dort · (respiration lente, regulliere)
+    [S8_SOL_L386]  1,8 s · dort · (iel change de position, le bois grince)
+    [S8_SOL_L387]  1,4 s · dort · (un souffle plus court)
+    [S8_SOL_L388]  2,0 s · dort · (un mot, une syllabe, incomprehensible)
+        dir : [OBL] LA SYLLABE N'EST PAS « POMME » ET N'EST PAS
+              « LOHEN ». [OBL] Direction de studio : la comedienne
+              enregistre une syllabe neutre, puis elle est filtree.
+              [OBL] Interdit absolu : ne jamais rendre ce mot
+              identifiable, dans aucune version, aucun patch, aucune
+              langue.
+    [S8_SOL_L389]  1,6 s · dort · (silence — le souffle s'interrompt 1,6 s)
+        dir : [OBL] LE JOUEUR VA S'INQUIETER. [OBL] C'est volontaire et
+              c'est cruel. [OBL] La respiration reprend a L390.
+              [OBL] Aucune ligne de Lohen ne s'y rapporte : il n'a rien
+              remarque.
+    [S8_SOL_L390]  2,4 s · dort · (la respiration reprend, plus profonde)
+    [S8_SOL_L391]  1,8 s · dort · (iel se recroqueville sous la veste)
+        dir : [OBL] APRES la pose de la veste. [OBL] Anim SOL-SLP-004,
+              3,1 s. [OBL] Iel ne se reveille pas (19.12, contraignant).
+    [S8_SOL_L392]  2,6 s · dort · (respiration, jusqu'au fondu)
+        dir : [OBL] DERNIERE ENTREE DE SOL DU CHAPITRE 1. [OBL] C'est
+              un souffle. [OBL] Iel dort sous une veste de relayeur
+              avec un pain dans la poche. [OBL] Aucun plan sur son
+              visage. La camera recule deja.
+
+--- § 3 — LA VESTE (14 lignes) -------------------------------------------------------------------
+
+    [S8_LOH_L393]  2,0 s · bas · « Iel dort. »
+    [S8_LOH_L394]  2,6 s · bas · « Pieds nus, sur de la pierre mouillee, toute la nuit. »
+    [S8_LOH_L395]  2,2 s · bas · « Je reveille pas. »
+    [S8_LOH_L396]  1,8 s · bas · « Surtout pas. »
+    [S8_LOH_L397]  2,4 s · bas · « J'enleve la veste. »
+    [S8_LOH_L398]  0,0 s · — · (anim LOH-ACT-141, 4,2 s, une main, l'epaule droite)
+        dir : [OBL] 4,2 s pour retirer une veste : c'est long. [OBL] Il
+              a une epaule abimee et il ne veut pas faire de bruit.
+              [OBL] Les deux raisons sont dans l'animation et aucune
+              n'est dite.
+    [S8_LOH_L399]  2,0 s · bas · « Elle est trempe. »
+    [S8_LOH_L400]  2,8 s · bas · « Dedans elle est seche. C'est le principe d'une veste. »
+    [S8_LOH_L401]  0,0 s · — · (il la pose sur Sol — anim LOH-ACT-142, 3,6 s)
+        dir : [OBL] LE GESTE DU CHAPITRE. [OBL] Aucun ralenti, aucun
+              gros plan, aucun changement de focale. [OBL] La camera
+              est deja en train de reculer depuis 4 s. [OBL] M19 entre
+              ICI, sur la premiere frame du contact.
+    [S8_LOH_L402]  2,2 s · bas · « Voila. »
+    [S8_LOH_L403]  2,6 s · bas · « Matricule zero cent quatorze, veste de service. »
+    [S8_LOH_L404]  2,0 s · bas · « Perte de materiel. »
+    [S8_LOH_L405]  2,8 s · bas · « Je remplirai le formulaire lundi. »
+        dir : [OBL][NAR] IL FAIT UNE BLAGUE. [OBL] Une. Dans tout le
+              chapitre. [OBL] Direction : platement, sans sourire.
+              [OBL] Rappel canon : Lohen ne rit jamais, 2 sourires dans
+              le chapitre. [OBL] CECI N'EST PAS L'UN DES DEUX. Le
+              deuxieme sourire est en L414.
+    [S8_LOH_L406]  1,4 s · bas · « Bon. »
+        dir : [OBL] ATTENTION : le 47e « bon » etait L318. [OBL] Celui-
+              ci est le 48e et il est VOLONTAIRE. [OBL] Job CI
+              `bon-count` : le seuil est 47 pour tout le chapitre SAUF
+              cette occurrence, declaree en exception dans
+              VALIDATION_2840 § 3. [OBL] Raison : la derniere fois
+              qu'il le dit, il n'a plus de veste, plus de lettre a
+              remettre, et il s'assoit. Le mot a change de fonction.
+
+--- § 4 — S'ASSEOIR, ET LE CARTON (14 lignes) ------------------------------------------------------
+
+    [S8_LOH_L407]  0,0 s · — · (il s'assoit — anim LOH-SIT-011, 5,1 s, lente)
+        dir : [OBL] 5,1 s. [OBL] C'est l'animation la plus lente du
+              chapitre. [OBL] Il s'assoit comme un homme de
+              cinquante ans. Il en a vingt-sept.
+              [OBL] RACCORD S4_MIR_L194 : « Asseyez-vous d'abord. »
+              [OBL] Il l'a fait. Trop tard, dans le mauvais ordre, mais
+              il l'a fait. [OBL] Mireille ne le saura jamais.
+              [OBL] JAMAIS SOULIGNE. Job CI `sit-echo`.
+    [S8_LOH_L408]  2,4 s · bas · « Le soleil est de face. »
+    [S8_LOH_L409]  2,0 s · bas · « Ca chauffe. »
+    [S8_LOH_L410]  2,8 s · bas · « Premiere fois depuis trois jours qu'il fait chaud quelque part. »
+        dir : [OBL] IL SAIT DONC QU'IL PLEUVAIT DEPUIS TROIS JOURS.
+              [OBL] Il l'a appris d'un bark qu'il n'etait pas cense
+              entendre (S7_BK_L342). [OBL] Le joueur qui n'a pas
+              entendu ce bark trouvera la phrase normale. [OBL] Aucune
+              variante. Job CI `variant-same-id` ne s'applique pas ici.
+    [S8_LOH_L411]  2,2 s · bas · « La mer de verre est bleue. »
+    [S8_LOH_L412]  2,6 s · bas · « Elle a jamais ete bleue. »
+        dir : [OBL][NAR] 19.12 : « un miroir noir qui, pour la premiere
+              fois du jeu, reflete un ciel bleu ». [OBL] C'est le seul
+              element du dernier plan que Lohen commente.
+              [OBL] Direction : plat. Constat.
+    [S8_LOH_L413]  2,0 s · bas · « C'est le ciel qui est dedans. »
+    [S8_LOH_L414]  2,4 s · bas · « C'est pas la mer qui a change. »
+        dir : [OBL][NAR] LE DEUXIEME ET DERNIER SOURIRE DU CHAPITRE.
+              [OBL] Blendshape `smile_small`, amplitude 0,22, duree
+              1,4 s. [OBL] LA CAMERA EST A 60 METRES ET RECULE.
+              [OBL] PERSONNE NE LE VERRA. [OBL] Il est dans le build,
+              il est anime, il est joue, et il est invisible.
+              [OBL] Job CI `smile-count` : exactement 2 dans le
+              chapitre. [OBL] Interdit absolu de rapprocher la camera,
+              dans aucune version, aucun patch, aucun trailer.
+    [S8_LOH_L415]  0,0 s · — · (24 s de recul camera — 19.12)
+    [S8_LOH_L416]  0,0 s · — · (fondu)
+    [S8_LOH_L417]  0,0 s · — · (carton : « CHAPITRE 1 — LA VILLE QUI RETIENT SON SOUFFLE »)
+    [S8_LOH_L418]  0,0 s · — · (carton : « FIN DU CHAPITRE 1 »)
+    [S8_LOH_L419]  0,0 s · — · (4 s de noir)
+        dir : [OBL] QUATRE SECONDES. Pas trois, pas cinq. [OBL] Aucun
+              son. M19 s'est terminee sur le fondu.
+    [S8_LOH_L420]  0,0 s · — · (« Il reste six lettres. »)
+        dir : [OBL][NAR] DERNIERE ENTREE DU CHAPITRE 1.
+              [OBL] En bas a droite, dans l'ecriture d'Esteban, TRES
+              PETITE. [OBL] Aucune voix. Aucune musique. Aucun son.
+              [OBL] Elle reste 3,2 s puis le generique commence
+              immediatement (19.13), non skippable pendant 60 s, avec
+              M20 et ses paroles.
+              [OBL] Interdit absolu : ne jamais faire lire cette ligne
+              par une voix, dans aucune version, aucune langue, aucune
+              option d'accessibilite. [OBL] Pour les joueurs
+              malvoyants, le lecteur d'ecran l'annonce en voix de
+              synthese neutre, jamais avec la voix d'Esteban.
+              Job CI `six-letters-silent`.
+
+--- § 5 — CE QUI N'EXISTE PAS DANS CETTE SCENE [OBL] ------------------------------------------------
+
+[OBL] Liste des choses que l'equipe voudra ajouter et qui sont
+interdites :
+  · un dialogue de reveil de Sol — INTERDIT (19.12 : iel ne se reveille
+    pas)
+  · un plan sur le visage de Lohen apres qu'il s'assoit — INTERDIT
+  · une reprise du motif LA-DO-MI-RE-LA dans M19 — INTERDIT (les cinq
+    notes n'existent qu'une fois, a 3:00 de la lettre)
+  · un compteur de fin, un pourcentage, une liste de contenu manque —
+    INTERDIT (CI `no-missed-content-report`)
+  · une scene post-generique — INTERDIT
+  · une apparition d'Esteban, sous quelque forme que ce soit — INTERDIT
+  · une confirmation qu'il est mort ou vivant — INTERDIT (20.05)
+  · un plan sur la sacoche pendant la scene — INTERDIT (elle est dans
+    le generique, 19.13, et nulle part ailleurs)
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] Sol ne se reveille pas, 8 entrees de sommeil non sous-titrees
+[ ] L388 : la syllabe reste inidentifiable dans toutes les langues
+[ ] L389 : 1,6 s d'apnee volontaire, aucune ligne ne s'y rapporte
+[ ] L401 : la veste, M19 entre sur la frame de contact, camera deja loin
+[ ] L406 : 48e « bon », exception declaree
+[ ] L407 : raccord muet avec « Asseyez-vous d'abord » — CI `sit-echo`
+[ ] L414 : 2e sourire, invisible, jamais rapproche — CI `smile-count`
+[ ] L420 : jamais lue par une voix — CI `six-letters-silent`
+[ ] Aucune scene post-generique

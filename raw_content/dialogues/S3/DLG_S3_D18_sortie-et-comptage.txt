@@ -1,0 +1,159 @@
+===============================================================================
+DLG · S3 · D18 — LA MONTEE VERS LA BIBLIOTHEQUE + CLOTURE DE SEQUENCE
+14 entrees, toutes S3. LOH 8 · SOL 4 · PAL 2. Contribution : 14.
+La cage monte 26 secondes. Personne ne parle pendant 19 d'entre elles.
+===============================================================================
+
+--- LA MONTEE -----------------------------------------------------------------------
+
+[OBL] La cage du monte-charge met 26 s a monter de 62 m a 78 m. C'est
+lent. C'est volontaire. Le joueur n'a rien a faire : il tient la grille
+(ou pas, choix 11) et il regarde le Marche retrecir en dessous.
+
+[OBL] Le mix descend en continu : le lit d'ambiance du Marche perd 18 dB
+sur les 26 s, de facon lineaire, jamais par palier. Les barks deviennent
+inintelligibles a 12 s puis inaudibles a 20 s. [OBL] Aucun bark nouveau
+ne se declenche pendant la montee.
+
+[OBL] Aucune musique. M02 « La verticale » ne reprend qu'a l'arrivee, sur
+la premiere image de la Bibliotheque, et c'est la troisieme et derniere
+fois qu'elle joue du chapitre.
+
+--- LES 14 LIGNES ---------------------------------------------------------------------
+
+    [S3_SOL_L592]  SOL (off, en bas) · 1,4 s · clair · p0,0
+        « Eh ! »
+        dir : a 4 s de montee. Sol est reste en bas. Iel crie depuis la
+              plateforme. [OBL] Cette ligne ne se joue que si le joueur
+              a pris la branche [1] ou [2] du CHOIX 10. Si branche [3]
+              (« Tu peux pas venir »), Sol n'est pas la, et les quatre
+              lignes de Sol de ce document n'existent pas. Ce joueur
+              montera dans un silence complet.
+
+    [S3_LOH_L593]  LOHEN · 1,0 s · surpris · p0,0
+        « Quoi ? »
+
+    [S3_SOL_L594]  SOL (off) · 2,2 s · clair · p0,0
+        « Ta sacoche est ouverte ! »
+
+    [S3_LOH_L595]  LOHEN · 1,6 s · plat · p0,0
+        « Elle est pas ouverte. »
+        dir : elle n'est pas ouverte. Il verifie quand meme. Anim
+              LOH-ACT-024, 2,1 s.
+
+    [S3_SOL_L596]  SOL (off, plus loin) · 2,6 s · clair · p0,0
+        « Je sais ! Je voulais que tu regardes ! »
+        dir : [OBL] a 11 s de montee. La voix est deja a -9 dB et
+              filtree par la distance. C'est la derniere blague de S3
+              et elle est faite par un enfant a quinze metres en
+              dessous.
+
+    [S3_LOH_L597]  LOHEN · 1,2 s · plat · p0,0
+        « Sol. »
+        dir : dit tres bas, pour lui, avec la tete qui part de 4 frames
+              (LOH-FAC-011). C'est la deuxieme et derniere fois que
+              Lohen sourit du chapitre 1. La premiere est en S1
+              (LOH-FAC-004, L010). La camera est de trois quarts arriere
+              et on ne le voit presque pas. [OBL] Surtout ne pas cadrer.
+
+    [S3_SOL_L598]  SOL (off, tres loin) · 2,0 s · clair · p0,0
+        « Par en dessous ! »
+        dir : a 17 s. Derniere ligne de Sol de la sequence. Elle est a
+              -16 dB, a la limite. [NAR] Iel annonce S5 une seconde
+              fois. Toujours incomprehensible pour le joueur.
+
+    -- 19 secondes de silence. Aucune ligne. Le Marche retrecit. --
+
+    [S3_PAL_L599]  PALLAS (off, tres loin) · 1,8 s · plat · p0,0
+        « Lohen ! »
+        dir : [OBL] a 21 s. Elle est sur une passerelle a 40 m. Le
+              joueur doit tourner la camera pour la voir : rien ne
+              l'y invite. 34 % la trouvent.
+
+    [S3_PAL_L600]  PALLAS (off, tres loin) · 2,4 s · plat · p0,0
+        « Jeudi ! »
+        dir : [OBL][NAR] UN SEUL MOT, et c'est l'aveu. Elle vient de
+              dire qu'elle a une tournee le jeudi — donc qu'elle n'en
+              avait pas aujourd'hui — donc qu'elle etait montee pour lui
+              (cf. CHOIX 09, L412, ou elle a dit non). Elle le crie a
+              quarante metres alors qu'il ne peut plus repondre. C'est
+              la seule facon dont cette femme pouvait le dire.
+              [OBL] Lohen ne repond pas. Il n'a pas le temps : la cage
+              arrive. Aucune ligne de reaction n'existe.
+
+    [S3_LOH_L601]  LOHEN · 1,4 s · plat · p0,0
+        « Jeudi ? »
+        dir : pour lui, a 24 s, trop tard, deja trop haut. [OBL] Il n'a
+              pas compris. Il ne comprendra pas. Aucun dialogue de S7
+              n'y reviendra.
+
+    -- Arrivee. La grille s'ouvre sur un couloir sombre. --
+
+    [S3_LOH_L602]  LOHEN · 1,1 s · plat · p0,0
+        « Bon. »
+
+    [S3_LOH_L603]  LOHEN · 2,2 s · plat · p0,0
+        « La Bibliotheque des Eaux. »
+        dir : [OBL] il nomme le lieu. C'est la seule fois du chapitre ou
+              Lohen annonce un nom de lieu a voix haute, et c'est parce
+              qu'il n'y est jamais entre. Un relayeur connait toutes les
+              adresses de sa ville. Pas celle-la.
+
+    [S3_LOH_L604]  LOHEN · 1,6 s · plat · p0,0
+        « Trente ans que je passe devant. »
+
+    [S3_LOH_L605]  LOHEN · 1,9 s · plat · p0,0
+        « Vingt-sept. »
+        dir : [OBL][NAR] Il se corrige. Il a vingt-sept ans : il ne peut
+              pas passer devant depuis trente. C'est la SEULE fois du
+              jeu ou l'age de Lohen est deductible, et il faut avoir
+              entendu les deux lignes a la suite pour le faire.
+              Sol s'etait trompee en S3_SOL_L037 (« Vingt-sept ? Non.
+              Trente. »). Sol avait raison la premiere fois.
+              [OBL] Rien ne le souligne. Fin de la sequence 3.
+
+--- COMPTAGE DE LA SEQUENCE S3 -----------------------------------------------------------
+
+    D01 entree dans la ville vivante ............   4   (+22 barks)
+    D02 la poursuite de Sol .....................  31   (+1 bark)
+    D03 Sol sur les toits .......................  29
+    D04 Tallec, scene canonique .................  47
+    D05 les quatre lettres ......................  41
+    D06 Brel le forgeron ........................  34
+    D07 Garric et la milice .....................  38
+    D08 Thea et le monte-charge .................  29
+    D09 les habitants ...........................  49
+    D10 Niels et Wenna ..........................  28
+    D11 les quatre Echos du Marche ..............  44
+    D12 les onze choix ..........................  34
+    D13 la lettre lue a voix haute ..............  16
+    D14 E11 et E12 ..............................  24
+    D15 les barks du Marche .....................   0   (+73 barks)
+    D16 les lignes de toucher ...................  24
+    D17 abandon et variantes ....................  26
+    D18 sortie et comptage ......................  14
+                                                 -----
+    TOTAL S3 .................................... 512
+
+    BARKS BK_S3 : 22 (D01) + 1 (D02) + 73 (D15) = 96. Hors total S3.
+    SLOTS MUETS sans fichier VO : 5 — S3_SOL_L085, S3_LOH_L175,
+    S3_LOH_L300, S3_LOH_L420, S3_LOH_L428.
+    Total studio S3 = 512 - 5 = 507 fichiers de VO.
+    [OBL] `tools/count_vo_lines.py --seq S3 --expect 512 --studio 507`.
+
+    Ventilation par role (graphe) :
+      LOH 191 · TAL 40 · SOL 38 · BRE 39 · GAR 31 · THE 34 · VAN 21
+      HAN 14 · CAR 10 · ODI 20 · NIE 17 · WEN 16 · PAL 8 · ECH 80
+      (Les totaux de role du casting, INDEX § 4.02, sont des totaux
+       chapitre, pas sequence : ils se verifient a la cloture generale,
+       dialogues/VALIDATION_2840.txt.)
+
+--- CHECKLIST S3 ---------------------------------------------------------------------------
+
+[ ] 512 lignes + 96 barks, ids S3_*_L001..L605
+[ ] 19 s de silence pendant la montee, mix lineaire -18 dB
+[ ] L600 : l'aveu de Pallas, un mot, sans reponse possible
+[ ] L605 : l'age de Lohen deductible une seule fois, non souligne
+[ ] M02 reprend a l'arrivee, 3e et derniere fois du chapitre
+[ ] Le nom « Esteban » a ete prononce : par le joueur (CHOIX 04 [1]),
+    par Tallec (L098), et jamais par personne d'autre en S3

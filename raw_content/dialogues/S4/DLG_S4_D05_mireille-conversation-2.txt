@@ -1,0 +1,181 @@
+===============================================================================
+DLG · S4 · D05 — DEUXIEME CONVERSATION : LE MOT « AMOUR », UNE FOIS
+30 entrees, toutes S4. MIR 24 · LOH 6. Contribution : 30.
+[OBL] Contient MIR-DLG-372, l'une des DEUX occurrences du mot « amour »
+autorisees dans tout le jeu. L'autre est dans la lettre (S8, PN-143).
+Job CI `word-amour` : exactement 2 dans tout `content/`.
+===============================================================================
+
+--- CONTEXTE -------------------------------------------------------------------------
+
+Lohen s'est assis. Il boit le the immonde. Mireille parle pendant sept
+minutes et il ne l'interrompt presque pas. C'est le plus long monologue
+du chapitre apres la lettre.
+
+[OBL] Aucune musique (aucune de la sequence). Le seul son en dehors des
+voix : les gouttes de l'oculus, toutes les 4,2 s, sur une flaque au
+troisieme etage, a 11 m en dessous. Elles sont a -31 dB. Elles ne sont
+jamais synchronisees avec une ligne : le silence entre deux gouttes doit
+etre irregulier a l'oreille.
+
+[OBL] Mireille ne parle PAS d'Esteban dans ce document. Pas une fois. Le
+joueur croira qu'elle va y venir. Elle n'y vient pas.
+
+--- LES 30 LIGNES ------------------------------------------------------------------------
+
+    [S4_MIR_L121]  MIREILLE · 2,4 s · plat · p1,2
+        « J'ai commence ici a vingt-deux ans. En 'quatre-vingt-trois. »
+
+    [S4_MIR_L122]  MIREILLE · 3,0 s · plat · p1,1
+        « Le batiment etait un reservoir. On y rangeait de l'eau. Puis
+          on y a range du papier. »
+
+    [S4_MIR_L123]  MIREILLE · 2,6 s · sec · p1,4
+        « Les deux pourrissent. »
+
+    [S4_LOH_L124]  LOHEN · 1,2 s · plat · p1,0
+        « Vous aimez ce travail ? »
+
+    [S4_MIR_L125]  MIREILLE · 2,0 s · plat · p1,3
+        « Non. »
+        dir : M1.
+
+    [S4_MIR_L126]  MIREILLE · 3,4 s · plat · p1,2
+        « J'aime les choses qui sont a leur place. Ce n'est pas la
+          meme chose qu'aimer son travail. »
+
+    [S4_MIR_L127]  MIREILLE · 2,8 s · plat · p1,5
+        « Ici, rien n'est a sa place depuis trois ans, et je viens
+          quand meme. »
+
+    [S4_LOH_L128]  LOHEN · 1,4 s · plat · p1,1
+        « Pourquoi ? »
+
+    [S4_MIR_L129]  MIREILLE · 3,2 s · plat · p1,4
+        « Parce que mon mari est mort en 'onze et que j'ai eu quatre
+          ans pour m'entrainer a etre seule avant que tout le monde
+          s'y mette. »
+        dir : [OBL] M2, 4e occurrence. [OBL][NAR] Elle a un avantage
+              de quatre ans sur la ville entiere. Elle le dit comme un
+              avantage technique. Elle ne pleure pas. Elle ne pleurera
+              pas de tout le chapitre.
+
+    [S4_MIR_L130]  MIREILLE · 2,4 s · plat · p1,2
+        « J'etais deja entrainee. Les autres non. »
+
+    [S4_MIR_L131]  MIREILLE · 3,6 s · plat · p1,3
+        « Alors ils viennent ici et ils me demandent des fiches, et
+          ce qu'ils veulent vraiment c'est que quelqu'un leur dise
+          comment on fait. »
+
+    [S4_LOH_L132]  LOHEN · 1,6 s · plat · p1,4
+        « Et vous leur dites ? »
+
+    [S4_MIR_L133]  MIREILLE · 2,2 s · sec · p1,6
+        « Non. »
+
+    [S4_MIR_L134]  MIREILLE · 3,0 s · plat · p1,2
+        « Parce qu'il n'y a pas de comment. Il y a seulement des
+          mardis, et il faut les traverser un par un. »
+        dir : [NAR] « des mardis » — raccord involontaire avec la
+              lettre du pere lue par Niels en S3 (« ta mere elle
+              regarde par la fenetre le mardi et c'est long, un
+              mardi »). [OBL] Coincidence assumee, jamais soulignee.
+              Deux personnes qui ne se connaissent pas ont trouve le
+              meme jour de la semaine.
+
+    -- MIR-DLG-372 commence ici --
+
+    [S4_MIR_L135]  MIREILLE · 2,8 s · plat · p1,3
+        « Je vais vous dire la seule chose utile que je sais, et
+          apres vous partirez. »
+
+    [S4_MIR_L136]  MIREILLE · 3,4 s · plat · p1,1
+        « Les gens croient qu'ils cherchent une personne. »
+
+    [S4_MIR_L137]  MIREILLE · 3,0 s · plat · p1,5
+        « Ils cherchent une phrase. »
+
+    [S4_MIR_L138]  MIREILLE · 3,8 s · plat · p1,2
+        « Une seule. Celle qu'on n'a pas dite, ou celle qu'on a mal
+          entendue. »
+
+    [S4_MIR_L139]  MIREILLE · 2,6 s · plat · p1,6
+        « Et quand ils la trouvent, ils s'apercoivent qu'elle etait
+          courte. »
+
+    [S4_MIR_L140]  MIREILLE · 4,2 s · plat · p1,8
+        « Toutes les phrases d'amour sont courtes, jeune homme. C'est
+          pour ca qu'on les rate. »
+        dir : [OBL][NAR] MIR-DLG-372. PREMIERE ET AVANT-DERNIERE
+              OCCURRENCE DU MOT « AMOUR » DANS LE JEU. La seconde est
+              dans la lettre d'Esteban, en S8.
+              [OBL] Direction : elle ne le dit PAS avec emphase. Elle le
+              dit comme un fait d'archiviste. Le comedien ne ralentit
+              pas, ne baisse pas la voix, ne « donne » rien.
+              [OBL] Aucune musique (il n'y en a pas). Aucun plan de
+              reaction sur Lohen. La camera reste sur elle, en plan
+              moyen fixe, comme depuis le debut de la scene.
+              [OBL] Pause de 1,8 s apres, puis elle boit (M1). C'est
+              tout.
+              [OBL][NAR] LA PHRASE D'ESTEBAN, celle que Lohen cherche
+              sans le savoir, fait quatre mots : « Tu as les mains
+              sales. » Mireille vient de dire au joueur ou regarder.
+              Le joueur l'a deja entendue, en S6, ou l'entendra.
+              Personne ne fera jamais le lien a voix haute.
+
+    [S4_LOH_L141]  LOHEN · 1,8 s · plat · p1,4
+        « Et si on la trouve pas ? »
+
+    [S4_MIR_L142]  MIREILLE · 3,2 s · plat · p1,3
+        « Alors on en fabrique une, et elle tient a peu pres. »
+
+    [S4_MIR_L143]  MIREILLE · 2,4 s · sec · p1,5
+        « C'est ce que j'ai fait. La mienne est fausse et elle tient
+          depuis huit ans. »
+
+    [S4_LOH_L144]  LOHEN · 1,4 s · plat · p1,2
+        « C'est quoi ? »
+
+    [S4_MIR_L145]  MIREILLE · 1,6 s · sec · p1,8
+        « Non. »
+        dir : [OBL] troisieme refus de la sequence, meme formule.
+              Elle ne dira jamais sa phrase. [OBL] Elle n'est ecrite
+              nulle part, dans aucun document, dans aucun prop. Elle
+              n'existe pas. C'est deliberé : si elle existait quelque
+              part, quelqu'un finirait par la mettre dans le jeu.
+
+    [S4_MIR_L146]  MIREILLE · 2,8 s · plat · p1,2
+        « Buvez. Il refroidit et il est pire froid. »
+
+    [S4_LOH_L147]  LOHEN · 1,2 s · plat · p1,4
+        « Il est deja pire. »
+
+    [S4_MIR_L148]  MIREILLE · 2,0 s · plat · p1,6
+        « Ah. »
+        dir : [OBL] elle sourit. UNE fois. 1,1 s. Anim MIR-FAC-009.
+              [OBL] C'est le seul sourire de Mireille du chapitre. Le
+              joueur doit la regarder pour le voir : la camera ne
+              recadre pas.
+
+    [S4_MIR_L149]  MIREILLE · 3,0 s · plat · p1,3
+        « Allez-y. Le troisieme etage est ouvert. Ne montez pas au
+          quatrieme, le plancher est mange. »
+
+    [S4_MIR_L150]  MIREILLE · 2,6 s · plat · p0,0
+        « Et ne touchez rien, la-haut. »
+        dir : [OBL][NAR] AVERTISSEMENT IGNORE PAR TOUS LES JOUEURS.
+              C'est la mise en place de E13 — le seul Echo du jeu qui
+              vient d'une personne VIVANTE (exception declaree a la
+              regle R4), et cette personne est Mireille elle-meme.
+              Le joueur montera. Il touchera. C'est prevu.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] MIR-DLG-372 (L140) : 1re des 2 occurrences de « amour », sans emphase
+[ ] Aucun plan de reaction sur Lohen pendant L140
+[ ] Mireille ne parle pas d'Esteban de tout le document
+[ ] Gouttes de l'oculus : -31 dB, jamais synchronisees avec une ligne
+[ ] L145 : la phrase de Mireille n'existe nulle part — interdit de creation
+[ ] L148 : unique sourire, non cadre
+[ ] L150 : avertissement qui installe E13

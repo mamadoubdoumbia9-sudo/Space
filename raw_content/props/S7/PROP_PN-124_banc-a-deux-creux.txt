@@ -1,0 +1,109 @@
+===============================================================================
+PN-124 — LE BANC A DEUX CREUX POLIS
+===============================================================================
+Asset : SM_S7_Banc_Front_Mer · S7, front de mer, face a la Maree ·
+~05:50 · prop narratif · pas d'Echo · LOD0 1 100 tris
+
+§ 1 — CE QU'ON VOIT
+Un banc public, en fonte et lattes de bois, 1,80 m, face a la mer.
+Il est scelle dans le quai. Il ne bouge pas depuis quarante ans.
+Le dossier est intact. Les lattes sont grises, fendillees, mouillees.
+Sur l'assise, deux creux.
+[OBL] TROISIEME et derniere occurrence du motif dans le chapitre, apres
+PN-043 (les coudes du forgeron) et PN-072 (le banc de la mezzanine).
+Ils sont separes de 51 cm.
+[OBL] Plus loin que les 46 cm du banc de la bibliotheque (PN-072). Ce sont
+deux personnes qui ne se touchaient pas.
+Ils sont tres marques : 6 mm de creux dans du bois dur. Des annees.
+Entre les deux, au milieu de l'assise, il y a une troisieme marque.
+[OBL] Pas un creux. Une USURE. Une zone lisse de 12 cm, sans creusement.
+Quelque chose de leger a ete pose la, des milliers de fois, sans poids.
+Une main. Une main posee au milieu, entre deux personnes assises, pendant
+des annees.
+[OBL] Une seule. Il n'y a qu'une zone, pas deux.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 100. Lattes de bois : 7 lattes, chacune avec sa propre deformation
+et son propre gradient d'usure.
+[OBL] Les deux creux : geometrie, 6 mm, avec roughness 0,11 au centre et
+0,61 sur le bois brut.
+[OBL] La zone centrale : PAS de geometrie. Uniquement un masque de
+roughness (0,19 sur 12 cm) — le bois n'est pas creuse, il est POLI.
+[ART] La difference entre creuse et poli est la difference entre un poids
+et un contact. Elle doit etre visible en lumiere rasante.
+Le bois est mouille : shader `wood_wet_grey`, avec la pluie qui ruisselle.
+[OBL] L'eau se comporte differemment sur les zones polies : elle y forme
+des gouttes plates au lieu de s'etaler. Detail de 0,2 ms.
+Collision : boite. [OBL] Non assis. Le joueur ne s'assoit jamais.
+
+§ 3 — CE QUE CA DIT
+Deux personnes se sont assises sur ce banc, face a la mer, pendant des
+annees, a 51 cm l'une de l'autre.
+Et l'une d'elles posait sa main au milieu.
+Le geste humain : poser sa main entre soi et quelqu'un d'autre.
+[OBL] Une seule main. Pas deux. Pas des mains qui se prennent.
+[OBL] Le jeu n'explique rien. Ce sont deux inconnus, deux amis, deux
+freres, un couple, un pere et un fils.
+[NAR] Et l'un posait sa main au milieu du banc pendant des annees, et
+l'autre ne l'a jamais prise.
+[OBL] Cette lecture n'est jamais proposee, jamais confirmee, jamais
+suggeree par un dialogue, une camera ou une musique.
+Le banc est face a la Maree. Il etait face a la mer.
+
+§ 4 — ECHO
+NEANT. [OBL] Le refus le plus dur de S7.
+Objet personnel, geste humain lisible, charge emotionnelle maximale, sur le
+chemin, a 20 minutes de la fin du chapitre.
+Aucun prompt.
+[OBL] Justification interne, jamais enoncee : ce banc est un lieu public.
+Les Echos sont sur des objets qui ont appartenu a UNE personne (PN-016).
+Ce banc a appartenu a tout le monde.
+[ART] Et donc a personne. Et donc il ne garde rien.
+
+§ 5 — MISE EN SCENE
+[OBL] Il est sur le chemin, face a la Maree, a 6 m du bord.
+Le joueur passe derriere. [OBL] Il voit le dossier, pas l'assise.
+Pour voir les creux, il doit contourner le banc et se placer DEVANT, dos a
+la mer.
+[ART] Il doit tourner le dos au plus grand plan du chapitre (PN-122,
+4 kilometres de miroir sous la pluie) pour regarder un banc.
+Taux de detection des deux creux : 44-56 %.
+Taux de detection de la zone centrale : 19-27 %.
+[OBL] Aucun prompt, aucun LookAt, aucun son, aucune musique, aucune
+reaction de Lohen.
+[OBL] Il ne s'assoit pas. Il n'y a pas de commande pour s'asseoir.
+
+§ 6 — AUDIO
+SFX(rain_on_wood_slats) : la pluie sur les sept lattes. Sept timbres.
+[OBL] Rien d'autre. Le banc est muet.
+La pluie sur la Maree (PN-122) domine tout a -8 dB.
+[OBL] Aucune musique.
+
+§ 7 — INTERDICTIONS
+Interdit de : s'asseoir · identifier les deux personnes · ajouter une
+troisieme place · ajouter deux zones polies au centre · graver un nom,
+une initiale, une date · ajouter une plaque commemorative · donner un Echo
+· ajouter de la musique · ajouter un plan · faire commenter · relier a
+PN-043 ou PN-072 · expliquer la main.
+
+§ 8 — LIENS
+PN-043 (les deux creux de coudes du forgeron, S3, 3 h 35 plus tot).
+PN-072 (le banc de la mezzanine, S4, 2 h 15 plus tot, E16, 46 cm, et un
+contact de main de 1,2 seconde).
+[OBL] TROIS bancs a deux places dans le chapitre. Le premier : deux coudes
+et des rires. Le deuxieme : 46 cm et une main touchee une fois. Le
+troisieme : 51 cm et une main posee au milieu, jamais prise.
+[OBL] Aucun n'est relie aux autres. La progression n'est jamais enoncee.
+PN-060, PN-085, PN-057, PN-007 (les chaises seules du chapitre).
+PN-112 (les deux paires d'empreintes a 40 cm, S6).
+[THEME] DEUX. [THEME] LES CREUX QUE LES CORPS LAISSENT.
+
+§ 9 — DOD
+[ ] Deux creux a 51 cm, 6 mm de geometrie, roughness 0,11
+[ ] Zone centrale de 12 cm POLIE sans creusement, roughness 0,19
+[ ] Difference creuse/poli visible en lumiere rasante
+[ ] Gouttes plates sur les zones polies, etalement ailleurs
+[ ] Visible seulement en contournant le banc, dos a la mer
+[ ] Une seule zone centrale, jamais deux
+[ ] Zero prompt, zero son, zero musique, zero assise
+[ ] Aucun lien enonce avec PN-043 ni PN-072

@@ -1,0 +1,193 @@
+===============================================================================
+DLG · S8 · D02 — LA MONTEE : 1 038 MARCHES, 62 LIGNES, AUCUN COMPTEUR
+62 entrees, toutes S8. LOH 62. Contribution : 62.
+Reference maitre 09.17 (recapitulation du level design) et 13.14 (M25,
+« La Montee », 11 min, 6 paliers cales sur l'altitude).
+===============================================================================
+
+--- LA REGLE DE LA MONTEE [OBL] -----------------------------------------------------------------
+
+[OBL] 8 m → 212 m, d'un seul tenant, sans chargement, sans ennemi, sans
+combat, sans regle nouvelle. [OBL] Duree : 11 a 26 minutes selon le
+joueur. [OBL] AUCUN COMPTEUR DE MARCHES, diegetique ou non. Lohen avait
+promis d'en compter (S7_BK_L333). Il ne compte pas. Personne ne compte.
+
+[OBL] LA MUSIQUE SUIT L'ALTITUDE, PAS LE TEMPS. M25 a six paliers :
+  P1  8-40 m    · violoncelle seul
+  P2  40-80 m   · + contrebasse
+  P3  80-120 m  · + piano (trois notes du motif, jamais cinq)
+  P4  120-150 m · + cordes graves
+  P5  150-185 m · + voix feminine sans paroles, tres loin
+  P6  185-212 m · retrait progressif de tout, sauf le vent
+[OBL] Si le joueur redescend, la musique redescend de palier. [OBL] Si
+le joueur s'arrete, elle tient le palier indefiniment, sans boucler de
+maniere audible (chaque palier a 4 couches decalees par nombres
+premiers). [OBL] Job CI `m25-altitude-bind`.
+
+[OBL] LA RECAPITULATION : chaque section rejoue en miniature une
+sequence precedente. [OBL] Les 62 lignes sont placees pour que Lohen
+commente l'ARCHITECTURE et jamais le souvenir. Il dit « des cordages »,
+il ne dit jamais « comme ce matin ». [OBL] Job CI `no-nostalgia-s8` :
+aucune ligne de D02 ne contient « comme » suivi d'un renvoi a une
+sequence.
+
+--- PALIER 1 · 8-40 m — LES CORDAGES (rappel S1), 10 lignes ------------------------------------
+
+    [S8_LOH_L035]  1,8 s · bas · « La porte s'est refermee. »
+        dir : [OBL] M23 (la pluie) se coupe ICI, coupe franche, comme
+              annonce en S7/L273. [OBL] Le silence dure 6 s avant que
+              M25 palier 1 entre — et seulement si le joueur monte.
+    [S8_LOH_L036]  2,2 s · bas · « J'entends plus rien. »
+    [S8_LOH_L037]  1,4 s · bas · « Bon. »
+    [S8_LOH_L038]  2,6 s · bas · « Y'a des cordages le long du mur, sur trente metres. »
+    [S8_LOH_L039]  2,0 s · bas · « Du chanvre. Vieux, mais du chanvre. »
+    [S8_LOH_L040]  2,4 s · bas · « Ca se monte a la main. »
+    [S8_LOH_L041]  1,6 s · bas · « Une main. »
+        dir : [OBL] l'epaule droite. [OBL] TROISIEME ET DERNIERE
+              ALLUSION VOLONTAIRE DU CHAPITRE (S5_LOH_L012,
+              S7_LOH_L025, celle-ci). [OBL] La lettre, en S8/D05, dira
+              « depuis Saint-Jerome ». [OBL] C'est la SEULE explication
+              jamais donnee, elle arrive dans la lettre, elle est
+              partielle (on ne saura jamais ce qu'est Saint-Jerome), et
+              elle vient d'Esteban, pas de lui.
+    [S8_LOH_L042]  2,8 s · bas · « Quelqu'un a mis ces cordages recemment. Le chanvre est pas moisi. »
+    [S8_LOH_L043]  2,0 s · bas · « Bon. »
+    [S8_LOH_L044]  2,4 s · bas · « Je monte. »
+
+--- PALIER 2 · 40-80 m — LA PLAQUE DE VERRE (rappel S2), 10 lignes -----------------------------
+
+    [S8_LOH_L045]  2,2 s · bas · « Y'a du verre dans l'escalier. »
+    [S8_LOH_L046]  2,6 s · bas · « Une plaque entiere, en travers, qui a coule par une meurtriere. »
+    [S8_LOH_L047]  1,8 s · bas · « Elle est noire. »
+    [S8_LOH_L048]  2,4 s · bas · « Pas de trace de pas dessus. »
+        dir : [OBL] LANGAGE VISUEL DE 09.21 : « Mortel : le verre noir
+              sans texture de pas ». [OBL] Lohen enonce la regle du jeu
+              a voix haute, pour la premiere et unique fois, a
+              3 h 10 de jeu. [OBL] Le joueur la connait depuis S1 sans
+              qu'on la lui ait jamais dite. [OBL] Ce n'est pas un
+              tutoriel : c'est un homme qui verifie.
+    [S8_LOH_L049]  2,0 s · bas · « Donc je passe pas dessus. »
+    [S8_LOH_L050]  2,8 s · bas · « Y'a un passage au-dessus, entre la plaque et la voute. »
+    [S8_LOH_L051]  1,6 s · bas · « Quarante centimetres. »
+    [S8_LOH_L052]  2,4 s · bas · « Je rentre. »
+    [S8_LOH_L053]  2,0 s · bas · « De justesse, mais je rentre. »
+    [S8_LOH_L054]  1,4 s · bas · « Voila. »
+
+--- PALIER 3 · 80-120 m — LES ANNEAUX (rappel S3), 10 lignes -----------------------------------
+
+    [S8_LOH_L055]  2,2 s · bas · « Des anneaux de fer noir. »
+    [S8_LOH_L056]  2,6 s · bas · « Avec la rouille qui coule dessous. »
+        dir : [OBL] 09.21 : l'ancre de grappin, TOUJOURS la meme forme,
+              avec une trace de rouille coulante. [OBL] Meme remarque
+              qu'en L048 : il verifie, il n'apprend pas.
+    [S8_LOH_L057]  1,8 s · bas · « Le cable est plus court de quatre metres. »
+    [S8_LOH_L058]  2,4 s · bas · « Donc je prends l'anneau d'en dessous et pas celui d'en face. »
+    [S8_LOH_L059]  2,0 s · bas · « Deux fois plus de lancers. »
+    [S8_LOH_L060]  2,8 s · bas · « Et deux fois moins de chances de me rater. »
+        dir : [OBL][NAR] LA CONTRAINTE EST DEVENUE UN AVANTAGE et c'est
+              lui qui le dit. [OBL] Aucun systeme ne le confirme. Il n'y
+              a pas de statistique de reussite. [OBL] C'est faux
+              mathematiquement et vrai humainement. On ne corrige pas.
+    [S8_LOH_L061]  1,6 s · bas · « La tresse tient. »
+    [S8_LOH_L062]  2,4 s · bas · « Elle a bien travaille. »
+        dir : [OBL] il parle de Sol. [OBL] Il ne dit pas son nom.
+    [S8_LOH_L063]  2,0 s · bas · « Cent vingt metres. »
+    [S8_LOH_L064]  1,4 s · bas · « Bon. »
+
+--- PALIER 4 · 120-150 m — L'ESCALIER EN SPIRALE (rappel S4), 10 lignes ------------------------
+
+    [S8_LOH_L065]  2,2 s · bas · « Ca tourne. »
+    [S8_LOH_L066]  2,6 s · bas · « Ca tourne toujours dans le meme sens et j'ai la tete qui suit. »
+    [S8_LOH_L067]  1,8 s · bas · « Marche a droite, c'est plus large. »
+    [S8_LOH_L068]  2,4 s · bas · « Y'a des paliers tous les vingt metres. »
+    [S8_LOH_L069]  2,0 s · bas · « Je m'arrete pas au bon. »
+        dir : [OBL][NAR] LA LETTRE DIRA : « ta manie de ne jamais
+              t'arreter au bon palier ». [OBL] Le joueur l'entendra
+              dans 20 minutes, ecrite par un homme qui le connaissait.
+              [OBL] Interdit absolu : aucun rappel, aucun flashback
+              audio, aucune reprise de cette ligne pendant la lecture.
+              [OBL] Job CI `no-callback-l069`.
+    [S8_LOH_L070]  2,8 s · bas · « Je m'arrete jamais au bon, c'est une manie. »
+    [S8_LOH_L071]  1,6 s · bas · « Bon. »
+    [S8_LOH_L072]  2,4 s · bas · « Cent cinquante. »
+    [S8_LOH_L073]  2,0 s · bas · « Je souffle deux minutes. »
+    [S8_LOH_L074]  2,6 s · bas · « Deux minutes, c'est long, j'ai appris ca aujourd'hui. »
+        dir : [OBL] troisieme et derniere occurrence du motif des deux
+              minutes (S6_EST_L164 « deux minutes, bouge pas » →
+              S6_LOH_L222 « c'est long, deux minutes » → S7_LOH_L110 →
+              ici). [OBL] Quatre en fait. [OBL] Il ne sourit pas.
+
+--- PALIER 5 · 150-185 m — LA BRUME PASSE DESSOUS, 12 lignes ------------------------------------
+
+[OBL] A 150 m, la brume passe SOUS le joueur. Velmora disparait (09.17).
+[OBL] VFX V25. [OBL] C'est le seul moment du chapitre ou la ville
+n'existe plus.
+
+    [S8_LOH_L075]  2,4 s · bas · « La brume est en dessous. »
+    [S8_LOH_L076]  2,0 s · bas · « Y'a plus de ville. »
+    [S8_LOH_L077]  2,8 s · bas · « Y'a une couche blanche et trois toits qui depassent. »
+    [S8_LOH_L078]  1,8 s · bas · « La grue. »
+    [S8_LOH_L079]  2,4 s · bas · « La Bibliotheque. »
+    [S8_LOH_L080]  2,6 s · bas · « Et un toit que je connais pas. »
+        dir : [OBL][NAR] IL LE CONNAIT. [OBL] Le carnet dira (E30,
+              jour 61) : « de la chambre, on voit onze toits de la rue
+              des Lavandieres. Le notre est le quatrieme en partant de
+              la grue. » [OBL] Le toit que Lohen ne reconnait pas, vu
+              d'ici, est le sien. [OBL] Il ne l'a jamais vu d'en haut.
+              [OBL] Le joueur qui lira le carnet (94 %) pourra faire le
+              lien. [OBL] AUCUNE LIGNE NE LE FERA. [OBL] Job CI
+              `roof-unmarked`.
+    [S8_LOH_L081]  2,0 s · bas · « Le vent est different ici. »
+    [S8_LOH_L082]  2,4 s · bas · « Il siffle pas, il pousse. »
+    [S8_LOH_L083]  2,8 s · bas · « Faut se tenir avec la main qui sert a rien. »
+    [S8_LOH_L084]  1,6 s · bas · « Bon. »
+    [S8_LOH_L085]  2,4 s · bas · « Cent quatre-vingt-cinq. »
+    [S8_LOH_L086]  2,0 s · bas · « C'est presque. »
+
+--- PALIER 6 · 185-212 m — LE RETRAIT, 10 lignes ------------------------------------------------
+
+[OBL] M25 se retire couche par couche. A 206 m il ne reste que le vent.
+[OBL] Le joueur monte les 6 derniers metres en silence complet.
+
+    [S8_LOH_L087]  2,2 s · bas · « La musique s'arrete. »
+        dir : [OBL][NAR] ATTENTION : IL NE PARLE PAS DE M25. [OBL] Il
+              parle des CLOCHES : a 190 m, on passe le palier des
+              cloches, et le vent les fait sonner faiblement depuis le
+              debut de la montee. [OBL] Elles s'arretent parce qu'on
+              les a depassees. [OBL] Un joueur peut croire que Lohen
+              commente la bande-son. Le jeu ne le detrompe pas.
+              [OBL] Interdit : ne jamais clarifier.
+    [S8_LOH_L088]  2,6 s · bas · « Y'avait des cloches et j'avais pas remarque. »
+    [S8_LOH_L089]  2,0 s · bas · « Elles sont justes. »
+        dir : [OBL][NAR] LE CARNET DIRA (jour 140) : « Elles sont
+              fausses. Je les accorde. Personne ne les entendra. Ce
+              n'est pas une raison. » [OBL] Lohen vient de les entendre
+              et de constater qu'elles sont justes. [OBL] Aucun lien.
+    [S8_LOH_L090]  2,4 s · bas · « Quelqu'un les entretient. »
+    [S8_LOH_L091]  1,8 s · bas · « Comme les gonds. »
+        dir : [OBL] il relie les gonds graisses (S5/L422, S7/L255) a
+              quelqu'un. [OBL] IL NE VA PAS PLUS LOIN. Quatrieme fois
+              du chapitre qu'il est a une phrase de comprendre.
+    [S8_LOH_L092]  2,8 s · bas · « Deux cent six. Y'a un palier et une porte. »
+    [S8_LOH_L093]  2,0 s · bas · « En bois. Gonflee par l'humidite. »
+    [S8_LOH_L094]  2,4 s · bas · « Elle est fermee. »
+    [S8_LOH_L095]  2,6 s · bas · « Pas verrouillee. Fermee. »
+        dir : [OBL] 19.02. [OBL] La distinction lui importe. C'est la
+              meme que « vide comme range » (S6_LOH_L003).
+    [S8_LOH_L096]  0,0 s · — · (slot sans VO)
+        dir : [OBL] DERNIERE ENTREE DE LA MONTEE. [OBL] Il pousse.
+              Maintien de 2,2 s, resistance progressive, aucune barre,
+              l'animation de l'epaule dit l'effort (19.02). Haptique
+              montante. Le bois grince — [OBL] c'est le seul son.
+              [OBL] Aucune musique n'entre. Voir D03.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] Aucun compteur de marches — la promesse de S7_BK_L333 n'est pas tenue
+[ ] M25 cale sur l'altitude, redescend si le joueur redescend — CI `m25-altitude-bind`
+[ ] Aucune ligne de nostalgie, il commente l'architecture — CI `no-nostalgia-s8`
+[ ] L041 : 3e et derniere allusion a l'epaule avant la lettre
+[ ] L069 : jamais rappelee pendant la lecture — CI `no-callback-l069`
+[ ] L080 : le toit est le sien, jamais dit — CI `roof-unmarked`
+[ ] L087 : ambiguite cloches / bande-son jamais levee
+[ ] L089 : les cloches sont justes, le carnet dit qu'elles etaient fausses

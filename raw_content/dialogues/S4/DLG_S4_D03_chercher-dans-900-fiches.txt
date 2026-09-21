@@ -1,0 +1,249 @@
+===============================================================================
+DLG · S4 · D03 — CHERCHER DANS 900 FICHES : LES LIGNES DE LECTURE
+48 entrees, toutes S4. LOH 48. Contribution : 48.
+Reference maitre : 09.13. Systeme de recherche diegetique, 7 a 14 minutes.
+[OBL] C'est le plus gros bloc de lignes solo de Lohen du chapitre.
+===============================================================================
+
+--- LE SYSTEME -------------------------------------------------------------------------
+
+Le joueur ouvre des tiroirs, sort des fiches, les lit. Chaque fiche a une
+etiquette. Lohen lit A VOIX HAUTE — mal, lentement, en butant.
+
+[OBL] C'EST LE CŒUR DE LA SEQUENCE. Le joueur passe sept a quatorze
+minutes a entendre un homme de vingt-sept ans dechiffrer des mots comme
+un enfant de huit ans, dans un batiment silencieux. Le jeu ne le
+commente jamais. Personne ne le voit. Il n'y a pas de honte mise en
+scene, pas de musique triste, pas de gros plan sur son visage.
+Il y a juste un homme qui lit lentement pendant dix minutes.
+
+[OBL] Les hesitations sont TYPOGRAPHIEES dans le texte de VO, comme pour
+Niels en S3. Elles font partie du fichier. Le comedien ne les improvise
+pas : il les joue.
+
+[OBL] Les 48 lignes se declenchent dans un ordre semi-aleatoire selon les
+tiroirs ouverts, sans repetition. Un joueur rapide en entend 12. Un
+joueur lent les entend toutes. [OBL] Aucune ne contient d'information
+utile SAUF trois (L063, L078, L091), signalees ci-dessous, qui font
+avancer le recoupement.
+
+--- LOT A — LES ETIQUETTES DE TIROIRS (12) -----------------------------------------------
+
+    [S4_LOH_L051]  2,2 s · prudent
+        « Me... ti... ers. Metiers. »
+
+    [S4_LOH_L052]  2,6 s · prudent
+        « Ma-ri-times. Maritimes. Ca c'est les bateaux. »
+
+    [S4_LOH_L053]  3,0 s · prudent
+        « Ar... ti... sa... nat. Artisanat. »
+
+    [S4_LOH_L054]  2,4 s · prudent
+        « Non. Ar-ti-sa-nat d'art. C'est pas pareil ? »
+
+    [S4_LOH_L055]  2,8 s · prudent
+        « Ser... vices. Services a la personne. »
+
+    [S4_LOH_L056]  2,0 s · prudent
+        « Ca veut dire quoi. »
+
+    [S4_LOH_L057]  3,2 s · prudent
+        « E... du... ca... tion. Education. Ca je connais. »
+
+    [S4_LOH_L058]  2,6 s · prudent
+        « Trans... port. Transport et relais. »
+
+    [S4_LOH_L059]  2,2 s · plat
+        « Ca c'est moi. »
+        dir : [OBL] il ouvre le tiroir de son propre metier. Sa fiche y
+              est. [OBL] Le joueur peut la trouver : PN-073. Elle
+              contient son matricule, sa date d'entree en service, et
+              une case « niveau de lecture » laissee VIDE par
+              l'administration. Lohen ne la lit pas a voix haute.
+              Il referme. Aucune ligne. Anim LOH-ACT-061, 1,9 s.
+
+    [S4_LOH_L060]  2,4 s · prudent
+        « In... stru... ments. Instruments. »
+
+    [S4_LOH_L061]  1,8 s · plat
+        « La. »
+
+    [S4_LOH_L062]  3,4 s · prudent
+        « Fac... teurs, ac-cor-deurs, lu-thiers. Trois metiers dans
+          un tiroir. »
+
+--- LOT B — LES FICHES DU TIROIR (18) -------------------------------------------------------
+
+    [S4_LOH_L063]  3,6 s · prudent
+        « Accordeur. Il y en a... un, deux, trois. Quatre. »
+        dir : [OBL] INFORMATION UTILE 1/3. Quatre accordeurs dans
+              Velmora. Le recoupement se fera sur le quartier.
+
+    [S4_LOH_L064]  2,8 s · prudent
+        « Bas... quartier des Lavandieres. »
+        dir : [NAR] la rue de l'escalier ou Lohen a ri une fois, en
+              mars. Il ne le dit pas. La lettre le dira en S8.
+
+    [S4_LOH_L065]  2,4 s · prudent
+        « Non. C'est une femme. Soixante et onze ans. »
+
+    [S4_LOH_L066]  3,0 s · prudent
+        « Deu... xieme. Quartier du Pont Casse. Cinquante-quatre ans. »
+
+    [S4_LOH_L067]  2,2 s · plat
+        « Non plus. »
+
+    [S4_LOH_L068]  3,2 s · prudent
+        « Troi... sieme. Quartier... quartier... »
+
+    [S4_LOH_L069]  2,6 s · prudent
+        « Saint-Ambre. »
+        dir : [OBL] il s'arrete apres ce mot. 1,4 s. Il ne dit rien
+              d'autre. [OBL] Aucun effet sonore, aucun changement de
+              lumiere, aucun gros plan. Le joueur sait, parce que
+              Tallec a dit « les cloches de Saint-Ambre » une heure
+              plus tot.
+
+    [S4_LOH_L070]  1,6 s · plat
+        « Voila. »
+
+    [S4_LOH_L071]  3,4 s · prudent
+        « Ma... rek. M-A-R-E-K. »
+        dir : [OBL][NAR] IL EPELLE. Il ne lit pas le nom : il epelle
+              les lettres une par une, comme Sol a dit savoir le faire
+              (« J'ai dit les lettres. Pas les mots. »).
+              [OBL] Aucune musique. Aucun ralenti. Aucun plan.
+              C'est le moment le plus important de S4 et il est traite
+              exactement comme les quarante-sept autres lignes.
+
+    [S4_LOH_L072]  2,0 s · plat
+        « Esteban. »
+        dir : [OBL] il ne l'epelle pas. Il sait ecrire son nom
+              (S1_LOH_L013 : « Je sais ecrire son nom. »). Il le lit
+              d'un coup, normalement, a vitesse normale. C'est le seul
+              mot que cet homme lit couramment de tout le jeu.
+              [OBL] Le contraste entre L071 et L072 est l'effet. Il
+              n'est souligne par rien.
+
+    [S4_LOH_L073]  2,8 s · prudent
+        « Ne en... quatre-vingt-huit. Trente et un ans. »
+
+    [S4_LOH_L074]  3,0 s · prudent
+        « Domi... cile. Rue de la Corderie, douze. »
+
+    [S4_LOH_L075]  2,4 s · plat
+        « Je connais. J'y suis passe mille fois. »
+
+    [S4_LOH_L076]  2,6 s · prudent
+        « Ren... voi. Renvoi au dossier. Casier quatre. »
+
+    [S4_LOH_L077]  2,2 s · prudent
+        « Rangee M. »
+
+    [S4_LOH_L078]  2,8 s · plat
+        « Elle avait raison. »
+        dir : [OBL] INFORMATION UTILE 2/3 : le casier est confirme.
+              [NAR] Elle avait raison sur le casier, et elle a menti
+              sur autre chose. Le joueur vient de verifier la seule
+              chose qui etait vraie.
+
+    [S4_LOH_L079]  3,2 s · prudent
+        « Qua... trieme accordeur. Quartier de la Haute Ville.
+          Dix-neuf ans. »
+
+    [S4_LOH_L080]  2,4 s · plat
+        « Dix-neuf ans. »
+        dir : [OBL] il repete l'age. Il ne dit rien de plus. [NAR] Ce
+              quatrieme accordeur est mort aussi. Son nom est dans les
+              641 (content/victims_641.csv). Le joueur peut le trouver.
+              Aucune ligne n'y fait allusion.
+
+--- LOT C — LES FICHES QU'ON OUVRE PAR ERREUR (18) --------------------------------------------
+
+[OBL] Ces dix-huit lignes sont la vraie raison d'etre de la sequence : en
+cherchant un nom, le joueur en lit deux cents autres. C'est comme ca que
+641 devient un nombre qui pese.
+
+    [S4_LOH_L081]  2,6 s · prudent
+        « Bou... lan... gere. Quarante-deux ans. Trois enfants. »
+
+    [S4_LOH_L082]  2,2 s · plat
+        « Trois. »
+
+    [S4_LOH_L083]  3,0 s · prudent
+        « Char... pen... tier. Soixante-huit ans. Retraite en 'quinze. »
+
+    [S4_LOH_L084]  2,4 s · plat
+        « Il a eu deux ans. »
+        dir : [OBL] deux ans de retraite avant la Maree. Lohen fait le
+              calcul a voix haute, sans commentaire.
+
+    [S4_LOH_L085]  2,8 s · prudent
+        « Sans pro... fession. Onze ans. »
+
+    [S4_LOH_L086]  1,8 s · plat
+        « Onze ans, c'est pas une profession, c'est un age. »
+        dir : [OBL] il s'agace contre le formulaire, pas contre la
+              mort. C'est un homme qui connait les formulaires.
+
+    [S4_LOH_L087]  3,2 s · prudent
+        « Ma-rin-pe-cheur. Marin-pecheur. Il y en a... »
+
+    [S4_LOH_L088]  2,6 s · plat
+        « Beaucoup. »
+
+    [S4_LOH_L089]  3,4 s · prudent
+        « Ins... ti... tu... trice. Institutrice. Ecole du Pont Casse. »
+
+    [S4_LOH_L090]  2,8 s · plat
+        « Y'a une fiche par eleve, derriere. »
+
+    [S4_LOH_L091]  3,0 s · prudent
+        « Dix-huit fiches. »
+        dir : [OBL] INFORMATION UTILE 3/3 — mais pas pour la quete :
+              pour le joueur. Dix-huit eleves. [OBL] Aucune ligne ne
+              suit. Lohen referme le tiroir. [NAR] Les 118 chaussures
+              d'enfants de PN-063, en S5, viennent d'ici. Le joueur
+              fera le lien ou pas.
+
+    [S4_LOH_L092]  2,4 s · prudent
+        « Vi... trier. »
+
+    [S4_LOH_L093]  2,0 s · plat
+        « Celle-la est vivante. »
+        dir : [NAR] la fille de Brel. Rien ne le dit. Le nom de famille
+              est le meme et il est lisible.
+
+    [S4_LOH_L094]  2,8 s · prudent
+        « For... ge... ron. Vivant aussi. »
+
+    [S4_LOH_L095]  2,2 s · plat
+        « Ils sont ranges ensemble. Les vivants et les autres. »
+
+    [S4_LOH_L096]  3,0 s · plat
+        « C'est pas trie. »
+        dir : [OBL][NAR] LA PHRASE. L'administration de Velmora n'a pas
+              separe les vivants des morts, parce que trier voudrait
+              dire decider. Personne n'a voulu decider. [OBL] Aucun
+              personnage n'expliquera jamais ca. C'est la seule ligne
+              qui l'approche.
+
+    [S4_LOH_L097]  2,6 s · prudent
+        « Re... la... yeur. Relayeur. »
+
+    [S4_LOH_L098]  2,0 s · plat
+        « Zero zero trente et un. »
+        dir : [OBL][NAR] LE MATRICULE DE PALLAS. Sa fiche est dans le
+              tiroir des relayeurs, comme celle de Lohen. Elle est
+              vivante. [OBL] Lohen ne dit rien de plus. Il ne dit pas
+              son nom. Il lit un numero et il referme.
+              Derniere ligne du lot. Le systeme s'eteint.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] Hesitations typographiees dans les fichiers de VO
+[ ] Aucune musique, aucun gros plan, aucun effet pendant tout le lot
+[ ] L071 epelle / L072 lu couramment : contraste non souligne
+[ ] La fiche de Lohen (PN-073) existe, case « lecture » vide, jamais lue
+[ ] L096 : jamais explique par personne
+[ ] 48 lignes, ordre semi-aleatoire, sans repetition

@@ -1,0 +1,93 @@
+===============================================================================
+PN-075 — LES LUNETTES A UN SEUL VERRE
+===============================================================================
+Asset : SM_S4_Lunettes_Mireille · S4, portees par Mireille · ~03:28 ·
+prop narratif porte par un personnage · pas d'Echo · LOD0 620 tris
+
+§ 1 — CE QU'ON VOIT
+Mireille porte des lunettes. Monture de metal fin, ronde, branches droites.
+Le verre gauche est intact.
+Le verre droit MANQUE. Il n'est pas casse : il n'est pas la. Le cercle de
+monture est vide.
+On voit son oeil droit directement, sans verre. [OBL] Et il est parfaitement
+normal. Il n'y a pas de cicatrice, pas de voile, pas de strabisme. C'est un
+oeil ordinaire.
+Elle lit avec l'oeil gauche. Quand elle lit, elle penche la tete a droite
+de 12 degres pour que le verre restant passe devant l'oeil qui travaille.
+[OBL] Elle fait ce mouvement 31 fois pendant la sequence 4.
+La monture est reparee au niveau du pont : un fil de cuivre, enroule sept
+fois, tient les deux moities ensemble.
+Les branches ont ete allongees avec deux bouts de ficelle nouee derriere
+les oreilles, parce que la monture est trop petite pour elle.
+Ce ne sont pas ses lunettes.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 620. Asset personnage, attache a la tete de Mireille.
+[OBL] Le verre gauche a une transmission de 0,94 et une DEFORMATION
+optique reelle : c'est un verre correcteur. L'oeil de Mireille vu a travers
+est agrandi de 14 %.
+[OBL] C'est le detail le plus important du prop. Il demande un shader de
+refraction sur le verre avec un screen-space distortion calibre. 0,15 ms.
+Sans lui, le verre a l'air d'etre du plexiglas plat.
+Le fil de cuivre : 7 tours en geometrie, 90 tris.
+Les ficelles derriere les oreilles : 2 splines, 60 tris.
+Anim : MIR-ANI-617, l'inclinaison de tete de 12 degres. 31 occurrences.
+[OBL] Toujours 12 degres, toujours a droite, toujours avant de lire.
+
+§ 3 — CE QUE CA DIT
+Elle porte les lunettes de quelqu'un d'autre, trop petites, reparees au fil
+de cuivre, avec un verre en moins.
+Le geste humain : nouer une ficelle derriere ses oreilles pour tenir des
+lunettes qui ne sont pas a sa taille.
+[NAR] Le verre manquant : perdu, casse, jamais remplace. Il n'y a plus
+d'opticien a Velmora.
+[OBL] Son oeil droit est normal. Elle voit mal des deux yeux et le verre
+gauche corrige un seul. Elle a donc une vision correcte sur un oeil et
+floue sur l'autre, en permanence, depuis des annees.
+Elle penche la tete de 12 degres, 31 fois en 50 minutes, sans y penser.
+
+§ 4 — ECHO
+NEANT. Objet d'une vivante (PN-046).
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur est assis face a elle pendant 50 minutes. Le visage de
+Mireille est le visage qu'il regarde le plus longtemps de tout le chapitre.
+Les lunettes sont donc vues des milliers de fois.
+[ART] Il faut en moyenne 6 minutes a un testeur pour remarquer qu'il manque
+un verre. Ce delai est le resultat recherche : le detail est enorme et
+invisible, parce qu'on regarde les yeux, pas la monture.
+Quand il le remarque, il ne peut plus le ne pas voir.
+[OBL] Lohen ne le remarque jamais. Aucun LookAt, aucune reaction, aucune
+ligne.
+Le joueur ne peut pas en parler. Aucune option.
+
+§ 6 — AUDIO
+NEANT propre.
+[OBL] Aucun son de monture, aucun cliquetis, aucun frottement. Des lunettes
+ne font pas de bruit.
+
+§ 7 — INTERDICTIONS
+Interdit de : retrouver le verre manquant · le remplacer · expliquer d'ou
+viennent les lunettes · permettre de demander · faire commenter · donner un
+oeil abime a Mireille · lui faire retirer ses lunettes · ajouter un son ·
+faire varier l'angle de 12 degres · donner un Echo · faire remarquer le
+verre manquant par Lohen, Tallec ou Sol.
+
+§ 8 — LIENS
+PN-032 (les lunettes posees sur le pardessus plie, S2) : [OBL] ce ne sont
+PAS celles-ci. Modele different, monture differente. Interdiction absolue
+d'etablir un lien. Le joueur pourra le croire ; il aura tort ; personne ne
+le detrompera.
+PN-035 (la photo scotchee). PN-074 (le manteau). MIR-MDL-003.
+PN-053 (les quatre paires de lunettes dans le nid de Sol) : [OBL] aucune
+n'est le verre manquant. Aucun lien.
+[THEME] PORTER CE QUI N'EST PAS A SOI. [THEME] LES FAUX LIENS.
+
+§ 9 — DOD
+[ ] Verre gauche avec refraction reelle, oeil agrandi de 14 %, 0,15 ms
+[ ] Cercle droit vide, oeil droit parfaitement normal
+[ ] Fil de cuivre 7 tours en geometrie, ficelles aux branches
+[ ] MIR-ANI-617 : 31 occurrences, 12 degres, toujours a droite
+[ ] Delai moyen de detection par les testeurs : 5 a 8 minutes
+[ ] Zero son, zero reaction, zero option de dialogue
+[ ] Aucun lien avec PN-032 ni PN-053

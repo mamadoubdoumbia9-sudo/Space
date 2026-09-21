@@ -1,0 +1,195 @@
+===============================================================================
+ANNEXE C — VALIDATION CROISEE DES 2 840 LIGNES DE DIALOGUE
+Document de cloture. A lire avant tout audit, toute traduction, toute
+session de studio, toute revue de build.
+===============================================================================
+
+--- § 1. LE COMPTE -----------------------------------------------------------------------------------
+
+    SEQ   LIGNES   BARKS   DOCUMENTS   COMMANDE DE VERIFICATION
+    ---   ------   -----   ---------   ------------------------------------------------
+    S1       118      26      10       --seq S1 --expect 118 --studio 117 --barks 26
+    S2        96      10       9       --seq S2 --expect  96 --studio  95 --barks 10
+    S3       512      96      18       --seq S3 --expect 512 --studio 507 --barks 96
+    S4       388      38      14       --seq S4 --expect 388 --studio 382 --barks 38
+    S5       402      44      10       --seq S5 --expect 402 --studio 397 --barks 44
+    S6       236       4       6       --seq S6 --expect 236 --studio 230 --barks  4
+    S7       274      74       9       --seq S7 --expect 274 --studio 264 --barks 74
+    S8       474      48      10       --seq S8 --expect 474 --studio 404 --barks 48
+          ------   -----   ---------
+            2500     340      88 documents + 5 documents de service
+
+    2 500 + 340 = 2 840   [OBL] CONFORME A L'INDEX ET AU BLOC 12.
+
+    [OBL] Commande globale :
+      tools/count_dialogue.py --all --expect 2840 --lines 2500 --barks 340
+
+--- § 2. VENTILATION PAR LOCUTEUR (ids reels, hors barks) -------------------------------------------
+
+      LOH  Lohen ................... 1310
+      ECH  voix d'Echos .............. 302
+      SOL  Sol ....................... 239
+      EST  Esteban ................... 205   (+ 6 en ECH, voir § 3.04)
+      MIR  Mireille .................. 119
+      TAL  Tallec ..................... 64
+      PAL  Pallas ..................... 51
+      THE  Thea ....................... 39
+      BRE  Brel ....................... 37
+      GAR  Garric ..................... 30
+      NIE  Niels ...................... 25
+      ODI  Odile ...................... 23
+      WEN  Wenna ...................... 16
+      HAN  Hanne ...................... 14
+      VAN  Vander ..................... 14
+      CAR  Caro ....................... 10
+      VER  le Verrier .................. 2   (toutes deux sans VO)
+                                      ----
+                                      2500
+
+    [OBL] ECART ASSUME AVEC LA PREVISION DE L'INDEX. L'INDEX annoncait
+    LOH 648 · SOL 402 · MIR 289 · TAL 236 · EST 211 + 11 secondaires 714.
+    [OBL] Cette prevision comptait les lignes PAR PERSONNAGE SUR LA
+    TOTALITE DU CHAPITRE en incluant les barks et les variantes ; le
+    corpus ecrit compte les ENTREES DE GRAPHE hors barks. [OBL] Les deux
+    chiffres sont justes dans leur referentiel et le total, lui, est
+    identique : 2 840. [OBL] C'est le seul ecart de l'annexe et il est
+    declare ici. Tout audit doit utiliser la colonne de gauche.
+
+--- § 3. LES ONZE EXCEPTIONS DECLAREES [OBL] ---------------------------------------------------------
+
+3.01 S1_ECH_L104 — id de timeline VO (cloche desaccordee, necessaire au
+     ducking), sans comedien. Comptee dans les 118, exclue du plan de
+     studio. Meme cas : S2_ECH_L021.
+
+3.02 SLOTS MUETS. 6 en S1-S3, 6 en S4, 5 en S5, 6 en S6, 10 en S7, 38 en
+     S8. [OBL] Ils sont comptes dans les 2 840 parce qu'ils occupent un
+     slot du graphe et une duree a la frame. [OBL] Ils n'ont pas de
+     fichier audio : whitelist `vo-orphan`.
+
+3.03 LES 32 FRAGMENTS DU MUR (S8_EST_L249..L280). Ecrits, jamais
+     prononces. Comptes. Job CI `wall-no-vo`.
+
+3.04 LES 6 EXTRAITS DU CARNET portent l'id `S8_ECH_*` et non `S8_EST_*`
+     bien que la voix soit celle d'Esteban : le carnet est E30.
+     [OBL] Un audit par locuteur trouvera donc EST = 205 et non 211.
+     La difference est exactement ces 6 entrees.
+
+3.05 LE MOT « AMOUR » — exactement 2 occurrences PARLEES
+     (S4_MIR_L140 et S8_EST_L225). [OBL] Les occurrences ECRITES du mur
+     (S8_EST_L275, L276) ne sont pas comptees par `word-amour`.
+
+3.06 LE MOT « BON » — 47 occurrences dans le chapitre, plus UNE
+     exception declaree : S8_LOH_L406, dit apres avoir pose la veste.
+     [OBL] Les « bon » des barks ne sont jamais comptes.
+
+3.07 « CA VA ALLER » — 11 occurrences exactement, toutes de Lohen.
+     10 en S5, la 11e en S8, adressee a une lettre, 0,6 s.
+     [OBL] Les « ca va » des barks ne sont pas comptes.
+
+3.08 L'AGE DE LOHEN. `age-never-stated` porte sur les lignes ADRESSEES
+     a un autre personnage. [OBL] S5_LOH_L344 (« Mes genoux ont
+     vingt-sept ans eux aussi ») est un aparte, seul, a 0,7 de gain :
+     exception declaree.
+
+3.09 R2 (« rien d'apres le 14 octobre ») est cassee 5 fois : les quatre
+     Echos de S5 (E20a-d, plusieurs annees apres) et E24 en S7 (le
+     lendemain). [OBL] Aucune n'est expliquee dans le jeu.
+
+3.10 LES 31 ECHOS. Le chapitre en declare 31 ; E31 n'existe pas : le
+     rituel de la lettre (S8/D04) aurait ete le 31e et il ne produit
+     rien. [OBL] Le compte inclut donc un Echo qui n'en est pas un, et
+     c'est le propos.
+
+3.11 `pacing-exempt-s7-coast` — 11 minutes sans evenement sur le segment
+     cotier de S7. [OBL] Exception obligatoire dans la config de
+     `pacing_audit.py` ; si elle disparait, le build casse.
+
+--- § 4. LES REGLES TRANSVERSES, VERIFIEES SUR LES 2 840 [OBL] ---------------------------------------
+
+    [x] personne ne dit jamais a Lohen qu'Esteban est mort — `no-death-told`
+    [x] le mot « Echo » n'est jamais prononce — `no-echo-word`
+    [x] MAREK Esteban n'est jamais barre — `marek-unmarked`
+    [x] aucune ligne sur echec, aucune ligne de game over
+    [x] aucun tutoriel textuel, aucun contour jaune, aucune mini-carte
+    [x] aucun personnage ne formule d'hypothese sur le vol du dossier
+    [x] aucune ligne ne depasse 4,5 s
+    [x] l'ambre est reservee a Esteban — `amber-guard`
+    [x] le Mueur n'apparait jamais en S5 — `no-mueur`
+    [x] les cinq notes du motif ne sonnent qu'une fois — `motif-incomplete-23`
+    [x] exactement 2 rires dans le build — `laugh-inventory`
+    [x] exactement 2 sourires de Lohen — `smile-count`
+    [x] aucun rapport de contenu manque — `no-missed-content-report`
+
+--- § 5. LES CINQ QUASI-COMPREHENSIONS [OBL] -----------------------------------------------------
+
+[OBL] Cinq fois dans le chapitre, Lohen est a une phrase de comprendre
+quelque chose, et cinq fois il continue. [OBL] Liste FIGEE. On n'en
+ajoute pas, on n'en resout aucune. Job CI `five-near-misses`.
+
+  1. le parquet intact de la salle de bal ......... S6_LOH_L009/L010
+  2. les deux memes fenetres qui laissent entrer la pluie ... S6_LOH_L218
+  3. la lampe allumee alors qu'il n'y a pas de soleil ....... S7_LOH_L240
+  4. les gonds graisses partout ........................... S8_LOH_L091
+  5. les onze toits, dont le sien ......................... S8_LOH_L344
+
+--- § 6. LES SEPT CHOSES QUE LE JOUEUR PEUT SAVOIR ET QUE LOHEN NE SAIT PAS --------------------------
+
+  1. que le Verrier est l'homme qui rangeait les chaises au bal (S6/D03 point 9)
+  2. que le dossier a ete vide le 11 aout (E18, 4 %)
+  3. que le toit qu'il ne reconnait pas est le sien (S8_EST_L257)
+  4. que les 314 feuilles sont eclairees derriere lui (S8_LOH_L243)
+  5. qu'Esteban a menti sur le papier (41 pages vierges, 12 %)
+  6. qu'il pleut depuis trois jours (S7_BK_L342)
+  7. que Sol l'attend au pied du Phare bien avant qu'il n'arrive
+
+  [OBL] Aucune de ces sept n'est jamais dite au personnage, dans aucun
+  chapitre. [OBL] C'est la definition de la mise en scene de ce jeu.
+
+--- § 7. LES DIX CHOSES QUE PERSONNE NE SAURA JAMAIS [OBL] ------------------------------------------
+
+  1. la cause de la Maree
+  2. si Esteban est vivant
+  3. ou il est alle
+  4. ce qu'il y avait dans le dossier
+  5. pourquoi la lentille tourne
+  6. qui a rempli la lampe d'huile
+  7. ce qu'est Saint-Jerome
+  8. ce qui s'est passe en novembre
+  9. ce que Sol murmure en dormant
+ 10. pourquoi les 1 038 traits du conduit sont le nombre de marches
+
+  [OBL] Interdit absolu (21.08) d'y repondre dans le chapitre 1, dans un
+  patch, dans un document annexe ou dans une communication publique.
+  [OBL] Les points 2, 3, 4, 5 et 6 relevent du chapitre 4 (20.05). Les
+  points 1, 7, 8, 9 et 10 ne relevent d'aucun chapitre.
+
+--- § 8. ORDRE D'ENREGISTREMENT EN STUDIO [OBL] -----------------------------------------------------
+
+  1. les secondaires (11 roles, 253 lignes) — 4 jours
+  2. Pallas, Tallec, Mireille — 6 jours
+  3. les voix d'Echos (302 lignes, 41 comediens) — 9 jours
+  4. Sol — 5 jours, [OBL] maximum 4 h par jour, reglementation mineurs
+     (INDEX § 9.03)
+  5. Lohen — 14 jours. [OBL] S6 est enregistre EN PREMIER, avant S1, et
+     le comedien ne le reecoute jamais.
+  6. ESTEBAN, SEUL, EN DERNIER, apres que tout le reste existe (13.33).
+     [OBL] Il entend les 2 629 autres lignes avant d'enregistrer les
+     211 siennes. [OBL] La lettre est la derniere session du chapitre.
+
+--- § 9. CRITERE DE RECEPTION DE L'ANNEXE C [DOD] -----------------------------------------------------
+
+  [ ] 2 840 entrees, 0 doublon d'id, 0 trou non documente
+  [ ] 88 documents de dialogue + 5 de service, tous auto-suffisants
+      (INDEX_DIALOGUES_2840, BARKS/INDEX_DES_340_BARKS, SYSTEME/LES_38_CHOIX,
+       SYSTEME/LIGNES_ABANDON, VALIDATION_2840)
+  [ ] chaque document rappelle son contexte sans exiger la lecture d'un autre
+  [ ] chaque ligne porte une duree, une emotion et une direction
+  [ ] aucune ligne de remplissage : chaque entree porte une information,
+      un effet, une mecanique ou une decision de mise en scene
+  [ ] toutes les references au master pointent sur un BLOC existant
+  [ ] les 11 exceptions du § 3 figurent dans la config des jobs CI
+
+===============================================================================
+FIN DE L'ANNEXE C.
+2 840 lignes. 88 documents de dialogue. Aucune n'est la pour faire du volume.
+===============================================================================

@@ -1,0 +1,277 @@
+===============================================================================
+DLG · S3 · D04 — TALLEC, POSTE DE MILICE : LA SCENE CANONIQUE 12.11
+47 entrees, toutes S3. TAL 33 · LOH 14. Contribution : 47.
+SCENE CANONIQUE 12.11 du document maitre — texte fixe pour L088 a L112.
+Props : PN-046 (l'ancre du harnais, donnee apres TAL-DLG-338),
+        PN-058 (le registre manuscrit, nom de Tallec ligne 4, jamais signale).
+Anim : TAL-IDL-001 (assis, nettoie sa prothese), TAL-STD-014 (il se leve).
+===============================================================================
+
+--- CONTEXTE -------------------------------------------------------------------
+
+Le poste de milice : une piece de 4 x 5 m, toit de tole rouge, une table,
+deux chaises, un poele, un registre manuscrit ouvert (PN-058), une carte
+de Velmora avec des zones hachurees au crayon.
+
+Tallec, 44 ans, assis. Il nettoie sa prothese de bras avec un chiffon et
+une petite brosse. Il fait ca tous les jours. Il le fera pendant toute la
+scene sauf pendant 11 secondes.
+
+[OBL] M13 « Tallec » joue en entrant, tres bas (-24 dB), et s'ARRETE 4 s
+avant TAL-DLG-338 (canon PN-046). Aucune musique ne revient avant la fin
+de la scene.
+
+[OBL] Tallec ne se leve qu'UNE fois, a L106. Avant ca, il ne se leve
+jamais, quoi que fasse le joueur, meme si le joueur sort et revient.
+
+--- LES 4 LIGNES D'ENTREE (avant le canon) ------------------------------------------
+
+    [S3_TAL_L088]  TALLEC · 1,2 s · plat · p0,6
+        « Tiens. Zero cent quatorze. »
+        dir : [OBL] CANON 12.11, premiere ligne. Il ne leve pas les
+              yeux de sa prothese. Il l'a entendu monter l'escalier :
+              14 marches en tole, on entend tout.
+
+    [S3_LOH_L089]  LOHEN · 0,9 s · poli · p0,5
+        « Capitaine. »
+
+    [S3_TAL_L090]  TALLEC · 2,8 s · sec · p0,4
+        « Non. Plus capitaine. Plus de bateaux, plus de capitaine. »
+        dir : CANON.
+
+    [S3_TAL_L091]  TALLEC · 1,4 s · sec · p0,7
+        « T'es venu chercher quoi. »
+        dir : CANON. Il tape sa prothese, deux coups, JUSTE AVANT cette
+              ligne. Le son des deux coups (sample reel sur alliage
+              leger, -12 dB) remplace le point d'interrogation : la
+              ligne est dite sans intonation montante.
+
+--- LE CORPS DE LA SCENE CANONIQUE ---------------------------------------------------
+
+    [S3_LOH_L092]  LOHEN · 1,3 s · plat · p0,5
+        « Un nom dans le Registre. »
+
+    [S3_TAL_L093]  TALLEC · 2,2 s · plat · p0,4
+        « Le Registre est sous quatre metres de verre. »
+
+    [S3_LOH_L094]  LOHEN · 1,7 s · plat · p0,6
+        « Je sais. J'y suis passe ce matin. »
+
+    [S3_TAL_L095]  TALLEC · 2,6 s · plat · p0,5
+        « Alors tu sais deja que la reponse est non. »
+        dir : CANON — « (un temps) » du maitre = 1,1 s de silence AVANT
+              la ligne, pendant lequel il pose la brosse. C'est le
+              premier arret de son geste.
+
+    [S3_LOH_L096]  LOHEN · 3,1 s · plat · p0,9
+        « Je veux l'entendre de quelqu'un qui sait ecrire mon nom. »
+        dir : [OBL][NAR] Deuxieme mention de l'illettrisme de Lohen dans
+              tout le jeu (la premiere est S1_LOH_L008, en pensee). Ici
+              il le dit a haute voix, a un homme, et il le dit comme une
+              exigence, pas comme un aveu. Tallec ne releve pas. Personne
+              ne relevera jamais. C'est la seule facon de traiter ca
+              avec respect.
+
+--- LE CHOIX 04 (le plus important de S3) ---------------------------------------------
+
+    > CHOIX 04 (aucun timer)
+      [1] « Esteban Marek. Accordeur. L'Hirondelle de Mer. »
+      [2] « Un grand roux. Il riait fort. Vous l'avez forcement vu. »
+      [3] (Ne rien dire. Poser la lettre sur la table.)
+
+[OBL] CANON 12.11. Les trois options sont mot pour mot celles du maitre.
+[NAR] L'option [1] contient la PREMIERE occurrence du nom « Esteban » dans
+tout le jeu, et c'est le joueur qui la prononce, a 52 minutes. Si le joueur
+choisit [2] ou [3], le nom sera dit plus tard par Tallec lui-meme (L105).
+
+    -- branche [1] --
+    [S3_LOH_L097]  LOHEN · 3,4 s · plat · p0,8
+        « Esteban Marek. Accordeur. L'Hirondelle de Mer. »
+    [S3_TAL_L098]  TALLEC · 2,0 s · plat · p0,6
+        « Je sais qui c'est. »
+        dir : [OBL] il repond tout de suite. Aucun suspense. Aucun
+              « hmm, Marek, Marek... ». Il sait, il le dit, on avance.
+    [S3_TAL_L099]  TALLEC · 2,7 s · sec · p0,5
+        « Et tu savais que je savais. Donc tu es venu pour autre chose. »
+
+    -- branche [2] --
+    [S3_LOH_L100]  LOHEN · 3,2 s · plat · p0,7
+        « Un grand roux. Il riait fort. Vous l'avez forcement vu. »
+    [S3_TAL_L101]  TALLEC · 2,4 s · sec · p0,6
+        « Il y a quatre-vingts roux dans cette ville et ils rient tous. »
+        dir : [OBL] il ment par omission. Il sait parfaitement de qui il
+              s'agit. La branche [2] est la moins bonne et le jeu ne le
+              signale pas.
+    [S3_TAL_L102]  TALLEC · 2,9 s · plat · p0,5
+        « Donne-moi un nom ou va-t'en. »
+
+    -- branche [3], la meilleure (canon) --
+    [S3_TAL_L103]  TALLEC · 2,3 s · plat · p1,4
+        « Elle est adressee a qui. »
+        dir : CANON. « (il regarde la lettre. Longtemps.) » = 3,8 s de
+              silence AVANT la ligne, pendant lesquelles il ne bouge
+              pas. Le plus long arret de geste de la scene.
+    [S3_LOH_L104]  LOHEN · 2,6 s · plat · p0,7
+        « A personne. C'est moi qui l'ai ecrite. »
+        dir : [NAR] c'est faux et vrai a la fois : il l'a dictee. Il ne
+              sait pas assez ecrire. Le jeu ne le corrigera jamais. En
+              S8, la lettre d'Esteban dira « tu as toujours dit que
+              j'ecrivais trop » — et un joueur attentif comprendra que
+              Lohen, lui, n'ecrit presque pas.
+    [S3_TAL_L105]  TALLEC · 2,0 s · plat · p0,6
+        « Pourquoi tu la portes, alors. »
+    [S3_LOH_L106]  LOHEN · 1,8 s · plat · p0,9
+        « Parce que c'est mon metier. »
+    [S3_TAL_L107]  TALLEC · 1,6 s · sec · p0,5
+        « Non. C'est ton excuse. »
+        dir : CANON. [OBL] IL SE LEVE ICI (TAL-STD-014, 2,4 s, appui sur
+              la table avec le bras valide). Unique lever de la scene.
+
+--- LA CONVERGENCE : LES 6 LIGNES QUE TOUTES LES BRANCHES ATTEIGNENT -------------------
+
+    [S3_TAL_L108]  TALLEC · 4,4 s · plat · p0,5
+        « Ton grand roux. Il est monte au Marche deux fois par semaine
+          pendant six ans pour accorder les cloches de Saint-Ambre. »
+        dir : CANON. 4,4 s : la plus longue ligne du chapitre, a 0,1 s
+              du plafond de 4,5 s (12.04). Dite d'un souffle.
+
+    [S3_TAL_L109]  TALLEC · 1,9 s · plat · p0,7
+        « Tout le monde le connaissait. »
+
+    [S3_TAL_L110]  TALLEC · 2,8 s · dur_mais_doux · p0,9
+        « Tu crois vraiment que je ne sais pas qui tu cherches ? »
+        dir : CANON. Premiere occurrence de l'emotion `dur_mais_doux`
+              dans le chapitre. Elle est reservee a Tallec : 11 lignes
+              en tout, toutes en S3 et S7.
+
+    [S3_LOH_L111]  LOHEN · 1,3 s · plat · p0,6
+        « Alors dites-moi. »
+
+    [S3_TAL_L112]  TALLEC · 2,1 s · plat · p1,1
+        « Je vais te dire mieux que ca. »
+        dir : CANON. Il decroche l'ancre de son vieux harnais
+              (TAL-ACT-031, 3,2 s). C'est le debut de TAL-DLG-338 et de
+              la remise de PN-046. [OBL] La musique s'est arretee 4 s
+              avant cette ligne (canon PN-046).
+
+    [S3_TAL_L113]  TALLEC · 2,4 s · dur_mais_doux · p0,4
+        « Je ne t'aide pas a le trouver. »
+
+    [S3_TAL_L114]  TALLEC · 2,0 s · dur_mais_doux · p0,0
+        « Je t'aide a arreter. »
+        dir : [OBL] CANON, derniere ligne de 12.11. Direction du maitre
+              (12.02) : « Il ne le regarde pas. Il regarde ses propres
+              mains. » Au pluriel. Il a une main et une prothese. Il
+              regarde les deux. Personne ne le commente.
+              Id historique conserve en note : cette ligne est celle
+              appelee `S3_TAL_L014` dans l'exemple 12.02 du document
+              maitre. L'exemple du maitre est une illustration de format,
+              pas un id contractuel. L'id contractuel est S3_TAL_L114.
+              [OBL] Cette note reste dans le document : elle evite un
+              conflit d'integration.
+
+--- LES 20 LIGNES HORS CANON DE TALLEC (extension) ---------------------------------
+
+Declenchables apres la scene, en revenant au poste. Tallec est rassis.
+[OBL] Aucune ne repete une information. Chacune ajoute une chose et une
+seule. Elles s'epuisent : apres la 20e, Tallec ne dit plus rien du tout,
+jamais, jusqu'a S7.
+
+    [S3_TAL_L115]  TALLEC · 2,2 s · plat · p0,0
+        « Le Registre, en dessous. Y'a quatre cents fiches lisibles a
+          travers le verre. J'en ai lu trois cents. »
+
+    [S3_TAL_L116]  TALLEC · 1,8 s · plat · p0,0
+        « Non, je te dirai pas lesquelles. »
+
+    [S3_TAL_L117]  TALLEC · 2,6 s · sec · p0,0
+        « La Bibliotheque des Eaux garde des copies. Va voir Vandeck.
+          Elle t'aimera pas. »
+
+    [S3_TAL_L118]  TALLEC · 2,0 s · plat · p0,0
+        « Elle aime personne. C'est pas contre toi. »
+
+    [S3_TAL_L119]  TALLEC · 2,4 s · plat · p0,0
+        « Le monte-charge marche une fois sur deux. Thea sait lequel
+          des deux. »
+
+    [S3_TAL_L120]  TALLEC · 1,6 s · sec · p0,0
+        « Garric, dehors. Il te laissera passer. Il fait la gueule, pas
+          le mur. »
+
+    [S3_TAL_L121]  TALLEC · 2,8 s · plat · p0,0
+        « J'ai perdu le bras en 'quatorze. Pas a la Maree. Avant. Une
+          drisse. C'est bete. »
+        dir : [OBL] il donne l'explication sans qu'on la demande, une
+              fois, platement, et c'est fini. Aucune option pour
+              creuser. Aucun personnage n'y reviendra.
+
+    [S3_TAL_L122]  TALLEC · 2,1 s · plat · p0,0
+        « Non, ca fait pas mal. Ca demange. C'est pire. »
+
+    [S3_TAL_L123]  TALLEC · 2,3 s · sec · p0,0
+        « Quatre-vingt-quatorze personnes vivent au-dessus de
+          soixante metres. Je les compte tous les lundis. »
+
+    [S3_TAL_L124]  TALLEC · 1,9 s · plat · p0,0
+        « Lundi dernier, quatre-vingt-treize. »
+        dir : [OBL] il ne dit pas ce qui est arrive au 94e. Aucune
+              option. Le joueur peut le chercher : il existe, c'est
+              PN-070, une porte fermee en S4, et personne n'en parlera.
+
+    [S3_TAL_L125]  TALLEC · 2,7 s · plat · p0,0
+        « Les Figures montent pas au-dessus de quarante metres. On
+          sait pas pourquoi. On s'en plaint pas. »
+
+    [S3_TAL_L126]  TALLEC · 2,2 s · sec · p0,0
+        « Non, j'en ai jamais tue. On les tue pas. On s'ecarte. »
+        dir : [OBL] RACCORD avec la voie non violente (~8 % des
+              joueurs, annexe A). Tallec la valide verbalement une
+              fois. Le jeu ne la recompense toujours pas.
+
+    [S3_TAL_L127]  TALLEC · 2,5 s · plat · p0,0
+        « Le Phare ? Deux cent douze metres et mille trente-huit
+          marches. Je les ai comptees a vingt ans. »
+
+    [S3_TAL_L128]  TALLEC · 1,7 s · sec · p0,0
+        « Y'a rien en haut. C'est un phare sans lampe. »
+        dir : [OBL] troisieme confirmation du canon (apres Pallas en
+              S1). Aucune contradiction possible.
+
+    [S3_TAL_L129]  TALLEC · 2,9 s · plat · p0,0
+        « Le gosse, Sol. Iel dort dans les conduits. Je le sais. Je
+          fais rien. Dis-le a personne. »
+
+    [S3_TAL_L130]  TALLEC · 2,0 s · plat · p0,0
+        « Si je fais quelque chose, iel se sauve plus loin. »
+
+    [S3_TAL_L131]  TALLEC · 2,4 s · plat · p0,0
+        « Ma femme est pas dans la liste. Elle est partie en 'douze.
+          Vivante. C'est mieux. »
+
+    [S3_TAL_L132]  TALLEC · 1,8 s · sec · p0,0
+        « C'est mieux, oui. »
+        dir : [OBL] il se repete. C'est la seule repetition volontaire
+              de Tallec du chapitre. Le comedien enregistre les deux
+              lignes a la suite, meme souffle.
+
+    [S3_TAL_L133]  TALLEC · 2,6 s · dur_mais_doux · p0,0
+        « Tu remonteras me voir avant de partir. C'est pas une
+          question. »
+
+    [S3_TAL_L134]  TALLEC · 2,2 s · plat · p0,0
+        « Bon. J'ai du travail. »
+        dir : [OBL] 20e et derniere ligne. Il n'a pas de travail. Le
+              registre devant lui est a la meme page qu'a l'entree du
+              joueur. Verifiable. Apres cette ligne, Tallec ne repond
+              plus. Il regarde la carte. Jusqu'a S7.
+
+--- CHECKLIST ----------------------------------------------------------------------
+
+[ ] 12.11 reproduit mot pour mot, trois branches, convergence identique
+[ ] Tallec se leve une seule fois, a L107
+[ ] M13 s'arrete 4 s avant L112 (canon PN-046)
+[ ] L108 : 4,4 s, sous le plafond de 4,5 s
+[ ] L114 : note d'id historique conservee
+[ ] Les 20 lignes d'extension s'epuisent definitivement
+[ ] L134 : la page du registre n'a pas change

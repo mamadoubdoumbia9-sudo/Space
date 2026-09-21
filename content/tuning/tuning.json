@@ -1,0 +1,618 @@
+{
+ "movement": {
+  "walk_speed": 1.4,
+  "walk_slow": 0.8,
+  "jog_speed": 3.2,
+  "run_speed": 5.1,
+  "sprint_speed": 6.4,
+  "run_lean_deg": 14.0,
+  "turn_in_place": [
+   90.0,
+   90.0,
+   180.0
+  ],
+  "stop_brake_s": 0.45,
+  "slope_speed_factor": 0.86,
+  "stair_speed_factor": 0.9,
+  "accel_ground": 14.0,
+  "accel_air": 3.5,
+  "friction_ground": 11.0,
+  "stumble_speed_threshold": 4.0,
+  "slide_surface": "glass",
+  "gravity": 15.696000000000002
+ },
+ "air": {
+  "jump_velocity": 5.4,
+  "coyote_time_s": 0.14,
+  "fall_short_loop_s": 1.8,
+  "fall_flail_after_s": 3.5,
+  "land_soft_m": 3.0,
+  "land_medium_m": 7.0,
+  "land_hard_m": 11.0,
+  "land_hard_breath_cost": 8.0,
+  "ledge_grab_window_s": 0.35,
+  "ledge_capsule_widen_m": 0.2,
+  "ledge_climb_fast_s": 0.7,
+  "ledge_climb_exhausted_s": 1.3,
+  "exhausted_below_breath_pct": 25.0,
+  "wallrun_max_s": 2.1,
+  "wallrun_breath_per_s": 8.0,
+  "vault_low_s": 0.45,
+  "air_correction_deg_s": 12.0,
+  "platform_magnet_m": 0.35,
+  "edge_stop_no_jump_ms": 300
+ },
+ "grapple": {
+  "range_m": 28.0,
+  "projectile_speed": 62.0,
+  "pull_speed": 14.0,
+  "pull_accel_s": 0.3,
+  "pendulum_gravity_factor": 1.15,
+  "release_velocity_keep": 0.78,
+  "cooldown_s": 0.45,
+  "breath_per_shot": 4.0,
+  "breath_per_swing_s": 1.5,
+  "auto_aim_cone_deg": 40.0,
+  "auto_aim_weights": {
+   "camera_align": 0.5,
+   "distance": 0.3,
+   "progress": 0.2
+  },
+  "cable_segments": 32,
+  "glass_refuses": true,
+  "zip_ride_speed": 11.0,
+  "zip_brake_decel": 6.5,
+  "snap_scripted": [
+   "S7_minute_3"
+  ]
+ },
+ "breath": {
+  "max": 100.0,
+  "max_end_of_chapter": 130.0,
+  "upgrades": 3,
+  "upgrade_amount": 10.0,
+  "regen_per_s": 9.0,
+  "regen_delay_s": 1.8,
+  "regen_combat_per_s": 4.0,
+  "regen_combat_delay_s": 3.0,
+  "regen_during_echo": 0.0,
+  "cost_sprint_per_s_after_3s": 6.0,
+  "cost_jump": 0.0,
+  "cost_grapple_shot": 4.0,
+  "cost_swing_per_s": 1.5,
+  "cost_wallrun_per_s": 8.0,
+  "gain_parry_success": 6.0,
+  "cost_parry_fail": 14.0,
+  "cost_hit_light_taken": 12.0,
+  "cost_hit_heavy_taken": 26.0,
+  "cost_hard_landing": 8.0,
+  "cost_echo_min": 18.0,
+  "cost_echo_max": 40.0,
+  "cost_refuse_echo": 0.0,
+  "collapse_vulnerable_s": 3.5,
+  "collapse_restore": 35.0,
+  "glass_passive_drain_per_s": 1.0
+ },
+ "combat": {
+  "parry_window_s": 0.22,
+  "parry_window_wide_s": 0.45,
+  "parry_stagger_s": 1.4,
+  "riposte_damage_factor": 3.0,
+  "hitstop_light_ms": 70,
+  "hitstop_heavy_ms": 130,
+  "hitstop_parry_ms": 160,
+  "shake_amp_deg": 0.6,
+  "shake_freq_hz": 22.0,
+  "shake_decay_s": 0.25,
+  "dodge_s": 0.55,
+  "dodge_iframes": 12,
+  "heavy_charge_s": 1.1,
+  "block_hold_max_s": 2.5,
+  "combat_exit_s": 1.8,
+  "combat_exit_lock_s": 0.6,
+  "max_simultaneous": 4,
+  "attack_token_above": 2,
+  "encounters_total": 14,
+  "avoidable": 9,
+  "duration_min_s": 22,
+  "duration_max_s": 70,
+  "tell_echassier_s": 0.8,
+  "tell_mueur_s": 0.5,
+  "shatter_fragments": 47,
+  "difficulty_levels": [
+   "calme",
+   "soutenu",
+   "brutal"
+  ]
+ },
+ "boss_verrier": {
+  "arena_diameter_m": 42.0,
+  "altitude_m": 34.0,
+  "phase1_range": [
+   0.0,
+   0.35
+  ],
+  "phase2_range": [
+   0.35,
+   0.7
+  ],
+  "phase3_range": [
+   0.7,
+   1.0
+  ],
+  "chase_max_m": 12.0,
+  "p1_attacks": {
+   "balayage": 1.1,
+   "eclats": 0.9,
+   "verticale": 1.4
+  },
+  "p1_riposte_window_s": 2.2,
+  "p2_mueur_shields": 2,
+  "p3_peaceful_stop_s": 4.0,
+  "target_duration_fight_s": 200,
+  "target_duration_peace_s": 70,
+  "respawn_at_phase": true
+ },
+ "camera": {
+  "distance_m": 3.4,
+  "target_height_m": 1.55,
+  "shoulder_offset_m": 0.45,
+  "touch_sensitivity_deg_per_dp": 0.22,
+  "response_curve": 1.25,
+  "smooth_pos_s": 0.12,
+  "smooth_rot_s": 0.08,
+  "spring_arm_radius_m": 0.32,
+  "spring_arm_return_s": 0.15,
+  "recenter_after_s": 2.5,
+  "recenter_speed_deg_s": 45.0,
+  "pitch_clamp": [
+   -62.0,
+   58.0
+  ],
+  "fov_speed_bonus_deg": 6.0,
+  "fov_lerp_s": 0.8,
+  "fov_explore_deg": 46.0,
+  "fov_dialogue_deg": 34.0,
+  "fov_fall_deg": 62.0,
+  "horizon_rule_outdoor": 0.333,
+  "horizon_rule_indoor": 0.667,
+  "dof_far_start_m": 45.0,
+  "dof_far_intensity": 0.6
+ },
+ "input": {
+  "joystick_radius_dp": 90.0,
+  "joystick_deadzone_pct": 8.0,
+  "joystick_curve": 1.4,
+  "button_a_dp": 72.0,
+  "button_b_dp": 64.0,
+  "button_c_dp": 64.0,
+  "button_d_dp": 64.0,
+  "max_visible_buttons": 4,
+  "sticky_press_dp": 20.0,
+  "input_buffer_ms": 180,
+  "coyote_ms": 140,
+  "prompt_fade_s": 0.15,
+  "edge_dead_zone_dp": 48.0,
+  "min_touch_target_mm": 9.0,
+  "no_qte": true
+ },
+ "haptics": {
+  "budget_per_second": 3,
+  "patterns": {
+   "hap_step_stone": [
+    8
+   ],
+   "hap_step_glass": [
+    6,
+    4,
+    6
+   ],
+   "hap_land_soft": [
+    14
+   ],
+   "hap_land_hard": [
+    30
+   ],
+   "hap_grapple_fire": [
+    16
+   ],
+   "hap_grapple_taut": [
+    22
+   ],
+   "hap_cable_strain": [
+    6
+   ],
+   "hap_parry": [
+    11,
+    20,
+    11
+   ],
+   "hap_hit_given_light": [
+    18
+   ],
+   "hap_hit_given_heavy": [
+    14,
+    24,
+    14
+   ],
+   "hap_hit_taken": [
+    34
+   ],
+   "hap_breath_break": [
+    26,
+    30,
+    26,
+    30,
+    26
+   ],
+   "hap_echo_start": [
+    40
+   ],
+   "hap_echo_end": [
+    24
+   ],
+   "hap_letter_open": [
+    9,
+    18,
+    9,
+    18,
+    9
+   ],
+   "hap_phare_sweep": [
+    6
+   ]
+  },
+  "cable_strain_period_s": 0.4,
+  "phare_sweep_period_s": 20.0
+ },
+ "echo_system": {
+  "ritual_s": 2.4,
+  "reveal_speed_m_s": 3.5,
+  "reveal_radius_m": 18.0,
+  "desaturation": 0.85,
+  "grain": 0.12,
+  "vignette": 0.55,
+  "history_frames": 6,
+  "mode_c_breath_cost": 40.0,
+  "sound_lowpass_hz": 5200.0,
+  "sound_predelay_ms": 90.0,
+  "esteban_voice_dry": true
+ },
+ "post_process": {
+  "order": [
+   "bloom",
+   "echo_reveal",
+   "tonemap_aces",
+   "lut_zone",
+   "vignette",
+   "grain",
+   "chromatic",
+   "fsr_upscale",
+   "sharpen",
+   "ui"
+  ],
+  "bloom_threshold": 1.15,
+  "bloom_intensity": 0.28,
+  "bloom_mips": 5,
+  "grain": 0.035,
+  "grain_fps": 24.0,
+  "chromatic_px": 0.4,
+  "chromatic_breath_break_px": 2.2,
+  "vignette": 0.22,
+  "sharpen": 0.22,
+  "fsr_min": 0.55,
+  "fsr_max": 1.0
+ },
+ "palette": {
+  "noir_verre": "#05070C",
+  "bleu_noir": "#0C1420",
+  "bleu_brume": "#16263A",
+  "pierre_humide": "#4A423A",
+  "pierre_seche": "#6E6254",
+  "platre": "#8E7F6C",
+  "calcaire": "#B9A88E",
+  "bois_goudron": "#3B2A21",
+  "brique": "#7A3F2C",
+  "terre_cuite": "#A8552F",
+  "lanterne": "#FFD6A0",
+  "soleil_brume": "#FFF0D2",
+  "ciel_ombre": "#C8E4FF",
+  "ambre": "#FFA33C",
+  "ambre_sature": "#FF7A18",
+  "cyan_verre": "#6BF2D8",
+  "speaker_label": "#B8A08A",
+  "breath_low": "#A8442F",
+  "jacket": "#3B3A2E"
+ },
+ "sequences": [
+  {
+   "id": "S1",
+   "name": "LES QUAIS BAS",
+   "alt": [
+    0,
+    14
+   ],
+   "minutes": 26,
+   "rule": "marche, saut, echelles",
+   "saturation": 0.35,
+   "lut": "lut_gare",
+   "objective": "Trouver le bureau du Registre des Disparus"
+  },
+  {
+   "id": "S2",
+   "name": "LE VERRE ET LE BATEAU",
+   "alt": [
+    0,
+    6
+   ],
+   "minutes": 22,
+   "rule": "le verre, pas de grappin",
+   "saturation": 0.45,
+   "lut": "lut_maree",
+   "objective": "Atteindre L'Hirondelle de Mer"
+  },
+  {
+   "id": "S3",
+   "name": "LE MARCHE SUSPENDU",
+   "alt": [
+    18,
+    62
+   ],
+   "minutes": 34,
+   "rule": "grappin pendule, foule",
+   "saturation": 0.55,
+   "lut": "lut_marche",
+   "objective": "Reparer le monte-charge (3 contrepoids)"
+  },
+  {
+   "id": "S4",
+   "name": "LA BIBLIOTHEQUE DES EAUX",
+   "alt": [
+    55,
+    78
+   ],
+   "minutes": 28,
+   "rule": "interieur, silence, Echos",
+   "saturation": 0.4,
+   "lut": "lut_bibliotheque",
+   "objective": "Trouver le dossier d'Esteban"
+  },
+  {
+   "id": "S5",
+   "name": "LES CONDUITS",
+   "alt": [
+    40,
+    96
+   ],
+   "minutes": 24,
+   "rule": "etroit, Sol, furtivite",
+   "saturation": 0.3,
+   "lut": "lut_descente",
+   "objective": "Traverser le ventre avec la lanterne"
+  },
+  {
+   "id": "S6",
+   "name": "LA SALLE DE BAL",
+   "alt": [
+    96,
+    118
+   ],
+   "minutes": 18,
+   "rule": "l'Echo le plus long",
+   "saturation": 0.7,
+   "lut": "lut_bal_souvenir",
+   "objective": "Vivre le 14 octobre, 21 h 50"
+  },
+  {
+   "id": "S7",
+   "name": "LA DESCENTE",
+   "alt": [
+    118,
+    8
+   ],
+   "minutes": 30,
+   "rule": "sans grappin, le Verrier",
+   "saturation": 0.2,
+   "lut": "lut_verrier",
+   "objective": "Redescendre a 8 m"
+  },
+  {
+   "id": "S8",
+   "name": "LA MONTEE AU PHARE",
+   "alt": [
+    8,
+    212
+   ],
+   "minutes": 36,
+   "rule": "tout, aucun ennemi",
+   "saturation": 0.65,
+   "lut": "lut_chambre_lettre",
+   "objective": "Monter les 212 metres"
+  }
+ ],
+ "world": {
+  "lighthouse_altitude_m": 212.0,
+  "lighthouse_built": 1871,
+  "sweep_turns_per_s": 0.05,
+  "sweep_period_s": 20.0,
+  "beam_range_m": 900.0,
+  "beam_exposure_ev": 0.4,
+  "beam_exposure_s": 1.8,
+  "maree_date": "14 octobre, 23 h 41",
+  "maree_duration_s": 9,
+  "maree_temperature_c": 41.0,
+  "maree_depth_m": [
+   30,
+   60
+  ],
+  "maree_radius_km": 4.0,
+  "missing_people": 641,
+  "remaining_inhabitants": 400,
+  "checkpoints": 47,
+  "shortcuts": 14,
+  "secrets": 31,
+  "transition_corridors": 7,
+  "lamp_rooms": [
+   "L1 registre (S1)",
+   "L2 cabine Hirondelle (S2)",
+   "L3 poste de Tallec (S3)",
+   "L4 salle des fiches (S4)",
+   "L5 conduit du puits (S5)",
+   "L6 chambre du Phare (S8)"
+  ],
+  "stream_cell_m": [
+   48,
+   48,
+   32
+  ],
+  "stream_max_concurrent": 2,
+  "stream_budget_ms": 4.0
+ },
+ "audio": {
+  "mix_hz": 48000,
+  "buses": [
+   "MASTER",
+   "MUS",
+   "SFX",
+   "VO",
+   "AMB",
+   "DUCKING"
+  ],
+  "loudness_lufs": -16.0,
+  "true_peak_dbtp": -1.5,
+  "duck_vo_music_db": -7.0,
+  "duck_vo_sfx_db": -3.0,
+  "duck_attack_ms": 40,
+  "duck_release_ms": 350,
+  "music_minutes_total": 47,
+  "gameplay_minutes_total": 218,
+  "motif_esteban": [
+   "A3",
+   "C4",
+   "E4",
+   "D4",
+   "A3"
+  ],
+  "motif_esteban_occurrences": 23,
+  "motif_full_at": "lettre 3:00",
+  "tracks": 22,
+  "footstep_surfaces": 9,
+  "footstep_variations": 8,
+  "footstep_speeds": 3,
+  "ambience_beds": 14,
+  "wind_levels": 6,
+  "reverb_impulses": [
+   "eglise",
+   "parking",
+   "hangar",
+   "cage_escalier",
+   "piece_vide",
+   "tunnel",
+   "falaise",
+   "chambre_meublee",
+   "cabine_bateau"
+  ],
+  "pause_music_db": -12.0,
+  "speaker_preset_mid_boost_db": 4.0,
+  "speaker_preset_range_hz": [
+   300,
+   4000
+  ]
+ },
+ "carry": {
+  "_ref": "08.11 V6 - PORTER / 09.14 S5 la lanterne",
+  "speed_factor_lantern": 0.86,
+  "speed_factor_chest": 0.62,
+  "speed_factor_body": 0.55,
+  "speed_factor_lever": 0.72,
+  "speed_factor_dossier": 0.92,
+  "speed_factor_letter": 1.0,
+  "grapple_allowed": false,
+  "guard_allowed": false,
+  "parry_allowed": false,
+  "sprint_allowed": false,
+  "wallrun_allowed": false,
+  "camera_distance_factor": 0.88,
+  "camera_fov_delta": -2.0,
+  "breath_profile": "effort",
+  "breath_regen_factor": 0.8,
+  "pickup_seconds": 0.9,
+  "setdown_seconds": 0.7,
+  "swap_hand_seconds": 0.45,
+  "lantern_light_radius_m": 4.0,
+  "lantern_color_k": 2700,
+  "lantern_flicker": true,
+  "mueur_repelled_at_m": 4.0,
+  "mueur_attracted_in_dark": true,
+  "dark_crossing_m": 8.0,
+  "dark_crossings_s5": 3,
+  "crouch_time_pct_s5": 0.6,
+  "ceiling_height_s5_m": 1.4,
+  "taught_at": "01:19"
+ },
+ "perf": {
+  "tiers": {
+   "LOW": {
+    "fps": 30,
+    "shadow_atlas": 1024,
+    "cascades": 1,
+    "tris": 180000,
+    "particles": 400,
+    "fsr": 0.7,
+    "vram_mb": 720
+   },
+   "MID": {
+    "fps": 60,
+    "shadow_atlas": 2048,
+    "cascades": 2,
+    "tris": 310000,
+    "particles": 900,
+    "fsr": 0.85,
+    "vram_mb": 1300
+   },
+   "HIGH": {
+    "fps": 60,
+    "shadow_atlas": 4096,
+    "cascades": 3,
+    "tris": 480000,
+    "particles": 900,
+    "fsr": 1.0,
+    "vram_mb": 2100
+   }
+  },
+  "draw_calls_max_mid": 420,
+  "frametime_budget_ms": {
+   "opaque": 5.8,
+   "shadows": 2.1,
+   "transparency_vfx": 2.4,
+   "post": 2.2,
+   "physics": 0.9,
+   "script": 1.4,
+   "anim_ik": 1.1,
+   "audio": 0.3,
+   "margin": 0.4
+  },
+  "thermal": {
+   "MODERATE": {
+    "fsr": -0.1,
+    "cascades": -1
+   },
+   "SEVERE": {
+    "fps": 30,
+    "volumetric": false,
+    "vfx": 0.5
+   },
+   "CRITICAL": {
+    "fps": 30,
+    "resolution": 0.55,
+    "notify": true
+   }
+  },
+  "thermal_smooth_s": 3.0,
+  "battery_pct_per_hour_mid": 18.0,
+  "launch_low_s": 6.5,
+  "launch_high_s": 3.5,
+  "zone_load_s": 2.5,
+  "background_resume_s": 3.0
+ }
+}

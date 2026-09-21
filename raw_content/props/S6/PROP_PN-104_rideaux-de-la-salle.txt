@@ -1,0 +1,104 @@
+===============================================================================
+PN-104 — LES RIDEAUX DE LA SALLE
+===============================================================================
+Asset : SM_S6_Rideaux · S6, aux onze hautes fenetres · ~04:46 ·
+prop narratif · pas d'Echo · LOD0 9 800 tris (les onze paires)
+
+§ 1 — CE QU'ON VOIT
+Onze hautes fenetres, onze paires de rideaux. Velours rouge sombre,
+doubles, avec des embrasses a glands dores.
+Ils tombent de 6 m. Ils sont lourds : chaque pan pese 30 kilos.
+[OBL] Dix paires sont OUVERTES, retenues par leurs embrasses.
+Une paire est FERMEE. La cinquieme en partant de la gauche, sur le mur sud.
+Ses embrasses pendent, vides, detachees.
+Le velours est mange. Pas par les mites : par la LUMIERE. Les pans exposes
+au jour ont perdu leur rouge sur une bande verticale ; ils sont devenus
+rose-brun, poudreux, et la trame apparait.
+[OBL] Le degradé de decoloration est different pour chaque fenetre selon
+son orientation. Les onze sont uniques.
+Le bas des rideaux traine sur 15 cm. Il est gris de poussiere sur toute la
+longueur — sauf devant la cinquieme fenetre, celle qui est fermee, ou le
+sol est propre et le bas du rideau aussi.
+Quelqu'un passe la. Souvent.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 9 800 pour 22 pans. [OBL] Chaque pan est un mesh SCULPTE dans ses
+plis, pas une simulation. 11 formes distinctes pour les ouverts (les plis
+d'une embrasse dependent de sa hauteur et de sa tension) + 2 pour la paire
+fermee.
+Anim : PROP-816 — [OBL] 4 pans seulement bougent, de 3 cm, 0,08 Hz. Ceux
+des fenetres dont un carreau est casse. Les 18 autres sont parfaitement
+immobiles : 30 kg de velours ne bougent pas.
+Shader `velvet_sunbleached` : anisotropie de velours (le velours change de
+couleur selon l'angle de vue — c'est sa propriete principale et elle doit
+etre implementee, sinon c'est du feutre) + masque de decoloration unique
+par fenetre.
+[OBL] Le velours vu de face est sombre, vu en rasant il est clair. Le
+joueur qui marche le long du mur voit les rideaux changer de couleur.
+Collision : capsules. Le joueur peut passer derriere la paire fermee.
+
+§ 3 — CE QUE CA DIT
+Dix rideaux ouverts, un ferme.
+Le geste humain : detacher deux embrasses et tirer 60 kg de velours.
+[OBL] Pourquoi cette fenetre-la : le joueur peut aller voir.
+Derriere la paire fermee, entre le rideau et la fenetre, il y a un espace
+de 60 cm.
+[OBL] Et dans cet espace, il y a quelque chose. Cf. PN-107, le gilet.
+La decoloration inegale des onze paires dit quarante ans de soleil dans une
+salle de bal, et ce n'est pas triste. C'est juste du temps.
+Le bas propre devant la cinquieme fenetre : quelqu'un va la, regulierement,
+et revient.
+
+§ 4 — ECHO
+NEANT. Textile d'ameublement, objet collectif (PN-016).
+[ART] Le joueur n'en attend pas. Mais le rideau ferme l'attire, et c'est
+tout ce qui compte.
+
+§ 5 — MISE EN SCENE
+[OBL] La paire fermee est visible depuis l'entree de la salle, a 24 m.
+Dix rectangles de lumiere, un rectangle rouge.
+[ART] C'est la seule anomalie visuelle de la salle et elle est immediate.
+Le joueur y va tot ou tard. Taux de visite : 88-95 %.
+[OBL] Pour passer derriere, il doit ECARTER le rideau. LOH-ACT-201, 2,2 s :
+il prend le velours de la main gauche, le pousse, et entre.
+[OBL] Le rideau se referme derriere lui. Il est dans un espace de 60 cm de
+large, entre 60 kg de velours et une fenetre de 6 m.
+La lumiere y est rouge : elle traverse le velours use.
+[OBL] C'est le seul espace ROUGE du chapitre.
+Et c'est la qu'il trouve le gilet (PN-107).
+
+§ 6 — AUDIO
+SFX(velvet_heavy_move) : le velours qu'on ecarte. Un son PROFOND, sourd,
+etouffe, sans aucun aigu. -18 dB.
+[OBL] Quand le rideau se referme derriere Lohen, le mix change
+radicalement : RT60 passe de 3,1 s a 0,6 s en 0,4 s. La musique M21 est
+filtree (passe-bas 2 kHz) et attenuee de 11 dB.
+[ART] Le joueur passe derriere un rideau et le monde s'etouffe. C'est un
+effet physique reel et c'est le plus efficace du chapitre.
+[OBL] Il entend sa propre respiration ? NON. [OBL] Les trois occurrences
+de respiration audible (PN-022, PN-053, PN-098) sont closes. Pas ici.
+SFX(dust_velvet) : une nappe de poussiere fine, -34 dB, quand il bouge.
+
+§ 7 — INTERDICTIONS
+Interdit de : ouvrir la cinquieme paire · fermer les dix autres · deplacer
+un rideau · les faire tomber · ajouter une quatrieme ou cinquieme paire
+animee · simuler le velours · supprimer l'anisotropie · ajouter de la
+respiration derriere le rideau · ajouter un son de surprise · ajouter
+quelqu'un derriere un autre rideau · donner un Echo.
+
+§ 8 — LIENS
+PN-107 (le gilet a lisere ambre) : derriere la cinquieme paire.
+PN-110 (les hautes fenetres). PN-100 (le parquet).
+PN-019 (le panier de linge, S1) et PN-044 (la corde a linge, S3) : les
+autres textiles du chapitre.
+[THEME] CE QUI EST DERRIERE.
+
+§ 9 — DOD
+[ ] 22 pans sculptes, 11 formes distinctes, aucune simulation
+[ ] 4 pans animes seulement, 3 cm, 0,08 Hz ; 18 immobiles
+[ ] Anisotropie de velours implementee et verifiee en deplacement
+[ ] 11 masques de decoloration uniques selon l'orientation
+[ ] Cinquieme paire fermee, embrasses pendantes, sol propre devant
+[ ] Espace de 60 cm derriere, lumiere rouge traversante
+[ ] RT60 3,1 → 0,6 s en 0,4 s, M21 filtree a 2 kHz et -11 dB
+[ ] Aucune respiration, aucun son de surprise

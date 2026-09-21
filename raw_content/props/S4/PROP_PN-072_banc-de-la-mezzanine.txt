@@ -1,0 +1,120 @@
+===============================================================================
+PN-072 — LE BANC DE LA MEZZANINE
+===============================================================================
+Asset : SM_S4_Banc_Mezzanine · S4, mezzanine du premier etage, contre la
+balustrade · ~03:35 · PORTEUR D'ECHO E16 · LOD0 1 400 tris
+
+§ 1 — CE QU'ON VOIT
+Un banc de lecture, en chene, 1,60 m, sans dossier, fixe au sol contre la
+balustrade de la mezzanine.
+Il est sec : la mezzanine est a 4 m, hors d'eau.
+Sur l'assise, DEUX creux. Polis, luisants, separes de 46 cm.
+Ce sont deux places. Deux personnes se sont assises la, cote a cote, des
+centaines de fois, toujours aux memes places.
+Entre les deux creux, la surface est mate. Personne ne s'est jamais assis
+au milieu.
+Sous le banc, au sol, un livre. Ouvert, face contre terre, les pages pliees
+sous leur propre poids.
+Il est tombe. Personne ne l'a ramasse.
+Sur la balustrade, devant le banc, a hauteur de main, le bois est use en
+deux endroits. Deux zones de 12 cm. Deux paires de mains posees sur une
+rambarde, en regardant en bas.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 400 (banc 600 + livre tombe 500 + usures 300).
+[OBL] Les deux creux de l'assise : geometrie, 4 mm de profondeur au centre,
+avec un gradient de roughness (0,14 au centre, 0,58 aux bords). Ils sont
+LEGEREMENT differents : l'un est un peu plus large et plus profond.
+Une personne plus lourde, ou plus souvent la.
+Le livre tombe : mesh sculpte, pages pliees en geometrie (120 tris de
+pages), couverture identifiable mais titre illisible (la couverture est
+contre le sol).
+Shader `wood_polished` + `paper_dust_dry`.
+Anim : NEANT. Aucune.
+Collision : le joueur peut s'approcher, pas s'asseoir. [OBL] Il n'y a pas
+de commande « s'asseoir » dans ce jeu (cf. PN-036).
+
+§ 3 — CE QUE CA DIT
+Deux personnes venaient lire ici, cote a cote, sur un banc sans dossier,
+au premier etage, au-dessus de la rotonde.
+Le geste humain : s'asseoir toujours a la meme place.
+Les 46 cm entre les creux : c'est pres. Ce n'est pas la distance de deux
+inconnus sur un banc public. C'est la distance de deux personnes qui se
+touchent l'epaule quand elles bougent.
+Le vide entre les deux creux dit que ce banc n'a jamais accueilli une
+troisieme personne.
+Les deux usures sur la balustrade : ils se levaient et regardaient en bas.
+Le livre tombe sous le banc : quelqu'un l'a fait tomber et ne l'a pas
+ramasse. Ce jour-la, ils sont partis vite.
+
+§ 4 — ECHO
+ECHO E16 — « Le banc » — 28 secondes, mode A.
+[OBL] C'est l'Echo le plus retenu de la sequence 4 et le plus simple.
+Deux silhouettes assises sur le banc. Elles sont deja la quand l'Echo
+commence. Elles lisent. Chacune un livre.
+Elles ne se parlent pas. Elles ne se regardent pas.
+Pendant 21 secondes, il ne se passe rien. Deux personnes lisent.
+[OBL] Elles tournent leurs pages a des moments differents. Six pages
+tournees en tout : 3 pour l'une (a 4 s, 11 s, 18 s), 3 pour l'autre (a 7 s,
+13 s, 20 s). Jamais en meme temps.
+A 21 s : celle de droite laisse tomber son livre. Il tombe sous le banc.
+Elle ne le ramasse pas. Elle continue de regarder ses mains vides.
+Celle de gauche tend le bras et lui touche le dos de la main. Une fois.
+1,2 seconde.
+Elles s'effacent a 27 s.
+[OBL] Aucun visage. Aucune parole. Aucun regard echange. Le seul contact
+physique de tous les Echos du chapitre.
+[OBL] Elles ne sont pas Lohen et Esteban. Rien ne le dit. Rien ne l'exclut.
+Musique : M18 « Le banc », deux violoncelles, qui jouent la meme ligne a
+l'unisson — [OBL] la SEULE musique du chapitre ou deux instruments jouent
+exactement ensemble. Partout ailleurs, ils se manquent (M11, M14).
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+La mezzanine s'atteint par PN-073, l'echelle roulante.
+[OBL] Depuis le banc, on voit toute la rotonde : le rai de lumiere (PN-066),
+le tas d'eclats, l'eau, les casiers, et la table de Mireille au fond.
+On voit Mireille, si elle est la. Elle ne leve jamais les yeux.
+[ART] Le banc est le seul point de vue d'ensemble de la sequence 4. Le
+joueur monte pour voir, et il trouve deux creux dans un bois.
+Pendant E16, le joueur peut se tenir DEVANT le banc, donc devant les deux
+silhouettes assises, et les regarder de face.
+[OBL] Elles n'ont pas de visage — mode A, silhouettes. Il ne verra rien.
+Il peut aussi se mettre a cote, ou derriere. Le jeu ne cadre jamais.
+
+§ 6 — AUDIO
+SFX(page_turn_dry) : six pages tournees pendant E16. [OBL] Six sons
+distincts, enregistres sur du vrai papier ancien. Dans la reverb de la
+mezzanine (RT60 1,9 s, moins que la rotonde).
+SFX(book_drop_floor) : le livre qui tombe, a 21 s. Un seul son, sec, avec
+3 s de queue. [OBL] C'est le moment le plus fort de l'Echo et c'est un
+livre qui tombe.
+[OBL] Le contact des mains a 22 s est SILENCIEUX. Aucun son. Aucun frottis.
+Aucune musique ne le souligne : M18 continue exactement comme avant.
+Hors Echo : la mezzanine est plus seche et plus mate. Les pas sur le bois
+sec, apres 20 minutes de pas dans l'eau, sonnent comme une delivrance.
+
+§ 7 — INTERDICTIONS
+Interdit de : s'asseoir · ramasser le livre · lire son titre · identifier
+les silhouettes · leur donner un visage · les faire parler · les faire se
+regarder · ajouter un deuxieme contact · souligner le contact par la
+musique ou le son · rendre E16 rejouable · desynchroniser M18 · ajouter une
+troisieme place sur le banc.
+
+§ 8 — LIENS
+PN-043 (les deux creux de coudes du forgeron, S3) : le meme motif materiel.
+PN-124 (le banc a deux creux polis, S7) : le troisieme, et le dernier.
+[OBL] Trois bancs a deux places dans le chapitre. Jamais relies.
+PN-049 (E12, les deux silhouettes epaule contre epaule sur le monte-charge).
+PN-070 (les deux tasses).
+[THEME] DEUX. [THEME] LES CREUX QUE LES CORPS LAISSENT.
+
+§ 9 — DOD
+[ ] Deux creux a 46 cm, 4 mm de profondeur, legerement inegaux
+[ ] Zone mate entre les deux, jamais assise
+[ ] Deux usures de 12 cm sur la balustrade
+[ ] Livre tombe, pages pliees en geometrie, titre jamais lisible
+[ ] E16 : 21 s de lecture, 6 pages jamais simultanees, chute a 21 s
+[ ] Contact des mains 1,2 s, totalement silencieux, non souligne
+[ ] M18 : seule piste du chapitre a l'unisson exact
+[ ] Vue d'ensemble de la rotonde depuis le banc

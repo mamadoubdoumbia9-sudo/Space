@@ -1,0 +1,90 @@
+===============================================================================
+PN-009 — LA LAMPE-TEMPETE DU BUREAU DU REGISTRE
+===============================================================================
+Asset : SM_S1_Lampe_Tempete_Registre · S1, bureau du Registre, sur le
+comptoir · ~00:21 · prop narratif interactif non-Echo · LOD0 1 900 tris
+
+§ 1 — CE QU'ON VOIT
+Une lampe-tempete de marine, laiton et verre, 34 cm, la vitre cerclee de
+quatre montants. Elle est ALLUMEE. C'est la seule source de lumiere de la
+piece et la premiere flamme du jeu.
+Le verre est noirci sur un tiers, cote gauche, par des annees de suie.
+Le reservoir est visible : il est au quart plein. La meche est courte.
+Elle ne tiendra pas la nuit.
+Sous la lampe, un cercle propre sur le comptoir poussiereux — elle n'a
+jamais ete deplacee.
+[NAR] Elle brule depuis trois ans. Personne n'a rempli son reservoir.
+Le jeu ne l'explique pas et ne l'expliquera jamais. Ce n'est pas une
+enigme : c'est une anomalie qu'on laisse passer, comme on laisse passer un
+detail dans un reve.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 900. Atlas 2K dedie (le verre demande de la finesse).
+Eclairage : OmniLight3D, 2 400 K, rayon 6,5 m, ombres actives (la seule
+lumiere a ombres dynamiques de l'interieur). Attenuation inverse-square.
+Flicker : courbe non aleatoire, boucle de 7,3 s — assez longue pour ne pas
+etre percue comme une boucle, assez courte pour tenir en memoire.
+[OBL] Amplitude du flicker <= 8 % d'intensite. Une flamme de lampe a petrole
+sous verre est STABLE. Le flicker de bougie est interdit (05.28).
+Flamme : sprite 3 plans croises + shader `flame_soft`, 24 frames, 12 fps.
+Shader `brass_tarnish` + `glass_soot` (masque de suie a gauche).
+Interaction : le joueur peut la PRENDRE (ramassable, cf. index 0.05).
+Elle devient une lumiere portee dans la main gauche de Lohen pour tout le
+reste de S1 et de S2. Elle occupe la main : Lohen ne peut plus grimper a
+deux mains tant qu'il la tient (PN-021, l'echelle, l'oblige a la poser).
+
+§ 3 — CE QUE CA DIT
+Il y a de la lumiere dans une ville vide.
+Le cercle propre dit qu'elle est la depuis toujours. Le reservoir au quart
+dit qu'elle va bientot s'eteindre. Les deux ne peuvent pas etre vrais en
+meme temps. Le joueur ne le formule pas ; il le sent.
+Le geste humain : quelqu'un a allume une lampe avant de partir, pour
+quelqu'un qui devait revenir.
+
+§ 4 — ECHO
+NEANT. Raison : la lampe est un OUTIL, elle appartient au present du joueur
+des qu'il la ramasse. Les objets que Lohen porte perdent leur passé — regle
+implicite du systeme, jamais enoncee, verifiable sur les 9 ramassables.
+
+§ 5 — MISE EN SCENE
+Elle est vue AVANT d'entrer : par la fenetre du bureau, depuis le chemin,
+a 20 m, une lueur orange dans une ville morte. C'est ce qui fait entrer le
+joueur dans le batiment — aucun marqueur, aucun objectif, juste une lumiere.
+[ART] C'est le premier et le meilleur exemple du principe 09.21 : on guide
+par la lumiere, jamais par l'interface.
+A l'interieur, elle est posee a gauche, de sorte que le meuble PN-008 soit
+eclaire de trois quarts et que les 84 laitons brillent.
+Quand Lohen la prend : la piece change entierement d'ombres en 0,4 s. Le
+joueur decouvre qu'il porte la lumiere du monde.
+
+§ 6 — AUDIO
+SFX(lamp_hiss) : un souffle de meche continu, -34 dB, boucle 11 s, audible
+seulement a moins de 2 m ou quand elle est portee.
+SFX(brass_handle_tick) quand elle se balance en marchant : toutes les 1,1 s
+en marche, 0,7 s en course, desynchronise du pas de 0,15 s.
+[ART] Ce petit tintement de laiton devient, sur 40 minutes, le son de la
+compagnie. Quand Lohen doit la poser (PN-021), son absence se remarque.
+
+§ 7 — INTERDICTIONS
+Interdit de : la faire s'eteindre · gerer une jauge de carburant · en faire
+un objet d'inventaire dans un menu · permettre de l'eteindre volontairement
+· la perdre · expliquer pourquoi elle brule depuis trois ans · ajouter un
+effet de halo volumetrique agressif (godrays limites a 0,3 d'intensite) ·
+lui donner un Echo.
+[OBL] Aucune mecanique de survie. Ce n'est pas ce jeu.
+
+§ 8 — LIENS
+PN-008 (elle l'eclaire). PN-021 (l'echelle : elle oblige a la poser).
+PN-137 (la lampe a huile a liseré ambre, S8) — la DERNIERE lampe du jeu,
+et l'une des trois seules occurrences autorisees de #FFA33C. Celle-ci, en
+S1, est resolument 2 400 K ORANGE-BLANC, jamais ambre. La distinction doit
+etre verifiable au colorimetre.
+[THEME] PORTER LA LUMIERE.
+
+§ 9 — DOD
+[ ] Visible depuis le chemin a 20 m, seule incitation a entrer
+[ ] Flicker <= 8 %, boucle 7,3 s, non aleatoire
+[ ] Ramassable, occupe la main gauche, change les ombres en 0,4 s
+[ ] Tintement de laiton desynchronise du pas de 0,15 s
+[ ] Temperature 2 400 K verifiee, jamais #FFA33C
+[ ] Aucune jauge, aucun menu, aucune extinction possible

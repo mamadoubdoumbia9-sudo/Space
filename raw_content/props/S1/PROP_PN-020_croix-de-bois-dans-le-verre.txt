@@ -1,0 +1,96 @@
+===============================================================================
+PN-020 — LA CROIX DE BOIS PLANTEE DANS LE VERRE
+===============================================================================
+Asset : SM_S1_Croix_Bois · S1, sur la Maree, a 14 m du quai, visible depuis
+la rampe · ~00:45 · prop narratif · pas d'Echo · LOD0 1 800 tris
+
+§ 1 — CE QU'ON VOIT
+Une croix de bois de 1,60 m, faite de deux planches de caisse a poissons
+clouees en croix, plantee dans le verre.
+Elle n'est pas plantee : elle est SCELLEE. Quelqu'un a perce le verre — on
+voit un cratere d'eclats blancs de 25 cm autour du pied, comme un impact —
+et a cale la croix avec des pierres et du ciment de fortune.
+Percer la Maree demande des heures. Le verre est plus dur que le granit.
+Il n'y a pas de nom. Pas de plaque. Pas de date. Pas de fleurs.
+Juste, noue au croisillon, un bout de cordage bleu. Le meme bleu que les
+cordages du port. Un seul tour, un noeud simple.
+Elle penche de 6 degres vers l'ouest. Le vent.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 800 (croix 600 + cratere 900 + cordage 300).
+Le cratere : geometrie sculptee, 40 eclats, avec le shader `maree_glass` en
+variante `fractured` — l'interieur des fractures est blanc laiteux, opaque,
+alors que le verre intact est noir translucide. Le contraste est total.
+[OBL] C'est la SEULE fracture de la Maree visible dans tout le chapitre 1.
+La Maree est incassable partout ailleurs. Cet endroit prouve qu'un homme
+avec du temps et de la rage peut l'entamer sur 25 cm.
+Anim : NEANT. La croix ne bouge pas malgre le vent (elle est scellee).
+Le cordage bleu : PROP-724, 4 cm d'amplitude, 0,5 Hz.
+Cull : 90 m. Visible depuis 6 points de S1 et 3 de S2.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a passe des heures, peut-etre des jours, a percer la Maree pour
+y planter une croix, a un endroit precis, sans marquer de nom.
+Le geste humain : percer. Avec quoi ? Un burin, une masse, un pic. Seul,
+sur le verre, dans le froid, au-dessus de l'endroit ou quelqu'un a disparu.
+L'absence de nom : soit il ne savait pas ecrire, soit le nom ne regardait
+personne, soit il n'y avait pas UN nom.
+Le cordage bleu est la seule chose personnelle. C'est un bout de cordage de
+bateau. Ca vient du metier. C'est tout ce qu'il avait a donner.
+[NAR] Le jeu ne dira jamais qui l'a plantee. Mireille, si on lui demande —
+et on ne peut pas lui demander, aucune option de dialogue ne l'evoque — ne
+repondrait pas.
+
+§ 4 — ECHO
+NEANT. [OBL] Double raison, et les deux sont des regles du systeme :
+1. C'est sur la Maree (regle PN-011 : le verre ne garde rien).
+2. C'est un geste d'apres (regle PN-015 : les Echos ne montrent que l'avant).
+C'est le seul prop du chapitre qui viole les deux regles a la fois. Un
+joueur qui a compris le systeme sait, en le voyant, qu'il n'y aura rien.
+Il s'approchera quand meme. [ART] C'est le but : on veut qu'il essaie,
+qu'il sache que c'est inutile, et qu'il essaie quand meme. C'est la
+definition du deuil et c'est le sujet du jeu.
+
+§ 5 — MISE EN SCENE
+Inatteignable en S1 (on ne descend pas sur le verre avant S2). Visible de
+loin, en contrebas, seule sur une etendue noire de 200 m.
+[ART] C'est le plan le plus vide du chapitre : 92 % du cadre est du verre
+noir sans rien. Un objet de 1,60 m au tiers droit. Rien d'autre.
+En S2, le chemin passe a 9 m. Le joueur peut faire le detour. Rien ne s'y
+passe. Aucun prompt. Il peut faire le tour de la croix. C'est tout.
+[OBL] Si le joueur reste immobile a moins de 3 m pendant plus de 20 s, la
+musique NE demarre PAS, la camera NE bouge PAS, Lohen NE dit RIEN.
+Le jeu ne recompense jamais le recueillement. Il le permet.
+
+§ 6 — AUDIO
+SFX(wood_wind_hum) : le vent dans l'angle des deux planches, une note
+soufflee tres basse, continue, -30 dB, audible a moins de 15 m.
+C'est le seul son continu de la Maree. Partout ailleurs le verre est muet.
+Les pas sur le verre, a proximite : matiere `verre_massif`, 8 variations,
+un son CLAIR et HAUT, sans aucune resonance de profondeur — [OBL] le verre
+sonne plein, jamais creux. Il n'y a pas de vide dessous : il y a une ville.
+Aucune musique, a aucun moment, en aucune circonstance.
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter un nom, une date, une photo, une fleur, une bougie ·
+donner un Echo · declencher de la musique a l'approche · faire parler Lohen
+· faire un mouvement de camera · permettre d'arracher la croix · fracturer
+la Maree ailleurs dans le chapitre · faire tomber la croix · reveler qui
+l'a plantee, ici ou ailleurs, maintenant ou dans les six lettres suivantes.
+
+§ 8 — LIENS
+PN-007 (la chaise attachee au fil de fer) : le meme type de geste, le meme
+anonymat, la meme obstination. PN-011 (le velo). PN-016 (les planches de
+caisse). PN-031 (la main dans le verre, S2).
+[THEME] LES GESTES D'APRES. [THEME] LE DEUIL SANS CORPS — le chapitre
+contient exactement trois monuments prives (PN-007, PN-020, PN-131) et zero
+monument public. Velmora n'a jamais organise de ceremonie. Personne n'a
+eu le droit d'en faire une : il n'y avait rien a enterrer.
+
+§ 9 — DOD
+[ ] Cratere de 25 cm, 40 eclats, interieur blanc laiteux opaque
+[ ] Seule fracture de la Maree du chapitre, verifiee sur toutes les scenes
+[ ] Croix scellee, immobile ; seul le cordage bleu bouge
+[ ] Zero prompt, zero musique, zero VO, zero camera, meme apres 20 s
+[ ] Pas sur verre : son clair et plein, jamais creux, 8 variations
+[ ] Cadre depuis la rampe : >= 90 % de vide

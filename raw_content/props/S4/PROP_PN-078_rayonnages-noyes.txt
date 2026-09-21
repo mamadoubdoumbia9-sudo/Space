@@ -1,0 +1,102 @@
+===============================================================================
+PN-078 — LES RAYONNAGES NOYES DU DEUXIEME
+===============================================================================
+Asset : SM_S4_Rayonnages_Noyes · S4, tout le pourtour de la rotonde,
+niveau bas · ~03:16 · prop narratif ENVIRONNEMENTAL · pas d'Echo ·
+LOD0 14 200 tris (l'ensemble)
+
+§ 1 — CE QU'ON VOIT
+Le pourtour de la rotonde est couvert de rayonnages sur 5,5 m de haut.
+Les quatre etageres du bas — de 0 a 1,20 m — sont NOYEES. Elles ont trempe
+dans 4 cm d'eau, puis l'eau est montee, puis redescendue, des dizaines de
+fois en trois ans.
+Les livres du bas ont GONFLE. Ils ont double de volume. Ils ont fait
+eclater les etageres : le bois des planches est fendu, souleve, et par
+endroits les montants ont cede.
+Les livres gonfles ne ressemblent plus a des livres. Ce sont des masses
+brunes, feuilletees, fusionnees entre elles. Sur certaines etageres, les
+quarante volumes sont devenus un seul bloc.
+Au-dessus de 1,20 m, les livres sont intacts. Poussiereux, mais intacts.
+Alignes, dos visibles, titres lisibles.
+[OBL] La frontiere est NETTE. Une ligne horizontale a 1,20 m, sur 69 metres
+de rayonnages, qui fait tout le tour de la piece.
+Au-dessus : une bibliotheque. En dessous : de la pourriture.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 14 200 pour 69 m lineaires. Kit modulaire : 6 modules de rayonnage de
+2,3 m, 4 etats de degradation, 11 blocs de livres gonfles uniques.
+[OBL] Les livres gonfles sont des meshes SCULPTES, pas des boites
+deformees. 11 sculpts de 400 a 900 tris, instancies avec rotations.
+Les livres intacts : 3 modeles de rangee + 14 variantes de dos, sur un
+atlas 4K. [OBL] Les dos portent des titres LISIBLES a 1,5 m. 140 titres
+distincts, ecrits pour le projet. Aucun titre reel, aucune reference,
+aucun clin d'oeil.
+Shader `book_swollen` (bas) et `book_dusty` (haut), avec une transition
+exacte a 1,20 m geree par un masque de hauteur monde.
+[OBL] La ligne de 1,20 m ne doit varier d'aucun centimetre sur 69 m. C'est
+un niveau d'eau : il est horizontal par definition.
+Collision : mur plein. Le joueur ne peut rien prendre.
+
+§ 3 — CE QUE CA DIT
+La moitie basse du savoir de Velmora a pourri.
+Le geste humain : aucun. C'est l'eau qui a fait ca.
+[NAR] Mais l'information est ailleurs : quelqu'un a continue d'epousseter
+le haut (PN-073, le chiffon et la brosse). Quelqu'un maintient la moitie
+qui peut encore etre sauvee, et marche tous les jours dans l'eau qui detruit
+l'autre.
+[OBL] Il n'y a AUCUN livre sauve. Pas de pile de livres secs, pas de
+sauvetage, pas de selection emportee ailleurs. Mireille n'a rien sorti.
+Elle epoussette et elle laisse pourrir.
+[ART] C'est le portrait le plus precis du deuil que le chapitre propose, et
+il est fait de mobilier.
+
+§ 4 — ECHO
+NEANT. Mobilier collectif (PN-016) et element d'architecture (PN-055).
+
+§ 5 — MISE EN SCENE
+[OBL] Les rayonnages sont le decor de toute la sequence 4. Le joueur les a
+dans le champ pendant 50 minutes, de partout.
+La ligne de 1,20 m est a hauteur de hanche. Elle traverse tous les cadres.
+[ART] C'est une ligne graphique qui fait le tour de la piece et qui separe
+le monde en deux. Aucun personnage ne la mentionne. Elle est simplement la,
+dans chaque plan, pendant cinquante minutes.
+La projection coloree du vitrail (PN-071) tombe sur les rayonnages de
+l'ouest. Le rai de l'oculus (PN-066) frappe le sol au centre.
+Les rayonnages du bas, sous l'eau, sont eclaires par la lumiere reflechie
+sur l'eau : [OBL] des caustiques mobiles sur des livres pourris. C'est
+l'image.
+
+§ 6 — AUDIO
+SFX(paper_swollen_shift) : les blocs de livres gonfles travaillent. Un son
+mat, epais, tres rare (une fois toutes les 60-180 s), -28 dB. C'est un son
+organique et desagreable.
+[OBL] Il n'est jamais declenche par la proximite du joueur. Il est
+aleatoire et continue quand il n'y a personne.
+SFX(shelf_wood_split) : une planche qui cede davantage. Deux fois pendant
+la sequence, a des moments aleatoires. Un craquement sec et fort (-14 dB).
+[OBL] Pas un jump scare : il peut arriver quand Mireille parle, ce qui
+casse sa phrase. [OBL] Elle ne s'interrompt pas et ne reagit pas. Elle
+continue. Le joueur sursaute, elle non.
+Aucune musique liee.
+
+§ 7 — INTERDICTIONS
+Interdit de : prendre un livre · lire un titre du bas · sauver un livre ·
+vider l'eau · reparer une etagere · faire varier la ligne de 1,20 m ·
+ajouter un titre reel ou une reference externe · faire commenter par
+Mireille · faire reagir Mireille aux craquements · donner un Echo ·
+ajouter des rats, des insectes, des moisissures animees.
+
+§ 8 — LIENS
+PN-083 (le livre gonfle par l'eau) : un seul, sorti du lot, traite comme
+prop autonome. PN-073 (l'echelle et la brosse). PN-066 (l'oculus).
+PN-071 (le vitrail et sa projection). PN-084 (le compteur d'eau arrete).
+[THEME] CE QU'ON NE REPARE PAS. [THEME] ENTRETENIR CE QUI PEUT L'ETRE.
+
+§ 9 — DOD
+[ ] Ligne de niveau a 1,20 m, invariable sur 69 m, masque de hauteur monde
+[ ] 11 sculpts de blocs gonfles, aucun livre-boite deforme
+[ ] 140 titres lisibles a 1,5 m, tous inventes, zero reference externe
+[ ] Caustiques mobiles sur les rayonnages noyes
+[ ] Zero livre sauve, zero pile seche, zero selection
+[ ] Craquements aleatoires, non correles au joueur, Mireille ne reagit pas
+[ ] Aucun animal, aucune moisissure animee

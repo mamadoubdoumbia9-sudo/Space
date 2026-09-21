@@ -1,0 +1,103 @@
+===============================================================================
+  A-222   idle_hair_tuck
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 222 / 744
+  Partie 2 — ESTEBAN
+  Categorie : IDLE / REPOS / ATTENTE
+  Marqueur   : GESTE SIGNATURE E1
+  Fichier source  : A_Esteban_Idl_idle_hair_tuck_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 2.600 s  (78 frames a 30 fps)
+  Type .................. ONE-SHOT
+  Root motion ........... RM-NONE
+  Blend in / out ........ 0.20 s / 0.20 s
+  Couche AnimationTree .. L1
+  Priorite .............. 9 — locomotion de fond (bande 0-19, bareme 0.05)
+  Poids compresse cible . ~29 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      pelvis, spine_01-03, neck, clavicules, appuis de jambes, doigts au
+      repos
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  ESTEBAN — 31 ans, accordeur de cloches. Plus grand que Lohen, roux.
+
+  Il ne tient pas en place. Il parle avec LES DEUX mains (Lohen n'en utilise
+  qu'une). Il est en avance sur le temps, jamais en retard. Gestes signature
+  : E1 il range sa meche et il RATE, E2 il sourit du cote gauche seulement,
+  E3 il tapote deux fois avant de parler serieusement. [OBL] Seul personnage
+  du jeu SANS REVERB, en toutes circonstances (11.06). [OBL] Aucun Echo ne
+  le montre, sauf E21.
+
+  Rig et costume :
+      gilet (cloth simule dans E21), crayon de charpentier derriere
+      l'oreille, carnet en poche de poitrine, montre
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  il range sa meche derriere son oreille... ET IL RATE. La meche retombe a
+  f62. Il ne recommence pas. [OBL] Le ratage est obligatoire dans 100 % des
+  occurrences. Ce n'est jamais un geste reussi. 23 occurrences dans le
+  chapitre.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Clip ONE-SHOT : pas de contrainte de cyclage. La derniere frame
+  doit poser une silhouette blendable vers les etats de sortie.
+
+  Evenements de timeline :
+      SFX(hair) f20 · Face : `mild_annoyance` f64 (0.2, tres bref)
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      additif ou one-shot par-dessus l'idle
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · les clauses [OBL] de la section 3 sont verifiees en revue, pas
+      seulement en lecture
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-222
+===============================================================================

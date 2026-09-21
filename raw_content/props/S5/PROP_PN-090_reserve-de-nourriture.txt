@@ -1,0 +1,101 @@
+===============================================================================
+PN-090 — LA RESERVE DE NOURRITURE DE SOL
+===============================================================================
+Asset : SM_S5_Reserve_Sol · S5, niche muree du conduit -2, a 6 m du matelas
+· ~04:14 · prop narratif · pas d'Echo · LOD0 4 400 tris
+
+§ 1 — CE QU'ON VOIT
+Une niche dans la brique, 1,20 x 0,80 x 0,50 m, fermee par une planche
+posee en travers qu'on souleve.
+Dedans, la reserve.
+Des boites de conserve, alignees debout, etiquettes vers l'avant, TRIEES
+PAR CONTENU. Les haricots avec les haricots. Les sardines avec les
+sardines. Le lait condense avec le lait condense.
+Il y en a quarante-et-une.
+Devant, en premiere rangee : les boites bombees, les boites rouillees, les
+boites dont l'etiquette est partie. Sept.
+[OBL] Les mauvaises sont DEVANT. Il mange les mauvaises en premier.
+Il y a aussi : un sac de toile avec des biscuits de mer, un bocal de sel,
+un bidon d'eau de 10 litres aux trois quarts plein, et une gamelle.
+La gamelle est celle d'un chien. Elle est propre. Elle a ete lavee.
+A cote, un petit sac de toile separe, ferme par une ficelle, avec une
+etiquette en carton attachee. Sur l'etiquette, deux lettres a la craie.
+[OBL] Elles sont illisibles — la craie a bave. On voit qu'il y a deux
+lettres. On ne les lit pas.
+Le sac est plein. Il n'a jamais ete ouvert.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 4 400 (41 boites a 70 tris + contenants 1 600).
+[OBL] Les 41 boites : 9 modeles, 41 placements a la main, orientation des
+etiquettes vers l'avant a +/- 4 degres. Un tri fait a la main par un enfant
+n'est pas parfait au degre pres, mais il est intentionnel.
+[OBL] 14 etiquettes lisibles (les produits de Velmora, dessinees pour le
+projet), 27 partiellement decollees ou effacees.
+Les 7 boites bombees : sculpts distincts avec un bombement de 4 a 9 mm.
+Le sac ferme a l'etiquette : 220 tris, ficelle en geometrie, etiquette
+2 x 3 cm avec une texture de craie bavee.
+Shader `tin_can_rusted` a 4 niveaux.
+Collision : boite. [OBL] Rien n'est prenable. La planche n'est pas
+manipulable : elle est deja soulevee et posee contre le mur.
+
+§ 3 — CE QUE CA DIT
+Sol a quarante-et-une boites de conserve. C'est peut-etre trois mois.
+Le geste humain : mettre les mauvaises boites devant.
+[OBL] C'est le detail qui fait tout. Il ne se garde pas le meilleur. Il
+mange dans l'ordre du plus abime au moins abime, pour ne rien perdre.
+C'est une discipline. Quelqu'un la lui a apprise, ou il l'a trouvee seul.
+La gamelle lavee : il nourrit son chien et il lave sa gamelle.
+Le bidon aux trois quarts : il compte son eau.
+[OBL] Le petit sac ferme avec deux lettres a la craie : jamais ouvert,
+jamais explique, jamais mentionne. Il est au fond, a droite, derriere les
+conserves. Il faut se pencher pour le voir.
+
+§ 4 — ECHO
+NEANT. Objets d'un vivant, geste d'apres, enfant. Triple (PN-053).
+
+§ 5 — MISE EN SCENE
+[OBL] Sol montre la niche. C'est le seul endroit de S5 qu'il montre
+volontairement. SOL-SCE-094.
+Il souleve la planche, la pose contre le mur, et s'ecarte. Il ne dit rien.
+[OBL] Il n'y a pas de dialogue. Il montre. C'est tout.
+Il reste a cote pendant que Lohen regarde. [OBL] SOL-IDL-453 : il regarde
+Lohen quand Lohen ne regarde pas. Si le joueur se retourne vers lui, il
+regarde ailleurs. Jamais pris en flagrant delit.
+[ART] Un enfant de 13 ans montre ses provisions a un adulte. Il ne demande
+rien. Il ne propose rien. Il montre.
+Apres 20 secondes, si le joueur ne bouge pas, Sol remet la planche.
+[OBL] Il la remet meme si Lohen est encore en train de regarder.
+
+§ 6 — AUDIO
+SFX(plank_lift_stone) : la planche soulevee, une fois.
+SFX(tin_can_tap) : si le joueur frole les boites, un tintement de fer-blanc
+plein, mat. [OBL] Les 7 boites bombees sonnent DIFFEREMMENT : plus tendu,
+plus aigu. Un joueur attentif entend la difference.
+[OBL] Aucune musique. M20 « Les Conduits » ne joue pas dans la chambre de
+chauffe ni dans ses abords (cf. PN-087) : [OBL] tout le secteur habite de
+Sol est sans musique. 8 minutes de jeu.
+
+§ 7 — INTERDICTIONS
+Interdit de : prendre une boite · ouvrir le petit sac · lire les deux
+lettres · les expliquer · compter en interface · faire parler Sol · faire
+proposer a manger · faire manger Lohen · reveler qui a appris a Sol ·
+ajouter de la nourriture · en retirer · donner un Echo · ajouter de la
+musique · faire remercier Lohen.
+
+§ 8 — LIENS
+PN-053 (les 61 objets tries de la gaine, S3) et PN-002 (la valise triee par
+taille, S1). [OBL] Trois tris dans le chapitre, jamais relies.
+PN-091 (le collier de chien, a 3 m). PN-087 (le matelas).
+PN-082 (les 2 cm de the de Mireille) : l'autre stock qui s'epuise, chez
+quelqu'un d'autre, une sequence plus tot.
+PN-146 (la reserve de provisions, S8) : la derniere, et elle est a Esteban.
+[THEME] TRIER POUR TENIR. [THEME] CE QUI RESTE EN QUANTITE FINIE.
+
+§ 9 — DOD
+[ ] 41 boites, 9 modeles, tri par contenu, etiquettes a +/- 4 degres
+[ ] 7 boites bombees DEVANT, bombement 4 a 9 mm, son distinct
+[ ] Gamelle de chien lavee et propre
+[ ] Petit sac ferme, deux lettres a la craie illisibles, jamais ouvert
+[ ] Sol montre sans un mot, remet la planche apres 20 s
+[ ] SOL-IDL-453 actif, jamais pris en flagrant delit
+[ ] Zero musique dans tout le secteur habite (8 minutes)

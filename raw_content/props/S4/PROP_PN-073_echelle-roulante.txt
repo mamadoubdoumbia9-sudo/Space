@@ -1,0 +1,114 @@
+===============================================================================
+PN-073 — L'ECHELLE ROULANTE
+===============================================================================
+Asset : SM_S4_Echelle_Roulante · S4, rail circulaire de la rotonde ·
+~03:33 · PORTEUR D'ECHO E17 · MECANIQUE UTILISABLE · LOD0 2 700 tris
+
+§ 1 — CE QU'ON VOIT
+Une echelle de bibliotheque montee sur un rail circulaire qui fait tout le
+tour de la rotonde, a 5,5 m de haut.
+Elle a 14 echelons, une main courante, et quatre roues : deux en haut qui
+courent dans le rail, deux en bas qui roulent sur le sol.
+Les deux roues du bas sont DANS L'EAU. Elles ont rouille.
+Elle roule quand meme. Difficilement. Il faut pousser.
+Elle est actuellement positionnee devant la section « HISTOIRE MARITIME »,
+a l'ouest.
+Sur la main courante, l'usure : une seule bande, de 30 cm, du cote droit.
+Une seule main, toujours la meme, toujours au meme endroit.
+En haut, sur le dernier echelon, il y a un chiffon plie et une petite
+brosse a poils doux. Le materiel de quelqu'un qui epoussetait les livres.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 700. Rail circulaire : 22 m de circonference, 900 tris.
+MECANIQUE : le joueur POUSSE l'echelle. LOH-ACT-191 `push_ladder`,
+vitesse 0,6 m/s, avec une inertie (elle continue 1,2 m apres le relachement
+et ralentit). [OBL] Physique reelle, pas un rail scripte a positions fixes.
+Elle peut s'arreter n'importe ou sur les 22 m.
+[OBL] Elle sert a atteindre : la mezzanine (PN-072), trois sections hautes
+de rayonnages, et rien d'autre. Elle n'est pas une enigme. Il n'y a pas de
+puzzle de positionnement.
+Anim : PROP-786 (roulement), PROP-787 (pendant E17).
+Les roues du bas dans l'eau : [OBL] elles font des VAGUES. Un sillage de
+4 cm qui se propage sur 2 m et s'attenue. C'est le seul objet qui perturbe
+l'eau de la rotonde. Simulation de surface simplifiee, 0,2 ms.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un montait sur cette echelle pour epousseter les livres.
+Le geste humain : epousseter des livres dans une bibliotheque inondee.
+[OBL] Les rayonnages du bas sont noyes et pourris (PN-078). Ceux du haut
+sont secs. Quelqu'un a continue d'entretenir les rayonnages du haut pendant
+que ceux du bas mouraient.
+La bande d'usure unique sur la main courante : une seule main, toujours la
+droite.
+[NAR] Mireille a la main droite brulee. [OBL] L'usure est ancienne — elle
+date d'avant. Elle montait avec la main droite quand elle l'avait encore.
+[OBL] Jamais dit, jamais confirme, jamais suggere par un dialogue.
+
+§ 4 — ECHO
+ECHO E17 — « L'echelle » — 19 secondes, mode A.
+[OBL] Il ne se declenche QUE si le joueur est EN HAUT de l'echelle, sur les
+trois derniers echelons. Le prompt apparait a cette position seulement.
+Ce qu'on voit : rien, d'abord. Le joueur est en haut d'une echelle, a 5 m,
+face a des rayonnages.
+Puis l'echelle BOUGE. Elle se met a rouler, doucement, vers la droite.
+[OBL] Le joueur est dessus. Il bouge avec. Il n'a pas le controle.
+Elle roule sur 7 metres, en 11 secondes, le long des rayonnages.
+Pendant qu'elle roule, une main apparait sur la main courante, a cote de
+celle de Lohen. Une main de silhouette, sombre, sans detail.
+[OBL] C'est la seule fois du chapitre ou une silhouette est a moins de 40 cm
+de Lohen.
+L'echelle s'arrete. La main reste 4 secondes.
+Elle s'efface.
+L'echelle est maintenant devant la section « POESIE ».
+[OBL] Elle y RESTE. La position a change pour de bon. Le monde a bouge.
+C'est le seul changement d'etat permanent cause par un Echo dans tout le
+chapitre.
+Musique : NEANT. Le seul son est le roulement.
+Rituel d'entree : 2,44 s, joue en haut de l'echelle.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur doit monter l'echelle pour atteindre la mezzanine (PN-072)
+et donc E16. L'ordre naturel est : monter, aller au banc, redescendre.
+E17 se declenche EN HAUT, donc avant E16.
+[OBL] Deux Echos a 6 m l'un de l'autre. Exception a la regle des 25 m /
+90 s (PN-035). Justification : ils sont a des ALTITUDES differentes et
+separes par une action physique (traverser la mezzanine). Validee.
+Pendant E17, le joueur est immobilise a 5 m de haut sur une echelle qui
+roule toute seule. [OBL] Il garde le controle de la camera. Il peut
+regarder sa propre main, la main a cote, les rayonnages qui defilent, ou en
+bas, l'eau et le rai de lumiere.
+[ART] La plupart regardent la main.
+
+§ 6 — AUDIO
+SFX(ladder_wheel_rail) : les roues du haut dans le rail. Un roulement
+metallique regulier, avec un defaut : un « clac » tous les 1,4 m (un joint
+de rail). [OBL] Sur 7 m pendant E17 : exactement 5 clacs.
+SFX(wheel_water_wake) : les roues du bas dans l'eau. Un froissement liquide
+continu.
+[OBL] La main qui apparait ne fait AUCUN son. Pas de pose, pas de contact,
+pas de frottement sur le bois. Rien.
+Aucune musique.
+Apres l'Echo : silence de 5 s, puis M16 reprend.
+
+§ 7 — INTERDICTIONS
+Interdit de : ajouter une enigme de positionnement · verrouiller des
+positions · montrer un bras, un corps, un visage · faire toucher la main de
+Lohen · faire reagir Lohen · ajouter un son a la main · ramener l'echelle a
+sa position d'origine apres E17 · rendre E17 rejouable · faire tomber
+Lohen · ajouter de la musique · declencher E17 depuis le sol.
+
+§ 8 — LIENS
+PN-072 (le banc, E16, a 6 m). PN-021 (l'echelle brisee, S1 : l'autre
+echelle, et celle-la fait mal). PN-078 (les rayonnages noyes).
+PN-130 (l'escalier en spirale, S8).
+[THEME] MONTER. [THEME] LA MAIN A COTE.
+
+§ 9 — DOD
+[ ] Physique reelle avec inertie, arret libre sur 22 m, aucune position fixe
+[ ] Sillage de 4 cm dans l'eau, propagation 2 m, 0,2 ms
+[ ] Bande d'usure unique de 30 cm, main droite seulement
+[ ] Chiffon et brosse sur le dernier echelon
+[ ] E17 declenchable uniquement depuis les 3 derniers echelons
+[ ] 7 m de roulement, 11 s, 5 clacs de joint de rail
+[ ] Main a moins de 40 cm de Lohen, totalement silencieuse
+[ ] Position permanente changee apres E17, jamais reinitialisee

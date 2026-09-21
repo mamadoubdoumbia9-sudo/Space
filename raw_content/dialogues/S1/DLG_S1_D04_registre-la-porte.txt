@@ -1,0 +1,84 @@
+===============================================================================
+DLG · S1 · D04 — LE BUREAU DU REGISTRE : LA VOIX DERRIERE LA PORTE
+10 lignes · LOHEN 5 / VOIX (role GAR, non credite ici) 5
+Props : PN-003 (affiche 641 noms, 200 croix), PN-018 (jeton).
+Reference maitre : 09.10 « le Registre est inonde de verre jusqu'au plafond ».
+===============================================================================
+
+--- CONTEXTE -------------------------------------------------------------------
+
+Lohen arrive devant le Registre des Disparus. Rez-de-chaussee noye de
+verre jusqu'au plafond : on voit les bureaux, les chaises, les classeurs,
+figes sous quatre metres. Sur la facade, l'affiche PN-003 : 641 noms,
+200 croix rouges tracees a la main. Le joueur peut zoomer. Il ne sait pas
+encore lire l'importance de ce qu'il voit.
+
+Une porte de service, a l'etage, cote nord. Elle est fermee. Derriere,
+quelqu'un. Il ne l'ouvrira pas. On ne verra jamais son visage.
+
+[NAR] Ce personnage est Garric, milicien, qu'on rencontrera pour de vrai
+en S3 au poste de Tallec. Le joueur ne peut pas le savoir. Un joueur
+attentif reconnaitra la voix 50 minutes plus tard. Rien ne le signale.
+[OBL] Aucun dialogue de S3 ne fait allusion a cette rencontre. Garric ne
+dit jamais « c'est vous, l'autre matin ». Il ne s'en souvient pas : il
+parle a travers cette porte quatre fois par jour.
+
+--- LES 10 LIGNES --------------------------------------------------------------
+
+    [S1_LOH_L055]  LOHEN · 0,8 s · plat · p1,1
+        « Il y a quelqu'un ? »
+        dir : il n'a pas frappe. Il a parle a la porte. Frapper viendra
+              apres, et seulement si le joueur le decide.
+
+    [S1_GAR_L056]  VOIX (off, derriere la porte) · 1,2 s · las · p0,4
+        « C'est ferme. »
+        dir : la voix est filtree passe-bas 3,4 kHz + occlusion. Elle
+              n'est PAS traitee comme un Echo : elle vit, elle est dans
+              une piece, elle a de la reverb de piece.
+
+    [S1_LOH_L057]  LOHEN · 1,4 s · plat · p0,5
+        « Je cherche une fiche. Un nom. »
+
+    [S1_GAR_L058]  VOIX · 2,6 s · las · p0,6
+        « Tout le monde cherche un nom. Les fiches sont dans le verre.
+          Le verre est dans le batiment. »
+
+    [S1_LOH_L059]  LOHEN · 1,0 s · plat · p0,4
+        « Et l'etage ? »
+
+    [S1_GAR_L060]  VOIX · 2,3 s · sec · p0,7
+        « L'etage c'est ma chambre. J'y dors. J'y mange. J'y compte pas
+          les morts. »
+        dir : la ligne la plus dure du chapitre 1, dite par quelqu'un
+              qu'on ne voit pas, a la vingt-cinquieme minute.
+
+    [S1_LOH_L061]  LOHEN · 1,7 s · plat · p0,5
+        « L'affiche dehors. Les croix. C'est vous ? »
+
+    [S1_GAR_L062]  VOIX · 1,5 s · plat · p0,9
+        « Non. »
+        dir : [NAR][OBL] C'est Mireille qui trace les croix (canon
+              PN-003 / annexe B). Personne ne le dira jamais a voix
+              haute. Cette ligne est la seule ou la question est posee
+              et la seule ou elle recoit un non.
+
+    [S1_GAR_L063]  VOIX · 2,9 s · las · p0,6
+        « Si vous montez sur le toit, l'echelle nord tient. Ne dites pas
+          que c'est moi. »
+        dir : il confirme ce que Pallas a dit. Deux sources independantes
+              sur la meme information : c'est ainsi que ce jeu tutorise,
+              jamais par un texte.
+
+    [S1_LOH_L064]  LOHEN · 0,9 s · plat · p0,0
+        « Bonne nuit. »
+        dir : [NAR] il est 06:40 du matin. Lohen le dit quand meme,
+              parce que l'homme derriere la porte dort le jour. Aucune
+              reponse. Le pas de Lohen s'eloigne. La porte ne s'ouvre pas.
+
+--- CHECKLIST ------------------------------------------------------------------
+
+[ ] La porte ne s'ouvre jamais, dans aucune branche, jamais en S7 non plus
+[ ] Meme comedien que GAR en S3, aucun rappel scenaristique
+[ ] L062 : la reponse est « Non », pas « Je ne sais pas »
+[ ] L064 : « Bonne nuit » a 06:40, jamais corrige par un relecteur
+[ ] PN-003 zoomable, 200 croix, comptables une par une

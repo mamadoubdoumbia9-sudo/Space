@@ -1,0 +1,86 @@
+===============================================================================
+PN-006 — LE PONTON BRISE QUI POINTE VERS LE LARGE
+===============================================================================
+Asset : SM_S1_Ponton_Brise · S1, extremite ouest du quai, altitude 1 m ·
+~00:04 · prop narratif · pas d'Echo · LOD0 6 200 tris
+
+§ 1 — CE QU'ON VOIT
+Un ponton de bois de 26 m qui avancait dans la mer. Il est CASSE a 18 m :
+les huit derniers metres se sont affaisses et pointent vers le bas, dans le
+verre, a 30 degres. Les pilotis de la partie brisee sont encore debout,
+mais ils ne portent plus rien.
+La cassure n'est pas nette. C'est un arrachement : les planches sont
+fendues dans le sens des fibres, longues echardes de 40 cm, blanchies.
+Sur les 18 premiers metres, le ponton est intact, praticable, avec un
+garde-corps d'un seul cote (l'autre a disparu).
+Au bout de la partie intacte, exactement au bord de la cassure, un objet :
+un bollard de fonte autour duquel est enroule un cordage qui descend dans
+le verre et s'y perd. Il est tendu. Quelque chose est encore attache au
+bout, sous la surface, a 4 m de profondeur. On ne voit pas quoi.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 6 200. Kit K1 + 14 pieces uniques pour la zone de cassure (les
+echardes sont modelisees, pas texturees). Atlas 4K partage.
+Collision : praticable sur 18 m. Le joueur peut marcher jusqu'au bord et
+regarder en bas. [OBL] Aucun mur invisible (17.06). La geometrie s'arrete
+et le vide commence.
+Shader `wood_tarred` avec masque d'humidite par hauteur (05.20).
+Le cordage tendu : 12 segments, disparait dans le verre via le shader
+`maree_glass` (parallax d'inclusion, 05.17).
+
+§ 3 — CE QUE CA DIT
+La mer a durci en 9 secondes. Ce qui etait dessus est tombe dedans.
+Le ponton n'a pas ete casse par une tempete : il a ete casse par le poids
+de quelque chose qui a coule pendant que l'eau devenait solide, et qui est
+reste accroche.
+Le cordage tendu dit : il y a un bateau, ou une cage, ou une charge, a 4 m
+sous le verre, et il y est depuis trois ans, et il y sera toujours.
+Le geste humain : quelqu'un a amarre quelque chose, ce soir-la, normalement.
+
+§ 4 — ECHO
+NEANT. Raison : le ponton est le PREMIER espace que le joueur explore. Y
+mettre un Echo apprendrait le systeme trop tot et trop facilement. Le
+premier Echo doit etre E01 (PN-001), a 6 minutes, apres que le joueur a eu
+le temps d'avoir peur du vide et de comprendre la marche.
+[OBL] Il est structurellement interdit de placer un Echo avant E01.
+
+§ 5 — MISE EN SCENE
+C'est le premier endroit ou le joueur marche. Le ponton l'oriente : il ne
+peut aller que dans un sens. 18 m de ligne droite sans obstacle, pour
+apprendre le stick et la camera (08.21, 00:00-00:04).
+Puis le bord. Et le vide. Et le fait que le vide est SOLIDE.
+La regle des trois plans est etablie ici, des le premier cadre :
+garde-corps au premier plan / ponton au plan moyen / Velmora et le Phare
+dans la brume au fond.
+[ART] C'est le cadre qui vend le jeu. Une capture de ce plan est l'image
+de la boutique.
+
+§ 6 — AUDIO
+Le ponton sonne CREUX sous les pas : matiere `bois_mouille`, 8 variations.
+C'est la premiere matiere du jeu et elle doit etre parfaite.
+SFX(rope_strain_deep) toutes les 14 s sur le cordage tendu : une note tres
+grave, presque une infra. Le joueur ne l'identifie pas consciemment.
+SFX(wood_groan) quand le joueur atteint les 3 derniers metres.
+Ambiance : absence totale de ressac. [OBL] Aucun son de vague dans tout le
+jeu. Jamais. C'est l'anomalie fondatrice et elle est en creux.
+
+§ 7 — INTERDICTIONS
+Interdit de : mettre un mur invisible au bord · faire ceder des planches
+sous le joueur ici (la premiere planche qui cede est a 00:04, ailleurs) ·
+reveler ce qu'il y a au bout du cordage · ajouter un son de vague ·
+permettre de descendre sur le verre en S1 (c'est la S2) · mettre un
+garde-corps des deux cotes.
+
+§ 8 — LIENS
+PN-023 (le tramway sous la surface, S2) : la reponse formelle a la question
+posee par ce cordage — il y a des choses dessous. PN-031 (la main dans le
+verre). PN-033 (le harpon plante dans la Maree).
+[THEME] CE QUI EST DESSOUS, pose ici en creux a la minute 3, et paye en S2.
+
+§ 9 — DOD
+[ ] 18 m praticables, aucun mur invisible, le vide est atteignable
+[ ] Les echardes de la cassure sont en geometrie, pas en normal map
+[ ] Le cordage disparait dans le verre sans intersection visible
+[ ] 8 variations de pas sur bois mouille, validees au casque et au HP
+[ ] Zero son de vague dans le mix de la zone
+[ ] Le cadre depuis le depart contient les trois plans et le Phare

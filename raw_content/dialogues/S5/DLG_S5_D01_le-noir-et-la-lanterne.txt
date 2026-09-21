@@ -1,0 +1,170 @@
+===============================================================================
+DLG · S5 · D01 — LES DOUZE PREMIERES MINUTES, SEUL DANS LE NOIR
+30 entrees, toutes S5. LOH 30. Contribution : 30.
+Reference maitre : 09.14. Prop : PN-009 (la lanterne — ramassable, posee
+definitivement a la fin de S5). Anim : LOH-CRW-130..142 (accroupi).
+===============================================================================
+
+--- LA LOI DE LA SEQUENCE 5 -------------------------------------------------------------
+
+[OBL] Lohen est accroupi 60 % de la sequence. Plafond 1,4 m. Une main
+tient la lanterne : pas de grappin, pas de garde. Il peut la poser. Il
+ne veut pas.
+
+[OBL] MIX STRICTEMENT PLAT (canon PN-094). Aucun stinger, aucun son de
+creature, aucune montee. Les Mueurs existent dans le level design et
+n'apparaissent JAMAIS. Le joueur cherchera un monstre pendant vingt-quatre
+minutes. Il n'y en a pas. Job CI `no-mueur` : aucun asset de creature
+Mueur ne doit etre instancie dans les scenes de S5.
+
+[OBL] Musique : M17 « Le ventre », une seule note de contrebasse tenue,
+qui change de hauteur toutes les 40 a 70 secondes. Elle est a -29 dB.
+Beaucoup de joueurs jureront qu'il n'y a pas de musique en S5.
+
+[OBL] Les douze premieres minutes sont SEULES. Sol n'arrive qu'a 00:12
+de la sequence. Ces trente lignes portent un homme seul dans un tuyau.
+
+--- LES 30 LIGNES -----------------------------------------------------------------------------
+
+    [S5_LOH_L001]  LOHEN · 1,6 s · bas · p1,4
+        « Un metre quarante. »
+
+    [S5_LOH_L002]  LOHEN · 2,0 s · bas · p1,2
+        « Ca va aller. »
+        dir : [OBL] il se ment. Il le fera onze fois dans la sequence
+              et le joueur apprendra a reconnaitre la formule.
+
+    [S5_LOH_L003]  LOHEN · 1,8 s · bas · p1,6
+        « A gauche, ca descend. A droite, ca monte. »
+
+    [S5_LOH_L004]  LOHEN · 1,2 s · bas · p1,3
+        « Droite. »
+
+    [S5_LOH_L005]  LOHEN · 2,4 s · bas · p1,1
+        « La lanterne eclaire trois metres et demi. »
+
+    [S5_LOH_L006]  LOHEN · 1,6 s · bas · p1,8
+        « Apres, c'est du noir. »
+
+    [S5_LOH_L007]  LOHEN · 2,2 s · bas · p1,2
+        « Le noir, c'est pas un probleme. Le noir c'est juste pas de
+          lumiere. »
+
+    [S5_LOH_L008]  LOHEN · 1,4 s · bas · p2,0
+        « Ca va aller. »
+        dir : 2e. [OBL] Meme texte que L002, prise differente, plus
+              courte de 0,6 s. La formule raccourcit a chaque fois.
+              A la onzieme, elle fera 0,7 s.
+
+    [S5_LOH_L009]  LOHEN · 2,6 s · bas · p1,4
+        « Y'a de l'air qui vient de la-bas. Donc y'a une sortie. »
+
+    [S5_LOH_L010]  LOHEN · 1,8 s · bas · p1,2
+        « Ou un trou. »
+
+    [S5_LOH_L011]  LOHEN · 2,0 s · bas · p1,6
+        « C'est pareil. »
+
+    [S5_LOH_L012]  LOHEN · 2,4 s · bas · p1,3
+        « Mon epaule aime pas. »
+        dir : [OBL][NAR] LA SEULE MENTION VOLONTAIRE DE SON EPAULE DE
+              TOUT LE CHAPITRE. Il est seul. Il n'y a personne. Il le
+              dit a voix haute dans un tuyau. [OBL] Aucune suite,
+              aucune explication, aucune ligne de suivi. Jamais.
+
+    [S5_LOH_L013]  LOHEN · 1,6 s · bas · p1,8
+        « Tant pis pour mon epaule. »
+
+    [S5_LOH_L014]  LOHEN · 2,8 s · bas · p1,2
+        « Trois cent quarante metres de conduit, d'apres la grille.
+          Quatre cents avec les tournants. »
+
+    [S5_LOH_L015]  LOHEN · 2,0 s · bas · p1,4
+        « J'ai fait cent vingt. »
+
+    [S5_LOH_L016]  LOHEN · 1,4 s · bas · p1,6
+        « Peut-etre quatre-vingts. »
+
+    [S5_LOH_L017]  LOHEN · 2,2 s · bas · p1,3
+        « On compte mal, accroupi. »
+
+    [S5_LOH_L018]  LOHEN · 2,6 s · bas · p1,2
+        « Y'a des marques sur la paroi. Des traits. »
+
+    [S5_LOH_L019]  LOHEN · 2,0 s · bas · p1,5
+        « Quelqu'un compte, lui. »
+        dir : [OBL] PN-088. Il y a 1 038 traits graves dans le conduit,
+              par groupes de cinq, sur 12 m de paroi. [OBL] C'est le
+              nombre de marches du Phare. [OBL] Personne ne l'explique
+              JAMAIS. Le joueur qui compte les traits et qui se
+              souvient de S3_TAL_L127 aura une information qui ne
+              mene nulle part et qui lui fera froid dans le dos. C'est
+              suffisant.
+
+    [S5_LOH_L020]  LOHEN · 1,2 s · bas · p1,8
+        « Ca va aller. »
+        dir : 3e. 1,2 s.
+
+    [S5_LOH_L021]  LOHEN · 2,4 s · bas · p1,3
+        « De l'eau. Vingt centimetres. »
+
+    [S5_LOH_L022]  LOHEN · 1,8 s · bas · p1,2
+        « Froide. »
+
+    [S5_LOH_L023]  LOHEN · 2,2 s · bas · p1,6
+        « Si je pose la lanterne dedans, elle s'eteint et je suis
+          bete. »
+
+    [S5_LOH_L024]  LOHEN · 2,6 s · bas · p1,4
+        « Donc je la tiens en haut et je passe de travers. »
+        dir : [OBL] LE TUTORIEL DU PASSAGE EN DEVERS, dit par le
+              personnage, une fois, sans prompt. Le joueur qui
+              n'ecoute pas eteint la lanterne. [OBL] Consequence :
+              30 secondes de noir total pendant lesquelles Lohen doit
+              ressortir a tatons. Aucune mort. Aucun game over. Juste
+              trente secondes tres longues.
+
+    [S5_LOH_L025]  LOHEN · 1,6 s · bas · p1,8
+        « Voila. »
+
+    [S5_LOH_L026]  LOHEN · 2,0 s · bas · p1,2
+        « Y'a des peaux, la. »
+        dir : [OBL] PN-094, les 340 plaques de mue. [OBL] Le mix ne
+              change PAS. Aucun stinger. Aucune note. Le joueur les
+              voit, son cerveau fabrique un monstre, et le jeu ne
+              confirme rien.
+
+    [S5_LOH_L027]  LOHEN · 2,4 s · bas · p1,4
+        « Vides. »
+
+    [S5_LOH_L028]  LOHEN · 1,8 s · bas · p2,2
+        « Toutes vides. »
+        dir : [OBL] il le constate. Il n'a pas peur a voix haute. Un
+              relayeur de vingt-sept ans qui a marche sur six cent
+              quarante et un morts ce matin ne panique pas devant des
+              peaux.
+
+    [S5_LOH_L029]  LOHEN · 1,0 s · bas · p1,6
+        « Ca va aller. »
+        dir : 4e. 1,0 s. [OBL] C'est la derniere avant l'arrivee de
+              Sol. Les sept autres sont dans D04, D07 et D11.
+
+    [S5_LOH_L030]  LOHEN · 2,8 s · surpris · p0,0
+        « Y'a quelqu'un assis dans mon tuyau. »
+        dir : [OBL] fin du document. Sol est assise a 6 m, dans le
+              faisceau, en train de manger quelque chose de non
+              identifie. Iel n'a pas de lumiere. Iel etait dans le
+              noir complet depuis un temps indetermine.
+              [OBL] Aucun stinger musical. Aucun sursaut de camera.
+              [OBL] La ligne est `surpris`, pas `fige`, pas `tendu` :
+              il est surpris comme on est surpris de trouver un chat
+              sur une table.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] Mix strictement plat, aucun son de creature, CI `no-mueur`
+[ ] M17 a -29 dB, une note tenue, changement toutes les 40-70 s
+[ ] « Ca va aller » : 11 occurrences totales, de plus en plus courtes
+[ ] L012 : seule mention volontaire de l'epaule, sans suite
+[ ] L019 : 1 038 traits, jamais expliques
+[ ] L026-L028 : les mues ne declenchent aucun effet sonore

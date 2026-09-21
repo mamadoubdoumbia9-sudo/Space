@@ -1,0 +1,99 @@
+===============================================================================
+PN-109 — LA PENDULE ARRETEE A 23H41
+===============================================================================
+Asset : SM_S6_Pendule · S6, mur est de la salle de bal, au-dessus de la
+double porte · ~04:55 · prop narratif · pas d'Echo · LOD0 2 900 tris
+
+§ 1 — CE QU'ON VOIT
+Une pendule murale de grand format, 1,10 m de diametre, cadran emaille
+blanc, chiffres romains noirs, aiguilles de fer forge.
+Elle est au-dessus de la double porte principale de la salle, a 4,20 m.
+C'est la pendule que regardaient les danseurs.
+Elle indique 23h41.
+[OBL] La petite aiguille est entre le XI et le XII. La grande est sur le
+huitieme trait apres le VIII. C'est exact : 23 heures 41.
+Le balancier est visible dans une lunette vitree sous le cadran. Il est
+immobile, en position basse, parfaitement vertical.
+[OBL] Un balancier arrete s'arrete au point bas. C'est physique. Verifier.
+Le verre du cadran est intact.
+Il y a de la poussiere sur le boitier, mais le cadran est PROPRE derriere
+son verre : il est etanche.
+Sur le cote du boitier, la petite porte d'acces au mecanisme est
+entrouverte de 2 cm.
+La clef de remontage pend a un crochet, a l'intérieur.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 900 (boitier 1 400 + cadran 300 + mecanisme partiellement visible
+900 + aiguilles 300).
+[OBL] Le cadran est une texture 4K. Les chiffres romains sont peints a la
+main (une vraie peinture sur email, photographiee), pas une police.
+Les aiguilles : geometrie, fer forge, avec un contrepoids.
+[OBL] Le mecanisme derriere la porte entrouverte est modelise : rouages,
+ressort moteur, echappement. Visible sur 8 cm. Le joueur peut regarder.
+Le balancier : 340 tris, laiton, immobile.
+Shader `enamel_glazed` (le cadran) + `iron_forged` + `wood_polished`.
+Anim : NEANT. [OBL] Absolument aucune. Ni aiguille, ni balancier, ni
+rouage, a aucun moment, dans aucune circonstance, y compris pendant E21.
+
+§ 3 — CE QUE CA DIT
+23h41. L'heure exacte de la Maree.
+[OBL] C'est la SEULE horloge du jeu arretee a cette heure-la.
+Le clocher (PN-055) s'est arrete a 4h15. Le compteur electrique (PN-097)
+s'est arrete on ne sait quand. Le tampon dateur (PN-010) marquait le jour,
+pas l'heure. Le carnet de bord (PN-027) s'arretait a « 23h4 ».
+[OBL] Une pendule mecanique a poids ou a ressort ne s'arrete pas a cause
+d'un evenement. Elle s'arrete quand elle est en bout de course.
+[NAR] Donc : quelqu'un l'a arretee. A la main. A 23h41.
+La porte du mecanisme est entrouverte. La clef pend a l'intérieur.
+Le geste humain : ouvrir le boitier d'une pendule et bloquer le balancier.
+[OBL] Jamais explique. Qui, quand, pourquoi. Jamais.
+
+§ 4 — ECHO
+NEANT. [OBL] Element d'architecture (PN-055), geste d'apres (PN-015), et
+hors de portee (4,20 m).
+
+§ 5 — MISE EN SCENE
+[OBL] Elle est AU-DESSUS DE LA PORTE. Le joueur ne la voit pas en entrant :
+il entre par la grille au ras du sol (PN-099), a l'autre bout de la salle,
+et la pendule est derriere lui quand il se releve.
+[OBL] Il la voit quand il SORT. A la fin de S6, en se dirigeant vers la
+double porte, il leve les yeux.
+[ART] La derniere chose qu'il voit en quittant la salle de bal est
+23h41.
+Taux de detection : 74-85 %.
+[OBL] Aucun plan, aucune camera, aucun ralenti, aucun LookAt, aucun son,
+aucune musique. Il leve les yeux ou il ne leve pas les yeux.
+[OBL] Lohen ne la regarde jamais.
+
+§ 6 — AUDIO
+NEANT. [OBL] Une pendule arretee ne fait aucun bruit. Pas de tic, pas de
+tac, pas de grincement de ressort.
+[ART] Le silence de cette pendule dans une salle ou un piano joue tout seul
+est le contraste de la sequence 6, et il n'est jamais souligne.
+
+§ 7 — INTERDICTIONS
+Interdit de : la remettre a l'heure · la remonter · la faire sonner · faire
+bouger le balancier · faire bouger une aiguille · ajouter un tic-tac ·
+expliquer qui l'a arretee · ajouter une autre horloge a 23h41 dans le jeu ·
+la faire commenter · donner un Echo · l'atteindre · prendre la clef.
+
+§ 8 — LIENS
+PN-055 (le clocher, 4h15). PN-010 (le tampon, 14 octobre). PN-027 (le
+carnet, « 23h4 »). PN-097 (le compteur electrique).
+PN-106 (le carton : le bal etait a 20 h). PN-105 (la table intacte).
+[OBL] La chaine complete, jamais enoncee : bal a 20 h, personne n'est venu,
+table intacte, quelqu'un a arrete la pendule a 23h41.
+[OBL] Le joueur peut reconstituer. Le jeu ne l'y aide jamais et ne
+confirme jamais.
+[THEME] LA SERIE D'ARRETS. [THEME] CE QUI N'A PAS EU LIEU.
+
+§ 9 — DOD
+[ ] 23h41 exact : petite aiguille entre XI et XII, grande sur le 41e minute
+[ ] Balancier immobile au point bas, verticalement
+[ ] Porte du mecanisme entrouverte de 2 cm, clef pendue a l'intérieur
+[ ] Mecanisme modelise et visible sur 8 cm
+[ ] Chiffres romains peints a la main sur email, jamais une police
+[ ] Zero animation, y compris pendant E21
+[ ] Zero son, jamais
+[ ] Visible en sortant, jamais en entrant
+[ ] Seule horloge du jeu a 23h41

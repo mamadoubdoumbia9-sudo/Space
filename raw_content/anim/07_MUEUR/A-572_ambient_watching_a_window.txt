@@ -1,0 +1,103 @@
+===============================================================================
+  A-572   ambient_watching_a_window
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 572 / 744
+  Partie 7 — FIGURE — LE MUEUR
+  Categorie : VARIANTE / COMPORTEMENT
+  Marqueur   : MUEUR · VARIANTE DE MEUTE
+  Fichier source  : A_Figure_Var_ambient_watching_a_window_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : conçu — bloc de plage deplie
+  Identifiant precedent : A-575 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 14.000 s  (420 frames a 30 fps)
+  Type .................. BOUCLE
+  Root motion ........... RM-NONE
+  Blend in / out ........ 0.25 s / 0.25 s
+  Couche AnimationTree .. L0
+  Priorite .............. 4 — locomotion de fond (bande 0-19, bareme 0.05)
+  Poids compresse cible . ~154 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      72 os · colonne tres courbee, 4 membres, plaques de verre (chaine
+      secondaire de 14 os de jiggle)
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  FIGURE — LE MUEUR. 1,7 m, humanoide accroupi, plaques de verre.
+
+  Le Mueur est ce qui reste quand une personne se recroqueville trop
+  longtemps. Sa posture est celle de quelqu'un qui SE PROTEGE. Il attaque de
+  cote, jamais de face. Il fuit quand il est seul, il est brave en groupe.
+  [ART] C'est un ennemi LACHE : le joueur doit le mepriser un peu, puis se
+  sentir mal de l'avoir meprise.
+
+  Rig et costume :
+      72 os, plaques de verre en chaine secondaire de 14 os de jiggle,
+      plaques qui tombent et repoussent (croissance en shader)
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  Il regarde une fenetre, immobile, pendant toute la boucle. [NAR] La
+  fenetre donne sur rien : elle est murée de l'autre cote. Il regarde quand
+  meme. Ne jamais l'expliquer, ne jamais y ramener la camera.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Cyclage [OBL 0.03] : la frame 0 et la frame 420 sont identiques
+  a 0.001 pres. Verifie par `tools/loop_check.py`, qui echoue le
+  build en cas de saut.
+
+  Evenements de timeline :
+      SFX(plate_shift) aleatoire une fois par boucle · les plaques
+      repoussent en shader, jamais en anim
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- etat de meute ; -> idle_crouched, run_flee
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · cyclage frame 0 == frame 420 (tolerance 0.001)
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-572
+===============================================================================

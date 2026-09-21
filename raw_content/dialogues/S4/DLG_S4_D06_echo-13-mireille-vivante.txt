@@ -1,0 +1,137 @@
+===============================================================================
+DLG · S4 · D06 — E13 : LE SEUL ECHO D'UNE PERSONNE VIVANTE
+20 entrees, toutes S4. ECH 18 · LOH 2. Contribution : 20.
+[OBL] EXCEPTION UNIQUE A LA REGLE R4 (« rien d'un vivant »). L'autre
+exception declaree du chapitre est E10 (bille sans proprietaire, S3).
+Prop : PN-085 (la chaise de Mireille) — support de l'Echo.
+===============================================================================
+
+--- POURQUOI CETTE EXCEPTION EXISTE -------------------------------------------------------
+
+Le systeme d'Echos a dix regles implicites que le joueur apprend sans
+qu'on les lui dise (VALIDATION_CROISEE_147 § 1). R4 : on ne lit jamais un
+vivant. Le joueur l'a appris par sept faux positifs en S1-S3.
+
+E13 la casse. Une fois. Sur la chaise d'une femme assise a onze metres,
+vivante, qui lui a dit de ne pas toucher.
+
+[OBL] L'effet vise n'est pas la surprise : c'est le malaise. Le joueur
+comprend, pendant 51 secondes, qu'il est en train de fouiller dans la
+tete de quelqu'un qui est dans la piece. [OBL] Il peut arreter :
+retirer la main interrompt E13 — c'est le SEUL Echo interruptible du
+chapitre. 22 % des joueurs retirent la main. Le jeu ne les recompense
+pas et ne les punit pas.
+
+[OBL] Si le joueur va au bout, Mireille ne dit rien. Elle n'a pas
+remarque. Elle ne remarquera jamais. Il n'y a pas de scene de
+confrontation. C'est ce qui rend le geste sale.
+
+--- LES 18 LIGNES DE L'ECHO ----------------------------------------------------------------
+
+La chaise. Une cuisine. Huit ans plus tot. Deux silhouettes : Mireille a
+50 ans, et un homme assis en face. Il tousse. La scene dure 51 s.
+
+    [S4_ECH_L151]  MIREILLE (50 ans) · 2,2 s · plat · p0,8
+        « Tu manges ou tu joues avec. »
+
+    [S4_ECH_L152]  L'HOMME · 1,6 s · las · p0,6
+        « Je joue avec. »
+
+    [S4_ECH_L153]  MIREILLE (50) · 2,0 s · sec · p0,7
+        « Alors mange en jouant. »
+
+    [S4_ECH_L154]  L'HOMME · 2,4 s · las · p0,9
+        « Tu as toujours des solutions. »
+
+    [S4_ECH_L155]  MIREILLE (50) · 1,8 s · plat · p1,1
+        « J'en ai une par probleme. Pas deux. »
+
+    [S4_ECH_L156]  L'HOMME · 2,8 s · las · p0,8
+        « Et pour celui-la ? »
+
+    [S4_ECH_L157]  MIREILLE (50) · 1,4 s · plat · p1,6
+        « Mange. »
+        dir : [OBL] elle n'a pas de solution. Elle repete la premiere.
+              Le comedien ne doit pas faire trembler la voix.
+
+    [S4_ECH_L158]  L'HOMME · 2,6 s · doux · p0,9
+        « Tu tournes ta tasse. »
+
+    [S4_ECH_L159]  MIREILLE (50) · 1,2 s · plat · p0,7
+        « Et alors ? »
+
+    [S4_ECH_L160]  L'HOMME · 3,0 s · doux · p1,2
+        « Rien. Tu la tournes depuis vingt-huit ans et je ne te l'ai
+          jamais dit. »
+        dir : [OBL][NAR] LE GESTE M1 EST EXPLIQUE ICI, et seulement
+              ici, et pas vraiment : on apprend qu'il est ancien et que
+              quelqu'un l'avait remarque. [OBL] Aucune autre source ne
+              l'explique. Le joueur qui n'a pas fait E13 verra une
+              vieille dame tourner sa tasse 31 fois sans jamais savoir.
+
+    [S4_ECH_L161]  MIREILLE (50) · 2,2 s · sec · p1,0
+        « Tu me le dis maintenant parce que tu ne veux pas manger. »
+
+    [S4_ECH_L162]  L'HOMME · 1,8 s · doux · p1,3
+        « Oui. »
+
+    [S4_ECH_L163]  MIREILLE (50) · 2,4 s · plat · p0,8
+        « C'est de bonne guerre. »
+
+    [S4_ECH_L164]  L'HOMME · 3,2 s · las · p1,4
+        « Mireille. Quand ca sera fini, tu ne changes rien dans la
+          cuisine. »
+
+    [S4_ECH_L165]  MIREILLE (50) · 1,6 s · sec · p1,1
+        « Non. »
+
+    [S4_ECH_L166]  L'HOMME · 2,8 s · doux · p1,2
+        « Je ne demande pas. Je dis ce que tu vas faire. »
+
+    [S4_ECH_L167]  MIREILLE (50) · 2,0 s · plat · p1,6
+        « Je sais. »
+
+    [S4_ECH_L168]  L'HOMME · 2,6 s · doux · p0,0
+        « Mange, toi. »
+        dir : [OBL] il lui rend sa phrase. Dissolution. [OBL] La chaise
+              reelle est vide. Mireille est assise a onze metres, dos
+              tourne, et elle tourne sa tasse.
+              [OBL] AUCUNE LIGNE DE MIREILLE APRES E13. Elle ne dit
+              rien, jamais, sur ce sujet. Le joueur garde ca pour lui
+              pendant deux heures et demie.
+
+--- LES 2 LIGNES DE LOHEN ----------------------------------------------------------------
+
+    [S4_LOH_L169]  LOHEN · 1,2 s · plat · p2,4
+        « Pardon. »
+        dir : [OBL] il le dit A LA CHAISE, pas a Mireille. A voix
+              basse. Elle ne l'entend pas : 11 m, et elle est un peu
+              sourde (PN-085 mentionne un appareil auditif jamais
+              porte). [OBL] Le joueur, lui, l'entend parfaitement.
+
+    [S4_LOH_L170]  LOHEN · 0,0 s · — · p0,0
+        (slot sans VO — whitelist `vo-orphan`)
+        dir : [OBL] il remet la chaise exactement droite. LOH-ACT-071,
+              2,8 s. Elle etait de travers de 6 degres. Il la remet
+              a zero. [NAR] « J'aime les choses qui sont a leur place »
+              (L126). Il a ecoute. Il ne le dira pas.
+              [OBL] La chaise reste droite pour le reste du chapitre.
+              Verifiable.
+
+--- SI LE JOUEUR RETIRE LA MAIN (interruption) ------------------------------------------
+
+[OBL] L'Echo se coupe net, sans fondu, sur la syllabe en cours. Ecran
+normal. Aucun son. Aucune ligne de Lohen. Il retire la main et il reste
+debout la, et le joueur reprend le controle apres 1,1 s.
+[OBL] E13 ne peut PAS etre relance. Une seule tentative. Le joueur qui
+s'est arrete ne saura jamais. C'est la seule occasion perdue volontaire
+du chapitre avec E23 en S7.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] E13 : exception R4 declaree, unique avec E10
+[ ] Seul Echo interruptible du chapitre ; non relancable
+[ ] Mireille ne reagit jamais, aucune scene de confrontation
+[ ] L160 : seule source de M1, jamais redite ailleurs
+[ ] L169 dite a la chaise, inaudible pour Mireille
+[ ] L170 : la chaise reste droite jusqu'a la fin du chapitre

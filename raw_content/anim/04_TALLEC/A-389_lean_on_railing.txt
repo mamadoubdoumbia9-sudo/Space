@@ -1,0 +1,103 @@
+===============================================================================
+  A-389   lean_on_railing
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 389 / 744
+  Partie 4 — CAPITAINE ORVAL TALLEC
+  Categorie : LOCOMOTION
+  Fichier source  : A_Capitaine_Loc_lean_on_railing_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+  Identifiant precedent : A-392 (voir RECONCILIATION_744.txt)
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 12.000 s  (360 frames a 30 fps)
+  Type .................. BOUCLE
+  Root motion ........... RM-NONE
+  Couche AnimationTree .. L0
+  Priorite .............. 6 — locomotion de fond (bande 0-19, bareme 0.05)
+  Poids compresse cible . ~264 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      jambes completes, pelvis, spine_01-03, bras contrebalances, IK de pied
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  CAPITAINE ORVAL TALLEC — 44 ans, ancien officier du port.
+
+  Il est LOURD et il ne se leve pas. Dans toute la scene S3 il reste assis
+  jusqu'a « Non. C'est ton excuse. » : le fait qu'il se leve enfin est
+  l'evenement de la scene. Il parle LENTEMENT et il finit toujours ses
+  phrases. Il ne s'interrompt jamais. Voix la plus grave du casting, on ne
+  lui demande jamais de crier. Gestes : T1 deux coups secs sur la prothese,
+  T2 il s'assoit toujours de travers.
+
+  Rig et costume :
+      uniforme sans insignes (les trous restent), prothese de bras droit en
+      bois et laiton : 12 os RIGIDES, contraintes strictes, JAMAIS de
+      deformation
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  accoude a une rambarde du Marche, regardant la Maree en bas. Position de
+  veille. Utilise dans les scenes d'exploration libre de S3 : le joueur peut
+  le trouver la.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Cyclage [OBL 0.03] : la frame 0 et la frame 360 sont identiques
+  a 0.001 pres. Verifie par `tools/loop_check.py`, qui echoue le
+  build en cas de saut.
+
+  Evenements de timeline :
+      FOOTSTEP_L / FOOTSTEP_R aux poses de pied (son matiere 13.28 +
+      haptique) · CLOTH_RUSTLE · RIG_CLINK selon la charge
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- transition de demarrage correspondante ; -> autre vitesse du
+      BlendSpace2D, ou transition d'arret
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · cyclage frame 0 == frame 360 (tolerance 0.001)
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-389
+===============================================================================

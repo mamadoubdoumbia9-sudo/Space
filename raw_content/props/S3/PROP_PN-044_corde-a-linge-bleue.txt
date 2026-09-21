@@ -1,0 +1,117 @@
+===============================================================================
+PN-044 — LA CORDE A LINGE BLEUE
+===============================================================================
+Asset : SM_S3_Corde_Linge_Bleue · S3, entre deux facades, au-dessus de la
+passerelle du niveau 2 · ~02:19 · PORTEUR D'ECHO E09 · LOD0 900 tris
+
+§ 1 — CE QU'ON VOIT
+Une corde a linge tendue entre deux fenetres, d'un immeuble a l'autre, au-
+dessus du vide, sur 11 metres. Elle passe a 2,80 m au-dessus de la
+passerelle : le joueur marche dessous.
+C'est une poulie : la corde fait une boucle, avec une poulie de bois a
+chaque extremite. On etend sans sortir, en tirant.
+La corde est bleue. Une corde de nylon bleu vif, decoloree par trois ans de
+lumiere en un bleu pale et laiteux, mais toujours bleue.
+Il n'y a pas de linge dessus. Il y a QUARANTE-SEPT PINCES A LINGE.
+Toutes fermees. Toutes sur la corde. Reparties de facon irreguliere : par
+paquets de trois, de cinq, de huit, avec de grands vides entre.
+La corde a pris le poids : elle fait une chainette prononcee, 40 cm de
+fleche au centre.
+Et a un endroit, au milieu, entre deux paquets de pinces : une seule
+chaussette d'enfant, bleue elle aussi, tenue par deux pinces.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 900 (corde 11 m en spline 200 tris + 47 pinces a 12 tris + 2 poulies).
+[OBL] Les 47 pinces sont individuellement placees a la main. Pas de
+distribution aleatoire, pas de scatter. Les paquets doivent se lire : 3, 5,
+8, 2, 6, 4, 9, 3, 7. Total 47.
+La chainette : calculee (cosh), pas dessinee a l'oeil.
+Anim : PROP-751 — la corde oscille verticalement de 6 cm, 0,18 Hz, avec une
+propagation de l'onde d'une extremite a l'autre (0,9 s de traversee).
+[OBL] Les pinces suivent la corde et tournent legerement. Elles ne
+s'entrechoquent pas : elles sont trop espacees.
+La chaussette : mesh sculpte, 80 tris, raidie, oscillation propre de 2 cm
+dephasee de la corde.
+Shader `nylon_faded` + `wood_pin_grey`.
+Collision : aucune. Le joueur passe dessous.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a rentre son linge et a laisse les pinces.
+Les 47 pinces disent la quantite : c'etait une grosse lessive, une famille,
+ou une femme qui lavait pour d'autres.
+Les vides entre les paquets disent les pieces enlevees une par une.
+La chaussette d'enfant, oubliee, seule, entre deux paquets.
+Le geste humain : rentrer le linge en le decrochant de gauche a droite, en
+laissant les pinces sur la corde pour la prochaine fois.
+[NAR] Il n'y avait pas de prochaine fois.
+
+§ 4 — ECHO
+ECHO E09 — « La corde » — 26 secondes, mode A.
+[OBL] Particularite : l'Echo ne se declenche PAS sur la corde. Il se
+declenche a la FENETRE, sur la passerelle, a l'endroit ou une silhouette
+pourrait se tenir pour tirer la corde. Le joueur doit se placer sous la
+fenetre de gauche, a 2 m du mur.
+Deroulement : une silhouette apparait a la fenetre du premier etage, buste
+seulement, penchee au-dessus du vide. Elle tire la corde vers elle.
+Du linge apparait : il defile. Six pieces, de droite a gauche, qui
+franchissent les 11 m et arrivent a la fenetre. Elle les decroche une par
+une et les rentre.
+Elle en decroche cinq. La sixieme, elle ne la prend pas : elle la laisse
+passer et la corde continue.
+Elle regarde la sixieme piece s'eloigner. Trois secondes.
+Puis elle retire sa main de la corde et rentre.
+[OBL] La sixieme piece est la chaussette d'enfant. Elle est encore la au
+present.
+[OBL] Elle ne l'oublie pas. Elle la laisse. Le joueur ne saura jamais
+pourquoi. Aucune explication dans les sept lettres.
+Musique : NEANT. [OBL] Le seul son est celui des poulies.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+Le joueur passe DESSOUS. A 2,80 m au-dessus de sa tete, 11 m de corde
+bleue avec 47 pinces, dans un ciel blanc, entre deux facades sombres.
+[ART] C'est le plan le plus graphique du chapitre : une ligne horizontale
+ponctuee, sur fond de vide. Contre-plongee totale.
+La corde bleue est la seule couleur froide saturee de S3. Elle repond, a
+40 m et 11 minutes d'intervalle, a l'ambre de la boite aux lettres (PN-041).
+[OBL] Les deux ne sont jamais dans le meme cadre.
+Le declencheur d'Echo est sous la FENETRE, pas sous la corde : il faut
+quitter le centre de la passerelle et aller contre le mur. 45 % des joueurs
+ne le trouveront pas.
+
+§ 6 — AUDIO
+SFX(pulley_wood_squeal) : les poulies, sur deux notes (une par poulie, a
+un demi-ton d'ecart), quand la corde bouge au vent. Toutes les 20-40 s.
+C'est un son ordinaire, presque agreable, celui d'une rue habitee.
+[OBL] C'est le son le plus « normal » du chapitre. Dans une ville morte, on
+entend une corde a linge grincer. C'est exactement le meme son que dans
+n'importe quelle rue vivante. Rien n'est plus faux.
+Pendant E09 : les poulies tournent en continu pendant 14 s. Le tissu
+mouille qui frotte. Les pinces qui claquent au decrochage (5 fois).
+Zero voix, zero musique.
+Apres : les poulies grincent une derniere fois, 2 s apres la fin, et se
+taisent 30 s.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre de tirer la corde · decrocher la chaussette ·
+faire tomber une pince · montrer le visage · expliquer la sixieme piece ·
+compter autrement que 47 · ajouter de la musique · ajouter du linge au
+present · placer PN-041 et PN-044 dans le meme cadre · rendre E09 rejouable
+· signaler le declencheur.
+
+§ 8 — LIENS
+PN-019 (le panier de linge, S1) : la meme lessive interrompue, deux heures
+plus tot, sans Echo. Ici, avec. Le joueur qui se souvient de la cour seche
+de S1 recoit enfin ce qu'on lui avait refuse — et ce n'est pas un
+soulagement.
+PN-007, PN-014, PN-063 (les enfants absents).
+[THEME] LE TRAVAIL INTERROMPU. [THEME] LES ENFANTS ABSENTS.
+
+§ 9 — DOD
+[ ] 47 pinces placees a la main : 3, 5, 8, 2, 6, 4, 9, 3, 7
+[ ] Chainette calculee (cosh), fleche de 40 cm
+[ ] Onde de 0,9 s de propagation d'un bout a l'autre
+[ ] Declencheur sous la fenetre, pas sous la corde ; decouverte ~55 %
+[ ] E09 : 6 pieces, 5 decrochees, la 6e laissee passer, 3 s de regard
+[ ] Zero musique, zero voix ; poulies sur deux notes a un demi-ton
+[ ] Jamais dans le meme cadre que PN-041

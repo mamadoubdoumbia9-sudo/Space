@@ -1,0 +1,179 @@
+===============================================================================
+DLG · S5 · D02 — SOL ETAIT DEJA LA : « PAR EN DESSOUS »
+37 entrees, toutes S5. SOL 22 · LOH 15. Contribution : 37.
+[NAR] Sol avait prevenu deux fois en S3 (S3_SOL_L415, S3_SOL_L598).
+[OBL] Si le joueur a pris la branche [3] du CHOIX 10 (« Tu peux pas
+venir »), Sol est la QUAND MEME, et ne fait aucune allusion au refus.
+===============================================================================
+
+--- LE NOIR DE SOL --------------------------------------------------------------------
+
+[OBL] Sol etait assise dans le noir complet. Pas de lanterne, pas de
+bougie, rien. [OBL] Aucun personnage ne demandera jamais comment iel
+supporte ca, et Sol ne l'expliquera jamais. La reponse est evidente et
+elle n'est jamais dite : iel vit ici.
+
+[OBL] Sol est pieds nus. Dans un conduit. Avec de l'eau froide. Le jeu
+le montre et ne le commente pas. Aucune ligne de Lohen sur les pieds nus
+de Sol de toute la sequence. Une seule, en S8, et elle arrive trop tard.
+
+--- LES 36 LIGNES ------------------------------------------------------------------------
+
+    [S5_SOL_L031]  SOL · 1,2 s · plat · p0,8
+        « T'as mis longtemps. »
+
+    [S5_LOH_L032]  LOHEN · 1,0 s · surpris · p0,6
+        « Sol. »
+
+    [S5_SOL_L033]  SOL · 1,8 s · plat · p0,7
+        « J'ai dit par en dessous. Deux fois. »
+
+    [S5_LOH_L034]  LOHEN · 1,4 s · plat · p0,9
+        « J'avais pas compris. »
+
+    [S5_SOL_L035]  SOL · 2,2 s · sec · p0,8
+        « J'avais compris que t'avais pas compris. »
+
+    [S5_LOH_L036]  LOHEN · 1,6 s · plat · p1,0
+        « Tu es dans le noir depuis combien de temps ? »
+
+    [S5_SOL_L037]  SOL · 1,0 s · plat · p1,2
+        « Quoi ? »
+        dir : [OBL] iel ne comprend pas la question. Pour Sol, ce n'est
+              pas « etre dans le noir », c'est « etre ». [OBL] Lohen ne
+              reformule pas. Il laisse tomber. C'est la meilleure chose
+              qu'il fait de la sequence.
+
+    [S5_LOH_L038]  LOHEN · 1,2 s · plat · p0,9
+        « Rien. »
+
+    [S5_SOL_L039]  SOL · 2,4 s · plat · p0,7
+        « T'as une lanterne. C'est bien, ca. »
+
+    [S5_LOH_L040]  LOHEN · 1,8 s · plat · p0,8
+        « Elle etait accrochee a un clou, a l'entree. »
+
+    [S5_SOL_L041]  SOL · 1,4 s · plat · p1,1
+        « Ah bon. »
+        dir : [OBL][NAR] C'EST SOL QUI L'A ACCROCHEE. Iel ment tres
+              mal. [OBL] Aucune option pour insister. Aucun personnage
+              ne le confirmera jamais. Le joueur sait. Lohen, non.
+
+    [S5_LOH_L042]  LOHEN · 1,6 s · plat · p0,9
+        « Tu manges quoi ? »
+
+    [S5_SOL_L043]  SOL · 1,2 s · plat · p0,8
+        « Je sais pas. »
+
+    [S5_LOH_L044]  LOHEN · 1,0 s · plat · p1,0
+        « Tu sais pas ? »
+
+    [S5_SOL_L045]  SOL · 2,0 s · plat · p0,9
+        « C'est bon, par contre. »
+        dir : [OBL] iel en tend un morceau. [OBL] Le joueur peut
+              accepter ou refuser (pas un choix formel : une
+              interaction de 3 s qui expire). 58 % acceptent.
+              [OBL] Si Lohen accepte : il mange, il ne commente pas, et
+              Sol ne commente pas non plus. Aucune ligne. C'est le
+              deuxieme geste gratuit du chapitre apres la caisse de
+              Pallas en S1.
+
+    [S5_LOH_L046]  LOHEN · 1,4 s · plat · p1,2
+        « Tu connais le chemin ? »
+
+    [S5_SOL_L047]  SOL · 1,0 s · plat · p0,7
+        « Oui. »
+
+    [S5_LOH_L048]  LOHEN · 1,2 s · plat · p0,9
+        « Tu me le montres ? »
+
+    [S5_SOL_L049]  SOL · 2,6 s · sec · p1,1
+        « Je marche devant et tu suis. C'est pas te le montrer, c'est
+          te le faire. »
+
+    [S5_LOH_L050]  LOHEN · 1,0 s · plat · p0,8
+        « D'accord. »
+
+    [S5_SOL_L051]  SOL · 2,2 s · plat · p0,9
+        « Et tu tiens la lanterne en haut, sinon je vois rien devant. »
+        dir : [OBL] deuxieme mecanique de la sequence donnee par un
+              enfant. Tenir la lanterne haut eclaire Sol ; la tenir bas
+              eclaire les pieds de Lohen. Le joueur choisit en continu,
+              sans interface. [OBL] Si la lanterne est basse plus de
+              20 s, Sol ralentit. Iel ne se plaint pas.
+
+    [S5_SOL_L052]  SOL · 1,6 s · plat · p1,0
+        « Trois passages ou tu vas devoir la poser. »
+
+    [S5_LOH_L053]  LOHEN · 1,2 s · plat · p0,9
+        « La poser ? »
+
+    [S5_SOL_L054]  SOL · 2,4 s · plat · p1,2
+        « Pour grimper. Faut les deux mains. »
+
+    [S5_LOH_L055]  LOHEN · 1,8 s · plat · p1,0
+        « Et le noir ? »
+
+    [S5_SOL_L056]  SOL · 1,4 s · plat · p1,4
+        « Bah oui. »
+        dir : [OBL][NAR] TOUT LE DESIGN DE LA SEQUENCE, en deux mots,
+              par un enfant de treize ans qui trouve la question idiote.
+              09.14 : « trois passages ou il faut poser la lanterne
+              pour grimper, et donc traverser 8 m dans le noir. Ces 8 m
+              durent une heure. »
+
+    [S5_SOL_L057]  SOL · 2,0 s · plat · p0,8
+        « Moi je les fais tous les jours, les huit metres. »
+
+    [S5_LOH_L058]  LOHEN · 1,6 s · plat · p1,1
+        « Dans le noir. »
+
+    [S5_SOL_L059]  SOL · 1,2 s · plat · p0,9
+        « Bah oui. »
+
+    [S5_LOH_L060]  LOHEN · 2,2 s · plat · p1,3
+        « Tu as treize ans. »
+
+    [S5_SOL_L061]  SOL · 2,8 s · sec · p1,6
+        « Et toi t'as trente ans et t'as peur d'un tuyau. On a chacun
+          nos trucs. »
+        dir : [OBL][NAR] Sol se trompe encore sur l'age (27, cf.
+              S3_SOL_L037 et S3_LOH_L605). [OBL] Lohen ne corrige pas.
+              Il ne corrigera jamais personne sur son age de tout le
+              chapitre. [OBL] La reponse est parfaite et aucune musique
+              ne la souligne.
+
+    [S5_LOH_L062]  LOHEN · 1,0 s · plat · p1,2
+        « C'est juste. »
+
+    [S5_SOL_L063]  SOL · 1,8 s · plat · p0,8
+        « Bon. On y va ? »
+
+    [S5_LOH_L064]  LOHEN · 1,2 s · plat · p0,9
+        « On y va. »
+
+    [S5_SOL_L065]  SOL · 2,4 s · plat · p1,0
+        « Tu parles pas beaucoup, toi. »
+
+    [S5_LOH_L066]  LOHEN · 1,6 s · plat · p1,2
+        « Toi si. »
+
+    [S5_SOL_L067]  SOL · 3,0 s · plat · p0,0
+        « C'est parce que j'ai personne a qui parler, alors quand y'a
+          quelqu'un, je rattrape. »
+        dir : [OBL] derniere ligne du document. [OBL] Direction : dit
+              gaiement. Absolument sans plainte. Le comedien enfant ne
+              doit pas « jouer la solitude ». C'est une explication
+              logistique.
+              [OBL] Lohen ne repond pas. Aucune ligne de reponse
+              n'existe. Ils se mettent en marche.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] Sol est la meme si le joueur l'a refusee en S3, sans allusion
+[ ] Aucune ligne sur les pieds nus de Sol avant S8
+[ ] L041 : Sol ment sur la lanterne, jamais confirme
+[ ] L045 : partager la nourriture, aucune ligne, 58 %
+[ ] L051 : lanterne haute/basse, mecanique sans interface
+[ ] L061 : erreur d'age conservee, jamais corrigee
+[ ] L067 : dit gaiement, aucune plainte, aucune reponse

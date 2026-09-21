@@ -1,0 +1,116 @@
+===============================================================================
+SYSTEME · LES LIGNES D'ABANDON — QUAND LE JOUEUR S'EN VA PENDANT QU'ON
+LUI PARLE
+Annexe C. Source unique du mecanisme. Reference INDEX § 8.02.
+===============================================================================
+
+--- 1. LE PROBLEME -------------------------------------------------------------------------------
+
+Dans tous les jeux a dialogue libre, le joueur s'eloigne pendant qu'un
+PNJ parle. La plupart des jeux traitent ca de trois facons :
+  · le PNJ continue dans le vide (le plus courant, et le plus faux) ;
+  · le dialogue se coupe net (brutal, et le joueur ne saura jamais) ;
+  · le jeu verrouille le joueur (le pire : il punit la curiosite).
+
+[OBL] AUCUNE DES TROIS N'EST UTILISEE ICI.
+
+--- 2. LA REGLE GENERALE [OBL] ---------------------------------------------------------------------
+
+2.01 [OBL] Le joueur peut TOUJOURS partir. Aucun dialogue du chapitre 1
+     ne verrouille les commandes, sauf les 6 s post-lettre (19.10) et
+     les 22 s de dissolution de E21.
+
+2.02 [OBL] DECLENCHEUR D'ABANDON : le joueur s'eloigne de plus de 15 m
+     pendant qu'un PNJ parle, OU change de piece, OU interrompt par une
+     action physique (grappin, saut, course).
+
+2.03 [OBL] CE QUI SE PASSE IMMEDIATEMENT : la ligne en cours se TERMINE
+     (jamais de coupure au milieu d'un mot), puis le PNJ se tait.
+     [OBL] Le fondu de voix dure 1,4 s et suit la distance, pas un
+     timer.
+
+2.04 [OBL] CE QUI SE PASSE SI LE JOUEUR REVIENT : le PNJ reprend a la
+     ligne suivante, jamais a celle qu'il a perdue. [OBL] Le contenu
+     saute est PERDU DEFINITIVEMENT. Aucun rattrapage, aucun journal,
+     aucun « il voulait vous dire ».
+
+2.05 [OBL] AUCUN PNJ NE REPROCHE JAMAIS UN ABANDON. Pas une ligne, pas
+     un soupir, pas une animation de decouragement. Job CI
+     `no-abandon-guilt`.
+
+--- 3. LES QUATRE COMPORTEMENTS PARTICULIERS [OBL] -------------------------------------------------
+
+3.01 PALLAS (S1, S3, S7) — ELLE S'ARRETE NET ET REPREND AILLEURS.
+     Pallas est relayeuse : elle a du travail. [OBL] Si le joueur
+     s'eloigne, elle ne l'attend pas : elle part vers son propre poste
+     et le dialogue restant se declenche a la rencontre suivante, dans
+     une autre sequence. [OBL] Consequence : un joueur presse en S1
+     entend en S3 ce qu'il aurait du entendre en S1, sans savoir qu'il
+     l'a deplace. [OBL] Documents : S1/D09, S3/D17.
+
+3.02 MIREILLE (S4) — L'APPAUVRISSEMENT.
+     [OBL] Seuil : 3 abandons. [OBL] Effet : 21 de ses lignes sont
+     remplacees par des variantes courtes, definitivement, sans
+     avertissement. [OBL] Elle ne se tait pas : elle devient breve,
+     comme quelqu'un qui a compris qu'on n'ecoute pas.
+     [OBL] `S4_MIR_L140` (« Toutes les phrases d'amour sont courtes,
+     jeune homme. ») DISPARAIT dans la variante courte `L399`.
+     [OBL] Une seule ligne survit toujours : `S4_MIR_L192`
+     (« Quand vous le trouverez, ne lisez pas tout de suite. ») →
+     `L409`. [OBL] Le debut de `L389` n'existe dans aucun fichier :
+     job CI `mireille-truncated` verifie que la phrase est bien
+     amputee a la source, pas coupee au mixage.
+     [OBL] Document : S4/D14.
+
+3.03 SOL (S5) — L'INVERSE.
+     [OBL] Seuil : 4 abandons. [OBL] Effet : Sol PARLE PLUS. Debit
+     +8 %, pauses inter-lignes de 1,2 s a 0,6 s, et 12 lignes
+     supplementaires entrent dans le pool (`S5_SOL_L401` a `L412`).
+     [OBL] Elles sont jouees PLUS VITE ET PLUS GAIEMENT. Interdit de
+     les jouer tristement. [OBL] Un enfant qui sent qu'on s'en va parle
+     plus vite pour retenir la personne.
+     [OBL] Inversement, un joueur qui reste (0 ou 1 abandon) debloque 7
+     lignes que les autres n'entendront jamais (`L413` a `L419`), plus
+     lentes. [OBL] Document : S5/D10.
+
+3.04 ESTEBAN (S6) — AUCUNE LIGNE D'ABANDON.
+     [OBL] On ne s'eloigne pas d'un Echo : E21 suit le joueur dans
+     toute la salle, et Esteban SUIT sans jamais guider. [OBL] Si le
+     joueur s'immobilise, Esteban s'assoit a cote de lui.
+     [OBL] Il est structurellement impossible d'abandonner Esteban.
+     [OBL] C'est le seul personnage du jeu dont le joueur ne peut pas
+     se debarrasser, et c'est le seul qui soit deja parti.
+     [OBL] Jamais dit.
+
+--- 4. LES AUTRES PERSONNAGES ------------------------------------------------------------------
+
+     TALLEC — se tait, ne reprend jamais. Le contenu est perdu. Il ne
+     le mentionne pas a la rencontre suivante. [OBL] Un contremaitre ne
+     repete pas.
+     THEA, BREL, GARRIC, NIELS, WENNA, HANNE, VANDER, CARO, ODILE —
+     comportement standard (2.03 / 2.04). [OBL] Aucun n'a de variante.
+     LE VERRIER — muet, sans objet.
+     LES ECHOS — un Echo abandonne se DISSOUT et n'est PAS relancable
+     (regle generale des 31). [OBL] Seule exception declaree : E13
+     (Mireille vivante, S4), interruptible et non relancable elle
+     aussi ; 22 % des joueurs retirent la main.
+
+--- 5. CE QUI EST INTERDIT [OBL] -------------------------------------------------------------------
+
+  · un marqueur signalant un dialogue inacheve
+  · une option « reprendre la conversation »
+  · un journal des conversations
+  · un succes lie a l'ecoute complete
+  · un rapport de fin de chapitre mentionnant du contenu manque
+    (job CI `no-missed-content-report`)
+  · toute ligne ou toute animation faisant sentir au joueur qu'il a mal
+    agi en partant
+
+--- 6. VERIFICATION --------------------------------------------------------------------------------
+
+    Lignes d'abandon ecrites : S1 6 · S3 5 (+21 suffixes) · S4 24 ·
+    S5 19 (12 + 7) = documents S1/D09, S3/D17, S4/D14, S5/D10.
+    Toutes sont deja comptees dans les totaux de leurs sequences.
+    [OBL] Ce document n'ajoute aucune ligne au corpus.
+
+    tools/audit_abandon.py --seuils mireille=3 sol=4 --no-guilt

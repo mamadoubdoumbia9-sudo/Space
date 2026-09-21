@@ -1,0 +1,107 @@
+===============================================================================
+PN-092 — LE CONDUIT D'AERATION BOUCHE
+===============================================================================
+Asset : SM_S5_Conduit_Bouche · S5, embranchement nord du niveau -1 ·
+~04:08 · prop narratif · pas d'Echo · LOD0 3 700 tris
+
+§ 1 — CE QU'ON VOIT
+Un embranchement. A gauche, le conduit continue. A droite, un conduit de
+meme taille part vers le nord.
+Il est BOUCHE. A 2 metres de l'entree, il est ferme par un mur.
+Ce n'est pas un effondrement. C'est une MACONNERIE. Quelqu'un a monte un
+mur de briques dans le conduit, sur toute la section, du sol au plafond.
+Le travail est correct : les briques sont posees en quinconce, le mortier
+est plein, les joints sont tires.
+Ce n'est pas d'origine : le mortier est plus clair que celui du conduit, et
+les briques sont depareillees — elles viennent d'ailleurs.
+Au centre du mur, a 1,50 m, il y a un trou. Un seul. Une brique manquante.
+Un rectangle noir de 22 x 11 cm.
+[OBL] Par ce trou, on ne voit rien. C'est noir. La lampe portee eclaire
+40 cm de conduit derriere le mur, et puis plus rien : ca continue.
+Le trou n'est pas un defaut. Les bords sont nets. La brique n'a jamais ete
+posee.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 700 (mur 1 400 + conduit 2 300).
+[OBL] Le mur est monte en 187 briques modelisees, avec 14 modules de
+4 briques et un placement en quinconce reel. Les joints sont en geometrie
+(creux de 4 mm).
+Le trou : les 4 briques adjacentes sont des sculpts individuels avec les
+bords de mortier propres.
+[OBL] Derriere le trou : 3 m de conduit reellement modelises, non
+eclaires, avec du brouillard volumetrique local (densite 0,4). La lampe y
+penetre de 40 cm et s'y perd.
+Il n'y a rien dedans. [OBL] Aucun objet, aucune geometrie, aucun son,
+aucune surprise. Trois metres de conduit vide, puis un plan de fin de
+geometrie que le joueur ne verra jamais.
+Collision : mur plein. Le trou n'est pas traversable (22 x 11 cm).
+
+§ 3 — CE QUE CA DIT
+Quelqu'un a mure un conduit.
+Le geste humain : monter un mur en quinconce, proprement, avec des briques
+recuperees, dans un souterrain.
+[OBL] Pourquoi : jamais explique. Pour empecher d'entrer ? Pour empecher de
+sortir ? Pour couper un courant d'air ? Pour separer ?
+La brique manquante au centre, a hauteur de regard : [OBL] volontaire. On
+a laisse un trou pour regarder.
+[NAR] Ce qui veut dire que celui qui a mure voulait pouvoir verifier.
+[ART] Le joueur va coller son oeil au trou. C'est irresistible. Il y a un
+trou dans un mur dans un souterrain.
+Il ne verra rien. Il essaiera deux ou trois fois.
+
+§ 4 — ECHO
+NEANT. Geste d'apres (PN-015).
+[OBL] Le prompt d'Echo n'apparait pas. Mais le joueur peut approcher la
+camera du trou (il n'y a pas de commande « regarder par le trou » : il
+approche simplement la tete, comme partout ailleurs dans le jeu).
+
+§ 5 — MISE EN SCENE
+[OBL] L'embranchement est un vrai choix apparent : deux conduits identiques.
+Le joueur choisit. S'il va a droite, il trouve un mur apres 2 m.
+[ART] C'est le seul faux embranchement de la sequence. Il coute 8 secondes.
+Le trou est a 1,50 m, exactement a hauteur de regard.
+[OBL] Aucune signalisation, aucun prompt, aucun son, aucune musique.
+Quand le joueur approche la lampe du trou, la lumiere entre et revele
+40 cm de brique et de sol. [OBL] Le sol derriere le mur est PROPRE. Il n'y
+a pas de gravats, pas de poussiere accumulee, pas de toiles.
+[ART] Ce detail-la est le vrai contenu du prop : ce n'est pas abandonne
+derriere.
+[OBL] Aucune conclusion n'est fournie, jamais.
+
+§ 6 — AUDIO
+SFX(air_draft_hole) : il y a un COURANT D'AIR par le trou. Un souffle fin,
+continu, tres discret, -30 dB. [OBL] Il sort, il ne rentre pas.
+[ART] Ce qui veut dire qu'il y a une ouverture a l'autre bout. Le conduit
+mure debouche quelque part. Le joueur ne saura jamais ou.
+[OBL] Aucun autre son. Pas de voix, pas de pas, pas de goutte, pas de
+respiration, pas de grattement. Rien, jamais, quelle que soit la duree
+d'ecoute. Un joueur qui reste 10 minutes devant le trou n'entendra que le
+souffle.
+Aucune musique.
+
+§ 7 — INTERDICTIONS
+Interdit de : casser le mur · passer par le trou · reveler ce qu'il y a
+derriere · ajouter un son derriere · ajouter un oeil, une main, un mouvement
+· expliquer qui a mure · dater la maconnerie · faire commenter par Sol,
+Tallec ou Mireille · en faire une enigme · le resoudre dans les six lettres
+suivantes · ajouter un deuxieme mur de ce type.
+[OBL] Interdiction absolue de tout evenement derriere ce mur, dans toutes
+les circonstances, y compris comme easter egg.
+
+§ 8 — LIENS
+PN-051 (la porte repeinte tous les jours, S3) : l'autre acces murre et
+jamais ouvert. [OBL] Aucun lien.
+PN-098 (le passage trop etroit, a 200 m dans les conduits).
+PN-080 (le tiroir ferme a cle, S4).
+[OBL] Quatre refus definitifs dans le chapitre : PN-015, PN-051, PN-080,
+PN-092. Aucun ne s'ouvre jamais.
+[THEME] LE REFUS. [THEME] CE QU'ON NE SAURA PAS.
+
+§ 9 — DOD
+[ ] 187 briques modelisees, quinconce reel, joints en creux de 4 mm
+[ ] Trou de 22 x 11 cm a 1,50 m, bords de mortier nets, jamais pose
+[ ] 3 m de conduit reels derriere, brouillard local, lampe penetrant 40 cm
+[ ] Sol propre derriere le mur
+[ ] Courant d'air sortant, -30 dB, unique son
+[ ] Zero evenement derriere, en toutes circonstances
+[ ] Faux embranchement coutant 8 secondes

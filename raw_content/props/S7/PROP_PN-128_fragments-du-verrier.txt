@@ -1,0 +1,128 @@
+===============================================================================
+PN-128 — LES FRAGMENTS DU VERRIER
+===============================================================================
+Asset : SM_S7_Fragments_Verrier · S7, jetee du Phare, apres le pont ·
+~05:59 · prop narratif · pas d'Echo · DERNIER PROP DE S7 · LOD0 4 100 tris
+
+§ 1 — CE QU'ON VOIT
+De l'autre cote du pont, sur la jetee, le joueur trouve la fin de la
+rencontre avec le Verrier.
+[OBL] LA RENCONTRE A DEJA EU LIEU. Elle se passe sur la jetee, entre
+PN-127 et ici, et elle dure 8 minutes (sequence VER-SCE-081 a 094).
+[OBL] Cette fiche ne decrit PAS la rencontre. Elle decrit ce qui reste
+apres.
+Sur les dalles de la jetee, sur une zone de 9 x 5 m, il y a des fragments.
+Du verre. Des centaines de morceaux, de 2 a 40 cm, translucides gris-vert,
+epais, avec des bulles.
+[OBL] C'est la meme matiere que la coulee (PN-116).
+Ils sont TIEDES. [OBL] La pluie qui tombe dessus s'evapore. Il y a de la
+vapeur, partout, sur 9 metres, qui monte a 40 cm et se dissipe.
+Ce n'est pas un tas. Ils sont disperses en etoile, depuis un centre.
+Au centre, il y a une forme.
+[OBL] Elle est humaine. Elle mesure 1,80 m. Elle est allongee sur le cote,
+genoux replies.
+Elle est en verre. Elle est intacte. Elle n'a pas eclate.
+[OBL] Et son visage est intact. C'est un visage d'homme de 50 ans.
+Les yeux sont fermes.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 4 100 (340 fragments 2 200 + la forme centrale 1 900).
+[OBL] La forme centrale est un sculpt dedie, anatomique, en position
+foetale ouverte. [OBL] Le visage est le SEUL element detaille : il est
+sculpte d'apres un modele vivant, avec les rides, les pores, les cils.
+[OBL] Tout le reste du corps est LISSE, sans detail, presque abstrait.
+Le contraste est le sujet : un visage humain parfait sur une forme de verre
+sans detail.
+Shader `molten_glass_cooling` : la meme base que PN-116, plus :
+  — une temperature residuelle (emissive rouge tres faible, 0,04, dans les
+    parties epaisses, visible seulement dans le noir)
+  — la vapeur (240 particules, evaporation reelle au contact de la pluie)
+[OBL] La vapeur est le budget principal : 0,9 ms.
+Collision : aucune. [OBL] Le joueur ne peut pas toucher. Il n'y a pas de
+prompt. Il peut marcher autour, pas dessus.
+
+§ 3 — CE QUE CA DIT
+[OBL] Ce qui s'est passe pendant les 8 minutes precedentes n'est PAS
+resume ici et ne doit jamais l'etre.
+Rappels de canon obligatoires (BLOC 12, ANIM_MANIFEST) :
+  — le Verrier est Anselme Roux, muet, 2,6 m, 240 os dont 74 de coulee
+  — son visage humain est intact
+  — poing humain = parable, coulee = pas parable, jamais enonce
+  — phase 3 : paume VERS LE HAUT, il s'arrete si le joueur arrete 4 s
+  — ~8 % des joueurs trouvent la voie non violente
+  — [OBL] AUCUNE RECOMPENSE DIFFERENTE. Les deux issues menent ici.
+[OBL] Que le joueur l'ait arrete par la violence ou par l'immobilite, ce
+prop est IDENTIQUE. Meme position, memes fragments, meme visage, meme
+vapeur.
+[OBL] Le jeu ne felicite pas. Le jeu ne punit pas. Il n'y a pas de
+« bonne fin » de la rencontre.
+[ART] C'est la decision de design la plus severe du chapitre.
+Le geste humain : les yeux fermes.
+
+§ 4 — ECHO
+NEANT. [OBL] C'est du verre (regle PN-116 : le verre ne garde rien).
+[OBL] Et c'est un geste d'apres, et c'est un corps, et le chapitre n'a
+jamais mis d'Echo sur un corps parce qu'il n'y a jamais eu de corps.
+[OBL] C'est le premier et le dernier corps du chapitre 1.
+Aucun prompt. Aucun son. Aucune musique.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur reste. Il n'y a rien a faire, rien a prendre, rien a
+declencher. Il peut partir immediatement.
+La sortie est a 30 m : la premiere marche du Phare (PN-129).
+[OBL] S'il reste : rien ne se passe. Pas de musique, pas de camera, pas
+d'animation de Lohen, pas de dialogue, pas de temps limite.
+[OBL] Lohen ne s'agenouille pas. Il ne ferme pas les yeux du Verrier (ils
+sont deja fermes). Il ne dit rien. Il ne le touche pas.
+[ART] Il regarde, et il va au Phare. C'est tout ce que le jeu lui permet.
+La lumiere : il fait nuit et il pleut. La seule lumiere est l'emissive
+residuelle de 0,04 dans les fragments les plus epais, et le reflet de la
+Maree.
+[OBL] Le visage est eclaire par en dessous, par un fragment tiede de 30 cm
+pose a 40 cm de sa joue.
+[OBL] Ce fragment est place a la main. Il est la seule mise en scene du
+prop.
+
+§ 6 — AUDIO
+SFX(glass_cooling_tick) : le verre qui refroidit. [OBL] Des craquements
+fins, irreguliers, aigus, sur toute la zone. Toutes les 2 a 9 secondes.
+[ART] Ca continue de refroidir. Pendant des heures. Ca ne s'arrete pas
+parce que le joueur regarde.
+SFX(rain_evaporate) : la pluie qui s'evapore au contact. Un grésillement
+fin, continu, present sur les 9 m.
+[OBL] AUCUNE MUSIQUE. Aucune. Ni pendant, ni apres, ni au depart.
+[OBL] M24 « Le Phare » ne commence qu'a PN-129, a 30 m.
+La pluie sur la Maree (PN-122) continue a -8 dB.
+
+§ 7 — INTERDICTIONS
+Interdit de : toucher · agenouiller Lohen · faire dire quoi que ce soit ·
+ajouter de la musique · ajouter un plan, un ralenti, une camera · ouvrir
+les yeux · abimer le visage · faire eclater la forme · differencier l'issue
+violente de l'issue non violente · ajouter un succes · ajouter une entree
+de journal · faire commenter par Sol, Tallec ou Mireille [OBL — aucun des
+trois ne reapparait apres S7] · resoudre dans les six lettres suivantes ·
+faire revenir le Verrier.
+[OBL] Anselme Roux est mort. Il ne revient dans aucun des sept chapitres.
+
+§ 8 — LIENS
+PN-116 (la coulee : la meme matiere, six mois plus tot).
+PN-117 (l'atelier, E23 : il avait 1,82 m et une fille).
+PN-118 (la canne taille enfant).
+PN-106 (le carton d'invitation : « Musique de M. Anselme Roux, au piano »).
+PN-120 (la lettre de Mireille : « ce que vous etes devenu »).
+PN-031 (la main dans le verre, S2) : [OBL] aucun lien. Faux lien volontaire.
+Le chapitre a montre une main dans du verre a 1 h 38, et un homme de verre
+a 5 h 59, et ils n'ont rien a voir.
+[THEME] LE VERRE COMME METIER. [THEME] ZERO CORPS — et le seul.
+
+§ 9 — DOD
+[ ] 340 fragments disperses en etoile depuis un centre
+[ ] Forme centrale : corps lisse et abstrait, visage detaille d'apres modele
+[ ] Yeux fermes, jamais ouverts
+[ ] Emissive residuelle 0,04 dans les parties epaisses, visible dans le noir
+[ ] Vapeur reelle par evaporation au contact de la pluie, 240 particules
+[ ] Un fragment de 30 cm eclairant le visage par en dessous, place a la main
+[ ] Identique quelle que soit l'issue de la rencontre
+[ ] Zero musique, zero plan, zero animation, zero dialogue, zero succes
+[ ] Craquements de refroidissement continus, non lies au joueur
+[ ] 0,9 ms de vapeur, budget tenu

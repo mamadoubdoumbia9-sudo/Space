@@ -1,0 +1,121 @@
+===============================================================================
+PN-026 — LA BARRE DU CHALUTIER
+===============================================================================
+Asset : SM_S2_Barre_Timonerie · S2, poste de pilotage de L'Hirondelle ·
+~01:19 · PORTEUR D'ECHO E05 · LOD0 2 400 tris
+
+§ 1 — CE QU'ON VOIT
+La timonerie, 3 x 2,5 m, vitree sur trois cotes, inclinee a 23 degres.
+Par les vitres : le verre noir a perte de vue, la brume, et tres loin,
+Velmora, et le Phare.
+La barre est une roue de bois a dix rayons, 80 cm, vernie, avec une poignee
+de laiton sur le rayon superieur.
+Elle est tournee A FOND A TRIBORD. Butee. Le bateau gitait sur bribord et
+l'homme a la barre a mis toute la barre a tribord pour le redresser.
+Il n'a pas eu le temps. Neuf secondes.
+Le vernis de la roue est use en deux endroits : a dix heures et a deux
+heures. Exactement la ou on pose les mains. Le bois est nu, sombre, poli.
+Devant, le compas de route dans son habitacle. Il indique 047. Cap sur
+Velmora.
+Sur le montant, une paire de jumelles pendue par sa lanière. Elles pendent
+a la verticale. [ART] Elles sont le seul objet du bateau qui soit droit.
+Elles disent les 23 degres mieux que tout le reste.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 2 400 (roue 1 400 + habitacle 500 + jumelles 300 + accessoires 200).
+Les zones d'usure de la roue : masque de roughness (0,21 sur les zones
+polies, 0,58 sur le vernis) + un leger creux de 1,5 mm en geometrie. Les
+mains creusent le bois. On doit pouvoir le voir en lumiere rasante.
+Shader `wood_varnish_worn` + `brass_worn` pour la poignee.
+Les jumelles : suspendues, immobiles, alignees sur la gravite reelle — donc
+a 23° de l'axe du bateau. Aucune animation.
+Anim : PROP-734 — pendant E05, la roue TOURNE. Cf. § 4. C'est le seul
+mouvement mecanique d'un prop pendant un Echo dans tout le chapitre.
+Collision : la roue est touchable. [OBL] Elle ne tourne pas sous la main de
+Lohen. Elle est bloquee par trois ans de sel. Il peut pousser : rien.
+
+§ 3 — CE QUE CA DIT
+Un homme a essaye.
+C'est tout. C'est le prop le plus simple du chapitre et c'est le plus dur.
+La barre a fond a tribord dit qu'il a compris, qu'il a agi, qu'il a fait
+exactement ce qu'il fallait faire, et que ca n'a servi a rien.
+Le geste humain : tourner une roue de toutes ses forces.
+Les deux usures a dix heures et deux heures disent trente ans de metier.
+Le compas a 047 dit qu'il rentrait chez lui.
+[NAR] Cet homme n'est pas Esteban. Esteban etait passager. Cet homme est
+le patron de L'Hirondelle, et le jeu ne dira jamais son nom. Le joueur
+trouvera peut-etre son nom sur l'affiche des 641 (PN-003) en le deduisant
+du carnet de bord (PN-027). Rien ne l'y invite.
+
+§ 4 — ECHO
+ECHO E05 — « Toute la barre a tribord » — 19 secondes, mode A.
+Le plus court Echo du chapitre, et le plus violent.
+Deroulement : UNE silhouette, de dos, a la barre. Elle est deja la quand
+l'Echo commence — pas d'apparition, pas de fondu d'entree. Elle est la.
+Elle est immobile pendant 11 secondes. Onze secondes de dos, immobile,
+face aux vitres.
+A 11 s : elle tourne la barre. Vite. Violemment. Deux tours complets, en
+1,9 seconde. La roue reelle tourne avec elle (PROP-734), et s'arrete en
+butee avec un choc.
+A 13 s : la silhouette se PENCHE en avant, contre la barre, comme si le
+pont se derobait. Tout son corps s'incline a 23 degres.
+A 15 s : elle disparait. Pas de fondu. Elle n'est plus la, d'une image a
+l'autre.
+La roue reste en butee. Elle y etait deja avant l'Echo. Elle y est apres.
+[OBL] Pendant les 4 dernieres secondes, il ne se passe rien. Le joueur
+regarde une roue bloquee.
+Musique : NEANT pendant les 15 premieres secondes. A 15 s, exactement au
+moment de la disparition, UNE note de violoncelle, tenue 4 s, qui s'arrete
+net avec la fin de l'Echo. C'est la premiere note de M07. Le joueur l'a
+entendue pendant les 400 m d'approche. Il ne l'identifie pas consciemment.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+Le poste de pilotage est en haut, apres la cabine (ordre force, PN-024).
+Le joueur monte trois marches et entre dans une piece vitree.
+[ART] Apres 25 minutes de coursives sombres et inclinees, il debouche dans
+la lumiere blanche, avec une vue a 270 degres sur le vide.
+Et devant lui, de dos, a hauteur de mains, la roue tournee a fond.
+Aucun mouvement de camera. Aucun cadrage impose. Le prop est au centre de
+la piece et la piece est petite : il n'y a rien d'autre a regarder.
+Le Phare est visible par la vitre avant, dans l'axe du compas.
+[OBL] Apres E05, quand Lohen ressort de la timonerie, la lumiere exterieure
+a change : la brume s'est levee de 20 %. C'est la SEULE progression
+meteorologique du chapitre et elle est imperceptible sur le moment. Elle
+existe pour que la sequence 3 soit plus claire que la 2.
+
+§ 6 — AUDIO
+Hors Echo : la timonerie siffle. Un joint de vitre laisse passer le vent :
+SFX(glass_wind_whistle), continu, -25 dB, une note aigue et fine. C'est le
+seul son aigu et continu du chapitre.
+Pendant E05 : silence total pendant 11 s — [OBL] y compris le sifflement,
+qui se coupe. Le monde retient son souffle (c'est le titre du chapitre).
+A 11 s : SFX(wheel_wood_spin), deux tours, le bois qui file sous les mains.
+A 12,9 s : SFX(wheel_stop_hard), le choc en butee. Le son le plus dur de S2.
+A 15 s : la note de violoncelle.
+Apres : le sifflement revient, en 1,5 s, et le joueur s'apercoit qu'il
+l'avait oublie.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre de tourner la barre · montrer le visage de la
+silhouette · lui donner un nom · ajouter un cri · ajouter des voix · faire
+sonner une alarme · ajouter une radio · faire dire quoi que ce soit a Lohen
+· rendre E05 rejouable · allonger l'Echo · supprimer les 4 s de rien a la
+fin · jouer le motif d'Esteban · changer le cap du compas.
+
+§ 8 — LIENS
+PN-024 (les 23 degres). PN-027 (le carnet de bord, la derniere ligne a
+23h39). PN-013 (« MER BELLE. RIEN A SIGNALER. »). PN-034 (la cloche de
+brume, qu'il n'a pas eu le temps de sonner).
+PN-131 (le palier des cloches du Phare, S8) : un autre homme, un autre
+poste, et lui il a eu le temps. Il a sonne. Personne n'est venu.
+[THEME] AVOIR FAIT CE QU'IL FALLAIT.
+
+§ 9 — DOD
+[ ] Roue a fond a tribord, en butee, immobile sous la main du joueur
+[ ] Usures a 10 h et 2 h : roughness + creux de 1,5 mm en geometrie
+[ ] Jumelles a 23° de l'axe, alignees sur la gravite reelle
+[ ] E05 : 19 s, 11 s d'immobilite, 2 tours en 1,9 s, 4 s de rien a la fin
+[ ] Silence TOTAL pendant 11 s, sifflement coupe inclus
+[ ] Une seule note de violoncelle, a 15 s, identique a la 1re note de M07
+[ ] Brume levee de 20 % a la sortie, jamais signalee

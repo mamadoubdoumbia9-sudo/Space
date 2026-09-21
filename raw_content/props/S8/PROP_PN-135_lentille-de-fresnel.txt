@@ -1,0 +1,128 @@
+===============================================================================
+PN-135 — LA LENTILLE DE FRESNEL
+===============================================================================
+Asset : SM_S8_Lentille_Fresnel · S8, lanterne du Phare, 204 m · ~06:18 ·
+prop narratif · pas d'Echo · LOD0 14 600 tris
+
+§ 1 — CE QU'ON VOIT
+La lanterne. Une cage de verre et de fonte, 4 m de diametre, 5 m de haut,
+au sommet du Phare.
+Et dedans, la lentille.
+Une lentille de Fresnel de premier ordre. 2,60 m de haut, 1,80 m de
+diametre. Une cathedrale de verre.
+[OBL] Elle est composee de 1 008 prismes de cristal, montes dans une
+armature de bronze, en anneaux concentriques : des prismes droits au centre,
+des prismes catadioptriques en haut et en bas.
+Elle est INTACTE. Les 1 008. Pas un n'est casse, pas un n'est fele.
+Au centre, la lampe. Un brûleur a petrole a quatre meches concentriques.
+Il est eteint. Le reservoir est vide. Les meches sont carbonisees.
+[OBL] La lentille est PROPRE. Les 1 008 prismes ont ete essuyes.
+Pas il y a trois ans : recemment.
+Il y a un chiffon plie sur le rebord de l'armature, et une bouteille
+d'alcool a bruler, aux trois quarts pleine.
+Quelqu'un monte ici et nettoie 1 008 prismes de verre.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 14 600. [OBL] LE PROP LE PLUS CHER DU JEU.
+Les 1 008 prismes : 9 modeles (par ordre d'anneau), 1 008 instances, chacune
+avec sa position et sa rotation exactes dans l'armature.
+[OBL] Shader `fresnel_crystal` : IOR 1,52, dispersion (abbe 58), et une
+REFRACTION REELLE a travers l'epaisseur. Pas une fausse transparence.
+[OBL] Le joueur regarde a travers la lentille et le monde derriere est
+DEMULTIPLIE et DEFORME. Chaque anneau de prismes produit une image
+differente.
+[ART] C'est l'effet le plus complexe du jeu. Il faut une refraction en
+couches avec une profondeur de 3, sur 1 008 objets.
+Solution imposee : le rendu passe par 3 SubViewports de 512² (un par zone
+de prismes) + une composition dans le shader. Pas de raytracing.
+Cout : 3,1 ms. [OBL] Budget special de la sequence 8 : la lentille est le
+seul objet lourd de la scene. Tout le reste de S8 est leger.
+[OBL] Verification obligatoire sur Adreno 640 : 30 fps.
+Anim : PROP-702 — [OBL] rappel ANIM_MANIFEST : la lentille est pilotee par
+l'horloge de jeu absolue. Elle ne tourne pas (le mecanisme est arrete,
+PN-134). [OBL] Mais elle OSCILLE de 0,4 degre, tres lentement, periode
+40 secondes — le jeu dans les paliers de l'axe, sous l'effet du vent.
+
+§ 3 — CE QUE CA DIT
+Mille huit prismes de cristal, intacts, propres, au sommet d'une tour de
+212 metres, dans une ville morte.
+Le geste humain : essuyer.
+[OBL] Il faut plusieurs heures pour nettoyer 1 008 prismes. Il faut monter
+1 038 marches pour y arriver. Il faut le refaire regulierement, sinon le sel
+et la poussiere reviennent.
+[NAR] Quelqu'un vit ici. [OBL] Le joueur va le decouvrir dans quatre
+minutes, en ouvrant la porte de la chambre (PN-136).
+[OBL] Et il ne le trouvera pas.
+La lentille est propre et elle ne sert a rien. Le brûleur est vide. Il n'y
+a plus de petrole a Velmora.
+Elle est entretenue pour rien.
+
+§ 4 — ECHO
+NEANT. [OBL] Le verre ne garde rien (PN-011, PN-116).
+[ART] Mille huit prismes de cristal, et pas un souvenir. C'est la derniere
+application de la regle avant E31.
+
+§ 5 — MISE EN SCENE
+[OBL] Le joueur monte 9 barreaux depuis la salle des machines et debouche
+DANS la lanterne, a cote de la lentille.
+[ART] Apres onze minutes de noir dans un escalier de granit, il arrive dans
+une cage de verre de 4 m avec une lentille de cristal de 2,60 m.
+[OBL] Il fait nuit. Il pleut en dessous. Il est au-dessus de la couche de
+brume.
+[OBL] ET LE CIEL EST DEGAGE. [OBL] Pour la premiere et unique fois du
+chapitre, on voit des ETOILES.
+[OBL] Il n'y a pas de lune. Il y a des etoiles, une Voie lactee faible, et
+en dessous, a 60 m, une mer de brume blanche qui couvre toute Velmora et
+toute la Maree.
+[OBL] On ne voit plus la ville. On ne voit plus la Maree. On voit de la
+brume jusqu'a l'horizon et le ciel.
+[ART] C'EST LA PLUS BELLE IMAGE DU JEU. Elle arrive a 6 h 18, apres six
+heures de gris, et elle dure le temps que le joueur veut.
+[OBL] Aucun plan scripte. Aucune camera. Aucun ralenti. Aucun changement
+musical : M24 continue exactement comme avant.
+[OBL] Lohen ne s'arrete pas. Aucun LOH-ACT. Aucun LookAt.
+
+§ 6 — AUDIO
+[OBL] LE SILENCE. A 204 m, au-dessus de la brume, il n'y a plus de pluie,
+plus de ville, plus de Maree.
+Il reste : le vent sur la cage de verre (SFX(wind_lantern_glass), une note
+tenue, aigue, fine, -22 dB) et M24.
+[OBL] C'est tout. Deux sources. Le mix le plus depouille du chapitre.
+[ART] Le joueur a entendu la pluie sur la Maree a -8 dB il y a vingt
+minutes. Ici, il entend une note de vent et un orchestre.
+SFX(crystal_prism_tick) : les 1 008 prismes travaillent dans leur armature
+de bronze. [OBL] Un cliquetis cristallin infime, -36 dB, quand la lentille
+oscille de 0,4 degre.
+[ART] Le son le plus faible du jeu. Il est la.
+
+§ 7 — INTERDICTIONS
+Interdit de : allumer le brûleur · allumer le Phare · faire tourner la
+lentille · casser un prisme · nettoyer · prendre le chiffon ou la bouteille
+· ajouter la lune · ajouter des nuages · faire disparaitre les etoiles ·
+ajouter un plan scripte · ajouter une musique · faire s'arreter Lohen ·
+reveler qui nettoie · reduire le nombre de prismes · simplifier la
+refraction.
+
+§ 8 — LIENS
+PN-134 (la machinerie, en dessous). PN-136 (la porte de la chambre).
+PN-137 (la lampe a huile allumee — [OBL] IL Y A DU PETROLE DANS LA CHAMBRE
+ET LE BRULEUR DU PHARE EST VIDE. Jamais souligne.)
+PN-101 (les trois lustres, S6) : l'autre grand objet de cristal.
+PN-071 (le vitrail), PN-028 (les bouees), PN-065 (la serre), PN-117
+(l'atelier) : le verre du chapitre.
+PN-122 (la pluie sur la Maree) : la brume en dessous, c'est elle.
+[THEME] IL FAUT UNE BELLE CHOSE — S8, et la derniere.
+[THEME] ENTRETENIR CE QUI PEUT L'ETRE.
+
+§ 9 — DOD
+[ ] 1 008 prismes, 9 modeles, positions et rotations exactes
+[ ] Refraction reelle en 3 couches, 3 SubViewports 512², 3,1 ms
+[ ] 30 fps stables sur Adreno 640
+[ ] Tous les prismes intacts et propres ; chiffon et alcool presents
+[ ] Brûleur eteint, reservoir vide, meches carbonisees
+[ ] Oscillation de 0,4 degre, periode 40 s, pilotee par l'horloge absolue
+[ ] Etoiles visibles, unique fois du chapitre ; aucune lune
+[ ] Mer de brume a 60 m en dessous, couvrant toute la carte
+[ ] Mix a deux sources : vent -22 dB et M24
+[ ] Cliquetis des prismes a -36 dB, son le plus faible du jeu
+[ ] Zero plan, zero camera, zero arret de Lohen

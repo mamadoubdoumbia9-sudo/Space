@@ -1,0 +1,169 @@
+===============================================================================
+DLG · S7 · D08 — LE PIED DU PHARE : LES QUARANTE-SEPT DERNIERES LIGNES
+47 entrees, toutes S7. LOH 38 · SOL 9. Contribution : 47.
+[OBL] Ferme le compte des lignes de S7 a 274. Le dernier id compte est
+`S7_LOH_L274` — le numero de ligne et le total de la sequence coincident.
+Ce n'est pas un hasard : la numerotation a ete calee pour que l'audit
+soit lisible d'un coup d'oeil.
+===============================================================================
+
+--- § 1 — LES HUIT KILOMETRES (14 lignes) -------------------------------------------------------
+
+[OBL] Entre la place de l'Ancienne Halle et le pied du Phare : 8 km de
+cote, sous la pluie, sans combat, sans Echo, sans PNJ. [OBL] C'est le
+plus long segment sans evenement du chapitre : 11 minutes.
+[OBL] VIOLATION ASSUMEE DE 09.40 (un evenement toutes les 45-90 s).
+[OBL] `tools/pacing_audit.py` doit porter une EXCEPTION DECLAREE sur ce
+segment, id `pacing-exempt-s7-coast`. [OBL] Si l'exception disparait du
+fichier de config, le build casse — c'est la seule facon de garantir que
+personne ne « repare » ce trou en y ajoutant du contenu.
+
+[OBL] CE QU'IL Y A A LA PLACE : la pluie, la mer vide a gauche, le Phare
+qui grossit a droite, et ces quatorze lignes espacees de 45 s.
+[OBL] Le joueur qui a le cable de Pallas (D06 § 3) met 6 minutes. Les
+autres en mettent 11.
+
+    [S7_LOH_L228]  2,0 s · bas · « Huit kilometres. »
+    [S7_LOH_L229]  2,4 s · bas · « Je les ai faits ce matin dans l'autre sens. »
+    [S7_LOH_L230]  1,8 s · bas · « Ils etaient plus courts. »
+    [S7_LOH_L231]  2,6 s · bas · « La mer est a gauche et y'a pas de mer. »
+    [S7_LOH_L232]  2,2 s · bas · « Y'a du verre jusqu'a l'horizon. »
+    [S7_LOH_L233]  2,8 s · bas · « Quand il pleut dessus, on dirait que ca bouge. »
+        dir : [OBL] LE VFX EXISTE. La surface de verre a un shader de
+              ruissellement qui simule un clapot a 0,3 Hz. [OBL] De
+              loin, la mer a l'air vivante. [OBL] C'est le plus beau
+              plan du chapitre et il ne dure pas : il est la pendant
+              11 minutes, en fond, sans que rien ne le montre.
+    [S7_LOH_L234]  1,6 s · bas · « C'est pas le cas. »
+    [S7_LOH_L235]  2,4 s · bas · « Le Phare grossit. »
+    [S7_LOH_L236]  2,0 s · bas · « Deux cent douze metres. »
+    [S7_LOH_L237]  2,8 s · bas · « De loin on dirait qu'il penche, mais c'est la pluie. »
+    [S7_LOH_L238]  2,2 s · bas · « Y'a une lumiere en haut. »
+    [S7_LOH_L239]  2,6 s · bas · « Tallec dit que c'est un reflet. »
+    [S7_LOH_L240]  3,0 s · bas · « Un reflet de quoi ? Y'a pas de soleil depuis ce matin. »
+        dir : [OBL][NAR] IL A RAISON ET IL NE S'EN SERT PAS. [OBL] Il
+              ne conclut pas. Il ne se dit pas « donc quelqu'un l'a
+              allumee ». [OBL] Il note l'anomalie et il continue de
+              marcher. [OBL] C'est exactement ce qu'il a fait avec le
+              parquet en S6 et avec les fenetres. [OBL] Trois fois
+              dans le chapitre, Lohen est a une phrase de comprendre
+              quelque chose, et trois fois il marche.
+    [S7_LOH_L241]  1,4 s · bas · « Bon. »
+
+--- § 2 — SOL, AU PIED DU PHARE (12 lignes) -----------------------------------------------------
+
+[OBL] Sol est la. [OBL] Iel avait dit ne pas depasser la grille (S5,
+L183/L185). [OBL] Iel a fait 9 km en surface, sous la pluie, pieds nus.
+[OBL] AUCUNE LIGNE NE L'EXPLIQUE. Ni comment, ni pourquoi, ni depuis
+quand. [OBL] Interdit absolu : ne jamais justifier la presence de Sol
+ici, dans aucun chapitre.
+
+[OBL] Iel est assise sous l'avancee de la porte, avec le cable de Lohen
+— celui qui a casse a 118 m, en haut de la ville. [OBL] Iel est en train
+de le reparer. [OBL] Comment iel l'a recupere : jamais explique non plus.
+
+    [S7_SOL_L242]  2,0 s · plat · « T'es en retard. »
+        dir : [OBL][NAR] RACCORD E23 (S7_ECH_L204, « Tu es en retard »).
+              [OBL] Meme phrase, meme ton, meme pluie, 40 minutes plus
+              tard, par un vivant. [OBL] JAMAIS SOULIGNE. Aucun joueur
+              n'est cense faire le lien consciemment. Job CI
+              `late-line` : les deux lignes partagent le tag
+              `motif:retard`.
+    [S7_LOH_L243]  1,6 s · bas · « Qu'est-ce que tu fais la. »
+    [S7_SOL_L244]  2,4 s · plat · « Je repare ton truc. »
+    [S7_LOH_L245]  2,0 s · bas · « C'est pas reparable. »
+    [S7_SOL_L246]  2,8 s · plat · « Tout est reparable, c'est juste plus court apres. »
+        dir : [OBL][NAR] LA MEILLEURE LIGNE DE SOL DU CHAPITRE, et
+              elle porte sur un cable. [OBL] Direction : plat, absorbe
+              dans le travail, iel ne leve pas les yeux.
+    [S7_LOH_L247]  1,8 s · bas · « Combien plus court ? »
+    [S7_SOL_L248]  2,2 s · plat · « Quatre metres. »
+    [S7_LOH_L249]  2,6 s · bas · « Quatre metres, c'est beaucoup. »
+    [S7_SOL_L250]  3,0 s · plat · « C'est quatre metres de moins que rien du tout. »
+    [S7_LOH_L251]  1,4 s · bas · « Oui. »
+    [S7_SOL_L252]  2,4 s · plat · « Tiens. »
+        dir : [OBL] ELLE LUI REND LE GRAPPIN. [OBL] Reference maitre
+              09.17 : « le grappin est rendu (Sol le repare, scene de
+              90 s) ». [OBL] La scene de 90 s commence ici et se
+              termine en S8/D01. [OBL] La portee du grappin est
+              REELLEMENT reduite de 4 m pour tout S8. Le level design
+              de S8 est concu pour la portee courte. [OBL] Le joueur
+              ne le remarque pas : il n'a jamais mesure.
+    [S7_LOH_L253]  2,0 s · bas · « Merci. »
+        dir : [OBL] il remercie Sol. [OBL] Il n'avait pas remercie
+              Pallas, qui lui avait donne un cable entier. [OBL] Jamais
+              releve.
+
+--- § 3 — LA PORTE (13 lignes) --------------------------------------------------------------------
+
+    [S7_LOH_L254]  2,2 s · bas · « La porte est ouverte. »
+    [S7_LOH_L255]  2,6 s · bas · « Les gonds sont graisses. »
+        dir : [OBL][NAR] TROISIEME PORTE GRAISSEE DU CHAPITRE (la
+              grille de S5/L422, une porte de S3, celle-ci). [OBL] Le
+              Verrier entretenait les trois. [OBL] Il est assis sur une
+              place, a 8 km, en train de durcir. [OBL] AUCUN LIEN
+              EXPLICITE, JAMAIS.
+    [S7_LOH_L256]  2,0 s · bas · « Quelqu'un vient ici. »
+    [S7_LOH_L257]  2,4 s · bas · « Ou quelqu'un venait. »
+    [S7_LOH_L258]  1,8 s · bas · « Bon. »
+    [S7_SOL_L259]  2,8 s · plat · « Je monte pas. »
+    [S7_LOH_L260]  1,6 s · bas · « Je sais. »
+        dir : [OBL] il ne demande pas. [OBL] Contraste avec le CHOIX 26
+              en S5, ou le joueur POUVAIT insister. [OBL] Ici il n'y a
+              pas de choix : Lohen a appris.
+    [S7_LOH_L261]  2,2 s · bas · « Mille trente-huit marches. »
+    [S7_LOH_L262]  2,6 s · bas · « C'est le gardien qui l'a dit, y'a trois ans. »
+        dir : [OBL] IL CITE E25 (L221). [OBL] Il a donc entendu l'Echo
+              et l'a retenu. [OBL] Rappel canon : le mot « Echo » n'est
+              jamais prononce (CI `no-echo-word`). Il dit « le
+              gardien », comme si l'homme etait la ce matin.
+              [OBL] Personne ne le corrige. [OBL] Personne ne sait ce
+              que Lohen croit avoir vu, pendant tout le chapitre, et le
+              jeu ne le dira pas.
+    [S7_LOH_L263]  2,0 s · bas · « Ca fait une heure de montee. »
+    [S7_LOH_L264]  2,4 s · bas · « Une heure et demie avec l'epaule. »
+    [S7_LOH_L265]  2,8 s · bas · « Il sera quelle heure en haut ? »
+    [S7_LOH_L266]  3,0 s · bas · « Tot. Ce sera le matin. »
+        dir : [OBL] annonce de l'aube (VFX V26, 09.17) et du lever de
+              soleil unique du chapitre. [OBL] Aucune musique ne
+              l'accompagne : M23 (la pluie) tourne encore.
+
+--- § 4 — LES HUIT DERNIERES LIGNES DE S7 ---------------------------------------------------------
+
+    [S7_LOH_L267]  1,6 s · bas · « J'y vais. »
+    [S7_SOL_L268]  2,4 s · plat · « Ok. »
+    [S7_LOH_L269]  2,0 s · bas · « Tu vas ou, toi ? »
+    [S7_SOL_L270]  2,8 s · plat · « Nulle part. Je reste la, y'a un toit. »
+        dir : [OBL][NAR] LE CONSEIL QU'IL AVAIT DONNE A UN AUTRE ENFANT
+              (D06, L193 : « va sous le kiosque, y'a un toit »). Sol
+              l'applique sans l'avoir entendu. [OBL] Jamais releve.
+              [OBL] C'est aussi l'annonce de PN-147 : Sol sera endormi
+              la, contre la porte, a la fin du chapitre.
+    [S7_LOH_L271]  1,8 s · bas · « D'accord. »
+    [S7_LOH_L272]  2,6 s · bas · « La pluie s'arrete pas. »
+    [S7_LOH_L273]  2,2 s · bas · « Elle s'arretera quand je serai dedans, forcement. »
+        dir : [OBL] IL A RAISON. [OBL] M23 se coupe a la seconde ou la
+              porte se referme. [OBL] Pas de fondu : une coupe franche.
+              [OBL] Apres 41 minutes de pluie continue, le silence de
+              la cage d'escalier est physiquement violent. [OBL] C'est
+              le seul « effet » de toute la sequence et il est obtenu
+              en ARRETANT quelque chose.
+    [S7_LOH_L274]  0,0 s · — · (slot sans VO)
+        dir : [OBL][NAR] DERNIERE ENTREE DE S7. 3,6 s. [OBL] Il entre.
+              La porte se referme derriere lui. La pluie s'arrete.
+              [OBL] Il ne dit rien. [OBL] La premiere note de « La
+              Montee » (M25, 11 minutes, 6 paliers d'altitude — BLOC
+              13.14) entre 6 s plus tard, quand le joueur a commence a
+              monter. [OBL] Elle n'entre PAS si le joueur reste
+              immobile. La musique attend qu'il monte.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] Segment cotier de 11 min sans evenement — exception `pacing-exempt-s7-coast`
+[ ] L240 : l'anomalie de la lampe est notee et non exploitee
+[ ] Sol est la, sans explication, jamais justifiee
+[ ] L252 : grappin rendu, portee reellement -4 m pour tout S8
+[ ] L253 : il remercie Sol, pas Pallas
+[ ] L262 : il cite l'Echo sans savoir que c'en etait un — CI `no-echo-word`
+[ ] L273 : coupe franche de M23 a la fermeture de la porte
+[ ] L274 : M25 n'entre que si le joueur monte

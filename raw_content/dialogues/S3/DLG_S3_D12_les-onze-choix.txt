@@ -1,0 +1,228 @@
+===============================================================================
+DLG · S3 · D12 — LES ONZE CHOIX DE S3 : TABLE ET BRANCHES RESTANTES
+34 entrees, toutes S3. LOH 20 · TAL 4 · SOL 6 · VAN 2 · PAL 2.
+Contribution : 34.
+Reference : INDEX § 7. Choix n° 04 a n° 14 du chapitre.
+===============================================================================
+
+--- TABLE DES ONZE CHOIX DE S3 -------------------------------------------------------
+
+    n°  doc    interlocuteur   options  effet                statut
+    04  D04    Tallec              3    change une scene     ECRIT (D04)
+    05  D05    Niels/Wenna         3    change une replique  ECRIT (D05)
+    06  D09    Vane                2    change une scene     ECRIT (D09)
+    07  ici    Sol (toits)         2    change une replique  ECRIT ICI
+    08  ici    Tallec (retour)     3    debloque un Echo     ECRIT ICI
+    09  ici    Pallas (croisee)    2    change une replique  ECRIT ICI
+    10  ici    Sol (depart)        3    change une scene     ECRIT ICI
+    11  ici    le monte-charge     2    change une scene     ECRIT ICI
+    12  ici    Vane (retour)       2    change une replique  ECRIT ICI
+    13  ici    Brel (le fil)       2    change une scene     ECRIT ICI
+    14  ici    la 5e lettre        3    debloque un Echo     ECRIT ICI
+
+[OBL] Recapitulatif de conformite 12.05 pour S3 : 5 changent une scene,
+4 changent une replique, 2 debloquent un Echo. Aucun ne change la fin.
+Aucun n'a de timer (les 2 seuls timers du chapitre sont en S4).
+
+--- CHOIX 07 — SOL, SUR LES TOITS (4 entrees) ------------------------------------------
+
+Declencheur : apres S3_SOL_L079 (le silence de 2,1 s), si le joueur reste.
+
+    > CHOIX 07
+      [1] « Qui te l'a donnee ? »
+      [2] « Elle te va bien. »
+
+    -- branche [1]
+    [S3_LOH_L398]  LOHEN · 1,4 s · plat · p0,0
+        « Qui te l'a donnee ? »
+    [S3_SOL_L399]  SOL · 1,1 s · sec · p0,0
+        « Personne. »
+        dir : [OBL] fin de branche. Sol ne repondra jamais. La reponse
+              est dans PN-052 (annexe B) et le joueur ne la lira pas.
+
+    -- branche [2]
+    [S3_LOH_L400]  LOHEN · 1,2 s · plat · p0,0
+        « Elle te va bien. »
+    [S3_SOL_L401]  SOL · 2,0 s · plat · p0,0
+        « Elle est trop grande. »
+        dir : [OBL] Sol refuse le compliment par un fait. C'est la
+              meilleure branche et rien ne l'indique. En S5, Sol portera
+              la meme veste et le joueur qui a pris [2] entendra une
+              ligne differente a S5 (S5_SOL_L2xx). C'est le seul effet
+              inter-sequence d'un choix de S3.
+
+--- CHOIX 08 — TALLEC, AU RETOUR (5 entrees) ---------------------------------------------
+
+Declencheur : revenir au poste apres la Bibliotheque impossible ? Non :
+apres avoir parle a Brel ET a Garric. Tallec est toujours assis.
+
+    > CHOIX 08
+      [1] « Brel dit qu'il vous a forge votre ancre. »
+      [2] « Garric dort au-dessus du Registre. Vous le savez ? »
+      [3] « Rien. Je passais. »
+
+    -- branche [1] : debloque E11 (l'Echo de l'ancre, dans le poste).
+    [S3_LOH_L402]  LOHEN · 2,4 s · plat · p0,0
+        « Brel dit qu'il vous a forge votre ancre. »
+    [S3_TAL_L403]  TALLEC · 2,8 s · plat · p0,0
+        « En 'zero-neuf. Il a fait deux choses bien dans sa vie et
+          c'est la deuxieme. »
+        dir : [OBL] il ne dit pas quelle est la premiere. Aucune option.
+              E11 devient disponible sur l'ancre posee sur la table.
+
+    -- branche [2]
+    [S3_LOH_L404]  LOHEN · 2,6 s · plat · p0,0
+        « Garric dort au-dessus du Registre. Vous le savez ? »
+    [S3_TAL_L405]  TALLEC · 2,2 s · sec · p0,0
+        « Je sais ou dorment mes six hommes. C'est tout ce que je sais
+          d'eux et c'est assez. »
+
+    -- branche [3]
+    [S3_LOH_L406]  LOHEN · 1,3 s · plat · p0,0
+        « Rien. Je passais. »
+    [S3_TAL_L407]  TALLEC · 1,8 s · plat · p0,0
+        « Alors passe. »
+
+--- CHOIX 09 — PALLAS, CROISEE AU MARCHE (4 entrees) --------------------------------------
+
+[NAR] Pallas monte au Marche une fois par semaine. Elle y est
+aujourd'hui. Ses 4 lignes de S3 (sur ses 79 totales) sont ici.
+
+    [S3_PAL_L408]  PALLAS · 1,6 s · plat · p0,7
+        « Ta sangle tient. »
+        dir : ou « Ta sangle a lache, je t'avais dit. » si le joueur a
+              refuse la reparation en S1. Deux enregistrements, meme id
+              suffixe /a et /b. [OBL] Les deux comptent dans les 2 840.
+
+    > CHOIX 09
+      [1] « Vous montez jusqu'ou ? »
+      [2] « Vous etes venue pour moi ? »
+
+    -- branche [1]
+    [S3_LOH_L409]  LOHEN · 1,4 s · plat · p0,0
+        « Vous montez jusqu'ou ? »
+    [S3_PAL_L410]  PALLAS · 2,3 s · plat · p0,0
+        « Jusqu'ici. Apres c'est plus mon secteur non plus. »
+
+    -- branche [2]
+    [S3_LOH_L411]  LOHEN · 1,7 s · plat · p0,0
+        « Vous etes venue pour moi ? »
+    [S3_PAL_L412]  PALLAS · 2,0 s · sec · p0,0
+        « Non. »
+        dir : [OBL] elle est venue pour lui. Elle a une tournee le
+              jeudi ; on est mardi. Le joueur peut le savoir : le
+              tableau des tournees est affiche au hangar en S1
+              (PN-021), lisible, et il indique JEUDI. Trois joueurs
+              sur cent. Pallas ne l'admettra pas, ni ici, ni en S7.
+
+--- CHOIX 10 — LE DEPART DE SOL (6 entrees) ------------------------------------------------
+
+Declencheur : au monte-charge, Sol arrive en courant.
+
+    [S3_SOL_L413]  SOL · 1,8 s · essouffle · p0,6
+        « Tu montes a la Bibliotheque ? »
+
+    > CHOIX 10
+      [1] « Oui. »
+      [2] « Tu me suis depuis tout a l'heure ? »
+      [3] « Tu peux pas venir. »
+
+    -- branche [1]
+    [S3_LOH_L414]  LOHEN · 0,7 s · plat · p0,0
+        « Oui. »
+    [S3_SOL_L415]  SOL · 2,2 s · plat · p0,0
+        « Alors je te vois plus tard. Par en dessous. »
+        dir : [OBL] iel annonce S5. Personne ne comprend. Sol connait
+              les conduits.
+
+    -- branche [2]
+    [S3_LOH_L416]  LOHEN · 2,0 s · plat · p0,0
+        « Tu me suis depuis tout a l'heure ? »
+    [S3_SOL_L417]  SOL · 1,4 s · sec · p0,0
+        « Non. »
+        dir : oui.
+
+    -- branche [3]
+    [S3_LOH_L418]  LOHEN · 1,6 s · sec · p0,0
+        « Tu peux pas venir. »
+    [S3_SOL_L419]  SOL · 2,6 s · plat · p0,0
+        « J'ai rien demande. »
+        dir : [OBL] la branche la plus dure, et la seule ou Sol s'en va
+              sans rien ajouter. En S5, Sol ne fera aucune allusion a
+              ce refus. Aucun ressentiment. Un enfant qui a l'habitude.
+
+--- CHOIX 11, 12, 13, 14 — LES QUATRE COURTS (13 entrees) -----------------------------------
+
+    > CHOIX 11 — dans la cage du monte-charge, la grille se ferme mal.
+      [1] « (Tenir la grille.) »
+      [2] « (Ne pas la tenir.) »
+    [S3_LOH_L420]  LOHEN · 0,0 s · — · p0,0
+        (slot sans VO — branche [1], il tient la grille, 26 s de montee)
+    [S3_LOH_L421]  LOHEN · 1,2 s · sec · p0,0
+        « Ah. »
+        dir : branche [2]. La grille s'ouvre a 14 m de haut, le vide,
+              Lohen se rattrape (LOH-CAT-118). Aucun degat. Aucune mort
+              possible. [OBL] Il ne commente pas ensuite.
+
+    > CHOIX 12 — Vane, au retour, si le joueur a pris la branche [2] en D09.
+      [1] « Ca se soigne, d'autres choses ? »
+      [2] « Merci pour tout a l'heure. »
+    [S3_LOH_L422]  LOHEN · 2,0 s · plat · p0,0
+        « Ca se soigne, d'autres choses ? »
+    [S3_VAN_L423]  VANE · 2,4 s · plat · p0,0
+        « Presque tout, si on vient tot. Personne vient tot. »
+    [S3_LOH_L424]  LOHEN · 1,6 s · plat · p0,0
+        « Merci pour tout a l'heure. »
+    [S3_VAN_L425]  VANE · 1,3 s · sec · p0,0
+        « J'ai rien fait. »
+
+    > CHOIX 13 — Brel, apres L208 (« trois metres »).
+      [1] « Je lui dirai. »
+      [2] « Il ne reviendra pas. »
+    [S3_LOH_L426]  LOHEN · 1,2 s · plat · p0,0
+        « Je lui dirai. »
+    [S3_LOH_L427]  LOHEN · 1,9 s · plat · p0,0
+        « Il ne reviendra pas. »
+        dir : [OBL][NAR] LA SEULE FOIS DU CHAPITRE ou Lohen formule
+              l'evidence. Il le dit a un forgeron, au milieu du bruit.
+              Brel ne repond RIEN : il n'y a pas de ligne de reponse,
+              le marteau continue, et le joueur reste avec ca.
+              [OBL] Ne jamais ajouter de reponse a cette ligne.
+
+    > CHOIX 14 — la cinquieme lettre (non livrable), sur un banc.
+      [1] « (La ressortir et la regarder.) »
+      [2] « (La laisser.) »
+      [3] « (La donner a Sol.) » — disponible seulement si Sol est present
+    [S3_LOH_L428]  LOHEN · 0,0 s · — · p0,0
+        (slot sans VO — branche [1] : 6 s, il la tourne, il la range.
+         Debloque E12, l'Echo du banc, 34 s.)
+    [S3_SOL_L429]  SOL · 2,2 s · plat · p0,0
+        « Je sais pas lire les mots. Je te l'ai dit. »
+        dir : branche [3]. Iel la rend. [OBL] C'est la seule fois ou
+              une des deux lettres non livrables est tendue a quelqu'un.
+              Refusee. Elle restera dans la sacoche jusqu'a la fin du
+              chapitre — et du jeu.
+
+    [S3_LOH_L430]  LOHEN · 1,4 s · plat · p0,0
+        « Moi non plus. »
+        dir : [OBL][NAR] Il le dit a un enfant de treize ans, a voix
+              basse, au milieu d'un marche. Troisieme et derniere
+              mention de son illettrisme dans le chapitre (S1_LOH_L008,
+              S3_LOH_L096, ici). La quatrieme sera dans la lettre
+              d'Esteban, en S8, et elle sera dite par quelqu'un d'autre.
+
+    [S3_SOL_L431]  SOL · 1,8 s · plat · p0,0
+        « Ah. »
+        dir : [OBL] Sol ne se moque pas. Sol ne console pas. Sol dit
+              « Ah » et change de sujet dans les 2 secondes. C'est la
+              meilleure chose que quiconque fasse pour Lohen dans tout
+              le chapitre.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] 11 choix : 5 scenes, 4 repliques, 2 Echos ; aucun timer en S3
+[ ] L408 : deux variantes /a /b selon la sangle de S1
+[ ] Choix 07 branche [2] : seul effet inter-sequence (S5)
+[ ] L412 : Pallas ment, verifiable via PN-021 (tournee du jeudi)
+[ ] L427 : aucune reponse de Brel, jamais
+[ ] L430/L431 : aucun pathos, Sol change de sujet

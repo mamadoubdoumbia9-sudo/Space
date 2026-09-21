@@ -1,0 +1,191 @@
+===============================================================================
+DLG · S4 · D14 — LIGNES D'ABANDON DE MIREILLE + CLOTURE DE LA SEQUENCE 4
+38 entrees, toutes S4. MIR 24 · LOH 14. Contribution : 38.
+===============================================================================
+
+--- LES 3 LIGNES D'ABANDON DE MIREILLE (12.06) ------------------------------------------
+
+[OBL] Mireille FINIT SA PHRASE toute seule, a voix normale, dans la piece
+vide. C'est sa regle propre (INDEX § 8.02) et c'est la plus douloureuse
+des quatre traitements d'abandon du jeu.
+
+    [S4_MIR_L389]  MIREILLE · 3,2 s · plat · p0,0
+        « ... et c'est pour ca qu'on ne les retrouve pas. »
+        dir : [OBL] 1re fois. Elle termine une phrase que le joueur
+              n'entendra jamais en entier, puisqu'il est parti au
+              milieu. [OBL] Le debut de cette phrase n'existe dans
+              AUCUN fichier. Il n'a jamais ete ecrit. On ne peut donc
+              pas le retrouver en fouillant les fichiers du jeu.
+              C'est volontaire et c'est verifie par le job CI
+              `mireille-truncated`.
+
+    [S4_MIR_L390]  MIREILLE · 2,6 s · plat · p0,0
+        « ... enfin. Ca n'a plus d'importance. »
+        dir : 2e fois.
+
+    [S4_MIR_L391]  MIREILLE · 2,0 s · sec · p0,0
+        « Bien. »
+        dir : [OBL] 3e fois et suivantes. Un mot. Elle se tait
+              definitivement : apres la troisieme, Mireille ne
+              commence plus AUCUNE phrase longue de toute la sequence.
+              Toutes ses lignes restantes passent a leur variante
+              courte (voir § suivant). Le joueur qui part trois fois
+              au milieu d'une phrase de Mireille joue une version
+              appauvrie de la sequence 4, sans le savoir.
+
+--- LES 21 VARIANTES COURTES (le systeme d'appauvrissement) --------------------------------
+
+[OBL] MECANISME UNIQUE AU JEU. Apres trois abandons, vingt et une lignes
+de Mireille basculent vers une version courte, deja enregistree. Ce n'est
+pas une punition affichee : c'est une femme qui a compris qu'on ne
+l'ecoute pas et qui abrege.
+
+Correspondances (id long -> id court) :
+
+    [S4_MIR_L392]  2,0 s · sec  « Casier 4, rangee M. »            (<- L038, 3,6 s)
+    [S4_MIR_L393]  1,2 s · sec  « Je sais. »                        (<- L110, 2,6 s)
+    [S4_MIR_L394]  1,0 s · sec  « Non. »                            (<- L112, 3,2 s)
+    [S4_MIR_L395]  1,4 s · sec  « On lit. »                         (<- L010, inchangee)
+    [S4_MIR_L396]  1,6 s · sec  « Trois informations. »             (<- L012, 3,2 s)
+    [S4_MIR_L397]  1,2 s · sec  « Du the. »                         (<- L026, 2,2 s)
+    [S4_MIR_L398]  1,8 s · sec  « Les gens cherchent une phrase. »  (<- L136+L137)
+    [S4_MIR_L399]  2,2 s · sec  « Elles sont courtes. »             (<- L140)
+        dir : [OBL][NAR] DANS LA VERSION COURTE, LE MOT « AMOUR »
+              DISPARAIT. Le joueur qui a abandonne Mireille trois fois
+              n'entendra ce mot qu'une seule fois dans tout le jeu, a
+              la fin, dans la lettre.
+              [OBL] Le job CI `word-amour` compte les occurrences dans
+              le contenu : L140 et la lettre = 2. La variante L399 ne
+              contient pas le mot : le compte reste bon.
+              [OBL] Cette consequence n'est signalee au joueur par
+              RIEN. C'est la punition la plus severe et la plus
+              silencieuse du chapitre.
+    [S4_MIR_L400]  1,0 s · sec  « Non. »                            (<- L145)
+    [S4_MIR_L401]  1,4 s · sec  « Buvez. »                          (<- L146)
+    [S4_MIR_L402]  1,6 s · sec  « Troisieme etage. »                (<- L149)
+    [S4_MIR_L403]  1,8 s · sec  « Ne touchez rien. »                (<- L150)
+    [S4_MIR_L404]  1,2 s · sec  « Attendez. »                       (<- L175)
+    [S4_MIR_L405]  2,0 s · sec  « La grille du conduit, a l'ouest. »(<- L176)
+    [S4_MIR_L406]  1,4 s · sec  « Je vous fais sortir. »            (<- L180)
+    [S4_MIR_L407]  1,6 s · sec  « Jamais vus. »                     (<- L183)
+    [S4_MIR_L408]  1,0 s · sec  « Mireille. »                       (<- L187, inchangee)
+    [S4_MIR_L409]  2,4 s · sec  « Ne lisez pas tout de suite. »     (<- L192)
+        dir : [OBL] LA PHRASE DE S8 SURVIT A L'APPAUVRISSEMENT. Elle
+              est la seule. Meme abregee, meme dite par une femme qui
+              a renonce a etre ecoutee, elle est dite. C'est une
+              decision de conception : le jeu peut se priver de
+              beaucoup, pas de ca.
+    [S4_MIR_L410]  1,6 s · sec  « Asseyez-vous d'abord. »           (<- L194)
+    [S4_MIR_L411]  1,2 s · sec  « Non. »                            (<- L196)
+    [S4_MIR_L412]  1,8 s · sec  « Vous avez une ville a monter. »   (<- L338)
+
+--- LES 14 LIGNES DE SORTIE DE SEQUENCE ------------------------------------------------------
+
+La grille du conduit, en bas, a l'ouest. La cle de Mireille. Lohen
+s'accroupit : le plafond est a 1,4 m.
+
+    [S4_LOH_L413]  LOHEN · 1,6 s · plat · p1,2
+        « Ouest. »
+
+    [S4_LOH_L414]  LOHEN · 2,0 s · plat · p1,0
+        « Grille. »
+
+    [S4_LOH_L415]  LOHEN · 1,4 s · plat · p1,4
+        « La cle tourne. »
+
+    [S4_LOH_L416]  LOHEN · 2,4 s · plat · p1,1
+        « Un metre quarante. Vingt-quatre minutes accroupi, au
+          minimum. »
+        dir : [OBL] il evalue son trajet comme un relayeur. Il se
+              trompe : ce sera 24 minutes, et il en passera 60 % plie.
+              Le chiffre exact du level design (09.14).
+
+    [S4_LOH_L417]  LOHEN · 1,8 s · plat · p1,3
+        « Il fait noir. »
+
+    [S4_LOH_L418]  LOHEN · 2,2 s · plat · p1,0
+        « Y'a une lanterne accrochee. »
+        dir : [OBL] PN-009. Elle est la, a l'entree, accrochee a un
+              clou. Quelqu'un l'y a laissee. [OBL] Jamais explique.
+              [NAR] C'est Sol. Le joueur le comprendra en S5 quand Sol
+              dira « je t'attendais par en dessous ».
+
+    [S4_LOH_L419]  LOHEN · 1,6 s · plat · p1,2
+        « Merci, qui que vous soyez. »
+        dir : [OBL] il remercie un clou. C'est la troisieme fois du
+              chapitre qu'il remercie quelque chose d'inanime (la
+              chaise en L169, le tube en D09, le clou ici).
+
+    [S4_LOH_L420]  LOHEN · 2,0 s · plat · p1,4
+        « Une main pour la lanterne. »
+
+    [S4_LOH_L421]  LOHEN · 2,4 s · plat · p1,1
+        « Donc pas de grappin. »
+        dir : [OBL] LE TUTORIEL DE S5 ENTIER, en deux lignes, dit par
+              le personnage pour lui-meme. [OBL] Aucun panneau, aucune
+              icone, aucun texte d'aide. Reference 09.14 : « PORTER la
+              lanterne. Une main occupee = pas de grappin. »
+
+    [S4_LOH_L422]  LOHEN · 1,8 s · plat · p1,3
+        « Bon. »
+
+    [S4_LOH_L423]  LOHEN · 2,6 s · plat · p1,0
+        « Trois heures que je monte et je vais ramper. »
+
+    [S4_LOH_L424]  LOHEN · 2,2 s · plat · p1,2
+        « C'est la premiere chose logique de la journee. »
+
+    [S4_LOH_L425]  LOHEN · 1,4 s · plat · p1,6
+        « Mireille. »
+        dir : [OBL] il prononce son prenom, seul, dans un conduit, a
+              personne. [NAR] Il pense a « ne lisez pas tout de
+              suite ». Il n'a pas compris. Il ne comprend toujours pas.
+              Il retient quand meme : un homme qui ne sait pas ecrire
+              retient en repetant (cf. S3_LOH_L209, « Trois metres »).
+
+    [S4_LOH_L426]  LOHEN · 1,8 s · plat · p0,0
+        « Ne pas lire tout de suite. »
+        dir : [OBL][NAR] DERNIERE LIGNE DE LA SEQUENCE 4. Il repete
+              l'instruction pour la garder. Il tiendra parole en S8, a
+              deux heures et demie de la. [OBL] Aucune musique (il n'y
+              en a pas, et il n'y en aura pas avant S5). Le noir du
+              conduit. La lanterne. Fin de l'entracte.
+
+--- COMPTAGE DE LA SEQUENCE S4 ---------------------------------------------------------------
+
+    D01 entrer dans le silence .................  18
+    D02 Mireille, conversation 1 ...............  32
+    D03 chercher dans 900 fiches ...............  48
+    D04 le dossier vide ........................  22
+    D05 Mireille, conversation 2 ...............  30
+    D06 E13, le seul Echo d'une vivante ........  20
+    D07 Mireille, conversation 3 ...............  26
+    D08 les quatre autres Echos ................  46
+    D09 Thea au telephone acoustique ...........  16
+    D10 les deux choix a timer .................  17
+    D11 les lignes de toucher ..................  34
+    D12 les cinq autres choix ..................  29
+    D13 E19 (+38 barks hors total) .............  12
+    D14 abandon, variantes courtes, sortie .....  38
+                                                -----
+    TOTAL S4 ................................... 388
+
+    BARKS BK_S4 : 38, hors total.
+    SLOTS MUETS sans fichier VO : 6 — S4_LOH_L103, S4_LOH_L170,
+    S4_LOH_L270, S4_LOH_L271, S4_LOH_L320, S4_LOH_L329.
+    Total studio S4 = 388 - 6 = 382 fichiers de VO.
+    [OBL] `tools/count_vo_lines.py --seq S4 --expect 388 --studio 382`.
+
+    Ventilation par role : LOH 189 · MIR 112 · ECH 75 · THE 12.
+    [OBL] Mireille a 289 lignes au total (INDEX § 4.01) : 112 ici,
+    24 en S7, et 153 en variantes, abandons et lignes conditionnelles
+    reparties. Le decompte definitif est dans VALIDATION_2840.txt.
+
+--- CHECKLIST S4 -------------------------------------------------------------------------------
+
+[ ] Zero note de musique du premier au dernier pas de la sequence
+[ ] 3 abandons -> 21 variantes courtes, sans avertissement
+[ ] Le mot « amour » disparait dans la version appauvrie
+[ ] L409 : « ne lisez pas tout de suite » survit toujours
+[ ] L389 : le debut de la phrase n'existe dans aucun fichier — CI
+[ ] L426 : derniere ligne, l'instruction retenue par repetition

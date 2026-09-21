@@ -1,0 +1,97 @@
+===============================================================================
+PN-060 — LA CHAISE VIDE DU BARBIER
+===============================================================================
+Asset : SM_S3_Chaise_Barbier · S3, salon de coiffure, niveau 1, derriere une
+vitrine · ~02:58 · prop narratif · pas d'Echo · LOD0 3 700 tris
+
+§ 1 — CE QU'ON VOIT
+Derriere une vitrine intacte — [OBL] la seule vitrine non brisee du
+chapitre — un salon de barbier.
+Un fauteuil de barbier en fonte emaillee et cuir, avec son repose-pieds,
+sa manivelle de reglage, son appuie-tete reglable.
+Le cuir est creve sur l'assise : une fente de 20 cm, et le crin sort.
+Le miroir mural derriere est intact, mais couvert de poussiere. [OBL] Il ne
+reflete rien : c'est un miroir OPAQUE, materiau mat, aucune reflexion
+calculee. Le contraire de PN-022. Trois ans de poussiere sur un miroir, ca
+fait un mur gris.
+Devant la vitrine, sur le trottoir de planches, il y a quelque chose.
+Une chaise. Une chaise ordinaire de cuisine, posee sur la passerelle, face
+a la vitrine, DEHORS.
+Quelqu'un s'assoit dehors et regarde l'intérieur du salon.
+Le siege de la chaise est use. Il y est souvent.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 700 (fauteuil 2 100 + salon 1 100 + chaise exterieure 500).
+La vitrine : verre plan, transmission 0,88, avec une couche de salete
+exterieure (masque de coulures de pluie) et de poussiere intérieure.
+[OBL] Reflets : la vitrine REFLETE le joueur, faiblement (Fresnel, 8 % a
+incidence normale). Elle reflete aussi la grue rouge (PN-054) si elle est
+dans l'angle. Utiliser une ReflectionProbe locale, pas de SubViewport
+(budget : 0,3 ms, contre 1,6 ms pour PN-022).
+Le miroir intérieur : materiau mat, roughness 0,94, aucune reflexion.
+Shader `enamel_chipped` (fauteuil) + `leather_split` (assise).
+Collision : la porte du salon est fermee a cle. [OBL] Aucun accès. Le
+joueur ne rentre jamais dans le salon. Il regarde a travers la vitre.
+
+§ 3 — CE QUE CA DIT
+Quelqu'un apporte une chaise, s'assoit devant une vitrine de barbier, et
+regarde un fauteuil vide.
+Le geste humain : s'asseoir devant.
+[NAR] Le joueur, s'il se met a la place — s'il se tient la ou la chaise est
+posee, a la bonne hauteur — voit exactement ce que cette personne voit : le
+fauteuil de barbier, le miroir gris, et, dans la vitre, en surimpression,
+son propre reflet faible.
+[OBL] Le prop est construit pour ca. La chaise est placee au millimetre
+pour que, depuis sa position, le reflet du joueur dans la vitrine se
+superpose au fauteuil vide.
+Quelqu'un vient s'asseoir ici pour se voir assis dans le fauteuil.
+[OBL] Le jeu ne le dit pas, ne le montre pas, ne le souligne pas. Il faut
+se tenir a la bonne place, ce qui est possible et non signale.
+
+§ 4 — ECHO
+NEANT. Geste d'apres (PN-015) pour la chaise. Et le salon lui-meme est
+inaccessible : [OBL] les Echos exigent une proximite de moins de 2 m et une
+ligne de vue non vitree. Cette regle technique, jamais enoncee, explique
+que le joueur ne puisse pas capter le salon.
+
+§ 5 — MISE EN SCENE
+Sur le chemin, niveau 1. La vitrine fait 3 m de large.
+[OBL] La chaise est le premier element vu : elle est sur la passerelle, en
+travers, il faut la contourner (comme le landau PN-014, S1).
+[ART] Deuxieme contournement physique du chapitre, et le dernier.
+Lumiere : le salon intérieur est plus sombre que la passerelle, donc la
+vitre fait surtout miroir a certains angles et surtout fenetre a d'autres.
+Le joueur qui bouge voit alterner son reflet et le fauteuil.
+Aucun prompt, aucun LookAt, aucun son, aucune musique.
+
+§ 6 — AUDIO
+NEANT propre.
+[OBL] Le salon est totalement silencieux, et la vitre coupe l'ambiance :
+si le joueur colle la camera a la vitre, le mix perd 4 dB et gagne un
+filtre passe-bas a 3 kHz. Detail de 2 secondes que personne ne notera.
+M10 tourne normalement.
+
+§ 7 — INTERDICTIONS
+Interdit de : entrer dans le salon · casser la vitrine · donner un Echo ·
+signaler la position de la chaise · ajouter un marqueur, une lumiere, un
+cadrage pour le reflet · faire s'asseoir Lohen · rendre le miroir intérieur
+reflechissant · expliquer qui vient s'asseoir · ajouter des cheveux, un
+rasoir, une serviette (le salon est vide et range) · faire commenter.
+
+§ 8 — LIENS
+PN-022 (le miroir de barbier de la mezzanine, S1, 2 h 10 plus tot) —
+[OBL] c'est le MEME MODELE de miroir. Celui de la mezzanine a ete vole ici.
+Le mur du salon, derriere le miroir gris, a un rectangle plus clair a cote :
+il y avait deux miroirs, il n'en reste qu'un.
+Le joueur ne peut pas le savoir. Il peut le sentir.
+PN-057 (les sept chaises). PN-124 (le banc a deux creux, S7).
+[THEME] LE VISAGE. [THEME] S'ASSEOIR DEVANT.
+
+§ 9 — DOD
+[ ] Seule vitrine intacte du chapitre, reflet Fresnel 8 %, ReflectionProbe
+[ ] Miroir intérieur mat, roughness 0,94, aucune reflexion
+[ ] Chaise exterieure placee au millimetre : reflet superpose au fauteuil
+[ ] Contournement physique obligatoire
+[ ] Rectangle clair sur le mur : emplacement du second miroir (PN-022)
+[ ] Aucun accès, aucun prompt, aucun signalement du point de vue
+[ ] Filtre passe-bas 3 kHz et -4 dB camera contre la vitre

@@ -1,0 +1,151 @@
+===============================================================================
+DLG · S8 · D01 — LES QUATRE-VINGT-DIX SECONDES DE SOL
+34 entrees, toutes S8. SOL 19 · LOH 15. Contribution : 34.
+Reference maitre 09.17 : « le grappin est rendu (Sol le repare, scene de
+90 s) ». [OBL] La scene commence en S7/D08 (L252) et se termine ici.
+===============================================================================
+
+--- POURQUOI CETTE SCENE EXISTE [OBL] ------------------------------------------------------------
+
+[OBL] S8 est la sequence ou le jeu fait confiance au joueur pour la
+premiere fois (09.17) : aucune regle nouvelle, tous les verbes rendus,
+aucun ennemi, aucun combat. [OBL] Il faut donc lui rendre le grappin, et
+il faut que ce soit quelqu'un qui le lui rende, sinon c'est un cadeau du
+systeme.
+
+[OBL] C'est Sol. [OBL] Un enfant de treize ans repare un materiel de
+relayeur agree par la Compagnie, avec ses mains, sous un porche, la
+nuit. [OBL] Le jeu ne demande pas si iel sait faire. Iel a fait.
+
+[OBL] DUREE : 90 s, non skippable les 40 premieres secondes, puis
+skippable par un simple pas en arriere (aucun prompt ne le dit).
+[OBL] 4 % partent avant la fin. Ils perdent 11 lignes et n'en sauront
+rien.
+
+[OBL] MUSIQUE : aucune. M23 (la pluie) est coupee depuis S7/L273 — non :
+ils sont DEHORS, sous l'avancee. M23 tourne encore, a -9 dB, sur la
+tole au-dessus d'eux. [OBL] Elle ne se coupera qu'a la fermeture de la
+porte, en D02.
+
+--- LES 34 LIGNES -------------------------------------------------------------------------------
+
+    [S8_SOL_L001]  2,0 s · plat · « Bouge pas, j'ai pas fini. »
+        dir : [OBL] premiere ligne de S8. [OBL] Iel tient encore le
+              cable. La remise de S7/L252 etait le geste ; la reparation
+              n'est pas terminee. [OBL] Lohen a deja dit merci (S7/L253)
+              pour un travail en cours. Personne ne le releve.
+
+    [S8_LOH_L002]  1,6 s · bas · « Je croyais que c'etait fait. »
+
+    [S8_SOL_L003]  2,4 s · plat · « C'est fait, mais c'est mal fait. »
+
+    [S8_SOL_L004]  2,8 s · plat · « Si je le laisse comme ca, ca tient une heure et apres tu tombes. »
+
+    [S8_LOH_L005]  1,8 s · bas · « Alors finis. »
+
+    [S8_SOL_L006]  2,2 s · plat · « Voila. C'est ce que je fais. »
+
+    [S8_SOL_L007]  2,6 s · plat · « Faut tresser dans l'autre sens, sinon ca se defait tout seul. »
+        dir : [OBL] ELLE A RAISON TECHNIQUEMENT. [OBL] Le conseiller
+              technique du projet est un cordiste : le geste anime
+              (SOL-ACT-041, 18,2 s en boucle) est un veritable
+              epissage a quatre torons. [OBL] Un joueur du metier
+              reconnaitra le geste. [OBL] C'est la depense d'animation
+              la plus invisible du chapitre et elle est obligatoire.
+
+    [S8_LOH_L008]  2,0 s · bas · « Qui t'a appris ? »
+
+    [S8_SOL_L009]  1,4 s · plat · « Personne. »
+
+    [S8_LOH_L010]  1,8 s · bas · « Alors comment ? »
+
+    [S8_SOL_L011]  3,0 s · plat · « J'ai regarde des gens le faire pendant trois ans, et eux ils m'ont pas vue. »
+        dir : [OBL][NAR] LA DEFINITION DE SOL EN UNE LIGNE. [OBL] Dite
+              platement, sans reproche. [OBL] Aucune reponse de Lohen.
+              Le silence dure 2,6 s.
+
+    [S8_LOH_L012]  2,4 s · bas · « Je te vois, moi. »
+        dir : [OBL][NAR] LA CHOSE LA PLUS DIRECTE QUE LOHEN DIT A
+              QUELQU'UN DANS TOUT LE CHAPITRE. [OBL] Direction : plat,
+              sans chaleur ajoutee. Il enonce un fait.
+              [OBL] Prise refusee si elle est jouee emue.
+              [OBL] Sol ne repond pas. Iel continue de tresser.
+              [OBL] 3,4 s de silence, avec le bruit du cable.
+
+    [S8_SOL_L013]  2,0 s · plat · « Quatre metres de moins. Je l'ai dit. »
+
+    [S8_LOH_L014]  1,6 s · bas · « Je sais. »
+
+    [S8_SOL_L015]  2,8 s · plat · « Ca veut dire que les sauts que tu faisais avant, tu les fais plus. »
+        dir : [OBL] AVERTISSEMENT MECANIQUE REEL. [OBL] La portee du
+              grappin est effectivement reduite de 4 m pour tout S8.
+              [OBL] C'est la seule fois du chapitre ou un personnage
+              annonce un changement de regle de gameplay a voix haute.
+              [OBL] Et c'est un enfant qui le fait, en reparant.
+
+    [S8_LOH_L016]  2,2 s · bas · « Je ferai des plus petits. »
+
+    [S8_SOL_L017]  1,8 s · plat · « Voila. »
+
+    [S8_SOL_L018]  2,4 s · plat · « Tends. »
+
+    [S8_LOH_L019]  1,2 s · bas · « La ? »
+
+    [S8_SOL_L020]  2,0 s · plat · « Plus fort. »
+
+    [S8_SOL_L021]  2,6 s · plat · « Plus fort que ca, t'as peur de quoi. »
+
+    [S8_LOH_L022]  1,8 s · bas · « De le casser. »
+
+    [S8_SOL_L023]  3,0 s · plat · « Il est deja casse. On peut plus le casser, on peut que le refaire. »
+        dir : [OBL][NAR] Sol enonce, sans le savoir, la these du
+              chapitre 1. [OBL] Aucune musique. Aucun plan de reaction.
+              [OBL] Interdit absolu : ne jamais reprendre cette phrase
+              dans un trailer, une accroche de boutique ou un carton.
+              Job CI `no-tagline-l023` (verification manuelle a la
+              revue marketing).
+
+    [S8_LOH_L024]  1,4 s · bas · « D'accord. »
+
+    [S8_SOL_L025]  2,2 s · plat · « Voila. Fini. »
+
+    [S8_SOL_L026]  2,8 s · plat · « Essaye sur le crochet la-bas, pas sur moi. »
+
+    [S8_LOH_L027]  1,6 s · bas · « J'allais pas essayer sur toi. »
+
+    [S8_SOL_L028]  2,4 s · plat · « Les adultes font n'importe quoi quand ils sont contents. »
+
+    [S8_LOH_L029]  2,0 s · bas · « Je suis pas content. »
+
+    [S8_SOL_L030]  2,6 s · plat · « Non. Mais t'es moins pas-content qu'a la grille. »
+        dir : [OBL][NAR] SOL A MESURE L'ETAT DE LOHEN SUR SEPT HEURES.
+              [OBL] Iel a raison. [OBL] C'est la seule evaluation de
+              l'evolution du personnage principal donnee par le jeu.
+              Il n'y a aucune statistique, aucune jauge, aucun ecran de
+              fin. Il y a cette ligne.
+
+    [S8_LOH_L031]  1,8 s · bas · « Peut-etre. »
+
+    [S8_SOL_L032]  2,2 s · plat · « Bon. Monte. »
+
+    [S8_LOH_L033]  1,4 s · bas · « Oui. »
+
+    [S8_SOL_L034]  0,0 s · — · (slot sans VO)
+        dir : [OBL] Sol s'assoit contre la porte et regarde ailleurs.
+              Anim SOL-SIT-009, 3,1 s. [OBL] Iel ne dit pas au revoir.
+              [OBL] Iel ne dira plus une seule ligne du chapitre.
+              [OBL] Sol parle dans quatre sequences du chapitre 1 :
+              S3, S5 (de loin la plus nourrie), S7 et ici. [OBL] La
+              derniere est
+              « Bon. Monte. » [OBL] C'est volontaire : la derniere
+              chose que Sol dit a Lohen est de continuer.
+
+--- CHECKLIST ---------------------------------------------------------------------------------
+
+[ ] Epissage a quatre torons anime correctement, 18,2 s en boucle
+[ ] L011 : dite sans reproche
+[ ] L012 : jouee plat, prise refusee sinon
+[ ] L015 : seule annonce diegetique d'un changement de regle
+[ ] L023 : jamais utilisee en marketing — CI `no-tagline-l023`
+[ ] L032 : derniere ligne de Sol du chapitre
+[ ] Les 40 premieres secondes non skippables, la sortie n'est pas signalee

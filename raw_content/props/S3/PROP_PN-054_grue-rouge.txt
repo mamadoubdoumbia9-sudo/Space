@@ -1,0 +1,112 @@
+===============================================================================
+PN-054 — LA GRUE ROUGE
+===============================================================================
+Asset : SM_S3_Grue_Rouge · S3, extremite nord du Marche, plantee dans le
+verre, visible depuis toute la sequence · ~02:52 · prop narratif ·
+pas d'Echo · LOD0 11 600 tris
+
+§ 1 — CE QU'ON VOIT
+Une grue portuaire a fleche relevable, 34 metres de haut, rouge minium.
+Elle est debout dans le verre, seule, a 60 m du Marche.
+Sa fleche est BAISSEE — pas en position de repos (verticale) mais tendue a
+l'horizontale, pointant vers le large, vers le nord, vers rien.
+Au bout de la fleche, le cable pend sur 31 metres, avec son crochet, et le
+crochet touche le verre.
+Il y a une charge accrochee au crochet. Un conteneur de bois cercle de fer,
+2 x 2 x 2 m, pose sur le verre, toujours elingue.
+La grue est rouge. Vraiment rouge. Minium industriel, entretenu, repeint
+tous les deux ans par la capitainerie.
+[OBL] C'est le plus grand objet colore du chapitre et la plus grande masse
+de rouge du jeu. Elle est visible depuis 71 % des points de S3.
+En haut, la cabine du grutier. Sa porte est ouverte. Elle bat.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 11 600, 5 niveaux de LOD (elle est visible de tres loin et de tres
+pres). LOD4 a 840 tris pour les vues depuis S1 et S2 — [OBL] elle est
+visible depuis les quais, a 1,9 km, comme un trait rouge dans la brume.
+Verifier sa presence dans les scenes S1, S2, S3, S7 et S8.
+Structure : treillis metallique. [OBL] Les poutrelles sont en geometrie,
+pas en alpha. Une grue en cartes d'alpha se voit immediatement en
+silhouette contre le ciel, et cette grue est TOUJOURS en silhouette contre
+le ciel.
+Cable : 31 m, spline, 400 tris, avec une catenaire correcte.
+Anim : PROP-766 — la porte de la cabine bat. 22 cm d'amplitude, irregulier,
+toutes les 8-30 s. [OBL] C'est le seul grand mouvement visible du chapitre :
+a 34 m de haut, sur 60 m de distance, une porte qui bat. On la voit de
+partout.
+Shader `paint_minium_industrial` + `rust_streak` (coulees depuis les
+boulons, sur 3 ans).
+
+§ 3 — CE QUE CA DIT
+Un grutier chargeait un conteneur a 23h41.
+La fleche tendue, le cable deroule, la charge elinguee : la manoeuvre est en
+cours. Le conteneur n'est ni sur le quai ni sur le bateau : il est entre
+les deux, pose sur ce qui etait de l'eau.
+Le geste humain : descendre une charge. Precisement, lentement, en la
+guidant.
+La porte de la cabine, ouverte, 34 m plus haut.
+[OBL] Elle etait ouverte avant. Un grutier travaille porte ouverte : il a
+besoin de voir et d'entendre les hommes en bas.
+[NAR] Le grutier est dans la cabine ? Non. Il n'y a personne. [OBL] Le
+joueur ne peut PAS monter dans la grue. Il n'y a pas d'echelle accessible :
+les trois premiers metres de l'echelle ont ete demontes, comme sur toutes
+les grues du monde, pour empecher les enfants de grimper.
+
+§ 4 — ECHO
+NEANT. [OBL] Double impossibilite : elle est plantee dans la Maree (regle
+PN-011) et elle est inatteignable. Le joueur ne s'en approchera jamais a
+moins de 60 m.
+[ART] C'est le plus gros objet du chapitre et le plus definitivement muet.
+
+§ 5 — MISE EN SCENE
+[OBL] Elle est le repere visuel de S3. Depuis n'importe quel point du
+Marche, le joueur peut se situer par rapport a elle.
+Elle remplace la mini-carte, qui n'existe pas (14.03).
+[ART] C'est la fonction de design la plus importante du prop : un joueur
+perdu dans une structure a trois niveaux et six passerelles a besoin d'un
+nord. Le nord est rouge, il fait 34 m, et une porte y bat.
+Composition : elle est cadree naturellement dans 4 des 6 vues d'entree de
+passerelle. Aucune de ces compositions n'est forcee : c'est le placement du
+prop qui les produit.
+Le Phare Saint-Ambre est visible dans le meme cadre, plus loin, a gauche.
+[OBL] Les deux verticales du chapitre — la grue rouge (34 m, proche,
+horizontale, inutile) et le Phare (212 m, lointain, vertical, destination).
+Elles sont toujours dans le meme cadre et jamais commentees.
+
+§ 6 — AUDIO
+SFX(steel_door_bang_far) : la porte de la cabine, a 60 m et 34 m de haut.
+[OBL] Le son arrive avec un RETARD de 0,18 s sur l'image (60 m / 340 m/s).
+C'est calcule, pas approxime. Le joueur voit la porte claquer et entend
+apres.
+[ART] C'est le seul endroit du jeu ou la vitesse du son est simulee, et il
+n'y en a qu'un parce que c'est le seul endroit ou la distance le permet.
+-19 dB, filtre passe-bas 2 kHz (l'air absorbe les aigus sur 60 m).
+SFX(cable_wind_moan) : le cable de 31 m chante par grand vent. Une note
+grave, modulee, toutes les 40-90 s. -24 dB.
+Aucune musique liee au prop. M10 tourne normalement.
+
+§ 7 — INTERDICTIONS
+Interdit de : permettre de monter dans la grue · ouvrir le conteneur ·
+reveler son contenu · faire bouger la fleche ou le cable · faire tomber la
+charge · donner un Echo · ajouter un grutier · ajouter un corps · repeindre
+· la faire s'effondrer · l'utiliser comme pont, passage ou raccourci ·
+la supprimer d'une des cinq scenes ou elle doit apparaitre · approximer le
+retard du son.
+
+§ 8 — LIENS
+PN-024 (L'Hirondelle) : l'autre grande machine arretee en pleine manoeuvre.
+PN-114 (le cable casse du grappin, S7). PN-055 (le clocher penche, l'autre
+verticale du Marche).
+Le Phare Saint-Ambre (S8) : la verticale qui compte.
+[THEME] LE TRAVAIL INTERROMPU, a la plus grande echelle du chapitre.
+[THEME] LES DEUX VERTICALES.
+
+§ 9 — DOD
+[ ] Treillis en geometrie, jamais en alpha, silhouette propre contre le ciel
+[ ] Visible et coherente dans les scenes S1, S2, S3, S7, S8 (LOD4 a 1,9 km)
+[ ] Fleche horizontale pointant au nord, cable de 31 m, charge elinguee
+[ ] Porte de cabine battante, 22 cm, irreguliere, visible de partout
+[ ] Retard du son calcule a 0,18 s, filtre passe-bas 2 kHz
+[ ] Trois premiers metres d'echelle demontes
+[ ] Visible depuis >= 70 % des points de S3 ; sert de repere d'orientation
+[ ] Toujours dans le meme cadre que le Phare, jamais commentee

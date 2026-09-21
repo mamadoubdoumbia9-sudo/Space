@@ -1,0 +1,107 @@
+===============================================================================
+  A-243   dance_step_basic_esteban
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 243 / 744
+  Partie 2 — ESTEBAN
+  Categorie : LOCOMOTION
+  Fichier source  : A_Esteban_Loc_dance_step_basic_esteban_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 2.000 s  (60 frames a 30 fps)
+  Type .................. BOUCLE
+  Root motion ........... RM-ROT
+  Blend in / out ........ 0.25 s / 0.25 s
+  Couche AnimationTree .. L0
+  Priorite .............. 90 — narratif / interaction (bande 80-94, bareme 0.05)
+  Poids compresse cible . ~44 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      jambes completes, pelvis, spine_01-03, bras contrebalances, IK de pied
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  ESTEBAN — 31 ans, accordeur de cloches. Plus grand que Lohen, roux.
+
+  Il ne tient pas en place. Il parle avec LES DEUX mains (Lohen n'en utilise
+  qu'une). Il est en avance sur le temps, jamais en retard. Gestes signature
+  : E1 il range sa meche et il RATE, E2 il sourit du cote gauche seulement,
+  E3 il tapote deux fois avant de parler serieusement. [OBL] Seul personnage
+  du jeu SANS REVERB, en toutes circonstances (11.06). [OBL] Aucun Echo ne
+  le montre, sauf E21.
+
+  Rig et costume :
+      gilet (cloth simule dans E21), crayon de charpentier derriere
+      l'oreille, carnet en poche de poitrine, montre
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  [OBL] IL DANSE MAL AUSSI, MAIS AUTREMENT. Lohen est raide et en retard.
+  Esteban est EN AVANCE et trop ample : il anticipe le temps, il exagere les
+  mouvements, il mene trop fort. Il a l'air de savoir danser et il ne sait
+  pas. Le contraste des deux mauvaises danses est ce qui rend la scene
+  tendre et drole (voir LOH-NAR-200).
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Cyclage [OBL 0.03] : la frame 0 et la frame 60 sont identiques
+  a 0.001 pres. Verifie par `tools/loop_check.py`, qui echoue le
+  build en cas de saut.
+
+  Evenements de timeline :
+      FOOTSTEP(parquet) f0, f18, f38 (en avance sur la mesure) Face : `joy`
+      0.7 · SFX(laugh) aleatoire
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- dance_start ; -> dance_step_turn_esteban
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · cyclage frame 0 == frame 60 (tolerance 0.001)
+      · seule la rotation vient de l'anim ; la translation est pilotee par
+      le code (reactivite prioritaire)
+      · les clauses [OBL] de la section 3 sont verifiees en revue, pas
+      seulement en lecture
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-243
+===============================================================================

@@ -1,0 +1,121 @@
+===============================================================================
+PN-121 — LES ONZE OBJETS TOMBES DES FIGURES
+===============================================================================
+Asset : SM_S7_Objets_Figures · S7, rue basse, entre l'atelier et le pont ·
+~05:41 · prop RAMASSABLES (6 des 9, mais un seul peut etre pris) ·
+pas d'Echo · LOD0 3 400 tris
+
+§ 1 — CE QU'ON VOIT
+Dans la rue basse, sur 80 metres, il y a des objets par terre.
+Onze objets, espaces irregulierement, poses sur les pavés mouilles.
+Une montre de gousset. Un peigne d'ecaille. Une pipe. Une paire de gants.
+Un livre de poche. Une clef. Une bourse. Un mouchoir. Une paire de
+lunettes. Un carnet. Un anneau.
+[OBL] Ils sont tous PERSONNELS. Aucun n'est un dechet.
+Ils sont poses. Pas jetes : POSES. Chacun est a plat, dans une position
+stable, sans eclaboussure de chute.
+[OBL] Et sous chacun, le pavé est SEC. Un cercle sec de la taille de
+l'objet, alors qu'il pleut depuis une heure.
+Ils viennent d'etre poses.
+Le joueur n'a vu personne.
+[OBL] En levant les yeux, il voit, au bout de la rue, a 80 m, une FIGURE.
+Debout. Immobile. Comme celle de S2 (PN-037).
+Et quand il regarde a nouveau, elle n'est plus la.
+[OBL] Non. [OBL] Elle est toujours la. Elle ne bouge jamais. Cf. § 5.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 3 400 pour 11 objets (moyenne 310 tris).
+[OBL] Les 11 sont des sculpts individuels, detailles, avec des usures
+personnelles : la montre a un verre fele, le peigne a trois dents cassees,
+le livre a une page cornee, la clef a une etiquette de carton.
+[OBL] Ils appartiennent a onze personnes differentes. Ce n'est pas un lot.
+Les cercles secs : 11 decals de masquage sur le shader de mouillage du sol.
+[OBL] Ils s'estompent en 6 minutes de temps de jeu. Si le joueur revient
+plus tard, les objets sont mouilles comme tout le reste.
+[ART] La preuve qu'ils viennent d'etre poses disparait pendant qu'il joue.
+RAMASSABLE : [OBL] le joueur peut en prendre UN SEUL. Des qu'il en prend
+un, les dix autres perdent leur prompt.
+[OBL] Aucune explication. Aucun message. Le prompt disparait, c'est tout.
+LOH-ACT-221, 2,4 s.
+
+§ 3 — CE QUE CA DIT
+[OBL] Rien n'est explique. Jamais. Dans aucun des sept chapitres.
+Onze objets personnels ont ete poses dans une rue, il y a quelques minutes,
+par quelqu'un que le joueur n'a pas vu.
+Le geste humain : poser. Avec soin, a plat, sans les jeter.
+[NAR] Les Figures. Le joueur en a vu une en S2, a 300 m, dans la brume,
+pendant 90 secondes (PN-037). Il y en a une ici, a 80 m, au bout de la rue.
+[OBL] Elles ne sont jamais expliquees, jamais approchees, jamais nommees,
+jamais rencontrees, jamais hostiles.
+[OBL] Les onze objets n'appartiennent PAS aux Figures. Ils appartiennent a
+onze personnes. Les Figures les ont poses.
+[OBL] Rien de cela n'est dit. Le titre de la fiche est une hypothese de
+production, pas une verite du jeu.
+
+§ 4 — ECHO
+NEANT. [OBL] Onze objets personnels, sur un chemin, dans une sequence
+narrative majeure : c'est le profil exact d'un porteur d'Echo.
+Aucun prompt d'Echo. Sur aucun des onze.
+[OBL] Le joueur, a 5 h 41, connait le systeme par coeur. Le silence total de
+onze objets qui devraient parler est la derniere information du systeme
+avant E31.
+
+§ 5 — MISE EN SCENE
+[OBL] La Figure au bout de la rue : elle est REELLEMENT LA, statique,
+placee dans la scene au chargement, LOD verrouille, zero animation.
+Exactement comme PN-037.
+[OBL] Elle ne disparait pas. Elle ne bouge pas. Elle ne s'approche pas.
+[OBL] Le joueur PEUT marcher vers elle. Il y a 80 m. Le chemin est libre.
+[OBL] Quand il arrive a 12 m, la rue tourne. La Figure est dans l'axe. Il
+continue. A 6 m, il y a un mur : [OBL] la Figure est de l'autre cote d'une
+grille de fer fermee, dans une cour.
+Il la voit a 6 m, a travers une grille.
+[OBL] Elle mesure 1,74 m. Elle porte un manteau. Elle n'a pas de visage
+visible : la capuche, l'ombre, la pluie.
+[OBL] Elle ne reagit pas. Elle ne bouge pas. Elle ne le regarde pas.
+[OBL] Il peut rester la 10 minutes. Rien.
+[OBL] Quand il s'en va et qu'il revient : elle n'est plus la. La cour est
+vide. [OBL] La disparition n'est JAMAIS visible : elle se produit hors du
+champ, par un simple despawn quand le joueur ne regarde pas et qu'il est a
+plus de 30 m.
+[OBL] Aucun son. Aucune musique. Aucun evenement. Jamais.
+
+§ 6 — AUDIO
+NEANT sur les objets.
+[OBL] La Figure est totalement silencieuse. Aucun son, aucune respiration,
+aucun pas, aucun frottement de manteau, aucun sub-bass.
+[OBL] La courbe de mix est strictement identique qu'elle soit visible ou
+non, presente ou absente. Verifier au metre sur 80 m.
+M23 « La Descente » continue, inchangee.
+SFX(object_lift_wet) : l'objet ramasse, un seul son.
+
+§ 7 — INTERDICTIONS
+Interdit de : expliquer les Figures · les faire bouger · les faire parler ·
+les faire approcher · les rendre hostiles · montrer un visage · ajouter un
+son · ajouter de la musique · ajouter un stinger · faire disparaitre la
+Figure dans le champ · permettre de prendre plus d'un objet · expliquer
+pourquoi un seul · afficher un message · identifier les proprietaires des
+onze objets · les relier aux 641 · resoudre dans les six lettres suivantes.
+[OBL] L'objet ramasse n'a AUCUNE fonction. Il ne sert a rien. Il reste dans
+la sacoche. Il est consultable (LOH-ACT-146). C'est tout.
+
+§ 8 — LIENS
+PN-037 (la Figure immobile, S2) : [OBL] meme asset, meme regles, meme
+silence. Le joueur qui l'a vue en S2 (22-30 %) reconnait celle-ci.
+PN-088 (les 11 objets coinces dans la grille du puits, S5) : [OBL] ONZE,
+encore. [OBL] Aucun lien. Faux echo volontaire.
+PN-053, PN-090 (les tris de Sol).
+PN-031 (la main dans le verre, S2), PN-030 (le puits de chaleur),
+PN-094 (les plaques de mue) : les anomalies non expliquees du chapitre.
+[THEME] LE MONDE NE DOIT PAS DE COMPTES.
+
+§ 9 — DOD
+[ ] 11 objets personnels, sculpts individuels, usures distinctes
+[ ] Poses a plat, stables, sans eclaboussure de chute
+[ ] 11 cercles secs s'estompant en 6 minutes de jeu
+[ ] Un seul ramassable ; les 10 autres perdent leur prompt sans message
+[ ] Figure statique a 80 m, 1,74 m, derriere une grille a 6 m
+[ ] Zero animation, zero son, zero reaction, zero disparition visible
+[ ] Courbe de mix identique avec et sans la Figure, verifiee sur 80 m
+[ ] Aucun prompt d'Echo sur aucun des onze
+[ ] L'objet pris n'a aucune fonction dans les 7 chapitres

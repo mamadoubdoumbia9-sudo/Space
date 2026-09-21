@@ -1,0 +1,150 @@
+===============================================================================
+DLG · S4 · D04 — LE DOSSIER EST VIDE : LA POUSSIERE EST PROPRE
+22 entrees, toutes S4. LOH 14 · MIR 8. Contribution : 22.
+Reference maitre : 09.13 REVELATION. Prop : PN-119 (le dossier Esteban,
+ramassable et JAMAIS OUVERT — canon annexe B).
+===============================================================================
+
+--- CE QUI SE PASSE --------------------------------------------------------------------
+
+Casier 4, rangee M, troisieme tiroir. Le dossier est la. Il porte le nom.
+Il est vide.
+
+[OBL] Autour de l'emplacement, la poussiere est propre : un rectangle net
+de 32 x 24 cm. Quelqu'un a sorti le contenu recemment. [OBL] Le joueur
+peut zoomer. Il n'y a pas de prompt pour le lui dire. Le rectangle est
+visible a l'oeil si on regarde.
+
+[OBL] AUCUNE MUSIQUE (il n'y en a pas de toute la sequence). Aucun
+sursaut de camera. Aucun effet. Lohen ouvre une chemise cartonnee vide,
+et le jeu continue exactement comme avant.
+
+--- LES 22 LIGNES ------------------------------------------------------------------------
+
+    [S4_LOH_L099]  LOHEN · 2,0 s · plat · p1,4
+        « Casier quatre. »
+
+    [S4_LOH_L100]  LOHEN · 1,6 s · plat · p1,1
+        « Rangee M. »
+
+    [S4_LOH_L101]  LOHEN · 1,4 s · plat · p2,2
+        « Troisieme. »
+        dir : il l'ouvre. Anim LOH-ACT-066, 3,1 s, sans precipitation.
+              [OBL] Pause de 2,2 s ecrite : le tiroir coulisse dans le
+              silence le plus complet du chapitre jusqu'ici.
+
+    [S4_LOH_L102]  LOHEN · 1,2 s · plat · p1,8
+        « Marek. »
+        dir : il lit le nom sur la chemise. D'un coup, couramment.
+
+    -- Il l'ouvre. Elle est vide. --
+
+    [S4_LOH_L103]  LOHEN · 0,0 s · — · p0,0
+        (slot sans VO — whitelist `vo-orphan`)
+        dir : [OBL] IL NE DIT RIEN PENDANT 6,4 SECONDES. C'est le
+              silence le plus long tenu par Lohen en presence du joueur
+              avant S8. Anim LOH-IDL-018 : il tient la chemise ouverte
+              a deux mains, immobile. Aucun tremblement, aucun
+              affaissement d'epaules. [OBL] Direction d'animation :
+              « il ne se passe rien dans son corps ». C'est plus dur a
+              animer et c'est le bon choix.
+
+    [S4_LOH_L104]  LOHEN · 1,8 s · plat · p1,6
+        « Elle est vide. »
+
+    [S4_LOH_L105]  LOHEN · 2,4 s · plat · p1,2
+        « La poussiere est propre. »
+        dir : [OBL] declenchee SEULEMENT si le joueur a zoome sur le
+              rectangle. Sinon, cette ligne n'existe pas et le joueur
+              ne saura jamais que le dossier a ete vide recemment.
+              38 % des joueurs zooment. Les 62 % restants croient que
+              le dossier n'a jamais rien contenu, et le chapitre
+              fonctionne quand meme — differemment.
+
+    [S4_LOH_L106]  LOHEN · 2,0 s · plat · p0,9
+        « Recemment. »
+
+    -- Il retourne voir Mireille. Elle n'a pas bouge. --
+
+    [S4_LOH_L107]  LOHEN · 1,6 s · plat · p1,1
+        « Il est vide. »
+
+    [S4_MIR_L108]  MIREILLE · 1,4 s · plat · p1,3
+        « Je sais. »
+        dir : [OBL] M1. Elle boit. [OBL] Elle repond immediatement.
+              Aucune feinte, aucune surprise jouee. C'est la reponse la
+              plus brutale de la sequence et elle tient en deux mots.
+
+    [S4_LOH_L109]  LOHEN · 1,2 s · sec · p1,0
+        « Vous saviez. »
+
+    [S4_MIR_L110]  MIREILLE · 2,6 s · plat · p1,2
+        « Je sais ce qu'il y a dans chaque casier de ce batiment. C'est
+          mon metier. »
+
+    [S4_LOH_L111]  LOHEN · 1,8 s · sec · p0,9
+        « Pourquoi m'y envoyer ? »
+
+    [S4_MIR_L112]  MIREILLE · 3,2 s · plat · p1,4
+        « Parce que vous ne m'auriez pas crue. Vous seriez reste ici
+          trois jours a me demander de verifier. »
+        dir : [OBL] elle a raison et le joueur le sait. M2, 3e
+              occurrence.
+
+    [S4_LOH_L113]  LOHEN · 1,4 s · plat · p1,1
+        « Qui l'a vide ? »
+
+    [S4_MIR_L114]  MIREILLE · 1,0 s · sec · p1,6
+        « Non. »
+        dir : [OBL] elle repond « non » a une question en « qui »,
+              exactement comme Garric en S3 (S3_GAR_L227). [OBL] C'est
+              volontaire : c'est la formule de refus de cette ville.
+              Deux personnes qui ne se connaissent pas emploient le
+              meme tour. Personne ne le releve.
+
+    [S4_LOH_L115]  LOHEN · 1,6 s · plat · p1,0
+        « C'est vous. »
+
+    [S4_MIR_L116]  MIREILLE · 2,2 s · plat · p1,3
+        « Non. »
+        dir : [OBL] LA VERITE. Ce n'est pas elle. [NAR] C'est le
+              Verrier — Anselme Roux — qui a vide le dossier, et il le
+              rendra a Lohen en S7 sans un mot (canon 12.16). Mireille
+              le sait. Elle ne le dira jamais. Aucun dialogue du
+              chapitre ne l'explique : le joueur comprend en S7 quand
+              une main de deux metres soixante lui tend le contenu.
+
+    [S4_LOH_L117]  LOHEN · 2,0 s · sec · p1,2
+        « Vous mentez encore ? »
+
+    [S4_MIR_L118]  MIREILLE · 2,8 s · plat · p1,5
+        « Pas sur ca. »
+        dir : [OBL] et c'est vrai. [OBL] Le joueur n'a aucun moyen de
+              le savoir maintenant. Il le saura en S7. Le jeu tient sa
+              promesse, avec deux heures de retard.
+
+    [S4_LOH_L119]  LOHEN · 1,4 s · plat · p1,1
+        « Alors quoi. »
+
+    [S4_MIR_L120]  MIREILLE · 3,6 s · plat · p0,0
+        « Alors vous vous asseyez, vous buvez ce the immonde, et vous
+          me laissez vous raconter une chose que vous n'avez pas
+          demandee. »
+        dir : [OBL] fin du document. Elle enchaine directement sur D05
+              si le joueur s'assoit. S'il ne s'assoit pas, D05 n'existe
+              pas : 24 lignes de Mireille perdues pour cette partie,
+              dont MIR-DLG-372 — l'une des DEUX occurrences autorisees
+              du mot « amour » dans tout le jeu.
+              [OBL] Ce joueur-la finira le chapitre avec une seule
+              occurrence. Le job CI `word-amour` compte les occurrences
+              dans le CONTENU (2), pas dans une partie donnee.
+
+--- CHECKLIST ------------------------------------------------------------------------
+
+[ ] Dossier vide, aucun effet, aucune musique, aucun sursaut de camera
+[ ] Rectangle de poussiere propre : visible, sans prompt
+[ ] L103 : 6,4 s de silence, corps immobile, slot sans VO
+[ ] L105 conditionnee au zoom (38 %)
+[ ] L114 : meme formule de refus que Garric, non commentee
+[ ] L116/L118 : Mireille dit la verite, verifiable seulement en S7
+[ ] D05 perdu si le joueur ne s'assoit pas

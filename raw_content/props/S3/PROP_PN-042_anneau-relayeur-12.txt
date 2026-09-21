@@ -1,0 +1,129 @@
+===============================================================================
+PN-042 — L'ANNEAU DE RELAYEUR NUMERO 12
+===============================================================================
+Asset : SM_S3_Anneau_Relayeur · S3, poteau de relais, passerelle nord ·
+~02:11 · PORTEUR D'ECHO E07 · LOD0 1 600 tris
+
+§ 1 — CE QU'ON VOIT
+Un poteau de fer de 2,20 m, scelle dans la plateforme, surmonte d'une
+couronne de douze ANNEAUX de laiton, disposes en cercle, comme les heures
+d'une horloge. Chaque anneau porte un numero frappe, de 1 a 12.
+C'est un poste de relais : le relayeur qui passe accroche sa sacoche a
+l'anneau de son secteur, prend celle qui y pend, et repart. Un systeme de
+correspondance sans rencontre. Deux hommes qui se relaient sans jamais se
+voir.
+Onze anneaux sont vides.
+L'anneau numero 12 porte encore une sacoche. Cuir brun, bandouliere, rabat
+ferme par une boucle.
+Elle est gonflee. Elle est pleine. Elle pend depuis trois ans.
+Le cuir a durci et pris la forme de l'anneau. La bandouliere s'est usee
+contre le laiton jusqu'a presque ceder : il reste 4 mm de cuir.
+
+§ 2 — FICHE TECHNIQUE
+LOD0 1 600 (poteau 400 + 12 anneaux 480 + sacoche 720).
+Les 12 numeros : frappes en creux (0,6 mm), en geometrie, lisibles.
+La sacoche : mesh sculpte dans son etat gonfle et durci, aucune simulation.
+[OBL] Le point d'usure de la bandouliere sur l'anneau est le detail
+critique : 4 mm de cuir restant, avec les fibres visibles, en geometrie.
+C'est ce qui dit les trois ans mieux que n'importe quelle texture.
+Shader `leather_hardened` + `brass_worn`.
+Anim : PROP-745 — la sacoche oscille de 2 cm au vent, 0,25 Hz. [OBL] Son
+mouvement est LOURD et court : elle est pleine, elle pese, elle ne balance
+pas comme un objet vide.
+Collision : capsule. [OBL] NON ramassable. Lohen ne prend pas la sacoche.
+Le prompt est un prompt d'Echo.
+
+§ 3 — CE QUE CA DIT
+Un relayeur a accroche sa sacoche a l'anneau 12 et n'est jamais revenu.
+Et le relayeur du secteur 12, celui qui devait venir la chercher, n'est
+jamais venu non plus.
+Le geste humain : accrocher une sacoche a un anneau et repartir sans
+attendre. Le systeme fonctionne sur la confiance. On ne verifie pas. On
+sait que l'autre viendra.
+[NAR] Lohen est relayeur. Il connait ce poteau, ce systeme, cette sacoche.
+Il sait exactement combien de courrier il y a dedans et depuis combien de
+temps il n'est pas parti.
+[OBL] Il ne le dit pas. Il n'y a aucun dialogue, aucune voix off, aucune
+explication du systeme des relais. Le joueur comprend par la forme : douze
+anneaux numerotes, onze vides, un plein.
+
+§ 4 — ECHO
+ECHO E07 — « Le relais » — 33 secondes, mode A.
+Deroulement : deux silhouettes. Elles n'arrivent pas en meme temps.
+A 0 s : une silhouette entre par la gauche, marche vite, decroche une
+sacoche de l'anneau 5, en accroche une autre, repart par la droite. Duree :
+7 secondes. Elle ne s'arrete pas une seconde. Elle ne regarde rien.
+De 7 s a 19 s : rien. Le poteau seul. Douze secondes de poteau.
+A 19 s : une deuxieme silhouette entre par la droite, celle d'ou la
+premiere est partie. Elle va a l'anneau 5. Elle prend la sacoche.
+Elle s'arrete.
+[OBL] Elle reste immobile 6 secondes, la sacoche a la main, face a la
+direction ou l'autre est partie.
+A 28 s : elle repart par la gauche. Elle s'efface a 31 s.
+[NAR] Ils se sont manques de douze secondes. Ils se manquaient tous les
+jours. C'etait le principe du metier.
+[OBL] Aucune des deux silhouettes ne touche l'anneau 12. La sacoche pleine
+est deja la, dans l'Echo, exactement comme au present. Detail obligatoire :
+l'Echo montre un jour ordinaire, pas le dernier jour. La sacoche de
+l'anneau 12 pendait deja. Quelqu'un ne venait deja plus.
+Musique : M11 « Deux qui se manquent », deux lignes de clarinette qui ne
+jouent jamais en meme temps. La premiere s'arrete a 7 s. La seconde
+commence a 19 s. Entre les deux, 12 secondes de silence.
+[OBL] Les deux lignes sont la meme melodie, decalee. Elles ne se
+superposent jamais, pas une note.
+Rituel d'entree : 2,44 s.
+
+§ 5 — MISE EN SCENE
+Le poteau est au milieu de la passerelle nord, qu'il faut contourner.
+Il est a hauteur d'homme : les douze anneaux sont a 2,10 m, donc au-dessus
+du regard. Le joueur doit lever la tete pour lire les numeros.
+La sacoche, elle, pend a 1,60 m — a hauteur de poitrine.
+[ART] On voit la sacoche avant de comprendre le systeme. On voit l'objet
+avant le sens. C'est l'ordre juste.
+Lumiere : le laiton des onze anneaux vides accroche le ciel. Douze petits
+eclats en cercle. Le douzieme est eteint, masque par la sacoche.
+Apres E07 : Lohen reste. LOH-IDL-212, 3,2 s — il regarde la sacoche, leve
+la main droite a mi-hauteur, la baisse. Interruptible.
+[OBL] C'est la troisieme fois du chapitre que Lohen leve une main et la
+baisse sans toucher (PN-022, PN-025, PN-042). Le geste est identique a
+l'image pres. Il se repetera six fois en tout. La septieme fois, en S8, il
+ne la baissera pas.
+
+§ 6 — AUDIO
+SFX(leather_creak_heavy) : la sacoche, 0,25 Hz, un cuir dur qui grince.
+SFX(brass_ring_tick) : les onze anneaux vides s'entrechoquent par rafales,
+un son clair et leger — onze petites cloches. Contraste avec le cuir mort.
+Pendant E07 : les pas des deux silhouettes sont PLEINS et proches (comme
+ceux du parapluie de PN-023, § 6). Le cuir, les boucles, le souffle court
+de quelqu'un qui marche vite.
+[OBL] Pendant les 12 secondes de rien, au milieu de l'Echo, on entend
+l'ambiance du monde d'AVANT, tres bas : une ville habitee, tres loin, sans
+un detail identifiable. Une rumeur. -34 dB.
+C'est la seule fois du chapitre ou l'on entend Velmora vivante sans etre
+dans un Echo de mode B.
+
+§ 7 — INTERDICTIONS
+Interdit de : ramasser la sacoche · l'ouvrir · en reveler le contenu ·
+faire prendre ou poser quoi que ce soit a Lohen · expliquer le systeme des
+relais en texte ou en dialogue · faire se rencontrer les deux silhouettes ·
+superposer les deux lignes de clarinette · montrer un visage · faire
+commenter Lohen · rendre E07 rejouable · numeroter un treizieme anneau.
+
+§ 8 — LIENS
+PN-018 (la borne de relais, S1 : le meme metier, le jeton 0114).
+PN-048 (la sacoche de Lohen, E11, a 20 minutes d'ici) : la sienne, pleine
+aussi, qu'il porte depuis trois ans.
+PN-059 (les six lettres a livrer). PN-141 (le carnet du Phare, S8).
+PN-143 : « Des mains qui portent le courrier de toute une ville et qui ne
+recoivent jamais rien. »
+[THEME] SE MANQUER. [THEME] PORTER POUR LES AUTRES.
+
+§ 9 — DOD
+[ ] 12 anneaux numerotes en creux, 11 vides, le 12 charge
+[ ] Bandouliere usee jusqu'a 4 mm, fibres visibles en geometrie
+[ ] Sacoche sculptee gonflee et durcie, oscillation lourde de 2 cm
+[ ] E07 : 7 s / 12 s de rien / 6 s d'immobilite / depart a 28 s
+[ ] Les deux lignes de M11 ne se superposent jamais, verifie note a note
+[ ] Rumeur de ville habitee a -34 dB pendant les 12 s centrales
+[ ] LOH-IDL-212 identique image par image a LOH-IDL-093 et LOH-IDL-167
+[ ] Sacoche non ramassable, jamais ouverte, jamais expliquee

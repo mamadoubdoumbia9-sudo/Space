@@ -1,0 +1,106 @@
+===============================================================================
+  A-268   line_E21_11_dirty_hands
+===============================================================================
+
+  ANNEXE A2 — FICHE D'ANIMATION AUTONOME 268 / 744
+  Partie 2 — ESTEBAN
+  Categorie : ACTING / DIALOGUE
+  Fichier source  : A_Esteban_Act_line_e21_11_dirty_hands_v01.glb
+  Reference maitre : LOHEN_PROMPT_MASTER.txt BLOC 07 · ANIM_MANIFEST_744.txt
+  Origine de la fiche : manifeste
+
+-------------------------------------------------------------------------------
+1. IDENTITE TECHNIQUE
+-------------------------------------------------------------------------------
+
+  Duree ................. 3.800 s  (114 frames a 30 fps)
+  Type .................. ONE-SHOT
+  Root motion ........... RM-NONE
+  Couche AnimationTree .. L0+L4
+  Priorite .............. 92 — narratif / interaction (bande 80-94, bareme 0.05)
+  Poids compresse cible . ~175 Ko (budget global 42 Mo, 0.12)
+
+  Os principalement sollicites :
+      buste, bras, mains, tete, machoire, blendshapes faciaux 60 fps
+
+  Tolerances de compression de courbe :
+      · position 0.002
+      · rotation 0.0015
+      · echelle 0.004
+      · doigts 0.006 (chaines de doigts dominantes sur ce clip)
+
+-------------------------------------------------------------------------------
+2. CONTEXTE DE PERSONNAGE (reporte ici pour l'autonomie)
+-------------------------------------------------------------------------------
+
+  ESTEBAN — 31 ans, accordeur de cloches. Plus grand que Lohen, roux.
+
+  Il ne tient pas en place. Il parle avec LES DEUX mains (Lohen n'en utilise
+  qu'une). Il est en avance sur le temps, jamais en retard. Gestes signature
+  : E1 il range sa meche et il RATE, E2 il sourit du cote gauche seulement,
+  E3 il tapote deux fois avant de parler serieusement. [OBL] Seul personnage
+  du jeu SANS REVERB, en toutes circonstances (11.06). [OBL] Aucun Echo ne
+  le montre, sauf E21.
+
+  Rig et costume :
+      gilet (cloth simule dans E21), crayon de charpentier derriere
+      l'oreille, carnet en poche de poitrine, montre
+
+-------------------------------------------------------------------------------
+3. DIRECTION D'ACTEUR — CE QUE LE MOUVEMENT DIT
+-------------------------------------------------------------------------------
+
+  [NAR][OBL] LA PHRASE. Celle qui revient dans la lettre 1 h 45 plus tard
+  (20.03) et qui declenche les cinq notes de cloche (19.09). Direction
+  d'acteur : il la dit en REGARDANT LA PAUME, pas le visage. Ton neutre,
+  presque clinique. Aucune emphase. Aucune tendresse audible. [OBL] L'acteur
+  ne doit SURTOUT PAS jouer le sous-texte. Le sous-texte sera revele par la
+  lettre. Si on l'entend maintenant, la lettre ne fonctionne plus. C'est la
+  direction d'acteur la plus contre-intuitive du projet et c'est la plus
+  importante.
+
+-------------------------------------------------------------------------------
+4. TIMELINE ET EVENEMENTS
+-------------------------------------------------------------------------------
+
+  Fenetre de lisibilite [OBL 07.02] : le mouvement visible commence
+  avant la frame 5 (166 ms). Aucune derogation.
+
+  Clip ONE-SHOT : pas de contrainte de cyclage. La derniere frame
+  doit poser une silhouette blendable vers les etats de sortie.
+
+  Evenements de timeline :
+      Face : `neutral` (0.1 de tendresse maximum, pas plus) L5 =
+      `lohen_palm` 100 %
+
+-------------------------------------------------------------------------------
+5. TRANSITIONS
+-------------------------------------------------------------------------------
+
+      <- idle de dialogue du personnage ; -> ligne suivante, ou idle
+      d'ecoute
+
+-------------------------------------------------------------------------------
+6. VALIDATION [DOD]
+-------------------------------------------------------------------------------
+
+  Regle des trois passes (0.10) :
+      P1 BLOCKING  poses cles seules, lisibilite validee
+      P2 SPLINE    courbes, timing, overlap, follow-through
+      P3 POLISH    doigts, tissu, respiration, micro-desequilibres
+  Aucun clip n'entre en build release sans P3 signee dans
+  /docs/anim_manifest.csv.
+
+  Test de la silhouette animee (0.11) : rendu en aplat noir sur fond
+  blanc, regarde a 0.5x. Si la pose cle n'est pas lisible en silhouette
+  a n'importe quelle frame, elle est reprise.
+
+  Controles specifiques a ce clip :
+      · les clauses [OBL] de la section 3 sont verifiees en revue, pas
+      seulement en lecture
+      · aucune cle sur un os que le clip n'anime pas reellement
+      (`tools/strip_dead_keys.py`, 0.03)
+
+===============================================================================
+  FIN DE FICHE A-268
+===============================================================================
