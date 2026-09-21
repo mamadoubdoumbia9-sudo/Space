@@ -180,13 +180,16 @@ public final class GameRenderer implements GLSurfaceView.Renderer {
         float fade = game.hud.deathFade();
         int fadeColor = 0xFF04060A;
         float saturation = Palette.saturationFor(game.sequence());
+        if (game.level() != null) {
+            saturation = game.level().sky.saturation;
+        }
         if (game.echo.active()) {
-            /* 09.15 : l'Echo de la salle de bal monte a 0,70, le pic absolu */
-            saturation = game.echo.mode() == 'C' ? 0.30f : 0.70f;
+            /* 09.15 : l'Echo de la salle de bal reste le pic absolu */
+            saturation = game.echo.mode() == 'C' ? 0.34f : 0.85f;
         }
         float exposure = game.options.brightness * (1f + game.lighthouse.dawnEv());
-        float grain = game.options.grain && !game.options.reducedFlashes ? 0.035f : 0f;
-        float vignette = game.options.vignette ? 0.20f : 0f;
+        float grain = game.options.grain && !game.options.reducedFlashes ? 0.012f : 0f;
+        float vignette = game.options.vignette ? 0.08f : 0f;
         if (game.echo.active()) {
             vignette = 0.55f;
             saturation *= 1f - EchoSystemBridge.DESATURATION;

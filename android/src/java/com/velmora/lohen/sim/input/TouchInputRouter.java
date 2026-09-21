@@ -31,7 +31,10 @@ public final class TouchInputRouter {
     public static final float JOYSTICK_RADIUS_DP = 90f;
     public static final float JOYSTICK_DEADZONE = 0.08f;
     public static final float JOYSTICK_CURVE = 1.4f;
-    public static final float CAMERA_SENSITIVITY_DP = 0.22f;  /* deg/dp (08.23) */
+    /* 08.23 revise : 0,13 deg/dp LINEAIRE. La courbe x^1,25 appliquée a un
+     * delta en degres clampait chaque evenement a +/-1 deg et rendait la
+     * camera saccadee et trop sensible (retour joueur). */
+    public static final float CAMERA_SENSITIVITY_DP = 0.13f;
     public static final float CAMERA_CURVE = 1.25f;
     public static final float EDGE_DEAD_ZONE_DP = 48f;        /* 00.06 */
 
@@ -343,13 +346,16 @@ public final class TouchInputRouter {
         if (pointerId == camPointer) {
             float dx = x - camLastX;
             float dy = y - camLastY;
-            float sens = CAMERA_SENSITIVITY_DP * dpScale;
             float sx = options == null ? 1f : options.sensitivityX;
             float sy = options == null ? 1f : options.sensitivityY;
             boolean ix = options != null && options.invertX;
             boolean iy = options != null && options.invertY;
-            camDX += (ix ? 1f : -1f) * Maths.responseCurve(dx / sens, CAMERA_CURVE) * sx;
-            camDY += (iy ? -1f : 1f) * Maths.responseCurve(dy / sens, CAMERA_CURVE) * sy;
+            /* lineaire, en degres par dp ; un garde-fou a +/-3 deg par
+             * evenement absorbe les sauts du tactile sans tout quantifier */
+            float degX = (dx / dpScale) * CAMERA_SENSITIVITY_DP;
+            float degY = (dy / dpScale) * CAMERA_SENSITIVITY_DP;
+            camDX += (ix ? 1f : -1f) * Maths.clamp(degX * sx, -3f, 3f);
+            camDY += (iy ? -1f : 1f) * Maths.clamp(degY * sy, -3f, 3f);
             camLastX = x;
             camLastY = y;
         }

@@ -263,8 +263,8 @@ public final class SfxDirector implements EventBus.Listener {
         int p = Maths.clamp(profile, 0, BREATH_PROFILES - 1);
         int v = Maths.clamp(variation, 0, BREATH_VARIATIONS - 1);
         float dur = durations[p] * (0.9f + v * 0.04f);
-        engine.play(Synth.noise(0.085f * amount, dur, cutoffs[p] + v * 55f, 140f,
-                p == 2 ? 3.1f : 0.4f, 0.6f, rng), AudioEngine.BUS_VO, panBias * 0.2f, distanceBias);
+        engine.play(Synth.noise(0.05f * amount, dur, cutoffs[p] * 0.8f + v * 40f, 110f,
+                p == 2 ? 2.4f : 0.3f, 0.5f, rng), AudioEngine.BUS_VO, panBias * 0.2f, distanceBias);
     }
 
     public void splash(float force) {

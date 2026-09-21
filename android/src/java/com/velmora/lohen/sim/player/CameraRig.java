@@ -45,8 +45,8 @@ public final class CameraRig {
     public static final float SHOULDER_OFFSET = 0.45f;
     public static final float TOUCH_SENSITIVITY = 0.22f;
     public static final float TOUCH_CURVE = 1.25f;
-    public static final float SMOOTH_POS = 0.12f;
-    public static final float SMOOTH_ROT = 0.08f;
+    public static final float SMOOTH_POS = 0.13f;
+    public static final float SMOOTH_ROT = 0.11f;   /* lissee : retour joueur */
     public static final float SPRING_RADIUS = 0.32f;
     public static final float SPRING_RETURN = 0.15f;
     public static final float RECENTER_AFTER = 2.5f;

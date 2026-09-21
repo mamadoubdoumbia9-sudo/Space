@@ -112,6 +112,42 @@ ici) ; la distribution hors-store demande une re-signature release.
 
 ---
 
+### ADR-006 — Lisibilité et confort : le retour joueur prime sur les chiffres du devis
+
+Après une première installation, le retour joueur était : « pas de couleur,
+graphismes effrayants, son effrayant, personnage géométrique bizarre, caméra
+trop sensible ». Les valeurs littérales du devis produisaient exactement cet
+effet (ciel quasi noir, brume sombre, saturation 0,24–0,55, grain 0,035,
+corps en boîtes/prismes, mélodies errant de degré en degré dans la gamme,
+lits de vent et grésillements permanents). **Décision : le confort de jeu
+l'emporte sur la conformité littérale des chiffres.** Changements :
+
+- **Ciel** : gradient crépusculaire par séquence (brume claire du niveau à
+  l'horizon → bleu profond au zénith) avec halo du soleil bas cuit dans les
+  couleurs ; le dôme est exempté de brouillard (`uFogSkip`).
+- **Lumière** : `sun_intensity` / `ambient_intensity` des JSON de niveau sont
+  enfin appliqués (ils étaient ignorés — l'ambiant passait à pleine
+  puissance puis était lessivé par la saturation post) ; rebond sol chaud.
+- **Brume** : la couleur/densité du niveau (ex. `#9FB2C4` à S1, `#E8C9A0` à
+  S8) remplace les constantes sombres ; les 3 séquences nocturnes (S5–S7)
+  sont éclaircies juste assez pour rester lisibles sans trahir la nuit.
+- **Couleur** : saturation 0,50–0,82 selon la séquence (le devis 05.08 dit
+  0,24–0,70), grain 0,035 → 0,012, vignettage 0,20 → 0,08, exposition ×1,06.
+- **Personnages** : primitives capsule (conique, hémisphères) et ellipsoïde —
+  Lohen a une tête ronde, des cheveux, un manteau à pan évasé, des membres
+  fuselés, des bottes ; les 34 habitants et les Figures suivent. Plus aucune
+  boîte ni prisme à 4 faces pour un corps.
+- **Caméra** : la courbe x^1,25 appliquée à un delta en degrés clampait
+  chaque événement tactile à ±1° (saccades, hypersensibilité) — remplacée par
+  0,13°/dp **linéaire** (le devis 08.23 dit 0,22°/dp + courbe), garde-fou
+  ±3°/événement, lissage rotationnel 0,08 → 0,11, stick droit 2,2 → 1,4.
+- **Musique** : les mélodies suivent désormais la progression d'accords
+  **la min – Fa – Do – Sol** (i–VI–III–VII, `Synth.chordNote`) au lieu
+  d'errer de degré en degré (secondes mineures aléatoires = « effrayant ») ;
+  lits de bruit (vent, grésillements, sifflements 2,4 kHz) divisés par ~3 ;
+  souffle de Lohen et voix sans paroles adoucis. L'orchestration de M18
+  (19.09) reste canonique, seuls ses niveaux de vent baissent.
+
 ### Substituts restants (placeholders au sens strict)
 
 | Élément du devis | Livré | Statut |

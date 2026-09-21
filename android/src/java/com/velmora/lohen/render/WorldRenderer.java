@@ -43,6 +43,7 @@ public final class WorldRenderer {
     private int aPos, aNormal, aColor, aParam;
     private int uMvp, uModel, uCamPos, uSunDir, uSunColor, uAmbientSky,
             uAmbientGround, uFogColor, uFogDensity, uFogVisibility, uLampPos,
+            uFogSkip,
             uLampColor, uLampRange, uBeamPos, uBeamDir, uBeamStrength,
             uExposure, uTime;
 
@@ -78,58 +79,78 @@ public final class WorldRenderer {
         uBeamDir = GlUtil.uniform(program, "uBeamDir");
         uBeamStrength = GlUtil.uniform(program, "uBeamStrength");
         uExposure = GlUtil.uniform(program, "uExposure");
+        uFogSkip = GlUtil.uniform(program, "uFogSkip");
         uTime = GlUtil.uniform(program, "uTime");
-        buildSky();
+        skyBuiltFor = null;
+        buildSky(null);
     }
 
     /* ------------------------------------------------------------------ */
     /* Ciel                                                                */
     /* ------------------------------------------------------------------ */
 
+    private String skyBuiltFor;
+
     /**
-     * 05.24 : le ciel n'est jamais bleu. C'est un gradient de brume, du bleu
-     * de fond a l'horizon vers le noir-verre au zenith.
+     * Le ciel : un gradient CREPUSCULAIRE chaud — la brume claire du niveau a
+     * l'horizon, un bleu profond au zenith, et le halo du soleil bas (05.27)
+     * cuit dans les couleurs. Il est reconstruit a chaque sequence puisque
+     * chaque sequence a sa propre brume.
      */
-    private void buildSky() {
+    private void buildSky(LevelData.SkySettings s) {
         sky.clear();
         float r = 900f;
-        int bands = 8;
-        int seg = 16;
+        int bands = 10;
+        int seg = 20;
+        int zen = s != null && s.night ? 0xFF101A2E : 0xFF2A3E64;
+        int hor = s == null ? Palette.BLEU_BRUME : s.fogColor;
+        float yaw = (float) Math.toRadians(s == null ? -35f : s.sunYawDeg);
+        float pitch = (float) Math.toRadians(s == null ? 12f : s.sunPitchDeg);
+        float sx = -(float) (Math.sin(yaw) * Math.cos(pitch));
+        float sy = (float) Math.sin(pitch);
+        float sz = -(float) (Math.cos(yaw) * Math.cos(pitch));
         for (int b = 0; b < bands; b++) {
             float t0 = b / (float) bands;
             float t1 = (b + 1) / (float) bands;
-            float y0 = -0.25f + t0 * 1.25f;
-            float y1 = -0.25f + t1 * 1.25f;
+            float y0 = -0.28f + t0 * 1.28f;
+            float y1 = -0.28f + t1 * 1.28f;
             int base = sky.vertexCount();
-            for (int s = 0; s <= seg; s++) {
-                float a0 = (float) (s * Math.PI * 2.0 / seg);
+            for (int sg = 0; sg <= seg; sg++) {
+                float a0 = (float) (sg * Math.PI * 2.0 / seg);
                 float c0 = (float) Math.cos(a0);
                 float s0 = (float) Math.sin(a0);
                 float h0 = (float) Math.sqrt(Math.max(0f, 1f - y0 * y0));
                 float h1 = (float) Math.sqrt(Math.max(0f, 1f - y1 * y1));
-                int zen = ShaderLib.NIGHT;
-                int hor = Palette.BLEU_BRUME;
-                int low = skyColor(t0, zen, hor);
-                int high = skyColor(t1, zen, hor);
+                int low = skyColor(t0, zen, hor, c0 * h0, y0, s0 * h0, sx, sy, sz);
+                int high = skyColor(t1, zen, hor, c0 * h1, y1, s0 * h1, sx, sy, sz);
                 sky.vertex(c0 * h0 * r, y0 * r, s0 * h0 * r, -c0 * h0, -y0, -s0 * h0,
-                        ShaderLib.r(low), ShaderLib.g(low), ShaderLib.b(low), 1f, 0f, 0f);
+                        ShaderLib.r(low), ShaderLib.g(low), ShaderLib.b(low), 1f, 0f, 0.5f);
                 sky.vertex(c0 * h1 * r, y1 * r, s0 * h1 * r, -c0 * h1, -y1, -s0 * h1,
-                        ShaderLib.r(high), ShaderLib.g(high), ShaderLib.b(high), 1f, 0f, 0f);
+                        ShaderLib.r(high), ShaderLib.g(high), ShaderLib.b(high), 1f, 0f, 0.5f);
             }
-            for (int s = 0; s < seg; s++) {
-                int o = base + s * 2;
+            for (int sg = 0; sg < seg; sg++) {
+                int o = base + sg * 2;
                 sky.quad(o, o + 1, o + 3, o + 2);
             }
         }
         sky.upload();
     }
 
-    private static int skyColor(float t, int zen, int hor) {
+    private static int skyColor(float t, int zen, int hor,
+                                float dx, float dy, float dz,
+                                float sx, float sy, float sz) {
         float k = Maths.smoothstep(0f, 1f, t);
-        int r = (int) (ShaderLib.r(hor) * (1f - k) + ShaderLib.r(zen) * k);
-        int g = (int) (ShaderLib.g(hor) * (1f - k) + ShaderLib.g(zen) * k);
-        int b = (int) (ShaderLib.b(hor) * (1f - k) + ShaderLib.b(zen) * k);
-        return MeshBuilder.pack(r, g, b, 1f);
+        float r = ShaderLib.r(hor) * (1f - k) + ShaderLib.r(zen) * k;
+        float g = ShaderLib.g(hor) * (1f - k) + ShaderLib.g(zen) * k;
+        float b = ShaderLib.b(hor) * (1f - k) + ShaderLib.b(zen) * k;
+        /* le halo : un disque chaud serre + une lueur large autour */
+        float d = Math.max(0f, dx * sx + dy * sy + dz * sz);
+        float glow = (float) Math.pow(d, 24f) * 1.5f + (float) Math.pow(d, 4f) * 0.30f;
+        r += glow;
+        g += glow * 0.76f;
+        b += glow * 0.46f;
+        return MeshBuilder.pack((int) (Math.min(1f, r) * 255f),
+                (int) (Math.min(1f, g) * 255f), (int) (Math.min(1f, b) * 255f), 1f);
     }
 
     /* ------------------------------------------------------------------ */
@@ -310,8 +331,12 @@ public final class WorldRenderer {
 
         LevelData d = game.level();
         String seq = game.sequence();
-        int fog = Palette.fogFor(seq);
         LevelData.SkySettings skySet = d == null ? null : d.sky;
+        int fog = skySet != null ? skySet.fogColor : Palette.fogFor(seq);
+        if (skySet != null && !seq.equals(skyBuiltFor)) {
+            skyBuiltFor = seq;
+            buildSky(skySet);
+        }
 
         float[] sunDir = {0.42f, -0.28f, 0.86f};
         if (skySet != null) {
@@ -328,18 +353,23 @@ public final class WorldRenderer {
         com.velmora.lohen.sim.math.Vec3 cam = game.cameraPosition();
         GLES20.glUniform3f(uCamPos, cam.x, cam.y, cam.z);
         GLES20.glUniform3f(uSunDir, sunDir[0], sunDir[1], sunDir[2]);
-        GLES20.glUniform3f(uSunColor, ShaderLib.r(sunColor), ShaderLib.g(sunColor),
-                ShaderLib.b(sunColor));
-        GLES20.glUniform3f(uAmbientSky, ShaderLib.r(ambSky), ShaderLib.g(ambSky),
-                ShaderLib.b(ambSky));
-        GLES20.glUniform3f(uAmbientGround, ShaderLib.r(ambGround),
-                ShaderLib.g(ambGround), ShaderLib.b(ambGround));
+        float sunI = (skySet == null ? 1f : skySet.sunIntensity) * 1.05f;
+        float ambI = (skySet == null ? 0.5f : skySet.ambientIntensity) * 1.55f;
+        float ambGI = (skySet == null ? 0.45f : skySet.ambientIntensity) * 1.9f + 0.10f;
+        GLES20.glUniform3f(uSunColor, ShaderLib.r(sunColor) * sunI,
+                ShaderLib.g(sunColor) * sunI, ShaderLib.b(sunColor) * sunI);
+        GLES20.glUniform3f(uAmbientSky, ShaderLib.r(ambSky) * ambI,
+                ShaderLib.g(ambSky) * ambI, ShaderLib.b(ambSky) * ambI);
+        GLES20.glUniform3f(uAmbientGround, ShaderLib.r(ambGround) * ambGI,
+                ShaderLib.g(ambGround) * ambGI, ShaderLib.b(ambGround) * ambGI);
         GLES20.glUniform3f(uFogColor, ShaderLib.r(fog), ShaderLib.g(fog),
                 ShaderLib.b(fog));
-        GLES20.glUniform1f(uFogDensity, Palette.fogDensityFor(seq));
+        GLES20.glUniform1f(uFogDensity, (skySet != null ? skySet.fogDensity
+                : Palette.fogDensityFor(seq)) * 0.8f);
         GLES20.glUniform1f(uFogVisibility, Palette.fogVisibilityFor(seq));
         GLES20.glUniform1f(uTime, time);
-        GLES20.glUniform1f(uExposure, exposureOf(game));
+        GLES20.glUniform1f(uExposure, exposureOf(game)
+                * (skySet == null ? 1.06f : skySet.exposure * 1.06f));
 
         /* la lampe portee (08.11) : 2700 K, 4 m, elle repousse les Mueurs */
         float lampRange = 0f;
@@ -363,7 +393,8 @@ public final class WorldRenderer {
         GLES20.glUniform1f(uBeamStrength, phare.beamCovers(game.lohen.x, game.lohen.y,
                 game.lohen.z) ? 1f : 0.55f);
 
-        /* 1. le ciel, sans test de profondeur */
+        /* 1. le ciel, sans test de profondeur et sans brume (uFogSkip) */
+        GLES20.glUniform1f(uFogSkip, 1f);
         GLES20.glDepthMask(false);
         GLES20.glDisable(GLES20.GL_CULL_FACE);
         Mat4.identity(model);
@@ -374,6 +405,7 @@ public final class WorldRenderer {
         GLES20.glUniformMatrix4fv(uMvp, 1, false, mvp, 0);
         GLES20.glUniformMatrix4fv(uModel, 1, false, model, 0);
         drawMesh(sky);
+        GLES20.glUniform1f(uFogSkip, 0f);
         GLES20.glDepthMask(true);
         GLES20.glEnable(GLES20.GL_CULL_FACE);
 
@@ -557,29 +589,33 @@ public final class WorldRenderer {
         float head = height * 0.12f;
         int skin = Palette.LOHEN_SKIN;
         /* jambes */
-        limb(x, y, z, cs, sn, -0.09f, swing, hip, 0.055f, Palette.LOHEN_TROUSER);
-        limb(x, y, z, cs, sn, 0.09f, -swing, hip, 0.055f, Palette.LOHEN_TROUSER);
-        /* torse */
-        dynamic.box(x, y + hip + torso * 0.5f, z, 0.17f, torso * 0.5f, 0.11f,
-                (float) Math.toDegrees(yawR), cloth, 0f, 0f);
+        limb(x, y, z, cs, sn, -0.09f, swing, hip, 0.062f, 0.048f,
+                Palette.LOHEN_TROUSER);
+        limb(x, y, z, cs, sn, 0.09f, -swing, hip, 0.062f, 0.048f,
+                Palette.LOHEN_TROUSER);
+        /* torse : capsule, plus de boite */
+        dynamic.capsule(x, y + hip, z, x, y + hip + torso, z, 0.155f, 0.115f,
+                cloth, 0f, 7);
         /* bras */
         limb(x, y + hip + torso * 0.9f, z, cs, sn, -0.22f, -swing * 0.8f,
-                height * 0.26f, 0.045f, cloth);
+                height * 0.26f, 0.050f, 0.038f, cloth);
         limb(x, y + hip + torso * 0.9f, z, cs, sn, 0.22f, swing * 0.8f,
-                height * 0.26f, 0.045f, cloth);
-        /* tete */
-        dynamic.box(x, y + hip + torso + head * 0.6f, z, 0.085f, head * 0.5f,
-                0.09f, (float) Math.toDegrees(yawR), skin, 0f, 0f);
+                height * 0.26f, 0.050f, 0.038f, cloth);
+        /* tete : ellipsoide */
+        dynamic.ellipsoid(x, y + hip + torso + head * 0.6f, z, 0.085f,
+                head * 0.55f, 0.09f, skin, 0f, 8, 5, -1.5708f, 1.5708f);
     }
 
     private void limb(float x, float y, float z, float cs, float sn, float side,
-                      float swing, float len, float thick, int color) {
+                      float swing, float len, float thick, float thick2,
+                      int color) {
         float ox = x + side * cs;
         float oz = z - side * sn;
         float ex = ox + swing * cs * len * 0.6f;
         float ez = oz - swing * sn * len * 0.6f;
         float ey = y - len * (1f - Math.abs(swing) * 0.18f);
-        dynamic.beam(ox, y, oz, ex, Math.max(ey, y - len), ez, thick, color, 0f);
+        dynamic.capsule(ox, y, oz, ex, Math.max(ey, y - len), ez, thick, thick2,
+                color, 0f, 6);
     }
 
     /** Lohen : le gréement de 19 os donne les positions, on ne les reinvente pas. */
@@ -587,30 +623,76 @@ public final class WorldRenderer {
                          float crouchScale) {
         float[] b = rig.bones();
         float k = crouchScale;
-        int pelvis = CharacterRig.PELVIS * 3;
-        int spine2 = CharacterRig.SPINE2 * 3;
-        int neck = CharacterRig.NECK * 3;
-        int head = CharacterRig.HEAD * 3;
-        /* torse : deux segments epais */
-        segment(b, pelvis, spine2, 0.155f, coat);
-        segment(b, spine2, neck, 0.145f, coat);
-        /* tete */
-        dynamic.box(b[head], b[head + 1] * k, b[head + 2], 0.085f, 0.105f, 0.09f,
-                0f, skin, 0f, 0f);
-        /* bras et jambes */
-        segment(b, CharacterRig.SHOULDER_L * 3, CharacterRig.UPPER_ARM_L * 3, 0.052f, coat);
-        segment(b, CharacterRig.UPPER_ARM_L * 3, CharacterRig.FOREARM_L * 3, 0.046f, coat);
-        segment(b, CharacterRig.FOREARM_L * 3, CharacterRig.HAND_L * 3, 0.040f, skin);
-        segment(b, CharacterRig.SHOULDER_R * 3, CharacterRig.UPPER_ARM_R * 3, 0.052f, coat);
-        segment(b, CharacterRig.UPPER_ARM_R * 3, CharacterRig.FOREARM_R * 3, 0.046f, coat);
-        segment(b, CharacterRig.FOREARM_R * 3, CharacterRig.HAND_R * 3, 0.040f, skin);
-        segment(b, CharacterRig.THIGH_L * 3, CharacterRig.SHIN_L * 3, 0.068f, trousers);
-        segment(b, CharacterRig.SHIN_L * 3, CharacterRig.FOOT_L * 3, 0.055f, trousers);
-        segment(b, CharacterRig.THIGH_R * 3, CharacterRig.SHIN_R * 3, 0.068f, trousers);
-        segment(b, CharacterRig.SHIN_R * 3, CharacterRig.FOOT_R * 3, 0.055f, trousers);
+        float pelvisY = b[CharacterRig.PELVIS * 3 + 1];
+        float[] p = new float[b.length];
+        for (int bone = 0; bone < CharacterRig.BONE_COUNT; bone++) {
+            p[bone * 3] = b[bone * 3];
+            p[bone * 3 + 1] = pelvisY + (b[bone * 3 + 1] - pelvisY) * k;
+            p[bone * 3 + 2] = b[bone * 3 + 2];
+        }
+        int coatDark = shade(coat, 0.8f);
+        int boots = Palette.LOHEN_GLOVES;
+        int hair = 0xFF3A2C20;
+        int pel = CharacterRig.PELVIS * 3;
+        /* jambes de pantalon, fuselees */
+        capsuleB(p, CharacterRig.THIGH_L, CharacterRig.SHIN_L, 0.075f, 0.058f, trousers);
+        capsuleB(p, CharacterRig.SHIN_L, CharacterRig.FOOT_L, 0.058f, 0.047f, trousers);
+        capsuleB(p, CharacterRig.THIGH_R, CharacterRig.SHIN_R, 0.075f, 0.058f, trousers);
+        capsuleB(p, CharacterRig.SHIN_R, CharacterRig.FOOT_R, 0.058f, 0.047f, trousers);
+        sphereB(p, CharacterRig.FOOT_L, 0.055f, 0.045f, 0.10f, boots);
+        sphereB(p, CharacterRig.FOOT_R, 0.055f, 0.045f, 0.10f, boots);
+        /* pan du manteau : il s'evase du bassin a mi-cuisse */
+        dynamic.capsule(p[pel], p[pel + 1], p[pel + 2],
+                p[pel], p[pel + 1] - 0.34f * k, p[pel + 2],
+                0.145f, 0.20f, coatDark, 0f, 8);
+        /* torse : deux segments de manteau, epaules aux hanches */
+        capsuleB(p, CharacterRig.PELVIS, CharacterRig.SPINE2, 0.150f, 0.135f, coat);
+        capsuleB(p, CharacterRig.SPINE2, CharacterRig.NECK, 0.135f, 0.100f, coat);
+        sphereB(p, CharacterRig.SHOULDER_L, 0.065f, 0.060f, 0.065f, coat);
+        sphereB(p, CharacterRig.SHOULDER_R, 0.065f, 0.060f, 0.065f, coat);
+        /* bras : manche de manteau puis main nue */
+        capsuleB(p, CharacterRig.SHOULDER_L, CharacterRig.UPPER_ARM_L, 0.055f, 0.050f, coat);
+        capsuleB(p, CharacterRig.UPPER_ARM_L, CharacterRig.FOREARM_L, 0.050f, 0.043f, coat);
+        capsuleB(p, CharacterRig.FOREARM_L, CharacterRig.HAND_L, 0.042f, 0.036f, skin);
+        capsuleB(p, CharacterRig.SHOULDER_R, CharacterRig.UPPER_ARM_R, 0.055f, 0.050f, coat);
+        capsuleB(p, CharacterRig.UPPER_ARM_R, CharacterRig.FOREARM_R, 0.050f, 0.043f, coat);
+        capsuleB(p, CharacterRig.FOREARM_R, CharacterRig.HAND_R, 0.042f, 0.036f, skin);
+        sphereB(p, CharacterRig.HAND_L, 0.045f, 0.050f, 0.035f, skin);
+        sphereB(p, CharacterRig.HAND_R, 0.045f, 0.050f, 0.035f, skin);
+        /* cou, tete ronde, calotte de cheveux */
+        capsuleB(p, CharacterRig.NECK, CharacterRig.HEAD, 0.050f, 0.045f, skin);
+        int hd = CharacterRig.HEAD * 3;
+        dynamic.ellipsoid(p[hd], p[hd + 1] + 0.05f, p[hd + 2],
+                0.088f, 0.108f, 0.092f, skin, 0f, 8, 5, -1.5708f, 1.5708f);
+        dynamic.ellipsoid(p[hd], p[hd + 1] + 0.065f, p[hd + 2],
+                0.093f, 0.105f, 0.097f, hair, 0f, 8, 3, 0.28f, 1.5708f);
         /* la sacoche du courrier : elle ne le quitte jamais (10.03) */
-        dynamic.box(b[pelvis] - 0.16f, b[pelvis + 1] - 0.10f, b[pelvis + 2] + 0.06f,
+        dynamic.box(p[pel] - 0.16f, p[pel + 1] - 0.10f, p[pel + 2] + 0.06f,
                 0.13f, 0.15f, 0.07f, 0f, Palette.LOHEN_SATCHEL, 0f, 0f);
+        int sp2 = CharacterRig.SPINE2 * 3;
+        dynamic.beam(p[sp2] + 0.10f, p[sp2 + 1], p[sp2 + 2],
+                p[pel] - 0.16f, p[pel + 1] - 0.02f, p[pel + 2] + 0.06f,
+                0.018f, Palette.LOHEN_SATCHEL, 0f);
+    }
+
+    private void capsuleB(float[] p, int bone0, int bone1, float r0, float r1,
+                          int color) {
+        dynamic.capsule(p[bone0 * 3], p[bone0 * 3 + 1], p[bone0 * 3 + 2],
+                p[bone1 * 3], p[bone1 * 3 + 1], p[bone1 * 3 + 2],
+                r0, r1, color, 0f, 8);
+    }
+
+    private void sphereB(float[] p, int bone, float rx, float ry, float rz,
+                         int color) {
+        dynamic.ellipsoid(p[bone * 3], p[bone * 3 + 1], p[bone * 3 + 2],
+                rx, ry, rz, color, 0f, 8, 5, -1.5708f, 1.5708f);
+    }
+
+    private static int shade(int argb, float f) {
+        int r = (int) (((argb >> 16) & 0xFF) * f);
+        int g = (int) (((argb >> 8) & 0xFF) * f);
+        int bl = (int) ((argb & 0xFF) * f);
+        return (argb & 0xFF000000) | (r << 16) | (g << 8) | bl;
     }
 
     private void segment(float[] b, int i0, int i1, float thick, int color) {
@@ -626,8 +708,10 @@ public final class WorldRenderer {
         float x = f.x(), y = f.y(), z = f.z();
         int cyan = Palette.CYAN_FIGURE;
         float lean = f.sweepLean();
-        dynamic.beam(x - 0.34f, y, z, x - 0.16f + lean, y + 1.85f, z, 0.055f, cyan, 0.35f);
-        dynamic.beam(x + 0.34f, y, z, x + 0.16f + lean, y + 1.85f, z, 0.055f, cyan, 0.35f);
+        dynamic.capsule(x - 0.34f, y, z, x - 0.16f + lean, y + 1.85f, z,
+                0.035f, 0.075f, cyan, 0.35f, 7);
+        dynamic.capsule(x + 0.34f, y, z, x + 0.16f + lean, y + 1.85f, z,
+                0.035f, 0.075f, cyan, 0.35f, 7);
         dynamic.box(x + lean, y + 2.20f, z, 0.30f, 0.42f, 0.18f, f.yaw(), cyan, 0f, 0.45f);
         dynamic.box(x + lean, y + 2.82f, z, 0.13f, 0.16f, 0.13f, f.yaw(), cyan, 0f, 0.55f);
         /* le balayage : un arc de verre, jamais une barre rouge */
@@ -652,8 +736,10 @@ public final class WorldRenderer {
                 f.yaw(), cyan, 0f, 0.40f);
         dynamic.box(x, y + 1.18f * crouch, z, 0.12f, 0.14f, 0.12f, f.yaw(),
                 cyan, 0f, 0.60f);
-        dynamic.beam(x - 0.18f, y + 0.30f, z, x - 0.26f, y, z, 0.045f, cyan, 0.25f);
-        dynamic.beam(x + 0.18f, y + 0.30f, z, x + 0.26f, y, z, 0.045f, cyan, 0.25f);
+        dynamic.capsule(x - 0.18f, y + 0.30f, z, x - 0.26f, y, z, 0.03f, 0.05f,
+                cyan, 0.25f, 6);
+        dynamic.capsule(x + 0.18f, y + 0.30f, z, x + 0.26f, y, z, 0.03f, 0.05f,
+                cyan, 0.25f, 6);
         float hop = f.airborne() ? (float) Math.abs(Math.sin(time * 6f)) * 0.2f : 0f;
         if (hop > 0.01f) {
             dynamic.box(x, y + hop + 0.02f, z, 0.30f, 0.02f, 0.24f, f.yaw(),

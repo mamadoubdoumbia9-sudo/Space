@@ -98,34 +98,34 @@ public final class Palette {
         if (seq == null) {
             return 0.35f;
         }
-        if ("S1".equals(seq)) return 0.30f;
-        if ("S2".equals(seq)) return 0.28f;
-        if ("S3".equals(seq)) return 0.55f;
-        if ("S4".equals(seq)) return 0.34f;
-        if ("S5".equals(seq)) return 0.24f;
-        if ("S6".equals(seq)) return 0.42f;
-        if ("S7".equals(seq)) return 0.26f;
-        if ("S8".equals(seq)) return 0.40f;
-        return 0.35f;
+        if ("S1".equals(seq)) return 0.62f;
+        if ("S2".equals(seq)) return 0.58f;
+        if ("S3".equals(seq)) return 0.75f;
+        if ("S4".equals(seq)) return 0.65f;
+        if ("S5".equals(seq)) return 0.52f;
+        if ("S6".equals(seq)) return 0.72f;
+        if ("S7".equals(seq)) return 0.55f;
+        if ("S8".equals(seq)) return 0.80f;
+        return 0.62f;
     }
 
     /** Couleur de brouillard de la sequence (05.24). */
     public static int fogFor(String seq) {
-        if ("S5".equals(seq)) return 0xFF080C12;      /* conduits : presque noir */
-        if ("S6".equals(seq)) return 0xFF0A1018;      /* salle scellee */
-        if ("S7".equals(seq)) return 0xFF101A26;      /* pluie battante */
-        if ("S8".equals(seq)) return 0xFF2A3A4E;      /* aube : la brume monte */
-        if ("S3".equals(seq)) return 0xFF1B2A3C;      /* marche : brume tiede */
-        return BLEU_BRUME;
+        if ("S5".equals(seq)) return 0xFF1E2836;      /* conduits : penombre bleue */
+        if ("S6".equals(seq)) return 0xFF202C3A;      /* salle scellee */
+        if ("S7".equals(seq)) return 0xFF3A4C60;      /* pluie battante */
+        if ("S8".equals(seq)) return 0xFF7A8CA2;      /* aube : la brume monte */
+        if ("S3".equals(seq)) return 0xFF4A5A6E;      /* marche : brume tiede */
+        return 0xFF40536A;
     }
 
     /** Densite de brouillard par sequence (05.24, 09.51). */
     public static float fogDensityFor(String seq) {
-        if ("S5".equals(seq)) return 0.055f;
-        if ("S7".equals(seq)) return 0.030f;
-        if ("S2".equals(seq)) return 0.016f;
-        if ("S8".equals(seq)) return 0.008f;
-        return 0.012f;
+        if ("S5".equals(seq)) return 0.040f;
+        if ("S7".equals(seq)) return 0.022f;
+        if ("S2".equals(seq)) return 0.013f;
+        if ("S8".equals(seq)) return 0.006f;
+        return 0.010f;
     }
 
     /** Visibilite en metres, pour la regle du Phare visible de partout. */

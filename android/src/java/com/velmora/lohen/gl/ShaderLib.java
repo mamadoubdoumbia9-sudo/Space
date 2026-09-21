@@ -65,6 +65,7 @@ public final class ShaderLib {
             + "uniform vec3 uBeamDir;\n"
             + "uniform float uBeamStrength;\n"
             + "uniform float uExposure;\n"      /* +0,4 EV dans le faisceau */
+            + "uniform float uFogSkip;\n"        /* 1 = dome du ciel : pas de brume */
             + "uniform float uTime;\n"
             + "varying vec3 vWorld;\n"
             + "varying vec3 vNormal;\n"
@@ -110,7 +111,7 @@ public final class ShaderLib {
             /* brouillard exponentiel, jamais un fog lineaire (05.24) */
             + "  float dist = length(uCamPos - vWorld);\n"
             + "  float f = 1.0 - exp(-uFogDensity * dist);\n"
-            + "  f = clamp(f, 0.0, 1.0);\n"
+            + "  f = clamp(f, 0.0, 1.0) * (1.0 - uFogSkip);\n"
             + "  col = mix(col, uFogColor, f);\n"
             + "  col *= uExposure;\n"
             + "  gl_FragColor = vec4(col, vColor.a);\n"

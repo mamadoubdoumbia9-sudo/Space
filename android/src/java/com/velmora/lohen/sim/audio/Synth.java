@@ -808,6 +808,18 @@ public final class Synth {
     /** Gamme de la mineur naturel (la BO entiere est dedans). */
     public static final int[] A_MINOR = {0, 2, 3, 5, 7, 8, 10};
 
+    /* La colonne melodique : Am - Fa - Do - Sol (i-VI-III-VII). Les degres
+     * sont dans l'espace de A_MINOR ; scaleNote se charge des octaves. Un
+     * accord par mesure de 4 temps — jamais deux degres consecutifs au
+     * hasard, qui faisaient des secondes mineures « effrayantes ». */
+    public static final int[][] CHORD_PROG = {{0, 2, 4}, {5, 7, 9}, {2, 4, 6}, {4, 8, 10}};
+
+    /** k-ieme note de l'accord de la mesure bar, a l'octave donnee. */
+    public static float chordNote(int bar, int k, int octave) {
+        int[] c = CHORD_PROG[((bar % 4) + 4) % 4];
+        return scaleNote(c[((k % 3) + 3) % 3], octave);
+    }
+
     public static float scaleNote(int degree, int octave) {
         int idx = ((degree % 7) + 7) % 7;
         int oct = degree / 7 + octave;

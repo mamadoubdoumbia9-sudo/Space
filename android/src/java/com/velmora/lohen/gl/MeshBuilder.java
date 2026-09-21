@@ -325,6 +325,139 @@ public final class MeshBuilder {
     /* Telechargement GPU                                                  */
     /* ------------------------------------------------------------------ */
 
+    /**
+     * Une capsule conique : deux hemispheres et un tube en douceur entre deux
+     * rayons. Les corps (Lohen, les habitants) sont faits de ca — plus aucune
+     * boite ni prisme a 4 faces pour la chair et le tissu.
+     */
+    public void capsule(float x0, float y0, float z0, float x1, float y1, float z1,
+                        float r0, float r1, int argb, float emit, int segs) {
+        float dx = x1 - x0, dy = y1 - y0, dz = z1 - z0;
+        float len = (float) Math.sqrt(dx * dx + dy * dy + dz * dz);
+        if (len < 1e-5f) {
+            ellipsoid(x0, y0, z0, r0, r0, r0, argb, emit, segs, 4, -1.5708f, 1.5708f);
+            return;
+        }
+        float ux = dx / len, uy = dy / len, uz = dz / len;
+        float ax = Math.abs(uy) < 0.9f ? 0f : 1f;
+        float ay = Math.abs(uy) < 0.9f ? 1f : 0f;
+        float vx = -uz * ay;
+        float vy = uz * ax;
+        float vz = ux * ay - uy * ax;
+        float vl = (float) Math.sqrt(vx * vx + vy * vy + vz * vz);
+        vx /= vl; vy /= vl; vz /= vl;
+        float wx = uy * vz - uz * vy;
+        float wy = uz * vx - ux * vz;
+        float wz = ux * vy - uy * vx;
+        float cr = ShaderLib.r(argb), cg = ShaderLib.g(argb);
+        float cb = ShaderLib.b(argb), ca = ShaderLib.a(argb);
+        int seg = Math.max(5, segs);
+        int apex0 = vertex(x0 - ux * r0, y0 - uy * r0, z0 - uz * r0,
+                -ux, -uy, -uz, cr, cg, cb, ca, 0f, emit);
+        int[] rb = new int[8];
+        float[] th0 = {-80f, -50f, -20f, 0f};
+        for (int i = 0; i < 4; i++) {
+            rb[i] = ringOf(x0, y0, z0, ux, uy, uz, vx, vy, vz, wx, wy, wz,
+                    r0, th0[i], cr, cg, cb, ca, emit, seg);
+        }
+        rb[4] = ringOf(x1, y1, z1, ux, uy, uz, vx, vy, vz, wx, wy, wz,
+                r1, 0f, cr, cg, cb, ca, emit, seg);
+        float[] th1 = {20f, 50f, 80f};
+        for (int i = 0; i < 3; i++) {
+            rb[5 + i] = ringOf(x1, y1, z1, ux, uy, uz, vx, vy, vz, wx, wy, wz,
+                    r1, th1[i], cr, cg, cb, ca, emit, seg);
+        }
+        int apex1 = vertex(x1 + ux * r1, y1 + uy * r1, z1 + uz * r1,
+                ux, uy, uz, cr, cg, cb, ca, 0f, emit);
+        for (int s = 0; s < seg; s++) {
+            int s2 = (s + 1) % seg;
+            tri(apex0, rb[0] + s2, rb[0] + s);
+            tri(apex1, rb[7] + s, rb[7] + s2);
+        }
+        for (int i = 0; i < 7; i++) {
+            for (int s = 0; s < seg; s++) {
+                int s2 = (s + 1) % seg;
+                quad(rb[i] + s, rb[i] + s2, rb[i + 1] + s2, rb[i + 1] + s);
+            }
+        }
+    }
+
+    private int ringOf(float px, float py, float pz,
+                       float ux, float uy, float uz,
+                       float vx, float vy, float vz,
+                       float wx, float wy, float wz,
+                       float rad, float thDeg,
+                       float cr, float cg, float cb, float ca, float emit, int seg) {
+        float th = (float) Math.toRadians(thDeg);
+        float st = (float) Math.sin(th), ct = (float) Math.cos(th);
+        float cx = px + ux * rad * st;
+        float cy = py + uy * rad * st;
+        float cz = pz + uz * rad * st;
+        int base = vertCount;
+        for (int s = 0; s < seg; s++) {
+            float a = (float) (s * Math.PI * 2.0 / seg);
+            float cA = (float) Math.cos(a), sA = (float) Math.sin(a);
+            float rx = vx * cA + wx * sA;
+            float ry = vy * cA + wy * sA;
+            float rz = vz * cA + wz * sA;
+            vertex(cx + rx * rad * ct, cy + ry * rad * ct, cz + rz * rad * ct,
+                    ux * st + rx * ct, uy * st + ry * ct, uz * st + rz * ct,
+                    cr, cg, cb, ca, 0f, emit);
+        }
+        return base;
+    }
+
+    /**
+     * Un ellipsoide : la tete, les mains, les bottes — et la calotte des
+     * cheveux quand elev0 > -pi/2.
+     */
+    public void ellipsoid(float cx, float cy, float cz,
+                          float rx, float ry, float rz,
+                          int argb, float emit, int segs, int rings,
+                          float elev0, float elev1) {
+        float cr = ShaderLib.r(argb), cg = ShaderLib.g(argb);
+        float cb = ShaderLib.b(argb), ca = ShaderLib.a(argb);
+        int seg = Math.max(5, segs);
+        int rg = Math.max(2, rings);
+        float e0 = Math.max(-1.5708f, elev0);
+        float e1 = Math.min(1.5708f, elev1);
+        int[] rb = new int[rg];
+        for (int j = 0; j < rg; j++) {
+            float th = e0 + (e1 - e0) * (j + 0.5f) / rg;
+            float ct = (float) Math.cos(th), st = (float) Math.sin(th);
+            int base = vertCount;
+            for (int s = 0; s < seg; s++) {
+                float a = (float) (s * Math.PI * 2.0 / seg);
+                float cA = (float) Math.cos(a), sA = (float) Math.sin(a);
+                float nx = ct * cA / Math.max(1e-4f, rx);
+                float ny = st / Math.max(1e-4f, ry);
+                float nz = ct * sA / Math.max(1e-4f, rz);
+                float nl = (float) Math.sqrt(nx * nx + ny * ny + nz * nz);
+                vertex(cx + rx * ct * cA, cy + ry * st, cz + rz * ct * sA,
+                        nx / nl, ny / nl, nz / nl, cr, cg, cb, ca, 0f, emit);
+            }
+            rb[j] = base;
+        }
+        for (int j = 0; j < rg - 1; j++) {
+            for (int s = 0; s < seg; s++) {
+                int s2 = (s + 1) % seg;
+                quad(rb[j] + s, rb[j] + s2, rb[j + 1] + s2, rb[j + 1] + s);
+            }
+        }
+        if (e0 <= -1.5f) {
+            int apex = vertex(cx, cy - ry, cz, 0f, -1f, 0f, cr, cg, cb, ca, 0f, emit);
+            for (int s = 0; s < seg; s++) {
+                tri(apex, rb[0] + (s + 1) % seg, rb[0] + s);
+            }
+        }
+        if (e1 >= 1.5f) {
+            int apex = vertex(cx, cy + ry, cz, 0f, 1f, 0f, cr, cg, cb, ca, 0f, emit);
+            for (int s = 0; s < seg; s++) {
+                tri(apex, rb[rg - 1] + s, rb[rg - 1] + (s + 1) % seg);
+            }
+        }
+    }
+
     public void upload() {
         if (vertCount == 0 || indexCount == 0) {
             return;

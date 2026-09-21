@@ -453,7 +453,8 @@ public final class MusicDirector {
         if ("M02".equals(id)) {
             /* 11 notes, pas une de plus (13.06) */
             if (barIndex < 11) {
-                playPiano(Synth.scaleNote(barIndex % 7, barIndex / 7), gain * 1.1f, 2.2f, 0.8f);
+                playPiano(Synth.chordNote(barIndex, barIndex % 3,
+                        1 + (barIndex / 8) % 2), gain * 1.1f, 2.2f, 0.8f);
             }
             return;
         }
@@ -461,7 +462,7 @@ public final class MusicDirector {
             /* aucune note claire : verres frottes, hauteurs non temperees */
             if (barIndex % 2 == 0) {
                 float f = 180f + (float) Math.sin(barIndex * 0.7f) * 55f;
-                engine.play(Synth.glass(f, gain * 0.5f, 5.5f, 0.35f, rng),
+                engine.play(Synth.glass(f, gain * 0.34f, 5.5f, 0.24f, rng),
                         AudioEngine.BUS_MUSIC, 0f, 0f);
             }
             return;
@@ -473,23 +474,23 @@ public final class MusicDirector {
             float pan = Maths.clamp((diegeticX - playerX) / 12f, -1f, 1f);
             float att = 1f / (1f + dist * 0.09f);
             if (barIndex % 2 == 0) {
-                engine.play(Synth.guitar(Synth.scaleNote((barIndex * 3) % 7, 1), gain * att,
-                        1.8f, rng), AudioEngine.BUS_MUSIC, pan, dist);
+                engine.play(Synth.guitar(Synth.chordNote(barIndex / 2, barIndex % 3, 1),
+                        gain * att, 1.8f, rng), AudioEngine.BUS_MUSIC, pan, dist);
             }
             if (barIndex % 4 == 2) {
-                engine.play(Synth.bell(Synth.scaleNote((barIndex * 5) % 7, 2), gain * att * 0.6f,
-                        2.4f), AudioEngine.BUS_MUSIC, pan, dist);
+                engine.play(Synth.bell(Synth.chordNote(barIndex / 2, (barIndex + 1) % 3, 2),
+                        gain * att * 0.6f, 2.4f), AudioEngine.BUS_MUSIC, pan, dist);
             }
             return;
         }
         if ("M07".equals(id) || "M11".equals(id)) {
             /* guitare nylon, uniquement pour Sol (13.02) */
-            int degree = (barIndex * 2) % 7;
-            engine.play(Synth.guitar(Synth.scaleNote(degree, 1), gain, 1.6f, rng),
+            int chord = barIndex / 2;
+            engine.play(Synth.guitar(Synth.chordNote(chord, chord % 3, 1), gain, 1.6f, rng),
                     AudioEngine.BUS_MUSIC, -0.15f, 0f);
             if (barIndex % 4 == 3) {
-                engine.play(Synth.guitar(Synth.scaleNote(degree + 2, 1), gain * 0.7f, 1.2f, rng),
-                        AudioEngine.BUS_MUSIC, 0.15f, 0f);
+                engine.play(Synth.guitar(Synth.chordNote(chord, (chord + 1) % 3, 1),
+                        gain * 0.7f, 1.2f, rng), AudioEngine.BUS_MUSIC, 0.15f, 0f);
             }
             return;
         }
@@ -500,16 +501,17 @@ public final class MusicDirector {
                         AudioEngine.BUS_MUSIC, 0f, 0f);
             }
             if (barIndex % 4 == 2) {
-                playPiano(Synth.scaleNote((barIndex * 3) % 7, 1), gain * 0.8f, 1.8f, 0.9f);
+                playPiano(Synth.chordNote(barIndex / 2, barIndex % 3, 1),
+                        gain * 0.8f, 1.8f, 0.9f);
             }
             return;
         }
         if ("M10".equals(id)) {
             /* souffles, bols, sub-bass */
-            engine.play(Synth.noise(gain * 0.35f, 6f, 900f, 120f, 0.11f, 0.5f, rng),
+            engine.play(Synth.noise(gain * 0.12f, 6f, 620f, 90f, 0.09f, 0.4f, rng),
                     AudioEngine.BUS_MUSIC, 0f, 0f);
             if (barIndex % 3 == 0) {
-                playBell(Synth.scaleNote((barIndex * 2) % 7, 1), gain * 0.8f, 4f);
+                playBell(Synth.chordNote(barIndex / 3, barIndex % 3, 1), gain * 0.8f, 4f);
             }
             if (barIndex % 4 == 0) {
                 engine.play(Synth.sine(41f, gain * 1.2f, 5f, 1.2f, 1.5f),
@@ -522,18 +524,18 @@ public final class MusicDirector {
             boolean inverse = "M13".equals(id);
             int step = inverse ? (current.stems * 8 - (barIndex % (current.stems * 8))) : barIndex % 8;
             if ((stemMask & 0x01) != 0) {
-                engine.play(Synth.cello(Synth.scaleNote(step % 7, 0), gain * 0.9f, 2.6f,
-                        true, rng), AudioEngine.BUS_MUSIC, -0.2f, 0f);
+                engine.play(Synth.cello(Synth.chordNote(barIndex / 2, step % 3, 0),
+                        gain * 0.9f, 2.6f, true, rng), AudioEngine.BUS_MUSIC, -0.2f, 0f);
             }
             if ((stemMask & 0x02) != 0 && barIndex % 2 == 0) {
-                playPiano(Synth.scaleNote((step * 2) % 7, 1), gain, 2.4f, 0.55f);
+                playPiano(Synth.chordNote(barIndex / 2, (step + 1) % 3, 1), gain, 2.4f, 0.55f);
             }
             if ((stemMask & 0x04) != 0 && barIndex % 4 == 0) {
-                engine.play(Synth.voice(Synth.scaleNote((step * 3) % 7, 1), gain * 0.55f, 5f,
-                        step % 4, rng), AudioEngine.BUS_MUSIC, 0.25f, 0f);
+                engine.play(Synth.voice(Synth.chordNote(barIndex / 2, step % 3, 1),
+                        gain * 0.40f, 5f, step % 4, rng), AudioEngine.BUS_MUSIC, 0.25f, 0f);
             }
             if ((stemMask & 0x08) != 0 && barIndex % 8 == 0) {
-                playBell(Synth.scaleNote(step % 7, 2), gain * 0.7f, 4.5f);
+                playBell(Synth.chordNote(barIndex / 2, (step + 2) % 3, 2), gain * 0.7f, 4.5f);
             }
             /* le motif apparait, JAMAIS en entier (13.03) */
             if (barIndex % 24 == 12) {
@@ -543,7 +545,7 @@ public final class MusicDirector {
         }
         if ("M14".equals(id)) {
             /* le boss : aucune percussion avant la phase 2 */
-            engine.play(Synth.bass(Synth.scaleNote(barIndex % 3, 0), gain, 3.4f),
+            engine.play(Synth.bass(Synth.chordNote(barIndex / 2, 0, 0), gain, 3.4f),
                     AudioEngine.BUS_MUSIC, 0f, 0f);
             if ((stemMask & 0x20) != 0 && barIndex % 2 == 0) {
                 engine.play(Synth.impulse(90f, gain * 0.9f, 0.35f, 0.6f, rng),
@@ -557,27 +559,28 @@ public final class MusicDirector {
         }
         if ("M16".equals(id)) {
             if ((stemMask & 0x01) != 0) {
-                engine.play(Synth.cello(Synth.scaleNote(barIndex % 5, 0), gain, 4f, true, rng),
-                        AudioEngine.BUS_MUSIC, 0f, 0f);
+                engine.play(Synth.cello(Synth.chordNote(barIndex / 2, 0, 0), gain, 4f,
+                        true, rng), AudioEngine.BUS_MUSIC, 0f, 0f);
             }
             if ((stemMask & 0x02) != 0 && barIndex % 2 == 0) {
-                playPiano(Synth.scaleNote((barIndex * 2) % 7, 1), gain * 0.9f, 2.6f, 0.6f);
+                playPiano(Synth.chordNote(barIndex / 2, barIndex % 3, 1),
+                        gain * 0.9f, 2.6f, 0.6f);
             }
             if ((stemMask & 0x04) != 0 && barIndex % 6 == 0) {
                 playMotif(3, gain * 0.8f);
             }
             if ((stemMask & 0x08) != 0 && barIndex % 4 == 0) {
-                engine.play(Synth.voice(Synth.scaleNote(barIndex % 7, 1), gain * 0.5f, 6f, 0, rng),
-                        AudioEngine.BUS_MUSIC, 0f, 0f);
+                engine.play(Synth.voice(Synth.chordNote(barIndex / 2, (barIndex + 1) % 3, 1),
+                        gain * 0.40f, 6f, 0, rng), AudioEngine.BUS_MUSIC, 0f, 0f);
             }
             return;
         }
         if ("M17".equals(id)) {
             /* une lampe, un gresillement, 4 notes */
-            engine.play(Synth.noise(gain * 0.25f, 4f, 2400f, 900f, 22f, 0.6f, rng),
+            engine.play(Synth.noise(gain * 0.07f, 4f, 900f, 300f, 6f, 0.4f, rng),
                     AudioEngine.BUS_MUSIC, 0f, 0f);
             if (barIndex < 4) {
-                playPiano(Synth.scaleNote(barIndex * 2 % 7, 1), gain, 3f, 0.7f);
+                playPiano(Synth.chordNote(barIndex, barIndex % 3, 1), gain, 3f, 0.7f);
             }
             return;
         }
@@ -591,8 +594,8 @@ public final class MusicDirector {
             engine.play(Synth.cello(Synth.ESTEBAN_MOTIF[0], gain, 4f, true, rng),
                     AudioEngine.BUS_MUSIC, -0.2f, 0f);
             if (barIndex % 2 == 0) {
-                engine.play(Synth.guitar(Synth.scaleNote((barIndex * 3) % 7, 1), gain * 0.9f,
-                        2f, rng), AudioEngine.BUS_MUSIC, 0.2f, 0f);
+                engine.play(Synth.guitar(Synth.chordNote(barIndex / 2, barIndex % 3, 1),
+                        gain * 0.9f, 2f, rng), AudioEngine.BUS_MUSIC, 0.2f, 0f);
             }
             if (barIndex % 8 == 4) {
                 playMotif(4, gain * 0.8f);
@@ -602,8 +605,8 @@ public final class MusicDirector {
         if ("M20".equals(id)) {
             /* la chanteuse, une seule fois avec des paroles (13.24) */
             if ((stemMask & 0x04) != 0) {
-                engine.play(Synth.voice(Synth.scaleNote(barIndex % 7, 1), gain * 0.8f, 5.5f,
-                        barIndex % 4, rng), AudioEngine.BUS_VO, 0f, 0f);
+                engine.play(Synth.voice(Synth.chordNote(barIndex / 2, barIndex % 3, 1),
+                        gain * 0.6f, 5.5f, barIndex % 4, rng), AudioEngine.BUS_VO, 0f, 0f);
             }
             if (barIndex % 4 == 0) {
                 engine.play(Synth.cello(Synth.scaleNote(0, 0), gain * 0.7f, 5f, true, rng),
@@ -613,11 +616,11 @@ public final class MusicDirector {
         }
         if ("M21".equals(id)) {
             /* menu : verres et vent */
-            engine.play(Synth.noise(gain * 0.3f, 8f, 700f, 90f, 0.07f, 0.45f, rng),
+            engine.play(Synth.noise(gain * 0.10f, 8f, 560f, 70f, 0.06f, 0.35f, rng),
                     AudioEngine.BUS_MUSIC, 0f, 0f);
             if (barIndex % 4 == 0) {
-                engine.play(Synth.glass(Synth.scaleNote((barIndex * 2) % 7, 2), gain * 0.5f,
-                        6f, 0.3f, rng), AudioEngine.BUS_MUSIC, 0f, 0f);
+                engine.play(Synth.glass(Synth.chordNote(barIndex / 4, (barIndex / 2) % 3, 2),
+                        gain * 0.5f, 6f, 0.3f, rng), AudioEngine.BUS_MUSIC, 0f, 0f);
             }
             return;
         }
@@ -631,16 +634,16 @@ public final class MusicDirector {
         }
         /* M01, M04, M09, M15 : cordes / piano / cloches */
         if ((stemMask & 0x01) != 0 && barIndex % 2 == 0) {
-            engine.play(Synth.cello(Synth.scaleNote(barIndex % 7, 0), gain, 3.4f, true, rng),
-                    AudioEngine.BUS_MUSIC, -0.1f, 0f);
+            engine.play(Synth.cello(Synth.chordNote(barIndex / 2, 0, 0), gain, 3.4f,
+                    true, rng), AudioEngine.BUS_MUSIC, -0.1f, 0f);
         }
         if ((stemMask & 0x02) != 0 && barIndex % 4 == 2) {
-            playPiano(Synth.scaleNote((barIndex * 3) % 7, 1), gain * 0.85f, 2.4f,
+            playPiano(Synth.chordNote(barIndex / 2, barIndex % 3, 1), gain * 0.85f, 2.4f,
                     "M09".equals(id) ? 0.5f : 0.7f);
         }
         if ((stemMask & 0x04) != 0 && barIndex % 8 == 0) {
-            engine.play(Synth.glass(Synth.scaleNote((barIndex * 5) % 7, 2), gain * 0.5f, 5f,
-                    0.3f, rng), AudioEngine.BUS_MUSIC, 0.15f, 0f);
+            engine.play(Synth.glass(Synth.chordNote(barIndex / 2, (barIndex + 2) % 3, 2),
+                    gain * 0.5f, 5f, 0.3f, rng), AudioEngine.BUS_MUSIC, 0.15f, 0f);
         }
         if ("M04".equals(id) && barIndex % 16 == 8) {
             playMotif(3, gain * 0.9f);
@@ -668,9 +671,9 @@ public final class MusicDirector {
         if (t < 70f) {
             /* rien que le vent et la lampe */
             if (barIndex % 8 == 0) {
-                engine.play(Synth.noise(gain * 0.4f, 12f, 620f, 80f, 0.05f, 0.5f, rng),
+                engine.play(Synth.noise(gain * 0.14f, 12f, 520f, 60f, 0.05f, 0.4f, rng),
                         AudioEngine.BUS_AMBIENCE, 0f, 0f);
-                engine.play(Synth.noise(gain * 0.18f, 4f, 2600f, 1100f, 24f, 0.7f, rng),
+                engine.play(Synth.noise(gain * 0.05f, 4f, 1200f, 400f, 8f, 0.4f, rng),
                         AudioEngine.BUS_AMBIENCE, 0f, 0f);
             }
             return;
@@ -714,7 +717,7 @@ public final class MusicDirector {
             /* la voix entre sur les 40 dernieres secondes, sans paroles */
             if (t >= 210f && barIndex % 6 == 0) {
                 engine.play(Synth.voice(Synth.ESTEBAN_MOTIF[(barIndex / 6) % 5] * 2f,
-                        gain * 0.5f, 7f, (barIndex / 6) % 4, rng),
+                        gain * 0.42f, 7f, (barIndex / 6) % 4, rng),
                         AudioEngine.BUS_VO, 0f, 0f);
             }
             return;
@@ -723,7 +726,7 @@ public final class MusicDirector {
         if (playing) {
             stop(0.05f);
             bus.emit(EventBus.MUSIC_STATE, "M18:coupure_nette");
-            engine.play(Synth.noise(gain * 0.5f, 20f, 620f, 80f, 0.05f, 0.5f, rng),
+            engine.play(Synth.noise(gain * 0.16f, 20f, 520f, 60f, 0.045f, 0.4f, rng),
                     AudioEngine.BUS_AMBIENCE, 0f, 0f);
         }
     }

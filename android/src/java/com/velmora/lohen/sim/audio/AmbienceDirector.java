@@ -227,15 +227,15 @@ public final class AmbienceDirector {
         layerTimer1 -= dt;
         if (layerTimer1 <= 0f) {
             layerTimer1 = 6f;
-            engine.play(Synth.noise(0.055f * params[0] + windLevel * 0.020f, 7f,
+            engine.play(Synth.noise(0.030f * params[0] + windLevel * 0.010f, 7f,
                     320f + params[1] * 900f + windLevel * 260f, 60f,
                     0.05f + windLevel * 0.02f, 0.35f, rng),
                     AudioEngine.BUS_AMBIENCE, 0f, 0f);
             /* le lit est quadraphonique : deux voix decorrelees gauche/droite */
-            engine.play(Synth.noise(0.035f * params[0] + windLevel * 0.014f, 7f,
+            engine.play(Synth.noise(0.018f * params[0] + windLevel * 0.007f, 7f,
                     280f + params[1] * 700f, 50f, 0.04f, 0.30f, rng),
                     AudioEngine.BUS_AMBIENCE, -0.75f, 0f);
-            engine.play(Synth.noise(0.035f * params[0] + windLevel * 0.014f, 7f,
+            engine.play(Synth.noise(0.018f * params[0] + windLevel * 0.007f, 7f,
                     300f + params[1] * 760f, 50f, 0.045f, 0.32f, rng),
                     AudioEngine.BUS_AMBIENCE, 0.75f, 0f);
             if (rain) {

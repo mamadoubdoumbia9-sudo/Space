@@ -58,7 +58,7 @@ public final class GamepadRouter {
     private final boolean[] releasedEdge = new boolean[128];
     private boolean sprintToggle;
     private float deadzone = 0.18f;
-    private float sensitivity = 2.2f;
+    private float sensitivity = 1.4f;   /*adoucie : retour joueur */
     private float hudFade = 0f;          /* 0,3 s de fondu du HUD tactile */
     private boolean hudTouchVisible = true;
 
