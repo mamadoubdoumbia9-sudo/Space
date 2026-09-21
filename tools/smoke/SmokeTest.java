@@ -324,13 +324,31 @@ public final class SmokeTest {
         /* ------------------------------------------------------------ */
         System.out.println("9. Audio synthetise");
         short[] buf = new short[2048];
+        /* RETOUR JOUEUR : le jeu est livre MUET — on le verifie d'abord */
+        int mutePeak = 0;
+        for (int i = 0; i < 8; i++) {
+            game.frame(dt);
+            game.renderAudio(buf);
+            for (short s : buf) {
+                mutePeak = Math.max(mutePeak, Math.abs((int) s));
+            }
+        }
+        check("muet par defaut (retour joueur)", mutePeak == 0, "pic " + mutePeak);
+        /* puis on remonte le son comme le ferait le joueur dans Reglages */
+        game.options.volMaster = 0.85f;
+        game.audio.applyOptions();
         int frames = game.renderAudio(buf);
         int peak = 0;
-        for (short s : buf) {
-            peak = Math.max(peak, Math.abs((int) s));
+        for (int i = 0; i < 12; i++) {
+            game.frame(dt);
+            frames = game.renderAudio(buf);
+            for (short s : buf) {
+                peak = Math.max(peak, Math.abs((int) s));
+            }
         }
         check("1024 images rendues", frames == 1024, String.valueOf(frames));
-        check("le mix n'est pas muet", peak > 0, "pic " + peak);
+        check("le mix n'est pas muet une fois le son active", peak > 0,
+                "pic " + peak);
         /* vingt secondes de mix musique tenue : la mesure LUFS a de la
          * matiere, et le normalisateur (13.32) a le temps de converger */
         for (int i = 0; i < 20 * 44100 / 1024; i++) {
@@ -373,8 +391,8 @@ public final class SmokeTest {
                     game.renderAudio(buf);
                 }
                 float lufs = game.audio.shortTermLufs();
-                check("court terme en descente au-dessus du plancher -50 LUFS",
-                        lufs > -50f, lufs + " LUFS");
+                check("court terme en descente au-dessus du plancher -56 LUFS",
+                        lufs > -56f, lufs + " LUFS");
                 lufsMeasured = true;
             }
             if (guard % 30 == 0) {

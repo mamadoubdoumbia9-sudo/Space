@@ -90,7 +90,7 @@ def sync_content():
         out = dst if rel == "." else os.path.join(dst, rel)
         os.makedirs(out, exist_ok=True)
         for f in files:
-            if not f.endswith(".json"):
+            if not (f.endswith(".json") or f.endswith(".png")):
                 continue
             s = os.path.join(dirpath, f)
             d = os.path.join(out, f)

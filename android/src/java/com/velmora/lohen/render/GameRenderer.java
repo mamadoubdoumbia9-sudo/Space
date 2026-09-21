@@ -24,6 +24,7 @@ import android.opengl.GLSurfaceView;
 
 import com.velmora.lohen.gl.PostProcess;
 import com.velmora.lohen.gl.TextAtlas;
+import com.velmora.lohen.gl.TextureLib;
 import com.velmora.lohen.sim.core.LohenGame;
 import com.velmora.lohen.sim.math.Mat4;
 import com.velmora.lohen.sim.math.Maths;
@@ -40,6 +41,7 @@ public final class GameRenderer implements GLSurfaceView.Renderer {
     private final WorldRenderer world = new WorldRenderer();
     private final HudRenderer hud = new HudRenderer();
     private final PostProcess post = new PostProcess();
+    private final TextureLib textures = new TextureLib();
 
     private final float[] view = new float[16];
     private final float[] proj = new float[16];
@@ -121,6 +123,9 @@ public final class GameRenderer implements GLSurfaceView.Renderer {
     /** Les polices viennent des assets : l'Activity les passe ici. */
     public void setAssets(android.content.res.AssetManager assets) {
         atlasReady = atlas.load(assets);
+        textures.setAssets(assets);
+        hud.setTextures(textures);
+        world.setTextures(textures);
     }
 
     public boolean fontsReady() {

@@ -49,7 +49,11 @@ public final class ShaderLib {
             + "}\n";
 
     public static final String SCENE_FS = ""
+            + "#ifdef GL_FRAGMENT_PRECISION_HIGH\n"
+            + "precision highp float;\n"
+            + "#else\n"
             + "precision mediump float;\n"
+            + "#endif\n"
             + "uniform vec3 uCamPos;\n"
             + "uniform vec3 uSunDir;\n"
             + "uniform vec3 uSunColor;\n"
@@ -66,6 +70,8 @@ public final class ShaderLib {
             + "uniform float uBeamStrength;\n"
             + "uniform float uExposure;\n"      /* +0,4 EV dans le faisceau */
             + "uniform float uFogSkip;\n"        /* 1 = dome du ciel : pas de brume */
+            + "uniform sampler2D uAtlas;\n"      /* atlas 4x4 des matieres */
+            + "uniform float uAtlasOn;\n"
             + "uniform float uTime;\n"
             + "varying vec3 vWorld;\n"
             + "varying vec3 vNormal;\n"
@@ -78,6 +84,19 @@ public final class ShaderLib {
             + "  vec3 sun = uSunColor * ndl;\n"
             + "  vec3 amb = mix(uAmbientGround, uAmbientSky, n.y * 0.5 + 0.5);\n"
             + "  vec3 col = vColor.rgb * (sun + amb);\n"
+            /* aParam.x porte l'id de materiau : 0..14 = tuile de l'atlas,
+               15 = verre de la Maree, param 0 = aplats sans texture */
+            + "  float mid = floor(vParam.x * 16.0 + 0.5) - 1.0;\n"
+            + "  if (uAtlasOn > 0.5 && mid > -0.5 && mid < 14.5) {\n"
+            + "    vec3 an = abs(n);\n"
+            + "    an /= (an.x + an.y + an.z + 1e-4);\n"
+            + "    vec2 off = vec2(mod(mid, 4.0), floor(mid * 0.25)) * 0.25;\n"
+            + "    float sc = 0.45;\n"
+            + "    vec3 tx = texture2D(uAtlas, off + 0.001 + fract(vWorld.zy * sc) * 0.248).rgb * an.x\n"
+            + "            + texture2D(uAtlas, off + 0.001 + fract(vWorld.xz * sc) * 0.248).rgb * an.y\n"
+            + "            + texture2D(uAtlas, off + 0.001 + fract(vWorld.xy * sc) * 0.248).rgb * an.z;\n"
+            + "    col *= 0.55 + 0.95 * tx;\n"
+            + "  }\n"
             /* la lampe : 2700 K, portee de 4 m quand elle est posee (08.11) */
             + "  if (uLampRange > 0.01) {\n"
             + "    vec3 ld = uLampPos - vWorld;\n"
@@ -99,7 +118,7 @@ public final class ShaderLib {
             + "    }\n"
             + "  }\n"
             /* le verre de la Maree : reflet rasant, jamais un miroir net */
-            + "  if (vParam.x > 0.5) {\n"
+            + "  if (mid > 14.5) {\n"
             + "    float fres = pow(1.0 - max(dot(n, v), 0.0), 3.0);\n"
             + "    float ripple = sin(vWorld.x * 1.7 + uTime * 0.6)\n"
             + "                 * sin(vWorld.z * 1.3 - uTime * 0.45);\n"

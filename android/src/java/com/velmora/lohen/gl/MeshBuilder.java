@@ -157,6 +157,11 @@ public final class MeshBuilder {
     /** Une rampe d'escalier : le kit K3, le plus utilise du jeu (09.41). */
     public void ramp(float x, float y, float z, float w, float h, float d,
                      float yawDeg, float steps, int argb) {
+        ramp(x, y, z, w, h, d, yawDeg, steps, argb, 0f);
+    }
+
+    public void ramp(float x, float y, float z, float w, float h, float d,
+                     float yawDeg, float steps, int argb, float texParam) {
         float r = ShaderLib.r(argb);
         float g = ShaderLib.g(argb);
         float b = ShaderLib.b(argb);
@@ -174,7 +179,7 @@ public final class MeshBuilder {
             float wx = lx * cs + lz * sn;
             float wz = -lx * sn + lz * cs;
             box(x + wx, ly, z + wz, w * 0.5f, rise * 0.5f, run * 0.55f, yawDeg,
-                    pack(r * 0.9f, g * 0.9f, b * 0.9f, a), 0f, 0f);
+                    pack(r * 0.9f, g * 0.9f, b * 0.9f, a), texParam, 0f);
         }
     }
 

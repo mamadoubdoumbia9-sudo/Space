@@ -30,16 +30,19 @@ public final class Palette {
     public static final int BLEU_BRUME = 0xFF16263A;   /* fond de brume */
 
     /* ---------------- matieres ---------------- */
-    public static final int PIERRE_HUMIDE = 0xFF4A423A;
-    public static final int PIERRE_SECHE = 0xFF6E6254;
-    public static final int PLATRE = 0xFF8E7F6C;
-    public static final int CALCAIRE = 0xFFB9A88E;
-    public static final int BOIS_GOUDRON = 0xFF3B2A21;
-    public static final int BRIQUE = 0xFF7A3F2C;
-    public static final int TERRE_CUITE = 0xFFA8552F;
-    public static final int METAL = 0xFF4E565E;
-    public static final int GRAVIER = 0xFF5A5046;
-    public static final int TAPIS = 0xFF5A3B32;
+    /* RETOUR JOUEUR « c'est toujours gris » : matieres plus chaudes,
+     * plus claires, plus saturees — la ville est de brique, de platre et
+     * de terre cuite, pas de beton gris. */
+    public static final int PIERRE_HUMIDE = 0xFF5E5548;
+    public static final int PIERRE_SECHE = 0xFF8C7A60;
+    public static final int PLATRE = 0xFFA9977C;
+    public static final int CALCAIRE = 0xFFCFBB95;
+    public static final int BOIS_GOUDRON = 0xFF4E382A;
+    public static final int BRIQUE = 0xFF9E4E33;
+    public static final int TERRE_CUITE = 0xFFC46C36;
+    public static final int METAL = 0xFF6E7A86;
+    public static final int GRAVIER = 0xFF7A6C5C;
+    public static final int TAPIS = 0xFF83443A;
 
     /* ---------------- lumieres (13.xx) ---------------- */
     public static final int LANTERNE_2700K = 0xFFFFD6A0;
@@ -61,7 +64,7 @@ public final class Palette {
     /** Couleur d'albedo d'un materiau du niveau (05.20 a 05.26). */
     public static int material(int mat) {
         switch (mat) {
-            case Geom.MAT_WOOD: return 0xFF4A382B;
+            case Geom.MAT_WOOD: return 0xFF6B4C33;
             case Geom.MAT_WOOD_WET: return BOIS_GOUDRON;
             case Geom.MAT_STONE: return PIERRE_SECHE;
             case Geom.MAT_STONE_WET: return PIERRE_HUMIDE;
@@ -138,8 +141,9 @@ public final class Palette {
      * Les 34 habitants du marche portent des teintes de laine et de suie.
      */
     public static int npcTint(String archetype, int seed) {
-        int[] wools = {0xFF4E4438, 0xFF5A4A3C, 0xFF413A34, 0xFF6A5A48,
-                0xFF3A3F45, 0xFF55463A, 0xFF484038, 0xFF605044};
+        /* le marche suspendu : des laines TEINTES (retour joueur) */
+        int[] wools = {0xFF8C4A3A, 0xFF4A5E7A, 0xFF7A6A3A, 0xFF4E6B4A,
+                0xFF6A4A6E, 0xFF9A7A4A, 0xFF3F5A5E, 0xFF8A5A2E};
         int base = wools[Math.abs(seed) % wools.length];
         if ("enfant".equals(archetype)) {
             return 0xFF6E5A48;

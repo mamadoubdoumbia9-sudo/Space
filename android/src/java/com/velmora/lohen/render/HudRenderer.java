@@ -24,6 +24,7 @@ import android.opengl.GLES20;
 import com.velmora.lohen.gl.GlUtil;
 import com.velmora.lohen.gl.ShaderLib;
 import com.velmora.lohen.gl.TextAtlas;
+import com.velmora.lohen.gl.TextureLib;
 import com.velmora.lohen.gl.UiBatch;
 import com.velmora.lohen.sim.core.Localization;
 import com.velmora.lohen.sim.core.Options;
@@ -57,6 +58,43 @@ public final class HudRenderer {
     private int program;
     private int aPos, aUv, aColor;
     private int uTex, uTextured, uOpacity, uResolution;
+    private TextureLib textures;
+
+    public void setTextures(TextureLib textures) {
+        this.textures = textures;
+    }
+
+    /**
+     * Une VRAIE image dans le jeu (retour joueur) : fond peint pour le menu,
+     * l'accueil, le journal et le papier de la lettre. Vide d'abord les quads
+     * en attente, puis trace l'image avec sa propre texture.
+     */
+    public void imageQuad(int w, int h, String path, float x0, float y0,
+                          float x1, float y1, int argb) {
+        if (textures == null || batch == null) {
+            return;
+        }
+        int tex = textures.getHQ(path);
+        if (tex == 0) {
+            return;
+        }
+        flush(w, h, true);
+        batch.beginFrame();
+        batch.clear();
+        batch.quad(x0, y0, x1, y1, 0f, 0f, 1f, 1f, argb);
+        GLES20.glDisable(GLES20.GL_DEPTH_TEST);
+        GLES20.glEnable(GLES20.GL_BLEND);
+        GLES20.glBlendFunc(GLES20.GL_SRC_ALPHA, GLES20.GL_ONE_MINUS_SRC_ALPHA);
+        GLES20.glUseProgram(program);
+        GLES20.glUniform2f(uResolution, w, h);
+        GLES20.glUniform1f(uOpacity, 1f);
+        GLES20.glUniform1f(uTextured, 1f);
+        GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
+        GLES20.glUniform1i(uTex, 0);
+        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, tex);
+        batch.draw(program, aPos, aUv, aColor, w, h);
+        GLES20.glDisable(GLES20.GL_BLEND);
+    }
     private final UiBatch batch = new UiBatch(4096);
     private TextAtlas atlas;
     private float density = 2.75f;
@@ -80,13 +118,18 @@ public final class HudRenderer {
         density = d <= 0f ? 1f : d;
     }
 
+    /* RETOUR JOUEUR « textes tres petits voire illisibles » : tout le HUD
+     * est mis a l'echelle — texte x1,45, gabarits x1,12. */
+    public static final float TEXT_SCALE = 1.45f;
+    public static final float LAYOUT_SCALE = 1.12f;
+
     public float dp(float value) {
-        return value * density;
+        return value * density * LAYOUT_SCALE;
     }
 
     /** sp vers pixels : 17 sp minimum pour les sous-titres (14.10). */
     public int sp(float value) {
-        return Math.round(value * density);
+        return Math.round(value * density * TEXT_SCALE);
     }
 
     /* ------------------------------------------------------------------ */
@@ -319,7 +362,8 @@ public final class HudRenderer {
     /* ------------------------------------------------------------------ */
 
     private void drawMainMenu(LohenGame game, MenuModel menu, int w, int h) {
-        rect(0, 0, w, h, Palette.ECRAN_NUIT, 0.55f);
+        imageQuad(w, h, "content/tex/menu.png", 0f, 0f, w, h, 0xFFFFFFFF);
+        rect(0, 0, w, h, Palette.ECRAN_NUIT, 0.38f);
         if (atlas == null) {
             return;
         }
@@ -508,7 +552,8 @@ public final class HudRenderer {
      */
     private void drawJournal(LohenGame game, int w, int h, Localization loc) {
         JournalModel j = game.journal;
-        rect(0, 0, w, h, Palette.ENCRE, 0.94f);
+        imageQuad(w, h, "content/tex/journal.png", 0f, 0f, w, h, 0xFFFFFFFF);
+        rect(0, 0, w, h, Palette.ENCRE, 0.62f);
         float x = dp(44f);
         atlas.drawSmallCaps(batch, loc.text("journal.title", "Journal"), sp(30), x,
                 dp(40f), Palette.BLANC_CASSE);
@@ -663,7 +708,9 @@ public final class HudRenderer {
             float paperH = h * 0.80f * unfold;
             float px = (w - paperW) * 0.5f;
             float py = (h - paperH) * 0.5f;
-            rect(px, py, px + paperW, py + paperH, Palette.PAPIER, 0.98f);
+            imageQuad(w, h, "content/tex/lettre.png", px, py, px + paperW,
+                    py + paperH, 0xFFFFFFFF);
+            rect(px, py, px + paperW, py + paperH, Palette.PAPIER, 0.20f);
             rect(px, py, px + paperW, py + dp(3f), 0xFFCFC5B2, 0.9f);
             hit(HIT_LETTER, 0, px, py, px + paperW, py + paperH);
             if (atlas != null && unfold > 0.35f) {
@@ -813,7 +860,8 @@ public final class HudRenderer {
         }
         batch.beginFrame();
         batch.clear();
-        rect(0, 0, w, h, 0xFF04060A, 1f);
+        imageQuad(w, h, "content/tex/boot.png", 0f, 0f, w, h, 0xFFFFFFFF);
+        rect(0, 0, w, h, 0xFF04060A, 0.55f);
         if (atlas != null) {
             /* le titre, en petites capitales, sans aucune decoration */
             String title = "LOHEN";

@@ -148,6 +148,39 @@ l'emporte sur la conformité littérale des chiffres.** Changements :
   souffle de Lohen et voix sans paroles adoucis. L'orchestration de M18
   (19.09) reste canonique, seuls ses niveaux de vent baissent.
 
+### ADR-007 — Images générées, poids réel, jeu muet par défaut (retour joueur 2)
+
+Second retour joueur : « toujours gris, bugs interactifs, textes illisibles,
+enlève le son, génère de vraies images, le jeu doit peser au moins 100 Mo
+(sans gonflement inutile) ». Réponses :
+
+- **Images réelles** : `tools/make_textures.py` génère 98 Mo d'art proceduraL
+  déterministe — 4 atlas de matières 4096² (16 tuiles : pierres, brique,
+  plâtre, calcaire, bois, goudron, métal, gravier, tapis, eau, papier,
+  mousse, rouille, nuage, verre), gradés par atmosphère (base / marché chaud
+  S3 / conduits sombres S5 / aube S8), + 4 fonds peints 2048² (menu : ville
+  au crépuscule avec Phare et fenêtres allumées ; accueil : sceau de cire
+  ambre ; journal : cuir et papier réglé ; lettre : papier fibres, lignes
+  d'encre et sceau). Le shader SCENE échantillonne l'atlas en **triplanar**
+  (aucun UV à produire pour la géométrie existante), l'id de matériau voyage
+  dans `aParam.x` (0–14 tuile, 15 verre). Décodage 2048² + `RGB_565` et UN
+  seul atlas résident à la fois : la VRAM d'un téléphone de 2017 tient.
+- **Poids** : APK ≈ **99,6 Mo** — chaque octet est une image utilisée en jeu
+  (aucun poids mort, la règle anti-gonflement du devis reste respectée dans
+  son esprit). La limite GitHub est 100 Mo/fichier : l'APK passe juste en
+  dessous ; au-delà, il faudrait le découper — ce n'est pas le cas.
+- **Son** : le jeu démarre **muet** (`volMaster = 0`, coupure immédiate sans
+  fondu). Toute la synthèse (M01–M22, SFX, souffle) reste présente et se
+  remonte dans Réglages > Audio. Le test de fumée vérifie les deux : muet par
+  défaut, audible une fois activé.
+- **Textes** : échelle HUD texte ×1,45, gabarits ×1,12, sous-titres 26 sp.
+- **Interactions** : cibles tactiles élargies (A 96 dp, B/C/D 84 dp,
+  buttonScale 1,25 par défaut) ; le dessin et le test de toucher partagent la
+  même géométrie (impossible de viser un bouton qui n'existe pas à l'écran).
+- **Couleurs** : matières plus chaudes et saturées (brique, terre cuite,
+  plâtre), laines des 34 habitants teintes (rouge, bleu, ocre, vert, prune),
+  saturation post 0,50–0,82 selon la séquence.
+
 ### Substituts restants (placeholders au sens strict)
 
 | Élément du devis | Livré | Statut |
@@ -155,7 +188,7 @@ l'emporte sur la conformité littérale des chiffres.** Changements :
 | Textures photographiques 2K/4K | rendu procédural GLES2 (palette du devis) | substitut assumé (ADR-001) |
 | VO française enregistrée | souffle synthétisé + sous-titres 5 langues | substitut assumé (ADR-003) |
 | Fichiers audio (OGG/WAV) | synthèse temps réel M01–M22 | substitut assumé (ADR-004) |
-| Poids ≥ 1,0 Go | ~quelques Mo, 0 octet mort | **NON CONFORME**, assumé (ADR-002) |
+| Poids ≥ 1,0 Go | ≈ 100 Mo d'images réelles générées, 0 octet mort | **NON CONFORME** à 1 Go — plancher joueur de 100 Mo atteint (ADR-002/007) |
 | Godot 4.4.1 | Java/GLES2 natif, APK sans WebView | **NON CONFORME** au devis, conforme à l'exigence « natif » (ADR-001) |
 | 744 animations | déclarées et pilotées par la FSM (744 entrées) | conforme |
 | Temps de jeu 3,5–4 h | 4 h 02 déclarées, cinématiques 1 410 s incluses | conforme |
@@ -169,4 +202,5 @@ séquences, sauvegardes (3 slots, positions exactes), réglages, localisation
 5 langues, lettre finale (27/27 blocs → pliage → descente → plan final →
 générique → « Il reste six lettres. »), audio synthétisé et loudness.
 
-**Dernier résultat connu : 76 vérifications réussies, 0 échec.**
+**Dernier résultat connu : 77 vérifications réussies, 0 échec**
+(vérifie aussi : jeu muet par défaut, audible une fois le son réactivé).

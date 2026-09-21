@@ -20,6 +20,7 @@ import android.opengl.GLES20;
 import com.velmora.lohen.gl.GlUtil;
 import com.velmora.lohen.gl.MeshBuilder;
 import com.velmora.lohen.gl.ShaderLib;
+import com.velmora.lohen.gl.TextureLib;
 import com.velmora.lohen.sim.ai.Echassier;
 import com.velmora.lohen.sim.ai.Figure;
 import com.velmora.lohen.sim.ai.Mueur;
@@ -43,13 +44,19 @@ public final class WorldRenderer {
     private int aPos, aNormal, aColor, aParam;
     private int uMvp, uModel, uCamPos, uSunDir, uSunColor, uAmbientSky,
             uAmbientGround, uFogColor, uFogDensity, uFogVisibility, uLampPos,
-            uFogSkip,
+            uFogSkip, uAtlas, uAtlasOn,
             uLampColor, uLampRange, uBeamPos, uBeamDir, uBeamStrength,
             uExposure, uTime;
 
     private final MeshBuilder level = new MeshBuilder(60000, 90000);
     private final MeshBuilder dynamic = new MeshBuilder(9000, 14000);
     private final MeshBuilder sky = new MeshBuilder(64, 96);
+    private TextureLib textures;
+    private String currentAtlas;
+
+    public void setTextures(TextureLib textures) {
+        this.textures = textures;
+    }
 
     private String builtFor = "";
     private final float[] model = new float[16];
@@ -80,6 +87,8 @@ public final class WorldRenderer {
         uBeamStrength = GlUtil.uniform(program, "uBeamStrength");
         uExposure = GlUtil.uniform(program, "uExposure");
         uFogSkip = GlUtil.uniform(program, "uFogSkip");
+        uAtlas = GlUtil.uniform(program, "uAtlas");
+        uAtlasOn = GlUtil.uniform(program, "uAtlasOn");
         uTime = GlUtil.uniform(program, "uTime");
         skyBuiltFor = null;
         buildSky(null);
@@ -124,9 +133,11 @@ public final class WorldRenderer {
                 int low = skyColor(t0, zen, hor, c0 * h0, y0, s0 * h0, sx, sy, sz);
                 int high = skyColor(t1, zen, hor, c0 * h1, y1, s0 * h1, sx, sy, sz);
                 sky.vertex(c0 * h0 * r, y0 * r, s0 * h0 * r, -c0 * h0, -y0, -s0 * h0,
-                        ShaderLib.r(low), ShaderLib.g(low), ShaderLib.b(low), 1f, 0f, 0.5f);
+                        ShaderLib.r(low), ShaderLib.g(low), ShaderLib.b(low), 1f,
+                        15f / 16f, 0.5f);
                 sky.vertex(c0 * h1 * r, y1 * r, s0 * h1 * r, -c0 * h1, -y1, -s0 * h1,
-                        ShaderLib.r(high), ShaderLib.g(high), ShaderLib.b(high), 1f, 0f, 0.5f);
+                        ShaderLib.r(high), ShaderLib.g(high), ShaderLib.b(high), 1f,
+                        15f / 16f, 0.5f);
             }
             for (int sg = 0; sg < seg; sg++) {
                 int o = base + sg * 2;
@@ -186,14 +197,15 @@ public final class WorldRenderer {
             }
             level.box(d.solidX(i), d.solidY(i), d.solidZ(i), d.solidHX(i),
                     d.solidHY(i), d.solidHZ(i), d.solidYaw(i), base,
-                    glass ? 1f : 0f, emit);
+                    texParam(mat, glass, i), emit);
         }
 
         /* 2. les escaliers : le kit K3, le plus utilise du jeu (09.41) */
         for (int i = 0; i < d.stairCount; i++) {
             level.ramp(d.stairX(i), d.stairY(i), d.stairZ(i), d.stairW(i),
                     d.stairH(i), d.stairD(i), d.stairYaw(i), d.stairSteps(i),
-                    Palette.material(d.stairMaterial(i)));
+                    Palette.material(d.stairMaterial(i)),
+                    texParam(d.stairMaterial(i), false, i + 3));
         }
 
         /* 3. les prises : une barre de 12 cm, jamais une poignee jaune */
@@ -204,7 +216,7 @@ public final class WorldRenderer {
             float len = d.ledgeData[i * 6 + 3];
             float yaw = d.ledgeData[i * 6 + 4];
             level.box(x, y, z, len * 0.5f, 0.06f, 0.14f, yaw,
-                    Palette.interactiveTint(Palette.METAL), 0f, 0f);
+                    Palette.interactiveTint(Palette.METAL), 8f / 16f, 0f);
         }
 
         /* 4. les ancres de harpon : un anneau de relayeur (08.08) */
@@ -371,6 +383,24 @@ public final class WorldRenderer {
         GLES20.glUniform1f(uExposure, exposureOf(game)
                 * (skySet == null ? 1.06f : skySet.exposure * 1.06f));
 
+        /* l'atlas de matieres de la sequence (images generees, tex/) ;
+         * un seul atlas resident a la fois — VRAM d'un telephone de 2017 */
+        String atlasPath = seq == null ? null : atlasFor(seq);
+        if (textures != null && atlasPath != null && !atlasPath.equals(currentAtlas)) {
+            if (currentAtlas != null) {
+                textures.releasePath(currentAtlas);
+            }
+            currentAtlas = atlasPath;
+        }
+        int atlasTex = textures == null || atlasPath == null ? 0
+                : textures.get(atlasPath);
+        GLES20.glUniform1i(uAtlas, 0);
+        GLES20.glUniform1f(uAtlasOn, atlasTex != 0 ? 1f : 0f);
+        if (atlasTex != 0) {
+            GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
+            GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, atlasTex);
+        }
+
         /* la lampe portee (08.11) : 2700 K, 4 m, elle repousse les Mueurs */
         float lampRange = 0f;
         float lx = game.lohen.x, ly = game.lohen.y + 1.1f, lz = game.lohen.z;
@@ -425,6 +455,47 @@ public final class WorldRenderer {
         GLES20.glEnable(GLES20.GL_CULL_FACE);
         GLES20.glDisable(GLES20.GL_BLEND);
         MeshBuilder.unbind(aPos, aNormal, aColor, aParam);
+    }
+
+    /** Quatre atmospheres de matieres : base, marche chaud, conduits, aube. */
+    public static String atlasFor(String seq) {
+        if ("S3".equals(seq)) {
+            return "content/tex/atlas_chaud.png";
+        }
+        if ("S5".equals(seq)) {
+            return "content/tex/atlas_sombre.png";
+        }
+        if ("S8".equals(seq)) {
+            return "content/tex/atlas_aube.png";
+        }
+        return "content/tex/atlas_base.png";
+    }
+
+    /* Tuiles de l'atlas (voir tools/make_textures.py, meme ordre) :
+     * 0 pierre seche · 1 pierre humide · 2 brique · 3 platre · 4 calcaire
+     * 5 bois · 6 bois goudronne · 7 metal · 8 gravier · 9 tapis · 10 eau
+     * 11 papier · 12 pierre moussue · 13 metal rouille · 14 nuage · 15 verre */
+    private static float texParam(int mat, boolean glass, int seed) {
+        if (glass) {
+            return 1f;                       /* id 15 : verre, reflet rasant */
+        }
+        int tile;
+        switch (mat) {
+            case Geom.MAT_WOOD:     tile = seed % 5 == 4 ? 6 : 5; break;
+            case Geom.MAT_WOOD_WET: tile = 6; break;
+            case Geom.MAT_STONE:
+                tile = seed % 11 == 7 ? 12 : (seed % 3 == 1 ? 4
+                        : (seed % 3 == 2 ? 3 : 0));
+                break;
+            case Geom.MAT_STONE_WET: tile = seed % 7 == 3 ? 12 : 1; break;
+            case Geom.MAT_GRAVEL:   tile = seed % 7 == 3 ? 12 : 8; break;
+            case Geom.MAT_GLASS:    tile = 10; break;
+            case Geom.MAT_METAL:    tile = seed % 4 == 3 ? 13 : 7; break;
+            case Geom.MAT_CARPET:   tile = 9; break;
+            case Geom.MAT_WATER:    tile = 10; break;
+            default:                tile = 0; break;
+        }
+        return (tile + 1) / 16f;
     }
 
     private static float exposureOf(LohenGame game) {

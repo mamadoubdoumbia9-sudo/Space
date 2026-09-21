@@ -14,7 +14,8 @@ Aventure narrative en vue troisième personne, **100 % native Android**
 
 ## 📱 Télécharger et installer l'APK
 
-**`dist/LOHEN-chapitre1.apk`** (≈ 1,8 Mo, signé, vérifié `apksigner`)
+**`dist/LOHEN-chapitre1.apk`** (≈ 99,6 Mo — images générées réelles, signé,
+vérifié `apksigner`)
 
 1. Copiez le fichier sur le téléphone (USB, nuage, ou depuis GitHub).
 2. Ouvrez-le ; autorisez « Installer des applications inconnues » si demandé.
@@ -52,7 +53,13 @@ lumière — **ambre `#FFA33C`** pour Esteban, **cyan `#6BF2D8`** pour les Figur
   47 checkpoints, 14 raccourcis, 31 secrets
 - **27 blocs** pour la lettre finale canonique ; **744 animations** déclarées
 - Musique **synthétisée en temps réel** : 22 pistes (M01–M22), orchestration
-  du chapitre 19 du devis, loudness intégrée contrôlée autour de −16 LUFS
+  du chapitre 19 du devis, loudness intégrée contrôlée autour de −16 LUFS.
+  **Le jeu démarre muet** (retour joueur) — le son se remonte dans
+  Réglages > Audio
+- **98 Mo d'images générées** (`tools/make_textures.py`) : 4 atlas de
+  matières 4096² échantillonnés en triplanar (brique, pierre, bois, métal,
+  tapis, eau, mousse, rouille…), 4 fonds peints (menu au crépuscule, sceau
+  de cire, journal, papier de la lettre)
 - Sauvegardes : 3 slots, positions et progression exactes
 
 ## 🏗️ Construire et tester

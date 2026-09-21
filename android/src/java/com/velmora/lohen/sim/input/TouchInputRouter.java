@@ -122,10 +122,11 @@ public final class TouchInputRouter {
     /** Arc de cercle, pas une grille (08.02). */
     private void layoutButtons() {
         float scale = options == null ? 1f : options.buttonScale;
-        float rA = 72f * dpScale * scale * 0.5f;
-        float rB = 64f * dpScale * scale * 0.5f;
-        float rC = 64f * dpScale * scale * 0.5f;
-        float rD = 64f * dpScale * scale * 0.5f;
+        /* retour joueur « bugs interactifs » : cibles elargies */
+        float rA = 96f * dpScale * scale * 0.5f;
+        float rB = 84f * dpScale * scale * 0.5f;
+        float rC = 84f * dpScale * scale * 0.5f;
+        float rD = 84f * dpScale * scale * 0.5f;
         /* centre de l'arc : coin bas droit, marge = zone morte 48 dp */
         float margin = EDGE_DEAD_ZONE_DP * dpScale;
         float arcCx = screenW - margin - rA * 1.15f;

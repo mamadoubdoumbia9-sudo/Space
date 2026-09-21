@@ -111,6 +111,11 @@ public final class AudioEngine {
         busTarget[BUS_AMBIENCE] = options.volAmb;
         ducking = 1f;
         duckTarget = 1f - Maths.clamp01(options.volDucking) * 0.35f;
+        /* RETOUR JOUEUR : le jeu est livre muet — « muet » veut dire MUET,
+           immediatement, sans attendre le fondu du bus. */
+        if (options.volMaster <= 0.001f) {
+            busGain[BUS_MASTER] = 0f;
+        }
     }
 
     /* ------------------------------------------------------------------ */

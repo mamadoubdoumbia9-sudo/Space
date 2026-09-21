@@ -32,7 +32,9 @@ public final class Options {
     public boolean hdr = false;
 
     /* SON ---------------------------------------------------------------- */
-    public float volMaster = 0.85f;
+    /* RETOUR JOUEUR : le jeu est livre MUET. Le son existe toujours, il se
+     * remonte dans Reglages > Audio. */
+    public float volMaster = 0f;
     public float volMusic = 0.8f;
     public float volSfx = 0.9f;
     public float volVo = 1.0f;
@@ -52,7 +54,7 @@ public final class Options {
     public boolean narrationOnly = false;
 
     /* CONTROLES ---------------------------------------------------------- */
-    public float buttonScale = 1.0f;     /* 80-140 % */
+    public float buttonScale = 1.25f;    /* 80-140 % — retour joueur */
     public boolean tapInsteadOfHold = false;
     public float sensitivityX = 1.0f;
     public float sensitivityY = 1.0f;
@@ -63,7 +65,7 @@ public final class Options {
     public final Map<Integer, float[]> buttonPositions = new LinkedHashMap<Integer, float[]>();
 
     /* ACCESSIBILITE (14.08) ---------------------------------------------- */
-    public int subtitleSizeSp = 21;      /* 17-30 sp */
+    public int subtitleSizeSp = 26;      /* 17-30 sp — retour joueur */
     public boolean subtitleOpaqueBg = false;
     public boolean subtitleSpeaker = true;
     public boolean subtitleExtended = false;
