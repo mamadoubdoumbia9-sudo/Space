@@ -14,3 +14,4 @@ Thumbs.db
 *.blend1
 # Snapshots de travail
 *.log
+__pycache__/
