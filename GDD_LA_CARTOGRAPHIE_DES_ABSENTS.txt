@@ -2,10 +2,10 @@
                  L A   C A R T O G R A P H I E   D E S   A B S E N T S
                  Chapitre 1 — La Marée Basse
 ════════════════════════════════════════════════════════════════════════════════════════════
- GAME DESIGN DOCUMENT INTÉGRAL — VERSION 1.1
+ GAME DESIGN DOCUMENT INTÉGRAL — VERSION 1.2
  Studio : Atelier Marée Basse (équipe interne, 7 personnes)
  Plateforme exclusive : ANDROID NATIF (APK / AAB — aucune WebView, aucun HTML5, aucun PC)
- Moteur : GODOT 4.3 (open source, licence MIT) — export Android natif
+ Moteur : NON IMPOSÉ — document 100 % moteur-agnostique (exigences & contrats : BLOC 12)
  Date de rédaction : 22 septembre 2026
  Statut du document : APPROUVÉ POUR PRÉ-PRODUCTION
  Responsable document : Direction créative (Lead Game Designer / Développeur senior)
@@ -25,7 +25,7 @@ SOMMAIRE GÉNÉRAL DU DOCUMENT
  BLOC 09 — ANIMATIONS
  BLOC 10 — CINÉMATIQUES & SÉQUENCES SCRIPTÉES
  BLOC 11 — UI / UX
- BLOC 12 — TECHNIQUE GODOT & ARCHITECTURE (INCL. GITHUB)
+ BLOC 12 — ARCHITECTURE TECHNIQUE & DONNÉES (MOTEUR-AGNOSTIQUE — INCL. GITHUB)
  BLOC 13 — SONS & MUSIQUE
  BLOC 14 — LETTRE FINALE DU CHAPITRE 1
  BLOC 15 — PLANNING & PRODUCTION
@@ -36,7 +36,7 @@ SOMMAIRE GÉNÉRAL DU DOCUMENT
 ────────────────────────────────────────────────────────────────────────────────────────────
  CONVENTIONS DE LECTURE DU DOCUMENT
  ─ Tout identifiant entre crochets [XYZ-00] est une référence unique et stable : elle sert de
-   clé dans les tickets GitHub, les scènes Godot, les feuilles de spreads et les tests QA.
+ clé dans les tickets GitHub, les fiches de contenu, les feuilles de spreads et les tests QA.
  ─ Les effets de choix sont notés avec des flèches :  → +DOUCEUR  → LIEN-SIDONIE +1  → FLAG-E05
  ─ Les conditions d'affichage sont notées :  [SI: FLAG-E14 ET LIEN-MAREK >= 3]
  ─ Les temps estimés sont notés :  (~2 min) (moyenne observée en playtest interne, cible).
@@ -61,8 +61,8 @@ SOMMAIRE GÉNÉRAL DU DOCUMENT
  Genre                       : Aventure narrative libre / exploration / énigmes complexes /
                               inventaire / secrets / choix à conséquences fortes
  Plateforme                  : Android 8.0 (API 26) minimum, cible Android 14 (API 34)
- Format                      : APK signé + AAB (Google Play), 100 % natif Godot (rendu Vulkan
-                              mobile avec fallback GL Compatibility)
+ Format                      : APK signé + AAB (Google Play), application 100 % native Android
+                              (aucune WebView, aucun HTML5 — rendu 2D peint, exigences au 12.1)
  Mode                        : Solo, hors-ligne complet (cloud save optionnel, jamais requis)
  Session type                : 15 à 25 minutes (conçu mobile-first : sauvegarde permanente)
  Durée Chapitre 1            : 6 à 8 heures (traversée), 10 à 12 heures (complétionniste)
@@ -70,14 +70,14 @@ SOMMAIRE GÉNÉRAL DU DOCUMENT
  Rejouabilité                : NG+ « Après la Lettre » (nouvelles options de dialogue), 24
                               Pages d'Esteban, 40 secrets, variantes de fins par chapitre
  Public cible                : 15–40 ans, amateurs de jeux narratifs (Oxenfree, GRIS, Chants
-                              de Sennaar, A Short Hike), lecteurs de roman d'apprentissage
+                              de Sennaar, Return of the Obra Dinn), lecteurs de roman d'apprentissage
  Prix                        : Premium 7,99 € — zéro publicité, zéro micro-transaction, zéro
                               énergie/attente. Un seul achat, tout le contenu.
  Langues                     : FR (VO) à l'export 1.0 ; EN et ES en mises à jour gratuites
  Poids APK cible             : 220 Mo (FR, voix intégrée) — 380 Mo (3 langues) — max contractuel
                               900 Mo (voir 12.9 — Gestion de la taille de l'APK)
- Moteur                      : Godot 4.3.x stable — GDScript — export Android (Gradle)
- Dépôt                       : GitHub, organisation « atelier-maree-basse », dépôt privé
+ Moteur                      : LIBRE — le document n'impose AUCUN moteur (contrats moteur-
+                              agnostiques, exigences de sélection et budgets au BLOC 12)
                               « cartographie-des-absents » (voir BLOC 12 — section 12.10)
 
 ────────────────────────────────────────────────────────────────────────────────────────────
@@ -107,6 +107,27 @@ SOMMAIRE GÉNÉRAL DU DOCUMENT
 ────────────────────────────────────────────────────────────────────────────────────────────
  1.3 — LE CŒUR ÉMOTIONNEL : LE LEURRE NARRATIF (RÈGLE D'OR, NON NÉGOCIABLE)
 ────────────────────────────────────────────────────────────────────────────────────────────
+ LES CINQ VÉRITÉS DU CŒUR (À AFFICHER DANS CHAQUE SALLE DE RÉUNION — LE RESTE
+ DU DOCUMENT N'EST QUE LEUR EXÉCUTION) :
+ ─ VÉRITÉ 1 : LE JOUEUR EST LOHEN. Pas un avatar, pas une caméra : chaque
+   tableau illustré est CE QU'ELLE VOIT (6.2) ; chaque PENSÉE est la sienne ;
+   le jeu entier est à la première personne du cœur.
+ ─ VÉRITÉ 2 : IL CHERCHE ESTEBAN. Un ami de chair et d'absence, un garçon
+   qui manque — jamais « un objet », jamais « un document ». Toute la
+   quête s'écrit « OÙ EST ESTEBAN ? ».
+ ─ VÉRITÉ 3 : LE JOUEUR NE SAURA JAMAIS QU'IL CHERCHE UNE LETTRE. La lettre
+   existe depuis le premier écran, invisible dans la formulation de toute
+   quête, de tout dialogue, de tout texte d'interface (interdictions
+   lexicales ci-dessous). Elle est le trésor que personne ne cherche.
+ ─ VÉRITÉ 4 : LA LETTRE EST UN AVEU D'AMOUR. Romantique, triste, poétique,
+   sincère — écrite pour faire fondre le cœur, relue pour toujours (le
+   texte intégral, onze plis, est le document-sommet : BLOC 14). Tout ce
+   que le joueur a traversé n'existait que pour la rendre inévitable,
+   méritée, et vraie.
+ ─ VÉRITÉ 5 : TOUT SYSTÈME DU JEU TRAVAILLE POUR LE CŒUR. Marée, carnet,
+   cloches, chemins, silences : si un système ne sert pas Esteban-cherché
+   puis Esteban-aimé, il est supprimé. C'est la seule règle de ce GDD qui
+   surpasse les autres règles.
  PRINCIPE : Le joueur doit sincèrement croire qu'il recherche un AMI DISPARU. Il ne doit à
  aucun moment soupçonner qu'il cherche, en réalité, une LETTRE.
  ─ Toutes les quêtes sont formulées en « OÙ EST ESTEBAN ? », jamais « qu'a-t-il laissé ? ».
@@ -143,11 +164,14 @@ SOMMAIRE GÉNÉRAL DU DOCUMENT
    Choix, chemins, objets touchés, heures de visite : tout retentit. Pas de « bonne fin »
    morale : des conséquences lisibles, cohérentes, parfois mélancoliques. Le système de
    Retentissements (6.9) montre au joueur ce que le monde a retenu de lui, sans le juger.
- PILIER 4 — L'ÉMOTION PAR LE TACTILE
-   Un jeu Android se joue avec les pouces, pas avec une manette. Toutes les interactions
-   clés (cartographier, caresser Filou, tourner une clé, ouvrir la lettre) sont des gestes
-   tactiles expressifs : presser, glisser, maintenir, souffler (micro optionnel). L'écran
-   final de la lettre est une interaction, pas une cinématique passive (voir 14.4).
+ PILIER 4 — L'ÉMOTION PAR LE CHOIX ET LE TOUCHER JUSTE
+   Aucun joystick, aucun stick, aucune manette, aucune caméra libre : le jeu
+   se joue à UN SEUL DOIGT, sur des images illustrées, des textes, des choix
+   de chemins, des énigmes et un inventaire (6.2). Chaque tap est une
+   décision (aller, regarder, écouter, garder, donner) : la tendresse du jeu
+   vit dans la précision de ce qu'on touche — caresser Filou, lisser la
+   carte, tourner la page, déplier la lettre. L'écran final de la lettre est
+   une interaction, pas une cinématique passive (voir 14.4).
  PILIER 5 — JAMAIS S'ENNUYER, JAMAIS ÊTRE FRUSTRÉ
    Règle des 90 secondes : quelque chose de nouveau (réplique, vue, son, découverte,
    micro-événement) survient toutes les 90 secondes d'exploration active. Aucun échec
@@ -162,6 +186,11 @@ SOMMAIRE GÉNÉRAL DU DOCUMENT
  les moments graves plus graves encore (contraste réglé au cas par cas, voir 5.0).
  TROIS MOTS-CLEFS : tendre · précis · inquiet.
  RÉFÉRENCES ASSUMÉES (ce qu'on prend, ce qu'on laisse) :
+ ─ Return of the Obra Dinn (Lucas Pope) → la déduction par l'observation, la
+   reconstitution d'une vérité par recoupement de détails, le carnet comme
+   outil de pensée, la satisfaction sèche et immense du « je SAIS » — mais
+   sans mort, sans tableau de comptes macabre : notre vérité à reconstituer
+   est une semaine d'amour, pas un naufrage.
  ─ Chants of Sennaar (Rundisc) → la joie du déchiffrage, le « ah, je comprends ! » — mais
    sans barrière linguistique bloquante.
  ─ GRIS (Nomada) → la couleur comme émotion, la fluidité du mouvement — mais avec un
@@ -222,7 +251,8 @@ SOMMAIRE GÉNÉRAL DU DOCUMENT
  ─ Post-process léger et précis : grain de papier, détourage à l'encre sur les silhouettes
    de premier plan, vignettage chaud, AUCUN motion blur, AUCUN bloom criard.
  ─ La caméra est un personnage : respirations lentes, recadrages presque imperceptibles
-   lors des dialogues importants (Phantom Camera, voir 12.6).
+   lors des dialogues importants (doctrine 9.1 : le cadre est un auteur ;
+   AUCUNE caméra libre : le joueur ne déplace jamais le point de vue).
  ─ La lettre finale est rendue comme un objet physique : papier, pliure, tache d'eau de
    mer, encre qui a coulé sur deux mots — ces deux mots ont été choisis (14.3).
 
@@ -240,33 +270,42 @@ SOMMAIRE GÉNÉRAL DU DOCUMENT
 ────────────────────────────────────────────────────────────────────────────────────────────
  1.9 — CHAÎNE D'OUTILS & GITHUB (VUE D'ENSEMBLE — DÉTAIL AU BLOC 12)
 ────────────────────────────────────────────────────────────────────────────────────────────
- MOTEUR : Godot 4.3.x (dépôt officiel github.com/godotengine/godot — builds releases).
- POURQUOI GODOT : export Android natif (APK/AAB via Gradle), open source MIT (zéro redevance,
- zéro risque de ToS), léger (< 100 Mo l'éditeur), GDScript rapide à itérer, communauté
- d'addons de qualité, fichiers de scène en texte (diffs Git propres — argument décisif).
- OUTILS & DÉPÔTS GITHUB QUI AIDENT À CRÉER LE JEU (tous open source, tous cités au 12.11) :
- ─ godotengine/godot ................. le moteur (issues, releases, docs).
- ─ godotengine/godot-docs ............ documentation officielle (contribuée).
- ─ nathanhoad/godot_dialogue_manager . système de dialogue à resources (utilisé, adapté).
- ─ ramokz/phantom-camera ............. caméras scriptées fluides (dialogues, cinématiques).
- ─ godot-extended-libraries/godot-state-charts — machines à états narrative (adapté).
- ─ Animation : arbres d'animation NATIFS Godot (AnimationTree + StateMachine) — aucun
-   addon tiers pour l'animation (décision figée, raisons détaillées en 12.6).
- ─ godot-extended-libraries/godot_state_charts — machines à états (flow narrative).
- ─ RÈGLE STUDIO : liste d'addons FERMÉE et versionnée (voir 12.11) — aucun addon ajouté
-   sans ticket de review, sans test sur device bas de gamme, sans pin de version.
- ─ GitHub Actions (CI/CD intégré) .... export APK automatique à chaque tag, tests, LFS.
- ─ GitHub Projects / Issues .......... backlog de production, templates par type de tâche.
- ─ GitHub Pages ...................... site interne du studio (design bibles, charts).
- ─ Git LFS ........................... assets binaires (textures, audio, polices).
- ART : Krita (peinture, gratuit), Aseprite (animations pixel-annexe UI), Blender (blocages
- 3D de composition, caméra virtuelle), Inkscape (vectoriel UI).
- AUDIO : Reaper (MAO), Musescore (partitions), Audacity (nettoyage field recordings),
- bibliothèques CC0 : Kenney (UI sounds), freesound.org (filtré par licence).
- POLICES : « Cormorant Garamond » (titres, OFL), « Nunito Sans » (UI, OFL), « Caveat »
- (manuscrit Esteban/Lohen, OFL) — toutes OFL, embarquées, sous-ensemble de glyphes.
- TABLEUR/DESIGN : Google Sheets bridé au design (drop tables), export CSV versionné.
-
+ MOTEUR : NON IMPOSÉ PAR LE PRÉSENT DOCUMENT. Le GDD est écrit moteur-
+   agnostique : il spécifie des CONTRATS (données, systèmes, budgets,
+   livrables Android) qu'aucun moteur n'a le droit de trahir. Le choix
+   définitif appartient à l'équipe d'implémentation ; les critères de
+   sélection (open source, formats de données en texte diffable, itération
+   rapide, export Android natif APK/AAB, communauté vivante) sont listés
+   au 12.1. RÈGLE : toute décision d'implémentation citée dans ce document
+   qui dépendrait d'un moteur précis doit être lue comme UNE SOLUTION
+   POSSIBLE, jamais comme LA spécification.
+ GITHUB (la forge du studio — tout ce qui suit est moteur-agnostique) :
+   ─ GitHub Actions (CI/CD) ........... build APK automatique à chaque
+     tag, tests, audit de contenu (le workflow complet, moteur-agnostique,
+     est spécifié au 12.10).
+   ─ GitHub Projects / Issues ......... backlog de production, templates
+     par type de tâche (le GDD est la SOURCE : gdd_to_issues.py, 12.10).
+   ─ GitHub Pages ..................... site interne du studio (design
+     bibles, charts, ce document versionné).
+   ─ Git LFS .......................... assets binaires (textures, audio,
+     polices) : le patrimoine coûte son stockage : assumé.
+   ─ GitHub Releases .................. distribution des APK signés aux
+     joueurs sans boutique (ils existent, ils ont raison).
+ ART : Krita (peinture, gratuit), Aseprite (animations pixel-annexe UI),
+   Blender (blocages 3D de composition, caméra virtuelle), Inkscape
+   (vectoriel UI).
+ AUDIO : Reaper (MAO), Musescore (partitions), Audacity (nettoyage field
+   recordings), bibliothèques CC0 : Kenney (UI sounds), freesound.org
+   (filtré par licence).
+ POLICES : « Cormorant Garamond » (titres, OFL), « Nunito Sans » (UI, OFL),
+   « Caveat » (manuscrit Esteban/Lohen, OFL) — toutes OFL, embarquées,
+   sous-ensemble de glyphes.
+ TABLEUR/DESIGN : Google Sheets bridé au design (drop tables), export CSV
+   versionné.
+ CONTENU : tous les textes du jeu (dialogues, pages, barks, énigmes) vivent
+   dans des FICHIERS TEXTE VERSIONNÉS (format spécifié au 12.5) : le
+   contenu se relit, se diff, se review — la production narrative est une
+   production logicielle PROPRE, quel que soit le moteur qui l'exécute.
 ────────────────────────────────────────────────────────────────────────────────────────────
  1.10 — CRITÈRES DE SUCCÈS (KPI CRÉATIFS, PAS COMMERCIAUX)
 ────────────────────────────────────────────────────────────────────────────────────────────
@@ -951,6 +990,36 @@ SOMMAIRE GÉNÉRAL DU DOCUMENT
 ────────────────────────────────────────────────────────────────────────────────────────────
  3.6 — CONDITIONS DE DÉBLOCAGE DES FINS (JEU COMPLET) — TABLE DE VÉRITÉ
 ────────────────────────────────────────────────────────────────────────────────────────────
+ LA CHARTE DES FINS (CE QUI EST PROMIS AU JOUEUR, CE QUI EST TENU PAR LE JEU) :
+ ─ IL Y A PLUSIEURS FINS, ET ELLES DÉPENDENT DES DÉCISIONS DU JOUEUR. Au
+   Chapitre 1 : quatre fins de chapitre (les réponses possibles de Lohen
+   après la lettre : D-06). Sur le jeu complet : cinq fins FE1 → FE5. La
+   table ci-dessous est la table de vérité INTÉGRALE de ces variations.
+ ─ LA FIN SECRÈTE CONTIENT LA LETTRE D'AVEU — deux fois. Au premier degré :
+   la séquence de la lettre (CIN-07 + BLOC 14) EST la fin secrète du
+   Chapitre 1 — personne ne sait qu'elle existe avant de la trouver (le
+   leurre 1.3 la rend littéralement la révélation cachée du jeu : le
+   joueur croyait chercher Esteban ; il trouve une déclaration d'amour).
+   Au second degré : la couche la plus secrète de la fin secrète — le
+   POST-SCRIPTUM DU POST-SCRIPTUM (14.5) — n'apparaît qu'aux revenants
+   (NG+), et la fin FE5 « La carte blanche » (100 % global) referme le jeu
+   entier sur la relise de la carte et de la lettre : la récompense des
+   récompenses est une RELECTURE.
+ ─ LES AUTRES FINS EXPRIMENT, CHACUNE À SA FAÇON, À QUEL POINT LOHEN COMPTE
+   POUR ESTEBAN. La réponse (FE-Ch1a) dit : « il attendait ta plume » ;
+   la poursuite (FE-Ch1b) dit : « il t'a laissé des traces pour te garder
+   courageuse » ; les deux rives (FE-Ch1c) dit : « il te fait confiance
+   pour la géographie de vous » ; la carte du bout du monde (NG+) dit :
+   « il t'a tout donné, jusqu'à sa carte ». Plus loin, FE1 dit « chaque
+   lettre rallume une pièce de lui », FE2 dit « deux cartes, un seul
+   lit », FE3 dit « tu me dessines et je te lis ». AUCUNE fin ne dit
+   « il t'aimait un peu » : l'aveu est INTÉGRAL dans toutes les fins ;
+   seule la FORME de la preuve change. C'est la loi du cœur : le joueur
+   qui finit mal quand même doit fondre quand même.
+ ─ CE QUI NE VARIE JAMAIS : la lettre intégrale est trouvée à la fin du
+   Chapitre 1 par TOUT joueur qui termine le chapitre (règle 1.3 : la
+   séquence finale fonctionne à 100 % même pour le plus pressé). Les fins
+   varient autour du sommet, jamais À la place du sommet.
  FE1 « LA RÉPONSE » — fin de patiente. Conditions : avoir laissé une lettre (D-06a) ;
    Ch5 : rejoindre la Maison avant le solstice ; LIEN-MAREK ≥ 3 ; Clarté ≥ 60.
    Résultat : Lohen vit à Port-Cendre, écrit chaque mois, Esteban dérive lentement,
@@ -1852,7 +1921,7 @@ SOMMAIRE GÉNÉRAL DU DOCUMENT
    ─ TOM & TILL ........... 60 / 7 lignes (Till : 7. SEPT. C'est un rôle de
      silences : le comédien joue l'ardoise, la respiration, la dernière phrase.)
    ─ ARISTIDE / MARTA / ROSA / VILLAGEOIS AMBIANTS (3 comédiens multi-voix)
-   ─ ESTEBAN .............. 28 lignes d'Écho + LA LETTRE (1 188 mots) : rôle
+   ─ ESTEBAN .............. 28 lignes d'Écho + LA LETTRE (1 448 mots) : rôle
      le plus court, casting le plus long (7 auditions prévues : direction :
      « on cherche une voix qui écrit mieux qu'elle ne parle, et qui ne le sait pas »).
  DIRECTION GÉNÉRALE DES SESSIONS : enregistrer TOUJOURS les scènes croisées
@@ -3738,45 +3807,76 @@ Esteban qui soit. »)
  1 200 lignes de micro-contenu. Le jeu est fait de ça.)
 
 ────────────────────────────────────────────────────────────────────────────────────────────
- 6.2 — DÉPLACEMENT & CONTRÔLES TACTILES (SPÉCIFICATION D'INTERACTION)
+ 6.2 — LA NAVIGATION PAR CHEMINS ILLUSTRÉS (LE SEUL SYSTÈME DE COMMANDE DU JEU)
 ────────────────────────────────────────────────────────────────────────────────────────────
- DEUX SCHÉMAS, CHOISISSABLES À TOUT MOMENT (et détectés au premier lancement par un
- mini-test de préférence diégétique — SQ-01 : la façon dont le joueur a fait marcher
- Lohen dans le rêve détermine la proposition par défaut ; modifiable dans Options) :
- ─ SCHÉMA A — « POINTE » (défaut) : taper n'importe où = ordre de marche (le tap
-   est un JET D'ENCRE : une goutte se pose, Lohen y va ; double-tap maintenu =
-   courir ; tenir le doigt = direction continue). Pathfinding automatique
-   (NavigationRegion2D) : Lohen contourne, trouve les portes, dégringole les
-   pentes à sa façon. LE JOUEUR NE DIRIGE JAMAIS LE CORPS, IL SUGGÈRE DES
-   LIEUX. (Doctrine « on ne pilote pas un cœur, on lui propose des rives ».)
- ─ SCHÉMA B — « VIRELLETTE » (joystick virtuel flottant) : joystick n'importe où
-   où le pouce se pose, rayon adaptatif, apparition semi-transparente, sprint =
-   pousser le joystick au bord (zone morte 12 %, courbe de réponse expo 1.4).
- INTERACTIONS CONTEXTUELLES : un seul bouton d'action MORPHE (icône main/œil/
- oreille/engrenage/cœur selon la cible) ancré en bas-droite à la distance du
- pouce (11.4 : 68 px du bord, zone tactile 96 px). LE BOUTON NE S'AFFICHE QUE
-   LORSQU'UNE INTERACTION EXISTE (écran net sinon). Option « tout afficher »
-   pour joueurs voulant une présence constante (accessibilité cognitive).
- GESTES EXPRESSIFS (PILIER 1.4 — le tactile comme geste, pas comme clic) :
-   ─ MAINTENIR sur Lohen = se recentrer (souffle, 2 s) : recentre la caméra ET
-     déclenche la PENSÉE d'orientation de la zone (si pas déjà vue).
-   ─ GLISSER sur l'eau = toucher l'eau (rides d'encre + son).
-   ─ GLISSER sur le fourrage du verger = remuer les clochettes (tintements
-     physique — le monde est un instrument accordable).
-   ─ DEUX DOIGTS écartés = sortir/rentrer la carte (le geste signature du jeu :
-     la carte EST un objet qu'on sort de sa poche, avec son frottement de papier).
-   ─ SOUFFLER (micro, opt-in, défaut OFF) : éteindre une bougie, gonfler la
-     velune de poussière au télescope final. Aucune énigme ne l'exige.
-   ─ PRESSER (pression prolongée 800 ms) sur un objet d'inventaire = le serrer
-     contre soi (Lohen l'étreint ; +micro-bonheur ; utilisé par 100 % des
-     playtesteurs sur la lettre. 100 %.)
- GRIMPER / DESCENDRE : interaction rythmée à 3 appuis (jamais ratable : si le
-   joueur rate 3× le rythme, Lohen « descend prudemment » — l'échec n'existe
-   pas, seule la LENTEUR existe comme sanction de maladresse).
+ DOCTRINE (CONTRAINTE ABSOLUE) : AUCUN joystick, AUCUN stick, AUCUNE manette,
+   AUCUNE caméra libre, AUCUN pilotage direct du corps de Lohen. Le jeu se joue
+   uniquement avec des IMAGES ILLUSTRÉES, des TEXTES, des CHOIX DE CHEMINS,
+   des ÉNIGMES et un INVENTAIRE — rien d'autre. Un seul doigt suffit à tout.
+   Doctrine du studio : « on ne pilote pas un cœur, on lui propose des rives. »
+ LE MONDE EN TABLEAUX : chaque zone (Z01 → Z18) est un enchaînement de TABLEAUX
+   ILLUSTRÉS (une zone = 2 à 6 tableaux ; ~70 tableaux au Chapitre 1). Un
+   tableau est UNE COMPOSITION PEINTE PLEIN ÉCRAN (aquarelle 3 plans : 8.5),
+   VIVANTE : la marée y monte, la brume y respire, les PNJ y vaquent selon
+   leurs horaires (6.6), Filou y renifle. La caméra n'est pas un outil :
+   c'est UN CADRAGE D'AUTEUR (aucune caméra libre, aucun zoom manuel du
+   monde : chaque tableau est une phrase visuelle choisie — la composition
+   EST l'émotion). LE JOUEUR EST LOHEN : chaque tableau est ce qu'ELLE voit,
+   maintenant, de là où elle se tient. On ne dirige jamais ses pas : on
+   choisit ce qu'elle regarde, et où elle va ensuite.
+ LE PANNEAU DES CHEMINS (le geste central du jeu) : en bas de chaque tableau,
+   2 à 4 CHEMINS proposés, libellés ENRICHE-SENS (jamais « aller au nord »),
+   dans le format canonique du jeu :
+       — Ce chemin monte vers le verger et ses cloches.
+       — Ce chemin descend vers l'estran que la marée rend.
+       — Revenir sur tes pas, jusqu'au ponton.
+                                        Lequel prends-tu ?
+   Toucher un chemin = Lohen s'y engage (sa silhouette s'anime au loin, sa
+   respiration s'entend), le tableau GLISSE en travelling peint (600-900 ms,
+   courbe « feuille coton » : jamais de cut : la presqu'île est CONTINUE),
+   et le tableau suivant s'installe, déjà vivant. Le panneau se REPLIE
+   d'un tap (lecture contemplative du tableau, photo mentale) et se rouvre
+   d'un tap sur le bandeau : personne n'est jamais pressé.
+ CHEMINS CONDITIONNELS (le cœur de la liberté) : un chemin n'est PROPOSÉ que
+   si le monde le permet — marée (l'estran n'existe qu'à marée basse : 6.6),
+   heure (la gare ferme à 19h ; le marché n'existe que le matin), objet (le
+   sentier de chèvres exige la corde dans la sacoche), LIEN (Marek n'ouvre
+   la porte du phare qu'à LIEN ≥ 3), drapeau narratif (Annexe C). Le joueur
+   DÉCOUVRE ces conditions par l'observation et le dialogue, JAMAIS par un
+   message d'erreur : un chemin noyé s'affiche « sous l'eau — à marée basse,
+   peut-être » ; une porte close garde sa poignée visible. L'interdit est
+   une promesse, pas un mur.
+ CHEMINS DE RETOUR : « revenir sur tes pas » figure TOUJOURS en dernier (encre
+   grise) : aucun tableau n'est un piège, aucun cul-de-sac ne coûte. Les
+   raccourcis découverts (6.3) s'ajoutent au panneau comme chemins propres
+   une fois trouvés — le panneau MÉMORISE l'arpentage du joueur.
+ POINTS D'ATTENTION (l'examen) : dans chaque tableau, 1 à 8 détails peints
+   sont TOUCHABLES (la glace du lavoir, une étiquette du Bois des Noms, la
+   corde du funiculaire, la goutte sur la vitre du Cabinet). Au premier
+   passage ils pulsent UNE SEULE fois (halo d'aquarelle 400 ms, discret ;
+   option « tout afficher » 11.6-8 pour les cartographes du détail).
+   Toucher un point d'attention = EXAMINER (PENSÉE + son + carnet qui se
+   note), ÉCOUTER (l'oreille est un examen : le jeu a des sons-signaux),
+   PRENDRE (vers la sacoche), ou UTILISER L'OBJET EN MAIN (le bon objet
+   éclaire sa cible : doctrine 6.14 « le bon outil éclaire son jour »).
+   Le panneau des chemins reste disponible PENDANT l'examen : regarder de
+   près ne coupe jamais la liberté d'aller ailleurs.
+ TOUCHER LE MONDE : certains points d'attention vivants répondent au doigt
+   par leur réaction propre — l'eau se ride d'encre, le fourrage du verger
+   tinte, la corde raque. Le monde est un instrument accordable, joué du
+   bout d'un doigt — jamais piloté.
+ PASSAGES À PRISES (grimper / descendre) : certains chemins sont des
+   escalades : trois prises successives racontées (« la main gauche — la
+   prise haute — rebasculer »), chacune CONFIRMÉE d'un tap, sans timer.
+   Rater une prise n'existe pas : hésiter ne fait que ralentir la respiration
+   de Lohen (la LENTEUR est la seule sanction de maladresse : doctrine 1.4).
  NAGER : Lohen ne nage pas. La mer est une frontière (2.3). Les bords d'eau
-   sont des murs polis : « la mer ne se traverse pas, elle se respecte »
+   sont des tableaux clos : « la mer ne se traverse pas, elle se respecte »
    (le jeu n'a PAS besoin de noyer qui que ce soit pour exister).
-
+ TUTORIEL : aucun didacticiel hors-monde. SQ-01 (le rêve du prologue) pose
+   le panneau des chemins en trois choix oniriques ; tout le reste
+   s'apprend en marchant. Le jeu ne guide presque pas : il PROPOSE, le
+   joueur forge (pilier 1.4).
 ────────────────────────────────────────────────────────────────────────────────────────────
  6.3 — LE SYSTÈME DE CHOIX DE CHEMINS (LIBERTÉ STRUCTURÉE)
 ────────────────────────────────────────────────────────────────────────────────────────────
@@ -3785,13 +3885,43 @@ Esteban qui soit. »)
  LIBRE À TROIS VOIES : chaque voie contient (a) 1 énigme majeure, (b) 1 personnage-
  socle, (c) 1 fragment de la clé du vent, (d) des pages/échos propres. Le chapitre
  est terminable par N'IMPORTE QUEL ordre ; l'ordre choisi TEINTE les dialogues
- (3 colonnes de variantes selon la « première zone visitée » — 12.5 : le dialogue
- manager injecte les conditions d'antériorité automatiquement).
+ (3 colonnes de variantes selon la « première zone visitée » — 12.5 : le runner
+   de dialogue injecte les conditions d'antériorité automatiquement).
  INDICATION DOUCE (jamais un marqueur) : Filou renifle vers les zones non visitées
    (20 % de chance par minute d'inactivité), la carte montre les bords « à relever »
    (zones au papier brut — 6.4), et les PNJ ORIENTENT par le dialogue (5.4 E-04c :
    « Anselme vous attendra mieux que moi : il a des bancs, moi j'ai des
    questions »). Le joueur est libre ET jamais perdu (les deux à la fois ou rien).
+ LES CONSÉQUENCES DES CHEMINS (LA MATRICE DE LA LIBERTÉ) : un choix de
+   chemin n'est JAMAIS cosmétique — il influe fortement sur l'histoire, les
+   rencontres, les énigmes disponibles, les objets trouvables et les fins :
+   ─ RENCONTRES : chaque PNJ vit selon ses horaires (Annexe D) : prendre le
+     chemin du quai à 07h10 croise Baz qui fume avant la tournée ; le même
+     chemin à 07h40 ne croise QUE les mouettes. Marek n'est au phare que
+     l'après-midi ; Adèle ne sert « le troisième café des rêveurs » qu'aux
+     matinaux. Les dialogues ratés ne sont pas perdus : ils sont REPORTÉS
+     (le PNJ a une vie : le jeu n'attend personne, mais le monde revient).
+   ─ ÉNIGMES DISPONIBLES : certaines énigmes ne s'OUVRENT que par un chemin
+     précis (le vélum du phare exige d'arriver par la corniche, pas par
+     l'escalier de service : deux entrées = deux chapitres différents du
+     même secret) ; d'autres se referment (la boîte à musique d'Aristide,
+     remontée, ne se démonte plus : le monde RETIENT les résolutions).
+   ─ OBJETS TROUVABLES : chaque tableau cache 0 à 3 objets ; certains
+     n'existent QUE si le joueur est passé par ailleurs d'abord (la lampe
+     tempête n'est prêtable par Émeric qu'après la gare : il sait, lui
+     aussi, qu'on a cherché). Les chemins de bord (sentiers de chèvres,
+     digues, échelles) portent les meilleures trouvailles : le hors-piste
+     est la seule vraie carte au trésor du jeu.
+   ─ DIALOGUES TEINTÉS : l'ordre des zones colore tout (matrice 12.5 :
+     variantes d'antériorité par première zone visitée : 3 colonnes de
+     répliques) — Anselme ne dit pas « encore toi ? » à une Lohen qui
+     arrive de la gare, mais « la gare t'a laissée creuse ? assieds-toi ».
+   ─ FINS : les chemins irriguent Clarté (échos), LIEN (rencontres),
+     drapeaux D-01→D-06 : la table de vérité des fins (3.6) lit TOUT ce
+     que le panneau des chemins a écrit. Deux joueurs qui n'ont pris les
+     mêmes chemins qu'une fois sur trois finissent le chapitre avec deux
+     chapitres différents — et deux réponses différentes à la même lettre.
+
  RACCOURCIS DÉCOUVERTS : chaque zone à zone possède un raccourci caché (sentier de
    chèvres, échelle, digue) qui, trouvé, s'inscrit sur la carte et devient un
    « repère » de voyage rapide DIÉGÉTIQUE (Lohen dessine un « petit poucet » de
@@ -3848,11 +3978,13 @@ Esteban qui soit. »)
    3 min : le chien est un mécanisme de réconfort MESURABLE), (d) JOUER
    (balle d'estragon, disponible après l'avoir trouvée : 3 lancers par
    marée : animation de bonheur pur ; statistiquement le bouton le plus
-   utilisé du jeu après la marche — 6,2 utilisations/heure en playtest).
- PATHFINDING DU CHIEN : il suit avec 0,8-1,4 s de retard (courbe de retard
-   personnalisée : il flâne, renifle, rattrape au trot — UN CHIEN, PAS UN
-   CURSEUR). Il ne bloque JAMAIS le passage (collision désactivée sur les
-   PNJ animaliers — 12.6).
+   utilisé du jeu après les choix de chemins — 6,2 utilisations/heure en
+   playtest).
+ LA SUITE DU CHIEN : filou traverse les tableaux avec 0,8-1,4 s de retard
+   (il flâne, renifle, rattrape au trot — UN CHIEN, PAS UN CURSEUR : il
+   entre parfois APRÈS Lohen, déjà assis). Il ne bloque JAMAIS un chemin
+   du panneau ni un point d'attention (règle 12.6 : les animaux passent
+   toujours SOUS l'interface : la tendresse n'entrave jamais le jeu).
  FILOU-GUIDE (anti-perdu organique) : si le joueur erre 90 s sans avancer
    un objectif actif, Filou s'assoit face à la direction la plus proche
    d'une découverte non faite et JAPPE une fois (soft, à 45 dB mixés —
@@ -4078,14 +4210,16 @@ Esteban qui soit. »)
    pression). Objets empilables : ressources (salicornes, fraises, billes).
  EXAMEN : 3 PENSÉES par objet (5.17), rotatives ; dixième examen = pensée
    de fidélité (récompense d'attachement).
- COMBINAISON : glisser-déposer d'un objet sur un autre (12 combinaisons
+ COMBINAISON : prendre un objet (tap : il passe « en main », l'icône suit
+   le doigt) puis toucher un second objet ou un point d'attention (12 combinaisons
    UTILES codées : lentille+boussole = « visée de relevé » ; plume+encre
    = écrire ; ruban+lettre = nouer la lettre (14.4) ; sifflet+filou =
    « rappeler en douceur »...) et 60+ combinaisons ratées qui ont TOUTES
    une PENSÉE dédiée (aucune combinaison « muette » : « le sifflet sur
    la galette : aucune tradition locale, vérifié. je note quand même. »).
  DOCUMENTS : rubrique propre (pages, lettres, photos, plans) — lecture
-   plein écran papier, avec la loupe à deux doigts (pinch zoom natif).
+   plein écran papier, avec la LOUPE-BOUTON (+/− : grossissement 1×-2,4×,
+   réglage fin au lorgnon : jamais de geste à deux doigts : un doigt suffit).
  LES OBJETS DE QUÊTE NE S'UTILISENT JAMAIS « À L'AVEUGLE » : les cibles
    d'utilisation sont surlignées à la lentille quand l'objet requis est
    dans l'inventaire (doctrine « le bon outil éclaire son jour »).
@@ -4154,7 +4288,7 @@ Esteban qui soit. »)
 ────────────────────────────────────────────────────────────────────────────────────────────
  Format : Phrase-test / Contexte / Interface / Logique pas à pas / Solution intégrale /
  Indices (3 niveaux, textes exacts) / Anti-frustration / Lien narratif / Récompense /
- Implémentation Godot (nodes) / Critères QA.
+ Implémentation (exigence moteur-agnostique) / Critères QA.
  ═════════════════════════════════════════════════════════════════════════════════════
  E01 — LE TIROIR DU CABINET [diff. 1, ~4 min]
  PHRASE-TEST : « il fallait lire la date de marée du carnet d'Ombeline et la
@@ -4185,8 +4319,8 @@ Esteban qui soit. »)
    bout du monde de poche — la PRÉFIGURATION du final, invisible au 1er
    passage, criante au NG+ : le jeu s'annonçait depuis le meuble.)
  RÉCOMPENSE : papier fantôme, plume d'attente, 6 lettres-livre.
- GODOT : Control « DrawerMolette » (TextureRect + input rotatif custom),
- état dans PuzzleState (ressource .tres), son : wood_groove_01.
+ INTÉGRATION : tiroir à molettes concentriques (cadran image + entrée
+  rotative au doigt), état local persisté dans la fiche d'énigme ; son : wood_groove_01.
  QA : réussite médiane visée 3 min ; zéro faux positif possible sur les
    molettes (valeurs sans ambiguïté) ; le tiroir reste réexaminable.
  ═════════════════════════════════════════════════════════════════════════════════════
@@ -4230,8 +4364,8 @@ Esteban qui soit. »)
    ligne des habitués à côté porte le nom à moitié effacé (D-01 enchaîne
    naturellement : l'énigme livre l'heure, la scène livre le drame).
  RÉCOMPENSE : accès au nom effacé (D-01), page 05 en résonance.
- GODOT : SubViewport pour le rendu reflet + shader flip_h ; trigger
-   Area2D « poli_spot » ; DialogueManager condition [SI: E02_done].
+ INTÉGRATION : reflet = rendu du tableau en miroir horizontal (calque
+  retourné, effet d'inversion léger) ; zone « poli_spot » tactile ; condition de dialogue [SI: E02_done].
  QA : vérifier lisibilité du miroir sur écran 5 pouces (police +2 px en
    reflet) ; test daltoniens (contraste palettes/blanc : 4.8:1 min).
  ═════════════════════════════════════════════════════════════════════════════════════
@@ -4267,8 +4401,8 @@ Esteban qui soit. »)
    tu verras, ça remonte. » — la seule métaphore du jeu autorisée à se
    trouver toute seule.
  RÉCOMPENSE : montée ; LIEN-SIDONIE +1 ; FLAG-CREVETTE-PRÊTE.
- GODOT : Area2D de dépôt par sac + PuzzleState ; animation fléau via
-   Tween ; cadran : TextureProgress masqué en aiguille.
+ INTÉGRATION : zones de dépôt par sac (toucher le sac choisi) ; animation
+  de fléau par interpolation clé-à-clé ; cadran : jauge circulaire masquée en aiguille.
  QA : médiane visée 6 min ; vérifier que 195-205 couvre plusieurs
    combinaisons exactes différentes (jouabilité multi-chemins).
  ═════════════════════════════════════════════════════════════════════════════════════
@@ -4311,8 +4445,8 @@ Esteban qui soit. »)
    la menace du retour de mer est posée ici, honnêtement, longtemps
    avant le final.
  RÉCOMPENSE : déclenchement de l'acte IV ; CLARTÉ +2.
- GODOT : ItemList annuaire + textures haute résolution par ligne ;
-   Area2D « window_sky » (parallax lune) ; condition croisée
+ INTÉGRATION : annuaire = liste feuilletée, visages haute résolution par ligne ;
+   fenêtre du ciel (parallaxe lune) ; condition croisée
    [SI: sky_moon==7 ET annuaire_ligne==7corr] → flag.
  QA : médiane 10 min ; le joueur peut-il confondre 00h52 et 23h52 sur
    5 pouces ? non : les deux lignes sont séparées de 40 px min, la
@@ -4368,12 +4502,12 @@ Esteban qui soit. »)
    un levier.
  RÉCOMPENSE : raccourci Z06↔Z08 ; relevés +3 ; le sentier des chèvres
    (secret S04) devient accessible en grimpe libre depuis la voie.
- GODOT : Node2D + 5 Area2D leviers ; PuzzleState à 5 bits ; graphe de
-   verrouillage en Dictionary [int → Array] ; test unitaire
+ INTÉGRATION : 5 leviers tactiles (tap : haut/bas) ; état d'énigme à 5 bits ; graphe de
+   verrouillage en table [int → liste d'états suivants] ; test unitaire
    reachable_states() en CI (12.10 : chaque puzzle a SON test
    d'accessibilité : aucune configuration morte ne part en prod).
  QA : médiane 9 min ; les 32 états testés ; aucun soft-lock (test CI
-   puzzle_e05_reachability.gd — le test SIMULE les 32 états et les
+   puzzle_e05_reachability — le test SIMULE les 32 états et les
    10 mouvements possibles depuis chacun : exit_code 0 obligatoire).
  ═════════════════════════════════════════════════════════════════════════════════════
  E06 — LES RUBANS DU BOIS [diff. 2, ~8 min]
@@ -4408,8 +4542,8 @@ Esteban qui soit. »)
  LIEN NARRATIF : l'étiquette vierge (V09), les deux étiquettes du
    père, la page 24 : LE payoff central de l'acte III est ici.
  RÉCOMPENSE : accès à la scène 5.10 ; pages 15/21/24 ; CLARTÉ +1.
- GODOT : carte de zone = Control custom avec TextureRect arbre par
-   arbre (instanced), rayon de sélection 44 px ; spirale = calcul
+ INTÉGRATION : carte de zone = planche interactive, un sprite d'arbre par
+   arbre (instanciée), rayon de sélection 44 px ; spirale = calcul
    paramétrique caché (validation par distance point-courbe < 40 px).
  QA : médiane 7 min ; la spirale doit être traçable au doigt sans
    précision millimétrique (tolérance 40 px = 3 arbres de marge).
@@ -4457,7 +4591,7 @@ Esteban qui soit. »)
    le chapitre tient dans les nœuds manquants) ; le mode auditif
    raconte Ysolde sans jamais la réduire à son handicap.
  RÉCOMPENSE : le ruban-mémoire, la scène Y-07→Y-10, CLARTÉ +3.
- GODOT : Node2D « Rope » avec AudioStreamPlayer par rang (notes de
+ INTÉGRATION : la corde = rangs sonores, une voix par rang (notes de
    harpe échantillonnées, gamme pentatonique : impossible de faire
    moche : choix de design généreux) ; validation par tableaux de
    positions ; savestate par palier.
@@ -4505,8 +4639,8 @@ Esteban qui soit. »)
    posée pour être relue après la lettre comme un adieu photographié.)
  RÉCOMPENSE : [OBJ-09] la photo ; accès au acte III (motivation) ;
    CLARTÉ +1.
- GODOT : shader « develop » (uniform progress + noise) sur TextureRect
-   ; AudioStreamPlayer métronome (BPM 60) ; PuzzleState séquentiel.
+ INTÉGRATION : révélation = effet « développement photo » (bruit + progression) sur l'image
+   ; métronome à 60 BPM ; état d'énigme séquentiel.
  QA : médiane 8 min ; vérifier sur 3 tailles d'écran que les gestes
    d'agitation ne sortent pas de la zone tactile ; aucune réussite
    possible par spam (compteur de coups glissé en validation).
@@ -4558,9 +4692,9 @@ Esteban qui soit. »)
    d'implication maximale).
  RÉCOMPENSE : ÉCHO E-05 (la nuit des larmes de saint-laurent) ;
    CLARTÉ +2 ; le carillon 88 remet le sifflet (S09).
- GODOT : AudioStreamPlayer par cloche (notes réelles enregistrées
+ INTÉGRATION : une voix par cloche (notes réelles enregistrées
    de clochettes de porte, 12 échantillons) ; séquence validée par
-   tableau [id, note] ; notation visuelle : GPUParticles2D gouttes.
+   table [id, note] ; notation visuelle : gouttes particules d'aquarelle.
  QA : médiane 9 min ; test malentendants (notation visuelle
    suffisante sans audio : 100 % résoluble muet) ; vérifier la
    latence tactile < 80 ms (sonner vite doit rester précis).
@@ -4609,9 +4743,9 @@ Esteban qui soit. »)
    la boîte : le phare ÉCLAIRE la lettre depuis des années : le
    joueur le comprendra au NG+ en relisant P-33.
  RÉCOMPENSE : scène P-30 ; CLARTÉ +2 ; prérequis E13.
- GODOT : AnimationPlayer (rotation faisceau) piloté par Expression
-   d'angles ; validation sur 3 frames consécutives (anti-frémisse-
-   ment tactile) ; lumière : Light2D + occlusion.
+ INTÉGRATION : faisceau = rotation animée pilotée par table d'angles
+   (une clé par azimut) ; validation sur 3 affichages consécutifs (anti-frémisse-
+   ment tactile) ; lumière additionnelle + occlusion d'ombres.
  QA : médiane 12 min ; vérifier la boucle de rotation sans
    décrochage à 30 fps bas de gamme ; daltonisme (attarde signalée
    aussi par le SON du palier : un souffle grave à l'attard).
@@ -4649,8 +4783,8 @@ Esteban qui soit. »)
    l'épilogue, Marek dit : « t'as posé l'heure. ... merci. c'est
    la première fois que quelqu'un pose l'heure à ma place depuis
    neuf jours. ») ; CLARTÉ +1.
- GODOT : DirectionLight2D + ombre projetée (LightOccluder2D) ;
-   Area2D dalles ; Tween couronne.
+ INTÉGRATION : lumière directionnelle + ombre projetée (obstacles) ;
+   zones de dalles tactiles ; animation de couronne par interpolation.
  QA : médiane 5 min ; test lisibilité plein soleil réel (écran
    téléphone en extérieur : contraste renforcé option « soleil »
    auto-détection luminosité > 80 000 lux : +15 % contraste UI).
@@ -4696,8 +4830,8 @@ Esteban qui soit. »)
    compteurs) ; le phoque (S07) : le voisin du silence.
  RÉCOMPENSE : accès à la table et au passage (E14 s'assemble ici) ;
    CLARTÉ +2.
- GODOT : AudioStreamPlayer « clap » synchronisé Timer 4,0 s ;
-   navigation en Area2D ; lampe : Light2D + mask.
+ INTÉGRATION : clap synchronisé sur minuterie 4,0 s ;
+   navigation par zones tactiles ; lampe : halo lumineux masqué.
  QA : médiane 10 min ; test au casque ET muet (100 % résoluble sans
    son) ; vérifier aucune nausea caméra (amplitude rotation limitée
    à ±30°/s : motion sickness checklist 15.7 point 12).
@@ -4750,8 +4884,8 @@ Esteban qui soit. »)
  RÉCOMPENSE : CLARTÉ +3 ; FLAG-POINTÉE-VERIFIÉE (l'épilogue y fait
    écho : Marek, voyant le tracé : « t'as vérifié ma pointe à la
    règle. ... personne l'avait jamais fait. »).
- GODOT : Control visée (drag + snap) ; carte : Line2D dynamiques ;
-   intersection : Geometry2D.line_intersects_line (helper interne) ;
+ INTÉGRATION : visée (glisser la ligne, aimantation douce) ; carte : traits dessinés dynamiquement ;
+   intersection : géométrie de droites (helper interne maison) ;
    validation par distance point-cible < 48 px.
  QA : médiane 12 min ; test précision sur 5 pouces (grossissement
    réticule x1,5 si écran < 6") ; doc : les angles affichés en
@@ -4793,7 +4927,7 @@ Esteban qui soit. »)
    la lettre (le vent la porte, la voix la signe, la plume la
    justifie) : le joueur tient la clé du final SANS le savoir.
  RÉCOMPENSE : [OBJ-11] la clé du vent ; prérequis E15.
- GODOT : Area2D à snap (12 px) + PuzzleState ; sons : assemblage
+ INTÉGRATION : pièces à aimanter (12 px) + état d'énigme ; sons : assemblage
    laiton (3 variations) ; validation par configuration.
  QA : médiane 4 min ; test : la mauvaise config « plume en tête »
    doit rester possible sans bloquer (retour à l'établi libre).
@@ -4832,11 +4966,11 @@ Esteban qui soit. »)
    en fleur : la plus belle animation mécanique du jeu (9.6).
  RÉCOMPENSE : accès à la lettre (CIN-07) — la récompense du
    chapitre entier tient dans ce cliquet de laiton.
- GODOT : girouette : Node2D animé par noise (direction ouest ±15°
+ INTÉGRATION : girouette : animation par bruit fluide (direction ouest ±15°
    lissée) ; boîte : rotation utilisateur + validation angulaire ;
    audio : sifflet à travers vent (couche de mixage « boîte »).
- QA : médiane 4 min ; vérifier la rotation à deux doigts vs slider
-   (les deux doivent réussir : test 20 utilisateurs répartis).
+ QA : médiane 4 min ; vérifier le cadran rotatif au doigt vs boutons
+   fléchés (les deux doivent réussir : test 20 utilisateurs répartis).
  ═════════════════════════════════════════════════════════════════════════════════════
  E16 — LE TÉLESCOPE DE VELUNE [diff. 3, ~9 min] — LA DERNIÈRE ÉNIGME
  PHRASE-TEST : « il fallait régler la mise au point sur le mot
@@ -4885,11 +5019,11 @@ Esteban qui soit. »)
    depuis le début : ce que la brume efface, les amoureux le
    gravent sur les bagues (V11).
  RÉCOMPENSE : la séquence 14.x (la lettre) : la récompense est
-   une phrase de 1 188 mots. Aucune autre récompense. C'est la
+   une phrase de 1 448 mots. Aucune autre récompense. C'est la
    plus grande récompense du jeu.
- GODOT : shader dioptrie (uniform blur + chromatic aberration
-   douce) ; bague : Control rotatif ; scène caméra : SubViewport
-   du contenu boîte + scale animation.
+ INTÉGRATION : effet dioptrie (flou réglable + aberration chromatique
+   douce) ; bague : cadran rotatif au doigt ; vision boîtier : rendu
+   dédié du contenu de la boîte + animation d'échelle.
  QA : médiane 7 min ; le mot velune doit avoir été rencontré par
    au moins une voie (E-05/E09/pages : playtest coverage 100 %
    — vérifié : la PENSÉE N2 fait office de filet de sécurité
@@ -5089,7 +5223,7 @@ Esteban qui soit. »)
    haut-gauche (la fenêtre de l'atelier : convention tenue dans TOUT le jeu,
    y compris les scènes de nuit : la lune éclaire haut-gauche : l'univers
    entier est posé sur la même table : LE geste d'unité).
- IMPLÉMENTATION : Light2D en 3 usages seulement, budgétés (performance 12.7) :
+ INTÉGRATION : la lumière additionnelle en 3 usages seulement, budgétés (performance 12.7) :
    (a) lumière de scène (gradient global, 1 par zone, coût nul) ;
    (b) lampes narratives (lampe-tempête, lentille : 2 max simultanées) ;
    (c) le faisceau du phare (1 unique, acte IV : polygone adouci + grain).
@@ -5403,13 +5537,14 @@ Esteban qui soit. »)
    surplus de graphite : l'authenticité des mains) ; (d) clôture.
    Event : raclement + fermeture à deux mains.
  [LHN-012] CARESSER FILOU — 3 variantes d'humeur (accroupie genou /
-   penchée flanc / agenouillée double main). Phases : la main suit le
-   garrot, filou (rig à part) incline la tête DANS la main (le chien
-   PARTICIPE : l'animation est un accord à deux : si le joueur
-   déplace le doigt, la zone de caresse suit : CARESSER EST UN
-   GESTE TACTILE LIBRE : la caresse suit le doigt du joueur à
-   l'écran : l'animation est JOUÉE par le pouce : le summum du
-   pilier 1.4 : le tactile comme tendresse littérale).
+   penchée flanc / agenouillée double main). La caresse se joue AU RYTHME
+   DU JOUEUR : chaque tap prolongé sur filou étire la caresse d'un temps
+   (garrot, flanc, oreille) ; sa tête s'incline DANS la main (le chien
+   PARTICIPE : l'animation est un accord à deux : si le joueur relève le
+   doigt, la main de lohen reste posée, patiente : le chien attend :
+   CARESSER EST UNE DÉCISION RÉPÉTÉE : l'animation est JOUÉE par le
+   doigt : le summum du pilier 1.4 : le toucher comme tendresse littérale).
+
  [LHN-013] SONNER UNE CLOCHE — main levée, le poignet « donne » la
    note (frappe souple de carillonneur : la main ne frappe pas :
    elle POSE la note : contrôle de l'attaque).
@@ -5675,7 +5810,7 @@ Esteban qui soit. »)
  seulement au Ch1 : fin du rêve, fin du chapitre — les deux « sommeils »),
  balayages, glissements de « cartes UI » à l'anglo-saxonne : le jeu est un
  cahier, pas un paquet de cartes : les écrans se FEUILLETTENT latéralement
- (le pouce tourne les pages : le geste de lecture est le geste du jeu :
+   (un tap sur le coin tourne la page : le geste de lecture est le geste du jeu :
  ultime cohérence 1.4).
  PERFORMANCE (engagement chiffré) : toutes les animations UI < 60 ms de
  latence d'entrée ; blending locomotion < 80 ms ; aucune animation d'attente
@@ -5701,7 +5836,8 @@ Esteban qui soit. »)
  le moteur anime tout : poids APK maîtrisé, cohérence de style garantie, et la
  lettre DOIT être en rendu vivant : sa buée bouge au rythme du jeu) ; (b) les
  cinématiques sont INTERACTIVES PAR LA PRÉSENCE : le toucher de l'écran fait
- réagir le monde (caresser filou pendant un plan, souffler la bougie) : jamais
+ réagir le monde (caresser filou pendant un plan, effleurer la bougie du bout du
+   doigt, la flamme se couche et revient) : jamais
  des « films » : des scènes HABITÉES ; (c) skip dès la 2e vision (sauf précisé) ;
  (d) sous-titres TOUJOURS par défaut (11.6).
  FORMAT DES FICHES : durée / timecode plan par plan / description / son / interactions
@@ -5844,7 +5980,7 @@ Esteban qui soit. »)
    lente : le rythme d'une respiration lue : ~11 mots par souffle).
    LE JOUEUR TOUCHE pour passer au bloc suivant : ON NE PEUT PAS
    « VOIR » la lettre sans la FEUILLETER : le pouce tourne les
-   plis (1.4 : le tactile comme consentement : la lettre se lit
+   plis, du bout du doigt (1.4 : le toucher comme consentement : la lettre se lit
    à la vitesse du lecteur, JAMAIS à celle du jeu).
    MUSIQUE : aucune. Puis, à la moitié exacte du texte (14.3 :
    au mot « velune »), LA note de violoncelle qui tenait depuis
@@ -5934,17 +6070,17 @@ Esteban qui soit. »)
 ────────────────────────────────────────────────────────────────────────────────────────────
  AUCUN HUD permanent (zéro barre, zéro minimap d'angle, zéro bouton flottant
  permanent) : l'écran de jeu est LE MONDE, entier, toujours. Les seuls éléments
- on-screen en jeu : (a) le bouton d'interaction morphe (6.2) quand une
- interaction existe, (b) les choix de dialogue pendant les dialogues, (c) le
+ on-screen en jeu : (a) les points d'attention pulsants et le panneau des
+ chemins replié (6.2), (b) les choix de dialogue pendant les dialogues, (c) le
  signal de sauvegarde (une petite goutte d'encre qui tombe en bas, 800 ms,
  silencieuse : la sauvegarde est une sécrétion naturelle du jeu : on la voit
  comme on voit cligner les yeux).
  TOUS les « menus » sont des OBJETS DU CARNET DE LOHEN : la carte est la carte
- (dépliée, gestes à deux doigts), l'inventaire est la sacoche (posée, feutrée),
+ (dépliée, lorgnon de zoom au coin), l'inventaire est la sacoche (posée, feutrée),
  le journal est le carnet double page (tourné), les options sont... une page
  de garde réglée (papier réglé de carnet d'écolier : cohérence assumée jusque
  dans le réglage des préférences : le jeu ne « sort » JAMAIS de son monde :
- zéro écran générique de Godot, zéro fenêtre système pour les éléments
+ zéro écran générique du moteur, zéro fenêtre système pour les éléments
  diégétiques — seuls les dialogues système ANDROID (permissions, batterie)
  sont hors-monde, évidemment).
 
@@ -5977,21 +6113,25 @@ Esteban qui soit. »)
    thème de lohen (hummed, 40 s). Boutons-feuillets : tap = la page se
    tourne. CONTINUER montre la carte du joueur en miniature (la vraie :
    encore le miroir).
- CARTE (in-game) : gestes — pincer (zoom 1×-2,4×), deux doigts pivotés
-   (rotation douce 15° max : la carte d'une arpenteuse n'est pas nordée
+CARTE (in-game) : LOUPÉE — le lorgnon (+ / −) zoome (1×-2,4×) ; la boussole
+   pivote la feuille (rotation douce 15° max : la carte d'une arpenteuse n'est pas nordée
    comme un GPS : elle est nordée comme elle peut : charmante, juste) ;
-   tap sur un repère = fiche ; MAINTENIR = poser un marqueur joueur (5
-   pictogrammes, 6.4) ; LE GESTE SIGNATURE : secouer doucement le doigt
-   horizontalement = « lisser » la carte (les plis se lissent : pure
-   jouissance tactile : 200 ms de bonheur papier : le « rubik satisfaisant »
-   du jeu).
+   tap sur un repère = fiche ; MAINTENIR un point = poser un marqueur joueur (5
+   LE PLI SIGNATURE : le bouton-feuillet « LISSER LA CARTE » (coin bas
+   droit) : les plis se lissent sous le doigt en une caresse de papier de
+   200 ms (pure jouissance tactile : le « rubik satisfaisant » du jeu :
+   lisser est une décision, pas un geste imposé).
  INVENTAIRE (la sacoche) : grille 24 cases sur deux rangées de feutre ;
-   tap = fiche objet (3 pensées tournantes 5.17) ; MAINTENIR = sortir
-   l'objet en main (l'objet apparaît dans la main de lohen : continuité
-   monde-inventaire totale) ; glisser un objet sur un autre = combinaison
-   (6.14 : 60+ PENSÉES de ratés) ; glisser un objet sur filou = réaction
-   (62 !). La sacoche se referme en la glissant vers le bas.
- CARNET : pages tournables au pouce (latéral : doctrine 9.8) ; les relevés
+   tap = fiche objet (3 pensées tournantes 5.17) ; PRENDRE (tap sur la
+   fiche) = l'objet passe « en main » : l'icône accompagne le doigt et
+   l'objet apparaît dans la main de lohen (continuité monde-inventaire
+   totale) ; toucher un second objet avec l'objet en main = COMBINAISON
+   (6.14 : 60+ PENSÉES de ratés) ; toucher filou avec un objet en main =
+   réaction (62 !) ; MAINTENIR la fiche = SERRER l'objet contre soi
+   (lohen l'étreint : +micro-bonheur : utilisé par 100 % des playtesteurs
+   sur la lettre. 100 %.) ; le fermoir (tap) referme la sacoche.
+
+ CARNET : pages tournables d'un tap sur le coin (doctrine 9.8) ; les relevés
    s'y empilent dans l'ordre chronologique (le journal de bord EST le
    fil narratif : relire son carnet = relire sa partie) ; les PAGES
    d'esteban ont leur onglet À PART, papier bleu nuit (son carnet à
@@ -6011,9 +6151,12 @@ Esteban qui soit. »)
      gens), skip cinématique (2e vision), confirmation des choix or
      (on/off : par défaut on pour les joueurs anxieux : on peut désactiver
      pour la pureté du geste).
-   ─ COMMANDES : schéma pointe/virelette, taille du bouton d'interaction
-     (S/M/L), tap pour courir (double/maintien), force du pathfinding
-     (prudent/direct).
+   ─ COMMANDES (un seul doigt, toujours) : taille des cibles (S/M/L),
+     vitesse des transitions de chemins (posée / vive), confirmation des
+     choix de chemin (bref / montrer la destination avant de partir),
+     pulsation des points d'attention (discrète / permanente / off pour
+     les puristes : le tableau ne cligne plus : il attend).
+
    ─ IMAGE : luminosité adaptative extérieure (auto +12 % contraste >
      80 000 lux : 8.5 QA e11), qualité (papier fin/papier épais : mode
      perf), grain (on/réduit/off), animations sensibles (réduites :
@@ -6055,8 +6198,8 @@ Esteban qui soit. »)
    de composition : la contrainte est un choix : le joueur dans le
    train joue portrait, le joueur chez lui joue paysage : les deux
    vies d'un même jeu mobile : nous y croyons).
- ─ GESTES RÉSERVÉS : swipe depuis le bord bas = rien (réservé système
-   Android) ; swipe depuis bord haut = notifications : le jeu ne
+ ─ BORDS RÉSERVÉS : un glissé depuis le bord bas = rien (réservé système
+   Android) ; un glissé depuis le bord haut = notifications : le jeu ne
    demandera JAMAIS d'exclusion d'affichage (le respect du téléphone
    du joueur est une option politique du studio : le jeu vit AVEC
    les notifications du monde réel : « la marée n'a jamais coupé
@@ -6149,47 +6292,65 @@ Esteban qui soit. »)
 
 
 ════════════════════════════════════════════════════════════════════════════════════════════
- BLOC 12 — TECHNIQUE GODOT & ARCHITECTURE (INCL. ORGANISATION GITHUB & EXPORT APK)
+ BLOC 12 — ARCHITECTURE TECHNIQUE & DONNÉES (MOTEUR-AGNOSTIQUE — INCL. ORGANISATION GITHUB & LIVRAISON ANDROID)
 ════════════════════════════════════════════════════════════════════════════════════════════
 
 ────────────────────────────────────────────────────────────────────────────────────────────
- 12.1 — CHOIX DU MOTEUR : GODOT 4.3.x (JUSTIFICATION DÉVELOPPEUR)
+ 12.1 — DOCTRINE D'INDÉPENDANCE : POURQUOI CE GDD N'IMPOSE AUCUN MOTEUR
 ────────────────────────────────────────────────────────────────────────────────────────────
- ─ EXPORT ANDROID NATIF : APK ( sideload ) et AAB (Play Store) via le pipeline
-   Gradle intégré : rendu Vulkan (mobile) avec bascule automatique en
-   « GL Compatibility » (GLES3) pour devices anciens : couverture matérielle
-   2018+ garantie (min API 26).
- ─ OPEN SOURCE MIT : zéro redevance, zéro compte obligatoire, zéro télémétrie
-   imposée : la chaîne CI (12.10) exporte depuis des conteneurs reproductibles
-   : le studio peut prouver CE qui tourne dans l'APK : argument de confiance
-   et de maintenance à 10 ans (un jeu d'amour mérite d'être rejoué dans
-   dix ans : les binaires doivent survivre aux studios : engagement de
-   préservation : les sources seront archivées publiquement en fin de vie
-   commerciale : charte 15.6).
- ─ FICHIERS SCÈNES EN TEXTE (.tscn, .tres) : diffs Git lisibles : le versionnage
-   du CONTENU (pas seulement du code) est natif : pour un jeu dont tout est
-   texte (dialogues, énigmes, pages), c'est l'argument décisif : chaque
-   réplique corrigée est un commit reviewable, chaque énigme ajustée est
-   un diff d'une ligne : la production narrative devient une production
-   logicielle PROPRE.
- ─ GDSCRIPT : itération rapide (pas de compilation), typage optionnel strict
-   (activé partout : warning=error), performances suffisantes pour un 2D
-   léger (budget CPU 12.7) ; AUCUN C# (double toolchain, poids export,
-   complexité : refusée : doctrine de sobriété).
- ─ OUTILS 2D INTÉGRÉS : AnimationPlayer/AnimationTree, Light2D, NavigationRegion2D,
-   GPUParticles2D, tile/parallax, AudioStreamInteractive (transitions
-   musicales sans coupure : le compositeur rêvait de cette classe : elle
-   est native en 4.3) : le besoin d'addons tiers est MINIMAL (12.11).
+ PRINCIPE : ce document spécifie un JEU, pas une technologie. Tout ce qui
+   précède (mécaniques, énigmes, dialogues, level design, art, son) et tout
+   ce qui suit est écrit en CONTRATS : ce que le jeu DOIT faire, avec
+   quels budgets, quels formats de données, quels livrables. N'importe
+   quelle équipe — humaine ou IA — doit pouvoir l'implémenter avec
+   l'outillage de son choix. Une mention d'implémentation n'est JAMAIS
+   qu'un exemple de solution ; la spécification est le contrat.
+ CE QUE TOUT MOTEUR (OU RUNTIME MAISON) DOIT FOURNIR — LES HUIT EXIGENCES :
+   E-1 RENDU 2D PEINT : composition par plans (3 plans de parallaxe par
+      tableau : 8.5), textures haute résolution, transparences, grain de
+      papier plein écran, 60 fps soutenus sur device bas de gamme (12.7).
+   E-2 ANIMATION PAR CLÉS : interpolation clé-à-clé (positions, rotations,
+      opacités, découpes), courbes d'accélération personnalisées (« feuille
+      coton », « encre qui s'étale »), lecture d'animations par fragments
+      (rigs papier 12.6), interruption d'animation en ≤ 80 ms.
+   E-3 AUDIO À BUSES : six buses indépendantes (13.6), ducking piloté par
+      le jeu, transitions musicales sans coupure, streaming de plages.
+   E-4 DONNÉES TEXTE VERSIONNÉES : tout le contenu (dialogues, énigmes,
+      pages, barks, tables de marée) vit dans des FICHIERS TEXTE lus au
+      chargement (12.5) — le moteur ne doit imposer NI format binaire de
+      contenu, NI éditeur fermé.
+   E-5 ENTRÉE TACTILE UN DOIGT : taps, maintiens, cibles ≥ 48 dp, latence
+      entrée-effet < 80 ms (6.2, 11.4). Aucun autre périphérique requis.
+   E-6 ÉTAT & SAUVEGARDE : sérialisation binaire compacte versionnée,
+      écriture atomique, reprise exacte à la ligne de dialogue près (12.8).
+   E-7 EXPORT ANDROID NATIF : APK signé + AAB (Play), arm64-v8a obligatoire,
+      min API 26 / cible 34, zéro permission au lancement (12.12).
+   E-8 SCRIPTABLE & TESTABLE : logique de jeu unitairement testable hors
+      device (les tests de contenu tournent en CI sur machine, 12.10).
+ CRITÈRES DE SÉLECTION (pour l'équipe qui choisit) : open source de
+   préférence (zéro redevance, zéro risque de conditions d'utilisation
+   rétroactives ; un jeu d'amour mérite d'être rejoué dans dix ans : les
+   binaires doivent survivre aux studios : engagement de préservation :
+   les sources seront archivées publiquement en fin de vie commerciale :
+   charte 15.6) ; formats de données en texte (diffs Git lisibles :
+   l'argument décisif : chaque réplique corrigée est un commit reviewable :
+   la production narrative devient une production logicielle PROPRE) ;
+   itération rapide sans compilation ; communauté vivante ; poids
+   d'exécution raisonnable sur 2 Go de RAM.
+ RÈGLE DE TRADUCTION DU DOCUMENT : si une fiche mentionne un effet (« le
+   miroir du tableau retourné », 7.3-E02), l'exigence est l'EFFET, pas la
+   technique : tout procédé de rendu qui produit l'effet à budget égal est
+   conforme. La QA vérifie des COMPORTEMENTS, jamais des implémentations.
 
 ────────────────────────────────────────────────────────────────────────────────────────────
- 12.2 — STRUCTURE DE PROJET (ARBRE COMPLET DU DÉPÔT)
+ 12.2 — STRUCTURE DU DÉPÔT (ARBRE COMPLET — INDÉPENDANT DU MOTEUR)
 ────────────────────────────────────────────────────────────────────────────────────────────
  cartographie-des-absents/
  ├── .github/                     ← TOUT le CI/CD et les templates (12.10)
  │   ├── workflows/
  │   │   ├── ci-quality.yml       ← lint + tests unitaires à chaque push
- │   │   ├── ci-export-dev.yml    ← APK debug (artifact) à chaque merge dev
- │   │   ├── ci-export-release.yml← APK/AAB signés à chaque tag v*
+ │   │   ├── ci-build-dev.yml     ← APK debug (artifact) à chaque merge dev
+ │   │   ├── ci-release.yml       ← APK/AAB signés à chaque tag v*
  │   │   └── ci-i18n-check.yml    ← cohérence des clés de traduction
  │   ├── ISSUE_TEMPLATE/
  │   │   ├── bug_report.md
@@ -6197,11 +6358,15 @@ Esteban qui soit. »)
  │   │   ├── feature_puzzle.md    ← template maison « énigme » (phrase-test !)
  │   │   └── art_review.md
  │   └── PULL_REQUEST_TEMPLATE.md
- ├── addons/                      ← addons épinglés (12.11) — versionnés
- ├── assets/
+ ├── src/                         ← code du runtime choisi (moteur ou maison)
+ │   ├── core/                    ← les 7 systèmes (12.3)
+ │   ├── puzzles/                 ← logique par énigme + tests
+ │   └── tools/                   ← scripts éditeur (validations, génération)
+ ├── assets/                      ← RIEN QUE DES FORMATS OUVERTS
  │   ├── art/
- │   │   ├── zones/               ← 18 dossiers z01...z18 (planches + parallax)
- │   │   ├── characters/          ← sheets par personnage (png + tres)
+ │   │   ├── zones/               ← 18 dossiers z01...z18 (planches + plans
+ │   │   │                          de parallaxe : 3 images par tableau)
+ │   │   ├── characters/          ← sheets par personnage (fragments png)
  │   │   ├── ui/                  ← 180 éléments + 43 icônes aquarelle
  │   │   └── vfx/                 ← textures particules, lavis
  │   ├── audio/
@@ -6209,111 +6374,113 @@ Esteban qui soit. »)
  │   │   ├── sfx/                 ← .ogg courts (papier, encre, laiton)
  │   │   └── voice/fr/            ← .ogg mono 22 kHz (voix optionnelle)
  │   └── fonts/                   ← sous-ensemble de glyphes (Cormorant, Nunito, Caveat)
- ├── scenes/
- │   ├── boot/                    ← splash, titre, menu
- │   ├── zones/                   ← z01_cabinet.tscn ... z17_pointe.tscn
- │   ├── characters/              ← rigs (lohen.tscn : 12 slots d'attache)
- │   ├── puzzles/                 ← e01_tiroir.tscn ... e16_telescope.tscn
- │   ├── cinematics/              ← cin01 ... cin08 (caméras scriptées)
- │   ├── ui/                      ← carnet, sacoche, dialogue, options
- │   └── systems/                 ← marée, brume, vent (instances globales par zone)
- ├── scripts/
- │   ├── autoload/                ← 7 singletons (12.3)
- │   ├── core/                    ← classes métier (état, sauvegarde, marée)
- │   ├── puzzles/                 ← logique par énigme + tests
- │   └── tools/                   ← scripts éditeur (validations, génération)
- ├── data/                        ← CONTENU EN RESSOURCES .tres (le jeu est ICI)
- │   ├── dialogues/               ← d01_ombeline.dialogue ... (format texte
- │   │                              lisible : une réplique par ligne, conditions
- │   │                              [SI:], effets →, importées en .tres par
- │   │                              l'addon dialogue manager, adapté)
- │   ├── items/                   ← 80 items (item_*.tres)
- │   ├── pages/                   ← 24 pages d'esteban (page_*.tres)
- │   ├── echoes/                  ← 12 échos (echo_*.tres)
- │   ├── barks/                   ← barks par zone × trait (bark_*.tres)
+ ├── data/                        ← LE JEU EST ICI (texte pur, versionné)
+ │   ├── tables/                  ← un tableau illustré = un fichier
+ │   │   └── z01_cabinet.tab      ← (id, ambiance, marée d'entrée, points
+ │   │                              d'attention, chemins, PNJ, échos)
+ │   ├── dialogues/               ← d01_ombeline.dlg ... (format texte
+ │   │                              lisible : une réplique par ligne,
+ │   │                              conditions [SI:], effets →, 12.5)
+ │   ├── puzzles/                 ← e01_tiroir.pzl ... (états, validation,
+ │   │                              indices, phrase-test)
+ │   ├── items/                   ← 80 objets (item_*.itm)
+ │   ├── pages/                   ← 24 pages d'esteban (page_*.pg)
+ │   ├── echoes/                  ← 12 échos (echo_*.ec)
+ │   ├── barks/                   ← barks par zone × trait (bark_*.brk)
  │   └── tide/                    ← tables de marée 2026 diégétiques
- ├── tests/                       ← GUT (framework de tests GDScript)
- │   ├── puzzle_e05_reachability.gd   ← 32 états, aucun soft-lock
- │   ├── puzzle_e03_combinations.gd   ← 195-205 : couverture multi-solutions
- │   ├── dialogue_conditions.gd       ← 100 % des [SI:] parsés et résolus
- │   ├── save_integrity.gd           ← save → load → save, 10 000 cycles
- │   └── palette_collisions.gd       ← matrice chromatique 8.2
- ├── docs/                        ← PDF de ce GDD + bibles (mirroir GitHub Pages)
+ ├── tests/                       ← tests de CONTENU (indépendants du moteur)
+ │   ├── puzzle_e05_reachability  ← 32 états, aucun soft-lock
+ │   ├── puzzle_e03_combinations  ← 195-205 : couverture multi-solutions
+ │   ├── dialogue_conditions      ← 100 % des [SI:] parsés et résolus
+ │   ├── save_integrity           ← save → load → save, 10 000 cycles
+ │   ├── gates_double_cle         ← toute zone fermée a sa clé A ET B (12.4)
+ │   └── palette_collisions       ← matrice chromatique 8.2
+ ├── docs/                        ← PDF de ce GDD + bibles (miroir GitHub Pages)
  ├── tools/                       ← scripts python de pipeline (vérif assets,
  │                                  compression batch, rapport de taille APK)
  ├── .gitignore  .gitattributes   ← LFS : *.png > 50 Ko, *.ogg (12.9)
- ├── export_presets.cfg           ← presets APK/AAB (secrets hors dépôt)
  ├── README.md  LICENSE  CHANGELOG.md
- └── project.godot
+ └── build/                       ← scripts de build signés (les SECRETS hors
+                                   dépôt, toujours — 12.9)
  RÈGLE DES CHEMINS : minuscules+underscores, jamais d'accents ni d'espaces
  dans les noms de fichiers (outils de build multi-plateformes) ; les textes
  français vivent DANS les fichiers, jamais dans leurs noms.
+ RÈGLE DE SOBRIÉNÉ : src/ doit rester PETIT. Un compteur d'honneur du
+   studio : si la part de code dépasse ce que les données justifient, c'est
+   qu'une mécanique a dérivé vers la technique : le contenu gouverne
+   (12.10 : « le document gouverne »).
 
 ────────────────────────────────────────────────────────────────────────────────────────────
- 12.3 — LES SEPT AUTOLOADS (SINGLETONS) — CONTRATS ET RESPONSABILITÉS
+ 12.3 — LES SEPT SYSTÈMES (CONTRATS DE RESPONSABILITÉS — AUCUNE TECHNOLOGIE IMPOSÉE)
 ────────────────────────────────────────────────────────────────────────────────────────────
- [GameState] — l'état narratif ENTIER en mémoire : traits D/C/R/H, liens par
-   PNJ, drapeaux (Annexe C), inventaire (ids + quantités), zones découvertes
-   (avec timestamps : la carte-fin F-07 en dépend), énigmes résolues, pages,
-   échos, silences. API : get_flag(), set_flag(), add_trait(), bond(npc, n),
-   discovered(zone_id). AUCUNE logique de scène : que l'état, sérialisable.
- [SaveManager] — 3 slots manuels + auto + NG+ ; sérialisation binaire compacte
-   (custom, versionnée : champ version + migration) ; taille cible < 400 Ko ;
-   atomique (écriture .tmp puis rename : jamais de save corrompue par une
-   coupure) ; cloud opt-in par fichier dans le dossier Drive App Data du
-   compte du joueur (API Google, consentement explicite, aucune donnée au
-   studio). Les « timings de frappe » de la lettre du joueur (EMO-03) sont
-   sauvés : 2 Ko de vérité.
- [EventBus] — signaux globaux typés (flag_changed, bond_changed, puzzle_solved,
-   echo_seen, tide_phase_changed, silence_requested...) : le couplage des
-   systèmes passe par le bus, JAMAIS en références directes : le « cooldown
-   émotionnel » (6.11-7) s'implémente ici : silence_requested → tous les
-   systèmes sonores/barks se taisent 20 s.
- [TideSystem] — l'horloge du monde (6.6) : phases, coefficients, Heures Bleues
-   ; diffuse tide_phase_changed ; pilote les LUT de palette (8.3), la brume,
-   l'eau (ENV-001) ; fournit aux PNJ leurs horaires ; AUTONOME du temps réel
-   (le temps du jeu n'est JAMAIS le temps du téléphone : doctrine 6.11-4).
- [DialogueRunner] — wrapper de l'addon dialogue manager : injecte les
-   conditions d'antériorité (matrice 12.5), gère les reprises courtes
-   (6.11-10), les cooldowns émotionnels, le « compteur de t'as raison »
-   (easter egg 5.7) ; expose next(), choose(i), silence().
- [HintSystem] — les trois niveaux (6.10) : usage tracé (jamais affiché),
-   respect du mode puriste, formulations PAR PERSONNAGE (les textes d'indices
-   sont des resources liées à leur porteur : un indice parle comme ysolde
-   ou jamais).
- [AudioDirector] — buses, ducking, transitions AudioStreamInteractive, la
-   règle des silences à -32 LUFS (13.7), le « quart de ton de culpabilité »
-   (13.4). Le son est un système À PART ENTIÈRE : pas un service décoratif.
+ [S1 · GameState] — l'état narratif ENTIER en mémoire : traits D/C/R/H,
+   liens par PNJ, drapeaux (Annexe C), inventaire (ids + quantités), zones
+   découvertes (avec timestamps : la carte-fin F-07 en dépend), tableaux
+   vus, énigmes résolues, pages, échos, silences. Interface minimale :
+   lire/poser un drapeau, ajouter un trait, lier un PNJ, marquer une zone.
+   AUCUNE logique d'affichage : que l'état, sérialisable à 100 %.
+ [S2 · SaveManager] — 3 slots manuels + auto + NG+ ; sérialisation binaire
+   compacte (format versionné : champ version + migration ; spécification
+   complète en Annexe G) ; taille cible < 400 Ko ; ÉCRITURE ATOMIQUE
+   (fichier temporaire puis renommage : jamais de sauvegarde corrompue par
+   une coupure) ; cloud opt-in par fichier dans le dossier Drive App Data
+   du compte du joueur (consentement explicite, aucune donnée au studio).
+   Les « timings de frappe » de la lettre du joueur (EMO-03) sont sauvés :
+   2 Ko de vérité.
+ [S3 · EventBus] — événements globaux typés (drapeau posé, lien changé,
+   énigme résolue, écho vu, phase de marée changée, silence demandé...) :
+   le couplage des systèmes passe par le bus, JAMAIS par des références
+   directes : le « cooldown émotionnel » (6.11-7) s'implémente ici :
+   silence demandé → tous les systèmes sonores et barks se taisent 20 s.
+ [S4 · TideSystem] — l'horloge du monde (6.6) : phases, coefficients,
+   Heures Bleues ; diffuse « phase de marée changée » ; pilote les tables
+   chromatiques (8.3), la brume, l'eau (ENV-001) ; fournit aux PNJ leurs
+   horaires ; AUTONOME du temps réel (le temps du jeu n'est JAMAIS le
+   temps du téléphone : doctrine 6.11-4).
+ [S5 · DialogueRunner] — exécute les fichiers .dlg : injecte les conditions
+   d'antériorité (matrice 12.5), gère les reprises courtes (6.11-10), les
+   cooldowns émotionnels, le « compteur de t'as raison » (easter egg 5.7) ;
+   expose : avancer(), choisir(i), se taire().
+ [S6 · HintSystem] — les trois niveaux (6.10) : usage tracé (jamais
+   affiché), respect du mode puriste, formulations PAR PERSONNAGE (les
+   textes d'indices sont des données liées à leur porteur : un indice
+   parle comme ysolde ou jamais).
+ [S7 · AudioDirector] — les six buses, le ducking, les transitions sans
+   coupure, la règle des silences à -32 LUFS (13.7), le « quart de ton de
+   culpabilité » (13.4). Le son est un système À PART ENTIÈRE : pas un
+   service décoratif.
+ CONTRAT D'IMPLÉMENTATION : chaque système est remplaçable par tout
+   mécanisme (module, service, acteur) qui respecte le contrat ; les tests
+   de contenu (tests/) s'exécutent CONTRE LES CONTRATS, pas contre le
+   code : changer de moteur ne change PAS la suite de tests.
 
 ────────────────────────────────────────────────────────────────────────────────────────────
- 12.4 — PATTERNS DE SCÈNES (LES TROIS ARCHÉTYPES)
+ 12.4 — PATTERNS DE CONTENU (LES TROIS ARCHÉTYPES — FICHES DE DONNÉES, PAS DU CODE)
 ────────────────────────────────────────────────────────────────────────────────────────────
- ARCHÉTYPE ZONE (zone_xx.tscn) :
-   ZoneRoot (Node2D) [script zone.gd : id, ambiance, marée-état initial]
-   ├── ParallaxBackground (3 plans 8.5)
-   ├── NavRegion2D (polygones de marche, liens one-way pour échelles)
-   ├── Interactables (Node2D) ← enfants Interactable : Area2D + forme + action
-   ├── NPCs (Node2D) ← personnages selon horaires (spawn piloté par TideSystem)
-   ├── EchoPoints (Node2D) ← pierres pâles + conditions
-   ├── PuzzleHost (Node2D) ← référence la scène eXX le cas échéant
-   ├── AudioAmbience (AudioStreamPlayerInteractive) + AudioReverbZone
-   └── CameraAnchor (Marker2D ×n : les « moments tenus » 10.10)
- ARCHÉTYPE ÉNIGME (eXX.tscn) : PuzzleRoot [script puzzles/eXX.gd : états
-   locaux, validation, événements] + UI plein écran + PuzzleState (resource
-   persistée DANS GameState : une énigme quittée à mi-chemin RETROUVE ses
-   acquisitions positives : 6.11-6).
- ARCHÉTYPE CINÉMATIQUE (cinXX.tscn) : Timeline (Node) pilotée par un
-   script séquentiel maison (keyframes caméra + dialogues + événements,
-   format texte versionné : « cin07.tl » : les cinématiques sont du CONTENU :
-   elles se diffusent comme des dialogues, pas comme du code).
- ANTI-BLOCAGE (rappel 3.8) : tout verrou de zone a une clé A (objet) et une
-   clé B (social) : le pattern Interactable accepte deux unlock : c'est une
-   RÈGLE DE COMPILATION du contenu (le script tools/validate_gates.gd
-   rejette toute zone sans double clé — sauf Z16/Z17, listées explicitement
-   dans gates_exceptions.cfg avec commentaire signé).
+ ARCHÉTYPE TABLEAU (zxx_nom.tab) — un fichier texte par tableau illustré :
+   id, zone, ambiance sonore, état de marée à l'entrée, LISTE des points
+   d'attention [Zxx-int-nn : type, PENSÉE, son], LISTE des chemins
+   (libellé, destination, conditions de marée/heure/objet/LIEN/drapeau),
+   PNJ présents (avec horaires), points d'écho, énigme hébergée le cas
+   échéant, ancrages de cadrage (les « moments tenus » 10.10). Le fichier
+   EST le level design : le Bloc 16 en est la rédaction narrative.
+ ARCHÉTYPE ÉNIGME (exx_nom.pzl) : états locaux, règle de validation,
+   phrase-test (une phrase qu'un testeur PEUT dire après l'avoir résolue :
+   « j'ai vu la lune se lever DANS l'annuaire »), indices niveaux 1-3,
+   acquis persistés DANS GameState (une énigme quittée à mi-chemin
+   RETROUVE ses acquisitions positives : 6.11-6).
+ ARCHÉTYPE CINÉMATIQUE (cinxx.tm) : timeline séquentielle en texte
+   versionné (timecodes, cadrages, dialogues, événements) : les
+   cinématiques sont du CONTENU : elles se diffusent comme des dialogues,
+   pas comme du code.
+ ANTI-BLOCAGE (rappel 3.8) : tout verrou de zone a une clé A (objet) et
+   une clé B (social) : la fiche de chaque tableau liste ses DEUX clés :
+   c'est une RÈGLE DE COMPILATION DU CONTENU (le script tools/
+   validate_gates.py rejette toute zone sans double clé — sauf Z16/Z17,
+   listées explicitement dans gates_exceptions.cfg avec commentaire signé).
 
 ────────────────────────────────────────────────────────────────────────────────────────────
- 12.5 — LE SYSTÈME DE DIALOGUE (IMPLÉMENTATION DU BLOC 05)
+ 12.5 — LE SYSTÈME DE DIALOGUE (FORMAT DE DONNÉES — IMPLÉMENTATION DU BLOC 05)
 ────────────────────────────────────────────────────────────────────────────────────────────
  FORMAT SOURCE (un fichier par scène, texte, versionné, diffable) :
    ~ c02_cabinet
@@ -6327,74 +6494,81 @@ Esteban qui soit. »)
    [SI: LIEN-MAREK>=4 AND NOT flag_v03_seen]
    MAREK: J'ai laissé partir mon frère. Retiens le mot : laissé.
    ...
-   (conditions [SI:] : DSL maison — parseur testé par tests/dialogue_
-   conditions.gd : 100 % des expressions des 40 fichiers doivent se
-   résoudre à vide dans un état initial : garde-fou anti-typo.)
- COMPILATION : import en .tres (DialogueScene resource : lignes typées
-   VOX/TXT/PENSÉE, choix, effets, conditions) — l'addon est adapté (fork
-   maison documenté, upstream crédité et remercié : doctrine open source :
-   on fork proprement, on documente, on propose les correctifs en retour
-   quand ils sont généraux : 3 PR envoyés prévus sur l'upstream dialogue
-   manager : le studio paie sa dette en PR : charte 15.6).
+   (conditions [SI:] : DSL maison — parseur testé par tests/
+   dialogue_conditions : 100 % des expressions des 40 fichiers doivent
+   se résoudre à vide dans un état initial : garde-fou anti-typo.)
+ CHARGEMENT : le runner compile chaque .dlg en structures typées (lignes
+   VOX/TXT/PENSÉE, choix, effets, conditions) au démarrage ; tout
+   éditeur est acceptable, y compris AUCUN éditeur (les fichiers sont
+   pensés pour être écrits à la main : l'outil le plus maintenable du
+   monde est un fichier texte bien né).
  MATRICE D'ANTÉRIORITÉ : chaque ligne peut porter {first_zone:z05} : le
-   runner choisit la variante selon la PREMIÈRE zone visitée par le joueur
-   (6.3) : les variantes sont écrites dans les MÊMES fichiers (couver-
-   ture du writer : tout le texte d'une scène vit au même endroit : la
-   dispersion des variantes est l'ennemi de la cohérence : règle d'atelier
-   d'écriture).
- COOLDOWNS : silence_requested après scènes fortes (20 s), anti-répétition
+   runner choisit la variante selon la PREMIÈRE zone visitée par le
+   joueur (6.3) : les variantes sont écrites dans les MÊMES fichiers
+   (couverture du writer : tout le texte d'une scène vit au même endroit :
+   la dispersion des variantes est l'ennemi de la cohérence : règle
+   d'atelier d'écriture).
+ COOLDOWNS : silence demandé après scènes fortes (20 s), anti-répétition
    (une réplique d'ambiance ne rejoue JAMAIS à moins de 45 s d'intervalle,
    ni deux fois dans la même phase de marée : 5.19).
 
 ────────────────────────────────────────────────────────────────────────────────────────────
- 12.6 — ANIMATION & CAMÉRA (STACK TECHNIQUE)
+ 12.6 — ANIMATION & CAMÉRA (EXIGENCES DE RENDU — LE STYLE AVANT LA TECHNIQUE)
 ────────────────────────────────────────────────────────────────────────────────────────────
- PERSONNAGES : rigs « papier » maison — Node2D hiérarchiques (9 fragments :
-   tête, torse, 2 bras 2 segments, 2 jambes 2 segments) animés par
-   AnimationTree (StateMachine + blend 2D locomotion) ; les TÊTES et MAINS
-   sont des sprites uniques swappés (8.8 : économise partout sauf visages) ;
-   JAMAIS de squelette 2D déformant (le fragment reste rigide : l'aquarelle
-   ne se déforme pas, elle SE DÉPLACE : la discipline matérielle du style
-   tient jusqu'au rig : le corps de lohen est une marionnette, pas un
-   blob : c'est pour ça qu'on dirait du dessin animé traditionnel).
- CAMÉRA : Phantom Camera (addon épinglé) pour les recadrages de dialogue et
-   les moments tenus ; couplée à la respiration sinusoïdale maison (9.1-5,
-   amplitude/period par zone, désactivable 11.6-7). PRIORITÉ D'INTERRUPTION :
-   toute entrée joueur coupe la caméra scriptée en ≤ 120 ms (9.1-6).
- LE FAISCEAU DU PHARE : Light2D + polygone rotatif + particules de poussière
-   lumineuse (le faisceau-pinceau 9.6-004) : 1 seul actif dans le jeu :
-   budget garanti.
+ PERSONNAGES : rigs « papier » maison — hiérarchie de 9 fragments (tête,
+   torse, 2 bras 2 segments, 2 jambes 2 segments) animés par jeux de clés
+   (locomotion, idle, geste) ; les TÊTES et MAINS sont des sprites uniques
+   swappés (8.8 : économise partout sauf visages) ; JAMAIS de squelette
+   2D déformant (le fragment reste rigide : l'aquarelle ne se déforme pas,
+   elle SE DÉPLACE : la discipline matérielle du style tient jusqu'au
+   rig : le corps de lohen est une marionnette, pas un blob : c'est pour
+   ça qu'on dirait du dessin animé traditionnel).
+ CADENCE : rendu des tableaux à 60 fps ; animation des corps VOLONTAIREMENT
+   tenue à 24 fps avec poses de 2-3 frames (9.1) : la « fluidité » du jeu
+   est un accord entre la stabilité du monde et le tremblement tendre de
+   la main qui l'a dessiné — deux horloges, un seul cœur.
+ CAMÉRA : AUCUNE caméra libre. Chaque tableau porte SES cadrages (fiches
+   8.5) ; les recadrages de dialogue et les « moments tenus » sont des
+   interpolations entre ancrages déclarés (fiches 10.10) ; couplés à la
+   respiration sinusoïdale maison (9.1-5, amplitude/période par tableau,
+   désactivable 11.6-7). PRIORITÉ D'INTERRUPTION : toute entrée joueur
+   coupe le cadrage scripté en ≤ 120 ms (9.1-6).
+ LE FAISCEAU DU PHARE : lumière additionnelle rotative + particules de
+   poussière lumineuse (le faisceau-pinceau 9.6-004) : 1 seul actif dans
+   le jeu : budget garanti.
 
 ────────────────────────────────────────────────────────────────────────────────────────────
- 12.7 — BUDGETS DE PERFORMANCE (CIBLES CHIFFRÉES ET MESURES CI)
+ 12.7 — BUDGETS DE PERFORMANCE (CIBLES CHIFFRÉES — MESURES AUTOMATISÉES EN CI)
 ────────────────────────────────────────────────────────────────────────────────────────────
  DEVICE RÉFÉRENCE HAUT : Pixel 8 — 60 fps les doigts dans le nez (plafonné :
    le jeu n'a rien à faire de 120 Hz : la cadence est un style : 60).
  DEVICE RÉFÉRENCE BAS (« le veilleur ») : Redmi 9A (Helio G25, 2 Go RAM) :
-   60 fps caméra/monde, 24 fps corps (assumés), input < 80 ms, GPU < 45 %,
+   60 fps tableaux/monde, 24 fps corps (assumés), input < 80 ms, GPU < 45 %,
    RAM totale du process < 900 Mo, température stable 95 min (11.7).
- BUDGETS PAR SYSTÈME (mesure automatisée en CI : le workflow quality lance
-   60 s de gameplay scripté sur farm de devices réels louée — 3 devices :
+ BUDGETS PAR SYSTÈME (mesure automatisée : le workflow quality lance 60 s
+   de gameplay scripté sur farm de devices réels louée — 3 devices :
    coût : 12 €/mois : la QA matérielle la moins chère du monde pour la
    tranquillité la plus grande) :
-   rendu monde < 6 ms GPU ; post-process < 1,8 ms ; particules < 1 ms ;
-   audio < 1,5 ms CPU ; scripts < 3 ms CPU (frame 16,6 ms : marge 40 %).
+   rendu tableau < 6 ms GPU ; post-process < 1,8 ms ; particules < 1 ms ;
+   audio < 1,5 ms CPU ; logique < 3 ms CPU (frame 16,6 ms : marge 40 %).
  TAILLES : APK de base (FR, sans voix) : 148 Mo ; + voix FR : +72 Mo ;
-   textures ASTC 6×6 (12.9) ; audio OGG q5 ; polices sous-ensemble :
-   3,1 Mo ; TOTAL standard : 220 Mo — dans la fourchette contractuelle
-   100-900 Mo, avec la moitié du budget gardée en réserve pour les
-   chapitres 2-5 (update AAB : l'APK grossira : c'est prévu, budgété,
-   et le studio s'y engage par écrit dans le plan 15.4).
+   textures compressées ASTC 6×6 (12.9) ; audio OGG q5 ; polices
+   sous-ensemble : 3,1 Mo ; TOTAL standard : 220 Mo — dans la fourchette
+   contractuelle 100-900 Mo, avec la moitié du budget gardée en réserve
+   pour les chapitres 2-5 (update AAB : l'APK grossira : c'est prévu,
+   budgété, et le studio s'y engage par écrit dans le plan 15.4).
 
 ────────────────────────────────────────────────────────────────────────────────────────────
- 12.8 — SAUVEGARDE & REprise (CONTRAT D'INGÉNIERIE)
+ 12.8 — SAUVEGARDE & REPRISE (CONTRAT D'INGÉNIERIE)
 ────────────────────────────────────────────────────────────────────────────────────────────
- TRIGGERS AUTO : changement de zone (seuil), début/fin de séquence, validation
-   d'énigme, acquisition d'objet-clé, ÉCHO vu. ÉCRITURE ATOMIQUE (12.3).
- REPRISE EXACTE : position (cm), état des idles, phase de marée, dialogue
-   courant JUSQU'À LA LIGNE (l'index de ligne est sauvé : une coupure
-   pendant G-12 reprend À G-12 : le test save_integrity.gd le prouve sur
-   10 000 cycles aléatoires : zéro écart).
+ TRIGGERS AUTO : changement de tableau/zone (seuil), début/fin de
+   séquence, validation d'énigme, acquisition d'objet-clé, ÉCHO vu.
+   ÉCRITURE ATOMIQUE (12.3).
+ REPRISE EXACTE : tableau courant et position de Lohen (m), état des
+   animations d'attente, phase de marée, dialogue courant JUSQU'À LA
+   LIGNE (l'index de ligne est sauvé : une coupure pendant G-12 reprend
+   À G-12 : le test save_integrity le prouve sur 10 000 cycles
+   aléatoires : zéro écart).
  CLOUD : opt-in, Google Drive App Data (le dossier caché de l'application
    sur LE drive du joueur : le studio ne voit rien, ne sait rien, ne veut
    rien savoir : la vie privée est une exclusivité du joueur : charte 1.8).
@@ -6410,13 +6584,13 @@ Esteban qui soit. »)
    intégrale) et de RIEN D'AUTRE. Aucun asset mort, aucune redondance, aucun
    « padding » : si l'APK dépasse 900 Mo un jour, c'est qu'un chapitre l'a
    mérité ET que Play Asset Delivery aura pris le relais (AAB : la boutique
-   sert les packs par chapitre : jamais au joueur
-   d'attendre le chapitre 5 pour jouer le 1).
+   sert les packs par chapitre : jamais au joueur d'attendre le chapitre 5
+   pour jouer le 1).
  RÉPARTITION CIBLE DU CHAPITRE 1 (220 Mo) :
    textures ASTC ................... 96 Mo  (85 planches + sprites, 2048 px
-     médian, ASTC 6×6 : le standard moderne : qualité aquarelle intacte à
-     l'œil, 4× plus léger que PNG cru : la compression est un art de la
-     fidélité)
+     médian, ASTC 6×6 : le standard Android moderne : qualité aquarelle
+     intacte à l'œil, 4× plus léger que PNG cru : la compression est un
+     art de la fidélité)
    voix FR (option, pack) .......... 72 Mo  (1 950 lignes, OGG mono 22 kHz
      q5 : la voix est un CONTENU TÉLÉCHARGEABLE optionnel sur Play (PAD
      « on-demand ») : le jeu de base est muet-parfait, le jeu voix est
@@ -6425,22 +6599,22 @@ Esteban qui soit. »)
    musique + ambiances ............. 38 Mo  (24 plages OGG, boucles
      intégrées en endings propres : 13.3)
    polices (3 familles, subset) .... 3,1 Mo
-   moteur + scripts + data ......... 9 Mo
+   runtime + logique + data ........ 9 Mo
    divers (icônes, splash, LUT) .... 1,9 Mo
  OUTILS DE SURVEILLANCE (dans tools/) : apk_size_report.py (à chaque tag :
    diff de taille par type de fichier, alerte si +5 % sans tag de contenu
    associé : la « taxe d'octets » se paie en justification : règle studio) ;
    texture_audit.py (aucune texture sans usage référencé : les morts sont
    des dettes).
- EXPORT PRESETS : APK universel (arm64-v8a + armeabi-v7a, 44 Mo de binaires
-   Godot compressés) ET APK arm64 seul (allégé) ; AAB Play (PAD configuré :
-   base 148 Mo + pack voix 72 Mo on-demand). SIGNATURE : clés hors dépôt
-   (GitHub Secrets, keystore chiffré en artefact : JAMAIS dans le repo —
+ LIVRAISONS : APK universel (arm64-v8a + armeabi-v7a) ET APK arm64 seul
+   (allégé) ; AAB Play (PAD configuré : base 148 Mo + pack voix 72 Mo
+   on-demand). SIGNATURE : clés et magasins de clés HORS dépôt (secrets
+   de CI chiffrés, keystore en artefact protégé : JAMAIS dans le repo —
    la règle de sécurité la plus simple et la plus violée de l'industrie :
    on la respecte à la lettre : audit automatique gitleaks en CI).
 
 ────────────────────────────────────────────────────────────────────────────────────────────
- 12.10 — ORGANISATION GITHUB (WORKFLOW, BRANCHES, COMMITS, CI/CD COMPLETS)
+ 12.10 — ORGANISATION GITHUB (WORKFLOW, BRANCHES, COMMITS, CI/CD — MOTEUR-AGNOSTIQUE)
 ────────────────────────────────────────────────────────────────────────────────────────────
  DÉPÔT : github.com/atelier-maree-basse/cartographie-des-absents (privé en
    production, public programmé en fin de vie 15.6). ORGANISATION avec
@@ -6476,29 +6650,29 @@ Esteban qui soit. »)
    page et animation du GDD a SON issue (générée depuis ce document par le
    script tools/gdd_to_issues.py : le GDD est la SOURCE : le board en est
    l'ombre : jamais l'inverse : doctrine « le document gouverne »).
- GITHUB ACTIONS — PIPELINES RÉELS (extraits) :
+ GITHUB ACTIONS — PIPELINES (définition d'intention, outillage libre) :
    ci-quality.yml (à chaque push/PR) :
-     jobs : [gdscript-lint (warnings=error, clang-format des .gd),
-             unit-tests (GUT : puzzles, dialogue, save — matrix 3 devices
-             émulés), asset-audit (textures mortes, palettes), 
-             dialogue-coverage (100 % des [SI:] résolus),
-             gitleaks (secrets), size-budget (delta APK < +5 %)]
-   ci-export-dev.yml (merge sur dev) :
-     container ghcr.io/godot 4.3 ; godot --headless --export-release
-     "Android Debug" ; upload-artifact APK (expire 14 j) ; QR code de
-     distribution interne (le studio teste sur ses téléphones en 2 min :
-     le circuit court du playtest).
-   ci-export-release.yml (tag v*) :
-     keystore depuis Secrets ; APK arm64 + universel + AAB ; création
+     lint (le style de code est discuté, la PROPRETÉ ne l'est pas) ;
+     tests de contenu (puzzles, dialogues, save — les mêmes que tests/,
+     exécutés sur la machine CI : AUCUN device requis : le contenu est
+     testable partout) ; audit d'assets (textures mortes, palettes) ;
+     couverture de dialogue (100 % des [SI:] résolus) ; gitleaks
+     (secrets) ; budget de taille (delta APK < +5 %).
+   ci-build-dev.yml (merge sur dev) :
+     build APK debug avec l'outillage du runtime choisi ; upload-artifact
+     (expire 14 j) ; QR code de distribution interne (le studio teste
+     sur ses téléphones en 2 min : le circuit court du playtest).
+   ci-release.yml (tag v*) :
+     keystore depuis les secrets ; APK arm64 + universel + AAB ; création
      GitHub Release avec notes générées depuis CHANGELOG.md ; dépôt
-     automatique en internal track Play Console (API officielle) ;
-     le tag porte la trace : v1.0.0-ch1 « La marée basse ».
+     automatique en internal track Play Console (API officielle) ; le
+     tag porte la trace : v1.0.0-ch1 « La marée basse ».
    ci-i18n-check.yml : clés FR ↔ EN ↔ ES (futures), + vérification que
      le mot « lettre » n'apparaît dans AUCUN fichier marketing (le
-     script secret_du_leurre.py : la protection AUTOMATISÉE du twist
-     1.3 : la CI garde notre secret : elle échoue si un store-screenshot
-     ou une description contient le mot : la machine est discrète,
-     la machine est fidèle : notre meilleure gardienne).
+     script python secret_du_leurre.py : la protection AUTOMATISÉE du
+     twist 1.3 : la CI garde notre secret : elle échoue si un
+     store-screenshot ou une description contient le mot : la machine
+     est discrète, la machine est fidèle : notre meilleure gardienne).
  GIT LFS : *.png > 50 Ko, *.ogg, *.wav, *.psd/.kra source (les SOURCES
    d'art sont versionnées : 1,4 To de LFS à terme : le patrimoine
    coûte son stockage : assumé).
@@ -6508,30 +6682,29 @@ Esteban qui soit. »)
    DANS le changelog : la boucle de tendresse englobante).
 
 ────────────────────────────────────────────────────────────────────────────────────────────
- 12.11 — ADDONS ÉPINGLÉS (LISTE FERMÉE — DOCTRINE DE SOBRIÉTÉ)
+ 12.11 — DÉPENDANCES EXTERNES (DOCTRINE DE SOBRIÉTÉ — QUEL QUE SOIT LE MOTEUR)
 ────────────────────────────────────────────────────────────────────────────────────────────
- UNIQUEMENT CE QUI SUIT (tous open source, épinglés par commit exact,
- subtree ou submodule selon licence, vendor documenté) :
-   1. nathanhoad/godot_dialogue_manager ... fork maison documenté (12.5) ;
-   2. ramokz/phantom-camera .............. caméras (12.6) ;
-   3. godot-extended-libraries/godot_state_charts — machines d'état PNJ ;
-   4. gut (gdscript unit testing) ....... les tests (12.2) ;
-   5. Le RESTE : code maison. Le studio compte ses dépendances comme on
-      compte ses convives : peu, choisis, nourris. TOUT nouvel addon
-      exige : issue d'argumentation, test sur le veilleur (12.7), review
-      double, et pin de version. UN ADDON SANS MAINTENAINEUR ACTIF EST
-      REFUSÉ (la dette technique commence toujours par un « allez, juste
-      celui-là » : le studio l'écrit sur une carte et la relit à chaque
-      tentation).
+ LA LISTE EST FERMÉE, VERSIONNÉE, ET JUSTIFIÉE. Quatre familles admises :
+   1. le runtime de rendu/exécution retenu par l'équipe (12.1) ;
+   2. ses extensions — SI ET SEULEMENT SI open source, épinglées par
+      commit exact, testées sur le veilleur, et maintenues vivement ;
+   3. les codecs et bibliothèques de format (OGG, ASTC, polices) ;
+   4. les outils de pipeline (python, scripts maison).
+   Le studio compte ses dépendances comme on compte ses convives : peu,
+   choisis, nourris. TOUTE nouvelle dépendance exige : issue
+   d'argumentation, test sur le veilleur (12.7), review double, et pin de
+   version. UNE DÉPENDANCE SANS MAINTENEUR ACTIF EST REFUSÉE (la dette
+   technique commence toujours par un « allez, juste celle-là » : le
+   studio l'écrit sur une carte et la relit à chaque tentation).
 
 ────────────────────────────────────────────────────────────────────────────────────────────
- 12.12 — EXPORT ANDROID : CHECKLIST TECHNIQUE COMPLÈTE (SPÉCIFIQUE GODOT 4.3)
+ 12.12 — LIVRAISON ANDROID : CHECKLIST PRODUIT (INDÉPENDANTE DU MOTEUR)
 ────────────────────────────────────────────────────────────────────────────────────────────
- ─ export_presets.cfg : min API 26, target 34 ; architectures arm64-v8a
-   (obligatoire Play) + armeabi-v7a (APK direct) ; Gradle build custom ON ;
-  launcher icon adaptatif (le fond de l'icône est le papier, le premier
-   plan l'encre de la goutte : l'icône du téléphone EST la promesse du
-   jeu : 5 minutes de design, 5 ans de regard).
+ ─ CIBLE : min API 26, cible API 34 ; architectures arm64-v8a (obligatoire
+   Play) + armeabi-v7a (APK direct) ; icône lanceur adaptative (le fond
+   de l'icône est le papier, le premier plan l'encre de la goutte :
+   l'icône du téléphone EST la promesse du jeu : 5 minutes de design,
+   5 ans de regard).
  ─ PERMISSIONS DEMANDÉES : AUCUNE au 1er lancement (jeu hors-ligne
    complet) ; VIBRATE (haptique, révocable en options) ; l'accès Drive
    n'est demandé QUE si le joueur active le cloud (consentement à
@@ -6540,14 +6713,15 @@ Esteban qui soit. »)
    cutout handling (l'encoche est une affaire d'UI safe-areas : marges
    28 dp : testée sur 11 taies d'encoches : la goutte de sauvegarde ne
    s'y cache JAMAIS).
- ─ RENDU : Vulkan mobile par défaut, fallback Compatibility (GLES3)
-   automatique (le veilleur tourne en GLES3 : vérifié) ; vsync ON ;
-   le jeu n'empêche JAMAIS l'écran de s'éteindre si le joueur ne
-   touche pas 95 s (pas de wake lock : le téléphone appartient à
-   la vie du joueur : le jeu s'endort comme un livre : on le rouvre) ;
-   seul CIN-07 propose (jamais n'impose) « garder l'écran allumé pour
-   la lettre » (option au début de la séquence : une lettre se lit
-   sans que l'écran s'éteigne : la seule exception, consentie).
+ ─ RENDU : API graphique au choix de l'équipe (Vulkan ou GLES3) — la
+   contrainte n'est pas l'API, c'est le VEILLEUR : 60 fps tableaux sur
+   Redmi 9A ou ça ne sort pas (12.7) ; vsync ON ; le jeu n'empêche
+   JAMAIS l'écran de s'éteindre si le joueur ne touche pas 95 s (pas de
+   wake lock : le téléphone appartient à la vie du joueur : le jeu
+   s'endort comme un livre : on le rouvre) ; seul CIN-07 propose
+   (jamais n'impose) « garder l'écran allumé pour la lettre » (option
+   au début de la séquence : une lettre se lit sans que l'écran
+   s'éteigne : la seule exception, consentie).
  ─ LIVRAISON : AAB (Play, PAD pour voix) + APK signé sur GitHub Releases
    (les joueurs sans Play existent, et ont raison) ; signature v2+v3 ;
    versionCode incrémenté par CI (jamais à la main : la main se trompe,
@@ -6556,6 +6730,7 @@ Esteban qui soit. »)
 ════════════════════════════════════════════════════════════════════════════════════════════
  FIN DU BLOC 12
 ════════════════════════════════════════════════════════════════════════════════════════════
+
 
 
 ════════════════════════════════════════════════════════════════════════════════════════════
@@ -6787,14 +6962,15 @@ Esteban qui soit. »)
    sport de précision).
 
 ────────────────────────────────────────────────────────────────────────────────────────────
- 13.6 — L'INGÉNIERIE AUDIO (IMPLÉMENTATION GODOT)
+13.6 — L'INGÉNIERIE AUDIO (SCHÉMA D'INTÉGRATION MOTEUR-AGNOSTIQUE)
 ────────────────────────────────────────────────────────────────────────────────────────────
  BUSES : Master / Musique / Voix / Monde / UI / Silence (la bus Silence
    existe : elle porte la room tone du banc : mixer le silence dans une
    bus dédiée est la décision d'ingénierie la plus fière du studio).
- AUDIOSTREAMINTERACTIVE partout : les plages à états (la boîte à musique
+ TRANSITIONS SANS COUPURE partout : les plages à états (la boîte à musique
    d'aristide 13.3-11 : désaccordée → accordée : la transition est
-   native, sans couture : le Ch2 étendra ce système aux saisons).
+   portée par les fichiers eux-mêmes (chaque état connaît ses transitions
+   possibles : exigence E-3 du 12.1) : le Ch2 étendra ce système aux saisons).
  DUCKING : les voix coupent la musique de 30 % (200 ms fade) SAUF la
    plage 21 (le silence ne se coupe pas : il se respecte : règle
    absolue du mix).
@@ -6849,8 +7025,10 @@ Esteban qui soit. »)
  LA TACHE : une tache d'eau de mer a coulé sur deux mots du pli 10 (14.3-b). Les
  deux mots restent lisibles mais voilés (0,3 s de flou au toucher). Lohen : « je
  sais lesquels. je ne les dirai pas. ce sont les miens maintenant. » (OBJ-12).
- LONGUEUR : 1 188 mots. Temps de lecture médian observé (12 playtests calmes) :
- 7 min 40 s. Personne n'a jamais scrollé vite. Personne n'a jamais interrompu.
+ LONGUEUR : 1 448 mots — décompte exact, de « Lohen, » à « — e.s. », les
+ onze plis tout compris. Temps de lecture médian observé (12 playtests
+ calmes) : 7 min 40 s. Personne n'a jamais scrollé vite. Personne n'a
+ jamais interrompu.
 
 ────────────────────────────────────────────────────────────────────────────────────────────
  14.2 — LE TEXTE INTÉGRAL (ONZE PLIS)
@@ -7068,7 +7246,7 @@ Esteban qui soit. »)
 ────────────────────────────────────────────────────────────────────────────────────────────
  14.4 — LA MISE EN SCÈNE DU DÉPLIAGE (SPEC D'INTERACTION — COMPLÉMENT DE CIN-07)
 ────────────────────────────────────────────────────────────────────────────────────────────
- ─ Le pouce tourne les plis (swipe latéral doux, 180 ms d'animation papier,
+ ─ Le doigt tourne les plis : toucher le bord du pli le tourne (180 ms
    retour élastique si abandonné à mi-course : le geste est caressé, pas cliqué.
  ─ Si le joueur s'arrête longtemps sur un pli (> 20 s), la respiration de
    lohen ralentit d'un cran (audio) : le jeu respire AVEC la lecture : rien
@@ -7145,7 +7323,7 @@ Esteban qui soit. »)
  15.1 — L'ÉQUIPE (7 PERSONNES + 2 PRESTATAIRES)
 ────────────────────────────────────────────────────────────────────────────────────────────
  [P1] Directeur créatif / lead designer / scénariste (l'auteur de ce document).
- [P2] Développeuse senior Godot (systèmes, CI, export Android).
+ [P2] Développeuse senior runtime (systèmes, CI, export Android).
  [P3] Développeur / tools (dialogues, puzzles, save, tests).
  [P4] Directrice artistique / peintre 1 (zones, palettes).
  [P5] Peintre 2 / character designer (sheets, dos de lohen, mains d'ysolde).
@@ -7247,11 +7425,11 @@ Esteban qui soit. »)
    rétrospection en cadeau, pas en reproche.
  R05 — Poids APK / contrainte 100-900 Mo / P : faible / I : faible / M :
    plan 12.9 tenu à 220 Mo ; PAD pour les voix ; audit CI automatique.
- R06 — Dépendance à 4 addons / P : faible / I : moyen / M : liste fermée,
-   pins de version, fork documenté du dialogue manager (nous possédons
-   notre fork : nous pouvons le maintenir seuls si les upstreams meurent :
-   la souveraineté technique est une assurance-vie).
- R07 — Épuisement de l'équipe (7 personnes, 250 semaines) / P : ÉLEVÉ /
+ R06 — Dépendances techniques externes / P : faible / I : moyen / M : doctrine
+   de liste fermée 12.11 (toute dépendance : argumentée, épinglée par
+   version exacte, testée sur le veilleur, review double) ; le contenu
+   vit en fichiers texte ouverts (12.5) : si un outil meurt, le contenu
+   survit : la souveraineté technique est une assurance-vie).
    I : élevé / M : weeks-ends sacrés (jamais de livraison lundi matin :
    jamais de « petit push de dimanche »), 5 semaines de congés/an bloquées
    dans le planning AVANT les phases, rotation des postes (le peintre 2
@@ -7349,7 +7527,10 @@ Esteban qui soit. »)
  BLOC 16 — LEVEL DESIGN PAS À PAS (Z01 → Z18 : FICHES DE PRODUCTION)
  (Ajouté en v1.1 — format : entrées/sorties, flux, interactables identifiés, états
   de marée, notes de design, retours de playtest. Chaque interactable porte un ID
-  stable [Zxx-int-nn] réutilisé dans les tickets et les scènes Godot.)
+  stable [Zxx-int-nn] réutilisé dans les tickets et les fiches de tableau.
+  Lecture v1.2 : chaque « flux » de fiche se lit désormais comme le PANNEAU
+  DES CHEMINS du 6.2 — les entrées/sorties listées sont les chemins proposés
+  au joueur ; les interactables sont les points d'attention du tableau.)
 ════════════════════════════════════════════════════════════════════════════════════════════
 
 ────────────────────────────────────────────────────────────────────────────────────────────
@@ -8133,7 +8314,7 @@ ANNEXES DU DOCUMENT (A → U)
  20 « TOUTE LA CLASSE — 11 NOVEMBRE 2025 — on a lu les trente noms. ils
    sont revenus un peu. » (les enfants, l'appel des noms : la tradition
    en marche : le jeu est une tradition qui s'ignore.)
- 21→80 : (rédigées, même exigence — fichier data/barks/etiquettes_*.tres).
+ 21→80 : (rédigées, même exigence — fichier data/barks/etiquettes_*.brk).
 
 ────────────────────────────────────────────────────────────────────────────────────────────
  ANNEXE G — SCHÉMA DE SAUVEGARDE (FORMAT BINAIRE VERSIONNÉ — SPÉCIFICATION)
@@ -8187,9 +8368,31 @@ ANNEXES DU DOCUMENT (A → U)
    secrets S01→S12, archives transcrites, protocoles de playtest, charpente
    du Chapitre 2, dictionnaire des mots inventés). Le document vit dans le
    dépôt (docs/), toute modification passe par PR avec review du directeur
-   créatif ; le changelog joueur final héritera de la discipline de celui-ci. Le document vit dans le dépôt (docs/),
-   toute modification passe par PR avec review du directeur créatif ;
-   le changelog joueur final héritera de la discipline de celui-ci.
+   créatif ; le changelog joueur final héritera de la discipline de celui-ci.
+ v1.2 — 22/09/2026 — LA GRANDE PASSE D'INDÉPENDANCE & DE CŒUR :
+   1. MOTEUR-AGNOSTIQUE : toutes les parties purement techniques liées à un
+      moteur précis (nœuds de scène, scripts dédiés, extensions/addons,
+      arbre de projet moteur, export technique) ont été RETIRÉES ou
+      réécrites en contrats neutres ; le BLOC 12 est désormais une
+      architecture de DONNÉES (formats, systèmes, budgets, CI, livraison
+      Android) utilisable avec n'importe quel moteur ou runtime maison.
+   2. UNE SEULE COMMANDE : LE CHOIX — suppression du schéma de commande
+      secondaire (joystick virtuel) et de tout pilotage direct du corps ;
+      le jeu se joue désormais exclusivement en tableaux illustrés,
+      textes, choix de chemins, énigmes et inventaire (6.2 réécrite ;
+      matrice des conséquences des chemins en 6.3 ; options 11.3
+      réécrites ; gestes à deux doigts remplacés par le lorgnon et les
+      boutons-feuillets ; l'étreinte d'objet conservée).
+   3. CŒUR ÉMOTIONNEL RENFORCÉ : les « cinq vérités du cœur » (1.3) ;
+      la charte des fins (3.6) — plusieurs fins, la lettre comme fin
+      secrète du Chapitre 1, chaque fin disant à sa façon ce que Lohen
+      compte pour Esteban ; retour de Return of the Obra Dinn dans les
+      références (1.5).
+   4. JUSTESSE : décompte réel de la lettre corrigé (1 448 mots, et non
+      1 188) ; coquilles corrigées ; bannière de fin de corps de document
+      clarifiée ; index (Annexe K) régénéré.
+   Aucune densité n'a été sacrifiée : zones, énigmes, dialogues, secrets,
+   bornes, cloches, murmures et annexes sont INTACTS.
 
 ────────────────────────────────────────────────────────────────────────────────────────────
  COLOPHON & ENGAGEMENT
@@ -8206,7 +8409,7 @@ ANNEXES DU DOCUMENT (A → U)
                                                             — Atelier Marée Basse,
                                                               septembre 2026.
 ════════════════════════════════════════════════════════════════════════════════════════════
- FIN DU GAME DESIGN DOCUMENT — LA CARTOGRAPHIE DES ABSENTS — v1.0
+FIN DU CORPS DU DOCUMENT — LES ANNEXES A → U ET L'INDEX SUIVENT
 ════════════════════════════════════════════════════════════════════════════════════════════
 
 ────────────────────────────────────────────────────────────────────────────────────────────
@@ -8306,7 +8509,7 @@ ANNEXES DU DOCUMENT (A → U)
      gardiens successifs du phare (5), les chiens du bac (3), les
      amoureux du siècle (4), les « étiquettes d'école » des classes
      2018-2025 (5), les étiquettes d'HIVER BLANC commémoratives (4)]
-     — fichier data/barks/etiquettes_21_80.tres : mêmes règles, même
+     — fichier data/barks/etiquettes_21_80.brk : mêmes règles, même
      exigence, aucun remplissage : une étiquette qui ne dit rien est
      supprimée en review d'écriture (la règle des 12 mots max est
      une discipline de tendresse : on écrit court aux absents parce
@@ -8373,7 +8576,7 @@ ANNEXES DU DOCUMENT (A → U)
  048 E07 : session avec 2 testeurs non-voyants : résolution complète.
  051 E09 : résolution muette (audio coupé) : 100 %.
  054 E13 : variante assistée : aimant ±6° : médiane < 15 min.
- 057 les doubles clés (A objet / B social) : audit validate_gates.gd.
+ 057 les doubles clés (A objet / B social) : audit validate_gates.py.
  060 S01-S12 : aucun secret requis pour finir (fin de partie avec 0 secret).
  063 la gomme n'a aucun usage : le joueur la garde quand même (playtest :
       96 % la gardent : le QA du détail inutile : la plus belle métrique
@@ -9745,57 +9948,60 @@ ANNEXES DU DOCUMENT (A → U)
 ────────────────────────────────────────────────────────────────────────────────────────────
  ANNEXE K — INDEX DES BLOCS (NAVIGATION RAPIDE DU DOCUMENT)
 ────────────────────────────────────────────────────────────────────────────────────────────
- ligne    17 — BLOC 01 — VISION & CONCEPT
- ligne    18 — BLOC 02 — UNIVERS & LORE
- ligne    19 — BLOC 03 — STRUCTURE NARRATIVE COMPLÈTE
- ligne    20 — BLOC 04 — PERSONNAGES
- ligne    21 — BLOC 05 — DIALOGUES COMPLETS DU CHAPITRE 1
- ligne    22 — BLOC 06 — GAMEPLAY & SYSTÈMES
- ligne    23 — BLOC 07 — ÉNIGMES & PUZZLES
- ligne    24 — BLOC 08 — GRAPHISMES & DIRECTION ARTISTIQUE
- ligne    25 — BLOC 09 — ANIMATIONS
- ligne    26 — BLOC 10 — CINÉMATIQUES & SÉQUENCES SCRIPTÉES
- ligne    27 — BLOC 11 — UI / UX
- ligne    28 — BLOC 12 — TECHNIQUE GODOT & ARCHITECTURE (INCL. GITHUB)
- ligne    29 — BLOC 13 — SONS & MUSIQUE
- ligne    30 — BLOC 14 — LETTRE FINALE DU CHAPITRE 1
- ligne    31 — BLOC 15 — PLANNING & PRODUCTION
- ligne    32 — BLOC 16 — LEVEL DESIGN PAS À PAS (Z01 → Z18)
- ligne    33 — BLOC 17 — VARIANTES NG+ INTÉGRALES
- ligne    51 — BLOC 01 — VISION & CONCEPT
- ligne   290 — BLOC 02 — UNIVERS & LORE
- ligne   734 — BLOC 03 — STRUCTURE NARRATIVE COMPLÈTE
- ligne  1077 — BLOC 04 — PERSONNAGES
- ligne  1872 — BLOC 05 — DIALOGUES COMPLETS DU CHAPITRE 1
- ligne  3715 — BLOC 06 — GAMEPLAY & SYSTÈMES
- ligne  4099 — BLOC 07 — ÉNIGMES & PUZZLES
- ligne  4951 — BLOC 08 — GRAPHISMES & DIRECTION ARTISTIQUE
- ligne  5309 — BLOC 09 — ANIMATIONS
- ligne  5693 — BLOC 10 — CINÉMATIQUES & SÉQUENCES SCRIPTÉES
- ligne  5929 — BLOC 11 — UI / UX (INTERFACE, MENUS, ACCESSIBILITÉ, TACTILE ANDROID)
- ligne  6152 — BLOC 12 — TECHNIQUE GODOT & ARCHITECTURE (INCL. ORGANISATION GITHUB & EXPORT APK)
- ligne  6562 — BLOC 13 — SONS & MUSIQUE
- ligne  6829 — BLOC 14 — LA LETTRE FINALE DU CHAPITRE 1
- ligne  7141 — BLOC 15 — PLANNING & PRODUCTION
- ligne  7349 — BLOC 16 — LEVEL DESIGN PAS À PAS (Z01 → Z18 : FICHES DE PRODUCTION)
- ligne  7813 — BLOC 17 — LES VARIANTES NG+ INTÉGRALES (LES SIX SCÈNES « APRÈS LA LETTRE »)
- ligne  7982 — ANNEXE A — REGISTRE DES IDENTIFIANTS STABLES (EXTRAIT NORMATIF)
- ligne  7995 — ANNEXE B — TABLES CHROMATIQUES COMPLÈTES (VALEURS DE RÉFÉRENCE PAR ACTE)
- ligne  8013 — ANNEXE C — REGISTRE DES DRAPEAUX NARRATIFS DU CHAPITRE 1 (LISTE INTÉGRALE)
- ligne  8035 — ANNEXE D — TABLES DE COHÉRENCE TEMPORELLE (LA SEMAINE D'ESTEBAN + HORAIRES PNJ)
- ligne  8052 — ANNEXE E — LES 68 OBJETS SECONDAIRES (REGISTRE DE SACOCHE — EXTRAIT 1→24)
- ligne  8090 — ANNEXE F — LES 80 ÉTIQUETTES DU BOIS (ÉCHANTILLON DE RÉDACTION 1→20 + FORMAT)
- ligne  8139 — ANNEXE G — SCHÉMA DE SAUVEGARDE (FORMAT BINAIRE VERSIONNÉ — SPÉCIFICATION)
- ligne  8161 — ANNEXE H — SOMMAIRE DÉTAILLÉ DE LA CHECKLIST QA (EXTRAIT DES 214 — CATÉGORIE ÉMOTION)
- ligne  8316 — ANNEXE I — LOCALISATION (FR VO → EN / ES) : PRINCIPES DE TRADUCTION
- ligne  8352 — ANNEXE J — EXTRAITS DE LA CHECKLIST QA CATÉGORIES 1-90 (REPRÉSENTATIFS)
- ligne  8395 — ANNEXE L — DIALOGUES COMPLÉMENTAIRES DU CHAPITRE 1 (BAZ, ADÈLE, MARTA — ARBRES INTÉGRAUX)
- ligne  8584 — ANNEXE M — LES 43 CLOCHES NOMINATIVES DU VERGER (REGISTRE INTÉGRAL)
- ligne  8806 — ANNEXE N — LES 40 BORNES D'ARPENTEUR (TEXTES INTÉGRAUX DES RELEVÉS)
- ligne  8994 — ANNEXE O — REGISTRE COMPLET DES 40 « MURMURES » (TYPOLOGIE 6.13 INTÉGRALE)
- ligne  9107 — ANNEXE P — FICHES DÉTAILLÉES DES SECRETS-ÉNIGMES S01 → S12
- ligne  9271 — ANNEXE Q — LES ÉTIQUETTES 51 → 80 (FIN DU REGISTRE DU BOIS)
- ligne  9384 — ANNEXE R — ARCHIVES : LES TEXTES INTÉGRAUX DES DOCUMENTS CROISÉS
- ligne  9536 — ANNEXE S — PROTOCOLES DE PLAYTEST & MÉTRIQUES D'ÉMOTION (PHASES 1 ET 3)
- ligne  9634 — ANNEXE T — CHAPITRE 2 « LE TRAIN DES ADIEUX » : CHARPENTE D'ARCHITECTURE
- ligne  9695 — ANNEXE U — LE DICTIONNAIRE DES MOTS INVENTÉS DU CAFÉ L'ÉCUME (3E ÉDITION)
+ ligne     17 — BLOC 01 — VISION & CONCEPT
+ ligne     18 — BLOC 02 — UNIVERS & LORE
+ ligne     19 — BLOC 03 — STRUCTURE NARRATIVE COMPLÈTE
+ ligne     20 — BLOC 04 — PERSONNAGES
+ ligne     21 — BLOC 05 — DIALOGUES COMPLETS DU CHAPITRE 1
+ ligne     22 — BLOC 06 — GAMEPLAY & SYSTÈMES
+ ligne     23 — BLOC 07 — ÉNIGMES & PUZZLES
+ ligne     24 — BLOC 08 — GRAPHISMES & DIRECTION ARTISTIQUE
+ ligne     25 — BLOC 09 — ANIMATIONS
+ ligne     26 — BLOC 10 — CINÉMATIQUES & SÉQUENCES SCRIPTÉES
+ ligne     27 — BLOC 11 — UI / UX
+ ligne     28 — BLOC 12 — ARCHITECTURE TECHNIQUE & DONNÉES (MOTEUR-AGNOSTIQUE — INCL. GITHUB)
+ ligne     29 — BLOC 13 — SONS & MUSIQUE
+ ligne     30 — BLOC 14 — LETTRE FINALE DU CHAPITRE 1
+ ligne     31 — BLOC 15 — PLANNING & PRODUCTION
+ ligne     32 — BLOC 16 — LEVEL DESIGN PAS À PAS (Z01 → Z18)
+ ligne     33 — BLOC 17 — VARIANTES NG+ INTÉGRALES
+ ligne     51 — BLOC 01 — VISION & CONCEPT
+ ligne    329 — BLOC 02 — UNIVERS & LORE
+ ligne    773 — BLOC 03 — STRUCTURE NARRATIVE COMPLÈTE
+ ligne   1146 — BLOC 04 — PERSONNAGES
+ ligne   1941 — BLOC 05 — DIALOGUES COMPLETS DU CHAPITRE 1
+ ligne   3784 — BLOC 06 — GAMEPLAY & SYSTÈMES
+ ligne   4233 — BLOC 07 — ÉNIGMES & PUZZLES
+ ligne   5085 — BLOC 08 — GRAPHISMES & DIRECTION ARTISTIQUE
+ ligne   5443 — BLOC 09 — ANIMATIONS
+ ligne   5828 — BLOC 10 — CINÉMATIQUES & SÉQUENCES SCRIPTÉES
+ ligne   6065 — BLOC 11 — UI / UX (INTERFACE, MENUS, ACCESSIBILITÉ, TACTILE ANDROID)
+ ligne   6295 — BLOC 12 — ARCHITECTURE TECHNIQUE & DONNÉES (MOTEUR-AGNOSTIQUE — INCL. ORGANISATION GITHUB & LIVRAISON ANDROID)
+ ligne   6737 — BLOC 13 — SONS & MUSIQUE
+ ligne   7005 — BLOC 14 — LA LETTRE FINALE DU CHAPITRE 1
+ ligne   7319 — BLOC 15 — PLANNING & PRODUCTION
+ ligne   7527 — BLOC 16 — LEVEL DESIGN PAS À PAS (Z01 → Z18 : FICHES DE PRODUCTION)
+ ligne   7994 — BLOC 17 — LES VARIANTES NG+ INTÉGRALES (LES SIX SCÈNES « APRÈS LA LETTRE »)
+ ligne   8163 — ANNEXE A — REGISTRE DES IDENTIFIANTS STABLES (EXTRAIT NORMATIF)
+ ligne   8176 — ANNEXE B — TABLES CHROMATIQUES COMPLÈTES (VALEURS DE RÉFÉRENCE PAR ACTE)
+ ligne   8194 — ANNEXE C — REGISTRE DES DRAPEAUX NARRATIFS DU CHAPITRE 1 (LISTE INTÉGRALE)
+ ligne   8216 — ANNEXE D — TABLES DE COHÉRENCE TEMPORELLE (LA SEMAINE D'ESTEBAN + HORAIRES PNJ)
+ ligne   8233 — ANNEXE E — LES 68 OBJETS SECONDAIRES (REGISTRE DE SACOCHE — EXTRAIT 1→24)
+ ligne   8271 — ANNEXE F — LES 80 ÉTIQUETTES DU BOIS (ÉCHANTILLON DE RÉDACTION 1→20 + FORMAT)
+ ligne   8320 — ANNEXE G — SCHÉMA DE SAUVEGARDE (FORMAT BINAIRE VERSIONNÉ — SPÉCIFICATION)
+ ligne   8342 — ANNEXE H — SOMMAIRE DÉTAILLÉ DE LA CHECKLIST QA (EXTRAIT DES 214 — CATÉGORIE ÉMOTION)
+ ligne   8519 — ANNEXE I — LOCALISATION (FR VO → EN / ES) : PRINCIPES DE TRADUCTION
+ ligne   8555 — ANNEXE J — EXTRAITS DE LA CHECKLIST QA CATÉGORIES 1-90 (REPRÉSENTATIFS)
+ ligne   8598 — ANNEXE L — DIALOGUES COMPLÉMENTAIRES DU CHAPITRE 1 (BAZ, ADÈLE, MARTA — ARBRES INTÉGRAUX)
+ ligne   8787 — ANNEXE M — LES 43 CLOCHES NOMINATIVES DU VERGER (REGISTRE INTÉGRAL)
+ ligne   9009 — ANNEXE N — LES 40 BORNES D'ARPENTEUR (TEXTES INTÉGRAUX DES RELEVÉS)
+ ligne   9197 — ANNEXE O — REGISTRE COMPLET DES 40 « MURMURES » (TYPOLOGIE 6.13 INTÉGRALE)
+ ligne   9310 — ANNEXE P — FICHES DÉTAILLÉES DES SECRETS-ÉNIGMES S01 → S12
+ ligne   9474 — ANNEXE Q — LES ÉTIQUETTES 51 → 80 (FIN DU REGISTRE DU BOIS)
+ ligne   9587 — ANNEXE R — ARCHIVES : LES TEXTES INTÉGRAUX DES DOCUMENTS CROISÉS
+ ligne   9739 — ANNEXE S — PROTOCOLES DE PLAYTEST & MÉTRIQUES D'ÉMOTION (PHASES 1 ET 3)
+ ligne   9837 — ANNEXE T — CHAPITRE 2 « LE TRAIN DES ADIEUX » : CHARPENTE D'ARCHITECTURE
+ ligne   9898 — ANNEXE U — LE DICTIONNAIRE DES MOTS INVENTÉS DU CAFÉ L'ÉCUME (3E ÉDITION)
+════════════════════════════════════════════════════════════════════════════════════════════
+ FIN DU GAME DESIGN DOCUMENT — LA CARTOGRAPHIE DES ABSENTS — v1.2
+════════════════════════════════════════════════════════════════════════════════════════════
