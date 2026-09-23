@@ -11,7 +11,7 @@ monétisation, sans joystick (2.7, 6.11). Les rubriques « si nécessaire » du 
 | Introduction | Prologue jouable « Le rêve de velune » (z00) + CIN-01 (réveil, titre) | `zones/fr/z00.tab`, `cinematics.cin` |
 | Scénario principal | 20 séquences SQ-01→SQ-20 en 4 actes + épilogue, gating par séquences, liens et objets | dialogues `.dlg`, `Game.act()` |
 | Missions / quêtes secondaires | 10 faveurs (FA-01…FA-10 : fournée, billes, colis, lampe, crayon, journal, chant, dictionnaire, cloches, Aristide) + 12 secrets | dialogues, `puzzles.pzl` (S01…S12) |
-| Niveaux / cartes / environnements | 19 zones, 42 tableaux illustrés, carte du monde avec voyage rapide | `zones/`, `MapScreen` |
+| Niveaux / cartes / environnements | 19 zones, 40 tableaux illustrés, carte du monde avec voyage rapide | `zones/`, `MapScreen` |
 | Personnages | 16 fiches (Lohen, Esteban, Filou, 12 PNJ, Aurore) + monsieur Éraflé (secret S11) | `characters.txt`, portraits |
 | Inventaire | La sacoche du carnet : 38 objets à trois pensées (1er, 2e, 10e examen), objets-clés, souvenirs, consommables | `items.itm`, CarnetScreen |
 | Compétences / progression / XP | **Pas d'XP** (GDD 2.7). Progression par traits invisibles D/C/R/H, liens 0→5, clarté 0→100, relevés cartographiques, pourcentage de carte | `GameState` |

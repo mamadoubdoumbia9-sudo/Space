@@ -4,7 +4,7 @@ Jeu d'aventure narrative pour Android (tactile, portrait et paysage), réalisé 
 `GDD_LA_CARTOGRAPHIE_DES_ABSENTS.txt` (source de vérité) et `LETTRE_ESTEBAN_A_LOHEN.txt` (texte intégral de la lettre).
 
 Lohen, apprentie cartographe, suit pendant neuf jours les traces d'Esteban sur une presqu'île qui mesure le temps en marées :
-18 zones, 42 tableaux illustrés, 90 scènes de dialogue arborées, 16 énigmes, 12 secrets, 24 pages, 12 échos, 43 cloches,
+18 zones, 40 tableaux illustrés, 90 scènes de dialogue arborées, 16 énigmes, 12 secrets, 24 pages, 12 échos, 43 cloches,
 40 bornes, une lettre en onze plis et quatre fins de chapitre. Pas de combat, pas d'ennemis, pas de timer, pas de mort,
 pas de monétisation : les mécaniques sont l'exploration, le dialogue à choix (encre or = définitif), les énigmes
 « justes, prouvables, chantantes », les faveurs (économie sociale), les traits invisibles (douceur, courage, ruse, humeur),

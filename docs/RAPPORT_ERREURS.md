@@ -24,5 +24,5 @@
 | 20 | Le prologue jouait sur le décor du Cabinet | scène du rêve rattachée à z01 | zone cachée `z00` (rêve) → CIN-01 → z01 ; séquencement `cin` puis `travel` dans `Effects.apply` |
 
 Les tests (`tools/compile_desktop.sh --tests`) rejouent l'ensemble : 170 branches de scènes, 19 écrans d'énigmes,
-chaîne du final complète (lettre → épilogue → fin de chapitre → NG+), entrée dans les 42 tableaux et action sur chaque
+chaîne du final complète (lettre → épilogue → fin de chapitre → NG+), entrée dans les 40 tableaux et action sur chaque
 point d'intérêt, sauvegarde/chargement au milieu, en paysage et en portrait.
