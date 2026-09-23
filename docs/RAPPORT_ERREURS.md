@@ -22,6 +22,12 @@
 | 18 | Pas de `javac` dans la chaîne (classe `R` impossible) | JDK réduit | identifiants de ressources par `getIdentifier`, thème via manifeste |
 | 19 | Test des effets : `LIEN-YSOLDE` attendu 3 | attente du test erronée (lien initial 0) | test corrigé |
 | 20 | Le prologue jouait sur le décor du Cabinet | scène du rêve rattachée à z01 | zone cachée `z00` (rêve) → CIN-01 → z01 ; séquencement `cin` puis `travel` dans `Effects.apply` |
+| 21 | Glyphes hors couverture des polices embarquées (✕ ♪ ● ○ ◐ ◑ ⌫ ␣ ↺ ↻ ⚓ ♆ ✦ 🐟 ✓ ▸ …) rendus en « □ » | textes et écrans (E04, E05, E12, E16, clavier, journal du carnet, tutoriel) utilisaient des symboles absents d'EB Garamond / Caveat / Courier Prime / Cinzel | icônes vectorielles (`Ui.icon` : lunes, trident, sirène, ancre, poisson, retour-arrière, espace…) et substitutions typographiques ; vérification de couverture par `fontTools` |
+| 22 | Tutoriels et générique uniquement en français | tables `tables/fr` seules | `tables/en/tutorials.txt` et `tables/en/credits.txt` (repli FR automatique conservé pour les tables narratives) |
+| 23 | La pensée d'entrée dans un tableau se dessinait par-dessus la boîte de dialogue ouverte au même instant | `renderThought` ignorait la pile d'écrans | la pensée attend la fin du dialogue |
+| 24 | Portraits de Tom et Till jamais trouvés (`art/characters/tom.png`) | clé de portrait non normalisée vers `tom_till` | même normalisation que la couleur du locuteur |
+| 25 | Objets sans icône dédiée : main générique | pas d'icône par catégorie | glyphes d'encre par catégorie (outil, clé, souvenir, consommable, document) |
+| 26 | Historique git local perdu à la remise à zéro du bac à sable (arbre de travail intact) | jeton GitHub expiré au tour précédent : commits non poussés | branche ré-ancrée sur `origin`, état complet recommité et poussé ; poussée après chaque étape |
 
 Les tests (`tools/compile_desktop.sh --tests`) rejouent l'ensemble : 170 branches de scènes, 19 écrans d'énigmes,
 chaîne du final complète (lettre → épilogue → fin de chapitre → NG+), entrée dans les 40 tableaux et action sur chaque
