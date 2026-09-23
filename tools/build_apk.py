@@ -81,7 +81,14 @@ def stage_assets():
     hq = os.path.join(ROOT, "build", "hq_audio")
     env = dict(os.environ, AUDIO_OUT=hq)
     step("audio haute fidélité pour l'APK (mis en cache dans build/hq_audio)")
-    for script, extra in (("compose.py", dict(AUDIO_Q="0.8", AUDIO_LEN="1.5")), ("ambience.py", dict(AUDIO_Q="0.7", AUDIO_LEN="1.5")), ("sfx.py", dict(AUDIO_Q="0.6"))):
+    # musique : Vorbis q0.9 (~320 kb/s), pistes allongées ×1.5 (développements supplémentaires, pas de boucle copiée) ;
+    # ambiances : q0.8 ×1.5 ; effets : q0.7. Le dépôt garde des versions légères (q0.4) pour rester sous le plafond git.
+    HQ_PARAMS = (("compose.py", dict(AUDIO_Q="0.9", AUDIO_LEN="1.5")), ("ambience.py", dict(AUDIO_Q="0.8", AUDIO_LEN="1.5")), ("sfx.py", dict(AUDIO_Q="0.7")))
+    stamp = os.path.join(hq, "params.txt"); sig = repr(HQ_PARAMS)
+    if os.path.isdir(hq) and (not os.path.exists(stamp) or open(stamp).read() != sig):
+        print("  paramètres audio modifiés : cache invalidé"); shutil.rmtree(hq)
+    os.makedirs(hq, exist_ok=True); open(stamp, "w").write(sig)
+    for script, extra in HQ_PARAMS:
         target_dir = os.path.join(hq, {"compose.py": "music", "ambience.py": "ambience", "sfx.py": "sfx"}[script])
         expected = {"compose.py": 26, "ambience.py": 21, "sfx.py": 137}[script]
         if os.path.isdir(target_dir) and len(os.listdir(target_dir)) >= expected:
