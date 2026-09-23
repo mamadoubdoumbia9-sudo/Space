@@ -62,3 +62,6 @@ coordonnées de la carte, signature v2, alignement des ressources.
 signature v1 (JAR) + v2 (APK Signing Block, RSA-2048 / SHA-256) vérifiée indépendamment, `zip.testzip()` sans
 erreur. Durée : 378 s (dont ré-encodage audio haute qualité). La clé est auto-signée (`build/keys`, hors git) ;
 pour une clé de production : `RELEASE_KEY=… RELEASE_CERT=… python3 tools/build_apk.py`.
+
+Le même build est reproduit par l'intégration continue GitHub Actions (`.github/workflows/android.yml`) : run vert sur
+`arena/01a0ca52-space` — toolchain, 14 sections de tests, APK signé publié comme artefact `apk`.

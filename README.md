@@ -49,6 +49,9 @@ Le script `tools/build_apk.py` est autonome (aapt2 → kotlinc → d8 → zip al
 vérifiée indépendamment). Le projet est aussi un projet Gradle standard (`settings.gradle.kts`, `app/build.gradle.kts`)
 ouvrable dans Android Studio ; les sources du cœur sont incluses par `sourceSets`.
 
+Intégration continue : `.github/workflows/android.yml` rejoue à chaque poussée la chaîne complète (toolchain → tests →
+APK) et publie l'APK signé en artefact `apk` du run GitHub Actions.
+
 Clé de signature : `tools/make_keystore.py` génère une clé RSA-2048 auto-signée dans `build/keys/` (hors git).
 Pour une clé de production : `RELEASE_KEY=… RELEASE_CERT=… python3 tools/build_apk.py`.
 
