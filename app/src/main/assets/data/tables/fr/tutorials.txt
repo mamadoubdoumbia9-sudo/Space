@@ -29,7 +29,7 @@ Les options marquées d'une étoile dorée sont définitives : le monde s'en sou
 @ puzzle
 Les énigmes
 Tout ce qu'il faut pour résoudre une énigme est sur l'écran ou dans le carnet. Il n'y a ni échec ni timer : seulement des états de recherche.
-Le bouton « ? » propose des indices à trois niveaux, toujours à votre demande. Le bouton « ✕ » referme l'énigme : vous pourrez revenir.
+Le bouton « ? » propose des indices à trois niveaux, toujours à votre demande. Le bouton « × » referme l'énigme : vous pourrez revenir.
 @ bornes
 Les bornes d'arpenteur
 Quarante bornes gravées jalonnent la presqu'île. Chaque borne relevée à la lentille ajoute un relevé au carnet et un point de Clarté.

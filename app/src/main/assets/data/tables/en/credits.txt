@@ -1,0 +1,30 @@
+# Credits: type | text  (title, h, p, hand, gap)
+title | La Cartographie des Absents
+hand | Chapter 1 — Low Tide
+gap |
+h | Concept, writing, direction
+p | Atelier Marée Basse
+hand | after the design document "La Cartographie des Absents" — complete text of the dialogues, pages, echoes, bells, boundary stones and the letter.
+gap |
+h | The letter
+p | "I loved you in lower case in my notebooks for seven years, and I love you in capitals in this letter, once, tonight, forever."
+gap |
+h | Characters
+p | Lohen · Esteban · Filou · Ombeline Vasseur · Marta · Rosa · Émeric Loew · Tom & Till · Anselme · Baz · Sidonie · Ysolde · Aristide · Marek Sorène · Adèle Brunoy · Aurore · Mister Scuffed
+gap |
+h | Engine
+p | In-house engine written in Kotlin, with no external dependency: illustrated scenes, branching dialogues, sixteen puzzles, versioned binary saves (LCDA v3), FR/EN localisation.
+gap |
+h | Pictures
+p | Watercolour and India-ink scenes generated and then reworked for the game (42 scenes, cinematics, portraits, objects).
+gap |
+h | Music and sound
+p | Scores and ambiences composed and synthesised for the game: twenty-four tracks, ambiences for every area, bells, harp, petrels, quills, paper.
+gap |
+h | Typefaces (SIL Open Font License 1.1)
+p | EB Garamond (Georg Duffner) · Caveat (Pablo Impallari) · Cinzel (Natanael Gama) · Courier Prime (Quote-Unquote Apps)
+gap |
+h | Thanks
+p | To the ferrymen who count the strokes of water. To the station masters who polish their lamp. To those who label as returning ghosts, not as mourners.
+gap |
+hand | No dog was tied to a gangway post during the making of this game. Filou was fed nine times a day.

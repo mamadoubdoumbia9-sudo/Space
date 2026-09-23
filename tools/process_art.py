@@ -8,8 +8,8 @@ Familles :
   zones/      tableaux 16:9      -> 1600x900, JPEG q86
   cin/        plans de cinématique 16:9 -> 1600x900, JPEG q86
   ui/         carte du monde 16:10 -> 1600x1000 ; autres à la taille source
-  characters/ portraits carrés   -> 512x512
-  items/      icônes carrées     -> 256x256 (fond papier conservé)
+  characters/ portraits carrés   -> 512x512 PNG RGBA (fond papier détouré → transparence)
+  items/      icônes carrées     -> 256x256 PNG RGBA (fond papier détouré → transparence)
 
 Le script génère aussi art/ui/grain.png (grain de papier procédural, tuilable)
 et art/ui/vignette.png utilisés par l'interface.
@@ -42,12 +42,34 @@ def fit_cover(img, size):
     return img.crop((left, top, left + tw, top + th))
 
 
+def unpaper(img, soft=0.10, hard=0.55):
+    """Détoure une peinture faite sur papier clair : le papier devient transparent,
+    l'encre et les lavis gardent leur couleur (dé-mélange alpha, papier estimé sur les bords)."""
+    a = np.asarray(img.convert("RGB")).astype(np.float32) / 255.0
+    h, w, _ = a.shape
+    m = max(4, min(h, w) // 40)
+    border = np.concatenate([a[:m].reshape(-1, 3), a[-m:].reshape(-1, 3), a[:, :m].reshape(-1, 3), a[:, -m:].reshape(-1, 3)])
+    paper = np.median(border, axis=0)
+    d = np.max(np.abs(a - paper), axis=2)  # distance au papier (0 = papier pur)
+    alpha = np.clip((d - soft) / (hard - soft), 0.0, 1.0)
+    # légère érosion du halo : on adoucit puis on remonte le contraste
+    alpha_img = Image.fromarray((alpha * 255).astype(np.uint8), "L").filter(ImageFilter.GaussianBlur(0.6))
+    alpha = np.asarray(alpha_img).astype(np.float32) / 255.0
+    safe = np.maximum(alpha, 1e-3)[..., None]
+    rgb = paper + (a - paper) / safe
+    rgb = np.clip(rgb, 0.0, 1.0)
+    rgb[alpha < 0.02] = paper
+    out = np.dstack([rgb, alpha[..., None]])
+    return Image.fromarray((out * 255).astype(np.uint8), "RGBA")
+
+
 def process(family, path, force=False):
     name = os.path.splitext(os.path.basename(path))[0]
     size, q = SPECS[family]
     out_dir = os.path.join(DST, family)
     os.makedirs(out_dir, exist_ok=True)
-    out = os.path.join(out_dir, name + ".jpg")
+    png = family in ("characters", "items")
+    out = os.path.join(out_dir, name + (".png" if png else ".jpg"))
     if not force and os.path.exists(out) and os.path.getmtime(out) >= os.path.getmtime(path):
         return False
     img = Image.open(path).convert("RGB")
@@ -55,7 +77,10 @@ def process(family, path, force=False):
         img = fit_cover(img, (1600, 1000))
     elif size:
         img = fit_cover(img, size)
-    img.save(out, "JPEG", quality=q, optimize=True, progressive=True, subsampling=1)
+    if png:
+        unpaper(img).save(out, "PNG", optimize=True)
+    else:
+        img.save(out, "JPEG", quality=q, optimize=True, progressive=True, subsampling=1)
     return True
 
 

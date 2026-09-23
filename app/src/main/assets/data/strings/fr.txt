@@ -217,7 +217,7 @@ e03.too_heavy | trop lourd : comme la vie. retire, tu verras, ça remonte.
 e03.too_light | le fléau penche du mauvais côté. il manque du poids.
 e04.sky | la fenêtre : lune pleine, basse, orangée
 e04.carnet | mon carnet — relevés de lune
-e04.carnet_notes | prologue : lune ronde, haute, blanche — ● 3 · verger : lune pleine, basse, orangée — ● 7
+e04.carnet_notes | prologue : lune ronde, haute, blanche — lune 3 · verger : lune pleine, basse, orangée — lune 7
 e04.lens | Lentille sur la marge
 e04.title | ANNUAIRE DES MARÉES 1926-2026 — LUNES
 e04.twin | 00h52 ? … deux lignes jumelles portent le symbole 7. l'imprimeur a menti une fois par siècle. quelqu'un a corrigé à la plume.
@@ -226,7 +226,7 @@ e05.track | voie {0}
 e05.sea | la mer
 e05.conform | {0} / 5 conformes
 e05.locked | le levier L{0} est verrouillé par ses voisins. l'ordre, c'est tout.
-e05.rules | TABLE GRAVÉE — L1 verrouille L2 et L4. L3 libère L1 si L2 est levé. L5 ne bouge que si L4 est baissé. L4 ne bouge que si L1 est baissé. Cible : voie 2 → voie 1 (L1↓ L2↑ L3↑ L4↓ L5↑).
+e05.rules | TABLE GRAVÉE — L1 verrouille L2 et L4. L3 libère L1 si L2 est levé. L5 ne bouge que si L4 est baissé. L4 ne bouge que si L1 est baissé. Cible : voie 2 vers voie 1 (L1 bas, L2 haut, L3 haut, L4 bas, L5 haut).
 e06.help | la carte du bois : trois rubans connus. prolonger la spirale au doigt, puis toucher l'arbre.
 e06.void | le vide
 e07.palier | palier {0}

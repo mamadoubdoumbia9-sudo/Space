@@ -217,7 +217,7 @@ e03.too_heavy | too heavy: like life. take some off, you'll see, it comes back u
 e03.too_light | the beam tilts the wrong way. weight is missing.
 e04.sky | the window: full moon, low, orange
 e04.carnet | my notebook — moon readings
-e04.carnet_notes | prologue: round moon, high, white — ● 3 · orchard: full moon, low, orange — ● 7
+e04.carnet_notes | prologue: round moon, high, white — moon 3 · orchard: full moon, low, orange — moon 7
 e04.lens | Lens on the margin
 e04.title | TIDE ALMANAC 1926-2026 — MOONS
 e04.twin | 00:52? … two twin lines bear symbol 7. the printer lied once a century. someone corrected it with a pen.
@@ -226,7 +226,7 @@ e05.track | track {0}
 e05.sea | the sea
 e05.conform | {0} / 5 in place
 e05.locked | lever L{0} is locked by its neighbours. order is everything.
-e05.rules | ENGRAVED TABLE — L1 locks L2 and L4. L3 frees L1 if L2 is up. L5 only moves if L4 is down. L4 only moves if L1 is down. Target: track 2 → track 1 (L1↓ L2↑ L3↑ L4↓ L5↑).
+e05.rules | ENGRAVED TABLE — L1 locks L2 and L4. L3 frees L1 if L2 is up. L5 only moves if L4 is down. L4 only moves if L1 is down. Target: track 2 to track 1 (L1 down, L2 up, L3 up, L4 down, L5 up).
 e06.help | the map of the wood: three known ribbons. extend the spiral with your finger, then touch the tree.
 e06.void | the void
 e07.palier | stage {0}

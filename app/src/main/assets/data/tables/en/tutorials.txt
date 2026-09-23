@@ -1,0 +1,40 @@
+# Contextual tutorials (first line = title). Shown once each, never blocking for long.
+@ lentille
+The Surveyor's Lens
+The "lens" button, top right, wakes the faded marks of the scene for a few seconds: boundary stones, whispers, hidden details.
+It is a tool, not a hint: its use is unlimited and part of the world.
+@ explore
+Exploring
+Tap a point of interest to examine, listen, take or talk. Tap an arrow to move to another scene.
+Some points ask you to stay: hold your finger to wait, to hear an echo or to let a tide pass.
+One of Lohen's thoughts appears at the bottom: tap it to close it.
+@ carnet
+The notebook
+The "notebook" button opens the double-page notebook: map of the peninsula, satchel, Esteban's pages, echoes, characters, log of puzzles and secrets.
+The map in the notebook also lets you travel between known areas.
+@ sacoche
+The satchel
+Objects go into the satchel (a tab of the notebook). Each object carries three thoughts: on the first, the second and the tenth examination.
+There is no money in this game: the currency is favours.
+@ filou
+Asking Filou
+Filou does not speak. He reacts: Lohen translates, with her margin of error. Tap "Ask Filou" to question him about what surrounds you, or tap him to pet him.
+He always knows first and can never say it.
+@ filou_join
+Filou walks with you
+Filou follows Lohen everywhere. He will stop by himself where he does not want to go: that will be a silent sentence, not an error.
+@ gold
+Choices in gold ink
+Options marked with a golden star are final: the world will remember them. No choice is "wrong": each path gives a different colour to the same scenes.
+@ puzzle
+Puzzles
+Everything needed to solve a puzzle is on the screen or in the notebook. There is no failure and no timer: only states of searching.
+The "?" button offers hints on three levels, always at your request. The "×" button closes the puzzle: you can come back.
+@ bornes
+The surveyor's stones
+Forty engraved boundary stones mark the peninsula. Each stone read with the lens adds a survey to the notebook and a point of Clarity.
+Three hands engraved them: Aurélien Vasseur, Ombeline, and an unknown hand.
+@ epilogue
+The answer
+This choice closes the chapter. You may write a free answer with the keyboard: it is kept in your save, on this device only, and is sent nowhere.
+After the end, the chapter stays open as a "free memory": nothing is lost.

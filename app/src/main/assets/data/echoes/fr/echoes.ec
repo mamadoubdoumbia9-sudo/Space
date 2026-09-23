@@ -25,8 +25,8 @@ MAREK: les heures, elles se passent le mot entre elles. y en a qui se perdent en
 end
 
 @ E-04 | La chanson de Marta | 2024 | 60
-MARTA: ♪ ...et le second couplet, mon garçon, ALLEZ... ♪
-ESTEBAN: ♪ ...on r'viendra par l'ouest, on r'viendra par l'eau... ♪
+MARTA: (en chantant) ...et le second couplet, mon garçon, ALLEZ...
+ESTEBAN: (en chantant) ...on r'viendra par l'ouest, on r'viendra par l'eau...
 MARTA: et après ?
 ESTEBAN: ...après, je sais plus. y a un trou.
 MARTA: bah c'est rien, y a des trous dans toutes les chansons. c'est par les trous qu'elles respirent.

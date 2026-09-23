@@ -16,7 +16,7 @@ class AlphaKeyboard(val game: Game) {
     var typed = ""
     fun render(btns: ArrayList<Ui.Btn>, x: Float, y: Float, w: Float, pressed: String?) {
         val ui = game.ui; val p = game.painter; val s = ui.s
-        val rows = listOf("ABCDEFGHIJ", "KLMNOPQRST", "UVWXYZ' ⌫")
+        val rows = listOf("ABCDEFGHIJ", "KLMNOPQRST", "UVWXYZ' <")
         val kw = w / 10.5f; val kh = kw.coerceAtMost(36 * s)
         rows.forEachIndexed { r, row ->
             row.forEachIndexed { c, ch ->
@@ -24,14 +24,18 @@ class AlphaKeyboard(val game: Game) {
                 val b = Ui.Btn(id, x + c * (kw + 2 * s), y + r * (kh + 4 * s), kw, kh, ch.toString(), small = true)
                 btns.add(b)
                 p.fillRoundRect(b.x, b.y, b.w, b.h, 4 * s, Colors.withAlpha(Colors.INK, if (pressed == id) 0.95f else 0.75f))
-                p.text(if (ch == ' ') "␣" else ch.toString(), b.x + b.w / 2, b.y + b.h / 2 + ui.font(13f) * 0.38f, ui.font(13f), Colors.PAPER, Font.MONO, Align.CENTER)
+                when (ch) {
+                    ' ' -> ui.icon("space", b.x + b.w / 2, b.y + b.h / 2, 6 * s, Colors.PAPER)
+                    '<' -> ui.icon("backspace", b.x + b.w / 2, b.y + b.h / 2, 7 * s, Colors.PAPER)
+                    else -> p.text(ch.toString(), b.x + b.w / 2, b.y + b.h / 2 + ui.font(13f) * 0.38f, ui.font(13f), Colors.PAPER, Font.MONO, Align.CENTER)
+                }
             }
         }
     }
     fun handle(id: String): Boolean {
         if (!id.startsWith("key:")) return false
         val ch = id.substring(4)
-        when (ch) { "⌫" -> if (typed.isNotEmpty()) typed = typed.dropLast(1); else -> if (typed.length < 40) typed += ch }
+        when (ch) { "<" -> if (typed.isNotEmpty()) typed = typed.dropLast(1); else -> if (typed.length < 40) typed += ch }
         game.sfx("quill_scratch_0${(typed.length % 9) + 1}")
         return true
     }

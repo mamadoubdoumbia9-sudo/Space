@@ -41,9 +41,9 @@ class E12Grotte(game: Game) : PuzzleScreen(game, "E12") {
         for (k in 0 until 14) { val px = x + w * k / 14f; p.line(px, y, px + 20 * s, y + h * 0.18f + sin(k * 2f) * 10 * s, Colors.withAlpha(0xFF2A3A55.toInt(), 0.7f), 3f * s) }
         p.fillRect(x, y + h * 0.82f, w, h * 0.18f, Colors.withAlpha(0xFF1A3A66.toInt(), 0.7f))
         // repère gravé
-        val glyph = listOf("Ψ", "♆", "⚓", "∽", "▣")[repere.coerceAtMost(4)]
+        val glyph = listOf("trident", "siren", "anchor", "silence", "table")[repere.coerceAtMost(4)]
         val name = listOf(game.str("e12.trident"), game.str("e12.sirene"), game.str("e12.ancre"), game.str("e12.silence"), game.str("e12.table"))[repere.coerceAtMost(4)]
-        p.text(glyph, x + w * 0.5f, y + h * 0.4f, ui.font(44f), Colors.withAlpha(Colors.PAPER, 0.85f), Font.TITLE, Align.CENTER)
+        ui.icon(glyph, x + w * 0.5f, y + h * 0.36f, ui.font(22f), Colors.withAlpha(Colors.PAPER, 0.85f))
         p.text(name, x + w * 0.5f, y + h * 0.5f, ui.font(13f), Colors.PAPER_DARK, Font.HAND, Align.CENTER)
         if (repere < 3) {
             val rule = listOf(game.str("e12.rule1"), game.str("e12.rule2"), game.str("e12.rule3"))[repere]
@@ -247,7 +247,7 @@ class E15Boite(game: Game) : PuzzleScreen(game, "E15") {
         if (hold > 0f && opening < 0f) { ui.gauge(bx - 50 * s, by + 84 * s, 100 * s, 5 * s, hold / 3f); p.text(game.str("e15.hold"), bx, by + 104 * s, ui.font(11f), Colors.PAPER_DARK, Font.HAND, Align.CENTER) }
         p.text(game.str("e15.box_angle", angle.toInt()), bx, by - 90 * s, ui.font(12f), Colors.PAPER, Font.MONO, Align.CENTER)
         p.text(game.str("e15.drag"), x + w / 2, y + h - 16 * s, ui.font(11f), Colors.PAPER_DARK, Font.HAND, Align.CENTER)
-        boardBtn("rot-", bx - 130 * s, by - 16 * s, 40 * s, 32 * s, "↺"); boardBtn("rot+", bx + 90 * s, by - 16 * s, 40 * s, 32 * s, "↻")
+        boardBtn("rot-", bx - 130 * s, by - 16 * s, 40 * s, 32 * s, "◀"); boardBtn("rot+", bx + 90 * s, by - 16 * s, 40 * s, 32 * s, "▶")
     }
     override fun onBoardInput(e: Input, x: Float, y: Float, w: Float, h: Float): Boolean {
         when (e) {
@@ -297,10 +297,10 @@ class E16Telescope(game: Game) : PuzzleScreen(game, "E16") {
         // bague de mise au point avec trois gravures
         val ry = y + h * 0.9f
         p.fillRoundRect(x + 30 * s, ry - 14 * s, w - 60 * s, 28 * s, 14 * s, Colors.withAlpha(Colors.LAITON, 0.85f))
-        for ((pos, g) in listOf(0.2f to "🐟", 0.55f to "✦", 0.88f to "〰☾")) {
+        for ((pos, g) in listOf(0.2f to "fish", 0.55f to "star4", 0.88f to "wave_moon")) {
             val gx = x + 30 * s + (w - 60 * s) * pos
             val polished = pos == 0.88f
-            p.text(g, gx, ry - 20 * s, ui.font(13f), Colors.withAlpha(Colors.PAPER, if (polished) 0.95f + 0.05f * sin(time * 3) else 0.75f), Font.BODY, Align.CENTER)
+            ui.icon(g, gx, ry - 24 * s, 7 * s, Colors.withAlpha(Colors.PAPER, if (polished) 0.95f + 0.05f * sin(time * 3) else 0.75f))
             if (polished && assist()) p.strokeCircle(gx, ry, 14 * s, Colors.withAlpha(Colors.PAPER, 0.7f), 1.5f * s)
             p.line(gx, ry - 8 * s, gx, ry + 8 * s, Colors.INK, 1.5f * s)
         }
@@ -350,7 +350,7 @@ class S06Machine(game: Game) : PuzzleScreen(game, "S06") {
     override fun renderBoard(x: Float, y: Float, w: Float, h: Float) {
         p.gradientV(x, y, w, h, 0xFFC9B48E.toInt(), 0xFF8FA3B0.toInt())
         p.text(game.str("s06.title"), x + w / 2, y + 24 * s, ui.font(14f), Colors.INK, Font.TITLE, Align.CENTER)
-        p.text("BM → PM1 → PM2", x + w / 2, y + 44 * s, ui.font(11f), Colors.INK_SOFT, Font.MONO, Align.CENTER)
+        p.text("BM → PM1 → PM2", x + w / 2, y + 44 * s, ui.font(11f), Colors.INK_SOFT, Font.BODY, Align.CENTER)
         for ((i, name) in shown.withIndex()) {
             val bx = x + w * (0.2f + 0.3f * i); val by = y + h * 0.55f
             val full = name in done

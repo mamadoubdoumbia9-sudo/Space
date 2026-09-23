@@ -93,7 +93,7 @@ class E02Tableau(game: Game) : PuzzleScreen(game, "E02") {
         val clarity = when (pos) { 1 -> 1f; else -> 0.25f }
         val mirrored = if (pos == 1) "05h12 — TERMINUS — LE VENT" else "VEL ENT — TIMRIS — 25 M.IZ"
         p.text(game.str("e02.glass"), vx + vw / 2, ty + 18 * s, ui.font(11f), Colors.withAlpha(Colors.PAPER, 0.6f), Font.HAND, Align.CENTER)
-        for (i in 0..2) p.text("▒▒▒▒▒▒   ▒▒▒▒   ▒▒▒", vx + vw - 10 * s, ty + 24 * s + (i + 1) * fs * 2f, fs, Colors.withAlpha(Colors.PAPER, 0.25f), Font.MONO, Align.RIGHT)
+        for (i in 0..2) { val gy = ty + 24 * s + (i + 1) * fs * 2f - fs * 0.8f; var gx = vx + vw - 10 * s; for (seg in floatArrayOf(3f, 4f, 6f)) { gx -= seg * fs * 0.6f; p.fillRect(gx, gy, seg * fs * 0.6f - fs * 0.3f, fs * 0.9f, Colors.withAlpha(Colors.PAPER, 0.18f)) } }
         p.text(mirrored, vx + vw / 2, ty + 24 * s + 4 * fs * 2f, fs * 1.1f, Colors.withAlpha(Colors.LAITON, clarity), Font.MONO, Align.CENTER)
         if (pos == 1) boardBtn("read", vx + vw * 0.2f, ty + th - 40 * s, vw * 0.6f, 30 * s, game.str("e02.touch_reflection"))
     }
@@ -164,11 +164,11 @@ class E04Annuaire(game: Game) : PuzzleScreen(game, "E04") {
     private var scroll = 0f
     private var downY = 0f; private var down0 = 0f; private var dragged = false
     private val lines = listOf(
-        "○  lune 1 — coefficient 62 — passage fermé", "◐  lune 2 — coefficient 78 — passage fermé", "●  lune 3 — coefficient 91 — ouverture 22h10 — 35 min",
-        "◑  lune 4 — coefficient 84 — passage fermé", "○  lune 5 — coefficient 70 — passage fermé", "◐  lune 6 — coefficient 99 — ouverture 23h05 — 48 min",
-        "●  lune 7 — coefficient 114 — ouverture passage — 00h52 — fenêtre 71 min", "●  lune 7 — coefficient 114 — ouverture passage — 23h52 — fenêtre 71 min",
-        "◑  lune 8 — coefficient 96 — ouverture 00h20 — 40 min", "○  lune 9 — coefficient 66 — passage fermé", "◐  lune 10 — coefficient 88 — passage fermé",
-        "●  lune 11 — coefficient 105 — ouverture 22h40 — 60 min", "◑  lune 12 — coefficient 80 — passage fermé", "○  lune 13 — coefficient 58 — passage fermé")
+        "0 lune 1 — coefficient 62 — passage fermé", "1 lune 2 — coefficient 78 — passage fermé", "2 lune 3 — coefficient 91 — ouverture 22h10 — 35 min",
+        "3 lune 4 — coefficient 84 — passage fermé", "0 lune 5 — coefficient 70 — passage fermé", "1 lune 6 — coefficient 99 — ouverture 23h05 — 48 min",
+        "2 lune 7 — coefficient 114 — ouverture passage — 00h52 — fenêtre 71 min", "2 lune 7 — coefficient 114 — ouverture passage — 23h52 — fenêtre 71 min",
+        "3 lune 8 — coefficient 96 — ouverture 00h20 — 40 min", "0 lune 9 — coefficient 66 — passage fermé", "1 lune 10 — coefficient 88 — passage fermé",
+        "2 lune 11 — coefficient 105 — ouverture 22h40 — 60 min", "3 lune 12 — coefficient 80 — passage fermé", "0 lune 13 — coefficient 58 — passage fermé")
     private var lensOn = false
     override fun renderBoard(x: Float, y: Float, w: Float, h: Float) {
         // fenêtre : la lune pleine et basse
@@ -176,7 +176,8 @@ class E04Annuaire(game: Game) : PuzzleScreen(game, "E04") {
         p.fillRoundRect(fx, fy, fw, fh, 6 * s, 0xFF0F1A33.toInt())
         p.fillCircle(fx + fw * 0.5f, fy + fh * 0.7f, fw * 0.16f, 0xFFF2C78A.toInt())
         p.text(game.str("e04.sky"), fx + fw / 2, fy + fh + 16 * s, ui.font(11f), Colors.INK_SOFT, Font.HAND, Align.CENTER)
-        p.text("● 7", fx + fw / 2, fy + 20 * s, ui.font(12f), Colors.withAlpha(Colors.PAPER, 0.6f), Font.MONO, Align.CENTER)
+        ui.icon("moon2", fx + fw / 2 - 9 * s, fy + 16 * s, 4.5f * s, Colors.withAlpha(Colors.PAPER, 0.6f))
+        p.text("7", fx + fw / 2 + 6 * s, fy + 20 * s, ui.font(12f), Colors.withAlpha(Colors.PAPER, 0.6f), Font.MONO, Align.CENTER)
         // carnet de Lohen : relevés de lune
         p.text(game.str("e04.carnet"), fx + fw / 2, fy + fh + 40 * s, ui.font(10.5f), Colors.INK_SOFT, Font.HAND, Align.CENTER)
         ui.paragraph(game.str("e04.carnet_notes"), fx, fy + fh + 50 * s, fw, ui.font(10f), Colors.INK, Font.HAND, lineHeight = 1.3f)
@@ -189,13 +190,14 @@ class E04Annuaire(game: Game) : PuzzleScreen(game, "E04") {
             val ly = y + 40 * s + i * (fs * 2.4f) - scroll
             val b = com.ateliermareebasse.cartographie.core.engine.Ui.Btn("line$i", ax, ly, aw, fs * 2.3f, ""); btns.add(b)
             p.fillRoundRect(ax, ly, aw, fs * 2.3f, 3 * s, Colors.withAlpha(Colors.PAPER_SHADE, if (i % 2 == 0) 0.35f else 0.15f))
-            var txt = l
-            if (i == 6) txt = l  // ligne imprimée fautive
-            p.text(txt, ax + 8 * s, ly + fs * 1.55f, fs, Colors.INK, Font.MONO)
+            val txt = l.substring(2)
+            ui.icon("moon" + l[0], ax + 12 * s, ly + fs * 1.15f, fs * 0.42f, Colors.INK)
+            p.text(txt, ax + 24 * s, ly + fs * 1.55f, fs, Colors.INK, Font.MONO)
             if (i == 7) {
                 // correction à la plume dans la marge
                 val show = lensOn || assist()
-                p.text("← corrigé : 23h52 (1911)", ax + aw - 6 * s, ly + fs * 0.9f, fs * 0.85f, Colors.withAlpha(Colors.GARANCE, if (show) 1f else 0.35f), Font.HAND, Align.RIGHT)
+                p.text("corrigé : 23h52 (1911)", ax + aw - 6 * s, ly + fs * 0.9f, fs * 0.85f, Colors.withAlpha(Colors.GARANCE, if (show) 1f else 0.35f), Font.HAND, Align.RIGHT)
+                ui.icon("arrow_l", ax + aw - 6 * s - p.measure("corrigé : 23h52 (1911)", fs * 0.85f, Font.HAND) - 10 * s, ly + fs * 0.6f, fs * 0.3f, Colors.withAlpha(Colors.GARANCE, if (show) 1f else 0.35f))
                 if (show) p.strokeRoundRect(ax, ly, aw, fs * 2.3f, 3 * s, Colors.withAlpha(Colors.GARANCE, 0.6f), 1.5f * s)
             }
             if (i == 6) p.line(ax + aw * 0.62f, ly + fs * 1.3f, ax + aw * 0.78f, ly + fs * 1.3f, Colors.withAlpha(Colors.GARANCE, if (lensOn || assist()) 0.8f else 0.2f), 1.5f * s)
@@ -266,7 +268,7 @@ class E05Aiguillage(game: Game) : PuzzleScreen(game, "E05") {
             val ky = if (up) ly + 8 * s else ly + 54 * s
             p.fillCircle(lx + lw / 2, ky, 14 * s, if (movable) Colors.LAITON else Colors.withAlpha(Colors.INK, 0.5f))
             p.text("L${i + 1}", lx + lw / 2, ly + 92 * s, ui.font(12f), Colors.INK, Font.MONO, Align.CENTER)
-            p.text(if (up) "↑" else "↓", lx + lw / 2, ly + 108 * s, ui.font(12f), Colors.INK_SOFT, Font.MONO, Align.CENTER)
+            ui.icon(if (up) "arrow_u" else "arrow_d", lx + lw / 2, ly + 104 * s, 5 * s, Colors.INK_SOFT)
             btns.add(com.ateliermareebasse.cartographie.core.engine.Ui.Btn("lev$i", lx, ly - 10 * s, lw, 90 * s, ""))
         }
     }

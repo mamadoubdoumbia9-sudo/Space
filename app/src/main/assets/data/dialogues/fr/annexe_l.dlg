@@ -153,7 +153,7 @@ end
 ~ marta_second_couplet [SI: flag:marta_rencontree & (flag:rosa_rencontree | page:4) & act>=3 & !flag:chant_marta] once
 ! sfx jukebox_gresil
 * Elle chante en essuyant, faux, superbe.
-MARTA: ♪ ...on r'viendra par l'ouest, on r'viendra par l'eau... ♪
+MARTA: (en chantant) ...on r'viendra par l'ouest, on r'viendra par l'eau...
 * Elle s'interrompt, chiffon en l'air.
 MARTA: Tiens. La chanson fait ça, ces temps-ci. Elle s'arrête au même endroit. Comme un mulet au pied d'une côte.
 * Elle regarde Lohen.

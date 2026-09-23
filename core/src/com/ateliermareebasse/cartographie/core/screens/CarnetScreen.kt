@@ -211,18 +211,18 @@ class CarnetScreen(game: Game, startTab: String?) : MenuScreen(game) {
         head(game.str("carnet.puzzles_solved", st.puzzlesSolved.count { it.startsWith("E") }, 16))
         for (pz in game.content.puzzles.values.filter { it.id.startsWith("E") }) {
             val done = pz.id in st.puzzlesSolved
-            p.text((if (done) "✓ " else "○ ") + pz.name, x + 10 * s, yy + fs, fs, Colors.withAlpha(Colors.INK, if (done) 1f else 0.45f), Font.BODY)
+            ui.icon(if (done) "check" else "circle_o", x + 16 * s, yy + fs * 0.62f, fs * 0.32f, Colors.withAlpha(Colors.INK, if (done) 1f else 0.45f)); p.text(pz.name, x + 28 * s, yy + fs, fs, Colors.withAlpha(Colors.INK, if (done) 1f else 0.45f), Font.BODY)
             yy += fs * 1.35f
             if (done) yy += ui.paragraph("« ${pz.phrase} »", x + 26 * s, yy, w - 40 * s, ui.font(12.5f), Colors.INK_SOFT, Font.HAND, lineHeight = 1.3f) + 4 * s
         }
         head(game.str("carnet.secrets_found", st.secrets.size, 12))
         for (sec in game.content.puzzles.values.filter { it.id.startsWith("S") } + listOf()) {
             val done = sec.id in st.secrets
-            p.text((if (done) "✓ " else "○ ") + (if (done) sec.name else game.str("carnet.secret_unknown")), x + 10 * s, yy + fs, fs, Colors.withAlpha(Colors.INK, if (done) 1f else 0.45f), Font.BODY); yy += fs * 1.35f
+            ui.icon(if (done) "check" else "circle_o", x + 16 * s, yy + fs * 0.62f, fs * 0.32f, Colors.withAlpha(Colors.INK, if (done) 1f else 0.45f)); p.text((if (done) sec.name else game.str("carnet.secret_unknown")), x + 28 * s, yy + fs, fs, Colors.withAlpha(Colors.INK, if (done) 1f else 0.45f), Font.BODY); yy += fs * 1.35f
         }
         for (sid in listOf("S03", "S04", "S05", "S07", "S09", "S10", "S11", "S12")) {
             val done = sid in st.secrets
-            p.text((if (done) "✓ " else "○ ") + (if (done) game.str("secret.$sid") else game.str("carnet.secret_unknown")), x + 10 * s, yy + fs, fs, Colors.withAlpha(Colors.INK, if (done) 1f else 0.45f), Font.BODY); yy += fs * 1.35f
+            ui.icon(if (done) "check" else "circle_o", x + 16 * s, yy + fs * 0.62f, fs * 0.32f, Colors.withAlpha(Colors.INK, if (done) 1f else 0.45f)); p.text((if (done) game.str("secret.$sid") else game.str("carnet.secret_unknown")), x + 28 * s, yy + fs, fs, Colors.withAlpha(Colors.INK, if (done) 1f else 0.45f), Font.BODY); yy += fs * 1.35f
         }
         head(game.str("carnet.bornes_title", st.bornes.size))
         for (bid in st.bornes.sorted()) {
@@ -235,7 +235,7 @@ class CarnetScreen(game: Game, startTab: String?) : MenuScreen(game) {
         for (aid in st.archivesRead.sorted()) {
             val a = game.content.archives[aid] ?: continue
             val b = Ui.Btn("archive:$aid", x + 10 * s, yy, w - 20 * s, 30 * s, a.title, small = true); btns.add(b)
-            p.text("▸ ${a.title}", x + 14 * s, yy + fs * 1.4f, fs, Colors.INDIGO, Font.BODY); yy += 32 * s
+            ui.icon("tri_r", x + 18 * s, yy + fs * 1.0f, fs * 0.3f, Colors.INDIGO); p.text(a.title, x + 30 * s, yy + fs * 1.4f, fs, Colors.INDIGO, Font.BODY); yy += 32 * s
         }
         head(game.str("carnet.bells_title", st.bells.size))
         yy += ui.paragraph(st.bells.sorted().mapNotNull { game.content.bells[it]?.name }.joinToString(" · "), x + 10 * s, yy, w - 20 * s, ui.font(12f), Colors.INK_SOFT, Font.HAND, lineHeight = 1.3f) + 8 * s

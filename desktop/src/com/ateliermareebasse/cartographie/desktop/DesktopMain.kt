@@ -93,7 +93,11 @@ class Tour(val root: File, val out: File) {
         game.openCarnet(null); frames(10); shot("07_carnet"); game.pop()
         game.openCarnet("sacoche"); frames(10); shot("08_sacoche"); game.pop()
         game.push(com.ateliermareebasse.cartographie.core.screens.MapScreen(game)); frames(10); shot("09_carte"); game.pop()
-        for (id in listOf("E01", "E03", "E05", "E07", "E09", "E10", "E12", "E13", "E15", "E16")) { game.openPuzzle(id); frames(20); shot("10_enigme_$id"); game.pop() }
+        game.state.tutosSeen.add("puzzle")  // les captures montrent les plateaux, pas le tutoriel (déjà vu)
+        for (id in listOf("E01", "E02", "E03", "E04", "E05", "E06", "E07", "E08", "E09", "E10", "E11", "E12", "E13", "E14", "E15", "E16", "S08")) {
+            game.openPuzzle(id); frames(20); shot("10_enigme_$id")
+            while (game.top() is com.ateliermareebasse.cartographie.core.puzzles.PuzzleScreen) game.pop()
+        }
         game.state.zone = "z17"; game.push(com.ateliermareebasse.cartographie.core.screens.LetterScreen(game)); frames(30); shot("11_lettre"); game.screens.remove(game.top())
         game.push(com.ateliermareebasse.cartographie.core.screens.PauseScreen(game)); frames(10); shot("12_pause"); game.pop()
         game.push(com.ateliermareebasse.cartographie.core.screens.SaveLoadScreen(game, true)); frames(10); shot("13_sauvegardes"); game.pop()

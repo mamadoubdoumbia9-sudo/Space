@@ -128,9 +128,36 @@ class Ui(val game: Game) {
             "tool" -> { p.line(cx - r * 0.8f, cy + r * 0.8f, cx + r * 0.3f, cy - r * 0.3f, color, 2.6f * s); p.strokeCircle(cx + r * 0.5f, cy - r * 0.5f, r * 0.45f, color, 2f * s); p.fillRect(cx + r * 0.35f, cy - r * 0.65f, r * 0.3f, r * 0.3f, Colors.PAPER) }
             "heart" -> { p.fillCircle(cx - r * 0.42f, cy - r * 0.3f, r * 0.45f, color); p.fillCircle(cx + r * 0.42f, cy - r * 0.3f, r * 0.45f, color); p.fillPolygon(floatArrayOf(cx - r * 0.85f, cy - r * 0.15f, cx + r * 0.85f, cy - r * 0.15f, cx, cy + r * 0.9f), color) }
             "cup" -> { p.polyline(floatArrayOf(cx - r * 0.7f, cy - r * 0.6f, cx - r * 0.5f, cy + r * 0.7f, cx + r * 0.5f, cy + r * 0.7f, cx + r * 0.7f, cy - r * 0.6f, cx - r * 0.7f, cy - r * 0.6f), color, 1.8f * s); p.polyline(floatArrayOf(cx - r * 0.3f, cy - r, cx - r * 0.3f, cy - r * 0.75f), color, 1.4f * s); p.polyline(floatArrayOf(cx, cy - r * 1.1f, cx, cy - r * 0.75f), color, 1.4f * s); p.polyline(floatArrayOf(cx + r * 0.3f, cy - r, cx + r * 0.3f, cy - r * 0.75f), color, 1.4f * s) }
+            "moon0" -> p.strokeCircle(cx, cy, r, color, 1.6f * s)                       // nouvelle lune
+            "moon1" -> { p.strokeCircle(cx, cy, r, color, 1.6f * s); p.fillPolygon(halfDisc(cx, cy, r, left = true), color) }   // premier quartier
+            "moon2" -> p.fillCircle(cx, cy, r, color)                                     // pleine lune
+            "moon3" -> { p.strokeCircle(cx, cy, r, color, 1.6f * s); p.fillPolygon(halfDisc(cx, cy, r, left = false), color) } // dernier quartier
+            "trident" -> { p.line(cx, cy - r, cx, cy + r, color, 2.2f * s); p.polyline(floatArrayOf(cx - r * 0.7f, cy - r * 0.9f, cx - r * 0.7f, cy - r * 0.2f, cx + r * 0.7f, cy - r * 0.2f, cx + r * 0.7f, cy - r * 0.9f), color, 2.2f * s); p.line(cx - r * 0.4f, cy + r, cx + r * 0.4f, cy + r, color, 2.2f * s) }
+            "siren" -> { p.polyline(wave(cx - r, cy + r * 0.5f, r * 2, r * 0.3f), color, 2f * s); p.strokeCircle(cx, cy - r * 0.45f, r * 0.35f, color, 2f * s); p.line(cx - r * 0.5f, cy + r * 0.1f, cx + r * 0.5f, cy + r * 0.1f, color, 2f * s) }
+            "anchor" -> { p.strokeCircle(cx, cy - r * 0.75f, r * 0.22f, color, 2f * s); p.line(cx, cy - r * 0.5f, cx, cy + r, color, 2.2f * s); p.line(cx - r * 0.6f, cy - r * 0.15f, cx + r * 0.6f, cy - r * 0.15f, color, 2f * s); p.polyline(floatArrayOf(cx - r, cy + r * 0.3f, cx - r * 0.6f, cy + r * 0.9f, cx, cy + r, cx + r * 0.6f, cy + r * 0.9f, cx + r, cy + r * 0.3f), color, 2.2f * s) }
+            "silence" -> p.polyline(wave(cx - r, cy, r * 2, r * 0.35f), color, 2.2f * s)
+            "table" -> { p.strokeRoundRect(cx - r, cy - r, r * 2, r * 2, r * 0.1f, color, 2f * s); p.fillRect(cx - r * 0.55f, cy - r * 0.55f, r * 1.1f, r * 1.1f, color) }
+            "fish" -> { p.polyline(floatArrayOf(cx - r, cy, cx - r * 0.4f, cy - r * 0.55f, cx + r * 0.4f, cy - r * 0.4f, cx + r * 0.6f, cy, cx + r * 0.4f, cy + r * 0.4f, cx - r * 0.4f, cy + r * 0.55f, cx - r, cy), color, 1.8f * s); p.polyline(floatArrayOf(cx + r * 0.6f, cy, cx + r, cy - r * 0.5f, cx + r, cy + r * 0.5f, cx + r * 0.6f, cy), color, 1.8f * s); p.fillCircle(cx - r * 0.55f, cy - r * 0.15f, r * 0.1f, color) }
+            "star4" -> p.fillPolygon(floatArrayOf(cx, cy - r, cx + r * 0.25f, cy - r * 0.25f, cx + r, cy, cx + r * 0.25f, cy + r * 0.25f, cx, cy + r, cx - r * 0.25f, cy + r * 0.25f, cx - r, cy, cx - r * 0.25f, cy - r * 0.25f), color)
+            "wave_moon" -> { p.polyline(wave(cx - r, cy + r * 0.55f, r * 2, r * 0.25f), color, 1.8f * s); p.strokeCircle(cx + r * 0.1f, cy - r * 0.35f, r * 0.45f, color, 1.8f * s); p.fillCircle(cx + r * 0.32f, cy - r * 0.48f, r * 0.42f, Colors.TRANSPARENT) }
+            "backspace" -> { p.polyline(floatArrayOf(cx + r, cy - r * 0.6f, cx - r * 0.3f, cy - r * 0.6f, cx - r, cy, cx - r * 0.3f, cy + r * 0.6f, cx + r, cy + r * 0.6f, cx + r, cy - r * 0.6f), color, 1.6f * s); p.line(cx - r * 0.1f, cy - r * 0.3f, cx + r * 0.5f, cy + r * 0.3f, color, 1.6f * s); p.line(cx - r * 0.1f, cy + r * 0.3f, cx + r * 0.5f, cy - r * 0.3f, color, 1.6f * s) }
+            "space" -> p.polyline(floatArrayOf(cx - r, cy - r * 0.2f, cx - r, cy + r * 0.4f, cx + r, cy + r * 0.4f, cx + r, cy - r * 0.2f), color, 1.6f * s)
+            "circle_o" -> p.strokeCircle(cx, cy, r * 0.7f, color, 1.5f * s)
+            "tri_r" -> p.fillPolygon(floatArrayOf(cx - r * 0.6f, cy - r, cx + r * 0.8f, cy, cx - r * 0.6f, cy + r), color)
             "wind" -> { p.polyline(floatArrayOf(cx - r, cy - r * 0.4f, cx + r * 0.3f, cy - r * 0.4f, cx + r * 0.6f, cy - r * 0.8f), color, 1.8f * s); p.polyline(floatArrayOf(cx - r, cy + r * 0.2f, cx + r * 0.7f, cy + r * 0.2f, cx + r, cy + r * 0.6f), color, 1.8f * s) }
             else -> p.fillCircle(cx, cy, r * 0.5f, color)
         }
+    }
+
+    private fun halfDisc(cx: Float, cy: Float, r: Float, left: Boolean): FloatArray {
+        val n = 14; val pts = FloatArray((n + 1) * 2)
+        for (k in 0..n) { val a = -Math.PI / 2 + Math.PI * k / n; val sx = if (left) -1 else 1; pts[k * 2] = (cx + sx * r * Math.cos(a)).toFloat(); pts[k * 2 + 1] = (cy + r * Math.sin(a)).toFloat() }
+        return pts
+    }
+    private fun wave(x: Float, y: Float, w: Float, amp: Float): FloatArray {
+        val n = 16; val pts = FloatArray((n + 1) * 2)
+        for (k in 0..n) { pts[k * 2] = x + w * k / n; pts[k * 2 + 1] = (y + amp * Math.sin(k * 2 * Math.PI / n * 2)).toFloat() }
+        return pts
     }
 
     /** Point d'intérêt pulsant sur un tableau. */
