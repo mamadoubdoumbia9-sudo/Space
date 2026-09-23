@@ -108,10 +108,13 @@ class Tour(val root: File, val out: File) {
         game.push(com.ateliermareebasse.cartographie.core.screens.PauseScreen(game)); frames(10); shot("12_pause"); game.pop()
         game.push(com.ateliermareebasse.cartographie.core.screens.SaveLoadScreen(game, true)); frames(10); shot("13_sauvegardes"); game.pop()
         game.content.echoes["E-05"]?.let { game.push(com.ateliermareebasse.cartographie.core.screens.EchoScreen(game, it, false)); frames(40); shot("14_echo"); game.pop() }
-        game.push(com.ateliermareebasse.cartographie.core.screens.EpilogueScreen(game)); frames(10); shot("15_epilogue"); game.pop()
+        game.push(com.ateliermareebasse.cartographie.core.screens.EpilogueScreen(game)); frames(10); shot("15_epilogue")
+        while (game.top() !is com.ateliermareebasse.cartographie.core.screens.WorldScreen) game.pop()   // tutoriel « la réponse » + épilogue
         game.push(com.ateliermareebasse.cartographie.core.screens.CreditsScreen(game)); frames(60); shot("16_credits"); game.pop()
         // format portrait
         painter.resize(720, 1280); game.painter = painter; frames(5); shot("17_portrait_monde")
+        game.travel("z11", "t02"); frames(30); shot("17b_portrait_epave")
+        game.push(com.ateliermareebasse.cartographie.core.screens.PauseScreen(game)); frames(10); shot("17c_portrait_pause"); game.pop()
         game.openCarnet(null); frames(10); shot("18_portrait_carnet"); game.pop()
         println("Tour terminé : ${out.listFiles()?.size} captures dans $out")
     }
