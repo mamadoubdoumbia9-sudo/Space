@@ -28,16 +28,29 @@ if [ ! -x "$TC/kotlinc/bin/kotlinc" ]; then
   chmod +x "$TC/kotlinc/bin/"*
 fi
 
+# Téléchargement d'un fichier d'un dépôt GitHub : via `gh api` (blobs) si gh est authentifié,
+# sinon via raw.githubusercontent.com (CI, poste de travail sans gh).
+fetch_github_file() { # repo path dest
+  local repo="$1" path="$2" dest="$3" sha=""
+  if gh auth status >/dev/null 2>&1; then
+    sha=$(gh api "repos/$repo/contents/$(dirname "$path")" --jq ".[] | select(.name==\"$(basename "$path")\") | .sha" 2>/dev/null || true)
+  fi
+  if [ -n "$sha" ]; then
+    gh api -H "Accept: application/vnd.github.raw+json" "repos/$repo/git/blobs/$sha" > "$dest"
+  else
+    curl -fsSL "https://raw.githubusercontent.com/$repo/HEAD/$path" -o "$dest"
+  fi
+  [ -s "$dest" ] || { echo "échec du téléchargement de $repo/$path"; exit 1; }
+}
+
 if [ ! -f "$TC/r8.jar" ]; then
   echo "== r8.jar"
-  SHA=$(gh api repos/ProjectGhostOS/prebuilts_r8/git/trees/HEAD --jq '.tree[] | select(.path=="r8.jar") | .sha')
-  gh api -H "Accept: application/vnd.github.raw+json" "repos/ProjectGhostOS/prebuilts_r8/git/blobs/$SHA" > r8.jar
+  fetch_github_file ProjectGhostOS/prebuilts_r8 r8.jar r8.jar
 fi
 
 if [ ! -f "$TC/android-34.jar" ]; then
   echo "== android-34.jar"
-  SHA=$(gh api repos/Sable/android-platforms/contents/android-34 --jq '.[] | select(.name=="android.jar") | .sha')
-  gh api -H "Accept: application/vnd.github.raw+json" "repos/Sable/android-platforms/git/blobs/$SHA" > android-34.jar
+  fetch_github_file Sable/android-platforms android-34/android.jar android-34.jar
 fi
 
 if [ ! -x "$TC/aapt2" ]; then
