@@ -36,6 +36,7 @@ path t02 "Traverser vers la vasière" 0.92 0.78 [SI: seen:baz_premiere] locked=z
 tableau t02 "La vasière & l'estran"
 image art/zones/z04_t02.jpg
 prop tide_view 1
+prop ambience amb_estran
 prop particles petrels
 prop filou_x 0.18
 prop filou_y 0.92

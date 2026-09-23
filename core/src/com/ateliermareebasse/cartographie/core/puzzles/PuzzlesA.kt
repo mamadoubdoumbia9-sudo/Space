@@ -71,7 +71,7 @@ class E01Tiroir(game: Game) : PuzzleScreen(game, "E01") {
 // ───────────────────────────── E02 — LE TABLEAU DES DÉPARTS ─────────────────────────────
 class E02Tableau(game: Game) : PuzzleScreen(game, "E02") {
     private var pos = 0   // 0 gauche, 1 carré poli, 2 droite
-    private val rows = listOf("VIEUX-QUAI      07h40   quai 1   supprimé", "SAINT-EUMÈLE    09h15   quai 2   supprimé", "PORT-CENDRE     12h05   quai 1   supprimé", "ZI.M 52 — SIRMIT — TNE LEV", "HABITUÉS : ANSELME · SIDONIE · E▒▒▒▒▒▒ · TOM · TILL")
+    private val rows = listOf("VIEUX-QUAI      07h40   quai 1   supprimé", "SAINT-EUMÈLE    09h15   quai 2   supprimé", "PORT-CENDRE     12h05   quai 1   supprimé", "ZI.M 52 — SIRMIT — TNE LEV", "HABITUÉS : ANSELME · SIDONIE · E······ · TOM · TILL")
     override fun renderBoard(x: Float, y: Float, w: Float, h: Float) {
         // quai : trois positions
         p.fillRect(x, y + h * 0.72f, w, h * 0.28f, 0xFF7A736A.toInt())
