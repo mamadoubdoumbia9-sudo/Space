@@ -7,7 +7,7 @@ palette corniche
 music track_13
 ambience amb_corniche
 open seq>=SQ-06
-map 0.79 0.40
+map 0.76 0.41
 start t01
 
 tableau t01 "La crête des nichoirs"

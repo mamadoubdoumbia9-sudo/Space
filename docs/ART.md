@@ -34,7 +34,7 @@ Carte à l'encre sur papier ancien, sans texte (les noms sont posés par `MapScr
 dessinée, les coordonnées `map x y` des zones ont été réalignées sur le dessin : ville de Port-Cendre en bas à
 gauche (Cabinet 0.21/0.60, quartier 0.15/0.72, place 0.27/0.66, quai du bac 0.17/0.82), funiculaire 0.39/0.50
 montant vers la gare 0.46/0.32 et les voies mortes 0.54/0.28, falaise haute et verger 0.46/0.13, maison d'Ysolde
-0.57/0.24, bois des noms 0.65/0.40, corniche des pétrels 0.79/0.40, sommet 0.70/0.18, phare 0.73/0.10 et sa
+0.57/0.24, bois des noms 0.65/0.40, corniche des pétrels 0.76/0.41, sommet 0.70/0.18, phare 0.73/0.10 et sa
 terrasse 0.77/0.09, grotte 0.64/0.62, anse 0.55/0.67, passage 0.85/0.80, Pointe-au-Vent 0.93/0.89. Mer en bas et à
 droite, rose des vents, échelle graphique.
 

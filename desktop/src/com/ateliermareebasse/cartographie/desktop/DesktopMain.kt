@@ -98,6 +98,7 @@ class Tour(val root: File, val out: File) {
         frames(10); shot("06_tableau")
         game.openCarnet(null); frames(10); shot("07_carnet"); game.pop()
         game.openCarnet("sacoche"); frames(10); shot("08_sacoche"); game.pop()
+        game.openCarnet("gens"); frames(10); shot("08b_gens"); game.pop()
         game.push(com.ateliermareebasse.cartographie.core.screens.MapScreen(game)); frames(10); shot("09_carte"); game.pop()
         game.state.tutosSeen.add("puzzle")  // les captures montrent les plateaux, pas le tutoriel (déjà vu)
         for (id in listOf("E01", "E02", "E03", "E04", "E05", "E06", "E07", "E08", "E09", "E10", "E11", "E12", "E13", "E14", "E15", "E16", "S08")) {

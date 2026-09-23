@@ -181,8 +181,9 @@ class CarnetScreen(game: Game, startTab: String?) : MenuScreen(game) {
     private fun renderGens(x: Float, y: Float, w: Float, h: Float) {
         val s = ui.s
         val chars = game.content.characters.values.filter { it.role != "hidden" }
-        val cell = if (ui.portrait) 110 * s else 128 * s
-        val cols = max(1, (w / cell).toInt())
+        // colonnes alignées sur la pliure : 4 par page en paysage (8), 4 en portrait
+        val cols = if (ui.portrait) 4 else 8
+        val cell = w / cols
         var i = 0
         for (c in chars) {
             val cx = x + (i % cols) * cell; val cy = y + (i / cols) * (cell + 24 * s) - scroll
