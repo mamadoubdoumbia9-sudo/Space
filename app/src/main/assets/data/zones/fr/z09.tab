@@ -7,7 +7,7 @@ palette atelier
 music track_11
 ambience amb_atelier_ysolde
 open seq>=SQ-06 & (visited:z08 | visited:z10)
-map 0.70 0.30
+map 0.57 0.24
 start t01
 
 tableau t01 "La maison-grotte"

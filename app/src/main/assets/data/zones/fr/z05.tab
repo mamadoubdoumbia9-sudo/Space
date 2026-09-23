@@ -7,7 +7,7 @@ palette gare
 music track_07
 ambience amb_gare
 open flag:piste_gare | seq>=SQ-04
-map 0.55 0.40
+map 0.46 0.32
 start t01
 
 tableau t01 "Le hall"

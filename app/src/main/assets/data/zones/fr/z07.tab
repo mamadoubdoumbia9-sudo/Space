@@ -7,7 +7,7 @@ palette port
 music track_09
 ambience amb_funiculaire
 open seq>=SQ-05
-map 0.50 0.50
+map 0.39 0.50
 start t01
 
 tableau t01 "La gare inférieure"

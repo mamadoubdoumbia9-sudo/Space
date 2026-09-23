@@ -7,7 +7,7 @@ palette verger
 music track_10
 ambience amb_verger
 open flag:crevette_prete | puzzle:E05
-map 0.60 0.24
+map 0.46 0.13
 start t01
 
 tableau t01 "Le plan large"

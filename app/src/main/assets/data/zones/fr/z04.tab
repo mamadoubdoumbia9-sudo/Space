@@ -7,7 +7,7 @@ palette estuaire
 music track_06
 ambience amb_port
 open seq>=SQ-03
-map 0.32 0.78
+map 0.17 0.82
 start t01
 
 tableau t01 "Le ponton de la Decideuse"

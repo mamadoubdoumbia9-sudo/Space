@@ -7,7 +7,7 @@ palette phare
 music track_15
 ambience amb_phare
 open flag:marek_porte_ouverte
-map 0.93 0.24
+map 0.73 0.10
 start t01
 
 tableau t01 "La cuisine aux deux tasses"

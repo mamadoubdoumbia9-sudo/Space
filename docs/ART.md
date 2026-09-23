@@ -30,13 +30,13 @@ C'est la seule image où une silhouette humaine apparaît : c'est le sujet même
 
 ## Carte du monde (`art/ui/map_world.jpg`, 16:10)
 
-Carte à l'encre sur papier ancien, sans texte (les noms sont posés par `MapScreen`). Disposition imposée par les
-coordonnées `map x y` des zones : ville de Port-Cendre en bas à gauche (Cabinet 0.30/0.62, quartier 0.36/0.66,
-place 0.40/0.58, quai du bac 0.32/0.78), funiculaire au centre (0.50/0.50) montant vers la gare (0.55/0.40) et les
-voies mortes (0.62/0.36), falaise haute (0.60/0.24), maison d'Ysolde (0.70/0.30), bois des noms (0.74/0.44),
-corniche des pétrels (0.84/0.56), sommet (0.90/0.30), phare (0.93/0.24) et sa terrasse (0.93/0.18), grotte
-(0.86/0.72), anse (0.78/0.86), passage (0.90/0.80), Pointe-au-Vent (0.96/0.86). Mer en bas et à droite, rose des
-vents, échelle graphique, rides d'estran.
+Carte à l'encre sur papier ancien, sans texte (les noms sont posés par `MapScreen` et le carnet). Une fois la carte
+dessinée, les coordonnées `map x y` des zones ont été réalignées sur le dessin : ville de Port-Cendre en bas à
+gauche (Cabinet 0.21/0.60, quartier 0.15/0.72, place 0.27/0.66, quai du bac 0.17/0.82), funiculaire 0.39/0.50
+montant vers la gare 0.46/0.32 et les voies mortes 0.54/0.28, falaise haute et verger 0.46/0.13, maison d'Ysolde
+0.57/0.24, bois des noms 0.65/0.40, corniche des pétrels 0.79/0.40, sommet 0.70/0.18, phare 0.73/0.10 et sa
+terrasse 0.77/0.09, grotte 0.64/0.62, anse 0.55/0.67, passage 0.85/0.80, Pointe-au-Vent 0.93/0.89. Mer en bas et à
+droite, rose des vents, échelle graphique.
 
 ## Portraits (16, bustes à l'encre, papier détouré)
 

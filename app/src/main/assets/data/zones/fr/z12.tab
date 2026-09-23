@@ -7,7 +7,7 @@ palette phare
 music track_14
 ambience amb_sommet
 open seq>=SQ-10 | flag:indice_pointe
-map 0.90 0.30
+map 0.70 0.18
 start t01
 
 tableau t01 "Le chemin des 214 marches"

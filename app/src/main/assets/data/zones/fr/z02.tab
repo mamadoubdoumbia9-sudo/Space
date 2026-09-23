@@ -7,7 +7,7 @@ palette port
 music track_03
 ambience amb_ville
 open seq>=SQ-02
-map 0.36 0.66
+map 0.15 0.72
 start t01
 
 tableau t01 "La rue basse"

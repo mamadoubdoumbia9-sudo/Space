@@ -7,7 +7,7 @@ palette nuit
 music track_20
 ambience amb_pointe_nuit
 open flag:passage_engage | letter_read
-map 0.96 0.86
+map 0.93 0.89
 start t01
 
 tableau t01 "La pointe, la boîte, le télescope"

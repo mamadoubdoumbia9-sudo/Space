@@ -25,6 +25,7 @@ class WorldScreen(game: Game) : Screen(game) {
     private val st get() = game.state
 
     var tableau: Tableau? = null
+    private val portraitKnown = HashMap<String, Boolean>()   // présence des portraits, vérifiée une fois
     private var thoughtQueue = ArrayList<String>()
     private var thoughtText: String? = null
     private var thoughtAge = 0f
@@ -210,10 +211,15 @@ class WorldScreen(game: Game) : Screen(game) {
         for (n in tab.npcs) {
             if (!game.conditions.eval(n.cond)) continue
             val cx = r[0] + n.x * r[2]; val cy = r[1] + n.y * r[3]
-            val ph = 170f * s * n.scale
+            val ph = 150f * s * n.scale
             val bob = sin(time * 1.3f + n.x * 10) * 2f * s
             val path = "art/characters/${n.id}.png"
-            if (!p.image(path, cx - ph * 0.5f, cy - ph + bob, ph, ph, 1f)) {
+            // le personnage est présent sous la forme d'un croquis à l'encre épinglé dans le tableau
+            if (portraitKnown.getOrPut(path) { game.platform.assetExists(path) }) {
+                p.fillRoundRect(cx - ph * 0.5f + 3 * s, cy - ph + bob + 4 * s, ph, ph, 6 * s, Colors.withAlpha(Colors.BLACK, 0.35f))
+                ui.paper(cx - ph * 0.5f, cy - ph + bob, ph, ph, 0.94f)
+                p.image(path, cx - ph * 0.5f, cy - ph + bob, ph, ph, 1f)
+            } else {
                 p.fillRoundRect(cx - ph * 0.2f, cy - ph * 0.9f + bob, ph * 0.4f, ph * 0.9f, ph * 0.1f, Colors.withAlpha(Colors.INK, 0.6f))
             }
             val name = game.content.characters[n.id]?.name ?: n.id
@@ -317,9 +323,14 @@ class WorldScreen(game: Game) : Screen(game) {
         val tab = tableau ?: return
         val fx = r[0] + (tab.props["filou_x"]?.toFloatOrNull() ?: 0.16f) * r[2]
         val fy = r[1] + (tab.props["filou_y"]?.toFloatOrNull() ?: 0.86f) * r[3]
-        val size = 110f * s
+        val size = 84f * s
         val bob = abs(sin(time * 2.1f)) * 2f * s
-        if (!p.image("art/characters/filou.png", fx - size / 2, fy - size + bob, size, size)) {
+        val path = "art/characters/filou.png"
+        if (portraitKnown.getOrPut(path) { game.platform.assetExists(path) }) {
+            p.fillRoundRect(fx - size / 2 + 3 * s, fy - size + bob + 4 * s, size, size, 5 * s, Colors.withAlpha(Colors.BLACK, 0.35f))
+            ui.paper(fx - size / 2, fy - size + bob, size, size, 0.94f)
+            p.image(path, fx - size / 2, fy - size + bob, size, size)
+        } else {
             ui.icon("dog", fx, fy - size * 0.4f, size * 0.22f, Colors.withAlpha(Colors.INK, 0.8f))
         }
     }

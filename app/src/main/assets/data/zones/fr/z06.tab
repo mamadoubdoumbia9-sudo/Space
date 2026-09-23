@@ -7,7 +7,7 @@ palette gare
 music track_08
 ambience amb_voies
 open seq>=SQ-05
-map 0.62 0.36
+map 0.54 0.28
 start t01
 
 tableau t01 "La plaque tournante"

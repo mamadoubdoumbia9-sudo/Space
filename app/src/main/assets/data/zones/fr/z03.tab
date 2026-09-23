@@ -7,7 +7,7 @@ palette place
 music track_04
 ambience amb_ville
 open seq>=SQ-03
-map 0.40 0.58
+map 0.27 0.66
 start t01
 
 tableau t01 "La place"

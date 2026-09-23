@@ -7,7 +7,7 @@ palette estuaire
 music track_18
 ambience amb_anse
 open secret:S04 | flag:sentier_chevres_ouvert | act>=4
-map 0.78 0.86
+map 0.55 0.67
 start t01
 
 tableau t01 "La crique"

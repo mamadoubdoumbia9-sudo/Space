@@ -7,7 +7,7 @@ palette bois
 music track_12
 ambience amb_bois
 open seq>=SQ-06
-map 0.74 0.44
+map 0.65 0.40
 start t01
 
 tableau t01 "La lisière & les étiquettes"

@@ -7,7 +7,7 @@ palette bleu
 music track_17
 ambience amb_grotte
 open flag:heures_bleues_annoncees & act>=4 | letter_read
-map 0.86 0.72
+map 0.64 0.62
 start t01
 
 tableau t01 "L'entrée & les rochers sucrés"

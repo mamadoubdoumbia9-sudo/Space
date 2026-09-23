@@ -23,6 +23,7 @@ class DialogueScreen(game: Game, val scene: Scene) : Screen(game) {
     private var waitLeft = 0f
     private var options: List<Option> = emptyList()
     private var btns = ArrayList<Ui.Btn>()
+    private val portraitKnown = HashMap<String, Boolean>()   // existence des portraits, vérifiée une fois par scène
     /** Centre du premier choix affiché (outillage : visite automatique). */
     fun firstChoiceCenter(): Pair<Float, Float>? = btns.firstOrNull()?.let { (it.x + it.w / 2) to (it.y + it.h / 2) }
     private var pressed: String? = null
@@ -135,7 +136,10 @@ class DialogueScreen(game: Game, val scene: Scene) : Screen(game) {
                 if (portraitW > 0f) {
                     val ph = h - 20 * s
                     val path = "art/characters/$key.png"
-                    if (!p.image(path, x + 10 * s, y + 10 * s, min(portraitW, ph), min(portraitW, ph), a)) {
+                    val side = min(portraitW, ph)
+                    // le buste à l'encre est détouré : on le pose sur une petite carte de papier épinglée au panneau
+                    if (portraitKnown.getOrPut(path) { game.platform.assetExists(path) }) ui.paper(x + 10 * s, y + 10 * s, side, side, 0.92f * a)
+                    if (!p.image(path, x + 10 * s, y + 10 * s, side, side, a)) {
                         p.fillCircle(x + 10 * s + portraitW / 2, y + h / 2, portraitW * 0.3f, Colors.withAlpha(speakerColor(speaker), 0.6f * a))
                     }
                 }

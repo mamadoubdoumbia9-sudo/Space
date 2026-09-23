@@ -7,7 +7,7 @@ palette nuit
 music track_21
 ambience amb_terrasse
 open flag:phare_ouvert
-map 0.93 0.18
+map 0.77 0.09
 start t01
 
 tableau t01 "La terrasse"

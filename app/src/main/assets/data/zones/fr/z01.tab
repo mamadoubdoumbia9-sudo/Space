@@ -7,7 +7,7 @@ palette papier
 music track_02
 ambience amb_cabinet
 open true
-map 0.30 0.62
+map 0.21 0.60
 start t01
 
 tableau t01 "La boutique des cartes"
