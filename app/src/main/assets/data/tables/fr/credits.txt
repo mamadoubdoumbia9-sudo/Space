@@ -16,7 +16,7 @@ h | Moteur
 p | Moteur maison en Kotlin, sans dépendance externe : tableaux illustrés, dialogues arborés, seize énigmes, sauvegarde binaire versionnée (LCDA v3), localisation FR/EN.
 gap |
 h | Images
-p | Tableaux aquarelle et encre de Chine générés puis retouchés pour le jeu (42 tableaux, cinématiques, portraits, objets).
+p | Tableaux aquarelle et encre de Chine générés puis retouchés pour le jeu (40 tableaux, cinématiques, portraits, objets).
 gap |
 h | Musique et sons
 p | Partitions et ambiances composées et synthétisées pour le jeu : vingt-quatre pistes, ambiances par zone, cloches, harpe, pétrels, plumes, papier.

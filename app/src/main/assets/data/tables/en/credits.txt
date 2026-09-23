@@ -16,7 +16,7 @@ h | Engine
 p | In-house engine written in Kotlin, with no external dependency: illustrated scenes, branching dialogues, sixteen puzzles, versioned binary saves (LCDA v3), FR/EN localisation.
 gap |
 h | Pictures
-p | Watercolour and India-ink scenes generated and then reworked for the game (42 scenes, cinematics, portraits, objects).
+p | Watercolour and India-ink scenes generated and then reworked for the game (40 scenes, cinematics, portraits, objects).
 gap |
 h | Music and sound
 p | Scores and ambiences composed and synthesised for the game: twenty-four tracks, ambiences for every area, bells, harp, petrels, quills, paper.
