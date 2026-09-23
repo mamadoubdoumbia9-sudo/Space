@@ -1,0 +1,21 @@
+# Les 18 murmures de niveau 1 (GDD Annexe O) : détail caché + pensée.
+# Format : id | titre | zone-condition | pensée
+
+M-01 | les clous neufs du ponton (3 sur 400) | Z04, examen | quelqu'un entretient ce ponton dans l'ombre. je le retrouve, mon inconnu des planches.
+M-02 | le fanion de sauvetage 1994 | Z07, examen | dix-neuf personnes tirées d'un coup de tempête. le fanion ne se coupe pas. les fanions de sauvetage ne se coupent pas.
+M-03 | la bille de politesse dans l'escalier du phare | Z13, marche 44 | une bille de tom. il la paiera un jour, celle-là. ou pas. les dettes d'enfance, ça s'achète en douce.
+M-04 | la botte sur le toit | Z02 | depuis la tempête du chien de mer. personne ne sait. personne ne remontera. c'est une propriété du vent.
+M-05 | l'ardoise de till sous le lit de la chambre noire | Z05b | des plans. des plans partout. il dessine la mer avec des engrenages. l'avenir de la presqu'île dort sous un lit d'annexe.
+M-06 | la double tasse ébréchée | Z13 | la tasse d'esteban a une ébréchure au bord gauche. il buvait de ce côté-là, exprès : "ça réveille la lèvre", il disait. marek sert toujours la tasse ébréchée tournée à l'envers. il la retourne en la posant. chaque matin.
+M-07 | la gravure d'ancre sur le banc de la pointe | Z17 | gravée au canif, patinée : une ancre, une vague, un "R." — riou, le facteur, 1901. il s'asseyait ici, avant d'être une boîte.
+M-08 | le bouchon de limonade dans le filet | Z02 | un bouchon de limonade de 1974 coïncé dans la maille. le filet a pêché un siècle de fêtes.
+M-09 | les graviers dans la gouttière du beffroi | Z03 | trois graviers alignés dans la gouttière. un ancien jeu d'enfant : les billes du beffroi. les cloches de 1794 reposent dessous, quelque part. personne ne creusera le beffroi. ... enfin. "personne".
+M-10 | l'inscription sous la lourde de la gare | Z05, côté quai | gravé au burin, minuscule : "J. & R. 1953 — on s'est dit ce qu'on avait à dire. c'est dit." — la gare garde les aveux au dos de ses pierres. on se demandera toujours ce qu'ils s'étaient dit. c'est mieux comme ça.
+M-11 | la mue de pétrel sur le rebat du nichoir 9 | Z11 | une plume de mue, fraîche. le général a laissé sa plume de l'année. ... c'est sa signature. il signe, lui.
+M-12 | la chaussette dans la panière de filou | Z02/Z13 | une chaussette grise. volée, donc aimée. filou ne rendra jamais les chaussettes. c'est son code. c'est un chien d'honneur.
+M-13 | la recette de la galette, page 141 du tome 141 | Z13 | "pour jean ne" — la main de la recette est celle du journal de 1972. anselme écrit ses recettes dans les registres du phare. le patrimoine est un grenier commun.
+M-14 | le nom effacé du registre du marché | Z03 | dans le registre du marché, la ligne des "habitués du mardi" : un nom mangé. le brouillard commence par les listes. les listes, c'est ce qu'on relit le moins.
+M-15 | les deux parapluies au porte du café | Z03 | deux parapluies, immobiles depuis des lustres. marta : "ils viendront les chercher. les parapluies, ça se laisse du temps."
+M-16 | le sillon d'herbe derrière l'école | Z03 | un raccourci tracé par des pieds d'enfants, diagonal, interdit, parfait. les vraies cartes de la ville sont gravées par les écoliers.
+M-17 | la tache de bougie sur le plan de 1889 | Z01 | sur le plan original du funiculaire, une tache de bougie : l'ingénieur a travaillé de nuit. la nuit a laissé sa goutte. les plans ont des veillesuses, eux aussi.
+M-18 | le trousseau inutile du tiroir du bas | Z01 | des clés d'un meuble qui n'existe plus. ombeline les garde. on garde les clés des meubles disparus comme on garde les pseudonymes des amours closes. ça ne sert à rien. ça s'appelle une vie.

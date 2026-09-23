@@ -1,0 +1,202 @@
+# ANNEXE L — DIALOGUES COMPLÉMENTAIRES : BAZ, ADÈLE, MARTA
+
+# [L.1] BAZ — première conversation au ponton (corde de sonnerie tirée)
+~ baz_premiere once
+* Il amarre, sans regarder.
+BAZ: T'as tiré la corde pour rien. J'étais déjà en route. La corde, c'est pour les gens qui doutent. Moi j'suis un homme de traversées fixes. Assieds-toi sur le taquet, il est sec. C'est rare, un taquet sec. Profite.
+LOHEN: Vous avez vu Esteban, Baz.
+* Il attache le dernier tour, lent, complet, parfait.
+BAZ: Écoute bien. J'ai vu le garçon. J'l'ai vu monter avec un sac. J'ai rien dit. J'ai dit bon vent, comme à tout le monde. J'aurais dû dire autre chose. On dira autre chose aux autres, désormais.
+* Il crache par tribord, longtemps.
++ « Pourquoi vous n'avez rien dit ? » -> +COURAGE ; goto bz04a
++ « Vous savez où il allait ? » -> +RUSE ; goto bz04b
++ « Racontez-moi juste la traversée. » -> +DOUCEUR ; goto bz04c
+= bz04a
+BAZ: Parce que j'suis passeur, gamine. On ne demande pas la destination, on demande le cap. Y a une différence. La destination, c'est son affaire. Le cap, c'est la mienne. Il m'a donné le cap : le large. J'ai filé. Le reste — le reste, c'est des lettres et des larmes, c'est pas mon métier.
+> bz05
+= bz04b
+* Un temps, l'eau sur la coque.
+BAZ: Je sais où il est ALLÉ. C'est pas pareil que de savoir où il EST. Les hommes de mer comprennent ça. Les autres apprennent. T'apprendras.
+> bz05
+= bz04c
+BAZ: Il s'est assis à ta place. Le banc de bâbord, le coin du vent. Il a regardé l'eau comme si c'était une lettre qu'il venait de finir d'écrire. Moi j'ai regardé la marée : c'est ma lettre à moi. On a navigué en silence. C'était une belle traversée. Les belles traversées, ça me navre : ça veut dire que ça s'arrête.
+= bz05
+BAZ: T'as mangé ?
+LOHEN: Oui.
+BAZ: Menteuse.
+* Il sort un sandwich d'huile et de sardine, le tend sans un mot de plus.
++ Manger le sandwich sans commentaire -> LIEN-BAZ +2 ; +DOUCEUR ; goto bz_mange
++ « Merci, Baz. » -> LIEN-BAZ +1 ; goto bz06
++ (refuser poliment) -> +HUMEUR ; goto bz_refus
+= bz_mange
+PENSEE: le pain est rassis et parfait. baz nourrit le monde en sandwichs immangeables et tout le monde s'en porte bien. c'est un mystère de la presqu'île.
+> bz06
+= bz_refus
+BAZ: C'est ça. Refuse. La marée aussi, elle refuse. Elle revient quand même.
+= bz06
+BAZ: La Decideuse repart à l'heure de l'eau. Si t'as des questions de plus, tu sais où j'suis : partout sur vingt mètres de ponton. C'est petit, ma principauté. Mais c'est à moi.
+-> flag baz_rencontre ; LIEN-BAZ +1 ; give ticket_bac
+end
+
+~ baz_corde_pour_rien [SI: flag:baz_rencontre]
+BAZ: T'as sonné pour rien. J'viens pareil. C'est ça, un service public.
+end
+
+~ baz_reprise [SI: flag:baz_rencontre & LIEN-BAZ<5 & !letter_read]
+BAZ: [[low_tide|L'eau a ses heures, gamine. Moi j'ai les miennes : les mêmes. On traverse à la montante.|La marée est bonne. La Decideuse traverse quand tu veux. C'est un service public.]]
++ « Lisez-moi le journal de Vieux-Quai ? » [SI: has:journal_vieux_quai & !flag:journal_lu] -> goto bz_journal
++ « Le vent d'ouest, Baz. Il fait quoi, à la pointe ? » -> goto bz_vent
++ « Parlez-moi de la grotte. » [SI: LIEN-BAZ>=3] -> goto bz_grotte
++ « Traversons. » -> goto bz_traverse
+= bz_journal
+* Baz lit le journal à voix haute, tous les articles, y compris la météo. Lohen écoute. Il ne saute rien.
+BAZ: Voilà. Le monde. Il tourne sans nous demander. C'est reposant.
+-> flag journal_lu ; take journal_vieux_quai ; LIEN-BAZ +2
+end
+= bz_vent
+BAZ: Le vent d'ouest, gamine, il traverse tout ce qui se met de travers. Mets-toi dans son sens, pour une fois.
+-> flag baz_vent_ouest
+end
+= bz_grotte
+BAZ: Dans une grotte, gamine, t'écoutes pas la lumière, t'écoutes les coups. L'eau frappe toujours les mêmes temps. Ceux qui pressent les coups, la mer les garde.
+-> flag baz_indice_grotte
+end
+= bz_traverse
+! sfx bac_moteur
+* La Decideuse tire son câble. La vasière défile. Filou est monté le premier, à la place d'honneur.
+PENSEE: la traversée dure ce qu'elle dure. baz ne regarde pas l'heure. il regarde l'eau. c'est une montre plus large.
+-> flag traversee_faite ; travel z04 t02
+end
+
+# Scène flottante finale (LIEN-BAZ 5) : moteur coupé, E-11 sur l'eau
+~ baz_scene_flottante [SI: flag:baz_rencontre & LIEN-BAZ>=5 & !flag:baz_flottante] once
+! sfx bac_moteur_coupe
+* Au milieu de l'estuaire, Baz coupe le moteur. L'eau sur la coque. Rien d'autre.
+BAZ: Écoute. C'est ici qu'il m'a parlé. La veille. Je te le dis une fois, comme il me l'a dit une fois.
+-> echo E-11 ; flag baz_flottante ; CLARTE +2
+BAZ: ...Voilà. On dira ça. Il a pris le large. C'est ce qu'il voulait qu'on dise. Moi je dis autre chose, maintenant : il a pris le large, et quelqu'un le cherche. C'est mieux comme phrase. C'est plus complet.
+end
+
+~ baz_apres [SI: letter_read]
+BAZ: T'es allée au bout du passage. Ça se voit à la démarche. Les gens qui reviennent de la pointe marchent comme s'ils avaient de l'eau des deux côtés. Ça leur passe. Ou pas.
+BAZ: Assieds-toi sur le taquet. Il est sec. Le monde continue de traverser. C'est un service public.
+end
+
+# [L.2] ADÈLE — première consultation (dispensaire, acte III)
+~ adele_premiere once
+* Sans lever les yeux de ses fiches.
+ADELE: Entrez. Vous êtes l'apprentie du Cabinet, vous marchez en arpenteuse, et vous avez une égratignure au poing droit que vous regardez d'un peu trop près pour qu'elle soit récente. Asseyez-vous. Je fais le diagnostic d'entrée. C'est ma faute de professionnelle d'être fière, on soignera ça jamais.
+LOHEN: Je ne suis pas malade, docteure.
+ADELE: Personne n'est jamais malade, chez moi. Vous êtes inquiète. C'est pareil, en plus long à soigner. Parlez.
++ « Je cherche Esteban Sorène. Depuis neuf jours. » -> +COURAGE ; goto ad04a
++ « Vous le connaissez ? Il venait compter les pétrels sur la corniche. » -> +RUSE ; goto ad04b
++ « Vous avez vu passer quelque chose cette semaine ? N'importe quoi. » -> +DOUCEUR ; goto ad04c
+= ad04a
+* Elle pose ses fiches, enfin, et considère Lohen avec l'attention entière des gens pressés.
+ADELE: ...Nom, prénom, date. Je vous écoute pour de vrai, maintenant.
+> ad05
+= ad04b
+ADELE: Je connais tout le monde deux fois : comme patient et comme voisin. C'est le risque des presqu'îles. Tout le monde est double. Y compris les disparus. SURTOUT les disparus.
+> ad05
+= ad04c
+ADELE: J'ai vu passer une semaine entière de gens qui demandent « n'importe quoi » en cherchant quelque chose de très précis. Vous êtes la quatrième. Les trois premiers cherchaient leurs lunettes, leur chien et leur courage. Vous, je crois que c'est la même chose que le troisième.
+= ad05
+* Elle se lève, remonte sa montre — le brassard gravé passe.
+ADELE: Écoutez-moi, mademoiselle l'apprentie. Sur cette presqu'île, il y a deux catégories de disparus : ceux qui reviennent trempés, et ceux qui reviennent secs. Les trempés, c'est la mer. Les secs... les secs, c'est l'autre affaire. Celle dont je ne parle pas sans motif.
++ « Donnez-moi le motif. » -> +COURAGE ; goto ad06a
++ « L'autre affaire... c'est la Brume ? » -> +RUSE ; goto ad06b
++ (se lever, remercier, partir — silence) -> +DOUCEUR ; LIEN-ADELE +1 ; goto ad06c
+= ad06a
+* Un temps ; elle choisit ses mots comme des instruments.
+ADELE: ...Un nom, une date, et une question de famille. Le nom et la date, je les ai. La question, c'est la vôtre : qui vous demande, de lui ?
+-> flag adele_degre_trois
+> ad07
+= ad06b
+* Elle sourit, sans joie et sans dureté.
+ADELE: Vous êtes l'apprentie de la dame aux cartes. Vous savez déjà la moitié de ce que le canton met dix ans à admettre. Je vais vous dire l'autre moitié un jour où vous me la demanderez en face, avec des faits. C'est comme ça que ça marche, la médecine des effacements : sur demande écrite du cœur, pas avant.
+> ad07
+= ad06c
+* À la porte, derrière Lohen.
+ADELE: ...Mademoiselle. Vous voulez du réconfort ou du pourcentage ?
+* Lohen ne répond pas.
+ADELE: Alors revenez quand vous saurez. C'est une bonne réponse, celle-là. C'est ma préférée.
+= ad07
+ADELE: Puisque vous montez au phare — tout le monde y monte, ces jours-ci — vous porterez ça au veilleur. Trois fioles. Il ne descend plus les chercher. Dites-lui que c'est le degré trois, naissant. Il comprendra. Ou il fera semblant. Les deux se soignent.
+-> give colis_adele ; flag colis_recu ; flag adele_rencontree ; LIEN-ADELE +1 ; seq SQ-14
+end
+
+~ adele_reprise [SI: flag:adele_rencontree & !letter_read]
+ADELE: [[flag:faveur_colis_faite|Le veilleur a eu ses fioles. Il vous a dit merci ? Non. Il a rangé. C'est son merci.|Le colis attend toujours au phare, mademoiselle. Les fioles n'aiment pas attendre. Les veilleurs non plus, mais ils sont mieux entraînés.]]
++ « Degré trois. C'est quoi, exactement ? » [SI: flag:adele_degre_trois] -> goto adr_degre
++ « Vous avez une horloge, ici ? » [SI: flag:secret_S02_ouvert] -> goto adr_horloge
++ (regarder le banc, dehors) -> goto adr_banc
+= adr_degre
+ADELE: La première chose que ça prend, dit la règle, c'est ce qu'on aime le plus. Le degré trois, c'est quand on commence à faire des listes. Pour compter ce qu'on aime avant que ça compte à notre place. Voilà. C'est tout ce que je dis sans demande écrite du cœur.
+-> CLARTE +1 ; flag adele_regle
+end
+= adr_horloge
+ADELE: Celle de la salle d'attente. Elle retarde de treize minutes depuis 1988. Personne ne la règle : les patients aiment croire qu'ils sont en avance.
+end
+= adr_banc
+PENSEE: le banc en face du port. quelqu'un s'y est assis pour compter ce qu'il aimait. il y a une feuille à demi mouillée sous la latte.
+-> flag page23_visible
+end
+
+~ adele_apres [SI: letter_read]
+ADELE: Vous savez, maintenant. Ça se voit au poing droit : vous ne le regardez plus.
+LOHEN: Je sais.
+ADELE: Alors je peux vous le dire en face : il est parti sec. Sec, c'est l'autre affaire, mais sec, ça revient parfois. Pas trempé. Sec. Notez-le dans votre carnet, ça vous ressemblera.
+-> LIEN-ADELE +1
+end
+
+# [L.3] MARTA — la scène du second couplet (café L'Écume, crépuscule acte III)
+~ marta_second_couplet [SI: flag:marta_rencontree & (flag:rosa_rencontree | page:4) & act>=3 & !flag:chant_marta] once
+! sfx jukebox_gresil
+* Elle chante en essuyant, faux, superbe.
+MARTA: ♪ ...on r'viendra par l'ouest, on r'viendra par l'eau... ♪
+* Elle s'interrompt, chiffon en l'air.
+MARTA: Tiens. La chanson fait ça, ces temps-ci. Elle s'arrête au même endroit. Comme un mulet au pied d'une côte.
+* Elle regarde Lohen.
+MARTA: Toi, tu sais compter. Compte-moi ce qui manque.
++ « Il manque le second couplet. » -> +RUSE ; goto mt02a
++ « Chantez-le moi en entier, Marta. Comme avant. » -> +COURAGE ; flag chant_marta ; goto mt02b
++ (monter sur l'escabeau du juke-box, regarder les 43 disques) -> +RUSE ; goto mt02c
+= mt02a
+* Elle repose le chiffon, doucement, comme on repose une question.
+MARTA: ...Un garçon le chantait entier, avant. Il l'a perdu cet été, je crois. Les chansons, ça part comme les dents : d'abord ça branle, après c'est la boîte à musique du vide.
+* Elle rit.
+PENSEE: elle rit comme les gens qui ont décidé d'être en vie. j'aimerais savoir faire ça.
+> mt03
+= mt02b
+MARTA: En entier ?
+* Elle essuie ses mains cette fois : le geste du départ des grandes choses.
+MARTA: Ma fille, je chante faux comme une passe, mais en entier, ça je sais. Personne ne me l'a demandé depuis le printemps.
+! music track_12
+* Elle chante. Le second couplet parle d'un retour par l'ouest, d'une lampe laissée à la fenêtre et d'un vent qui porte les noms. On ne la regarde pas : on regarde la fenêtre du café, la lampe, le vent.
+-> LIEN-MARTA +2 ; CLARTE +1
+> mt03
+= mt02c
+* Elle rit.
+MARTA: Vas-y, triomphe. Tu trouveras pas mieux que le disque 12, tout le monde le cherche, tout le monde le rate.
+-> flag disque12_indice
+= mt03
+* Fin de scène : elle sert un chocolat qu'on n'a pas commandé.
+MARTA: La maison t'offre ça. Ici, on ne sert pas l'alcool aux larmes. Les larmes, c'est sans supplément. Le chocolat aussi, aujourd'hui.
+-> flag marta_couplet ; chocolat
+end
+
+~ marta_jukebox [SI: flag:disque12_indice & !echo:E-04]
+* Le juke-box. Quarante-trois disques. Le 12 : une étiquette jaunie, 1959.
++ Jouer le disque 12 -> echo E-04 ; flag disque12_joue ; CLARTE +2 ; goto mj_joue
++ (redescendre) -> goto mj_fin
+= mj_joue
+! sfx jukebox_disque
+* La version originale. La chanteuse de 1959. Le second couplet, entier.
+= mj_fin
+end
+
+~ marta_nuit_bleue [SI: act>=4 & !letter_read]
+* Le café est fermé. Elle est là. Elle essuie. Elle sert.
+MARTA: Les cafés fermés, c'est là qu'on reconnaît les cafés vivants. Assieds-toi deux minutes. La marée t'attendra deux minutes. Elle me doit bien ça.
+-> chocolat
+end

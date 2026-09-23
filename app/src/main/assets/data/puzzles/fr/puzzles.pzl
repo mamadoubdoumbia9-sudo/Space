@@ -1,0 +1,200 @@
+# Fiches d'énigmes (GDD 7.3 / 7.5) — textes exacts : phrase-test, indices à 3 niveaux (opt-in), pensée de conclusion.
+# Format :
+#   @ E01 | Nom | zone
+#   phrase: la phrase-test (affichée dans le carnet après réussite)
+#   intro: pensée d'entrée (optionnelle)
+#   hint1: SPEAKER | texte      hint2: …    hint3: …   (le niveau 3 est souvent visuel : « auto »)
+#   success: pensée de conclusion offerte (Lohen formule la déduction)
+#   effects: effets appliqués à la réussite (séparés par ;)
+#   after: scène de dialogue jouée après la réussite (optionnel)
+
+@ E01 | Le tiroir du Cabinet | z01
+phrase: il fallait lire la date de marée du carnet d'Ombeline et la reporter sur les molettes du tiroir, parce qu'un cartographe date tout.
+intro: le tiroir des effacés. trois molettes : le jour, la phase, le coefficient. la clé est le monde.
+hint1: LENTILLE | la petite plaque : « daté comme l'amour ». ... ils datent TOUT, ici.
+hint2: OMBELINE | qu'est-ce que je notais ce matin ? le monde, ma fille. en chiffres de marée.
+hint3: auto | La page du jour du carnet d'Ombeline s'orne d'une auréole dorée.
+success: jeudi. PM2. cent quatorze. ... le tiroir s'ouvre sur du papier fantôme, une plume d'attente et six lettres d'adieu datées d'autres années. une petite boîte au bout du monde de poche. ils datent tout, ici. même les départs.
+effects: give papier_fantome ; give plume_attente ; flag tiroir_ouvert ; releve 2 ; CLARTE +1
+sfx: wood_groove_01
+
+@ E02 | Le tableau des départs | z05
+phrase: il fallait lire le tableau à l'envers dans la vitre de la salle d'attente, parce que la ligne d'Esteban était écrite POUR les partants, côté quai.
+intro: le tableau à palettes. une ligne illisible : ZI.M 52 — SIRMIT — TNE LEV. et la vitre de la salle d'attente, en face.
+hint1: ANSELME | les tableaux, ça se lit des deux côtés de la vitre. du temps des trains, on venait ici pour voir partir. on se mettait toujours au même endroit. le sol le sait encore.
+hint2: YSOLDE | cherche où les pieds des autres ont poli la pierre, petite carte. les bonnes places d'autrefois sont les bonnes lectures d'aujourd'hui.
+hint3: auto | Le carré de ciment poli émet un léger halo d'encre.
+success: cinq heures douze. terminus. le vent. ... il a écrit son départ à l'envers, pour que seuls les gens qui se tiennent où se tenaient les gens qui regardaient partir puissent le lire. il l'a écrit pour les spectateurs des départs. pour les gens qui restent. pour...
+effects: flag heure_0512 ; page 5 ; releve 2 ; CLARTE +1
+after: sq05_revelation
+
+@ E03 | Le contre-poids | z07
+phrase: il fallait équilibrer 200 kg avec des sacs de lestage dont les poids ne s'additionnent pas rondement, parce que le funiculaire ne pardonne pas les approximations.
+intro: deux cents kilos en face de la cabine. six sacs étalonnés, un palan, un cadran de tension. l'écart, c'est le problème.
+hint1: SIDONIE | chiffre ou sentiment ? — ... chiffre. — alors les sacs, c'est des chiffres qui pèsent. fais ton addition debout.
+hint2: SIDONIE | y a DEUX sacs pareils. j'ai jamais compris pourquoi papa en avait commandé deux. aujourd'hui je comprends : pour les additions à quatre termes.
+hint3: auto | L'aiguille chuchote : un tic sonore rapproché quand on approche de la zone.
+success: soixante, soixante, quarante-cinq, trente-cinq. deux cents. ... deux sacs pareils. j'avais lu « un de chaque ». la machine ne pardonne pas les approximations. elle pardonne les relectures.
+effects: flag crevette_prete ; LIEN-SIDONIE +1 ; releve 1 ; page 8
+after: sq07_sidonie_bavardage
+
+@ E04 | L'annuaire des marées | z13
+phrase: il fallait croiser la lune des marées du ciel avec l'annuaire du phare, parce que les heures bleues ne se calculent pas : elles se CONFIRMENT, comme les rendez-vous importants.
+intro: la lune des marées, c'est ce soir ou dans vingt-sept jours. l'annuaire, la fenêtre, le carnet. vérifier.
+hint1: MAREK | les annuaires mentent une fois par siècle. les plumes corrigent une fois par siècle. regarde qui a écrit après l'imprimeur.
+hint2: YSOLDE | deux lignes jumelles dans un annuaire : c'est un vêtement repris, petite carte. cherche la couture.
+hint3: auto | La lentille réveille l'encre de la correction en marge.
+success: lune sept. ligne sept. la plume corrige l'imprimeur : 23h52, pas 00h52. ce soir. soixante et onze minutes de bleu. après, la mer reprend, et elle reprend toujours.
+effects: flag heures_bleues_confirmees ; releve 2 ; CLARTE +2
+after: sq16_marek_girouette
+
+@ E05 | L'aiguillage | z06
+phrase: il fallait enclencher les cinq aiguilles dans le bon ordre, parce que les verrous de sécurité d'une gare ne se forcent pas : ils s'étagent.
+intro: la table d'enclenchement. cinq leviers, une table gravée à moitié effacée. la lentille réveille les effacés.
+hint1: ANSELME | l'enclenchement, c'est la politesse des machines : chacun attend que le voisin ait fini. l'ordre, c'est tout.
+hint2: SIDONIE | les verrous, ça se lève comme les questions : dans l'ordre où les réponses le permettent.
+hint3: auto | Le plan miniature grise la partie non conforme en temps réel.
+success: voie 2 vers voie 1. la voie 1, c'est la voie du large. ... le raccourci du haut s'ouvre. le chemin du bout du monde commence par une décision d'aiguilleur.
+effects: flag aiguillage_fait ; releve 3 ; page 22 ; flag sentier_chevres_ouvert
+
+@ E06 | Les rubans du bois | z10
+phrase: il fallait retrouver l'arbre d'esteban en suivant les couleurs de ses vieux rubans, parce qu'un enfant qui grandit n'abandonne pas ses chemins : il les prolonge.
+intro: deux mille mélèzes. trois arbres connus : garance 2015, indigo 2018, genêt 2021. le quatrième est l'inconnue. la carte du bois est l'outil.
+hint1: YSOLDE | il étiquette en spirale, comme les oiseaux tournent avant de se poser.
+hint2: YSOLDE | quatre tours, quatre arbres, quatre années d'écart. la spirale se poursuit comme les familles : en s'écartant. cherche le bord.
+hint3: auto | Les trois rubans connus reçoivent un liseré d'encre sur la carte.
+success: garance, indigo, genêt. la spirale s'écarte comme les familles. le quatrième tour tombe au bord du vide : le mélèze 214.
+effects: flag meleze_trouve ; page 15 ; page 21 ; releve 2 ; CLARTE +1
+
+@ E07 | L'écriture des nœuds | z09
+phrase: il fallait lire les nœuds comme du braille de corde, parce que les gens qui ne peuvent plus lire les visages du monde écrivent avec leurs mains.
+intro: le mur des nœuds. soixante cordes. chaque nœud, une lettre : sa position sur la corde est son rang dans l'alphabet. trois nœuds serrés : fin de mot. et chaque corde sonne.
+hint1: YSOLDE | mes mains lisent ce que mes yeux ont rendu. compte comme une religieuse, petite carte : chaque interstice, une lettre ; chaque silence, un espace.
+hint2: YSOLDE | la phrase du garçon est blessée. trois nœuds arrachés. devine ce qui saigne.
+hint3: auto | La corde concernée sonne sa note en continu léger.
+success: ce que je n'ai pas pu dire. ... trois nœuds manquaient : les plus courts. c'est toujours les plus courts qui manquent.
+effects: flag noeud_lu ; releve 2 ; CLARTE +3 ; page 13 ; page 14
+after: sq09_ysolde_noeud
+
+@ E08 | La chambre noire | z05
+phrase: il fallait développer la photo dans l'ordre des bains, parce qu'une image qui monte du noir, ça se surveille comme une marée : ni trop tôt, ni trop tard.
+intro: l'agrandisseur, trois bains, la lampe rouge, le métronome d'anselme. cinq feuilles. la note sur l'agrandisseur : 90-15-60.
+hint1: ANSELME | jeanne ne développait jamais au-delà de quatre-vingt-dix. elle disait : après, c'est du noir qui mange.
+hint2: NOTE | 90-15-60. comme une vie : révéler, arrêter, fixer.
+hint3: auto | Le métronome accentue les temps 30/60/90 d'un toc plus grave.
+success: la pointe. la boîte. un télescope. ... et une silhouette de dos, assise sur le banc. il m'attend là-bas. ... il m'attend.
+effects: give photo_pointe ; flag photo_developpee ; releve 1 ; CLARTE +1 ; seq SQ-12
+
+@ E09 | Les carillons | z08
+phrase: il fallait rejouer la phrase des pétrels sur les cloches nommées, parce que la mélodie des oiseaux est la seule chanson que le verger connaisse par cœur.
+intro: au crépuscule, les pétrels chantent quatre notes. douze cloches accordées autour du banc. les grosses sonnent grave.
+hint1: TOM | les pétrels, ça chante pareil tous les soirs. quatre notes. comme une maman qui compte ses poussins.
+hint2: YSOLDE | les cloches grosses sont graves. les fêlées comptent double en tendresse.
+hint3: auto | La notation en gouttes d'encre se rejoue à volonté.
+success: sol, si bémol, sol, ré. la cloche fêlée comptait quand même. ... sur la dernière note, le vent se lève et fait répondre toutes les cloches à la fois, sans autre logique que la beauté. le monde applaudit, poliment.
+effects: flag melodie_jouee ; releve 2 ; CLARTE +2 ; page 10 ; flag velune_voie_verger
+sfx: verger_toutes_cloches
+
+@ E10 | La lentille du phare | z13
+phrase: il fallait aligner les trois prismes pour que le faisceau s'attarde sur la pointe, parce qu'un phare ne montre pas la mer : il montre les gens.
+intro: la lentille de fresnel. trois prismes, trois molettes, un poids d'horlogerie. le faisceau doit s'attarder. l'inégalité est la signature.
+hint1: MAREK | mon frère réglait la tendresse de la rotation. cherche ce qui est INÉGAL : les angles égaux, c'est pour les phares qui n'aiment personne.
+hint2: JOURNAL | attard 12 — la pointe sait compter. (journal 163, page du 12/09, main d'Esteban)
+hint3: auto | La lentille d'arpenteur sur le prisme central révèle la graduation d'origine : 4-9-1.
+success: quatre, neuf, un. douze degrés d'attarde. le faisceau balaie la mer et s'arrête une demi-seconde sur la pointe. ... il a réglé la tendresse de la rotation. on corrige pas ça.
+effects: flag lentille_reglee ; releve 2 ; CLARTE +2 ; page 18
+after: sq15b_marek_lanterne
+
+@ E11 | Le cadran de la terrasse | z18
+phrase: il fallait lire l'ombre du mât pour régler l'heure vraie, parce que les veilleurs ne donnent jamais l'heure : ils la posent, comme une offrande.
+intro: le gnomon de la terrasse. l'ombre sur les dalles gravées. une couronne de laiton à deux anneaux. une plaque : « +7 min ».
+hint1: MAREK | l'ombre dit, la couronne répète. la plaque corrige. trois politesses emboîtées.
+hint2: PLAQUE | le soleil avance, l'ombre suit, toi, tu notes.
+hint3: auto | Les dalles correctes reçoivent un liseré.
+success: onze heures vraies. plus sept minutes d'équation. onze heures sept. ... l'exactitude est une politesse envers le soleil. la veille est préchauffée.
+effects: flag cadran_regle ; flag veille_prechauffee ; releve 1 ; CLARTE +1
+
+@ E12 | La grotte des marées | z14
+phrase: il fallait naviguer dans la grotte en comptant les clapotis sur les repères, parce que dans le noir, l'eau est la seule voix qui compte juste.
+intro: trois boyaux. la lampe éclaire à trois mètres. les repères des passeurs : chaque virage se prend au nième clapot après le repère. l'eau frappe toutes les quatre secondes.
+hint1: ANSELME | les passeurs comptaient les coups d'eau. quatre secondes entre deux coups. mon beau-père naviguait en comptant. il disait : l'eau, c'est un chef d'orchestre patient.
+hint2: BAZ | dans une grotte, gamine, t'écoutes pas la lumière, t'écoutes les coups. l'eau frappe toujours les mêmes temps. ceux qui pressent les coups, la mer les garde.
+hint3: auto | Les points d'encre du comptage s'espacent quand on approche du bon compte.
+success: est au troisième. descente au cinquième. tout droit au deuxième. puis le silence. ... le bassin ne clapote pas : il respire. le dernier virage se reconnaît à l'absence.
+effects: flag grotte_traversee ; releve 2 ; CLARTE +2
+
+@ E13 | Les trois sœurs | z18
+phrase: il fallait viser les deux phares éteints depuis la terrasse pour reporter leur alignement sur la carte, parce que les sœurs mortes gardent encore les caps.
+intro: le théodolite. la grande-sœur à l'ouest, la petite-sœur au sud-est, éteintes. deux visées, deux droites sur la carte, une intersection.
+hint1: MAREK | les vieilles sœurs gardent les caps. vise-les. elles se sont éteintes, elles ont rien dit au contraire : un cap, ça s'éteint pas, ça se relève.
+hint2: OMBELINE | deux relèvements, une intersection, une certitude. c'est comme ça qu'on vérifie qu'un endroit existe. certains endroits ont besoin qu'on les vérifie.
+hint3: auto | Le réticule respire plus fort près des silhouettes et les lignes de la carte s'aimantent.
+success: deux cent soixante-deux. cent dix-huit. les droites se croisent sur la pointe. ... la pointe. vérifiée deux fois. au cœur et à la règle.
+effects: flag pointe_verifiee ; releve 3 ; CLARTE +3
+
+@ E14 | La clé du vent | z14
+phrase: il fallait assembler girouette, sifflet et plume, parce que certaines clés n'ouvrent que par le temps qu'il fait.
+intro: trois pièces sur l'enclume de roche. la notice pliée d'esteban : « le vent dit où / la voix dit quand / la plume dit pourquoi ».
+hint1: NOTICE | le vent dit où. la voix dit quand. la plume dit pourquoi.
+hint2: SIDONIE | le vent, la voix, la plume : c'est même pas une énigme, c'est une définition. c'est UN TRUC BIEN FAIT, voilà.
+hint3: auto | L'aimantage des pièces est renforcé.
+success: sa girouette, son sifflet, sa plume. une clé de vent. il a laissé une clé qui n'ouvre que par le temps qu'il fait. ... c'est la chose la plus Esteban qui soit.
+effects: take girouette_1889 ; take sifflet_esteban ; take plume_esteban ; give cle_du_vent ; flag cle_assemblee ; releve 1 ; CLARTE +1
+
+@ E15 | La boîte au vent | z17
+phrase: il fallait orienter la boîte sous le vent dominant, parce qu'elle n'ouvre pas par force : elle ouvre par équilibre.
+intro: la boîte rouge, penchée, entêtée. le pied de girouette du facteur riou, vide depuis 1901. les roseaux penchent à l'ouest.
+hint1: PLAQUE | le vent ouvre ce qui s'aligne. le reste, il le garde. — r.
+hint2: BAZ | le vent d'ouest, gamine, il traverse tout ce qui se met de travers. mets-toi dans son sens, pour une fois.
+hint3: auto | La cordelette de la boîte frémit dans l'axe juste.
+success: dans l'axe. tenir. ... le vent siffle dans le sifflet, la plume vibre — la boîte s'ouvre comme une fleur mécanique, lentement.
+effects: flag boite_ouverte ; releve 1 ; CLARTE +1
+sfx: boite_fleur
+
+@ E16 | Le télescope de velune | z17
+phrase: il fallait régler la mise au point sur le mot velune gravé sur la bague, parce que certains instruments ne visent pas l'espace : ils visent les sentiments.
+intro: le télescope de marine, braqué sur le large. la bague de mise au point porte trois gravures : un poisson, une étoile, et une vague sous un croissant, polie par des pouces.
+hint1: LENTILLE | la gravure de la vague-lune brille un peu plus que les autres. l'usure de l'amour est lumineuse.
+hint2: PENSEE | trois gravures. le poisson, l'étoile... et une vague avec une lune. ... une vague avec une lune. la lumière sur l'eau quand elle ondule. ... velune. il a mis notre mot sur son instrument.
+hint3: auto | Filou pose sa tête sur le trépied, regard sur la boîte.
+success: ...une lettre. il y a une lettre. ... mon prénom. c'est mon prénom dessus. c'est son écriture.
+effects: flag lettre_vue ; releve 1 ; CLARTE +1 ; flag velune_voie_telescope
+after: pointe_lettre
+
+# ── Secrets-énigmes (7.5) ────────────────────────────────────────────────
+
+@ S01 | Le message sous la colle | z03
+phrase: il fallait décoller l'affiche du bal à la vapeur, patiemment, parce que les murs d'ici sont des archives fainéantes.
+intro: deux couches de colle. sous l'affiche du bal de 1959, quelque chose d'écrit.
+hint1: EMERIC | la vapeur, mademoiselle. tout ce qui est collé se décolle à la patience. c'est vrai des affiches et des gens.
+hint2: auto | Les coins de l'affiche se soulèvent d'eux-mêmes.
+hint3: auto | Les coins de l'affiche se soulèvent d'eux-mêmes.
+success: une lettre de 1959. « je t'attendrai au bal. si tu ne viens pas, je danserai avec le mur, il a ta patience. — m. » ... ils s'écrivaient déjà sur les murs, ici. ça n'a jamais cessé.
+effects: secret S01 ; CLARTE +1 ; releve 1
+
+@ S02 | L'heure qui manque | z03
+phrase: il fallait trouver 15h47 sur trois horloges, parce qu'une heure effacée se cherche là où les heures se passent le mot.
+intro: 15h47. l'heure que la brume a mangée. trois horloges à vérifier : le beffroi, la gare, le dispensaire.
+hint1: ANSELME | une heure effacée, mademoiselle, c'est une heure qu'on ne peut plus jamais prendre. cherchez-la là où on regarde l'heure sans la voir.
+hint2: auto | Les horloges déjà vérifiées se cochent dans le carnet.
+hint3: auto | Les horloges déjà vérifiées se cochent dans le carnet.
+success: trois horloges. trois fois l'aiguille qui trébuche à 15h46 et qui revient. ... l'heure est tombée entre deux gardes. je la salue.
+effects: secret S02 ; echo E-03 ; CLARTE +1
+
+@ S06 | La machine de Till | z04
+phrase: il fallait actionner les trois seaux dans l'ordre de la marée, parce que même une machine idiote a un horaire.
+intro: l'atelier de l'estran : trois seaux, une manivelle, une ardoise. « machine à remonter les marées — till ». trois litres d'eau à remuer avec dignité.
+hint1: TOM | c'est la machine de till. elle remonte les marées. enfin, elle remonte trois litres. c'est un prototype.
+hint2: auto | L'ardoise indique : BM → PM1 → PM2.
+hint3: auto | L'ardoise indique : BM → PM1 → PM2.
+success: basse mer, première montante, pleine mer. trois seaux, trois litres, une dignité intacte. ... till a construit une marée de poche. il a raison : ça tient dans une ardoise.
+effects: secret S06 ; give carnet_till ; LIEN-JUMEAUX +1 ; CLARTE +1
+
+@ S08 | Le morse du baliseur | z04
+phrase: il fallait lire les éclats de la balise en morse, parce qu'un ancien gardien laissait ses rêves aux marées nocturnes.
+intro: à marée haute, la nuit, la balise radio claque. les éclats forment des groupes. une feuille de déchiffrage traînait dans le bureau d'anselme.
+hint1: ANSELME | la feuille de morse ? elle est dans le tiroir des choses inutiles. c'est le tiroir le plus plein de la gare.
+hint2: auto | Les groupes d'éclats sont notés en points d'encre au fur et à mesure.
+hint3: auto | Les groupes d'éclats sont notés en points d'encre au fur et à mesure.
+success: R-E-V-E-S P-L-U-S G-R-A-N-D. rêves plus grand. ... un gardien du siècle dernier laissait ça aux marées de nuit. le message arrive quand même. c'est le genre de message qui arrive toujours.
+effects: secret S08 ; CLARTE +1

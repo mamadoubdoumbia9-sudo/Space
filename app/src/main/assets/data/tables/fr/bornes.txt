@@ -1,0 +1,43 @@
+# Les 40 bornes d'arpenteur (GDD Annexe N) : relevé gravé, lisible à la lentille.
+# Format : id | lieu | main, année | texte
+
+B01 | croisement des douaniers | A.V., 1936 | ici le chemin hésite. les chemins qui hésitent sont les honnêtes. A.V.
+B02 | la vasière, sud | A.V., 1936 | 3,2 Toises au grand_bleu. le limon monte d'une main par marée de vives-eaux. la terre aussi respire. A.V.
+B03 | le muret du port | A.V., 1937 | repère d'affection. de ce point, le 12 août 1917, on a vu tomber la comète du soir. (elle n'est tombée nulle part. elle est passée. on exagère toujours ce qu'on aime. c'est une mesure, aussi.) A.V.
+B04 | la gare, quai 1 | A.V., 1937 | azimut 262 sur la grande- sœur. les caps ne s'éteignent pas. les lampes, seulement. A.V.
+B05 | la plaque tournante | A.V., 1937 | trois voies, une seule mer. l'enclenchement est une morale. A.V.
+B06 | la falaise haute | A.V., 1938 | c'est le point le plus venté du relevé. j'écris ces lignes en tenant mon carnet à deux mains. ce qui tient à deux mains tient. A.V.
+B07 | le verger, allée centrale | A.V., 1938 | 300 cloches. le vent fait la lecture. l'arpenteur, ici, ne sert qu'à écouter. A.V.
+B08 | la lisière du bois | A.V., 1939 | 2 000 tiges, 40 000 étiquettes, une seule question : à qui revient la mémoire ? réponse au prochain relevé. (le prochain relevé n'a jamais eu lieu : la guerre. la question tient toujours. A.V., majesté des parenthèses posthumes : ombeline a fermé la parenthèse en 1992, voir B22.)
+B09 | la corniche, mi-chemin | A.V., 1946 | je reviens de la guerre. la côte est toujours là. je ne sais pas laquelle des deux de nous est la plus fidèle. A.V.
+B10 | la corniche, nichoir (avant qu'il existe) | A.V., 1946 | bon vent d'est. aucun oiseau ne niche ici. c'est un scandale. (réparé en 2019. E.S. — la main inconnue, un siècle plus tard : la borne répond à la borne : le relevé est un dialogue entre morts et vivants : c'est sa définition.)
+B11 | la table de roche (grotte) | A.V., 1946 | les passeurs gravent en bas, les arpenteurs gravent en haut. tout le monde écrit sur cette île. c'est ce qui la tient debout. A.V.
+B12 | le passage, 4e piquet | A.V., 1946 | 700 mètres de monde une heure par lune. les vraies routes ont des horaires. A.V.
+B13 | la pointe | A.V., 1946 | terminus du relevé. au-delà, le grand bleu refuse la toise. je m'incline. A.V.
+B14 | le port, cale est | O.V. (ombreline), 1991 | reprise du serment. les bornes de 1936 tiennent. je les nettoie une à une. la gratitude a des mains. O.V.
+B15 | le beffroi, pilier nord | O.V., 1991 | 15h47 a disparu des horloges cette année. j'ai noté le vide. on note aussi les vides. surtout les vides. O.V.
+B16 | le marché, tableau | O.V., 1992 | sous l'affiche du bal, une lettre de 1959. je l'ai laissée. les archéologues du cœur passeront. O.V.
+B17 | la ruelle du sel | O.V., 1993 | 12 pas de large. une charrette et demi. l'échelle des rues, c'est l'échelle des vies qu'on mène dedans. O.V.
+B18 | le quai du bac | O.V., 1995 | la decideuse a 40 ans. baz la graisse en jurant doucement. la tendresse a un régisseur. O.V.
+B19 | la gare, banc 3 | O.V., 1996 | l'usure dit l'attente. j'ai mesuré le creux : 2,3 centimètres de siècles. les gens s'assoient où les absents s'asseyaient. la boussole des veilleurs. O.V.
+B20 | la chambre noire (annexe) | O.V., 1997 | anselme garde le local colis. j'y ai rangé les produits de 1962. tout ce qui développe encore mérite une porte. O.V.
+B21 | la dune double (anse) | O.V., 1998 | creusée par des enfants il y a longtemps. refermée par la même ignorance bienheureuse. on ne relève pas les trésors. on relève les routes. les trésors s'enterrent debout. O.V.
+B22 | la lisière, réponse | O.V., 1992 | fermeture de la parenthèse de la borne 08 : la mémoire revient à ceux qui relisent. c'est tout. c'est assez. O.V.
+B23 | le sommet, 200e marche | O.V., 2001 | 214 marches. je les ai recomptées à 53 ans, en pleurant pour rien, ce qui veut dire pour tout. les arpenteuses pleurent pour rien tous les cent ans. c'est calendaire. O.V.
+B24 | la porte du phare | O.V., 2003 | de l'extérieur, on croit que c'est une porte. de l'intérieur, on sait que c'est une épaule. O.V.
+B25 | le verger, grande allée | O.V., 2005 | dernier relevé de ma campagne. je cède le nord à la jeune main. (quelle jeune main ? O.V. n'écrit pas. 2020 : la main inconnue commence. le passage de relais se lit ENTRE les bornes : 2005 → 2020 : quinze ans de silence gravé : la relève n'est pas automatique : elle se lève quand elle se lève.)
+B26 | le muret, retour | E.S. (main inconnue), 2020 | 14 ans. je reprends le nord après la dame. elle l'a su la première année. elle dit rien. elle m'a laissé la roche la plus plate. c'est sa façon d'encourager.
+B27 | le nichoir 9 | E.S., 2020 | 140 boîtes, une seule occupée. le général est revenu. A.V. disait : aucun oiseau ne niche ici. monsieur, on a réparé le scandal.
+B28 | la corniche, pétrels | E.S., 2020 | comptés : 118. ils sont plus que nous. c'est rassurant. (reprise mot pour mot de la page 46-2020 : la page du carnet est née ICI, sur la borne : le jeu écrit ses sources : les pages citent les bornes : personne ne le verra : les deux qui le verront auront gagné quelque chose.)
+B29 | la gare, sous le tableau | E.S., 2020 | assis sur le banc trois, en face du panneau, on voit le reflet de la ligne des habitués. (la setup d'E02, GRAVÉE : l'énigme du miroir était sur une borne depuis le début : le joueur qui frotte la borne 29 SAIT où se placer avant de le chercher : la borne est un indice niveau 1 diégétique : la lentille paie encore.)
+B30 | la voie 1 | E.S., 2021 | la voie du large. je l'ai aiguillée pour personne. les messages pour personne arrivent quand même.
+B31 | la vasière, nord | E.S., 2021 | les salicornes sont bonnes cette année. ça ne relève rien. tant pis. je relève.
+B32 | le bois, mélèze 214 | E.S., 2021 | le plus bel arbre de la spirale. je le garde pour la suite.
+B33 | la falaise, vent d'ouest | E.S., 2022 | le vent efface la craie, pas le burin. leçon de relevé n°1 de la dame : gravez ce qui doit tenir, écrivez ce qui doit partir. je grave. pour l'instant je grave.
+B34 | l'escalier du sommet | E.S., 2022 | 214 marches. je les ai recomptées à 17 ans pour rien, ce qui veut dire pour tout. (il reprend la borne 23 mot pour mot, à dix-neuf ans d'écart : l'école continue : ombeline pleurera en frottant cette borne-ci au NG+ : c'est la seule interaction qui ajoute une pensée d'ombreline : « ...il m'a rendu mes mots gravés. c'est la plus belle rente de ma carrière.
+B35 | la pointe, le poteau | E.S., 2023 | le trou de la girouette attend depuis 1901. j'ai mesuré : il tient encore une tige de 12 millimètres. le monde est patient avec les projets.
+B36 | la grotte, entrée | E.S., 2024 | la grotte ouvre à la lune des marées. les repères des passeurs comptent les clapotis. j'ai appris le compte. pour rien. pour tout.
+B37 | le passage, 9e piquet | E.S., 2024 | "les vraies routes ont des horaires." — A.V., 1936. monsieur : la vôtre, j'ai vérifié. elle ouvre ce soir.
+B38 | la pointe, la boîte | E.S., 2025 | la boîte au vent prend les lettres des vivants, des partants et des timides. j'ai mesuré sa fente : 9 millimètres. une lettre pliée en trois passe juste. je le sais. je l'ai testé. (testé avec quoi ? la première ébauche. la borne ne le dit pas. la lettre, si : « neuf brouillons. dix. je sais plus.
+B39 | le cabinet, seuil | E.S., 2025 | dernier point. l'itinéraire est complet. je le laisse à la dame des cartes : elle saura quoi en faire. c'est une professionnelle. (l'itinéraire glissé dans la sacoche au prologue, C-10 : la feuille d'ombeline : EST le relevé 39 : la mission « plan de veille
+B40 | sans lieu (la borne errante) | E.S., 2025 | cette borne n'est pas plantée. je l'ai taillée et je la promène. elle sera plantée par quelqu'un d'autre, à un endroit que je ne choisis pas. c'est la seule partie de mon relevé que je laisse ouverte.

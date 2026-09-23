@@ -1,0 +1,53 @@
+# Les étiquettes du bois des noms (GDD Annexe F 1→20 et Annexe Q 51→80).
+# Format : n° | texte
+
+1 | MARIE-LA — TERRE-NEUVAS 1904 — le pain lève, j'en fais trop pour une.
+2 | PAPA — MER DEHORS 1951 — j'ai appris la marelle. tu me montreras l'autre.
+3 | JEANNE — GARE 1979 — les trains s'arrêtent, toi non.
+4 | CORENTIN — LE LARGE 1962 — je t'ai laissé la veste. garde la veste.
+5 | MADE & LÉO — MARIÉS ICI-MÊME 1934 — on reviendra par l'ouest.
+6 | FILS — VIEUX-QUAI 1998 — ta mère dit que tu as grandi. elle a raison comme toujours.
+7 | L'ÉQUIPAGE DU SAINT-EUMÈLE — 1707 — neuf piquets. merci.
+8 | À CELLE QUI LUIMÊME — 1921 —
+9 | PAPA — 2009 — MER DEHORS — tu me manques en noms propres.
+10 | LE GÉNÉRAL — NICHOIR 9 — 2019 — bon retour.
+11 | MAMIE ROSA — LE FOUR — 1980 — tes galettes manquent au village entier.
+12 | FRÈRE — HÔTEL-DIEU 1946 — j'ai pris ta place au filet. elle est chaude.
+13 | LOHEN — PORT-CENDRE 2013 — bien arrivée.
+14 | ESTEBAN — PHARE 2020 — engagé.
+15 | MAMAN — SALINES DU SUD 2016 — j'ai pris la mer en face. elle est pareille que la tienne.
+16 | YSOLDE — 1998 —
+17 | SIDONIE — LES ÉTOILES 2025 — t'as mieux réussi que nous tous.
+18 | À MOI-MÊME — 60 ANS — rendez-vous en 2040. on verra ce qui reste.
+19 | LE CHAT — LE MARCHÉ — 2011 —
+20 | TOUTE LA CLASSE — 11 NOVEMBRE 2025 — on a lu les trente noms. ils sont revenus un peu.
+51 | ALPHONSE — LE LARGE 1921 — le filet est raccommodé. il attend son second homme.
+52 | MÈRE ANGÈLE — LA FLÈCHE 1930 — le catéchisme dit de ne pas pleurer. le bois dit de venir ici. le bois a raison plus souvent.
+53 | PETIT JOJO — LA ROUGEOLE 1943 — pas la mer, pas la guerre : la rougeole, six ans, injuste. le bois prend tout le monde. c'est son métier d'en prendre tout le monde.
+54 | MARIE-CLAIRE — LE TRAIN DES ADIEUX 1919 — partie vers la ville, revenue en esprit. les étiquettes, c'est pour les deux.
+55 | LE MAIRE HENRIOT 1902-1940 — il a fait paver la place. la place vit. les pavés non plus. voilà la hiérarchie vraie des choses.
+56 | AU POÈTE DU DIMANCHE — 1955 — tes vers étaient mauvais et chaque dimanche. le bois les garde. le bois juge pas les moyennes.
+57 | PÈRE ET FILS — LE MÊME BATEAU 1958 — le bateau est rentré. vous pas. le bateau raconte encore. c'est assez. c'est presque trop.
+58 | LOUISE — L'ORGUE 1912 — tu jouais faux à l'église. le village entier te l'a dit cent fois. le village entier viendrait t'entendre jouer faux maintenant. ce sera notre faute, à nous.
+59 | LA CLASSE 2018 — ON A LU LES NOMS — trente noms, novembre, vent debout. on a eu froid. on a eu raison.
+60 | LA CLASSE 2019 — ON A LU LES NOMS — pareil. on reviendra. c'est nous maintenant, les anciens.
+61 | LA CLASSE 2020 — ON A LU LES NOMS — dehors, masqués, à distance. on a quand même lu. surtout quand même.
+62 | LA CLASSE 2021 — ON A LU LES NOMS — tom a fait tomber le carton. on a recompté. trente. il en manquait plus un.
+63 | LA CLASSE 2022 — ON A LU LES NOMS — till a écrit les noms sur son ardoise pour rien. on a tout relu de son ardoise.
+64 | LA CLASSE 2023 — ON A LU LES NOMS — l'instit dit que notre voix porte jusqu'ici. on a vérifié. elle porte.
+65 | LA CLASSE 2024 — ON A LU LES NOMS — le garçon aux oiseaux est venu avec nous. il a lu le dernier nom très lentement. il savait. on savait pas qu'il savait.
+66 | LES TROIS DU BALISEUR — 1937 — la nuit, la lampe, le froid. le trio qui a tenu vingt ans sans un mot. les mots, c'était pour la terre. la lampe, pour la mer.
+67 | BERTE — L'AÏEULE DE MARTA — 1949 — le café tient depuis ton comptoir. la vague ratée est toujours peinte. elle rate toujours. c'est notre étoile à nous.
+68 | LE VIEUX SAUL — LE BAC 1933 — tu as passé quarante ans à dire "attention à la marche". la marche, elle, t'a pas fait attention. c'est comme ça. attention à la marche, les vivants.
+69 | ZÉLIE — 1912 — partie à la ville pour le théâtre. revenue en légende. ici, les deux sont des métiers.
+70 | GASPARD — LE FOUR 1925 — ton four chauffe encore. les pains d'ici ont toujours ton crissement de croûte. un four, ça laisse des dettes de goût.
+71 | MARGOT — LA POSTE 1930 — tu as trié soixante ans de lettres de gens qui s'aimaient mal. la tienne, tu l'as jamais postée. elle est quelque part. quelqu'un la trouvera. les murs d'ici rendent toujours.
+72 | AU PREMIER VEILLEUR — FRÈRE ALDOUS — 1863 — "nous tenons la lampe pour ceux qui ne peuvent pas revenir." — la devise, c'est toi. la lampe, c'est nous.
+73 | LE CHIEN DU BALISEUR — 1937 — il aboyait aux récupérations. une fois, il a réveillé tout le monde. une fois, ça suffit : voilà une carrière.
+74 | TONTON LOUIS — LA GRANDE GUERRE — parti en chantant. revenu en silence. reparti, lui, dans le silence. on chante pour lui maintenant. mal. mais on chante.
+75 | LA FIANCÉE DU CAPITAINE — 1911 — il a dit : une saison. la mer a dit : jamais. le bois dit : ici, toujours. le bois a le dernier mot. le bois a toujours le dernier mot.
+76 | NANNIE — 1922 — la première à étiqueter un chien. on t'a suivie. tout le bois des chiens est à toi.
+77 | LE RÉVEILLEUR DU PORT — 1928 — cinquante ans à sonner les marées à la corne. la corne s'en souvient. la corne sonne encore. c'est ta voix, un peu.
+78 | AUX DIX-SEPT DU 17 JANVIER — L'HIVER BLANC 1861 — vous n'êtes pas partis : la mer a pris l'avance. nous, on a gardé la mémoire de l'ardoise. l'ardoise a gardé vos noms. on les relit chaque année à la mairie. froidement. tendrement.
+79 | ESTEBAN — PHARE 2026 —
+80 | À CELLE OU CELUI QUI LIT CETTE DERNIÈRE ÉTIQUETTE — le bois est plein. nous n'avons plus de place pour les départs. alors nous avons décidé une chose : on ne partira plus. signé : tout le monde, ici, depuis 1602.

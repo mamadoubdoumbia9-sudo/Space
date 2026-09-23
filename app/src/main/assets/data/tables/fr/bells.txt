@@ -1,0 +1,46 @@
+# Les 43 cloches nominatives du verger (GDD Annexe M). Chaque cloche sonnée joue sa micro-fiche.
+# Format : n° | nom, année | texte (vide = cloche sans voix : voir note) | note
+
+1 | MARGUERITE, 1901 | j'ai gardé le phare trente ans. le phare m'a gardée autant. qu'on ne me plaigne pas : j'ai vu plus de couchers de soleil que de dentistes. c'est une belle arithmétique. | 
+2 | JEANNE (LA PREMIÈRE), 1904 | terre-neuvas. mon homme, mes frères, mon fils. la mer les a pris debout. moi elle m'a laissée assise. on fait ce qu'on peut avec sa position. | 
+3 | PHILOMÈNE, 1912 | institutrice. j'ai appris à lire à quatre-vingts gosses. ils m'ont appris à mourir sans bruit : ils ont tous grandi, voyez. c'est réussi, une classe qui grandit. | 
+4 | L'ÉQUIPAGE DU SAINT-EUMÈLE (neuf noms), 1707 |  | neuf coups, un par sauvé — pas de voix : la cloche compte.
+5 | AUGUSTE, 1917 | la Grande Départie. j'ai eu vingt ans six mois. la marelle de l'école s'arrêtait à la case huit pour moi. la case neuf, je la laisse aux vivants. elle est à eux. | 
+6 | MARIE-LA, 1904 | la femme de l'étiquette du bois. le pain lève encore, auguste. j'en fais toujours trop pour une. | 
+7 | JOSEPH (L'AÎNÉ DES TROIS), 1918 | mes deux frères sont rentrés. moi pas. on ne choisit pas son côté de la mer. on choisit juste de quel côté on sonne. | 
+8 | RAOUL, 1917 |  | morse : ·−·· · ·· −·−− (RAOUL) — la seule cloche morse du verger.
+9 | CÉLINE, 1923 | sage-femme. j'ai fait entrer ce village à la vie quarante ans. la cloche sonne en fa. c'est la note des nouveau- nés qui crient. je l'ai choisie moi-même. | 
+10 | LA GRANDE DÉPORTÉE (anonyme), 1918 | on n'a jamais su laquelle de nous cette cloche pleurait. alors on l'a laissée anonyme. les anonymes, c'est les nôtres quand on a trop de chagrin pour compter. | 
+11 | ANATOLE, 1936 | arpenteur. j'ai levé la corniche trois fois. la troisième fois, elle m'a échappé : la brume l'a prise entre deux relevés. mesurez, les jeunes. mesurez VITE. c'est la seule prière du métier. | 
+12 | LE VIEUX DOCTEUR, 1936 | j'ai soigné le verger entier. les cloches ne toussent jamais. j'aurais dû consulter ELLES, plus souvent, au lieu de consulter pour elles. | 
+13 | ODETTE (LA GRAND-MÈRE DU BOIS), 1961 | j'ai appris à étiqueter à tout un village. on écrit court, on accroche solide, on revient vivre. c'est la méthode. c'est toute la méthode. | 
+14 | PIERRE (LE PÈRE SORÈNE), 2009 |  | trois coups, comme le pilote du large clignote — pas de voix.
+15 | MARLÈNE (LA FEMME DE BAZ), 2011 | il fait le tour de l'estuaire pour mon anniversaire. tous les ans. le bac chante une corde. si t'entends un jour une corde chanter sur l'eau, c'est moi. réponds pas. souris juste. | 
+16 | JEANNE (LA FEMME D'ANSELME), 1998 | j'ai détesté les trains. j'ai épousé une gare par défi. quarante ans de défis, figurez- vous que j'ai gagné. anselme, cir moins fort. je t'entends d'ici. | 
+17 | FRÈRE (L'AÎNÉ), 1955 | j'ai gardé tes bottes, petit. elles m'ont fait des ampoules à ta place. ... c'est rien. c'est des ampoules. on s'échange que ça, des frères : des ampoules et des cloches. | 
+18 | L'HÔTESSE DU BAC, 1972 | dernier traversant, premier souvenir. la traversée de 22 heures qui a remporté tout le reste. | 
+19 | MADE & LÉO, 1934 | mariés ici même, sous le pommier penché. on est revenus par l'ouest, comme promis. chacun sa fois. on s'est retrouvés dans la cloche. c'est petit, une cloche. on est bien, dedans. | 
+20 | LE CHIEN DU DOCTEUR, 1922 | douze ans de généreux | 
+21 | ONCLE AURÉLIEN (VASSEUR), 1948 | la Flottille. mon village natal. quatre ans, et personne ne s'en souvenait plus. alors j'ai fondé le serment. mesurez, nommez, consignez, RELISEZ. c'est le serment. relisez, surtout. c'est le seul mot du serment qui sauve. | 
+22 | LE CHEF DE GARE DE 1889, 1920 | j'ai ouvert la ligne. un train, c'est une promesse avec des roues. on m'a repris les roues. j'ai gardé la promesse. elle pèse rien, une promesse. elle tient tout. | 
+23 | LA MÈRE DE JEANNE, 1930 | la maison chantait moins, disait ma fille. alors j'ai appris à la maison à chanter sans moi. c'est le seul héritage qui vaille : une maison qui chante. | 
+24 | TROIS FRÈRES (ensemble), 1918 | trente noms lus chaque novembre. la cloche sonne en TRIO : les trois battants ont été coulés d'un seul bronze : on n'a pas voulu les séparer au coulage : le fondeur a dit : "comme ils ont dormi ensemble gosses, ils sonneront ensemble" : le fondeur avait raison : il avait toujours raison, le fondeur. | 
+25 | L'ACCORDEUR DE PIANOS (LE PÈRE D'ARISTIDE), 1965 | j'ai accordé tout le canton. ma femme disait : tu accordes les autres, et nous ? je n'ai jamais su répondre. mon fils saura. ... mon fils saura. | 
+26 | ROSALIE, 1954 | l'infirmière de la Maison du Large, la première. on y apprend à dériver doucement, disait le prospectus. moi j'ai appris à tenir la main des dérives. c'est pareil. c'est mieux. | 
+27 | SŒUR ALDOUS (LE PREMIER DIRECTEUR), 1962 | la routine n'est pas une prison, mes sœurs. la routine est une rame. on rame tous ensemble, du même côté, à la même heure. c'est ça, sauver la mémoire : ramer. | 
+28 | LE FONDEUR DE CLOCHES, 1911 | j'ai coulé les cloches de la presqu'île moins une. celle que je n'ai pas coulée, c'est la grande, en haut. elle attend son bronze. elle attendra. je lui ai laissé le meilleur coin du vent. | 
+29 | GUSTAVE (LE DOULANIER), 1940 | j'ai porté les morts de la pointe au village, quarante ans, à dos d'homme. un jour le brancard est arrivé vide. on m'a dit : c'est toi, gustave. j'ai dit : bon. chargez la cloche, alors. elle pèse moins que ma vie. tout pèse moins que ma vie, à la fin. | 
+30 | LA VEILLEUSE, 1957 | veilleuse de la Grande-Sœur. on m'a éteinte par économie. quelle économie. | 
+31 | CORNÉLIE, 1968 | l'institutrice du Bois. la classe des étiquettes, c'était moi. chaque printemps, on renouvelle. les enfants demandent pourquoi. je dis : parce que le papier fatigué, ça se remplace, et les gens qu'on aime, pareil. ... ils ont mis des années à comprendre que je parlais d'eux. | 
+32 | LE PILOTE DU LARGE (l'ancien, pas celui du Ch3), 1975 | le ciré blanc, c'était moi avant l'autre. trois cligno- tements en partant : un pour la côte, un pour les miens, un pour le doute. le doute mérite sa lumière. | 
+33 | BAPTISTE, 1985 | noyé à vingt ans en sauvant un gamin de douze. le gamin a posé la cloche trente ans après. elle sonne en LA, la note du sauvetage. le gamin, c'est le père de... (la voix s'arrête : la cloche respecte le reste : certaines généalogies de sauvetage se taisent : le Ch4 les dira.) | 
+34 | FANNY, 1993 | j'ai tenu le café L'Écume avant marta. la vague ratée de l'enseigne, c'est moi qui l'ai peinte. ratée exprès. ... non. ratée pour de vrai. mais exprès aussi. c'est ça, l'enseigne d'une vie. | 
+35 | LE RÉGATEUR, 1999 | on m'a retrouvé face au vent. face au vent, les gars. si vous voulez me faire plaisir, mouillez jamais face au vent. ... ou mouillez face au vent. j'ai jamais su ce que je voulais. c'est pour ça que je régatais. | 
+36 | MAMIE ROSA (l'aïeule), 1980 | les galettes du 6 janvier. le congélateur communal, c'est moi qui l'ai inventé, avec le maire, un soir d'orage, pour une seule galette. le maire disait : rosa, on va pas armer un congélateur POUR UNE galette. j'ai dit : si. il a dit oui. c'était un bon maire. ma petite-fille garde la galette. gardez la galette. | 
+37 | THÉO (LE JUMEAU D'AÏEUL), 1971 | mort à sept ans, la coqueluche. mon jumeau a vécu. il a posé la cloche à soixante ans, en tremblant. elle sonne en double battant, deux cloches en une. le fondeur a dit : c'est impossible. papi a dit : fais-le quand même. le fondeur l'a fait. c'est pour ça qu'on aime les fondeurs. | 
+38 | L'ORGUE DE BARBARIE (la cloche des musiciens), 1931 | les musiciens du dimanche, tous ensemble, accordez vos regrets, un deux trois | 
+39 | LA BOUQUETIÈRE, 1946 | j'ai fleuri les mariages, les baptêmes, les enterrements. les mêmes fleurs pour tous : des œillets. les gens trouvaient ça drôle. c'était pas drôle. c'était une économie de guerre devenue tendresse de paix. l'œillet, c'est la fleur qui tient debout. comme tout le monde ici. debout, ou sonné. | 
+40 | LE LAMPISTE, 1929 | l'huile, la mèche, le polissage. la lampe, c'est une politesse qu'on répète chaque soir. j'ai poli. c'est tout ce que j'ai fait de ma vie : polir. ... c'est pas rien, polir. | 
+41 | ESTEBAN |  | sans fiche — si la grande cloche a été nommée ESTEBAN, la 41 tient une seule note, neuf secondes, avec elle.
+42 | À MOI-MÊME (l'étiquette 18 du bois, version cloche), 2020 | rendez-vous en 2040. on verra ce qui reste. | 
+43 | LA DERNIÈRE |  | muette : le fondeur l'a laissée sans battant. « la dernière cloche du verger sonnera pour la fin de la Brume. on n'en est pas là. on l'attend. »
