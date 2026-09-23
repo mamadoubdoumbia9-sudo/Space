@@ -397,6 +397,8 @@ class WorldScreen(game: Game) : Screen(game) {
 
     private fun renderThought() {
         val t = thoughtText ?: return
+        // une scène de dialogue au-dessus occupe déjà le bas de l'écran : la pensée attend son tour
+        if (game.screens.any { it !== this && it is DialogueScreen }) return
         val s = ui.s
         val fs = ui.font(17f)
         val maxW = min(p.width - 60 * s, 760 * s)

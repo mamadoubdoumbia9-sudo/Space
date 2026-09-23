@@ -23,6 +23,8 @@ class DialogueScreen(game: Game, val scene: Scene) : Screen(game) {
     private var waitLeft = 0f
     private var options: List<Option> = emptyList()
     private var btns = ArrayList<Ui.Btn>()
+    /** Centre du premier choix affiché (outillage : visite automatique). */
+    fun firstChoiceCenter(): Pair<Float, Float>? = btns.firstOrNull()?.let { (it.x + it.w / 2) to (it.y + it.h / 2) }
     private var pressed: String? = null
     private var finished = false
     private var lastSpeaker = ""
@@ -128,7 +130,8 @@ class DialogueScreen(game: Game, val scene: Scene) : Screen(game) {
                 val y = p.height - h - 14 * s
                 ui.inkPanel(x, y, panelW, h, 0.86f * a)
                 val speaker = c.speaker
-                val key = speaker.lowercase().replace('é', 'e')
+                val key0 = speaker.lowercase().replace('é', 'e')
+                val key = if (key0 == "tom" || key0 == "till") "tom_till" else key0
                 if (portraitW > 0f) {
                     val ph = h - 20 * s
                     val path = "art/characters/$key.png"

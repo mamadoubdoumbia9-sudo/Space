@@ -88,7 +88,13 @@ class Tour(val root: File, val out: File) {
         // ouvre le dialogue d'Ombeline si présent
         frames(20); shot("05_dialogue")
         var k = 0
-        while (game.top() is com.ateliermareebasse.cartographie.core.screens.DialogueScreen && k++ < 60) { tap(640f, 650f); }
+        while (game.top() is com.ateliermareebasse.cartographie.core.screens.DialogueScreen && k++ < 80) {
+            val d = game.top() as com.ateliermareebasse.cartographie.core.screens.DialogueScreen
+            val c = d.firstChoiceCenter()
+            if (c != null) tap(c.first, c.second) else tap(640f, 650f)
+        }
+        frames(60)  // laisse la cinématique / le voyage se terminer
+        if (game.top() is com.ateliermareebasse.cartographie.core.screens.CinematicScreen) { game.input(Input.Back); frames(30) }
         frames(10); shot("06_tableau")
         game.openCarnet(null); frames(10); shot("07_carnet"); game.pop()
         game.openCarnet("sacoche"); frames(10); shot("08_sacoche"); game.pop()
