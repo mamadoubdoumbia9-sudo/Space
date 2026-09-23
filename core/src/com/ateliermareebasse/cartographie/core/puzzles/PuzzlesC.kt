@@ -164,17 +164,22 @@ class E14CleDuVent(game: Game) : PuzzleScreen(game, "E14") {
         }
         // pièces libres
         var k = 0
-        for (pc in pieces) if (pc !in slots && pc != dragging) { drawPiece(pc, x + w * 0.2f, y + h * (0.7f + 0.09f * k) ); k++ }
+        for (pc in pieces) if (pc !in slots && pc != dragging) { drawPiece(pc, freeX(x, w, k), freeY(y, h)); k++ }
         dragging?.let { drawPiece(it, dx, dy) }
         boardBtn("assemble", x + w - 130 * s, y + h - 38 * s, 116 * s, 30 * s, game.str("e14.assemble"), enabled = slots.all { it != null })
     }
     private fun drawPiece(id: String, cx: Float, cy: Float) {
-        if (!p.image("art/items/$id.png", cx - 26 * s, cy - 26 * s, 52 * s, 52 * s)) p.fillRoundRect(cx - 40 * s, cy - 14 * s, 80 * s, 28 * s, 6 * s, Colors.LAITON)
+        // vignette de papier sous la pièce : l'icône est un lavis détouré, illisible à même l'établi sombre
+        ui.paper(cx - 26 * s, cy - 26 * s, 52 * s, 52 * s, 0.92f)
+        if (!p.image("art/items/$id.png", cx - 24 * s, cy - 24 * s, 48 * s, 48 * s)) p.fillRoundRect(cx - 20 * s, cy - 10 * s, 40 * s, 20 * s, 6 * s, Colors.LAITON)
         p.text(names[id] ?: id, cx, cy + 36 * s, ui.font(10f), Colors.PAPER, Font.HAND, Align.CENTER)
     }
+    // pièces libres : en rangée sous les notes, à gauche de l'établi (les cartes de 52 px ne se chevauchent plus)
+    private fun freeX(x: Float, w: Float, k: Int) = x + w * 0.1f + k * 72 * s
+    private fun freeY(y: Float, h: Float) = y + h * 0.8f
     private fun pieceAt(ex: Float, ey: Float, x: Float, y: Float, w: Float, h: Float): String? {
         var k = 0
-        for (pc in pieces) if (pc !in slots) { val px = x + w * 0.2f; val py = y + h * (0.7f + 0.09f * k); if (abs(ex - px) < 50 * s && abs(ey - py) < 26 * s) return pc; k++ }
+        for (pc in pieces) if (pc !in slots) { val px = freeX(x, w, k); val py = freeY(y, h); if (abs(ex - px) < 34 * s && abs(ey - py) < 34 * s) return pc; k++ }
         for (i in 0..2) { val sy = y + h * (0.18f + 0.26f * i); if (abs(ex - (x + w * 0.62f)) < 60 * s && abs(ey - sy) < 28 * s) slots[i]?.let { val id = it; slots[i] = null; return id } }
         return null
     }
