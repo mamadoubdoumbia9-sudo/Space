@@ -61,7 +61,7 @@ class ContentTests(val root: File) {
             for (c in content.cinematics.values) { if (c.shots.isEmpty()) err("cin ${c.id}: aucun plan"); for (sh in c.shots) sh.image?.let { if (!platform.assetExists(it)) err("cin ${c.id}: image manquante $it") } }
             for (id in listOf("CIN-01", "CIN-07", "CIN-08", "CIN-08b")) if (!content.cinematics.containsKey(id)) err("cinématique requise absente: $id")
             for (ch in content.characters.values) if (!platform.assetExists(ch.portrait)) warn("portrait manquant ${ch.portrait}")
-            for (it in content.items.values) { if (!platform.assetExists("art/items/${it.id}.png")) warn("icône manquante art/items/${it.id}.png"); if (it.thoughts["1"] == null) err("objet ${it.id}: pas de pensée 1") }
+            for (it in content.items.values) { if (!it.glyph && !platform.assetExists("art/items/${it.id}.png")) err("icône manquante art/items/${it.id}.png"); if (it.glyph && platform.assetExists("art/items/${it.id}.png")) warn("objet ${it.id} marqué glyph mais une icône existe"); if (it.thoughts["1"] == null) err("objet ${it.id}: pas de pensée 1") }
             if (!platform.assetExists("art/ui/map_world.jpg")) err("carte du monde manquante art/ui/map_world.jpg")
         }
         section("7. Chaînes de l'interface (fr/en)") { checkStrings(content, platform) }

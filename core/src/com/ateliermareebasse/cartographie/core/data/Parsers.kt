@@ -247,9 +247,9 @@ object Parsers {
     // ───────────────────────────── OBJETS (.itm) ────────────────────────────
     fun parseItems(file: String, text: String): Map<String, ItemDef> {
         val out = LinkedHashMap<String, ItemDef>()
-        var id = ""; var name = ""; var cat = "souvenir"; var sniff: String? = null; var note: String? = null; var hold = false
+        var id = ""; var name = ""; var cat = "souvenir"; var sniff: String? = null; var note: String? = null; var hold = false; var glyph = false
         var th = LinkedHashMap<String, String>()
-        fun flush() { if (id.isNotEmpty()) out[id] = ItemDef(id, name, cat, sniff, note, th, hold); id = ""; th = LinkedHashMap(); sniff = null; note = null; hold = false }
+        fun flush() { if (id.isNotEmpty()) out[id] = ItemDef(id, name, cat, sniff, note, th, hold, glyph); id = ""; th = LinkedHashMap(); sniff = null; note = null; hold = false; glyph = false }
         for (raw in text.lines()) {
             val t = raw.trim()
             if (t.isEmpty() || t.startsWith("#")) continue
@@ -257,7 +257,7 @@ object Parsers {
                 flush()
                 val p = t.substring(2).split('|').map { it.trim() }
                 id = p[0]; name = p.getOrElse(1) { id }; cat = p.getOrElse(2) { "souvenir" }
-                for (x in p.drop(3)) { if (x.startsWith("sniff=")) sniff = x.substring(6) else if (x == "hold") hold = true }
+                for (x in p.drop(3)) { if (x.startsWith("sniff=")) sniff = x.substring(6) else if (x == "hold") hold = true else if (x == "glyph") glyph = true }
                 continue
             }
             val k = t.substringBefore(':').trim(); val v = t.substringAfter(':', "").trim()

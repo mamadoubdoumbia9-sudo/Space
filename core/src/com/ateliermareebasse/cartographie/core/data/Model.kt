@@ -92,6 +92,7 @@ class ItemDef(
     val id: String, val name: String, val category: String, val sniff: String?, val note: String?,
     val thoughts: Map<String, String>,   // "1","2","10","10+"
     val hold: Boolean,
+    val glyph: Boolean = false,   // objet secondaire : glyphe de catégorie, pas d'icône dédiée
 )
 
 class PageDef(val n: Int, val where: String, val date: String, val birds: Int, val lines: List<String>)

@@ -92,13 +92,11 @@ img_refs |= {f"art/characters/{c}.png" for c in chars}
 img_refs |= {f"art/items/{i}.png" for i in items}
 img_refs |= {"art/ui/map_world.jpg", "art/ui/grain.png", "art/ui/vignette.png"}
 missing_img = sorted(r for r in img_refs if not os.path.exists(os.path.join(ASSETS, r)))
-major_items = ["lentille_arpenteur", "boussole_esteban", "carnet_comptage", "plume_esteban", "sifflet_esteban", "girouette_1889",
-               "ruban_memoire", "lampe_tempete", "photo_pointe", "fil_de_plomb", "cle_du_vent", "lettre_esteban"]
+glyph_items = set(re.findall(r"^@\s*([a-z_0-9]+)\s*\|[^\n]*\|\s*glyph\b", read(os.path.join(DATA, "items", "fr", "items.itm")), re.M))
+img_refs -= {f"art/items/{i}.png" for i in glyph_items}   # objets secondaires : glyphe de catégorie déclaré dans items.itm
+missing_img = sorted(r for r in img_refs if not os.path.exists(os.path.join(ASSETS, r)))
 for r in missing_img:
-    if r.startswith("art/items/") and r[len("art/items/"):-4] not in major_items:
-        warn(f"icône secondaire absente (glyphe de catégorie utilisé) : {r}")
-    else:
-        fail(f"image référencée absente : {r}")
+    fail(f"image référencée absente : {r}")
 if not missing_img:
     ok(f"{len(img_refs)} images référencées, toutes présentes")
 else:

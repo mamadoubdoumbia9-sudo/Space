@@ -1,6 +1,7 @@
 # Registre de sacoche (GDD 5.17 objets majeurs + Annexe E objets secondaires).
 # Format :
-#   @ id | Nom affiché | catégorie | sniff=clé_filou | flags…
+#   @ id | Nom affiché | catégorie | sniff=clé_filou | flags… (hold : maintien requis ; glyph : objet secondaire dessiné
+#     par le glyphe d'encre de sa catégorie, sans icône dédiée — les 12 objets majeurs du GDD 5.17 ont une icône art/items/<id>.png)
 #   1: pensée au premier examen
 #   2: pensée au deuxième examen
 #   10: pensée de fidélité (dixième examen)
@@ -82,157 +83,157 @@ note: Onze plis. Se relit à l'infini. Se serre.
 
 # ── Objets secondaires (Annexe E) ──────────────────────────────────────────
 
-@ itineraire_ombeline | L'itinéraire d'Ombeline | document
+@ itineraire_ombeline | L'itinéraire d'Ombeline | document | glyph
 note: « Le chemin des douaniers est coupé au sud. Passe par le haut. »
 1: son écriture de plan : des flèches, pas de mots. passe par le haut. elle dessine les conseils, elle ne les donne pas.
 2: elle a marqué la gare d'une croix. pas la corniche. elle savait où je devais passer avant moi.
 10: je le garde plié en quatre. c'est la première carte de la journée. c'est elle qui l'a faite.
 
-@ galette_anselme | Une galette de sarrasin | consommable | sniff=galettes
+@ galette_anselme | Une galette de sarrasin | consommable | sniff=galettes | glyph
 note: La recette de Jeanne. Se partage avec Filou.
 1: la moitié du nord-ouest dans une crêpe. il avait raison. anselme la sous-estime depuis quarante ans.
 2: encore chaude. anselme la garde sous un torchon comme une lettre qu'on n'a pas fini de lire.
 10: filou en a eu la moitié. c'est la règle des galettes : elles ne se mangent pas seul.
 
-@ gomme_rouge | La gomme rouge | souvenir
+@ gomme_rouge | La gomme rouge | souvenir | glyph
 note: Biseautée. Sans usage : « ça partage mal ».
 1: la gomme rouge du cabinet. biseautée par vingt ans de repentirs. ombeline dit qu'une carte sans gomme est un mensonge sans remords.
 2: je l'ai prise sans raison. les objets sans usage sont ceux qu'on garde le plus longtemps. c'est une loi de sacoche.
 10: elle efface tout sauf ce qu'on voudrait. c'est une gomme honnête.
 
-@ balle_estragon | La balle d'estragon | consommable | sniff=billes
+@ balle_estragon | La balle d'estragon | consommable | sniff=billes | glyph
 note: Une balle de chiffon qui sent l'estragon. Pour jouer avec Filou.
 1: une balle de chiffon roulée dans l'estragon. c'est lui qui la faisait. filou la reconnaît au parfum avant de la voir.
 2: filou la rapporte et ne la lâche pas tout de suite. il négocie. il a appris avec les jumeaux.
 10: elle a perdu son odeur. filou la rapporte quand même. les chiens ne jouent pas avec les objets. ils jouent avec les gens.
 
-@ croquettes | Les croquettes de Rosa | consommable
+@ croquettes | Les croquettes de Rosa | consommable | glyph
 note: Rosa en garde un sac sous le banc. « Pour le chien du garçon. »
 1: rosa a un sac sous le banc « pour le chien du garçon ». elle l'a acheté il y a neuf jours. elle savait qu'il repasserait.
 2: filou mange assis très droit. il a le sens des anciens, même pour les croquettes.
 10: le sac est presque vide. rosa en a racheté un. elle ne dira pas quand.
 
-@ salicornes | Des salicornes | consommable
+@ salicornes | Des salicornes | consommable | glyph
 note: Grignotage de vasière. Salé, croquant, un peu d'humeur.
 1: des salicornes. le grignotage de la vasière. salé comme la mer, croquant comme un vendredi.
 2: filou en croque une, recrache. il révise sa position sur le sel.
 10: j'en ai plein les poches. je sens la vasière. c'est un parfum de cartographe.
 
-@ fraises | Des fraises du verger | consommable
+@ fraises | Des fraises du verger | consommable | glyph
 note: Sous les cloches, un carré de fraises. Aurore le mouton les garde de loin.
 1: des fraises sous les cloches. le vent les sonne, elles mûrissent en musique.
 2: aurore le mouton les regarde depuis la barrière avec une indifférence souveraine. les fraises ne sont pas dans son mandat.
 10: la dernière est pour filou. il ne les aime pas. il la prend quand même : c'est un cadeau.
 
-@ bille_de_tom | Une bille de Tom | souvenir
+@ bille_de_tom | Une bille de Tom | souvenir | glyph
 note: Une bille de politesse. Tom honore ses contrats.
 1: la bille de politesse. tom en garde une entre chaque doigt, prête à payer. il honore les contrats.
 2: elle est verte avec une bulle dedans. till l'a choisie. till choisit toujours celles avec un défaut : « c'est là qu'on voit l'intérieur ».
 10: je la garde dans la poche des repères. c'est un instrument de mesure : elle mesure la parole donnée.
 
-@ craie | Un bout de craie | outil
+@ craie | Un bout de craie | outil | glyph
 note: Pour la marelle. La case 9 se redessine.
 1: une craie de marelle. la case 9 s'efface la première : c'est celle où l'on saute le plus fort.
 2: till l'a taillée en pointe. il dessine les chiffres comme des lettres.
 10: j'ai redessiné la neuf. la grâce. on ne redessine pas la grâce tous les jours.
 
-@ thermos | Le thermos du verger | consommable
+@ thermos | Le thermos du verger | consommable | glyph
 note: Chocolat de mission. Trop chaud, puis froid. Jamais bon. Toujours là.
 1: un thermos oublié sur le banc face à la mer. chocolat. il y a encore de la buée dedans.
 2: il est à marek. il monte au verger le mardi. il ne l'a jamais dit. le thermos le dit pour lui.
 10: je lui rendrai. ou pas. les objets qui circulent entre les gens font des cartes aussi.
 
-@ feutre_ysolde | Le feutre d'Ysolde | outil
+@ feutre_ysolde | Le feutre d'Ysolde | outil | glyph
 note: Pour écrire sur ce qui n'a pas de nom.
 1: le feutre d'ysolde. il écrit sur le coton, sur le bois, sur les cloches. sur tout ce qui n'a pas encore de nom.
 2: elle me l'a donné sans dire pour quoi. ysolde ne dit pas pour quoi. elle donne, et le pour quoi arrive tout seul.
 10: il a le capuchon mordu. quelqu'un a hésité longtemps avec ce feutre. quelqu'un d'autre que moi.
 
-@ papier_fantome | Du papier fantôme | outil
+@ papier_fantome | Du papier fantôme | outil | glyph
 note: Les étiquettes du bois. Elles luisent la nuit.
 1: le papier fantôme des étiquettes. il pâlit au soleil et luit la nuit. les noms des absents brillent quand on ne les regarde pas.
 2: ombeline en garde un tiroir. « pour les effacés », dit-elle. je n'ai jamais osé demander lesquels.
 10: j'en ai plein la sacoche. je pourrais étiqueter un bois entier. je n'ai qu'un nom à écrire.
 
-@ plume_attente | La plume d'attente | outil
+@ plume_attente | La plume d'attente | outil | glyph
 note: Émeric la prête aux gens qui n'ont pas trouvé leurs mots.
 1: la plume d'attente d'émeric. il la prête à ceux qui n'ont pas encore leurs mots. « elle attend avec vous, mademoiselle. c'est son métier. »
 2: la pointe est neuve. personne n'écrit avec. on la tient, c'est tout. c'est une plume de patience.
 10: je l'ai gardée neuf jours. elle attend encore. moi, j'ai trouvé les mots.
 
-@ colis_adele | Le colis d'Adèle | document
+@ colis_adele | Le colis d'Adèle | document | glyph
 note: Trois fioles pour le phare. À livrer à Marek.
 1: trois fioles, du coton, une ordonnance pliée en huit. adèle emballe comme elle parle : sans trembler.
 2: le nom sur le colis est écrit en entier. SORÈNE MAREK. elle écrit les gens en entier. c'est du dévouement en blouse.
 10: il pèse une visite. les colis d'adèle, c'est des lettres à elle.
 
-@ crayon_marek | Le crayon de Marek | souvenir
+@ crayon_marek | Le crayon de Marek | souvenir | glyph
 note: Un crayon de charpentier marqué d'un M. Volé par les jumeaux pour le faire monter au village.
 1: un crayon de charpentier, plat, marqué d'un M au couteau. les jumeaux l'ont pris pour le faire monter au village. il n'est pas monté.
 2: la mine est taillée au canif, en biseau. il écrit le journal 163 avec ça. cent soixante-trois ans de consignes au crayon de charpentier.
 10: on est en danger de tendresse, sur cette île. c'est le seul risque qu'on court.
 
-@ pain_de_rosa | Un pain de Rosa | consommable
+@ pain_de_rosa | Un pain de Rosa | consommable | glyph
 note: Un pain de la fournée d'essai. Le pain du frère.
 1: le pain de la fournée d'essai. rosa l'appelle le pain du frère. elle ne dit pas lequel.
 2: la croûte est marquée d'un R au couteau. rosa signe ses pains. c'est une boulangère de manuscrits.
 10: encore chaud dans la sacoche. il tient chaud aux cartes. c'est une bouillotte de blé.
 
-@ chocolat_mission | Le chocolat de mission | souvenir
+@ chocolat_mission | Le chocolat de mission | souvenir | glyph
 note: Interdit. C'est un artefact.
 1: un carré de chocolat de mission. celui de la nuit du cabestan. je ne le mangerai pas. interdit. c'est un artefact.
 2: deux centimètres. le protocole des catastrophes. la science a un prix.
 10: il a blanchi. il est immangeable. il est parfait.
 
-@ plume_general | Une plume du Général | souvenir
+@ plume_general | Une plume du Général | souvenir | glyph
 note: Trouvée devant le nichoir 9. Sept ans de fidélité.
 1: une plume du général, devant le nichoir 9. sept ans de fidélité à une boîte. les pétrels reviennent, c'est leur métier.
 2: elle est grise, bordée de blanc. une plume de dos. il les dessinait de dos.
 10: je la garde dans le carnet. entre deux pages. c'est un marque-page qui revient.
 
-@ billet_1979 | Un billet périmé de 1979 | souvenir
+@ billet_1979 | Un billet périmé de 1979 | souvenir | glyph
 note: Anselme l'offre. Le dernier billet vendu.
 1: le dernier billet vendu, 1979. anselme l'a gardé quarante-sept ans dans sa casquette. il me l'a tendu comme un adieu qu'il n'a pas fait à l'époque.
 2: « valable une seule fois ». c'est écrit dessus. c'est la définition de beaucoup de choses.
 10: je ne le composterai jamais. certains billets sont pour les trains qui ne partent pas.
 
-@ ticket_bac | Un ticket du bac | souvenir
+@ ticket_bac | Un ticket du bac | souvenir | glyph
 note: Baz ne fait pas payer. Il donne le ticket quand même. « C'est ça, un service public. »
 1: le ticket du bac. baz ne fait pas payer. il donne le ticket quand même : « c'est ça, un service public ».
 2: il a été imprimé en 2003. baz en a une boîte. il en donnera jusqu'à la fin de la boîte, puis il arrêtera de traverser, dit-il. il ment.
 10: le numéro est le 114. le coefficient de ce soir. je ne crois pas aux signes. je les note.
 
-@ brindille_velune | Une brindille d'herbe à velune | souvenir
+@ brindille_velune | Une brindille d'herbe à velune | souvenir | glyph
 note: Ça pousse là où quelqu'un a été très aimé. Aucun usage.
 1: l'herbe à velune. ça pousse là où quelqu'un a été très aimé. il y en avait beaucoup, là-bas.
 2: elle sèche sans perdre sa couleur. c'est une herbe qui tient sa promesse.
 10: je la garde. tout le monde la garde. c'est le seul objet du monde qui ne sert qu'à ça : être gardé.
 
-@ ressort_boite | Le ressort de la boîte à musique | cle
+@ ressort_boite | Le ressort de la boîte à musique | cle | glyph
 note: La plume de ressort d'Aristide. Pris. Filou l'a vu.
 1: la plume de ressort. le bon diamètre. le mauvais geste. ça se voit à peine. ça se voit tout le temps.
 2: la boîte ne joue plus. aristide croit qu'elle a pris froid. filou sait.
 10: je le rendrai. ou je le garderai. les deux se ressemblent moins qu'on croit.
 
-@ bouteille_2013 | La bouteille de 2013 | souvenir
+@ bouteille_2013 | La bouteille de 2013 | souvenir | glyph
 note: Un mot à l'intérieur, écrit à deux mains d'enfants.
 1: une bouteille à la mer qui n'est jamais partie. le bouchon a tenu treize ans. le mot dedans : « on reviendra par l'ouest ». deux écritures.
 2: la mienne penche à gauche, la sienne à droite. ensemble, ça fait une ligne droite. on ne le savait pas, à neuf ans.
 10: je ne l'ouvrirai plus. certains mots sont faits pour rester dans le verre.
 
-@ carnet_till | Le carnet de Till | document
+@ carnet_till | Le carnet de Till | document | glyph
 note: Emprunté. Till écrit tout. « nuls ensemble », « on a bloqué le garçon », « 9 = la Grâce ».
 1: le carnet de till. il écrit tout. « nuls ensemble ». « on a bloqué le garçon ». « 9 = la grâce ». c'est un carnet de greffier de dix ans.
 2: à la dernière page : « la demoiselle trouve. » écrit avant que je trouve. till parie avec l'encre.
 10: je le lui rends demain. il aura déjà commencé le suivant. les gens qui notent tout ne s'arrêtent pas. je suis bien placée.
 
-@ fanion_1994 | Le petit fanion de 1994 | souvenir
+@ fanion_1994 | Le petit fanion de 1994 | souvenir | glyph
 note: Un fanion de sauvetage, réplique. « Les fanions de sauvetage ne se coupent pas. »
 1: sidonie en fait des répliques en tissu. le vrai reste dans la cabine : le drapeau des gens qui descendent vivants.
 2: 1994 : l'année où la crevette a descendu quarante personnes dans la nuit, moteur coupé, au frein à main. sidonie avait deux ans. elle raconte comme si elle y était. elle y était : en dessous.
 10: je le garde dans le carnet. c'est un drapeau de poche pour les descentes difficiles.
 
-@ journal_vieux_quai | Le journal de Vieux-Quai | document
+@ journal_vieux_quai | Le journal de Vieux-Quai | document | glyph
 note: Les nouvelles du large. Baz ne lit plus les petits caractères ; ne jamais le dire.
 1: le journal de vieux-quai, daté d'hier. la météo marine en dernière page, le coefficient 114 en gras. le monde tourne sans nous demander.
 2: baz choisit ses nouvelles comme ses amarres : les grosses. je lui lirai les petites.

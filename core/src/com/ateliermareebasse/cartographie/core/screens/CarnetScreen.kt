@@ -121,7 +121,7 @@ class CarnetScreen(game: Game, startTab: String?) : MenuScreen(game) {
             val b = Ui.Btn("item:${it.id}", cx + 4 * s, cy + 4 * s, cell - 8 * s, cell - 8 * s, "")
             btns.add(b)
             p.fillRoundRect(b.x, b.y, b.w, b.h, 6 * s, Colors.withAlpha(if (selected == it.id) Colors.LAITON else Colors.PAPER_SHADE, if (selected == it.id) 0.5f else 0.35f))
-            if (!p.image("art/items/${it.id}.png", b.x + 10 * s, b.y + 6 * s, b.w - 20 * s, b.w - 30 * s)) ui.icon(categoryIcon(it.category), b.x + b.w / 2, b.y + b.h * 0.4f, 12 * s, Colors.INK_SOFT)
+            if (it.glyph || !p.image("art/items/${it.id}.png", b.x + 10 * s, b.y + 6 * s, b.w - 20 * s, b.w - 30 * s)) ui.icon(categoryIcon(it.category), b.x + b.w / 2, b.y + b.h * 0.4f, 12 * s, Colors.INK_SOFT)
             ui.paragraph(it.name, b.x + 2 * s, b.y + b.h - fs * 2.6f, b.w - 4 * s, fs, Colors.INK, Font.HAND, Align.CENTER, 1.1f, maxLines = 2)
             val n = st.inventory[it.id] ?: 1
             if (n > 1) p.text("×$n", b.x + b.w - 6 * s, b.y + 14 * s, fs, Colors.GARANCE, Font.MONO, Align.RIGHT)
