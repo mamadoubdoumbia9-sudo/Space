@@ -1,0 +1,79 @@
+# Pensées d'ambulation (GDD 5.19) — 1 bark par zone par tranche de marée, jamais pendant un dialogue,
+# jamais dans les 20 s suivant un choix encre-or. Colonne selon le trait dominant (D/C/R) ; HUMEUR module la fréquence.
+# Format : zone | trait | texte
+
+z01 | D | l'odeur d'encre et de cire. l'odeur de ce que je sais faire. c'est bon, de savoir ce qu'on sait faire.
+z01 | C | la mission d'aujourd'hui tient dans une sacoche. les grandes journées tiennent toujours dans de petites sacoches.
+z01 | R | le tiroir des effacés est plus plein ce mois-ci. je note. je note tout.
+
+z02 | D | les filets sèchent comme des hamacs de géants fatigués. le port se repose sur ses lauriers de dimanche.
+z02 | C | bonjour, la pointe. aujourd'hui je passe. — ...j'ai dit bonjour à un paysage. il a répondu, je crois.
+z02 | R | trois volets ouverts sur dix. un quartier qui dort sur ses absences. je note qui, je note quand.
+
+z03 | D | le beffroi marque la marée au lieu de l'heure. la ville a décidé que la mer était plus ponctuelle que le temps. elle a raison.
+z03 | C | la fanfare répète faux. c'est la seule fanfare au monde dont les fausses notes font applaudir.
+z03 | R | l'affichage du marché : deux couches de colle. sous l'affiche du bal, une affiche plus ancienne. les murs, ici, sont des archives fainéantes.
+
+z04 | D | l'estuaire sent le sucre brûlé des vasières. baz dit que c'est la mer qui mijote. baz dit beaucoup de choses justes sur des tonalités fausses.
+z04 | C | la decideuse tire son câble comme une vieille dame son tricot. avec la même patience et les mêmes nœuds.
+z04 | R | le pilonnage du ponton a neuf ans. neuf. je compte les clous neufs : trois. quelqu'un entretient ce ponton dans l'ombre. je le retrouve, un jour, mon inconnu des planches.
+
+z05 | D | anselme cire sa lampe. il y a des gens qui entretiennent des choses pour ne pas les pleurer. je marche avec une qui fait pareil avec un carnet.
+z05 | C | « terminus, le vent. » si je cartographiais les annonces intérieures, celle-ci mériterait un cadre.
+z05 | R | la salle d'attente a quatre banquettes. une seule est usée en creux : le banc trois. les gens s'assoient toujours où les absents s'asseyaient. c'est la boussole des veilles.
+
+z06 | D | les ronciers ont repris la voie 2. le monde reprend toujours ses terres. il a le temps, le monde. c'est tout ce qu'il a.
+z06 | C | la plaque tournante à bras. tourner un train à la force des bras. les ingénieurs d'avant avaient des idées d'avant. elles tenaient.
+z06 | R | trois aiguillages, deux verrouillés, un libre. la voie libre part vers la mer. ... sur une ligne morte, la voie libre, c'est la seule qui mente.
+
+z07 | D | sidonie a collé des étoiles au plafond de la cabine. la cabine monte vers un ciel vrai et garde le sien. chacun ses constellations de poche.
+z07 | C | quatre-vingts mètres de câble. une cabine rouge. le plus beau funiculaire du monde, probablement. je dis ça en cartographe. c'est-à-dire en menteuse officielle des reliefs.
+z07 | R | le compteur de voyages : 99 997. il va tomber rond. sidonie prépare quelque chose. sidonie prépare TOUJOURS quelque chose.
+
+z08 | D | trois cents cloches. trois cents noms. le vent les lit à sa façon, il change les airs mais il ne rate jamais un nom. c'est l'archiviste le plus fidèle de la presqu'île.
+z08 | C | le vent d'ouest joue les trois cents prénoms. c'est le seul annuaire téléphonique qui sonne tout seul.
+z08 | R | la cloche 12 est fêlée, la 66 sonne deux fois, la 88 sonne juste — ... la 88. la fausse d'avant. je note une permutation de cloches. c'est rien. c'est tout.
+
+z09 | D | les métiers battent comme des cœurs de maison. les maisons qui ont un cœur qui bat ne meurent jamais tout à fait.
+z09 | C | le mur des nœuds : mille phrases suspendues. la bibliothèque des gens qui ne parlaient pas.
+z09 | R | le panier à boutons a été trié par couleurs PUIS par tailles. la double exigence d'ysolde : esthétique ET réparation. je voudrais être triée comme ça, moi, un jour.
+
+z10 | D | quarante mille étiquettes claquent doucement. quarante mille petits pavillons de papier. la forêt hisse les couleurs des absents.
+z10 | C | les mélèzes rougissent. l'automne arrive comme une assistante discrète : tout le monde croit que c'est elle qui fait le beau travail.
+z10 | R | les sentiers se repèrent aux coquillages blancs. la signalétique d'ici tient dans une poche de vareuse. j'admire. je note. je vole l'idée pour la ville.
+
+z11 | D | la corniche porte les nichoirs comme des fenêtres veilleuses. le sentier des pétrels est un couloir d'hôtel très venté avec vue sur l'infini.
+z11 | C | l'épave du saint-eumèle, couchée comme une baleine en prière. le naufrage a des airs de sommeil.
+z11 | R | l'échelle de fer a trois barreaux neufs. ... le même entretien fantôme que le ponton. mon inconnu des planches grimpe, aussi.
+
+z12 | D | deux cent quatorze marches. je les connais une à une, moi aussi. c'est pas la fatigue qui compte les marches. c'est l'habitude des gens qu'on aime.
+z12 | C | la porte cloutée. les portes des phares sont des portes de temples : elles ne s'ouvrent que pour les gens qui ont apporté leur propre lumière.
+z12 | R | la boîte aux lettres de l'office n'a pas été relevée : trois recommandées. j'observe, je décide, j'assumerai.
+
+z13 | D | l'escalier en colimaçon : 131 marches et une par pas de veille. les phares ont la forme exacte de la patience.
+z13 | C | la lentille tournera ce soir. elle s'attarde sur la pointe. je l'ai vue le faire. je ne l'ai jamais dit à marek. ... je viens de me le dire.
+z13 | R | le journal 163 : la même phrase finale chaque nuit. « vent debout, il est quelque part sous ce vent. » un cap, pas une position. un cap, c'est une prière d'ingénieur.
+
+z14 | D | la lumière bleue entre par la résurgence. la grotte est une salle de bain du monde. tout y est rincé, tout y est calme.
+z14 | C | les repères des passeurs sur la table de roche : des générations de « on est passés par ici ». la carte la plus honnête que je connaisse.
+z14 | R | un sillon frais dans le polissage : quatre jours. ... j'ai appris à lire les sillons comme aristide lit les chansons. de dehors. par les mains des autres.
+
+z15 | D | cent galets blancs. je les avais comptés à neuf ans. les galets bougent, le compte tient. c'est ça, les amis d'enfance.
+z15 | C | l'anse en coquille. deux rochers, une planche : la première maison que j'aie jamais cartographiée. échelle 1/1.
+z15 | R | la dune double a bougé de deux mètres vers l'est depuis 2013. le sable déménage. les trésors, eux, ont la politesse de rester.
+
+z16 | D | la mer des deux côtés, à quarante centimètres. je marche au milieu du monde, sur un chemin qui n'existe qu'une heure par vingt-sept jours. les vrais chemins ont toujours eu des horaires.
+z16 | C | neuf piquets. neuf sauvés. le chemin du bout du monde est pavé de gens qui ont eu de la chance deux fois : la mer et les autres.
+z16 | R | le fil de plomb d'anselme compte le retour. nœud par nœud. je marche à l'économie de mer.
+
+# z17 : aucun bark (la pointe n'a droit qu'aux pensées de séquence — silence réglementaire, doctrine 13.3)
+# z18 : la terrasse est un lieu de repos — un seul bark, celui du regard
+z18 | D | tout ce que j'ai traversé tient dans un cercle de lampe. c'est petit, un monde, vu d'un phare. c'est pour ça qu'on en prend soin.
+z18 | C | le faisceau s'attarde sur la pointe. je le regarde s'attarder. c'est la seule chose que je ne mesurerai pas.
+z18 | R | la carte est allumée là où j'ai marché. le reste est noir. le noir, c'est pour la prochaine fois.
+
+# Variantes NG+ (relecture après la lettre)
+z04 | NG | trois clous neufs. c'était lui. il a entretenu le ponton tout l'été. jamais dit. jamais montré. sauf ici.
+z11 | NG | trois barreaux neufs. c'était lui aussi. mon inconnu des planches avait un nom. il en avait même deux.
+z07 | NG | 99 997. sidonie a programmé le cent-millième voyage pour quelqu'un. elle ne dira pas pour qui. je ne demanderai pas.
+z10 | NG | l'étiquette vierge a eu son mot. je le relis à chaque passage. les arbres, ça dure. les mots aussi, finalement.

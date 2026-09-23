@@ -1,0 +1,155 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Format .dlg (voir docs/FORMATS.md)
+#   ~ id [SI: cond] [once]     début de scène
+#   SPEAKER: texte             réplique (PENSEE = pensée de Lohen, * = didascalie)
+#   + texte [SI: cond] -> eff ; eff ; goto label     choix (+* = encre or, définitif)
+#   = label / > label [SI: cond]                     étiquette / saut
+#   ! cue arg                                        signal (sfx, music, wait, haptic…)
+#   end
+# ─────────────────────────────────────────────────────────────────────────────
+
+# 5.1 — [SQ-01] LE RÊVE DE VELUNE (prologue jouable, avant titre)
+~ prologue_reve
+! music track_01
+! wait 1.2
+PENSEE: Marche. Le papier est solide, ce soir. Fais comme si tu savais.
+* Devant un muret de brume qui se solidifie à mesure qu'on avance.
+VOIX: ...la marée n'attendra pas, tu sais.
++ « Je sais. » -> flag premier_mot_je_sais
++ « Attends-moi. » -> flag premier_mot_attends
++ (presser le pas) -> flag premier_mot_presse
+* La silhouette assise sur le muret se lève — trois traits d'encre, jamais nette.
+VOIX: Dépêche-toi, Lo.
+* Lohen court. La silhouette s'éloigne d'autant.
+! sfx pluie_encre
+* La silhouette tombe en pluie d'encre. Les lucioles montent. L'eau devient lit.
+end
+
+# 5.2 — [SQ-02] LE CABINET, LE MATIN — OMBELINE
+~ sq02_ombeline once
+! sfx radio_gresil
+OMBELINE: Tu es réveillée avant la lumière. C'est un symptôme. Assieds-toi.
+LOHEN: C'est un choix de carnet. La lumière du matin est menteuse, elle flatte les côtes. Je préfère les mentir moi-même.
+OMBELINE: Mhm. Note ça quelque part. Sur toi, idéalement.
+! sfx tiroir
+OMBELINE: Il y a du café dans le cornet. Il est mauvais, il est chaud, c'est l'essentiel des matins.
+* Lohen prend le cornet.
+PENSEE: brûlé et parfait. comme tous les engagements de ma vie.
+> sq02_plan [SI: !ng+]
+OMBELINE: Même plan qu'hier, tu te souviens ?
+LOHEN: Je me souviens de tout. C'est mon problème.
+OMBELINE: C'en est un.
+> sq02_choix
+= sq02_plan
+OMBELINE: Ordre du jour. La mer monte ce soir à 114. Heures Bleues. Tu connais la chanson : ce que la marée découvre, l'Arpenteur le relève avant que la Brume ne s'y installe. Corniche est. Plan de veille. C'est à toi.
+= sq02_choix
++ « Corniche est. C'est là que nichent les pétrels d'Esteban. » -> +COURAGE ; goto c06a
++ « Un plan de veille un jour de grande marée. Vous me gâtez. » -> +HUMEUR ; goto c06b
++ (boire le café en silence) -> +RUSE ; goto c06c
+= c06a
+* Ombeline pose son crayon une demi-seconde de trop.
+OMBELINE: ...Mhm. C'est à toi, le plan.
+> c07
+= c06b
+OMBELINE: La gratitude des apprenties est une denrée rare. Je la mets en réserve pour l'hiver.
+* Un petit rire de nez — le seul du prologue.
+> c07
+= c06c
+* Ombeline continue comme si de rien n'était.
+OMBELINE: ...Tu as grandi de la largeur d'un trait de plume, cette semaine. C'est disproportionné. Fais attention aux portes.
+= c07
+OMBELINE: Prends la lentille. Elle réveille les marques fatiguées. Sur le terrain, si tu vois de l'effacé, tu regardes DESSUS avec elle, tu notes ce qui remonte.
+LOHEN: Et si rien ne remonte ?
+OMBELINE: Alors tu me le rapportes, et on fera ce qu'on fait toujours : le dessiner de mémoire. On a perdu des côtes entières comme ça. On les a redessinées de tête. Les gens nous croient des cartographes. Nous sommes des couturières d'horizons, ma fille.
+* Elle remonte ses lunettes.
+PENSEE: elle fait ça quand elle dit vrai. j'ai mon repère.
+OMBELINE: Une dernière chose.
+* Elle glisse une feuille pliée dans la sacoche de Lohen — l'itinéraire.
+-> give itineraire_ombeline
+OMBELINE: Le chemin des douaniers est coupé au sud. Passe par le haut. Et Lohen.
+LOHEN: Mhm ?
+OMBELINE: ...C'est droit. Ce que tu fais. Depuis cinq ans. C'est droit.
+! sfx piano_note
+! wait 3
+* Elle reprend son crayon.
++* « Je vous rapporte de quoi boucher un trou de carte. » -> +COURAGE ; flag c13a
++* « Vous me dites ça parce que Bec-de-lièvre a disparu ? » -> +COURAGE ; flag c13b ; goto c13b
++* « Bon. Marée basse. » -> +RUSE ; flag c13c
+> c14
+= c13b
+OMBELINE: Je te dis ça parce que le café est mauvais et que les mauvais cafés me rendent sincère. Le reste, tu le sais. Tu notes tout, toi. C'est pas de la méfiance, c'est du carnet.
+= c14
+* Sur le seuil, la radio rattrape Lohen.
+! sfx radio_gresil
+RADIO: ...coefficient cent-quatorze... la lune des marées... heureux — ceux qui ont des gens à attendre, rentr—
+* Coupure.
+PENSEE: même la radio s'essouffle, ce matin.
+-> give lentille_arpenteur ; flag lentille_prise ; seq SQ-02 ; tuto lentille
+end
+
+# 5.3 — [SQ-03] LE MURET — FILOU
+~ sq03_filou_muret once
+PENSEE: Un chien. Un chien attendu. Neuf jours, je compte les gamelles de Marta dans ma tête. Neuf.
+* Filou ne remue pas la queue. Il la remue en voyant Lohen — une fois, bas, contrôlé, comme un aveu.
++ « Où est-il, Filou ? » -> goto m03a
++ « Garde-le. » (lire l'étiquette du collier à voix haute) -> flag etiquette_lue ; goto m03b
++ (ne rien dire, caresser) -> +DOUCEUR ; FILOU +1 ; goto m03c
+= m03a
+* Filou regarde le large. Exactement le large.
+PENSEE: les chiens ne désignent pas. ils regardent. c'est plus fiable que nous, qui désignons.
+> m04
+= m03b
+FILOU: FIL. — IL CONNAÎT LE CHEMIN.
+PENSEE: c'est son écriture. c'est son écriture et il a abrégé FIL, comme si le mot entier pesait trop.
+> m04
+= m03c
+! haptic doux
+* Quatre secondes de caresse. Filou appuie sa tête contre la hanche de Lohen.
+PENSEE: neuf jours à attendre debout. les chiens n'ont pas notre talent pour mentir sur le bonheur.
+= m04
+* Dénouer la laisse : elle cède — le nœud était déjà défait. Il attendait la permission, pas la liberté.
+PENSEE: ...c'est un chien d'Esteban, jusqu'au bout de la laisse.
+! sfx filou_aboie
+* Il aboie une fois vers la ville, puis marche. Il sait où. Il a toujours su.
+-> filou_join ; seq SQ-03 ; flag filou_libere
+end
+
+~ sq03_marta once
+MARTA: Il a attendu, tu sais. Je lui ai porté de l'eau. Il buvait en regardant la rue. Les chiens qui regardent les rues, ça me fend. Tu me dois une caresse pour lui. Pas pour moi. Pour lui.
+! sfx marta_siffle
+* Elle siffle deux notes — le motif d'Esteban, discret.
++ « Pour lui, alors. » (caresser à nouveau) -> +DOUCEUR ; LIEN-MARTA +1 ; FILOU +1
++ « Vous l'avez vu, l'autre soir ? Celui qui l'a attaché ? » -> +RUSE ; goto m07a
++ « Il buvait en regardant la rue... » (laisser la phrase en suspens) -> +HUMEUR ; goto m07b
+> m_fin
+= m07a
+MARTA: J'ai vu mon comptoir et mes verres, ma chérie. Le reste, c'est la marée : ça passe la nuit, ça laisse des traces, on essuie.
+> m_fin
+= m07b
+MARTA: T'inquiète. Les rues de Port-Cendre, y en a quatre. Il les aura toutes regardées avant midi.
+= m_fin
+-> flag marta_rencontree
+end
+
+# Marta — reprises (café L'Écume)
+~ marta_cafe [SI: flag:marta_rencontree & !letter_read]
+MARTA: [[has:sifflet_esteban|Tu as le sifflet du petit ? Garde-le au chaud. Les sifflets, ça prend froid.|Un café ? Il est meilleur que celui d'Ombeline. C'est pas dur, remarque.]]
++ « Vous avez du nouveau ? » -> goto mc_nouveau
++ « Un café, oui. » -> +HUMEUR ; goto mc_cafe
++ (ne rien dire) -> goto mc_silence
+= mc_nouveau
+MARTA: Du nouveau, j'en ai quarante-trois disques et un juke-box qui en joue douze. Le reste, c'est la marée qui l'apporte. Va voir la marée, ma chérie.
+end
+= mc_cafe
+* Elle pose la tasse sans regarder. Elle regarde la rue.
+PENSEE: elle aussi. tout le monde regarde la rue, ici. c'est une ville de fenêtres.
+end
+= mc_silence
+MARTA: Tu tiens de ta patronne. On se tait pareil, chez les Vasseur. On se tait droit.
+end
+
+~ marta_apres [SI: flag:marta_rencontree & letter_read]
+MARTA: Alors, tu as trouvé ce que tu cherchais ?
+LOHEN: J'ai trouvé ce que je ne cherchais pas.
+MARTA: C'est le mieux qu'on trouve, en général. Assieds-toi. Le café est chaud. Il est même bon, aujourd'hui. Ne le répète pas.
+end

@@ -1,0 +1,69 @@
+# Filou — les réactions (GDD 5.18). « Questionner Filou » sur un lieu ou un objet :
+# il réagit avec le corps, Lohen traduit avec sa marge d'erreur.
+# Format : clé | comportement | pensée
+# Les clés sont référencées par les hotspots (sniff=clé) et par les objets (sniff=clé).
+
+boussole | Il se couche, menton sur les pattes. | il ne la renifle pas. il la garde. les chiens connaissent les objets-veilleurs.
+muret | Il se rassoit à l'endroit exact du poteau. | neuf jours, cette place. c'est sa statue de lui-même.
+banc3 | Il monte sur le banc, se couche en boule. | ...il dort là où il a dormi. les chiens rendent les distances aux odeurs.
+galettes | Il guette, assis très droit. | politesse de chien affamé. il a le sens des anciens.
+tableau_departs | Il renifle le bas des palettes, éternue. | la peinture fraîche. ... ou l'absence. les deux piquent le museau.
+coffre | Il gratte trois fois le couvercle. | trois fois. il insiste. il a compté les choses dedans, à sa façon.
+cabine | Il pose sa tête sur le genou de Sidonie. | il l'adopte. filou adopte vite les gens qui parlent aux machines.
+contrepoids | Il souffle par la truffe. | respect du poids. c'est un chien de métier.
+cloche88 | Il se fige, oreilles en avant. | il a entendu quelque chose que je n'entends pas. ... ou quelqu'un.
+cloche_sans_nom | Il recule d'un pas. | ...il n'aime pas les noms vides. lui qui porte le sien comme une médaille.
+atelier_ysolde | Il va se coucher sous le métier du fond. | sa place d'été. il connaît les maisons mieux que nos cartes.
+ruban | Il le renifle longuement, fronce le museau, puis se couche. | deux odeurs. la couturière et ... une seconde odeur. il ne dit pas. les chiens ne disent jamais.
+meleze214 | Il urine. | ...délimitatif. c'est SA propriété maintenant. papa-chien du territoire d'absence.
+etiquette_vierge | Il la renifle puis détourne la tête. | ...il sait. je ne veux pas savoir comment il sait.
+nichoir9 | Il frétille tout entier. | le général ! camarades de tempête !
+epave | Il descend l'échelle devant, sans regarder en arrière. | il connaît la maison d'aristide mieux que moi.
+boite_musique | Il couche les oreilles à plat, puis se rassoit au dernier accord. | désaccord = danger, accord = maison. la pédagogie du chien est plus simple que la nôtre. et plus juste.
+aristide | Il pose sa tête sur le genou de l'accordeur. | ...il y a des mains que les chiens plébiscitent. je ferais bien de suivre leurs conseils.
+sifflet | Il lève la tête très haut. | il attend l'oiseau. ou l'appelant.
+escalier214 | Il monte deux marches, s'assoit, attend. | il compte les pauses de lohen. il a sa méthode.
+porte_phare | Il griffe la porte basse, une fois. | le droit de passage des chiens. ça ne s'explique pas. ça se notifie.
+deuxieme_tasse | Il renifle la tasse vide, longuement. | ...neuf jours de tasse servie. les habitudes chaudes, disait marek. filou vient de dire la même chose. avec le museau.
+journal163 | Il se couche dessus. | il s'assoit sur l'histoire de la famille. c'est son droit. il en fait partie.
+fresnel | Il fixe le faisceau, immobile. | ...il regarde la lumière qui s'attarde sur la pointe. tous les soirs. il regarde ça, tous les soirs, depuis des années.
+annuaire | Il bâille. | l'ennui documentaire. je partage.
+girouette | Il renifle la main de marek après le don. | il vérifie les transmissions. la girouette sent le frère. conclusion de chien : famille.
+grotte | Il boit à la résurgence, se rassoit, regarde l'eau. | il attend que l'eau explique. l'eau explique jamais. il recommencera demain.
+phoque | Il s'assoit en tourne-disque, très droit. | présentation officielle des voisins. c'est très cérémonieux, ici.
+table_roche | Il pose une patte sur le sillon frais. | ...quatre jours. il est passé il y a quatre jours. filou le sait à la patte. moi je le sais au cœur. on ne mesure pas dans les mêmes unités.
+seuil_passage | Il plante ses quatre pattes, refuse. | ...il sait. les chiens savent.
+herbe_velune | Il en mange une touffe. | l'herbe des gens très aimés. ... il la mange. il la mange, comme on prend son dû d'amour.
+boite_rouge | Il se couche au pied du poteau, la tête posée sur les pattes, et soupire. | ...il soupire. les chiens ne soupirent pas par fatigue. ils soupirent par soulagement ou par attente. je crois qu'il fait les deux.
+telescope | Il regarde dans la direction opposée au télescope. | il regarde le chemin, pas l'horizon. il attend quelqu'un qui revient, pas quelqu'un qui part. ... je lui laisse son optimisme. il le mérite.
+lettre_avant | Il met sa tête sous la main de Lohen. | ...il me tient la main. sans les mains. ...allez, filou. on lit ensemble.
+lettre_apres | Il se couche contre la jambe, tout le flanc. | il fait le mur. le mur chaud. c'est son métier.
+terrasse | Il monte devant, les escaliers, en tête. | il ramène les gens. c'est ce qu'il fait depuis le début. chien de tête, cœur de mule.
+# F-37 à F-62 — réactions contextuelles mineures
+pluie | Il éternue au premier impact. | il éternue par politesse. même la pluie, il la salue.
+vent_est | Il se met au vent, nez haut. | il lit le journal du matin.
+petrels | Frénésie contenue, tout le corps, sans bouger les pattes. | il tremble d'envie et il tient. c'est un chien qui a des principes.
+contre_amiral | Respect mutuel, à distance. | deux hauts fonctionnaires. la protocolaire mutuelle des espèces.
+billes | Il ramasse les billes tombées, une par une. | il participe à l'économie.
+aurore | Indifférence souveraine réciproque. | un chien, un mouton : deux fonctionnaires de la lande qui ne se doivent rien.
+monsieur_erafle | Il l'ignore avec une science parfaite. | il sait ce qui se respecte.
+cafe_marta | Museau vers le comptoir, œil coupable. | odeur de chaussettes volées. nostalgie du crime parfait.
+four_rosa | Assis très droit, à douze mètres. | rayon d'action des odeurs dignes.
+bac | Il monte à bord avant tout le monde et s'assoit à la place d'honneur. | pilote honoraire.
+sieste_baz | Il monte la garde. | il relaye la sieste en sentinelle.
+cor_brume | Il chante avec, faux. | duo.
+salicornes | Il en croque une, recrache. | révision de position sur le sel.
+maree_montante | Il recule au rythme de l'eau. | il respecte les horaires.
+reve | Dans le rêve, il est là, assis sur l'eau. | même mes rêves ont du personnel.
+filets | Il renifle la maille à vide, éternue de la poussière d'écaille. | il lit les filets comme moi les cartes : par ce qu'il en reste.
+horloge_marine | Il penche la tête au tic, puis à l'autre. | soixante par minute. il compte aussi. tout le monde compte, dans cette maison.
+lit | Il pose la tête sur le drap, une seconde, puis renonce. | pas encore. il sait qu'on n'est pas venus dormir.
+gamelle | Il renifle la gamelle vide et regarde la porte du café. | neuf gamelles. il les a toutes comptées. il remerciera marta à sa façon : en revenant.
+kiosque | Il se couche sous l'estrade et ferme les yeux aux fausses notes. | mélomane. ou diplomate. les chiens confondent les deux avec talent.
+herons | Il s'immobilise en même temps qu'eux. | il a compris la règle : ici, on gagne en ne bougeant pas.
+caravane | Il monte sur la chaise, tourne trois fois, redescend. | il a testé l'œuvre. verdict : c'est une chaise.
+compteur | Il fixe le compteur, une oreille levée. | 99 997. il attend le tour rond, lui aussi. ou il attend sidonie. c'est pareil.
+verres_aristide | Il gémit doucement au verre le plus aigu. | la note qu'il n'aime pas. tout le monde en a une.
+marches_phare | Il s'arrête à la marche 87, renifle, repart. | il y a quelque chose à la marche 87. il ne dit pas quoi. il ne dit jamais.
+stalactites | Il lèche une stalactite de sel, fait la grimace. | la chapelle est salée. constat de chien. constat juste.
+piquets | Il regarde les piquets depuis le seuil, sans avancer. | il compte de loin. neuf. il sait compter ce qu'il ne traverse pas.

@@ -1,0 +1,55 @@
+# 5.14 — [SQ-20] L'ÉPILOGUE — LA TERRASSE, LA RÉPONSE
+
+~ sq20_marek_terrasse [SI: letter_read] once
+* Sans se retourner, la lampe sur lui, la mer en bas.
+MAREK: Alors.
+LOHEN: ...Alors.
+* Un temps.
+MAREK: C'est droit ?
+LOHEN: ... C'est droit.
+! sfx garde_corps_deux_tapes
+* Il hoche, deux tapes sur le garde-corps : ses « merci » à lui.
+MAREK: La vieille t'a formée, toi. Elle dit ça comme personne.
+* Il tend une tasse — la deuxième tasse, la chaude, l'habitude.
+MAREK: Bois. Tu vas avoir froid à écrire.
+-> flag terrasse_epilogue ; seq SQ-20 ; LIEN-MAREK +1
+PENSEE: la deuxième tasse. il me la donne. ce n'est pas qu'il n'espère plus. c'est qu'il partage l'habitude. c'est plus grand.
+end
+
+~ marek_terrasse_reprise [SI: flag:terrasse_epilogue & !chapter_done]
+MAREK: La boîte est en bas. Le vent est bon. Filou t'accompagnera, il a fini de faire la phrase muette. Va écrire. Je tiens la lampe.
+end
+
+~ marek_apres_chapitre [SI: chapter_done]
+MAREK: [[flag:cadran_regle|L'heure est vraie sur le cadran. On le voit depuis la place, paraît-il. Anselme m'a fait dire que ça lui suffisait comme réponse.|Le faisceau s'attarde toujours sur la pointe. Je le laisserai. On ne corrige pas ça.]]
+MAREK: T'es chez toi, ici. Y a deux tasses. Y en aura toujours deux.
+end
+
+# Le dépôt dans la boîte (après l'écran d'écriture) — les quatre variantes de D-06
+~ depot_reponse_lettre
+! sfx boite_avale
+* La gorge du vent : la boîte avale la lettre avec un soupir de mécanique satisfaite.
+PENSEE: voilà. c'est parti. c'est parti comme les pétrels : sans regarder derrière, en sachant revenir.
+end
+
+~ depot_reponse_poursuite
+* Lohen referme la boîte, vide. La corolle se replie, lentement.
+PENSEE: rien. pas un mot. les mots, je les lui dirai en face. je pars sur ses traces. c'est un métier de traceuse, ça, aussi.
+end
+
+~ depot_reponse_boussole
+! sfx laiton_pose
+* La boussole d'Esteban, posée au fond de la boîte. L'aiguille tourne, hésite, tient.
+PENSEE: tu me trouveras quand tu sauras où je suis. c'est ta boussole. elle sait mieux que moi.
+end
+
+~ depot_reponse_carte
+! sfx papier_plie
+* Lohen arrache la carte du carnet, la plie en oiseau, la pose dans la boîte.
+PENSEE: la carte du bout du monde. entière. il l'a voulue tendre, je l'ai faite tendre. qu'elle vole.
+end
+
+# F-08 — Tom, au loin (audio seul, jamais sous-titré : joué comme voix off sans texte)
+~ tom_au_loin
+! voice tom_till_gagne
+end

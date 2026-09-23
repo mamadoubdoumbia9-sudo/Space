@@ -1,0 +1,110 @@
+# 5.5 — [SQ-05] LA GARE D'ANSELME — ARBRE MAJEUR & D-01 « LE NOM EFFACÉ »
+
+~ sq05_anselme once
+* Il lève sa casquette.
+ANSELME: Mademoiselle l'arpentouze. Bienvenue au terminus. On arrive toujours à destination ici : la destination, c'est le mur. C'est une gare honnête.
+LOHEN: Vous n'avez pas vu passer un garçon aux oiseaux, cette semaine ?
+* Le chiffon s'arrête.
+ANSELME: Constaté : jeune homme, taille haute, sac léger. Quatre nuits, banc numéro trois. Dessinait des cartes et des volatiles. Signalé : rien. On ne signale pas les rêveurs, mademoiselle, on les nourrit.
+LOHEN: Vous l'avez nourri.
+ANSELME: Des galettes de sarrasin. La recette de Jeanne. Il disait que c'était la moitié du nord-ouest dans une crêpe. Il avait raison, c'était ma recette et je la sous-estime depuis quarante ans.
++ « Qu'est-ce qu'il dessinait, sur les cartes ? » -> +RUSE ; goto g06a
++ « Il a dit où il allait ? » -> +COURAGE ; goto g06b
++ « Quatre nuits... et après ? » -> +DOUCEUR ; goto g06c
+= g06a
+ANSELME: La pointe. Toujours la pointe. Le bout. Il dessinait le bout de notre monde comme si c'était un centre. Les amoureux des marges, mademoiselle, ça se reconnaît au crayon : ils noircissent les bords.
+-> flag indice_pointe
+> g07
+= g06b
+ANSELME: Il a dit « merci pour les galettes ».
+LOHEN: C'est tout ?
+ANSELME: C'est TOUT. Vous croyez que les adieux, c'est long ? Les adieux, c'est des galettes.
+> g07
+= g06c
+ANSELME: Après, je ne l'ai plus vu. La gare a deux sorties, mademoiselle : le quai et la mer. Il n'a pas pris le quai.
+* Il essuie la lampe qui brille déjà.
+PENSEE: cette lampe est propre depuis quarante ans. elle est juste fatiguée d'être cirée. comme lui.
+= g07
+-> flag anselme_rencontre ; seq SQ-05 ; LIEN-ANSELME +1
+* Le tableau des départs crisse dans la verrière. Une ligne y manque quelque chose.
+end
+
+# Après E02 (le tableau à palettes) — la révélation et D-01
+~ sq05_revelation [SI: puzzle:E02] once
+LOHEN: Anselme. Le tableau. La ligne des habitués. Le nom SORÈNE n'y est plus. Il y a des palettes blanches à la place.
+* Il ne se retourne pas d'un coup. Il se retourne en deux temps, comme les vieux quais.
+ANSELME: ...Je sais, mademoiselle. Je le sais depuis dimanche. La Brume est passée par mon tableau comme par une grille ouverte. Elle a pris l'habitude d'un garçon. Les habitudes, c'est ce qu'on a de plus volable.
+LOHEN: Il n'est pas parti depuis assez longtemps pour qu'on l'oublie ! Il n'est pas —
+ANSELME: Elle n'attend pas les délais, mademoiselle. Elle attend les relâchements. J'ai relâché mon regard sur cette ligne. Vieux chef de gare, œil moins vif, un dimanche de pluie. Elle a vu la fenêtre ouverte. Elle entre par les fatigues, la Brume. Par les fatigues et par les silences.
++* « Je repeins le nom. Maintenant. Vous m'aidez ? » -> +COURAGE ; decision D-01=a ; goto g12a
++* « On le repeindra quand je l'aurai ramené. Il repeindra lui-même. » -> +DOUCEUR ; decision D-01=b ; goto g12b
++* « Il y a autre chose que la Brume a mangé, ici ? » -> +RUSE ; decision D-01=c ; goto g12c
+= g12a
+* Un long temps. Sa montre bat deux fois.
+ANSELME: ...Il me faut le pinceau à lettres. Troisième tiroir. Et la bonne peinture, pas l'acrylique du chantier : la peinture d'habitude, celle qui prend en couches fines.
+! sfx tiroir
+ANSELME: Vous tenez l'échelle, mademoiselle. Je tiens la main. Elle tremble, mais elle tient.
+! hold repeindre 6
+* Anselme repeint SORÈNE, lettre à lettre. Lohen tient l'échelle. À la dernière lettre, il souffle sur le pinceau.
+ANSELME: Voilà. Rendez-vous compte : quarante-sept ans à garder des noms, c'est le premier que je repeins. Jeanne aura un mot pour ça, ce soir. Elle qui détestait les trains. Elle va rire de moi.
+* Il remonte sa casquette. La main tremble encore. La voix, non.
+ANSELME: Merci d'être venue me faire faire mon âge, mademoiselle. C'était temps.
+-> flag nom_repeint ; LIEN-ANSELME +2
+> g13
+= g12b
+* Il hoche, lent, apaisé.
+ANSELME: ...Oui. C'est plus juste. Un nom, c'est à celui qui le porte de le raviver. Je note ça, mademoiselle. Dans le carnet de Jeanne. « Un nom, c'est à celui qui le porte. » Vous êtes entrée dans les citations de la gare. C'est un honneur dangereux : je les répète pendant quarante ans.
+-> flag nom_attendu ; LIEN-ANSELME +1
+> g13
+= g12c
+* Il considère le tableau entier, de gauche à droite, comme on relit une vie.
+ANSELME: ...L'heure de 15h47. Elle n'existe plus nulle part. Plus dans les livres, plus dans les mémoires. Une heure effacée, mademoiselle, c'est une heure qu'on ne peut plus jamais prendre. J'ai des blancs, le mardi.
+* Il rit doucement.
+ANSELME: Elle a bon goût, la Brume. Elle prend les jours pluvieux d'abord.
+-> flag secret_S02_ouvert ; LIEN-ANSELME +1
+= g13
+* Avant de partir, il touche l'épaule de Lohen, se penche, la casquette à la main, comme pour une annonce d'horloge.
+ANSELME: Mademoiselle. Le garçon, au banc numéro trois... il parlait en dormant. J'ai l'ouïe des quais, ça ne dort jamais, l'ouïe.
+LOHEN: Qu'est-ce qu'il disait ?
+* Il remet sa casquette. Il ajuste sa montre. Il regarde le tableau, le même regard : celui qui a décidé.
+ANSELME: ...Il disait pardon. Juste ça. Des pardons, bien tenus, comme des billets qu'on garde pour un train qui n'arrive pas.
+ANSELME: Allez, mademoiselle. Les trains, ça n'arrive pas. Les gens, si. De temps en temps. Ça s'appelle l'espoir, c'est notre seul trafic.
+! sfx montre_bat
+-> flag revelation_gare ; cooldown anselme 60 ; CLARTE +1
+end
+
+# Anselme — reprises
+~ anselme_reprise_1 [SI: flag:anselme_rencontre & !puzzle:E02]
+ANSELME: Le tableau, mademoiselle. Regardez-le comme on regarde un quai : en attendant qu'il vous parle. Il crisse quand il a quelque chose à dire.
+end
+
+~ anselme_reprise_2 [SI: flag:revelation_gare & !flag:faveur_lampe_faite & !letter_read]
+ANSELME: [[decision:D-01=a|Le nom sèche. Il sèche bien. Les couches fines, mademoiselle : tout tient par les couches fines.|Le banc trois est libre. Il l'est toujours. C'est ça, une place gardée.]]
++ « Vous avez besoin de quelque chose, Anselme ? » [SI: seq>=SQ-10] -> goto ar_besoin
++ « Le grand frère est venu ? » -> goto ar_marek
++ (s'asseoir un instant) -> +DOUCEUR ; goto ar_banc
+= ar_besoin
+ANSELME: Ma lampe-tempête. Je l'ai prêtée au phare l'hiver dernier, la nuit de la panne. Le veilleur l'a gardée. Il garde tout, le veilleur. Si vous la voyez chez lui, dites-lui qu'elle me manque. Une lampe, ça se cire.
+-> flag faveur_lampe_ouverte
+end
+= ar_marek
+ANSELME: Le grand frère est venu deux fois. Il a regardé le banc trois, il a pas touché. Les gens qui touchent pas, mademoiselle, c'est ceux qui brûlent le plus.
+-> flag anselme_marek
+end
+= ar_banc
+PENSEE: le bois du banc trois est plus clair au milieu. quatre nuits, ça ne fait pas ça. c'est des années d'autres gens. il a dormi dans une place déjà creusée.
+end
+
+~ anselme_lampe_rendue [SI: flag:faveur_lampe_ouverte & has:lampe_tempete & !flag:faveur_lampe_faite]
+* Lohen tend la lampe-tempête.
+ANSELME: ...Elle a pris du sel. Il l'a laissée près de la lanterne, le bougre. Elle a veillé sans moi, une saison entière.
+* Il la cire, deux gestes, puis s'arrête.
+ANSELME: Le 13 au matin, mademoiselle, le grand frère est passé ici. Cinq heures et demie. Il a demandé si le premier train était parti. Il n'y a plus de premier train depuis onze ans. Il le sait. Il a demandé quand même.
+ANSELME: On demande les trains qui n'existent plus quand on veut savoir si quelqu'un a pu partir sans nous. Je lui ai dit non. Je lui ai menti, mademoiselle. On protège les frères comme on cire les lampes : sans qu'ils le voient.
+-> take lampe_tempete ; flag faveur_lampe_faite ; LIEN-MAREK +1 ; LIEN-ANSELME +1 ; CLARTE +1
+end
+
+~ anselme_apres [SI: letter_read]
+ANSELME: [[flag:nom_repeint|Le nom tient. Regardez-le briller dans la pénombre : un trait plus neuf que les autres. On le verra de loin, maintenant.|Je l'ai repeint hier soir, le nom. Après la visite du veilleur. On ne m'a pas demandé. On ne demande pas ça. On le fait quand la main est prête.]]
+ANSELME: Il reviendra prendre son habitude, mademoiselle. Les habitudes reviennent toujours à la gare. C'est la seule ligne qu'on n'a jamais fermée.
+end

@@ -1,0 +1,168 @@
+# 5.6 — [SQ-06] LES VOIES MORTES — LES JUMEAUX, LE COFFRE
+
+~ sq06_jumeaux_coffre once
+* Tom sort des herbes comme un ressort.
+TOM: DEMOISELLE. On a un problème. Un problème avec des conséquences. Je déteste les conséquences, ça arrive toujours APRÈS, c'est fourbe.
+LOHEN: Qu'avez-vous fait.
+TOM: Rien.
+* Un temps.
+TOM: On a refermé un coffre. Dans le wagon-grue. Avec notre clé. Parce qu'il y avait un trésor dedans et que les trésors, ça se PROTÈGE.
+* Till, à l'ardoise : « on a bien fait. »
+LOHEN: ...Le coffre du garçon aux oiseaux.
+* Il comprend en direct, à la vitesse d'un enfant qui grandit d'un coup.
+TOM: ...C'était SON trésor.
+* Il fouille sa poche, tend la clé et trois billes, d'un même geste, confondus.
+TOM: C'est tout ce que j'ai. Les billes c'étaient pour m'excuser. La clé c'était pour ouvrir. On a mélangé. Papa dit qu'on mélange toujours.
+* Till a la tête basse. Il écrit lentement : « on a bloqué le garçon. »
++ « Les trésors destinés à être trouvés, on ne les verrouille pas. Allez m'ouvrir ça. » -> +COURAGE ; LIEN-JUMEAUX +2 ; goto v06a
++ « Vous vouliez le protéger. C'est déjà ça. » -> +DOUCEUR ; LIEN-JUMEAUX +1 ; goto v06b
++ « Une bille. Chacun. Et on n'en parle plus. » -> +HUMEUR ; LIEN-JUMEAUX +1 ; give bille_de_tom ; goto v06c
+= v06a
+* Il dévale le wagon à quatre pattes.
+TOM: ON OUVRE ! TILL ! LA CLÉ !
+TOM: On vous doit une faveur. Une vraie. Pas en billes. En faveur. Papa dit qu'une faveur, ça s'élève comme le pain. Ça pousse, ça déborde la main.
+-> flag faveur_jumeaux_due
+> v07
+= v06b
+* Soulagé, immédiatement.
+TOM: On est des gardiens, alors. Les gardiens ratés. Les gardiens quand même.
+> v07
+= v06c
+* Il pige, ébloui.
+TOM: C'est le marché le plus juste de l'histoire des marchés.
+* Il paie. Till paie. Ils repartent en courant, fiers comme deux ambassadeurs.
+= v07
+! sfx coffre_ouvre
+* Le coffre s'ouvre : un carnet de comptage et une plume-stylet.
+-> give carnet_comptage ; give plume_esteban ; flag coffre_ouvert ; seq SQ-06
+PENSEE: il compte les pétrels. le 13 septembre, il a écrit : nichoir 9 — le Général est revenu — c'est le seul au courant de mes états d'âme. ... les états d'âme d'un nichoir. bien sûr. Bec-de-lièvre et ses confidents à plumes.
+PENSEE: sa plume. il l'a laissée DANS un coffre. dans un TRAIN MORT. c'est tellement lui : laisser les choses précieuses là où les trains ne passent plus, comme si le mouvement du monde devait les garder immobiles.
+-> flag plume_trouvee ; page 6 ; page 7 ; page 20
+end
+
+~ jumeaux_apres_coffre [SI: flag:coffre_ouvert & !flag:crayon_marek_rendu]
+TOM: [[flag:faveur_jumeaux_due|On vous doit toujours la faveur. Elle lève. Papa dit qu'il faut pas la toucher pendant qu'elle lève.|On garde le wagon. Sans clé. C'est plus dur, mais c'est plus juste.]]
++ « Vous n'auriez pas un crayon qui n'est pas à vous ? » [SI: flag:crayon_marek_ouvert] -> goto ja_crayon
++ « Qu'est-ce que vous gardez, maintenant ? » -> goto ja_garde
+= ja_crayon
+* Tom regarde Till. Till sort de sa poche un crayon de charpentier, plat, marqué d'un M.
+TOM: C'est celui du monsieur du phare. On l'a pris pour qu'il monte au village le chercher. Il est pas monté. On a échoué. Rendez-le-lui, dites-lui que c'était pour le faire monter.
+-> give crayon_marek ; flag crayon_marek_pris ; LIEN-JUMEAUX +1
+end
+= ja_garde
+TOM: Le wagon. Les nids des ronciers. Et la demoiselle, un peu. De loin. C'est un travail de gardiens ratés, c'est beaucoup de travail.
+end
+
+# 5.7 — [SQ-07] LA CREVETTE — SIDONIE (ARBRE COMPLET AVEC D-04)
+
+~ sq07_sidonie once
+* Elle sort de dessous la machine comme une idée.
+SIDONIE: Lohen ! Attends, je reformule : LOHEN. Voilà, c'est mieux, j'avais besoin de volume. Aide-moi à penser, j'ai un contre-poids qui me snobe.
+LOHEN: Il snobe comment ?
+SIDONIE: Chiffre ou sentiment ?
+LOHEN: ...Chiffre.
+SIDONIE: Il me faut deux cents kilos en face de la cabine et j'ai cent trente. L'écart, c'est le problème. En sentiment, c'est pareil mais en kilos.
+-> flag sidonie_rencontree ; seq SQ-07
+end
+
+# Bavardage de travail (pendant / juste après E03)
+~ sq07_sidonie_bavardage [SI: flag:sidonie_rencontree & !flag:sidonie_infos] once
+SIDONIE: Alors c'est vrai que tu cherches Esteban partout ? Moitié de la presqu'île te cherche à chercher. Vous êtes une chaîne de chercheurs. C'est beau. C'est très inefficace, mais c'est beau.
++ « Moitié de la presqu'île devrait plutôt chercher à me donner des infos. » -> +HUMEUR ; goto s06a
++ « Tu l'as vu monter où, exactement ? » -> +RUSE ; goto s06b
++ (poser le poids, la regarder) -> +DOUCEUR ; goto s06c
+= s06a
+SIDONIE: Chiffre ou sent— non, pardon, réponse simple : je te donne les miennes. Je l'ai vu. Le 13. Le matin. Il montait par la corniche, sac au dos.
+* Elle serre une clé à molette.
+SIDONIE: J'ai pas fait le lien. J'ai relevé la pression des freins. La PRES-SION DES FREINS. Des fois je me déteste avec une précision d'ingénieure, tu sais ?
+> s_fin
+= s06b
+SIDONIE: Vers le sentier des pétrels. Le chemin qui longe pour aller à la grotte — attention, là, je spécule à 40 %. Le sac, lui, était à 100 %. Sac-sûr. Y a des sacs qui partent en week-end et des sacs qui partent pour de bon : c'était un sac pour de bon, Lohen. Je suis désolée.
+-> flag indice_sentier
+> s_fin
+= s06c
+SIDONIE: ...Merde. Désolée. C'est le mot d'ingénieure pour « je viens de te faire de la peine avec des données ».
+* Un temps.
+SIDONIE: Le contre-poids, on le finira. Les machines, ça attend mieux que nous.
+= s_fin
+-> flag sidonie_infos ; LIEN-SIDONIE +1
+end
+
+# La montée (4 minutes, caméra sur la mer) — après E03
+~ sq07_montee [SI: puzzle:E03] once
+! music track_08
+SIDONIE: Regarde.
+* La presqu'île entière, là, dessous.
+SIDONIE: C'est ma carte à moi. Je la connais par le mécanisme : je sais où ça grince, où ça pue l'huile, où ça chante. Toi c'est le papier, moi c'est la graisse. On est complémentaires, t'as remarqué ? Le monde a besoin de deux types de filles comme nous. Enfin, de DEUX filles comme nous. La phrase était mieux dans ma tête.
+LOHEN: Elle était très bien.
+! wait 2
+SIDONIE: ...Merci. Je note.
+* Elle regarde la mer.
+SIDONIE: Dis. T'as déjà eu envie de partir d'un endroit que t'aimes ?
++ « Tout le temps. C'est le signe qu'on l'aime. » -> +HUMEUR ; goto s11a
++ « Tu as eu les lettres ? » -> +COURAGE ; goto s11b
++ (regarder la mer avec elle) -> +DOUCEUR ; goto s11e
+= s11a
+SIDONIE: ...Je vais réutiliser cette phrase sans te citer, OK ? C'est mon mode de fonctionnement. Je cite mal et vite.
+* Petit rire.
+SIDONIE: Elle est pour moi, celle-là. Elle va me porter.
+> s12
+= s11b
+* Elle regarde ses mains, très propres, puis la mer, très grande.
+SIDONIE: ...Deux écoles. Astronomie à Vieux-Quai. L'autre, hydraulique, à Vieux-Quai aussi. Le drame, c'est Vieux-Quai : TROIS quais de distance. Trois. J'ai calculé le chagrin en heures de funiculaire : démentiel.
+SIDONIE: Et si je pars, qui graisse la Crevette ? L'oncle Gérard ? Il est « en réunion ». Là, maintenant.
+* Elles regardent toutes les deux, en même temps, la cabine qui monte toute seule, laide et fidèle.
+SIDONIE: ...Il est à la pêche, Lohen. On le sait tous. C'est ça, une île : on sait tout et on dit rien, et le funiculaire, il monte.
++* « Pars. La Crevette, on la graissera à distance. Les trésors qu'on garde en partant, ça s'appelle un chez-soi. » -> +COURAGE ; decision D-04=part ; flag sidonie_part ; goto s11d1
++* « Reste. Une île sans toi, c'est une île sans compteur : tout le monde croira que ça marche encore. » -> +DOUCEUR ; decision D-04=reste ; flag sidonie_reste ; goto s11d2
++* « Chiffre ou sentiment ? » -> +RUSE ; +HUMEUR ; decision D-04=tableau ; goto s11d3
+= s11d1
+* Elle renifle — non, elle « vérifie un raccord de frein », mais elle renifle.
+SIDONIE: ...Trois quais, Lohen. Trois quais et une vie. C'est un si bon rapport. Je t'écrirai des rapports d'astronomie TERRIBLES, tu vas souffrir.
+-> LIEN-SIDONIE +1
+> s12
+= s11d2
+SIDONIE: ...C'est la phrase la plus dangereusement gentille qu'on m'ait dite. Je la mets dans mon classeur. Onglet « pièges ». Avec amour. Mais avec piège.
+-> LIEN-SIDONIE +1
+> s12
+= s11d3
+* Elle rit, secouée.
+SIDONIE: Sentiment. ALORS : le sentiment dit reste, le chiffre dit pars, et je vais faire ce que je fais d'habitude avec les conflits : un TABLEAU. Je le remplirai ce soir. Puis je le retournerai face au mur. C'est ma méthode.
+-> LIEN-SIDONIE +1
+> s12
+= s11e
+SIDONIE: ...Mmh. T'as cette manie de répondre en te taisant. C'est une arme. Tu le sais ?
+* Lohen ne dit rien.
+SIDONIE: ...Voilà. C'est ça. Arme. T'as raison.
+-> LIEN-SIDONIE +1 ; flag sidonie_tas_raison
+= s12
+* En haut. Elle saute sur le quai, bloque la cabine, se tourne.
+SIDONIE: Au fait. La pointe-au-vent, là-bas, la boîte rouge. Tu sais ce que c'est ? — La boîte des gens qui partent. On y met des lettres.
+* Elle hausse les épaules, remonte son bandana.
+SIDONIE: Moi j'y ai mis une lettre pour mes parents une fois. Ils sont pas partis. Ils sont juste morts. La boîte, elle prend les deux. C'est large, la boîte.
+* Elle part en sifflant.
+-> flag boite_rouge_connue ; seq SQ-08 ; travel z08 t01
+end
+
+~ sidonie_reprise [SI: flag:sidonie_rencontree & !puzzle:E03]
+SIDONIE: Le contre-poids attend. Deux cents kilos en face. Les sacs sont là, la balance aussi. Le reste, c'est de l'arithmétique avec du cœur dedans.
+end
+
+~ sidonie_reprise_haut [SI: puzzle:E03 & !letter_read]
+SIDONIE: [[decision:D-04=part|Je regarde les horaires de Vieux-Quai. Trois quais. Ça se compte sur une main, finalement.|Le compteur dit 99 997. Je le regarde tous les soirs. On dirait qu'il attend quelque chose, ce compteur.]]
++ « La Crevette redescend quand je veux ? » -> goto sr_desc
++ « Tu as vu le grand frère, ces jours-ci ? » -> goto sr_marek
+= sr_desc
+SIDONIE: Elle monte, elle descend, elle ne pose pas de questions. C'est la seule de nous deux qui ait cette qualité.
+end
+= sr_marek
+SIDONIE: Il descend le mardi pour les fioles du docteur. Il remonte sans parler. Un jour j'ai chronométré son silence : la montée entière. Quatre minutes. C'est un record du monde de silence, pour un homme qui a une voix pareille.
+-> flag colis_indice
+end
+
+~ sidonie_apres [SI: letter_read]
+SIDONIE: [[decision:D-04=part|Je pars en octobre. La Crevette a un carnet d'entretien de quarante pages. Je l'ai écrit cette nuit. Tu tiens la page 12 : le graissage du contre-poids. Tu me dois ça.|Je reste. Enfin, je reste cette année. Le tableau est retourné face au mur. Il y a une ligne de plus dans la colonne « rester ». Je ne te dirai pas laquelle.]]
+SIDONIE: Chiffre ou sentiment, Lohen ?
+LOHEN: Sentiment.
+SIDONIE: ...Voilà. On progresse toutes les deux.
+end

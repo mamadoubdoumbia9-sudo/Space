@@ -1,0 +1,132 @@
+# 5.4 — [SQ-04] LE MARCHÉ — ÉMERIC, ROSA, LES JUMEAUX
+
+~ sq04_emeric once
+EMERIC: Mademoiselle la chercheuse ! Approchez. J'ai lu votre démarche dans le bruit de vos bottes. Vous cherchez quelqu'un. La démarche ne ment jamais, c'est bien l'ennui des démarches.
+LOHEN: Vous avez un remède à ça ? Aux démarches ?
+EMERIC: Le porte-documents, mademoiselle. On cache la démarche sous une charte en cuir. C'est toute la civilisation. Asseyez-vous. Vous voulez que je formalise votre recherche ? Une affiche, une annonce, une lettre ? J'ai trois formats et un seul cœur.
++ « Une annonce, c'est trop tôt. Il n'est pas perdu. Il est... en retard. » -> +DOUCEUR ; goto e04a
++ « Trois formats ? Montrez le cœur. » -> +HUMEUR ; goto e04b
++ « Qui a couché à la gare cette semaine ? » -> +RUSE ; goto e04c
+= e04a
+EMERIC: L'amour-propre des retards. C'est la plus délicate des catégories. Je classe : « absences temporaires, dignité intacte ». Troisième tiroir.
+* Il note. Il note tout.
+> e05
+= e04b
+EMERIC: Le cœur n'est pas à louer, il est à lire. Je l'ai mis dans un tiroir avec les timbres. On parle mieux de soi à mots couverts.
+EMERIC: Un timbre, mademoiselle, c'est un fait : une date, un lieu, un prix. Trois timbres dans le même classeur, c'est déjà une phrase.
+LOHEN: Et quatre ?
+EMERIC: Quatre, c'est un aveu. On ne classe jamais quatre timbres par hasard. Retenez la leçon des classeurs : les faits se rangent, les phrases se lisent, et l'ordre dans lequel on les lit dit qui on est.
+-> flag lecon_classeurs
+> e05
+= e04c
+EMERIC: ...Anselme le sait. Je le sais d'Anselme, qui le sait du quai, qui le sait du vent. La chaîne est honnête. Anselme vous attendra mieux que moi : il a des bancs, moi j'ai des questions.
+-> flag piste_gare
+= e05
+EMERIC: Revenez me voir avec des faits, je vous les rendrai en phrases. C'est mon métier. Les faits ne connaissent pas leur propre musique.
+-> flag emeric_rencontre ; seq SQ-04
+end
+
+~ sq04_rosa once
+ROSA: LOHEN ! Tiens.
+* Elle tend un croissant sans regarder — elle pétrit du regard une pâte invisible.
+LOHEN: Je n'ai rien commandé.
+ROSA: Tu as ce visage. Le visage du matin des gens qui cherchent. Le croissant, c'est mon anti-figue. Antidote. Le mot m'échappe, la main sait. Mange.
+* Lohen mange.
+PENSEE: la pâte feuilletée devrait être remboursée par la sécurité sociale des disparus.
+-> +HUMEUR
+ROSA: Écoute, pendant que tu mâches. Le Renouvel approche. J'ai besoin de bras pour la fournée d'essai. Trois brassées. Tu me rends ça ?
++ « La fournée contre tout ce que tu sais sur Esteban. » -> +RUSE ; goto r06a
++ « Compte sur moi. Sans contrepartie. » -> +DOUCEUR ; LIEN-ROSA +2 ; goto r06b
++ « Il est en mai, le Renouvel, Rosa. On est en septembre. » -> +COURAGE ; +HUMEUR ; LIEN-ROSA +1 ; goto r06c
+= r06a
+* Elle racle sa farine.
+ROSA: Marché. Ce que je sais tient en une galette : il venait le mardi. Il prenait le pain de son frère et le curcuma pour lui. Il disait « pour garder la couleur des phares ». Je lui ai dit un jour que le curcuma ne colore pas les phares. Il a dit « si ». — Ça m'est resté.
+> r_fin
+= r06b
+* Elle s'arrête de pétrir — marque de gravité.
+ROSA: Toutes les deux, alors. Les fournées, c'est deux fois mieux gratuit.
+> r_fin
+= r06c
+* Un temps.
+ROSA: ...Tu es la première depuis onze ans. Les gens croient ce que le four leur dit.
+* Elle rit comme un blizzard chaud.
+ROSA: Bon. Tu m'as eue. La fournée est toujours d'accord.
+= r_fin
+-> flag rosa_fournee_promise ; flag rosa_rencontree
+end
+
+# La fournée (faveur de Rosa) — se joue au banc de Rosa quand on revient
+~ rosa_fournee [SI: flag:rosa_fournee_promise & !flag:rosa_fournee_faite]
+ROSA: Trois brassées. Les bras d'abord, les questions ensuite.
+* Trois brassées de bois. Le four ronfle, invisible, comme une voix.
+! sfx four_ronfle
+PENSEE: on n'a jamais vu le four de Rosa. on l'entend. c'est un four de radio.
+ROSA: Voilà. Tu pétris comme quelqu'un qui dessine : trop précis. Le pain, ça se bouscule un peu.
+-> flag rosa_fournee_faite ; LIEN-ROSA +1 ; give pain_de_rosa ; CLARTE +1
+end
+
+~ rosa_reprise [SI: flag:rosa_rencontree]
+ROSA: [[flag:rosa_fournee_faite|Tu reviens sentir le pain ? C'est le meilleur moment, juste avant qu'il sorte.|Ma fournée t'attend, quand tu voudras. Le pain n'est pas pressé. Moi non plus.]]
++ « Vous l'avez revu, depuis le mardi ? » -> goto rr_revu
++ (prendre une inspiration de pain chaud) -> +HUMEUR ; goto rr_pain
+= rr_revu
+ROSA: Le mardi d'avant, il a pris deux pains. Deux. J'ai dit « tu reçois ? ». Il a dit « je prépare ». J'ai pas demandé quoi. On ne demande pas quoi à un garçon qui prépare.
+-> flag rosa_deux_pains
+end
+= rr_pain
+PENSEE: on devrait pouvoir noter les odeurs. j'aurais déjà trois carnets rien que pour cette place.
+end
+
+~ sq04_jumeaux once
+TOM: Demoiselle ! On t'a vue au port. T'es chercheuse de trésor ?
++ « Chercheuse de personne. » -> goto t02a
++ « Chercheuse de trésor. » -> goto t02b
++ « Je cherche un garçon aux oiseaux. » -> +COURAGE ; goto t02c
+= t02a
+TOM: PIRE. Les personnes, ça s'enterre pas, ça se perd. Faut une pelle plus grande.
+* Till hoche la tête.
+> t03
+= t02b
+TOM: GÉNIAL. On t'aide. Contrat : trois billes.
+* Till montre son ardoise : « 5 ».
+TOM: Il dit cinq. Il est dur en négociation, mon frère. C'est pour ça que je parle.
+> t03
+= t02c
+* Les billes se figent.
+TOM: ...On l'a vu, le garçon aux oiseaux. On sait siffler les pétrels maintenant. On est nuls. Il disait que c'était déjà bien d'être nuls ensemble.
+* Till, bas, à l'ardoise : « nuls ensemble ». Il l'a noté.
+-> flag jumeaux_pistes
+= t03
+TOM: On parie des billes sur toi. Till dit que tu trouves. Moi je dis que tu trouves PAS avant la marée. Y a une bille de différence.
++ « Sur quoi tu paries, Tom ? » -> goto t04a
++ « La marée, c'est ce soir. » -> goto t04b
++ (caresser la tête de Tom) -> +DOUCEUR ; goto t04c
+= t04a
+TOM: Sur le temps. Le temps, ça triche jamais. C'est des gens que ça bat.
+> t_fin
+= t04b
+* Il calcule sur ses doigts, avec l'urgence d'un notaire.
+TOM: ...Alors c'est serré. Vite, mademoiselle. Vite.
+> t_fin
+= t04c
+TOM: On est d'accord pour la bille de politesse.
+* Il en garde une entre chaque doigt, prête à payer.
+= t_fin
+* Till écrit « 9 » sur l'ardoise et regarde Lohen fixement.
+-> flag jumeaux_rencontres ; flag marelle_ouverte
+end
+
+~ jumeaux_marelle [SI: flag:jumeaux_rencontres & !flag:coffre_ouvert]
+TOM: T'as compté les cases ? Till dit que la neuf est plus fraîche. Moi je dis qu'elle est plus loin. C'est pas pareil.
++ « Pourquoi la neuf ? » -> goto jm_neuf
++ « Vous n'êtes pas au wagon-grue, vous deux ? » -> goto jm_wagon
+= jm_neuf
+TOM: Parce que c'est la Grâce. Le Ciel, on y va pas. La Grâce, on y saute. C'est notre règle. Till l'a écrite.
+* Till montre l'ardoise : « 9 = la Grâce ».
+-> flag case_neuf
+end
+= jm_wagon
+* Tom regarde Till. Till regarde ses pieds.
+TOM: On a un chantier. C'est secret. C'est un chantier de gardiens.
+-> flag jumeaux_chantier
+end

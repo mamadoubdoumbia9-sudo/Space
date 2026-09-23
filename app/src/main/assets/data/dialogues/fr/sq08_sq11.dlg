@@ -1,0 +1,251 @@
+# 5.8 — [SQ-08] LE VERGER DES CARILLONS — la cloche sans nom (D-05)
+
+~ cloche_sans_nom
+* La plus grosse, en haut du verger, la seule sans étiquette.
++ L'effleurer -> goto csn_effleure
++ La sonner -> +COURAGE ; goto csn_sonne
++ La nommer [SI: has:feutre_ysolde & !flag:cloche_nommee] -> goto csn_nommer
++ (s'éloigner) -> goto csn_fin
+= csn_effleure
+PENSEE: elle attend. ...des cloches comme ça, on dit qu'elles attendent le nom qu'elles sauront porter. les enfants disent ça. les enfants ont raison de la moitié des choses importantes, et ils se taisent sur l'autre moitié.
+> csn_fin
+= csn_sonne
+! sfx cloche_sans_nom
+! wait 4
+* Une seule note, immense, qui tient neuf secondes. Tous les oiseaux du verger se taisent. Le silence après est l'événement.
+PENSEE: ...bon. maintenant tout le monde le sait, que quelqu'un a sonné sans nom.
+-> flag cloche_sonnee
+> csn_fin
+= csn_nommer
+* Le feutre d'Ysolde à la main. L'étiquette vierge est là, au crochet, comme si elle attendait depuis toujours.
++* Écrire « ESTEBAN » -> decision D-05=esteban ; flag cloche_nommee ; goto csn_esteban
++* Écrire « SORÈNE » -> decision D-05=sorene ; flag cloche_nommee ; goto csn_sorene
++* Écrire « velune » -> decision D-05=velune ; flag cloche_nommee ; +HUMEUR ; goto csn_velune
++* Laisser l'étiquette vierge -> decision D-05=vierge ; flag cloche_nommee ; +DOUCEUR ; goto csn_vierge
+= csn_esteban
+PENSEE: voilà. il a un nom dans le vent, maintenant. il l'entendra peut-être de là où il est. le vent porte loin, ici. c'est son seul talent.
+-> +COURAGE ; CLARTE +1
+> csn_fin
+= csn_sorene
+PENSEE: le père. la mer dehors. qu'au moins une cloche le dise à sa place, puisque personne n'ose. le verger fera le reste.
+-> CLARTE +1
+> csn_fin
+= csn_velune
+PENSEE: un mot que personne ne connaît, sur la plus grosse cloche du pays. si quelqu'un demande, je dirai que c'est du latin. c'est un pays à deux, ce mot. il a une cloche, maintenant.
+-> CLARTE +1
+> csn_fin
+= csn_vierge
+PENSEE: non. elle attend. je ne vais pas décider à la place d'une cloche. les enfants ont raison : on ne nomme pas ce qui n'a pas fini d'arriver.
+= csn_fin
+end
+
+# 5.9 — [SQ-09] L'ATELIER D'YSOLDE — LA SCÈNE-PIVOT
+
+~ sq09_ysolde once
+* Sans se retourner, les mains sur la chaîne du métier.
+YSOLDE: La petite carte. T'as les talons qui chantent en si bémol, ce soir. Assieds-toi près du feu. L'hiver des mains commence, tu me diras si je me trompe.
+LOHEN: Bonsoir, Ysolde. Vous ne vous trompez jamais sur les mains.
+YSOLDE: Juste sur les hommes, ma fille. Une fois par décennie, ça entretient l'humilité.
+* Elle tend la main : Filou vient s'y poser le museau.
+YSOLDE: ...Toi, tu sais. Toi, t'as toujours su.
+YSOLDE: Ton chien a été tenu par des mains qui tremblaient de dire quelque chose. T'as vu son collier ? Le nœud de la laisse, refait à neuf par quelqu'un qui savait défaire et pas refaire. C'est un nœud de départ, ça. Le nœud des gens qui s'apprêtent.
+LOHEN: Vous parlez comme la mer, Ysolde. Tout est vague et tout arrive quand même.
+* Elle rit, gorge profonde.
+YSOLDE: La comparaison me va. La mer, au moins, elle prévient : elle laisse le sucre sur les rochers.
+YSOLDE: Le garçon a passé des heures devant mon mur, là, à gauche. Il étiquette en spirale, tu sais, comme les oiseaux tournent avant de se poser. Regarde le mur. Les nœuds parlent à ceux qui les écoutent.
+-> flag ysolde_rencontree ; flag indice_spirale ; seq SQ-09 ; LIEN-YSOLDE +1
+end
+
+~ sq09_ysolde_noeud [SI: puzzle:E07] once
+YSOLDE: Le garçon a passé une journée à apprendre ce nœud pour ne pas dire trois mots. Si tu trouves le nœud, t'as les mots. Si tu trouves les mots, t'as plus besoin du nœud.
+LOHEN: Et s'il me faut les deux ?
+* Les mains s'arrêtent une seconde — sur Ysolde, c'est un séisme.
+YSOLDE: ...Alors t'as ta réponse, petite carte.
+* Elle reprend.
+YSOLDE: Les mains me disent aussi que tu vas au bout d'une pointe, un jour ou l'autre. Tiens.
+* Elle tend le ruban-mémoire. Le don dure quarante secondes, caméra sur les mains.
+-> give ruban_memoire
+YSOLDE: Si t'as les mains qui tremblent, tu noues. Si t'as les mots, tu détaches. C'est du coton de chez nous, il tient la rosée et le sel sans jurer.
++* « Vous savez ce qu'il a laissé. » -> +COURAGE ; goto y10a
++ « Merci. » (nouer le ruban à son poignet tout de suite) -> +DOUCEUR ; LIEN-YSOLDE +1 ; flag ruban_noue ; goto y10b
++ « Pourquoi m'aider, Ysolde ? Tout le monde m'aide, mais vous, vous savez à quoi. » -> +RUSE ; goto y10c
+= y10a
+* Ysolde sourit, poursuit son tissage.
+YSOLDE: Je sais qu'on laisse toujours quelque chose. C'est la définition des vivants, ma fille : on laisse. Le reste, les cachettes, les nœuds, les lettr—
+* Elle s'arrête elle-même net. Elle sourit.
+YSOLDE: Les lettres de noblesse, je disais, pour les étoffes.
+> y11
+= y10b
+YSOLDE: ...Tu noues déjà. Mhm. T'as les mots quelque part, alors. Les mots viennent vers ceux qui nouent. C'est la loi du coton.
+> y11
+= y10c
+* Elle finit sa rangée de trame avant de répondre.
+YSOLDE: ...Parce que j'ai fermé les yeux une fois dans ma vie pour pas voir quelqu'un s'effacer. Et que je me suis promise que la prochaine fois, j'ouvrirais les mains. C'est pas pareil, les mains. Les yeux, ça ferme. Les mains, ça garde. T'es arrivée, ma main était ouverte. Voilà tout l'itinéraire.
+= y11
+* Fin de visite. Elle relève le visage, fixe Lohen de ses yeux opale.
+YSOLDE: Une dernière pour la route. Mesurer est une façon de retenir. Ta maîtresse te l'a dit, hein ? Elle me l'a volée à moi, d'ailleurs. C'est une façon de retenir une phrase, aussi.
+YSOLDE: Va maintenant. Et petite carte — quand tu dessineras la pointe, dessine-la TENDRE. Les cartes ne savent pas faire tendre. C'est leur grand scandale. T'es là pour corriger ça.
+-> give feutre_ysolde ; flag ysolde_ruban ; CLARTE +1
+end
+
+~ ysolde_reprise [SI: flag:ysolde_rencontree & !puzzle:E07]
+YSOLDE: Le mur, ma fille. Trois paliers. Les nœuds du bas sont les nœuds de tout le monde. Les nœuds du haut, personne ne les fait plus. Le sien est entre les deux : là où on hésite.
+end
+
+~ ysolde_apres_ruban [SI: flag:ysolde_ruban & !letter_read]
+YSOLDE: [[flag:ruban_noue|Il te va, le ruban. Il tient. Il tiendra jusqu'à la pointe.|Le ruban est dans ta sacoche. Il attend tes mains. Elles décideront.]]
++ « Le feutre, c'est pour quoi ? » -> goto ya_feutre
++ « Parlez-moi de vos trois nœuds. » -> goto ya_tresse
++ (tendre les mains vers le feu) -> +DOUCEUR ; goto ya_feu
+= ya_feutre
+YSOLDE: Pour écrire sur ce qui n'a pas de nom. Il y a une cloche, là-haut, qui attend depuis longtemps. Ou pas. C'est toi qui vois. Un feutre, ça ne force personne.
+end
+= ya_tresse
+* Elle touche sa tresse-couronne : trois nœuds.
+YSOLDE: Le nom de ma mère. La couleur de ma première teinture. La pluie sur les toits de tôle.
+* Elle ne traduit pas. Elle ne traduira jamais.
+end
+= ya_feu
+PENSEE: la chaleur, c'est la seule politesse que le feu fait sans qu'on lui demande.
+end
+
+~ ysolde_apres [SI: letter_read]
+YSOLDE: T'as dessiné la pointe ?
+LOHEN: Pas encore. Je la dessinerai tendre.
+YSOLDE: Alors elle attendra. Les pointes savent attendre, c'est leur métier. Approche. T'as les mains qui ont changé de tonalité. Do majeur. C'est rare, chez les gens qui reviennent d'une pointe.
+end
+
+# 5.10 — [SQ-10] LE BOIS DES NOMS — le mélèze 214
+
+~ meleze_214 [SI: puzzle:E06]
+* Le mélèze 214, au bord du vide. Deux étiquettes neuves sur l'écorce — l'une : « SORÈNE (PAPA) — 2009 — MER DEHORS » ; l'autre, vierge. Signée d'un « e » minuscule au crayon, dans le coin.
++ (lire la première) -> +DOUCEUR ; goto b04a
++ (retourner la seconde) -> +RUSE ; flag etiquette_vierge ; goto b04b
++ (s'asseoir contre le tronc) -> +DOUCEUR ; goto b04c
++ Écrire « ESTEBAN » sur l'étiquette vierge [SI: ng+ & has:feutre_ysolde & !flag:etiquette_ecrite] -> flag etiquette_ecrite ; +COURAGE ; goto b04ng
++ (repartir) -> goto b_fin
+= b04a
+PENSEE: il a étiqueté son père pour la énième fois. quinze ans que la famille marque le même arbre. c'est pas de la douleur, c'est de l'entretien. y a des douleurs qui tondent la pelouse, je crois.
+> b05
+= b04b
+PENSEE: une étiquette vide. on ne fait pas ça. on n'étiquette pas le vide : le vide, justement, on le laisse respirer. ...sauf si on n'a pas pu écrire. sauf si le mot coûtait trop. ... sauf si le mot, c'était un prénom.
+> b05
+= b04c
+! wait 8
+* Huit secondes de silence, le vent, les étiquettes claquent doucement comme quarante mille pages de carnet.
+PENSEE: quarante mille noms autour de moi et je cherche encore celui d'une seule personne. c'est ridicule. c'est humain. c'est pareil.
+-> flag assis_214
+> b05
+= b04ng
+PENSEE: voilà. c'est écrit. ça a pris un an et une lettre. le « e » minuscule a un nom entier, maintenant. le bois fera le reste.
+= b05
+* Filou se couche au pied de l'arbre, la tête sur les pattes, et ne regarde pas le vide — il regarde l'étiquette vierge. Trois secondes. Puis il détourne.
+-> flag meleze_vu
+= b_fin
+end
+
+# 5.11 — [SQ-11] LE SENTIER DES PÉTRELS, L'ÉPAVE, ARISTIDE — D-02
+
+~ sq11_aristide once
+* Il surgit d'un couffin d'épave, casquette de nuit comprise, et s'incline.
+ARISTIDE: Bonsoir, monsieur-dame. Vous êtes la personne des talons qui chantent. Je vous avais reconnue au trentième barreau d'échelle. Vous êtes en si bémol ce soir. C'est la bonne tonalité pour les épaves.
+LOHEN: Bonsoir, Aristide. On vous a manqué ?
+* Il réfléchit vraiment, les mains jointes.
+ARISTIDE: ...On ne peut pas me manquer à moi, monsieur-dame, on me manque aux autres, c'est différent. Moi, j'attends. Je ne sais plus qui. Mais je me tiens prêt. Quand on attend, il faut être prêt : c'est la moindre des politesses.
+-> flag aristide_rencontre ; seq SQ-11
+end
+
+~ sq11_boite_musique [SI: flag:aristide_rencontre] once
+* La boîte à musique : posée sur une planche, désaccordée, une gravure « N » usée au flanc.
+ARISTIDE: Ah, la petite. Elle boite. Un garçon venait la réparer avec moi. On a passé trois jours sur un ressort. Trois jours, monsieur-dame. C'est ce qu'on appelle une semaine réussie.
+LOHEN: Ce garçon... il comptait les oiseaux ?
+ARISTIDE: Il comptait les oiseaux en pleurant sans le savoir. Ces gens-là. Le corps pleure, la personne s'en étonne. C'est le corps qui est honnête, monsieur-dame. La personne, elle, a des pudeurs.
+* Il sourit, lumineux.
+ARISTIDE: Moi, j'ai tout perdu des visages, il me reste les chansons. Les chansons, c'est du durable.
++* « Je peux la réparer, votre boîte. Avec vous. » -> +DOUCEUR ; decision D-02=reparer ; goto n12a
++* « Gardez-la comme ça. Les boîtes boiteuses ont leur dignité. » -> +DOUCEUR ; +HUMEUR ; decision D-02=garder ; goto n12b
++* (examiner discrètement le mécanisme) -> +RUSE ; goto n12c
+= n12a
+* Il recule d'un pas, une main sur le cœur, comédie de cour du XVIIe.
+ARISTIDE: Avec moi, dit-elle. Monsieur-dame propose l'atelier. ...Nous avons du travail, madame. Nous avons DU TRAVAIL.
+* Il installe le couffin-atelier.
+-> flag boite_atelier_ouvert ; LIEN-ARISTIDE +1
+> n13
+= n12b
+* Il caresse le couvercle, soulagé.
+ARISTIDE: ...Vous êtes la première personne qui me dit ça. Tout le monde répare, monsieur-dame. Personne ne respecte. La dignité d'une boîte boiteuse.
+* Il la range face à la mer.
+ARISTIDE: Elle boitera devant le large. C'est une carrière.
+-> LIEN-ARISTIDE +1
+> n13
+= n12c
+PENSEE: ...le mécanisme. la PLUME de ressort. c'est exactement le diamètre qu'il me faut pour le sifflet. ... je peux pas faire ça. ... je peux le faire.
++* Démonter le ressort -> decision D-02=demonter ; flag ressort_vole ; FILOU -2 ; give ressort_boite ; goto n12c_vol
++* Reposer la boîte -> decision D-02=respecter ; goto n12c_repose
+= n12c_vol
+! sfx ressort_lime
+* Filou quitte l'épave, tête basse, sans un regard.
+PENSEE: ça se voit à peine. ça se voit tout le temps.
+> n13
+= n12c_repose
+* Lohen repose la boîte. Aristide n'a rien vu. Filou, si.
+-> +DOUCEUR
+= n13
+* En partant, Aristide fouille ses poches.
+ARISTIDE: Monsieur-dame. J'ai votre instrument, je crois.
+* Il tend le sifflet d'Esteban — d'abord sans comprendre, puis, quand Lohen le prend :
+ARISTIDE: C'est le garçon aux oiseaux qui l'a laissé. Il l'a mis dans ma poche pendant que je réparais le ressort. Exprès ou par malheur — les deux se ressemblent beaucoup, monsieur-dame. Vous me le rendrez s'il repasse. Ce sera pour la boîte, un échange. On appelle ça une économie de musiciens.
+-> give sifflet_esteban ; flag sifflet_obtenu ; page 3 ; CLARTE +1
+end
+
+# L'atelier du ressort : 3 visites optionnelles (D-02 = réparer)
+~ aristide_ressort_1 [SI: flag:boite_atelier_ouvert & !flag:ressort_1] once
+ARISTIDE: Première séance, monsieur-dame. On écoute d'abord. Une boîte, ça se répare à l'oreille.
+! sfx boite_musique_desaccord
+* La mélodie boite. Trois notes justes, une qui tombe.
+ARISTIDE: Vous entendez ? Elle tombe sur la quatrième. C'est une boîte qui a du chagrin au quatrième temps. On reviendra.
+-> flag ressort_1 ; LIEN-ARISTIDE +1
+end
+~ aristide_ressort_2 [SI: flag:ressort_1 & !flag:ressort_2 & seq>=SQ-13] once
+ARISTIDE: Deuxième séance. Le ressort a dormi, il est de meilleure humeur.
+! sfx boite_musique_boite
+* La mélodie boitille. Elle tient jusqu'au bout, en traînant la patte.
+ARISTIDE: Boitillante. C'est déjà une démarche, monsieur-dame. Les démarches, ça se respecte.
+-> flag ressort_2 ; LIEN-ARISTIDE +1
+end
+~ aristide_ressort_3 [SI: flag:ressort_2 & !flag:boite_musique_montee & seq>=SQ-16] once
+ARISTIDE: Troisième séance. La dernière. Fermez les yeux, monsieur-dame, les boîtes préfèrent.
+! sfx boite_musique_juste
+* La mélodie s'entend. Entière. Il ferme le couvercle.
+ARISTIDE: ...C'est la chanson de quelqu'un.
+* Il rit, confus.
+ARISTIDE: Ne me demandez pas de qui. Ce serait indélicat envers la chanson.
+-> flag boite_musique_montee ; LIEN-ARISTIDE +2 ; CLARTE +1
+end
+
+~ aristide_reprise [SI: flag:sifflet_obtenu & !letter_read]
+ARISTIDE: [[flag:ressort_vole|Ma boîte s'est tue, monsieur-dame. Elle a dû prendre froid. Les boîtes prennent froid comme les gens : sans prévenir.|Attention à la petite cuillère, monsieur-dame, c'est un soliste.]]
++ « Les verres, là, ils sont accordés ? » -> goto arr_verres
++ « Vous attendez qui, Aristide ? » -> +DOUCEUR ; goto arr_attend
++ Rendre le ressort [SI: has:ressort_boite] -> take ressort_boite ; unflag ressort_vole ; flag ressort_rendu ; FILOU +1 ; goto arr_rendu
+= arr_verres
+ARISTIDE: Par hauteur de son, monsieur-dame. Du grave au large. Frappez doucement : l'épave est un instrument. Personne ne le dit. Je le montre.
+! sfx verres_gamme
+end
+= arr_attend
+ARISTIDE: Je ne sais plus. C'est le mieux. Quand on sait qui, on regarde la montre. Quand on ne sait plus, on regarde la mer. La mer est plus large que la montre.
+end
+= arr_rendu
+* Il remet le ressort sans un mot. La plume garde une trace de lime.
+ARISTIDE: ...Elle rejoue. Elle a une voix un peu rauque, maintenant. Comme après une longue conversation. Merci, monsieur-dame.
+end
+
+~ aristide_apres [SI: letter_read]
+ARISTIDE: [[flag:boite_musique_montee|C'est la chanson d'une fille qui ressemble à quelqu'un.|Bonsoir, m'dame. Pas trop fatiguée ?]]
+* Il fredonne en regardant le large.
+end
+
+~ aristide_seuil [SI: flag:aristide_rencontre]
+* Au seuil de l'épave, au crépuscule, Aristide salue la mer.
+ARISTIDE: Bonsoir m'dame, pas trop fatiguée ?
+end

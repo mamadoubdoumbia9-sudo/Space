@@ -1,0 +1,177 @@
+# 5.12 — [SQ-13/14/15] LE PHARE & MAREK — ARBRE À TROIS NIVEAUX DE LIEN
+
+# NIVEAU 1 — LA PORTE [SQ-13] (LIEN-MAREK < 3)
+~ sq13_marek_porte [SI: !flag:marek_porte_ouverte] once
+* Il ouvre de trois doigts de large, la chaîne reste.
+MAREK: La marée ne t'attendra pas, gamine. Lui non plus.
+* Un temps.
+MAREK: Renseigne-toi en bas. Moi, j'ai des lampes à tenir.
++ « Je tiendrai ta lampe ET ma recherche. » -> +COURAGE ; goto p02a
++ « Qui êtes-vous pour décider qui attend ? » -> +COURAGE ; +HUMEUR ; LIEN-MAREK +1 ; goto p02b
++ « Anselme l'a nourri quatre nuits. Rosa le garde en pain. Sidonie l'a vu monter. Vous, vous fermez la porte. » -> +RUSE ; LIEN-MAREK +1 ; goto p02c
+= p02a
+* Il regarde Lohen deux secondes de trop — il la cherche dans les traits de son frère.
+MAREK: ...T'as ses yeux fermés, toi. Dans le regard. Lui, ça regardait ouvert tout le temps. T'es une fermée. C'est bien. Les fermées, elles tiennent.
+* Il ferme.
+-> flag marek_phrase_double
+> p_fin
+= p02b
+* Un rire sec, une seule fois, surpris.
+MAREK: ...Le frère. Juste le frère. Y a pas de hiérarchie plus bête ni plus lourde. Reviens quand t'as compris ça, tu rentreras plus vite.
+* Il ferme.
+> p_fin
+= p02c
+* Silence long. Le vent dans les câbles du paratonnerre.
+MAREK: ...C'est exact.
+* Il referme doucement — la colère absente, pire que tout.
+MAREK: Les portes, c'est ce que je sais faire. Y a des gens qui ouvrent. Moi je tiens ce qui tient. Tu comprendras en montant.
+= p_fin
+-> flag marek_rencontre ; seq SQ-13 ; flag faveurs_ouvertes ; flag faveur_lampe_ouverte ; flag colis_ouvert ; flag crayon_marek_ouvert
+PENSEE: trois doigts de porte. c'est un homme qui se mesure en doigts de porte. il en faudra plus que trois.
+end
+
+# NIVEAU 1.5 — LES FAVEURS [SQ-14]
+~ marek_porte_reprise [SI: flag:marek_rencontre & LIEN-MAREK<3]
+* La porte s'entrouvre. Trois doigts.
+MAREK: [[LIEN-MAREK>=2|...T'es encore là. T'es tenace. C'est pas un compliment. C'est un constat de veilleur.|Renseigne-toi en bas, gamine. Le phare, ça se mérite par le bas.]]
++ Donner le colis d'Adèle [SI: has:colis_adele & !flag:faveur_colis_faite] -> goto p11
++ Rendre le crayon [SI: has:crayon_marek & !flag:crayon_marek_rendu] -> goto p12
++ « Anselme réclame sa lampe-tempête. » [SI: flag:faveur_lampe_ouverte & !has:lampe_tempete & !flag:faveur_lampe_faite] -> goto p10
++ (repartir) -> goto pr_fin
+= p10
+MAREK: ...La lampe du vieux. Elle est près de la lanterne depuis l'hiver. Elle a bien veillé.
+* Il disparaît, revient, passe la lampe par l'entrebâillement.
+MAREK: Dis-lui qu'elle a pris du sel. Il aimera ça. Le sel, c'est sa médaille.
+-> give lampe_tempete ; LIEN-MAREK +0
+> pr_fin
+= p11
+* Il inventorie les fioles sans commentaire, puis :
+MAREK: T'as vu le docteur ? ... Elle t'a dit les mots des maladies ? ... Bon.
+* Il range. Il revient.
+MAREK: Elle est bien, la Brunoy. Elle dit les choses comme les pilotes disent la profondeur : sans trembler. On croit que c'est froid. C'est du dévouement en blouse.
+* Un temps.
+MAREK: Merci d'avoir porté ça. Les colis de fioles, c'est mes lettres à moi.
+-> take colis_adele ; flag faveur_colis_faite ; LIEN-MAREK +1 ; LIEN-ADELE +1
+> pr_fin
+= p12
+MAREK: ... Ils m'ont volé mon crayon. Pour me faire monter au village.
+* Il considère le crayon, comme une preuve au dossier.
+MAREK: Ça a marché. J'y suis monté. Ils sont dangereux, ces deux-là. On est en danger de tendresse, sur cette île. C'est le seul risque qu'on court, tu sais.
+-> take crayon_marek ; flag crayon_marek_rendu ; LIEN-MAREK +1 ; LIEN-JUMEAUX +1
+= pr_fin
+end
+
+# NIVEAU 2 — LA MAISON [SQ-15] (LIEN ≥ 3)
+~ sq15_marek_maison [SI: flag:marek_rencontre & LIEN-MAREK>=3] once
+! sfx porte_chaine
+* La chaîne tombe. La porte s'ouvre sur la cuisine aux deux tasses. Marek sert un chocolat sans demander.
+-> flag marek_porte_ouverte ; seq SQ-15
+MAREK: Assieds-toi. Je l'ai fait trop chaud. Je fais tout trop chaud, c'est le problème des gens qui veillent : on confond feu et cœur.
+* Il pousse la tasse.
+MAREK: Deux tasses. Tu vois la deuxième ? Je la sers pareil, tous les matins. On appelle pas ça de l'espoir. On appelle ça une habitude chaude. Les habitudes chaudes, c'est ce qui reste quand l'espoir est parti dormir.
+LOHEN: Marek. Il est où ?
+* Il boit. Il brûle. Il assume.
+MAREK: ... Tu me demandes ça avec la voix de ta maîtresse de cartes. La voix droite. Bon.
+* Il pose la tasse, face à la fenêtre, face au large.
+MAREK: Je vais te dire une seule chose ce soir, parce que les tasses sont chaudes et que t'as monté mes marches. Il est parti en avant. Pas en fuite. En avant. Y a une différence de direction, gamine, pas de vitesse. La vitesse, c'est la même douleur.
++ « En avant, où ? » -> +COURAGE ; goto p23a
++* « C'est vous qui l'avez laissé partir. » -> +COURAGE ; goto p23b
++ (boire le chocolat, attendre, ne rien dire) -> +DOUCEUR ; goto p23c
+= p23a
+* Il sourit sans joie, le sourire de ceux qui savent qu'ils vont mentir par pitié.
+MAREK: Demain. Demain je te dirai où. Aujourd'hui, je te dis COMMENT.
+-> LIEN-MAREK +1
+> p_maison_fin
+= p23b
+* Un temps très long. Sa main se pose à plat sur la table, comme sur un moteur qu'on arrête.
+MAREK: ...Oui. Retiens le mot : laissé. J'ai laissé.
+* Il se lève, met son ciré, sort sur la terrasse sans fermer la porte. Lohen le suit : dehors, face au large, dos à elle.
+MAREK: J'ai vu partir mon frère un matin à cinq heures douze. J'ai compris la démarche. J'ai reconnu le sac. J'ai pas ouvert la porte. J'ai soufflé MA lampe, c'est ça que j'ai fait. Pour pas voir la lumière de sa disparition sur le mur.
+* Il se retourne, calme, dévasté.
+MAREK: Je l'ai élevé à la clé de treize ans, tu sais. Il m'a rendu la lumière à quatorze. On était quittes.
+LOHEN: ... C'est pas quittes, Marek.
+* Il regarde le large.
+MAREK: Non. C'est pas quittes.
+-> LIEN-MAREK +1 ; flag marek_confidence ; CLARTE +1
+> p_maison_fin
+= p23c
+! wait 6
+* Le silence dure. Le vent. La lampe. Puis, sans se retourner :
+MAREK: T'as rien dit. C'est la première personne qui me dit rien depuis neuf jours. Les autres, ils demandent. Toi, t'attends.
+* Il revient s'asseoir, en face, et pour la première fois, il regarde Lohen.
+MAREK: ... Demain, je te donne l'heure et le chemin. Ce soir, tu restes manger. C'est des lentilles. C'est mauvais. C'est chaud.
+-> LIEN-MAREK +1 ; flag marek_lentilles
+= p_maison_fin
+MAREK: La lanterne est en haut. Cent trente et une marches. L'annuaire des marées est dans la veillerie, la lentille est en panne depuis mardi, et l'heure du cadran est fausse depuis plus longtemps. Si tu veux comprendre où il est allé, commence par ce que le phare sait faire : éclairer et compter.
+-> flag phare_ouvert
+end
+
+# NIVEAU 3 — LA LANTERNE & LA CLÉ [SQ-15b/16]
+~ sq15b_marek_lanterne [SI: puzzle:E10 & flag:phare_ouvert] once
+* La lentille de Fresnel s'allume à blanc, le faisceau balaie la presqu'île, et s'arrête une demi-seconde sur la pointe au vent.
+MAREK: ... T'as vu. Le faisceau, il s'attarde sur la pointe. C'est mon frère qui a calé ça. Je lui avais dit de régler la rotation. Il a réglé la TENDRESSE de la rotation. Je l'ai jamais corrigé. On corrige pas ça.
+-> flag faisceau_pointe ; LIEN-MAREK +1
+end
+
+~ sq16_marek_girouette [SI: puzzle:E04 & LIEN-MAREK>=4 & flag:faisceau_pointe] once
+* L'annuaire en main, la lune des marées pointée du doigt.
+MAREK: Ce soir. Les Heures Bleues. 23h52.
+* Il regarde sa montre, puis Lohen.
+MAREK: Écoute-moi. La grotte, le passage, la pointe — c'est 400 mètres d'eau qui se retire et une heure de monde bleu. Y a eu des soirs où la mer est revenue sur des gens pressés. Alors.
+! sfx coffret_laiton
+* Il ouvre un coffret de laiton : la girouette.
+MAREK: Tu prends ça. C'est la rose des vents du phare, l'originale, 1889. Mon père l'a démontée pour m'apprendre les directions à six ans. J'en ai fait un pendentif de veilleur. Elle s'assemble avec un sifflet et une plume, paraît-il.
+* Il sourit pour de bon, une fois.
+MAREK: Mon frère et ses inventions sentimentales. Fais-en quelque chose de grand, gamine. Vous étiez doués, vous deux, pour les grands sentiments maladroits. C'est tout ce que je sais vous souhaiter.
+-> give girouette_1889 ; flag girouette_obtenue ; seq SQ-16 ; CLARTE +1
+> p32 [SI: decision:D-03=ouvertes]
+> p33
+= p32
+* Avant de partir, il hésite sur le seuil, désignant du menton les trois lettres restées sur la table de la cuisine.
+MAREK: ... T'as lu ce que je n'ose pas ouvrir. Au moins quelqu'un l'a fait.
+LOHEN: Vous me détestez ?
+* Il remonte son col.
+MAREK: Non. Tu m'as évité d'avoir peur seul. C'est un service de gardien, ça. T'as la tournure d'une collègue.
+-> LIEN-MAREK +1
+= p33
+MAREK: Je peux pas venir. Je peux éclairer. C'est ce que je sais. Montre-moi que tu sais marcher.
+-> flag heures_bleues_annoncees
+end
+
+# Reprises de Marek dans la maison
+~ marek_maison_reprise [SI: flag:marek_porte_ouverte & !flag:girouette_obtenue]
+MAREK: [[puzzle:E10|La lentille tourne. Le cadran, lui, ment encore. Un phare qui ment sur l'heure, c'est un phare qui n'a pas fini de parler.|La lanterne est en panne depuis mardi. Cent trente et une marches. Elles se montent une fois pour toutes.]]
++ « Les trois lettres, sur la table ? » [SI: !decision:D-03] -> goto mm_lettres
++ « Vous avez dormi, Marek ? » -> +DOUCEUR ; goto mm_dormi
++ (boire ce qui reste de chocolat) -> goto mm_choco
+= mm_lettres
+MAREK: Trois recommandées. Trois. De l'administration, du notaire et d'une école. Je les ouvre pas. Ce qu'on ouvre pas, ça reste possible. Toi, t'es cartographe : t'ouvres ce que tu veux. C'est ton métier de regarder dessous.
+-> flag lettres_marek_vues
+end
+= mm_dormi
+MAREK: Les veilleurs dorment le jour. J'ai dormi trois heures. C'est mon record de la semaine. T'es la première à demander. Mon frère demandait. C'est une question de la famille, celle-là.
+-> LIEN-MAREK +1
+end
+= mm_choco
+PENSEE: froid. il était trop chaud, il est froid. il n'y a pas eu de moment où il était bon. c'est un chocolat de veilleur.
+end
+
+~ marek_apres_girouette [SI: flag:girouette_obtenue & !letter_read]
+MAREK: 23h52. Le passage. Neuf piquets. Filou s'arrêtera au seuil, laisse-le. Je tiens la lampe. Va.
+end
+
+~ marek_lettres_table [SI: flag:lettres_marek_vues & !decision:D-03]
+* Trois lettres recommandées, sur la table. Fermées. Adressées au veilleur.
++* Les ouvrir -> +COURAGE ; decision D-03=ouvertes ; flag lettres_ouvertes ; goto ml_ouvrir
++* Les laisser fermées -> +DOUCEUR ; decision D-03=fermees ; goto ml_laisser
++ (attendre) -> goto ml_fin
+= ml_ouvrir
+! sfx papier_dechire
+* Le sceau cède sous la lame d'atelier. Trois lettres de l'Office des Phares, même en-tête, même froideur : fin du gardiennage humain des Trois-Sœurs au premier décembre. Automatisation du feu. Le veilleur est prié de libérer les lieux.
+PENSEE: le premier décembre. il n'osait pas ouvrir la fin de son métier. trois fois la même lettre, parce qu'il n'a pas répondu à la première. je comprends la chaîne à la porte. on met une chaîne quand on n'a plus que la porte.
+-> CLARTE +1 ; flag lettres_contenu
+> ml_fin
+= ml_laisser
+PENSEE: ce qu'on n'ouvre pas reste possible. c'est sa phrase. je la lui laisse. j'ai assez de lettres à ouvrir sans les siennes.
+= ml_fin
+end
