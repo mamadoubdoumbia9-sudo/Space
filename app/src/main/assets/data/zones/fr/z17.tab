@@ -1,0 +1,48 @@
+# [Z17] LA POINTE-AU-VENT — LA BOÎTE AU BOUT DU MONDE
+zone z17
+name La Pointe-au-Vent
+subtitle la boîte au bout du monde
+act 4
+palette nuit
+music track_20
+ambience amb_pointe_nuit
+open flag:passage_engage | letter_read
+map 0.96 0.86
+start t01
+
+tableau t01 "La pointe, la boîte, le télescope"
+image art/zones/z17_t01.jpg
+prop tide_view 1
+prop particles bluehour
+prop filou_x 0.10
+prop filou_y 0.92
+enter_thought z17.pointe
+enter_scene hb07_herbe_velune [SI: !seen:hb07_herbe_velune]
+hot EXAMINE herbe_velune 0.30 0.80 "L'herbe à velune" think=z17.herbe sniff=herbe_velune -> give brindille_velune
+hot EXAMINE boite_rouge 0.62 0.55 "La boîte rouge" think=z17.boite sniff=boite_rouge -> scene hb09_boite
+hot PUZZLE E15 0.62 0.48 "Orienter la boîte sous le vent" [SI: has:cle_du_vent & seen:hb09_boite] done=z17.boite_ouverte
+hot EXAMINE plaque_riou 0.60 0.68 "La plaque du facteur Riou" think=z17.plaque_riou
+hot PUZZLE E16 0.85 0.45 "Le télescope de marine" [SI: puzzle:E15] done=z17.telescope_fait
+hot EXAMINE telescope_ex 0.85 0.45 "Le télescope de marine" think=z17.telescope sniff=telescope [SI: !puzzle:E15]
+hot MURMURE M-07 0.40 0.62 "Une ancre gravée sur le banc" lens=1
+hot ECHO E-12 0.40 0.66 "Le banc, la veille" [SI: ng+ & letter_read & !echo:E-12] hold=4
+hot EXAMINE large 0.50 0.25 "Le large" think=z17.large
+hot BORNE B40 0.10 0.75 "La dernière borne" [SI: has:lentille_arpenteur]
+hot SECRET s11_z17 0.94 0.70 "Un chat sur le rocher du bout" lens=1 -> flag s11_z17 ; thought secret.s11_seen ; sfx chat_miaule
+path z16 "Revenir sur le passage" 0.06 0.70 back [SI: letter_read] strict
+path t02 "L'abri du bout" 0.92 0.80
+
+tableau t02 "L'abri"
+image art/zones/z17_t02.jpg
+prop dark 1
+prop particles bluehour
+prop overlay lamp
+prop filou_x 0.15
+prop filou_y 0.92
+enter_thought z17.abri
+hot EXAMINE banc_abri 0.45 0.65 "Le banc de l'abri" think=z17.banc_abri
+hot SIT banc_abri_sit 0.45 0.72 "S'asseoir à l'abri" think=z17.abri_attente hold=2.5
+hot EXAMINE murs_abri 0.30 0.40 "Les murs gravés" think=z17.murs_abri
+hot READ archive_registre 0.70 0.50 "Un registre cloué au mur" archive=AR-06 [SI: letter_read]
+hot LISTEN vent_abri 0.60 0.20 "Le vent sur le toit" think=z17.vent_abri sfx=vent_tole
+path t01 "Ressortir sur la pointe" 0.06 0.75 back

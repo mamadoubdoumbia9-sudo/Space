@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">La Cartographie des Absents</string>
+    <string name="app_subtitle">Chapitre 1 — La Marée Basse</string>
+    <string name="text_input_ok">Déposer</string>
+    <string name="text_input_cancel">Annuler</string>
+</resources>

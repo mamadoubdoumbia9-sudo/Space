@@ -1,0 +1,51 @@
+# [Z09] L'ATELIER D'YSOLDE
+zone z09
+name L'atelier d'Ysolde
+subtitle la maison-tisserie, lisière du bois
+act 2
+palette atelier
+music track_11
+ambience amb_atelier_ysolde
+open seq>=SQ-06 & (visited:z08 | visited:z10)
+map 0.70 0.30
+start t01
+
+tableau t01 "La maison-grotte"
+image art/zones/z09_t01.jpg
+prop interior 1
+prop overlay lamp
+prop particles dust
+prop filou_x 0.85
+prop filou_y 0.92
+enter_thought z09.maison
+enter_scene sq09_ysolde [SI: !seen:sq09_ysolde]
+npc ysolde 0.32 0.72
+hot PUZZLE E07 0.68 0.40 "Le mur des nœuds" [SI: seen:sq09_ysolde] done=z09.noeud_lu
+hot EXAMINE metiers 0.20 0.45 "Les métiers à tisser" think=z09.metiers sniff=atelier_ysolde
+hot EXAMINE feu 0.88 0.60 "Le feu" think=z09.feu
+hot EXAMINE panier_boutons 0.52 0.78 "Le panier à boutons" think=z09.panier
+hot READ page13 0.52 0.84 "Une feuille dans le panier à boutons" page=13 [SI: examined:panier_boutons>=1]
+hot READ page14 0.12 0.86 "Une feuille sous le métier du fond" page=14 [SI: seen:sq09_ysolde]
+hot ECHO E-06 0.24 0.30 "Le coton garance" [SI: has:ruban_memoire & !echo:E-06] hold=4
+hot EXAMINE tresse 0.32 0.50 "La tresse-couronne d'Ysolde" think=z09.tresse [SI: LIEN-YSOLDE>=2]
+hot EXAMINE laines 0.75 0.65 "Les écheveaux teints" think=z09.laines
+hot BORNE B22 0.06 0.60 "Une borne dans le mur de la maison" [SI: has:lentille_arpenteur]
+hot SECRET s11_z09 0.94 0.35 "Un chat sur la poutre du fond" lens=1 -> flag s11_z09 ; thought secret.s11_seen ; sfx chat_miaule
+path z08 "Ressortir vers la falaise" 0.06 0.80 back kind=door
+path t02 "La plage de séchage" 0.94 0.80 kind=door
+
+tableau t02 "La plage de séchage"
+image art/zones/z09_t02.jpg
+prop tide_view 1
+prop particles spray
+prop filou_x 0.20
+prop filou_y 0.92
+enter_thought z09.plage
+npc ysolde 0.40 0.70 [SI: act>=4 & !letter_read]
+hot EXAMINE etoffes 0.55 0.40 "Les étoffes qui sèchent" think=z09.etoffes
+hot EXAMINE cuves 0.20 0.65 "Les cuves de teinture" think=z09.cuves
+hot EXAMINE mer_plage 0.80 0.35 "La mer, en bas" think=z09.mer_plage
+hot LISTEN vent_etoffes 0.55 0.25 "Le claquement des étoffes" think=z09.claquement sfx=etoffes_claquent
+hot EXAMINE garance 0.35 0.50 "Un fil garance, accroché" think=z09.fil_garance
+path t01 "Rentrer dans la maison" 0.06 0.75 back kind=door
+path z10 "Longer la lisière vers le bois" 0.94 0.70 [SI: seq>=SQ-06]

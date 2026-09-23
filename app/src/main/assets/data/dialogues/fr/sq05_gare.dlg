@@ -44,7 +44,7 @@ ANSELME: Elle n'attend pas les délais, mademoiselle. Elle attend les relâcheme
 ANSELME: ...Il me faut le pinceau à lettres. Troisième tiroir. Et la bonne peinture, pas l'acrylique du chantier : la peinture d'habitude, celle qui prend en couches fines.
 ! sfx tiroir
 ANSELME: Vous tenez l'échelle, mademoiselle. Je tiens la main. Elle tremble, mais elle tient.
-! hold repeindre 6
+! wait 4
 * Anselme repeint SORÈNE, lettre à lettre. Lohen tient l'échelle. À la dernière lettre, il souffle sur le pinceau.
 ANSELME: Voilà. Rendez-vous compte : quarante-sept ans à garder des noms, c'est le premier que je repeins. Jeanne aura un mot pour ça, ce soir. Elle qui détestait les trains. Elle va rire de moi.
 * Il remonte sa casquette. La main tremble encore. La voix, non.

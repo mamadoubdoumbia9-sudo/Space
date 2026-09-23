@@ -1,0 +1,26 @@
+# Cinématiques : @ id | titre | music=… | ambience=… | noskip ; puis plans : image | secondes | légende | locuteur | effet | sfx
+@ CIN-01 | Le réveil | music=track_01 | ambience=amb_reve
+art/cin/reve.jpg | 4 | La silhouette tombe en pluie d'encre. Les lucioles montent. L'eau devient lit. | | ink |
+art/zones/z01_t03.jpg | 4 | Lohen s'éveille avant la lumière. Le matin bleu entre par l'œil-de-bœuf. | | |
+art/zones/z02_t02.jpg | 6 | LA CARTOGRAPHIE DES ABSENTS — Chapitre 1 : La Marée Basse | | | harpe_08
+@ CIN-03 | La montée de la Crevette | music=track_09 | ambience=amb_funiculaire
+art/zones/z07_t01.jpg | 5 | La Crevette grince, s'arrache à la gare inférieure. Quatre-vingts mètres de câble, un cœur de 1908. | | pan_right | crevette_depart
+art/zones/z08_t01.jpg | 5 | Là-haut, la presqu'île entière se révèle : le port, la gare, la corniche, et tout au bout, un point rouge. | | |
+@ CIN-04 | La descente vers la grotte | music=track_17 | ambience=amb_pointe_nuit
+art/zones/z12_t01.jpg | 5 | Le monde bascule indigo. Toutes les fenêtres du village sont allumées. Cent pour cent. | | blue |
+art/zones/z12_t01.jpg | 4 | La lampe de Marek suit Lohen jusqu'à l'escalier de la falaise. Il ne descend pas. Il éclaire. | | blue | pas_1
+@ CIN-05 | Le passage | music=track_19 | ambience=amb_passage | noskip
+art/zones/z16_t01.jpg | 5 | Filou reste au seuil. Quatre pattes plantées, une phrase muette au milieu du chemin. | | blue |
+art/zones/z16_t01.jpg | 6 | Sept cents mètres d'estran, la mer à quarante centimètres des deux côtés. Neuf piquets. L'herbe à velune. | | pan_right | pas_eau_2
+@ CIN-07 | La lettre | music=track_lettre | noskip
+art/zones/z17_t01.jpg | 5 | La boîte s'est ouverte comme une fleur mécanique. Dedans : une lettre. Une seule. | | |
+art/zones/z17_t01.jpg | 6 | Le prénom, dessus, de son écriture. Filou met sa tête sous la main de Lohen. | | | pli_depli_1
+@ CIN-08b | Le retour | music=track_21 | ambience=amb_terrasse
+art/zones/z18_t01.jpg | 5 | La mer est revenue derrière elle. Lohen remonte vers le phare. Le faisceau l'accompagne, une seconde et demie toutes les dix secondes. | | pan_left | pas_1
+art/zones/z18_t01.jpg | 4 | Filou l'attend au seuil. Il monte devant, les escaliers, en tête. Chien de tête, cœur de mule. | | |
+@ CIN-08 | La réponse | music=track_23 | noskip
+art/zones/z17_t01.jpg | 5 | La boîte referme sa corolle sur ce que Lohen a laissé. Le vent tourne à l'ouest. | | |
+art/zones/z17_t01.jpg | 5 | Au loin, une voix d'enfant : Tom, quelque part, gagne aux billes. La presqu'île dort enfin, toutes fenêtres allumées. | | | tom_till_gagne
+art/zones/z13_t02.jpg | 6 | La lentille de Fresnel tourne. Neuf secondes sur la mer. Une seconde et demie sur la pointe. | | |
+@ CIN-NG | Deuxième lecture | music=track_01
+art/cin/reve.jpg | 4 | On relit. On ne recommence pas. | | ink |

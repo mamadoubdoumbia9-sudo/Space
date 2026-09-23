@@ -1,0 +1,80 @@
+# [Z03] PLACE DU BEFFROI & MARCHÉ COUVERT
+zone z03
+name La place du Beffroi
+subtitle Port-Cendre, le marché
+act 1
+palette place
+music track_04
+ambience amb_ville
+open seq>=SQ-03
+map 0.40 0.58
+start t01
+
+tableau t01 "La place"
+image art/zones/z03_t01.jpg
+prop particles dust
+prop filou_x 0.25
+prop filou_y 0.92
+enter_thought z03.place
+npc emeric 0.90 0.72 [SI: act<4]
+npc tom_till 0.28 0.80 [SI: act<=2]
+npc adele 0.62 0.74 [SI: act==3 | act>=3 & !flag:adele_rencontree]
+hot EXAMINE beffroi 0.72 0.16 "L'horloge du beffroi" think=z03.beffroi
+hot SECRET S02_beffroi 0.72 0.22 "15h46… l'aiguille trébuche" [SI: flag:secret_S02_ouvert & has:lentille_arpenteur & !flag:s02_beffroi] -> flag s02_beffroi ; count s02 +1 ; thought secret.s02_step ; sfx horloge_tic
+hot EXAMINE kiosque 0.62 0.36 "Le kiosque à musique" think=z03.kiosque sniff=kiosque
+hot EXAMINE marelle 0.46 0.92 "La marelle des marées" think=z03.marelle
+hot ACTION marelle_jeu 0.40 0.86 "Jouer à la marelle" scene=jumeaux_marelle [SI: flag:marelle_ouverte & !seen:jumeaux_marelle & act<=2]
+hot EXAMINE affichage 0.80 0.44 "Le tableau d'affichage du marché" think=z03.affichage
+hot PUZZLE S01 0.83 0.50 "L'affiche du bal, sous la colle" [SI: examined:affichage>=1 & !secret:S01]
+hot MURMURE M-14 0.79 0.38 "Le registre du marché : un nom effacé" lens=1
+hot MURMURE M-09 0.70 0.05 "Des graviers dans la gouttière du beffroi" lens=1
+hot MURMURE M-16 0.20 0.55 "Un sillon d'herbe derrière l'école" lens=1
+hot EXAMINE dispensaire 0.62 0.62 "Le dispensaire" think=z03.dispensaire
+hot SECRET S02_dispensaire 0.60 0.56 "L'horloge du dispensaire" [SI: flag:secret_S02_ouvert & flag:adele_rencontree & !flag:s02_dispensaire] -> flag s02_dispensaire ; count s02 +1 ; thought secret.s02_step ; sfx horloge_tic
+hot READ page23 0.66 0.80 "Une feuille à demi mouillée, sous le banc" page=23 [SI: flag:page23_visible | act>=3 & examined:dispensaire>=2]
+hot SECRET s11_z03 0.94 0.30 "Un chat sur le rebord" lens=1 -> flag s11_z03 ; thought secret.s11_seen ; sfx chat_miaule
+hot EXAMINE pigeons 0.38 0.70 "Les pigeons de la place" think=z03.pigeons
+path z02 "Redescendre au port" 0.06 0.80 back
+path t02 "Entrer au café L'Écume" 0.08 0.45 kind=door
+path t03 "Entrer au marché couvert" 0.20 0.40 kind=door
+path z05 "Le chemin de la gare" 0.50 0.30 [SI: flag:piste_gare | seq>=SQ-04] locked=z03.gare_fermee strict
+path z07 "Vers la base du funiculaire" 0.94 0.60 [SI: seq>=SQ-05] strict
+
+tableau t02 "Le café L'Écume"
+image art/zones/z03_t02.jpg
+prop interior 1
+prop music track_05
+prop ambience amb_cafe
+prop filou_x 0.20
+prop filou_y 0.92
+enter_thought z03.cafe
+enter_scene sq03_marta [SI: !seen:sq03_marta]
+enter_scene marta_second_couplet [SI: flag:marta_rencontree & act>=3 & !seen:marta_second_couplet]
+npc marta 0.62 0.72
+hot EXAMINE jukebox 0.30 0.62 "Le juke-box" think=z03.jukebox
+hot ACTION jukebox_disque12 0.30 0.52 "Le disque 12" scene=marta_jukebox [SI: flag:disque12_indice & !echo:E-04]
+hot EXAMINE tableau_noir 0.62 0.20 "L'ardoise du jour" think=z03.tableau_noir
+hot EXAMINE percolateur 0.68 0.48 "Le percolateur" think=z03.percolateur sniff=cafe_marta
+hot EXAMINE cadres 0.55 0.30 "Les photos de bateaux" think=z03.cadres
+hot MURMURE M-15 0.08 0.60 "Deux parapluies à la porte" lens=1
+hot EXAMINE fenetre_cafe 0.10 0.30 "La fenêtre sur la place" think=z03.fenetre_cafe
+hot SIT table_cafe 0.10 0.80 "S'asseoir un moment" think=z03.attente_cafe hold=2.5
+path t01 "Sortir sur la place" 0.04 0.75 back kind=door
+
+tableau t03 "Le marché couvert"
+image art/zones/z03_t03.jpg
+prop interior 1
+prop ambience amb_ville
+prop filou_x 0.45
+prop filou_y 0.92
+enter_thought z03.marche
+enter_scene sq04_rosa [SI: !seen:sq04_rosa & seen:sq03_filou_muret]
+npc rosa 0.70 0.74
+hot EXAMINE four 0.62 0.45 "Le four de Rosa" think=z03.four sniff=four_rosa
+hot EXAMINE balance 0.92 0.30 "La balance de laiton" think=z03.balance
+hot EXAMINE cageots 0.45 0.62 "Les cageots" think=z03.cageots
+hot EXAMINE atelier_cordonnier 0.14 0.48 "L'échoppe du cordonnier" think=z03.cordonnier
+hot ACTION fournee 0.66 0.60 "Aider à la fournée" scene=rosa_fournee [SI: flag:rosa_fournee_promise & !flag:rosa_fournee_faite]
+hot TAKE croquettes 0.80 0.88 "Un sac de croquettes sous le banc" think=z03.croquettes [SI: seen:sq04_rosa]
+hot EXAMINE verriere 0.60 0.08 "La verrière" think=z03.verriere
+path t01 "Sortir sur la place" 0.04 0.75 back kind=door

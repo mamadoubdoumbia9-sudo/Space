@@ -1,0 +1,50 @@
+# [Z14] LA GROTTE DES MARÉES (Heures Bleues)
+zone z14
+name La grotte des marées
+subtitle sous la falaise, aux Heures Bleues
+act 4
+palette bleu
+music track_17
+ambience amb_grotte
+open flag:heures_bleues_annoncees & act>=4 | letter_read
+map 0.86 0.72
+start t01
+
+tableau t01 "L'entrée & les rochers sucrés"
+image art/zones/z14_t01.jpg
+prop dark 1
+prop particles bluehour
+prop overlay lamp
+prop filou_x 0.20
+prop filou_y 0.92
+enter_thought z14.entree
+enter_scene hb01_grotte_entree [SI: !seen:hb01_grotte_entree]
+hot PUZZLE E12 0.55 0.55 "Les trois boyaux" done=z14.grotte_faite
+hot EXAMINE rochers_sucres 0.25 0.70 "Les rochers sucrés" think=z14.rochers_sucres sniff=stalactites
+hot EXAMINE resurgence 0.75 0.75 "La résurgence" think=z14.resurgence sniff=grotte
+hot ECHO E-10 0.60 0.80 "La table à cartes" [SI: puzzle:E12 & !echo:E-10] hold=4
+hot ACTION phoque 0.85 0.85 "Rester immobile" scene=hb03_phoque hold=8 hold_label="rester immobile" [SI: !secret:S07] sniff=phoque
+hot LISTEN clapotis 0.40 0.40 "Les clapotis" think=z14.clapotis sfx=clapotis
+hot BORNE B30 0.08 0.60 "Une borne des passeurs" [SI: has:lentille_arpenteur]
+hot SECRET s11_z14 0.92 0.30 "Deux yeux dans le noir" lens=1 -> flag s11_z14 ; thought secret.s11_seen ; sfx chat_miaule
+path z12 "Remonter vers le sommet" 0.06 0.75 back [SI: !letter_read] strict
+path z18 "Remonter vers la terrasse du phare" 0.06 0.75 back [SI: letter_read] strict
+path t02 "La salle intérieure" 0.92 0.60 [SI: puzzle:E12] locked=z14.boyaux_dabord
+
+tableau t02 "La table de roche"
+image art/zones/z14_t02.jpg
+prop dark 1
+prop particles bluehour
+prop overlay lamp
+prop filou_x 0.15
+prop filou_y 0.92
+enter_thought z14.salle
+enter_scene hb02_table_roche [SI: puzzle:E12 & !seen:hb02_table_roche]
+hot EXAMINE sillon 0.50 0.60 "Le sillon frais" think=z14.sillon sniff=table_roche
+hot EXAMINE reperes 0.40 0.50 "Les repères des passeurs" think=z14.reperes
+hot PUZZLE E14 0.62 0.62 "Assembler la clé du vent sur l'enclume de roche" [SI: has:girouette_1889 & has:sifflet_esteban & has:plume_esteban & !puzzle:E14]
+hot EXAMINE enclume 0.62 0.68 "L'enclume naturelle" think=z14.enclume [SI: puzzle:E14 | !has:girouette_1889]
+hot EXAMINE stalactites 0.30 0.20 "Les stalactites de sel" think=z14.stalactites
+hot LISTEN respiration 0.80 0.80 "Le bassin qui respire" think=z14.respiration sfx=bassin_respire
+path t01 "Revenir à l'entrée" 0.06 0.70 back
+path z16 "La sortie basse, vers le passage" 0.92 0.80 [SI: puzzle:E14 & act>=4 & !letter_read] locked=z14.cle_dabord strict

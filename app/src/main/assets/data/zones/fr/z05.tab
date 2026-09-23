@@ -1,0 +1,74 @@
+# [Z05] LA GARE DE PERDU-VENT
+zone z05
+name La gare de Perdu-Vent
+subtitle nord-est, en hauteur
+act 1
+palette gare
+music track_07
+ambience amb_gare
+open flag:piste_gare | seq>=SQ-04
+map 0.55 0.40
+start t01
+
+tableau t01 "Le hall"
+image art/zones/z05_t01.jpg
+prop interior 1
+prop particles dust
+prop filou_x 0.20
+prop filou_y 0.92
+enter_thought z05.hall
+enter_scene sq05_anselme [SI: !seen:sq05_anselme]
+npc anselme 0.74 0.72
+hot PUZZLE E02 0.40 0.30 "Le tableau des départs" [SI: seen:sq05_anselme] done=z05.tableau_lu
+hot EXAMINE tableau_departs 0.40 0.24 "Le tableau à palettes" think=z05.tableau_departs sniff=tableau_departs
+hot READ page5 0.40 0.48 "Une feuille sous le tableau" page=5 [SI: puzzle:E02]
+hot EXAMINE banc3 0.22 0.70 "Le banc 3" think=z05.banc3 sniff=banc3
+hot TAKE boussole_esteban 0.26 0.66 "Une boussole sur le banc" think=z05.boussole [SI: seen:sq05_anselme]
+hot READ page4 0.18 0.76 "Une feuille glissée dans les lattes du banc" page=4 [SI: seen:sq05_anselme]
+hot ECHO E-02 0.22 0.62 "S'asseoir sur le banc 3" [SI: seen:sq05_anselme & !echo:E-02] hold=4
+hot EXAMINE lampe_anselme 0.80 0.52 "La lampe-tempête d'Anselme" think=z05.lampe
+hot EXAMINE horloge_gare 0.58 0.12 "L'horloge de la gare" think=z05.horloge
+hot SECRET S02_gare 0.58 0.16 "15h46… l'aiguille trébuche" [SI: flag:secret_S02_ouvert & has:lentille_arpenteur & !flag:s02_gare] -> flag s02_gare ; count s02 +1 ; thought secret.s02_step ; sfx horloge_tic
+hot EXAMINE guichet 0.88 0.40 "Le guichet" think=z05.guichet
+hot TAKE billet_1979 0.90 0.46 "Un billet périmé, sur le guichet" think=z05.billet [SI: LIEN-ANSELME>=3]
+hot MURMURE M-10 0.06 0.50 "Une inscription sous la lourde" lens=1
+hot EXAMINE feuille_morse 0.86 0.60 "Le tiroir des choses inutiles" think=z05.feuille_morse -> flag feuille_morse
+hot SECRET s11_z05 0.06 0.30 "Un chat sur le rebord de la fenêtre" lens=1 -> flag s11_z05 ; thought secret.s11_seen ; sfx chat_miaule
+path z03 "Redescendre en ville" 0.06 0.80 back
+path t02 "Sortir sur le quai" 0.94 0.60 kind=door
+path t03 "L'annexe : la chambre noire" 0.94 0.30 kind=door [SI: has:carnet_comptage | flag:anselme_marek] locked=z05.annexe_fermee
+
+tableau t02 "Le quai & l'Effrontée"
+image art/zones/z05_t02.jpg
+prop particles dust
+prop filou_x 0.22
+prop filou_y 0.92
+enter_thought z05.quai
+hot EXAMINE locomotive 0.55 0.55 "La 040-T « l'Effrontée »" think=z05.locomotive
+hot EXAMINE plaque 0.60 0.62 "La plaque de la locomotive" think=z05.plaque
+hot BORNE B04 0.14 0.80 "Borne du quai 1" [SI: has:lentille_arpenteur]
+hot EXAMINE carre_poli 0.40 0.85 "Le carré de ciment poli" think=z05.carre_poli
+hot EXAMINE rails 0.80 0.80 "Les rails vers les voies mortes" think=z05.rails
+hot LISTEN vent_quai 0.50 0.20 "Le vent sur le quai" think=z05.vent_quai sfx=vent_quai
+hot SECRET s11_z05b 0.90 0.40 "Un chat sur le toit de l'Effrontée" lens=1 -> flag s11_z05 ; thought secret.s11_seen ; sfx chat_miaule
+path t01 "Rentrer dans le hall" 0.06 0.60 back kind=door
+path z06 "Suivre les rails vers les voies mortes" 0.92 0.75 [SI: seq>=SQ-05] locked=z05.voies_fermees
+
+tableau t03 "La chambre noire"
+image art/zones/z05_t03.jpg
+prop interior 1
+prop dark 1
+prop overlay lamp
+prop ambience amb_gare
+prop filou_x 0.15
+prop filou_y 0.92
+enter_thought z05.chambre_noire
+hot PUZZLE E08 0.50 0.50 "Développer la photo" [SI: has:carnet_comptage] done=z05.photo_faite
+hot EXAMINE agrandisseur 0.30 0.40 "L'agrandisseur" think=z05.agrandisseur
+hot EXAMINE note_esteban 0.34 0.30 "Une note collée : 90-15-60" think=z05.note_9015
+hot EXAMINE metronome 0.75 0.55 "Le métronome d'Anselme" think=z05.metronome
+hot EXAMINE lit_annexe 0.85 0.80 "Le lit de camp" think=z05.lit_annexe
+hot MURMURE M-05 0.86 0.88 "Une ardoise sous le lit" lens=1
+hot READ page18 0.10 0.70 "Une feuille sous la lampe rouge" page=18 [SI: puzzle:E08]
+hot EXAMINE bains 0.55 0.70 "Les trois bains" think=z05.bains
+path t01 "Revenir dans le hall" 0.06 0.55 back kind=door

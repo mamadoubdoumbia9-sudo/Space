@@ -1,0 +1,124 @@
+# Pensées de Lohen — acte III (sommet, phare) et acte IV (Heures Bleues)
+
+# ── Z12 — le sommet
+z12.chemin | le chemin des 214 marches. je les connais une à une, moi aussi. c'est pas la fatigue qui compte les marches. c'est l'habitude des gens qu'on aime.
+z12.chemin.act4 | les marches la nuit. la lampe du seuil est allumée là-haut. le phare veille sur ceux qui montent.
+z12.marches | les marches taillées dans le granit. usées au milieu, neuves sur les bords. deux cent quatorze. il les descendait avec un sac léger, un matin à cinq heures.
+z12.bille | une bille verte sur la marche 44. une bille de tom. il la paiera un jour, celle-là. ou pas. les dettes d'enfance, ça s'achète en douce.
+z12.paratonnerre | le paratonnerre du phare. il attire ce qui tombe du ciel pour que la lanterne continue. c'est un métier de frère aîné.
+z12.cables | le vent dans les câbles du paratonnerre. une note tenue, grave. le phare a une voix quand le vent souffle de l'ouest. elle dit toujours la même chose.
+z12.boite_office | la boîte aux lettres de l'office des phares. trois recommandées, non relevées. j'observe, je décide, j'assumerai.
+z12.trois_soeurs | les trois-sœurs à l'horizon : la grande à l'ouest, éteinte ; la petite au sud-est, éteinte. la troisième est celle-ci. les caps ne s'éteignent pas. les lampes, seulement.
+z12.porte | la porte du phare. cloutée, chaînée. une lampe au seuil, une niche avec le journal de veille. « les portes des phares sont des portes de temples : elles ne s'ouvrent que pour les gens qui ont apporté leur propre lumière. »
+z12.porte_cloutee | la porte cloutée. cent trente clous, comptés. une porte qu'on a voulue plus solide que la tempête et que la famille.
+z12.chaine | la chaîne de la porte. trois doigts d'ouverture. c'est un homme qui se mesure en doigts de porte. il en faudra plus que trois.
+z12.lampe_porte | la lampe du seuil. allumée en plein jour. les veilleurs ne l'éteignent jamais : « on ne sait pas qui monte ».
+z12.journal_niche | le journal de veille dans la niche : les entrées du jour. « vent ouest, force 3. rien à signaler. tout à signaler. » c'est l'écriture de marek : carrée, pressée.
+z12.mer_bas | la mer, quatre-vingts mètres plus bas. d'ici elle a l'air calme. c'est une illusion d'altitude. tout a l'air calme, de haut.
+z12.porte_fermee | la porte est chaînée. marek n'ouvre pas aux talons qui chantent. il faut lui rapporter quelque chose du bas : une lampe, un colis, un crayon. quelque chose qui prouve qu'on a écouté la ville.
+
+# ── Z13 — le phare
+z13.cuisine | la cuisine aux deux tasses. la fenêtre sur le large, le fourneau, le journal 163 sur son pupitre. deux tasses sur la table. la deuxième est servie tous les matins. une habitude chaude.
+z13.cuisine.after | la cuisine. deux tasses. la deuxième est pour moi, maintenant. ce n'est pas qu'il n'espère plus. c'est qu'il partage l'habitude.
+z13.deux_tasses | deux tasses. l'une a bu, l'autre attend. neuf jours de tasse servie. les habitudes chaudes, c'est ce qui reste quand l'espoir est parti dormir.
+z13.lettres | trois lettres recommandées de l'office des phares, fermées, alignées comme des accusés. il ne les ouvre pas. ce qu'on n'ouvre pas reste possible.
+z13.journal163 | le journal 163 du phare. la main de marek, chaque nuit, la même phrase finale : « vent debout, il est quelque part sous ce vent. » un cap, pas une position. un cap, c'est une prière d'ingénieur.
+z13.journal163.2 | il faudrait qu'il me fasse confiance pour que je lise les pages d'avant. le tome 141, l'année du père. les tomes, c'est des gens : on en ouvre un neuf quand on a fini de pleurer l'ancien.
+z13.annuaire | l'annuaire des marées 2026 sur la table à cartes, ouvert aux lunes. treize lignes, des symboles, une correction à la plume dans la marge. la lune des marées, c'est ce soir ou dans vingt-sept jours.
+z13.annuaire_fait | 23h52. soixante et onze minutes de bleu. après, la mer reprend, et elle reprend toujours.
+z13.fenetre | la fenêtre sur le large. la lune est pleine et basse, orangée. de cette fenêtre, on a vu partir des bateaux, des frères, et un père qui n'est pas revenu.
+z13.fourneau | le fourneau. une casserole de chocolat trop chaud. « je fais tout trop chaud, c'est le problème des gens qui veillent : on confond feu et cœur. »
+z13.lentilles | une marmite de lentilles. c'est mauvais. c'est chaud. c'est la première fois depuis neuf jours qu'il fait à manger pour deux en le sachant.
+z13.escalier_ferme | l'escalier en colimaçon monte à la lanterne. cent trente et une marches. marek ne m'a pas encore dit que je pouvais monter. dans un phare, on attend qu'on vous le dise.
+z13.lanterne | la lanterne. la lentille de fresnel à trois prismes, le poids d'horlogerie, la vitre sur tout l'horizon. cent trente et une marches et une par pas de veille. les phares ont la forme exacte de la patience.
+z13.lentille_faite | quatre, neuf, un. le faisceau s'attarde sur la pointe. il a réglé la tendresse de la rotation. on ne corrige pas ça.
+z13.fresnel | la lentille de fresnel, 1889. trois prismes rotatifs qui plient la lumière. un phare ne montre pas la mer : il montre les gens.
+z13.poids | le poids d'horlogerie. il descend pendant que la lentille tourne ; quand il touche le sol, elle dort. « remonte-lui son cœur », dit marek.
+z13.marche87 | la marche 87. il y a une feuille bleu nuit glissée sous la contremarche. « marek m'a demandé si j'allais bien. j'ai dit ouais. il a dit ouais. »
+z13.lampe_13 | une lampe-tempête près de la lanterne, cirée, avec un « 13 » au pochoir. la lampe d'anselme. elle est là depuis l'hiver. elle a pris du sel.
+z13.vue_pointe | la pointe, par la vitre de la lanterne. un point rouge sur un doigt de terre. le faisceau y passe, et ralentit. je l'ai vu faire. je viens de me le dire.
+z13.graduation | sous la patine du prisme central, une graduation d'origine, à peine lisible à la lentille : 4 — 9 — 1. le réglage était celui-là depuis le début.
+
+# ── Z14 — la grotte des marées
+z14.entree | bleu. tout est bleu comme dans l'encre des cartes anciennes, la couleur qu'on mettait sur les terrae incognitae. le monde inconnu. il est là.
+z14.entree.after | la grotte, sans la marée. le bleu est parti avec l'heure. il reste le sucre sur les rochers et le bassin qui respire.
+z14.grotte_faite | est au troisième, descente au cinquième, tout droit au deuxième. puis le silence. le dernier virage se reconnaît à l'absence.
+z14.rochers_sucres | les rochers sucrés. une croûte blanche, cristalline, que la mer dépose à chaque retrait. « la mer prévient. » la grotte est sa cuisine.
+z14.resurgence | la résurgence. de l'eau douce qui sort de la falaise et rencontre la mer. deux eaux qui ne se mélangent pas tout de suite : il faut une marée entière.
+z14.clapotis | les clapotis. quatre secondes entre deux coups. l'eau frappe la roche à intervalle régulier. compter, c'est naviguer. dans le noir, l'eau est la seule voix qui compte juste.
+z14.boyaux_dabord | trois boyaux. nord, est, descente. sans compter les clapotis, je tourne en rond. la grotte est une boucle, pas un labyrinthe : on n'est jamais perdu, on est seulement en retard.
+z14.salle | la salle intérieure. la table de roche polie par des générations de passeurs. les repères gravés à hauteur de main. un sillon frais.
+z14.sillon | le sillon frais dans le polissage. quatre jours. il est passé il y a quatre jours. il a appris le passage, comme une leçon, pour quelqu'un.
+z14.reperes | les repères des passeurs : un trident, une sirène, une ancre. des générations de « on est passés par ici ». la carte la plus honnête que je connaisse.
+z14.enclume | l'enclume naturelle : une pierre plate, noire, où les passeurs redressaient leurs harpons. on y assemble ce qu'on a en trois morceaux.
+z14.stalactites | des stalactites de sel. elles poussent d'un millimètre par an. la grotte a mille ans de patience au plafond.
+z14.respiration | le bassin ne clapote pas. il respire. une inspiration longue, une expiration lente. l'arrivée se reconnaît à ce qui se tait.
+z14.cle_dabord | la sortie basse mène au passage. je n'y vais pas sans la clé du vent : la boîte, là-bas, n'ouvre pas par force. elle ouvre par équilibre.
+
+# ── Z15 — l'anse aux coquillages
+z15.crique | l'anse aux coquillages. cent galets blancs, une planche entre deux rochers, la dune double. la première maison que j'aie jamais cartographiée. échelle 1/1.
+z15.crique.after | l'anse. rien n'a bougé. la planche tient. treize ans.
+z15.planche | la planche entre deux rochers. deux noms au crayon, presque effacés : E. et L. « le crayon tient mieux que l'encre, ici. » il tient encore.
+z15.boite_tresors | la boîte à trésors : une pièce de deux centimes, une plume de mouette, une dent de lait, un mot inconnu noté en 2017. et le mot. il a rajouté le mot. velune.
+z15.galets | cent galets blancs. je les avais comptés à neuf ans. les galets bougent, le compte tient. c'est ça, les amis d'enfance.
+z15.dune | la dune double. elle a bougé de deux mètres vers l'est depuis 2013. le sable déménage. les trésors ont la politesse de rester.
+z15.vagues | les vagues de l'anse. petites, régulières, presque muettes. la mer parle bas ici : c'est une plage secrète, elle le sait.
+secret.s05_done | j'ai creusé à la dune double. la boîte à trésors est là. il a rajouté une chose. le mot. évidemment, le mot.
+
+# ── Z16 — le passage
+z16.chaussee | la mer des deux côtés, à quarante centimètres. je marche au milieu du monde, sur un chemin qui n'existe qu'une heure par vingt-sept jours. les vrais chemins ont toujours eu des horaires.
+z16.chaussee.after | le passage, au matin. la mer est revenue des deux côtés, plus haute. la chaussée est sous l'eau. je suis passée. ça se voit à la démarche.
+z16.piquets | neuf piquets, plantés en 1707 par les neuf sauvés du saint-eumèle. neuf sauvés. je marche sur un chemin de rescapés.
+z16.eau_gauche | la mer, à gauche. plate, noire, patiente. elle attend son heure. elle a toujours eu son heure.
+z16.eau_droite | la mer, à droite. la même. elle m'encadre comme deux parents qui laissent passer.
+z16.fil_plomb | le fil de plomb d'anselme. je compte les nœuds en marchant. c'est un chapelet laïc pour gens pressés par l'eau. je marche à l'économie de mer.
+z16.maree | la marée. basse, au plus bas. dans soixante et onze minutes, elle reprend. elle reprend toujours.
+z16.pas_encore | pas encore. filou plante ses quatre pattes. il faut lui dire de rester. il faut décider. la mer ne décidera pas à ma place : c'est la seule politesse qu'elle ait.
+
+# ── Z17 — la Pointe-au-Vent
+z17.pointe | la pointe-au-vent. une boîte rouge penchée sur un poteau, un télescope de marine, un banc, de l'herbe à velune partout. le bout du monde a la taille d'une chambre.
+z17.pointe.after | la pointe, après. la boîte est ouverte. le télescope regarde le large. il y a de l'herbe à velune partout. il y en a beaucoup, ici.
+z17.herbe | l'herbe à velune. la légende des enfants : elle pousse là où quelqu'un a été très aimé. ... il y en a beaucoup, ici.
+z17.boite | la boîte rouge, penchée, entêtée. une boîte aux lettres au bout du monde. la fente est de travers. elle n'ouvre pas par force.
+z17.boite_ouverte | la boîte s'est ouverte comme une fleur mécanique. six secondes. dedans, une lettre. une seule.
+z17.plaque_riou | la plaque du facteur riou, 1901 : « le vent ouvre ce qui s'aligne. le reste, il le garde. — r. » le pied de girouette est vide depuis cent vingt-cinq ans. il attendait.
+z17.telescope | le télescope de marine, sur son trépied, braqué sur le large. la bague de mise au point porte une gravure minuscule. je la lirai quand la boîte sera ouverte.
+z17.telescope_fait | mon prénom. c'est mon prénom dessus. c'est son écriture.
+z17.large | le large. nord : le large. sud : nous. ça dépend d'où on se tient. ça a toujours dépendu d'où on se tient.
+z17.abri | l'abri du bout de la pointe. un toit de tôle, un banc, des murs gravés par des siècles de gens qui attendaient la marée. on y attend bien.
+z17.banc_abri | le banc de l'abri. le bois est poli par les attentes. quelqu'un s'y est assis il y a deux jours avec une lettre à la main, à parler à une boîte.
+z17.abri_attente | j'ai attendu à l'abri. le vent a tourné une fois. la marée a repris un peu. c'est un abri qui tient parole.
+z17.murs_abri | les murs gravés : des dates, des initiales, des marées. « 1707 — neuf ». « 1901 — r. ». « 2013 — E+L ». les murs d'ici sont des registres.
+z17.vent_abri | le vent sur le toit de tôle. il fait le bruit d'une pluie qui n'arrive pas. c'est une musique de veille.
+
+# ── Z18 — la terrasse du phare
+z18.terrasse | la terrasse du phare. le mât de pavillon, le cadran gravé dans les dalles, le garde-corps, le théodolite. le faisceau passe au-dessus. d'ici, tout ce que j'ai traversé tient dans un cercle de lampe.
+z18.terrasse.after | la terrasse, nuit pleine. marek est au garde-corps. il y a deux tasses. il y en aura toujours deux.
+z18.cadran_fait | onze heures sept. l'heure vraie est posée. la veille est préchauffée. c'est la première fois que quelqu'un pose l'heure à sa place depuis neuf jours.
+z18.soeurs_fait | deux cent soixante-deux, cent dix-huit. la pointe, vérifiée deux fois. au cœur et à la règle.
+z18.gnomon | le mât de pavillon fait office de gnomon. son ombre tombe sur les dalles gravées d'heures babyloniques. le rituel des veilleurs : poser l'heure vraie avant la grande marée.
+z18.garde_corps | le garde-corps, poli aux avant-bras. deux tapes dessus : ce sont les « merci » de marek. il en a donné beaucoup, au garde-corps.
+z18.faisceau | le faisceau. neuf secondes sur la mer, une seconde et demie sur la pointe. l'inégalité est la signature. le phare éclaire la boîte depuis des années.
+z18.pointe_nuit | la pointe, dans la nuit. le faisceau y passe, ralentit, repart. la boîte reçoit une seconde et demie de lumière toutes les dix secondes. c'est une veille.
+z18.fenetres | les fenêtres du village, toutes allumées. cent pour cent. y compris l'épave. y compris la cabine de la crevette. la presqu'île entière veille sur ma traversée.
+z18.tasse_chaude | la deuxième tasse, chaude. il me la donne. ce n'est pas qu'il n'espère plus. c'est qu'il partage l'habitude. c'est plus grand.
+
+# ── Secrets, chocolats, silences
+secret.s11_seen | monsieur éraflé. le chat au bout de l'oreille manquante. il est partout où je vais, toujours à distance réglementaire. je note. je note tout.
+secret.s11_done | dix-huit fois monsieur éraflé. dix-huit zones. il m'a suivie partout sans jamais se laisser approcher. le compagnon d'aile. je crois que c'est lui qui m'a cartographiée.
+secret.s10_done | trois cartes d'archive du cabinet, annotées d'une main que je connais : des pétrels de dos dans les marges, une croix sur la pointe, un mot en bas : « velune, ici, la nuit ». il venait relire mes cartes.
+z03.chocolat_1 | le chocolat de bienvenue. elle devine les journées comme le four devine le pain.
+z03.chocolat_2 | deuxième chocolat. sans supplément. je n'ai rien dit, elle a tout entendu : c'est le principe d'un café.
+z03.chocolat_3 | troisième. elle ne compte pas. je compte pour elle : c'est mon carnet, c'est ma faute.
+z03.chocolat_4 | quatrième. le chocolat de marta a un goût de retour. il faudrait un mot pour ça. il y en a un, quelque part.
+z03.chocolat_5 | cinquième. elle pose la tasse et repart essuyer. elle ne regarde jamais boire. c'est une délicatesse de patronne.
+z03.chocolat_6 | sixième. il est trop chaud. il l'est toujours. les gens qui veillent confondent feu et cœur. marek dit ça. marta le fait.
+z03.chocolat_7 | septième. filou a eu la petite cuillère à lécher. il a une économie de chocolat, lui aussi.
+z03.chocolat_8 | huitième. je n'ai plus soif depuis le troisième. je bois quand même. on ne refuse pas une présence.
+z03.chocolat_9 | neuvième. neuf. comme les jours. elle ne le sait pas. ou elle le sait très bien.
+z03.chocolat_10 | dixième. je lui dois dix tasses et onze mercis. émeric l'a noté au carnet des dettes de cœur. la ligne est longue.
+z03.chocolat_11 | onzième. elle ne compte pas. moi je compte : c'est mon carnet, c'est ma faute. j'espère qu'elle sert des chocolats comme ça toute sa vie. j'espère que quelqu'un, un jour, lui en servira un.
+npc.ombeline.silent | ombeline dessine. quand elle dessine, on ne parle pas : c'est la première règle de la maison.
+npc.marek.silent | marek regarde le large. il ne se retourne pas. il entend. il répondra quand il aura fini de compter quelque chose.
+npc.tom_till.silent | les jumeaux discutent à voix basse, penchés sur un plan. on n'interrompt pas un conseil de guerre.
+npc.aristide.silent | aristide accorde un verre. « chut, monsieur-dame, il a le trac. »

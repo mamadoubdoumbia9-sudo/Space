@@ -1,0 +1,70 @@
+# [Z01] LE CABINET VASSEUR — Port-Cendre, rue des Saleurs
+zone z01
+name Le Cabinet Vasseur
+subtitle rue des Saleurs, Port-Cendre
+act 1
+palette papier
+music track_02
+ambience amb_cabinet
+open true
+map 0.30 0.62
+start t01
+
+tableau t01 "La boutique des cartes"
+image art/zones/z01_t01.jpg
+prop interior 1
+prop particles dust
+prop filou_x 0.30
+prop filou_y 0.92
+enter_thought z01.boutique
+enter_scene sq02_ombeline [SI: seen:prologue_reve & !seen:sq02_ombeline]
+npc ombeline 0.60 0.86 [SI: act<4 | letter_read]
+hot EXAMINE table_cartes 0.42 0.66 "La grande table" think=z01.table sniff=lit
+hot EXAMINE horloge_marine 0.72 0.13 "L'horloge marine" think=z01.horloge sniff=horloge_marine
+hot EXAMINE carte_murale 0.55 0.25 "La carte murale de la presqu'île" think=z01.carte_murale
+hot EXAMINE tiroirs 0.68 0.44 "Le meuble à tiroirs" think=z01.tiroirs
+hot PUZZLE E01 0.80 0.52 "Le tiroir des effacés" [SI: seen:sq02_ombeline] done=z01.tiroir_fait
+hot READ archive_carnet_ombeline 0.35 0.50 "Le carnet d'Ombeline" archive=AR-06 [SI: seen:sq02_ombeline]
+hot EXAMINE theodolite 0.50 0.35 "Le théodolite" think=z01.theodolite
+hot TAKE gomme_rouge 0.47 0.70 "Une gomme rouge, biseautée" think=z01.gomme [SI: seen:sq02_ombeline]
+hot READ page1 0.36 0.60 "Une feuille bleu nuit, sous la table" page=1 [SI: seen:sq02_ombeline]
+hot MURMURE M-17 0.57 0.22 "Une tache de bougie sur le plan de 1889" lens=1
+hot MURMURE M-18 0.66 0.58 "Le trousseau du tiroir du bas" lens=1
+hot SECRET s11_z01 0.10 0.55 "Une ombre dans l'embrasure" lens=1 -> flag s11_z01 ; thought secret.s11_seen ; sfx chat_miaule
+hot EXAMINE porte_ouverte 0.12 0.45 "La porte ouverte sur la rue" think=z01.porte
+path t02 "L'atelier" 0.93 0.55 kind=door
+path t03 "La chambre" 0.88 0.20 kind=door hidden
+path z02 "Sortir dans la rue" 0.12 0.75 [SI: seen:sq02_ombeline] locked=z01.pas_encore back
+
+tableau t02 "L'atelier"
+image art/zones/z01_t02.jpg
+prop interior 1
+prop particles dust
+prop filou_x 0.18
+prop filou_y 0.92
+enter_thought z01.atelier
+hot EXAMINE table_lumineuse 0.58 0.55 "La table à dessin" think=z01.table_lumineuse
+hot EXAMINE casiers 0.30 0.45 "Les casiers à relevés" think=z01.casiers
+hot EXAMINE fenetre_atelier 0.86 0.30 "La fenêtre" think=z01.fenetre_atelier
+hot EXAMINE encres 0.78 0.60 "Les encres" think=z01.encres sniff=lit
+hot EXAMINE rouleaux 0.10 0.60 "Les rouleaux de cartes anciennes" think=z01.rouleaux
+hot SECRET S10 0.24 0.70 "Trois cartes d'archive annotées" [SI: ng+ & !secret:S10] -> secret S10 ; thought secret.s10_done ; CLARTE +2
+hot EXAMINE escalier 0.42 0.25 "L'escalier de la chambre" think=z01.escalier
+path t01 "La boutique" 0.06 0.55 back kind=door
+path t03 "Monter à la chambre" 0.40 0.15 kind=door
+
+tableau t03 "La chambre sous le toit"
+image art/zones/z01_t03.jpg
+prop interior 1
+prop particles dust
+prop filou_x 0.60
+prop filou_y 0.92
+enter_thought z01.chambre
+hot SIT lit 0.22 0.72 "S'allonger un moment" think=z01.lit_attente sniff=lit hold=2.5
+hot EXAMINE lucarne 0.20 0.20 "La lucarne" think=z01.lucarne
+hot EXAMINE oeil_de_boeuf 0.62 0.38 "L'œil-de-bœuf" think=z01.oeil_de_boeuf
+hot EXAMINE commode 0.78 0.70 "La commode" think=z01.commode
+hot READ lettre_ombeline_commode 0.83 0.62 "Une enveloppe sur la commode" text=z01.enveloppe [SI: ng+]
+hot EXAMINE manteau 0.94 0.45 "Le manteau au crochet" think=z01.manteau
+hot MURMURE M-12 0.10 0.85 "La panière de Filou" lens=1 [SI: flag:filou_libere]
+path t02 "Redescendre à l'atelier" 0.45 0.85 back kind=door

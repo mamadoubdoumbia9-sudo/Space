@@ -1,0 +1,59 @@
+# 5.13 — [SQ-16 → SQ-19] LES HEURES BLEUES — pensées de séquence (l'humour est éteint ; retenue reine)
+
+~ hb01_grotte_entree once
+PENSEE: bleu. tout est bleu comme dans l'encre des cartes anciennes, la couleur qu'on mettait sur les terrae incognitae. le monde inconnu. il est là.
+-> seq SQ-17 ; checkpoint
+end
+
+~ hb02_table_roche [SI: puzzle:E12] once
+* Sur la table de roche polie, les repères des passeurs. Le sillon d'Esteban : quatre jours de frais.
+PENSEE: il a appris le passage. il l'a APPRIS, comme une leçon, pour quelqu'un. pour lui ? pour...
+-> flag sillon_vu ; echo_available E-10
+end
+
+~ hb03_phoque once
+! wait 3
+* Le phoque lève la tête, l'œil lampé.
+PENSEE: ...bonsoir, voisin.
+-> flag pied_tendre ; secret S07 ; CLARTE +1 ; FILOU +1
+end
+
+~ hb05_piquets once
+PENSEE: neuf piquets, neuf sauvés. je marche sur un chemin de rescapés. ... les chemins, ici, ont toujours été faits de ce qu'on a pu garder.
+end
+
+~ hb06_filou_seuil once
+* Filou s'arrête net au seuil du passage. Il ne veut pas. La caresse ne marche pas.
+PENSEE: ...il sait. les chiens savent. les chiens savent toujours en premier et ils ne peuvent pas le dire, alors ils plantent leurs quatre pattes et ils deviennent une phrase muette au milieu du chemin. reste, mon cœur. garde la terre.
+-> filou_wait ; flag filou_reste_seuil
+end
+
+~ pnr_passage once
+* Avant de s'engager sur la chaussée découverte. La mer à quarante centimètres, des deux côtés.
+LOHEN: Si je m'engage là-dessus, je ne pourrai revenir qu'à la prochaine Heure Bleue.
++* Avancer sur le passage -> save "La marée commence" ; seq SQ-18 ; flag passage_engage ; goto pnr_avance
++ Attendre encore un peu -> goto pnr_fin
+= pnr_avance
+! sfx pas_eau_1
+= pnr_fin
+end
+
+~ hb07_herbe_velune once
+PENSEE: l'herbe à velune. la légende des enfants : elle pousse là où quelqu'un a été très aimé. ... il y en a BEAUCOUP, ici.
+-> flag herbe_vue
+end
+
+~ hb09_boite once
+PENSEE: ...une boîte aux lettres. au bout du monde. une boîte aux lettres qui attend le vent.
+! wait 2
+PENSEE: sidonie m'en avait parlé. la boîte des gens qui partent.
+-> seq SQ-19
+end
+
+~ pointe_lettre once
+* La lettre dans la boîte. Les mains dessus, avant l'ouverture. Le jeu attend.
+PENSEE: ...neuf jours. neuf jours de traces, de pages, de nœuds, de galettes, de pétrels, de tout un monde qui m'a aidée à chercher. et tout ce temps, je cherchais.
+! wait 3
+PENSEE: je crois que je viens de trouver ce que je n'étais pas venue chercher.
++* Ouvrir la lettre -> give lettre_esteban ; flag lettre_prise ; cin CIN-07 ; letter
+end

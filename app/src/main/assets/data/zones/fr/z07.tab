@@ -1,0 +1,50 @@
+# [Z07] LA BASE DU FUNICULAIRE — « LA CREVETTE »
+zone z07
+name La Crevette
+subtitle gare inférieure du funiculaire
+act 2
+palette port
+music track_09
+ambience amb_funiculaire
+open seq>=SQ-05
+map 0.50 0.50
+start t01
+
+tableau t01 "La gare inférieure"
+image art/zones/z07_t01.jpg
+prop interior 1
+prop particles dust
+prop filou_x 0.18
+prop filou_y 0.92
+enter_thought z07.base
+enter_scene sq07_sidonie [SI: !seen:sq07_sidonie]
+npc sidonie 0.66 0.72 [SI: act<4 | letter_read]
+hot PUZZLE E03 0.40 0.55 "Le contre-poids" [SI: seen:sq07_sidonie] done=z07.contrepoids_fait
+hot EXAMINE machine 0.30 0.40 "La machine de 1908" think=z07.machine sniff=contrepoids
+hot EXAMINE compteur 0.52 0.30 "Le compteur de voyages : 99 997" think=z07.compteur sniff=compteur
+hot EXAMINE fanion 0.80 0.25 "Le fanion de 1994" think=z07.fanion -> murmure M-02
+hot TAKE fanion_1994 0.84 0.32 "Une réplique du fanion" think=z07.fanion_replique [SI: LIEN-SIDONIE>=3]
+hot EXAMINE cabine 0.88 0.60 "La cabine rouge" think=z07.cabine sniff=cabine
+hot READ page8 0.88 0.72 "Une feuille sous le siège de la cabine" page=8 [SI: puzzle:E03]
+hot EXAMINE etoiles_plafond 0.88 0.48 "Les étoiles au plafond de la cabine" think=z07.etoiles
+hot ECHO E-09 0.86 0.14 "Le toit de la gare inférieure" [SI: flag:etoile & !echo:E-09] hold=4
+hot ACTION monter 0.70 0.50 "Monter dans la Crevette" scene=sq07_montee [SI: flag:crevette_prete & !seen:sq07_montee]
+hot SECRET s11_z07 0.10 0.25 "Un chat sur la poutre" lens=1 -> flag s11_z07 ; thought secret.s11_seen ; sfx chat_miaule
+path z03 "Redescendre à la place" 0.06 0.80 back
+path t02 "L'atelier de Sidonie" 0.10 0.50 kind=door
+path z08 "Monter à la falaise par la Crevette" 0.92 0.80 [SI: flag:crevette_prete & seen:sq07_montee] locked=z07.crevette_pas_prete cin=CIN-03
+
+tableau t02 "L'atelier de Sidonie"
+image art/zones/z07_t02.jpg
+prop interior 1
+prop particles dust
+prop filou_x 0.75
+prop filou_y 0.92
+enter_thought z07.atelier
+hot EXAMINE etabli 0.50 0.60 "L'établi" think=z07.etabli
+hot PUZZLE E14 0.50 0.52 "Assembler la clé du vent sur l'établi" [SI: has:girouette_1889 & has:sifflet_esteban & has:plume_esteban & !puzzle:E14]
+hot EXAMINE girouette_jouet 0.20 0.40 "Une girouette de poche" think=z07.girouette_jouet
+hot EXAMINE classeurs 0.82 0.35 "Les classeurs d'astronomie" think=z07.classeurs
+hot EXAMINE photo_1994 0.35 0.25 "La photo de 1994" think=z07.photo_1994
+hot EXAMINE sacs_lestage 0.15 0.75 "Les sacs de lestage" think=z07.sacs
+path t01 "Revenir à la gare inférieure" 0.06 0.75 back kind=door

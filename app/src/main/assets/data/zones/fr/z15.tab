@@ -1,0 +1,31 @@
+# [Z15] L'ANSE AUX COQUILLAGES (plage secrète)
+zone z15
+name L'anse aux coquillages
+subtitle la plage secrète
+act 2
+palette estuaire
+music track_18
+ambience amb_anse
+open secret:S04 | flag:sentier_chevres_ouvert | act>=4
+map 0.78 0.86
+start t01
+
+tableau t01 "La crique"
+image art/zones/z15_t01.jpg
+prop tide_view 1
+prop particles spray
+prop filou_x 0.20
+prop filou_y 0.92
+enter_thought z15.crique
+hot EXAMINE planche 0.35 0.55 "La planche entre deux rochers" think=z15.planche
+hot ECHO E-14bis 0.35 0.62 "S'asseoir sur la planche" [SI: examined:planche>=1 & !echo:E-14bis] hold=4
+hot READ page11 0.62 0.70 "Une feuille sous un galet blanc" page=11
+hot ACTION creuser 0.80 0.62 "Creuser à la dune double" [SI: page:11 & !secret:S05] -> secret S05 ; page 12 ; thought secret.s05_done ; sfx sable_creuse
+hot EXAMINE boite_tresors 0.80 0.62 "La boîte à trésors" think=z15.boite_tresors [SI: secret:S05]
+hot EXAMINE galets 0.50 0.80 "Cent galets blancs" think=z15.galets
+hot EXAMINE dune_double 0.85 0.45 "La dune double" think=z15.dune
+hot LISTEN vagues_anse 0.60 0.30 "Les vagues de l'anse" think=z15.vagues sfx=vagues_douces
+hot BORNE B18 0.10 0.75 "Une borne d'Ombeline" [SI: has:lentille_arpenteur]
+hot SECRET s11_z15 0.92 0.30 "Un chat sur le rocher plat" lens=1 -> flag s11_z15 ; thought secret.s11_seen ; sfx chat_miaule
+path z04 "Remonter par le sentier des chèvres" 0.06 0.60 back [SI: !letter_read | true]
+path z16 "Vers le passage, à marée basse" 0.92 0.80 [SI: act>=4 & flag:heures_bleues_annoncees & !letter_read] strict

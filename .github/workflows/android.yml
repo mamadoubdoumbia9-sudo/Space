@@ -1,0 +1,17 @@
+name: Android — tests de contenu et APK
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '17' }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install numpy soundfile cryptography pillow jdk4py
+      - run: bash tools/fetch_toolchain.sh
+      - run: bash tools/compile_desktop.sh --tests
+      - run: python3 tools/build_apk.py
+      - uses: actions/upload-artifact@v4
+        with: { name: apk, path: build/out/*.apk }

@@ -1,0 +1,331 @@
+# Chaînes de l'interface — français (clé | texte). {0} {1}… = arguments.
+app.title | La Cartographie des Absents
+app.chapter | Chapitre 1 — La Marée Basse
+app.version | 1.0.0-ch1
+app.studio | Atelier Marée Basse
+menu.continue | Continuer
+menu.new | Nouvelle partie
+menu.load | Charger
+menu.settings | Options
+menu.credits | Crédits
+menu.quit | Quitter
+menu.confirm_new | Commencer une nouvelle partie ? Les sauvegardes existantes sont conservées dans leurs emplacements.
+ui.yes | Oui
+ui.no | Non
+ui.close | Fermer
+ui.back | Retour
+ui.continue | Continuer
+ui.understood | Compris
+ui.validate | Valider
+ui.clear | Effacer
+ui.on | activé
+ui.off | désactivé
+ui.tap_skip | toucher pour passer
+ui.hold_skip | maintenir pour passer
+pause.title | Pause
+pause.info | {0} de jeu · carte {1} % · {2} pages · {3} échos
+pause.resume | Reprendre
+pause.save | Sauvegarder
+pause.load | Charger
+pause.carnet | Le carnet
+pause.title_screen | Écran-titre
+saves.load_title | Charger une partie
+saves.save_title | Sauvegarder
+saves.slot | Emplacement {0}
+saves.empty | — vide —
+saves.corrupt | Sauvegarde illisible (fichier endommagé)
+saves.desc | {0} · {1} · carte {2} % · {3} · {4}
+saves.load | Charger
+saves.save | Écrire
+saves.confirm_delete | Supprimer cette sauvegarde ?
+save.auto | Sauvegarde automatique
+save.checkpoint | Point de passage
+save.slot | Emplacement {0}
+save.letter | La lettre
+save.end | Fin du chapitre 1
+toast.checkpoint | Point de passage enregistré
+toast.saved | Partie sauvegardée
+toast.saved_named | Sauvegarde : {0}
+toast.no_save | Aucune sauvegarde à reprendre
+toast.item | Dans la sacoche : {0}
+toast.secret | Un secret de la presqu'île
+toast.lang | Langue changée
+set.tab_graphics | Graphismes
+set.tab_audio | Audio
+set.tab_game | Jeu
+set.tab_access | Confort
+set.quality | Qualité
+set.q_LOW | Faible
+set.q_MEDIUM | Moyenne
+set.q_HIGH | Élevée
+set.q_ULTRA | Ultra
+set.quality_help | Faible : images allégées, sans particules ni grain — pour les appareils modestes. Ultra : particules doubles, parallaxe, grain de papier.
+set.vignette_grain | Vignette et grain de papier
+set.reduce_motion | Réduire les mouvements
+set.ui_scale | Taille de l'interface
+set.master | Volume général
+set.music | Musique
+set.ambience | Ambiances
+set.sfx | Effets
+set.vibration | Vibrations
+set.language | Langue
+set.sensitivity | Sensibilité tactile
+set.hints | Aide aux énigmes
+set.hint_STANDARD | Standard
+set.hint_PURISTE | Puriste
+set.hint_ASSURE | Assurée
+set.hints_help | Standard : les indices se demandent, le carnet propose une synthèse après deux échecs. Puriste : le jeu ne propose jamais rien. Assurée : Ysolde propose l'indice après un seul échec. Aucun jugement, aucune récompense différente.
+set.autosave | Sauvegarde automatique
+set.left_handed | Boutons à gauche (gaucher)
+set.text_size | Taille du texte
+set.high_contrast | Contraste renforcé
+set.subtitles | Sous-titres des cinématiques
+set.access_help | Toutes les énigmes se résolvent sans le son (notation visuelle) et sans précision millimétrique. Le mode Assurée active les variantes assistées.
+tide.PM1 | marée montante
+tide.BM | marée basse
+tide.PM2 | pleine mer
+tide.PM3 | mer étale
+tide.PM4 | marée descendante
+tide.PM5 | jusant
+act.1 | Acte I — La ville
+act.2 | Acte II — Les traces
+act.3 | Acte III — La falaise
+act.4 | Acte IV — Les Heures Bleues
+act.5 | Épilogue
+act.card_1 | ACTE I
+act.card_2 | ACTE II
+act.card_3 | ACTE III
+act.card_4 | ACTE IV
+world.ask_filou | Questionner Filou
+world.hold | maintenir
+world.hold_hint | Il faut rester : maintenir le doigt sur le point.
+world.lens_hint | La lentille d'Arpenteur réveille les marques effacées : les détails cachés apparaissent quelques secondes.
+world.need_item | Il me faudrait : {0}.
+world.npc_busy | Pas maintenant. On n'interrompt pas quelqu'un qui écoute la mer.
+world.wait_done | La marée a tourné : {0}.
+world.pet_1 | filou pousse la tête sous ma main. il a le crâne chaud.
+world.pet_2 | il ferme les yeux. deux secondes. c'est un cadeau de chien.
+world.pet_3 | il soupire. les chiens soupirent par soulagement ou par attente. je crois qu'il fait les deux.
+world.pet_4 | il me regarde comme si c'était moi qui avais besoin d'être caressée. il a peut-être raison.
+dlg.silent | (ne rien dire)
+carnet.tab_carte | Carte
+carnet.tab_sacoche | Sacoche
+carnet.tab_pages | Pages
+carnet.tab_echos | Échos
+carnet.tab_gens | Gens
+carnet.tab_journal | Journal
+carnet.progress | Relevés
+carnet.carte_pct | Carte levée : {0} %
+carnet.releves | Relevés : {0}
+carnet.bornes_n | Bornes : {0} / {1}
+carnet.pages_n | Pages d'Esteban : {0} / {1}
+carnet.echos_n | Échos : {0} / {1}
+carnet.secrets_n | Secrets : {0} / {1}
+carnet.murmures_n | Murmures : {0} / {1}
+carnet.cloches_n | Cloches sonnées : {0} / {1}
+carnet.act | {0}
+carnet.tide | Marée : {0}
+carnet.time | Temps de jeu : {0}
+carnet.open_map | Voyager
+carnet.empty_bag | La sacoche est vide. Pour l'instant.
+carnet.examine | Examiner
+carnet.hold_letter | Serrer la lettre
+carnet.letter_held | je la serre. le papier est chaud. c'est le geste le plus court de la journée et le plus long.
+carnet.reread | Relire
+carnet.pages_intro | Les feuilles arrachées du carnet bleu nuit — {0} sur 24. Les oiseaux en marge comptent quelque chose.
+carnet.echos_intro | Les souvenirs-lieux, rejoués en théâtre d'ombres d'encre.
+carnet.echo_unknown | un souvenir que le lieu n'a pas encore rendu
+carnet.puzzles_solved | Énigmes — {0} / {1}
+carnet.secrets_found | Secrets de la presqu'île — {0} / {1}
+carnet.secret_unknown | …
+carnet.bornes_title | Bornes relevées — {0}
+carnet.murmures_title | Murmures — {0}
+carnet.archives_title | Archives lues — {0}
+carnet.bells_title | Cloches sonnées — {0}
+carnet.my_answer | Ma réponse
+carnet.borne | Borne
+carnet.label | Une étiquette du bois des noms
+secret.S03 | La bouteille de l'anse
+secret.S04 | Le sentier des chèvres
+secret.S05 | La boîte à trésors
+secret.S07 | Œil de lampe
+secret.S09 | Le sifflet du clochon
+secret.S10 | Les trois cartes
+secret.S11 | Le compagnon d'aile
+secret.S12 | Le petit pouce
+map.title | La presqu'île de la Marée Basse
+map.help | Toucher une zone connue pour s'y rendre. Les zones s'ouvrent au fil des traces.
+map.locked_tide | La mer est entre nous et le reste du monde. On revient à la prochaine Heure Bleue.
+page.head | Page {0} — {1}
+page.found | une page du carnet bleu nuit — rangée dans le carnet
+letter.pli | pli {0} / {1}
+letter.pps | post-scriptum du post-scriptum
+letter.turn | tourner le pli
+letter.get_up | Se lever
+letter.stay | on ne se lève pas trop vite d'une lettre pareille
+letter.ribbon | si t'as les mots, tu détaches.
+letter.ribbon_hint | toucher le ruban pour le dénouer
+epi.title | La réponse
+epi.intro | Ce que Lohen laisse dans la boîte. Les choix à l'encre or sont définitifs.
+epi.opt_letter | Écrire une lettre — la glisser dans la gorge du vent
+epi.opt_pursuit | Ne rien laisser — partir sur ses traces
+epi.opt_compass | Laisser la boussole d'Esteban — « tu me trouveras quand tu sauras où je suis »
+epi.opt_map | Laisser la carte entière du carnet, pliée en oiseau
+epi.write_title | Trois encres, ou la vôtre
+epi.free | Écrire libre (clavier)
+epi.free_prompt | Votre réponse à Esteban (elle reste sur cet appareil, dans la sauvegarde)
+epi.my_letter | LOHEN À ESTEBAN — LA POINTE-AU-VENT, 23H52
+epi.deposit | Déposer
+epi.rewrite | Réécrire
+end.title | FIN DU CHAPITRE 1
+end.subtitle | La Marée Basse
+end.fe_lettre | La réponse — le chapitre 2 s'ouvre sur Lohen attendant le lever du bac, la réponse glissée sous sa vareuse.
+end.fe_poursuite | La poursuite — le chapitre 2 s'ouvre sur le quai du ferry, filet sur l'épaule.
+end.fe_boussole | Les deux rives — le chapitre 2 s'ouvre sur l'atelier, la table vide, la feuille blanche.
+end.fe_carte | La carte du bout du monde — une ouverture du chapitre 2 que personne d'autre n'aura.
+end.stats | carte {0} % · pages {1}/24 · échos {2}/12 · secrets {3}/12 · clarté {4}/100 · {5}
+end.free_memory | Souvenir libre (revisiter le chapitre)
+end.free_memory_toast | Le chapitre est rouvert : rien n'est perdu, tout se revisite.
+end.ng_plus | Relire (nouvelle partie +)
+retent.title | Ce que le monde a retenu de toi
+puzzle.hints_title | Indices
+puzzle.hint_level | niveau {0}
+puzzle.ask_hint | Demander un indice
+puzzle.more_hint | Un indice de plus
+puzzle.hint_locked | le troisième niveau s'ouvre après deux tentatives
+puzzle.hint_offer | ysolde dirait : « demande, petite carte. les indices ne mordent pas. »
+time.min | {0} min
+time.h | {0} h {1}
+e01.day | jour
+e01.phase | phase
+e01.tens | dizaines
+e01.units | unités
+e01.pull | Tirer le tiroir
+e01.carnet | Feuilleter le carnet
+e01.carnet_title | Carnet d'Ombeline — relevés du matin
+e01.locked | le tiroir résiste. la date n'est pas celle du monde.
+e02.stand | se placer ici
+e02.glass | la vitre de la salle d'attente
+e02.touch_reflection | Toucher le reflet
+e02.blur | le reflet est brouillé d'ici. les gens qui regardaient partir ne se tenaient pas là.
+e02.clear | le reflet se forme. le sol est poli sous mes pieds : c'est ici qu'on regardait partir.
+e03.low | manque
+e03.high | trop
+e03.ok | juste
+e03.raise | Lever la cabine
+e03.too_heavy | trop lourd : comme la vie. retire, tu verras, ça remonte.
+e03.too_light | le fléau penche du mauvais côté. il manque du poids.
+e04.sky | la fenêtre : lune pleine, basse, orangée
+e04.carnet | mon carnet — relevés de lune
+e04.carnet_notes | prologue : lune ronde, haute, blanche — ● 3 · verger : lune pleine, basse, orangée — ● 7
+e04.lens | Lentille sur la marge
+e04.title | ANNUAIRE DES MARÉES 1926-2026 — LUNES
+e04.twin | 00h52 ? … deux lignes jumelles portent le symbole 7. l'imprimeur a menti une fois par siècle. quelqu'un a corrigé à la plume.
+e04.wrong_moon | ce n'est pas la lune de ce soir. la fenêtre montre une lune pleine, basse.
+e05.track | voie {0}
+e05.sea | la mer
+e05.conform | {0} / 5 conformes
+e05.locked | le levier L{0} est verrouillé par ses voisins. l'ordre, c'est tout.
+e05.rules | TABLE GRAVÉE — L1 verrouille L2 et L4. L3 libère L1 si L2 est levé. L5 ne bouge que si L4 est baissé. L4 ne bouge que si L1 est baissé. Cible : voie 2 → voie 1 (L1↓ L2↑ L3↑ L4↓ L5↑).
+e06.help | la carte du bois : trois rubans connus. prolonger la spirale au doigt, puis toucher l'arbre.
+e06.void | le vide
+e07.palier | palier {0}
+e07.p1 | le témoin d'essai
+e07.p2 | une phrase d'Ysolde
+e07.p3 | le nœud-réponse d'Esteban (trois nœuds arrachés)
+e07.listen | Écouter la corde
+e07.listen_msg | chaque rang a une note. le mur est un instrument : il se lit aussi à l'oreille.
+e07.next_palier | juste. palier {0} : une autre corde.
+e07.wrong | le mur grince doucement. compte encore : chaque interstice, une lettre ; chaque silence, un espace.
+e08.beats | {0} coups
+e08.sheets | feuilles : {0}
+e08.dev | révélateur
+e08.stop | bain d'arrêt
+e08.fix | fixateur
+e08.dip | Plonger
+e08.lift | Sortir la feuille
+e08.agitate | Agiter
+e08.order | pas ce bain-là. révéler, arrêter, fixer : dans l'ordre.
+e08.good | {0} coups. l'image tient. bain suivant.
+e08.too_early | trop tôt : l'image est pâle. on reprend une feuille.
+e08.too_late | trop tard : du noir qui mange. on reprend une feuille.
+e08.new_pack | le pack est fini. anselme en avait un autre dans le tiroir des choses utiles.
+e09.listen | Tendre l'oreille
+e09.notation | vague — basse — haute — basse
+e10.attard | attard : {0}°
+e10.holding | le faisceau s'attarde sur la pointe…
+e10.wind | Remonter le poids
+e10.sleeps | elle dort, la vieille. remonte-lui son cœur.
+e11.crown | couronne : {0} h {1}
+e11.pose | Poser l'heure
+e11.read_first | l'ombre dit d'abord. lire la dalle avant de poser.
+e11.not_exact | presque. la plaque corrige : l'exactitude est une politesse envers le soleil.
+e11.dalle_xi | l'ombre touche XI — ante meridiem. onze heures vraies. et la plaque dit +7.
+e11.dalle_other | l'ombre ne touche pas cette dalle.
+e12.trident | repère 1 — le trident
+e12.sirene | repère 2 — la sirène
+e12.ancre | repère 3 — l'ancre
+e12.silence | le silence
+e12.table | la table de roche
+e12.rule1 | « prends l'est au 3e clap »
+e12.rule2 | « descends au 5e »
+e12.rule3 | « tout droit au 2e, puis silence »
+e12.count | clapotis : {0}
+e12.nord | nord
+e12.est | est
+e12.descente | descente
+e12.droit | tout droit
+e12.good_turn | bon virage. repère {0}.
+e12.wrong_dir | mauvais boyau : il boucle vers le repère précédent.
+e12.wrong_count | pas au bon clap. l'eau frappe toujours les mêmes temps.
+e12.silence_hint | le bassin ne clapote pas : il respire. attendre que rien ne frappe, puis marcher.
+e12.walk | Marcher dans le silence
+e12.too_soon | encore un coup. ceux qui pressent les coups, la mer les garde.
+e13.azimut | azimut {0}°
+e13.drag | glisser pour viser
+e13.shoot | Relever
+e13.grande | Grande-Sœur
+e13.petite | Petite-Sœur
+e13.to_map | Reporter sur la carte
+e13.back_scope | Revenir à la lunette
+e13.missing | il me manque des repères sur la carte : je n'ai pas assez relevé la presqu'île pour reporter les deux phares.
+e13.got_grande | Grande-Sœur relevée.
+e13.got_petite | Petite-Sœur relevée.
+e13.nothing | rien dans le réticule. les sœurs sont à l'ouest et au sud-est.
+e13.off | les droites ne se croisent pas sur la pointe. un relèvement est faux de quelques degrés.
+e13.pointe | la Pointe-au-Vent
+e14.notice | NOTICE D'ESTEBAN — schéma éclaté : « le vent dit où » (tête) · « la voix dit quand » (corps) · « la plume dit pourquoi » (queue)
+e14.top | tête
+e14.mid | corps
+e14.bot | queue
+e14.assemble | Assembler
+e14.off_tune | ça tient. ça ne sonne pas juste. on démonte, on remonte.
+e15.wind | vent : {0}° (ouest)
+e15.box_angle | fente de la boîte : {0}°
+e15.drag | glisser pour tourner la boîte — l'aligner sur le vent, puis tenir
+e15.hold | tenir…
+e16.sea | la mer : des flous océaniques
+e16.sky | le ciel : des étoiles
+e16.blur | rien de net. la bague a trois butées gravées.
+e16.drag | glisser la bague de mise au point
+s01.poster | GRAND BAL DU BEFFROI — 1959
+s01.hold | maintenir le doigt : la vapeur décolle l'affiche comme une peau de pêche
+s06.title | MACHINE À REMONTER LES MARÉES — till
+s06.crank | Tourner la manivelle
+s06.wrong | de la soupe. BM, PM1, PM2 : dans l'ordre de la marée.
+s08.no_sheet | il faudrait la feuille de déchiffrage du bureau d'anselme
+s08.sheet | A ·− B −··· C −·−· D −·· E · F ··−· G −−· H ···· I ·· J ·−−− K −·− L ·−·· M −− N −· O −−− P ·−−· Q −−·− R ·−· S ··· T − U ··− V ···− W ·−− X −··− Y −·−− Z −−··
+s08.wrong | les groupes ne disent pas ça. reprendre à la prochaine série d'éclats.
+
+# Locuteurs sans fiche de personnage
+speaker.tom | Tom
+speaker.till | Till
+speaker.voix | Une voix
+speaker.radio | La radio
+speaker.institutrice | L'institutrice
+speaker.note | La note
+speaker.plaque | La plaque
+speaker.journal | Le journal 163
+speaker.notice | La notice
+speaker.pensee | Pensée
+speaker.lentille | La lentille

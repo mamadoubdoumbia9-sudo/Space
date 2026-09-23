@@ -1,0 +1,92 @@
+# Tables de conversation : pour chaque PNJ, la première scène dont la condition tient (les scènes « once » déjà vues sont sautées).
+npc ombeline
+sq02_ombeline
+ombeline_apres [SI: letter_read]
+ombeline_e13 [SI: puzzle:E10 & !puzzle:E13]
+ombeline_reprise
+
+npc marta
+sq03_marta
+marta_second_couplet [SI: flag:marta_rencontree & (flag:rosa_rencontree | page:4) & act>=3 & !flag:chant_marta]
+marta_nuit_bleue [SI: act>=4 & !letter_read]
+marta_apres [SI: letter_read]
+marta_cafe
+
+npc rosa
+sq04_rosa
+rosa_fournee [SI: flag:rosa_fournee_promise & !flag:rosa_fournee_faite]
+rosa_apres [SI: letter_read]
+rosa_reprise
+
+npc emeric
+sq04_emeric
+emeric_lettre_anselme [SI: decision:D-01=c & !flag:emeric_lettre_ecrite]
+emeric_dictionnaire [SI: flag:velune & !flag:mot_au_dictionnaire]
+emeric_apres [SI: letter_read]
+emeric_reprise
+
+npc tom_till
+sq04_jumeaux
+sq06_jumeaux_coffre [SI: zone:z06]
+jumeaux_apres_coffre [SI: flag:coffre_ouvert & !flag:crayon_marek_rendu & zone:z06]
+jumeaux_estran [SI: zone:z04]
+jumeaux_marelle [SI: flag:jumeaux_rencontres & !flag:coffre_ouvert]
+jumeaux_reprise
+
+npc anselme
+sq05_anselme
+sq05_revelation [SI: puzzle:E02]
+anselme_lampe_rendue [SI: flag:faveur_lampe_ouverte & has:lampe_tempete & !flag:faveur_lampe_faite]
+anselme_apres [SI: letter_read]
+anselme_reprise_2 [SI: flag:revelation_gare & !flag:faveur_lampe_faite & !letter_read]
+anselme_reprise_1 [SI: flag:anselme_rencontre & !puzzle:E02]
+anselme_reprise_3
+
+npc baz
+baz_premiere
+baz_scene_flottante [SI: flag:baz_rencontre & LIEN-BAZ>=5 & !flag:baz_flottante]
+baz_apres [SI: letter_read]
+baz_reprise
+
+npc sidonie
+sq07_sidonie
+sq07_sidonie_bavardage [SI: flag:sidonie_rencontree & !flag:sidonie_infos]
+sq07_montee [SI: puzzle:E03 & flag:crevette_prete]
+sidonie_apres [SI: letter_read]
+sidonie_reprise_haut [SI: puzzle:E03 & !letter_read]
+sidonie_reprise
+
+npc ysolde
+sq09_ysolde
+sq09_ysolde_noeud [SI: puzzle:E07]
+ysolde_apres [SI: letter_read]
+ysolde_apres_ruban [SI: flag:ysolde_ruban & !letter_read]
+ysolde_reprise
+
+npc aristide
+sq11_aristide
+sq11_boite_musique [SI: flag:aristide_rencontre]
+aristide_ressort_1 [SI: flag:boite_atelier_ouvert & !flag:ressort_1]
+aristide_ressort_2 [SI: flag:ressort_1 & !flag:ressort_2 & seq>=SQ-13]
+aristide_ressort_3 [SI: flag:ressort_2 & !flag:boite_musique_montee & seq>=SQ-16]
+aristide_apres [SI: letter_read]
+aristide_reprise
+
+npc marek
+sq13_marek_porte [SI: !flag:marek_porte_ouverte]
+marek_ouvre [SI: flag:marek_rencontre & LIEN-MAREK>=3 & !flag:marek_porte_ouverte & zone:z12]
+marek_porte_reprise [SI: flag:marek_rencontre & LIEN-MAREK<3 & zone:z12]
+sq15_marek_maison [SI: flag:marek_porte_ouverte & zone:z13]
+sq15b_marek_lanterne [SI: puzzle:E10 & flag:phare_ouvert]
+sq16_marek_girouette [SI: puzzle:E04 & LIEN-MAREK>=4 & flag:faisceau_pointe]
+sq16_marek_girouette_froid [SI: puzzle:E04 & !flag:girouette_obtenue]
+sq20_marek_terrasse [SI: letter_read & zone:z18]
+marek_apres_chapitre [SI: chapter_done]
+marek_terrasse_reprise [SI: flag:terrasse_epilogue & !chapter_done]
+marek_apres_girouette [SI: flag:girouette_obtenue & !letter_read]
+marek_maison_reprise [SI: flag:marek_porte_ouverte & !flag:girouette_obtenue]
+
+npc adele
+adele_premiere
+adele_apres [SI: letter_read]
+adele_reprise

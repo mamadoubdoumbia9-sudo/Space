@@ -1,0 +1,33 @@
+# [Z18] LA TERRASSE DU PHARE (épilogue, nuit)
+zone z18
+name La terrasse du phare
+subtitle nuit pleine
+act 4
+palette nuit
+music track_21
+ambience amb_terrasse
+open flag:phare_ouvert
+map 0.93 0.18
+start t01
+
+tableau t01 "La terrasse"
+image art/zones/z18_t01.jpg
+prop tide_view 1
+prop overlay beam
+prop particles bluehour
+prop filou_x 0.20
+prop filou_y 0.92
+enter_thought z18.terrasse
+enter_scene sq20_marek_terrasse [SI: letter_read & flag:retour_terrasse & !seen:sq20_marek_terrasse]
+npc marek 0.66 0.66 [SI: letter_read]
+hot PUZZLE E11 0.30 0.62 "Le cadran de la terrasse" [SI: flag:phare_ouvert] done=z18.cadran_fait
+hot PUZZLE E13 0.80 0.55 "Le théodolite : les Trois-Sœurs" [SI: puzzle:E10] done=z18.soeurs_fait
+hot EXAMINE gnomon 0.30 0.40 "Le mât de pavillon" think=z18.gnomon
+hot EXAMINE garde_corps 0.55 0.75 "Le garde-corps" think=z18.garde_corps
+hot EXAMINE faisceau 0.50 0.15 "Le faisceau" think=z18.faisceau
+hot EXAMINE pointe_nuit 0.90 0.35 "La pointe, dans la nuit" think=z18.pointe_nuit
+hot EXAMINE fenetres_village 0.10 0.45 "Les fenêtres du village" think=z18.fenetres [SI: act>=4]
+hot ACTION deuxieme_tasse 0.62 0.80 "La deuxième tasse, chaude" [SI: letter_read & seen:sq20_marek_terrasse] think=z18.tasse_chaude sfx=tasse_pose
+hot SECRET s11_z18 0.05 0.30 "Un chat sur le parapet" lens=1 -> flag s11_z18 ; thought secret.s11_seen ; sfx chat_miaule
+path z13 "Rentrer dans le phare" 0.06 0.80 back kind=door
+path z14 "Descendre vers la grotte (Heures Bleues)" 0.50 0.92 [SI: flag:heures_bleues_annoncees & act>=4 & !letter_read] strict cin=CIN-04

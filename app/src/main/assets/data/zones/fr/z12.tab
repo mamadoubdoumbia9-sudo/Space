@@ -1,0 +1,49 @@
+# [Z12] LE SOMMET & LA PORTE DU PHARE
+zone z12
+name Le sommet
+subtitle les 214 marches et la porte du phare
+act 3
+palette phare
+music track_14
+ambience amb_sommet
+open seq>=SQ-10 | flag:indice_pointe
+map 0.90 0.30
+start t01
+
+tableau t01 "Le chemin des 214 marches"
+image art/zones/z12_t01.jpg
+prop tide_view 1
+prop particles petrels
+prop filou_x 0.18
+prop filou_y 0.92
+enter_thought z12.chemin
+hot EXAMINE marches 0.45 0.70 "Les marches taillées" think=z12.marches sniff=escalier214
+hot MURMURE M-03 0.40 0.66 "Une bille de politesse sur la marche 44" lens=1
+hot TAKE bille_de_tom 0.42 0.68 "Une bille verte, marche 44" think=z12.bille [SI: murmure:M-03]
+hot EXAMINE paratonnerre 0.62 0.15 "Le paratonnerre" think=z12.paratonnerre
+hot LISTEN cables 0.62 0.25 "Le vent dans les câbles" think=z12.cables sfx=cables_vent
+hot EXAMINE boite_office 0.85 0.62 "La boîte aux lettres de l'Office" think=z12.boite_office
+hot READ page19 0.80 0.80 "Une feuille sur le seuil, coincée par une pierre" page=19
+hot BORNE B11 0.10 0.80 "La borne du sommet" [SI: has:lentille_arpenteur]
+hot EXAMINE trois_soeurs 0.20 0.35 "Les Trois-Sœurs, à l'horizon" think=z12.trois_soeurs
+hot SECRET s11_z12 0.92 0.40 "Un chat sur le muret du phare" lens=1 -> flag s11_z12 ; thought secret.s11_seen ; sfx chat_miaule
+path z11 "Redescendre vers la corniche" 0.06 0.80 back
+path z10 "Vers le bois des noms" 0.06 0.50
+path t02 "La porte du phare" 0.90 0.45 kind=door
+
+tableau t02 "La porte du phare"
+image art/zones/z12_t02.jpg
+prop particles dust
+prop overlay lamp
+prop filou_x 0.20
+prop filou_y 0.92
+enter_thought z12.porte
+enter_scene sq13_marek_porte [SI: !seen:sq13_marek_porte]
+npc marek 0.50 0.62 [SI: !flag:marek_porte_ouverte]
+hot EXAMINE porte_cloutee 0.50 0.45 "La porte cloutée" think=z12.porte_cloutee sniff=porte_phare
+hot EXAMINE chaine 0.56 0.55 "La chaîne de la porte" think=z12.chaine [SI: !flag:marek_porte_ouverte]
+hot EXAMINE lampe_porte 0.80 0.30 "La lampe du seuil" think=z12.lampe_porte
+hot EXAMINE journal_boite 0.15 0.62 "Le journal de veille, dans la niche" think=z12.journal_niche
+hot LISTEN mer_bas 0.90 0.80 "La mer, en bas" think=z12.mer_bas sfx=mer_lointaine
+path t01 "Redescendre le chemin" 0.06 0.80 back
+path z13 "Entrer dans le phare" 0.50 0.72 kind=door [SI: flag:marek_porte_ouverte] locked=z12.porte_fermee

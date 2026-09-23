@@ -1,0 +1,69 @@
+# [Z11] LE SENTIER DES PÉTRELS & L'ÉPAVE
+zone z11
+name Le sentier des pétrels
+subtitle la corniche et l'épave du Saint-Eumèle
+act 3
+palette corniche
+music track_13
+ambience amb_corniche
+open seq>=SQ-06
+map 0.84 0.56
+start t01
+
+tableau t01 "La crête des nichoirs"
+image art/zones/z11_t01.jpg
+prop tide_view 1
+prop particles petrels
+prop filou_x 0.18
+prop filou_y 0.92
+enter_thought z11.crete
+hot EXAMINE nichoir9 0.55 0.45 "Le nichoir 9" think=z11.nichoir9 sniff=nichoir9
+hot READ page3 0.55 0.52 "Une feuille dans le nichoir 9" page=3 [SI: examined:nichoir9>=1]
+hot TAKE plume_general 0.60 0.58 "Une plume grise devant le nichoir" think=z11.plume_general [SI: examined:nichoir9>=1]
+hot MURMURE M-11 0.52 0.40 "La mue de pétrel sur le rebat" lens=1
+hot EXAMINE nichoirs 0.30 0.40 "Les nichoirs de la corniche" think=z11.nichoirs sniff=petrels
+hot LISTEN petrels_chant 0.70 0.20 "Les pétrels" think=z11.petrels_chant sfx=petrels_choeur
+hot BORNE B10 0.10 0.72 "La borne du nichoir" [SI: has:lentille_arpenteur]
+hot EXAMINE epave_vue 0.85 0.60 "L'épave, en contrebas" think=z11.epave_vue
+hot SECRET s11_z11 0.92 0.30 "Un chat sur le rocher" lens=1 -> flag s11_z11 ; thought secret.s11_seen ; sfx chat_miaule
+path z08 "Remonter vers le banc face à la mer" 0.06 0.70 back
+path z10 "Vers le bois des noms" 0.06 0.40 [SI: seq>=SQ-06]
+path t02 "Descendre à l'épave" 0.92 0.80
+
+tableau t02 "L'épave, l'échelle"
+image art/zones/z11_t02.jpg
+prop tide_view 1
+prop particles spray
+prop filou_x 0.22
+prop filou_y 0.92
+enter_thought z11.echelle
+enter_scene aristide_seuil [SI: seen:sq11_aristide & act>=3 & !seen:aristide_seuil]
+hot EXAMINE echelle_fer 0.50 0.60 "L'échelle de fer" think=z11.echelle_fer
+hot EXAMINE barreaux_neufs 0.50 0.72 "Trois barreaux neufs" think=z11.barreaux
+hot EXAMINE coque 0.70 0.45 "La coque du Saint-Eumèle" think=z11.coque
+hot EXAMINE verres 0.30 0.70 "Des verres accordés sur la lisse" think=z11.verres sniff=verres_aristide sfx=verres_gamme
+hot LISTEN eau_coque 0.80 0.85 "L'eau contre la coque" think=z11.eau_coque sfx=eau_coque
+path t01 "Remonter à la crête" 0.06 0.60 back
+path t03 "Entrer dans l'épave" 0.55 0.40 kind=door sniff=epave
+
+tableau t03 "Le carré de l'épave"
+image art/zones/z11_t03.jpg
+prop interior 1
+prop overlay lamp
+prop particles dust
+prop filou_x 0.15
+prop filou_y 0.92
+enter_thought z11.carre
+enter_scene sq11_aristide [SI: !seen:sq11_aristide]
+npc aristide 0.66 0.72
+hot ACTION boite_musique 0.36 0.62 "La boîte à musique" scene=sq11_boite_musique [SI: seen:sq11_aristide & !seen:sq11_boite_musique]
+hot EXAMINE boite_musique_ex 0.36 0.62 "La boîte à musique" think=z11.boite_musique sniff=boite_musique [SI: seen:sq11_boite_musique]
+hot ACTION ressort_seance 0.40 0.54 "L'atelier du ressort" scene=aristide_ressort_1 [SI: flag:boite_atelier_ouvert & !flag:ressort_1]
+hot ACTION ressort_seance2 0.40 0.54 "L'atelier du ressort, deuxième séance" scene=aristide_ressort_2 [SI: flag:ressort_1 & !flag:ressort_2 & seq>=SQ-13]
+hot ACTION ressort_seance3 0.40 0.54 "L'atelier du ressort, dernière séance" scene=aristide_ressort_3 [SI: flag:ressort_2 & !flag:boite_musique_montee & seq>=SQ-16]
+hot READ page17 0.20 0.85 "Une feuille sous le plancher du carré" page=17 [SI: seen:sq11_aristide]
+hot EXAMINE couffin 0.85 0.60 "Le couffin d'atelier" think=z11.couffin
+hot EXAMINE gravure_n 0.30 0.70 "Une gravure « N » sur le flanc" think=z11.gravure_n [SI: seen:sq11_boite_musique]
+hot EXAMINE hublot 0.12 0.35 "Le hublot" think=z11.hublot
+hot EXAMINE cuillere 0.55 0.85 "La petite cuillère soliste" think=z11.cuillere
+path t02 "Ressortir sur l'échelle" 0.06 0.75 back kind=door

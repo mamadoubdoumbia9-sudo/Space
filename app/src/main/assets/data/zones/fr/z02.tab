@@ -1,0 +1,51 @@
+# [Z02] PORT-CENDRE — QUARTIER DES PÊCHEURS (hub piéton)
+zone z02
+name Le quartier des pêcheurs
+subtitle Port-Cendre, rue basse
+act 1
+palette port
+music track_03
+ambience amb_ville
+open seq>=SQ-02
+map 0.36 0.66
+start t01
+
+tableau t01 "La rue basse"
+image art/zones/z02_t01.jpg
+prop particles dust
+prop tide_view 1
+prop filou_x 0.22
+prop filou_y 0.92
+enter_thought z02.rue
+hot EXAMINE filets 0.50 0.18 "Les filets qui sèchent" think=z02.filets sniff=filets
+hot EXAMINE volets 0.14 0.42 "Les volets bleus" think=z02.volets
+hot MURMURE M-04 0.92 0.24 "Une botte sur le toit" lens=1
+hot MURMURE M-08 0.58 0.30 "Un bouchon de limonade dans le filet" lens=1
+hot EXAMINE flaques 0.55 0.85 "Les flaques de la rue" think=z02.flaques
+hot LISTEN cloche_lointaine 0.75 0.10 "Une cloche, au loin" think=z02.cloche_lointaine sfx=cloche_lointaine
+hot SECRET s11_z02 0.87 0.55 "Une ombre sous l'auvent" lens=1 -> flag s11_z02 ; thought secret.s11_seen ; sfx chat_miaule
+hot EXAMINE porte_cabinet 0.06 0.60 "La porte du Cabinet" think=z02.porte_cabinet
+path z01 "Rentrer au Cabinet" 0.05 0.75 back kind=door
+path t02 "Descendre au muret" 0.60 0.62
+path z03 "Monter à la place du Beffroi" 0.90 0.40 [SI: seen:sq03_filou_muret] locked=z02.filou_dabord
+
+tableau t02 "Le muret & la cale"
+image art/zones/z02_t02.jpg
+prop tide_view 1
+prop particles spray
+prop filou_x 0.40
+prop filou_y 0.88
+enter_thought z02.muret
+enter_scene sq03_filou_muret [SI: !seen:sq03_filou_muret]
+hot EXAMINE poteau_coupee 0.10 0.45 "Le poteau de coupée" think=z02.poteau sniff=muret -> count poteau +1
+hot ECHO E-01 0.16 0.60 "Le muret, la première rencontre" [SI: examined:poteau_coupee>=2 & !echo:E-01] hold=4
+hot EXAMINE gamelle 0.12 0.86 "La gamelle de Filou" think=z02.gamelle sniff=gamelle
+hot READ page2 0.16 0.90 "Une feuille sous la gamelle" page=2 [SI: seen:sq03_filou_muret]
+hot EXAMINE echelle_cale 0.34 0.62 "L'échelle de la cale" think=z02.echelle
+hot EXAMINE barques 0.62 0.68 "Les barques échouées" think=z02.barques
+hot EXAMINE estran 0.80 0.55 "L'estran à marée basse" think=z02.estran
+hot BORNE B03 0.22 0.50 "Une borne d'arpenteur dans le muret" [SI: has:lentille_arpenteur]
+hot SECRET S03 0.72 0.82 "Un goulot dans la vasière" [SI: low_tide & !secret:S03] -> secret S03 ; give bouteille_2013 ; thought secret.s03_done
+hot EXAMINE phare_lointain 0.75 0.28 "Le phare, au loin" think=z02.phare_lointain
+path t01 "Remonter la rue" 0.10 0.30 back
+path z04 "Longer le quai vers le bac" 0.92 0.75 [SI: seen:sq03_filou_muret]

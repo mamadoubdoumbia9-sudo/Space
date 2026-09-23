@@ -23,6 +23,7 @@ VOIX: Dépêche-toi, Lo.
 * Lohen court. La silhouette s'éloigne d'autant.
 ! sfx pluie_encre
 * La silhouette tombe en pluie d'encre. Les lucioles montent. L'eau devient lit.
+-> flag reve_fait ; seq SQ-01 ; cin CIN-01 ; travel z01 t01
 end
 
 # 5.2 — [SQ-02] LE CABINET, LE MATIN — OMBELINE

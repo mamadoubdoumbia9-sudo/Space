@@ -1,0 +1,39 @@
+# Feuillet « Ce que le monde a retenu de toi » : condition | ligne. Les 7 premières vraies sont affichées (ordre = priorité).
+flag:nom_repeint & decision:D-01=a | Tu as repeint un nom. Un vieux monsieur dort mieux.
+decision:D-01=b | Tu as laissé un vieux monsieur à sa paix. Il repeindra seul, un matin.
+decision:D-01=c | Tu n'as pas su lire l'heure effacée. Tu l'as cherchée quand même.
+flag:chant_marta | Tu as chanté faux avec une femme juste. Le café respire.
+flag:marek_lentilles | Tu n'as rien demandé à celui qui ne demande rien. Il t'a servi des lentilles.
+flag:marek_confidence | Tu as dit « laissé » à un veilleur. Il l'a répété.
+flag:faveur_jumeaux_due | Tu as perdu exprès aux billes. Personne n'est dupe. Tout le monde est content.
+flag:case_neuf | Tu as redessiné la case neuf. La grâce tient à la craie.
+decision:D-02=garder | Tu as gardé la boîte boiteuse. Elle boite fièrement.
+decision:D-02=reparer | Tu as réparé une chanson avec un homme qui a perdu les visages. Il ne saura jamais ton nom.
+flag:boite_musique_montee | Tu as rendu sa musique à Aristide. Il ne saura jamais ton nom.
+flag:ressort_vole & !flag:ressort_rendu | Tu as pris un ressort à un homme qui oublie. Filou s'en souvient.
+flag:ressort_rendu | Tu as rendu ce que tu avais pris. La boîte a une voix un peu rauque, maintenant.
+!flag:cloche_sonnee & !flag:cloche_nommee | Tu n'as pas sonné la cloche sans nom. Elle attend encore.
+flag:cloche_sonnee & !flag:cloche_nommee | Tu as sonné une cloche sans nom. Quelqu'un, quelque part, a pensé fort.
+decision:D-05=esteban | Tu as donné un nom à la plus grande cloche du pays. Le vent le lit chaque soir.
+decision:D-05=sorene | Tu as nommé un père sur une cloche. Le verger fera le reste.
+decision:D-05=velune | Tu as écrit un mot que personne ne connaît sur une cloche. Elle sonne en harmonique.
+flag:mot_au_dictionnaire | Tu as écrit un mot dans un dictionnaire de café. Le mot a survécu à la nuit.
+flag:sidonie_reste | Tu as dit à une mécanicienne de rester. Elle a collé une étoile de plus au plafond.
+flag:sidonie_part | Tu as dit à une mécanicienne de partir. Le compteur tombera rond sans toi.
+flag:etoile | Tu as compté les étoiles avec Sidonie. Elle a ouvert un onglet à ton nom.
+flag:faveur_lampe_faite | Tu as rapporté une lampe à un chef de gare. Elle a pris du sel. Il a aimé ça.
+flag:faveur_colis_faite | Tu as porté trois fioles au phare. C'étaient des lettres.
+flag:crayon_marek_rendu | Tu as rendu un crayon volé par deux enfants. On est en danger de tendresse, sur cette île.
+flag:rosa_fournee_faite | Tu as pétri le pain du frère. Rosa n'a pas dit lequel.
+flag:journal_lu | Tu as lu le journal à un homme qui ne lit plus les petits caractères. Il ne le dira jamais.
+flag:pied_tendre | Tu as regardé un phoque dans les yeux vingt secondes. Il t'a présentée aux voisins.
+flag:ruban_noue | Tu as noué le ruban tout de suite. Tu avais les mains qui tremblaient. Tu avais raison.
+decision:D-03=ouvertes | Tu as lu ce qu'un veilleur n'osait pas ouvrir. Au moins quelqu'un l'a fait.
+decision:D-03=fermees | Tu as laissé fermées trois lettres qui font peur. Ce qu'on n'ouvre pas reste possible.
+flag:baz_flottante | Tu as écouté un passeur moteur coupé. Il a dit autre chose que « bon vent ».
+flag:assis_214 | Tu t'es assise contre le mélèze 214 sans rien dire. Les étiquettes ont claqué pour toi.
+count:s12>=12 | Tu as remis douze cailloux en place. On ne sait jamais qui passera derrière nous.
+secret:S11 | Tu as vu monsieur Éraflé dix-huit fois. Il t'a cartographiée.
+chocolats>=5 | Tu as bu {0} chocolats sans supplément. Émeric a noté la dette. Elle est longue.
+flag:filou_reste_seuil | Tu as dit « mon cœur » à un chien. C'était la première fois.
+true | Tu as suivi les traces. Tout un monde t'a aidée à chercher.

@@ -1,0 +1,113 @@
+# Pensées de Lohen — prologue et acte I (clé | texte). Variantes : .2 (deuxième examen), .10 (dixième), .act3/.act4, .after (après la lettre), .ng (NG+), .DOUCEUR/.COURAGE/.RUSE (trait dominant)
+
+# ── Z00 — le rêve
+z00.lune | la lune est ronde comme un cachet de cire. elle scelle quelque chose. je ne sais pas encore quoi.
+z00.muret | le muret du port, posé sur l'eau. quelqu'un y est assis. quelqu'un s'y est toujours assis.
+
+# ── Z01 — le Cabinet
+z01.boutique | l'odeur d'encre et de cire. le matin bleu entre par la porte ouverte. ombeline a déjà tout rangé, c'est-à-dire tout déplacé.
+z01.boutique.ng | je connais cette pièce par cœur. je la revois quand même comme la première fois. c'est ça, relire.
+z01.boutique.after | je suis sortie d'ici ce matin pour lever un plan de veille. je reviens avec une lettre. les cartes ne prévoient jamais le retour.
+z01.table | la grande table. dix générations de coudes ont poli le bord. on y dessine debout : ombeline dit qu'on ment moins debout.
+z01.table.2 | le plan de veille de la corniche est resté là, à moitié levé. j'ai une autre carte à faire, aujourd'hui.
+z01.table.10 | j'ai passé plus d'heures ici qu'à dormir. le bois me connaît. c'est mon banc trois à moi.
+z01.horloge | l'horloge marine. soixante battements par minute, exactement. c'est la seule chose de la maison qui ne mesure pas la mer.
+z01.horloge.2 | elle retarde de quatre minutes depuis 1991. ombeline refuse qu'on la règle : « c'est une heure de la maison ».
+z01.carte_murale | la presqu'île, levée par aurélien vasseur en 1936. le trait est sûr. les blancs sont honnêtes : là où il ne savait pas, il n'a rien inventé.
+z01.carte_murale.2 | la pointe est dessinée sèche, en trois traits. les cartes ne savent pas faire tendre.
+z01.tiroirs | le meuble à tiroirs. chaque tiroir, une année de relevés. le tiroir du bas, à trois molettes, garde « les effacés ».
+z01.tiroir_fait | le tiroir est ouvert. les six lettres d'adieu datées dorment dedans. je les relirai. pas ce matin.
+z01.theodolite | mon théodolite de terrain. trépied pliable, lunette à réticule. un jour de travail de cartographe tient dans ce sac.
+z01.gomme | la gomme rouge du cabinet, biseautée par vingt ans de repentirs. ombeline dit qu'une carte sans gomme est un mensonge sans remords.
+z01.porte | la porte est ouverte sur la rue. ombeline l'ouvre à cinq heures pour « aérer les cartes ». les cartes n'ont jamais eu besoin d'air. elle, si.
+z01.pas_encore | pas encore. ombeline n'a pas fini de me dire la journée. on ne sort pas d'un cabinet avant d'avoir sa mission : c'est une loi de la maison.
+z01.atelier | l'atelier. la table lumineuse, les casiers, la fenêtre sur les toits. c'est ici que les relevés deviennent des cartes, et les cartes des choses qu'on peut plier.
+z01.table_lumineuse | la table à dessin. le calque du plan de veille attend. je ne vais pas le finir aujourd'hui. je le sais déjà, et je ne sais pas comment je le sais.
+z01.casiers | les casiers à relevés : 1936 en bas, 2026 en haut. on monte dans le temps en levant la tête. c'est un meuble bien pensé.
+z01.fenetre_atelier | les toits de tôle, le clocher, la mer au bout. tout ce que je sais dessiner tient dans cette fenêtre.
+z01.encres | encre de chine, encre garance, encre indigo pour la mer et les terres inconnues. le bleu des cartes anciennes : la couleur de ce qu'on n'a pas encore vu.
+z01.rouleaux | des rouleaux de cartes anciennes. certaines ont des côtes qui n'existent plus. la mer déplace les lignes ; le papier, lui, s'en souvient.
+z01.escalier | l'escalier raide de la chambre. je le monte sans allumer depuis six ans. le corps compte mieux que moi.
+z01.chambre | ma chambre sous le toit. l'œil-de-bœuf, le lit étroit, le manteau au crochet. je n'y ai jamais pleuré. ce n'est pas la pièce pour ça.
+z01.chambre.after | le lit, le manteau, l'œil-de-bœuf. rien n'a bougé. moi, si.
+z01.lit_attente | je me suis allongée une minute. le plafond a la couleur d'un matin qui insiste. je me relève : le monde a avancé d'une marée.
+z01.lucarne | la lucarne donne sur le ciel et rien d'autre. c'est reposant, une fenêtre qui ne montre pas la mer.
+z01.oeil_de_boeuf | l'œil-de-bœuf cadre le clocher exactement. l'ancien locataire l'a voulu ainsi. on habite toujours le regard de quelqu'un d'autre.
+z01.commode | la commode. trois tiroirs : le linge, les carnets pleins, les carnets vides. le tiroir des carnets vides est le plus lourd.
+z01.enveloppe | une enveloppe d'ombeline, posée là pendant la nuit : « pour la deuxième fois. on relit, on ne recommence pas. — o. »
+z01.manteau | mon manteau. « mets ton manteau, il va faire vent » : c'est ce qu'on dit aux enfants, ici, à la place de « je t'aime ».
+z01.manteau.after | mets ton manteau. il va faire vent. ... je le mets.
+
+# ── Z02 — le quartier des pêcheurs
+z02.rue | la rue basse. les filets sèchent d'un mur à l'autre, les volets bleus ont déjà ouvert un œil sur dix. le port se repose sur ses lauriers de dimanche.
+z02.rue.act3 | le soir dore la rue. les filets font des ombres de résille sur les façades. quelqu'un fait cuire du poisson : c'est l'heure honnête.
+z02.rue.act4 | toutes les fenêtres sont allumées. toutes. le quartier veille. on ne veille pas pour rien, ici.
+z02.filets | les filets qui sèchent. la maille est reprisée à dix endroits par dix mains différentes. un filet, c'est un registre de voisins.
+z02.filets.2 | il y a une odeur d'écaille et de sel chaud. filou lit les filets comme moi les cartes : par ce qu'il en reste.
+z02.volets | trois volets ouverts sur dix. un quartier qui dort sur ses absences. je note qui, je note quand.
+z02.flaques | les flaques de la rue gardent le ciel à plat. la ville a des miroirs par terre et personne ne se regarde dedans.
+z02.cloche_lointaine | une cloche, loin, au-dessus. le verger des carillons, quand le vent tourne à l'ouest. un nom vient d'être lu par le vent.
+z02.porte_cabinet | la porte du cabinet, sa peinture garance, sa plaque : VASSEUR — CARTES & RELEVÉS. c'est la porte la plus solide que je connaisse.
+z02.filou_dabord | pas par là. pas encore. le muret, d'abord. quelque chose m'attend au muret : j'ai ça dans les talons.
+z02.muret | le muret du port et la cale. la marée est basse : l'estran fume légèrement. un chien est attaché au poteau de coupée.
+z02.muret.after | le muret. la première rencontre, treize ans plus tôt. le poteau est vide. filou marche à côté de moi. tout est à sa place, sauf ce qui manque.
+z02.poteau | le poteau de coupée. le nœud de la laisse est refait à neuf par quelqu'un qui savait défaire et pas refaire. un nœud de départ.
+z02.poteau.2 | il y a des initiales dans le bois, à hauteur d'enfant. E. et L., 2013. le poteau se souvient mieux que le port.
+z02.gamelle | la gamelle de filou. neuf jours de gamelles pleines : marta, en cachette. la ville nourrit ce qu'elle ne sait pas dire.
+z02.echelle | l'échelle de la cale. les barreaux du bas sont verts d'algues, ceux du haut sont blancs de sel. la marée fait des rayures.
+z02.barques | les barques échouées penchent toutes du même côté, comme des gens qui écoutent la même histoire.
+z02.estran | l'estran à marée basse. les flaques, les rides de sable, les traces de vers. le fond de la mer est un dessin qu'elle efface deux fois par jour.
+z02.phare_lointain | le phare des trois-sœurs, au bout. le faisceau ne tourne pas le jour. il s'attarde quand même sur la pointe : je l'ai vu faire, une nuit.
+secret.s03_done | une bouteille. le bouchon a tenu treize ans. dedans : « on reviendra par l'ouest ». deux écritures d'enfants. je reconnais les deux.
+
+# ── Z03 — la place du Beffroi
+z03.place | la place du beffroi. le marché sous ses toiles, le kiosque, la marelle des marées à la craie. le beffroi marque la marée au lieu de l'heure. la ville a raison.
+z03.place.act3 | le marché plie. les toiles rouges deviennent brunes. la marelle a perdu sa case neuf : quelqu'un a sauté trop fort.
+z03.place.act4 | la place est vide et toutes les fenêtres sont allumées. le beffroi dit PM4. la ville veille avec moi sans le dire.
+z03.beffroi | l'horloge du beffroi n'a qu'une aiguille : la marée. BM en bas, PM en haut. l'heure, ici, c'est de l'eau.
+z03.beffroi.2 | le mécanisme grince à chaque quart. anselme dit que les horloges qui grincent sont celles qu'on a le plus regardées.
+secret.s02_step | 15h46. l'aiguille trébuche, revient. 15h48. entre les deux : rien. une heure tombée entre deux gardes.
+z03.kiosque | le kiosque à musique. la fanfare y répète le jeudi, faux. c'est la seule fanfare au monde dont les fausses notes font applaudir.
+z03.marelle | la marelle des marées : BM, PM1, PM2… jusqu'à la case neuf, « la grâce ». on saute de marée en marée. les enfants d'ici apprennent l'eau avant les chiffres.
+z03.marelle.2 | la case neuf est effacée. c'est celle où l'on saute le plus fort. c'est toujours la grâce qui s'efface la première.
+z03.affichage | le tableau d'affichage : l'affiche du bal, des annonces de bateaux, un avis de la mairie sur le recensement des cloches. deux couches de colle. les murs, ici, sont des archives fainéantes.
+z03.dispensaire | le dispensaire. la plaque de la docteure brunoy, une salle d'attente qui retarde de treize minutes. le banc, dehors, regarde le port.
+z03.dispensaire.2 | quelqu'un s'est assis là pour compter ce qu'il aimait. il y a une feuille à demi mouillée sous la latte du banc.
+z03.pigeons | les pigeons de la place connaissent les horaires du marché mieux que la mairie. ils ont le contre-amiral à l'œil, et le contre-amiral les ignore avec science.
+z03.gare_fermee | la gare, là-haut. je n'ai pas encore de raison d'y monter. émeric en aura une : il a toujours une raison écrite quelque part.
+z03.cafe | le café l'écume. le juke-box grésille tout seul, le percolateur soupire, marta essuie. ici, on ne prend jamais commande : on devine.
+z03.cafe.act4 | le café est fermé. marta est là. elle essuie. « les cafés fermés, c'est là qu'on reconnaît les cafés vivants. »
+z03.jukebox | le juke-box de 1959. quarante-trois disques. il grésille parfois sans qu'on l'ait touché : il pense à ses disques, dit marta.
+z03.tableau_noir | l'ardoise du jour : « soupe de roche — galettes — chocolat : sans supplément pour les larmes ». écrit à la craie, comme tous les jours.
+z03.percolateur | le percolateur italien, chromé, énorme. il soupire comme une locomotive. marta lui parle. il répond en vapeur.
+z03.cadres | des photos de bateaux. le saint-eumèle avant le naufrage. la decideuse en 1972, avec un autre nom. les bateaux changent de nom ; les cafés gardent les photos.
+z03.fenetre_cafe | la fenêtre sur la place. de là, on voit qui monte à la gare et qui descend au port. marta sait tout de la ville sans jamais sortir : c'est une fenêtre bien placée.
+z03.attente_cafe | je me suis assise. le juke-box a grésillé deux fois. la marée a tourné dehors. c'est un bon endroit pour laisser passer une marée.
+z03.marche | le marché couvert. la verrière, le four de rosa, la balance de laiton, les cageots. ça sent le pain et la mer : les deux choses qu'on ne peut pas dessiner.
+z03.four | le four de rosa. il chauffe depuis 1980 sans s'arrêter, dit-elle. rosa est au four. rosa est toujours au four. rosa est le four, probablement.
+z03.balance | la balance de laiton. elle pèse juste depuis un siècle. les commerçants du marché la respectent comme une vieille dame : on ne la contredit pas.
+z03.cageots | des cageots de légumes de la vasière : salicornes, bettes de mer, pommes de terre au sel. la presqu'île mange ce que la marée laisse.
+z03.cordonnier | l'échoppe du cordonnier, fermée depuis l'hiver. les chaussures attendent encore sur l'étagère. les gens partent ; les chaussures restent. c'est toujours dans ce sens.
+z03.croquettes | un sac de croquettes sous le banc, « pour le chien du garçon ». rosa l'a acheté il y a neuf jours. elle savait qu'il repasserait.
+z03.verriere | la verrière du marché. la lumière tombe en carrés sur les étals. le matin, c'est une cathédrale de légumes.
+
+# ── Z04 — le quai du bac
+z04.ponton | le ponton de la decideuse. la cloche de sonnerie, le taquet sec, les hérons dans la vase. baz est quelque part sur vingt mètres de planches : c'est sa principauté.
+z04.ponton.act4 | le ponton, la nuit. la decideuse dort à son câble. la maison sur pilotis a sa fenêtre allumée : baz veille aussi.
+z04.clous | trois clous neufs sur quatre cents. quelqu'un entretient ce ponton dans l'ombre. je le retrouve, un jour, mon inconnu des planches.
+z04.clous.after | trois clous neufs. c'était lui. il a entretenu le ponton tout l'été. jamais dit. jamais montré. sauf ici.
+z04.herons | les hérons de la vase. ils gagnent en ne bougeant pas. c'est une règle qu'on devrait apprendre à l'école avec la marelle.
+z04.bac | la decideuse. un bac à câble, une cabine, un banc de bâbord au coin du vent. elle traverse depuis 1972. son nom d'avant, personne ne le dit plus.
+z04.bac.2 | le banc de bâbord. le coin du vent. quelqu'un s'y est assis il y a dix jours en regardant l'eau comme une lettre qu'il venait de finir.
+z04.cordage | le cordage lové au millimètre. baz amarre comme d'autres prient : lentement, complètement, parfaitement.
+z04.maison_pilotis | la maison de baz, sur pilotis. elle a les pieds dans l'eau six heures par jour et elle s'en porte bien. c'est une maison de traversées fixes.
+z04.balise | la balise radio. elle claque à marée haute, par groupes. quelqu'un, au siècle dernier, lui a appris à parler.
+z04.journal | le journal de vieux-quai, sur le taquet. baz ne lit plus les petits caractères. il ne le dira jamais : « je choisis mes nouvelles comme mes amarres : les grosses ».
+z04.baz_dabord | la vasière est de l'autre côté du chenal. il faut la decideuse. il faut baz. il faut tirer la corde, même pour rien : c'est la politesse du ponton.
+z04.vasiere | la vasière et l'estran. la barque échouée, les salicornes, les dunes derrière. l'estuaire sent le sucre brûlé. baz dit que c'est la mer qui mijote.
+z04.vasiere.act3 | l'estran au soir. les dunes deviennent roses. deux enfants en bottes remuent trois seaux avec dignité.
+z04.barque | une barque échouée, la coque ouverte comme une bouche qui a fini de parler. les gravelots s'y abritent. c'est une ruine utile.
+z04.salicornes | les salicornes. j'en prends une poignée. salé comme la mer, croquant comme un vendredi.
+z04.dunes | les dunes ont bougé de deux mètres depuis 2013. le sable déménage. au-dessus, un sentier de chèvres monte vers l'anse. personne ne l'a jamais indiqué : c'est la définition d'un vrai sentier.
+z04.sucre | le sucre sur les rochers : une croûte blanche que la mer laisse en se retirant. « la mer, au moins, elle prévient. » ysolde dit ça.
+z04.mijote | j'écoute la vasière. elle fait des bulles, elle chuchote, elle mijote. baz dit beaucoup de choses justes sur des tonalités fausses.

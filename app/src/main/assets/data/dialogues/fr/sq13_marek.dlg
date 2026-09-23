@@ -42,7 +42,7 @@ MAREK: [[LIEN-MAREK>=2|...T'es encore là. T'es tenace. C'est pas un compliment.
 MAREK: ...La lampe du vieux. Elle est près de la lanterne depuis l'hiver. Elle a bien veillé.
 * Il disparaît, revient, passe la lampe par l'entrebâillement.
 MAREK: Dis-lui qu'elle a pris du sel. Il aimera ça. Le sel, c'est sa médaille.
--> give lampe_tempete ; LIEN-MAREK +0
+-> give lampe_tempete ; LIEN-MAREK +1
 > pr_fin
 = p11
 * Il inventorie les fioles sans commentaire, puis :
@@ -62,10 +62,16 @@ MAREK: Ça a marché. J'y suis monté. Ils sont dangereux, ces deux-là. On est 
 end
 
 # NIVEAU 2 — LA MAISON [SQ-15] (LIEN ≥ 3)
-~ sq15_marek_maison [SI: flag:marek_rencontre & LIEN-MAREK>=3] once
+~ marek_ouvre [SI: flag:marek_rencontre & LIEN-MAREK>=3 & !flag:marek_porte_ouverte] once
 ! sfx porte_chaine
-* La chaîne tombe. La porte s'ouvre sur la cuisine aux deux tasses. Marek sert un chocolat sans demander.
--> flag marek_porte_ouverte ; seq SQ-15
+* La chaîne tombe. La porte s'ouvre en grand, pour la première fois.
+MAREK: Entre. Le chocolat est trop chaud. Il l'est toujours.
+-> flag marek_porte_ouverte ; travel z13 t01
+end
+
+~ sq15_marek_maison [SI: flag:marek_porte_ouverte] once
+* La cuisine aux deux tasses. Marek sert un chocolat sans demander.
+-> seq SQ-15
 MAREK: Assieds-toi. Je l'ai fait trop chaud. Je fais tout trop chaud, c'est le problème des gens qui veillent : on confond feu et cœur.
 * Il pousse la tasse.
 MAREK: Deux tasses. Tu vois la deuxième ? Je la sers pareil, tous les matins. On appelle pas ça de l'espoir. On appelle ça une habitude chaude. Les habitudes chaudes, c'est ce qui reste quand l'espoir est parti dormir.
@@ -136,6 +142,14 @@ MAREK: Non. Tu m'as évité d'avoir peur seul. C'est un service de gardien, ça.
 = p33
 MAREK: Je peux pas venir. Je peux éclairer. C'est ce que je sais. Montre-moi que tu sais marcher.
 -> flag heures_bleues_annoncees
+end
+
+# Anti-blocage : si le lien n'est pas assez haut, Marek donne quand même la girouette — plus froid.
+~ sq16_marek_girouette_froid [SI: puzzle:E04 & !flag:girouette_obtenue] once
+MAREK: 23h52. Les Heures Bleues. Ce soir.
+* Il ouvre un coffret de laiton sans un mot de plus.
+MAREK: La rose des vents du phare, 1889. Elle s'assemble avec un sifflet et une plume, paraît-il. Mon frère et ses inventions. Prends. Je peux pas venir. Je peux éclairer.
+-> give girouette_1889 ; flag girouette_obtenue ; seq SQ-16 ; flag heures_bleues_annoncees ; LIEN-MAREK +1
 end
 
 # Reprises de Marek dans la maison

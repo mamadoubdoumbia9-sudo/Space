@@ -51,5 +51,5 @@ end
 
 # F-08 — Tom, au loin (audio seul, jamais sous-titré : joué comme voix off sans texte)
 ~ tom_au_loin
-! voice tom_till_gagne
+! sfx tom_till_gagne
 end

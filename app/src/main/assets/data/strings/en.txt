@@ -1,0 +1,331 @@
+# Interface strings — English (key | text). {0} {1}… = arguments.
+app.title | The Cartography of the Absent
+app.chapter | Chapter 1 — Low Tide
+app.version | 1.0.0-ch1
+app.studio | Atelier Marée Basse
+menu.continue | Continue
+menu.new | New game
+menu.load | Load
+menu.settings | Settings
+menu.credits | Credits
+menu.quit | Quit
+menu.confirm_new | Start a new game? Existing saves are kept in their slots.
+ui.yes | Yes
+ui.no | No
+ui.close | Close
+ui.back | Back
+ui.continue | Continue
+ui.understood | Got it
+ui.validate | Confirm
+ui.clear | Clear
+ui.on | on
+ui.off | off
+ui.tap_skip | tap to skip
+ui.hold_skip | hold to skip
+pause.title | Paused
+pause.info | {0} played · map {1} % · {2} pages · {3} echoes
+pause.resume | Resume
+pause.save | Save
+pause.load | Load
+pause.carnet | Notebook
+pause.title_screen | Title screen
+saves.load_title | Load a game
+saves.save_title | Save
+saves.slot | Slot {0}
+saves.empty | — empty —
+saves.corrupt | Unreadable save (damaged file)
+saves.desc | {0} · {1} · map {2} % · {3} · {4}
+saves.load | Load
+saves.save | Write
+saves.confirm_delete | Delete this save?
+save.auto | Autosave
+save.checkpoint | Checkpoint
+save.slot | Slot {0}
+save.letter | The letter
+save.end | End of chapter 1
+toast.checkpoint | Checkpoint saved
+toast.saved | Game saved
+toast.saved_named | Saved: {0}
+toast.no_save | No save to continue
+toast.item | In the satchel: {0}
+toast.secret | A secret of the peninsula
+toast.lang | Language changed
+set.tab_graphics | Graphics
+set.tab_audio | Audio
+set.tab_game | Game
+set.tab_access | Comfort
+set.quality | Quality
+set.q_LOW | Low
+set.q_MEDIUM | Medium
+set.q_HIGH | High
+set.q_ULTRA | Ultra
+set.quality_help | Low: lighter images, no particles or grain — for modest devices. Ultra: double particles, parallax, paper grain.
+set.vignette_grain | Vignette and paper grain
+set.reduce_motion | Reduce motion
+set.ui_scale | Interface size
+set.master | Master volume
+set.music | Music
+set.ambience | Ambience
+set.sfx | Effects
+set.vibration | Vibration
+set.language | Language
+set.sensitivity | Touch sensitivity
+set.hints | Puzzle help
+set.hint_STANDARD | Standard
+set.hint_PURISTE | Purist
+set.hint_ASSURE | Assured
+set.hints_help | Standard: hints on request, the notebook offers a summary after two failures. Purist: the game never offers anything. Assured: Ysolde offers a hint after a single failure. No judgement, no different reward.
+set.autosave | Autosave
+set.left_handed | Buttons on the left (left-handed)
+set.text_size | Text size
+set.high_contrast | High contrast
+set.subtitles | Cinematic subtitles
+set.access_help | Every puzzle can be solved without sound (visual notation) and without pixel precision. Assured mode enables the assisted variants.
+tide.PM1 | rising tide
+tide.BM | low tide
+tide.PM2 | high tide
+tide.PM3 | slack water
+tide.PM4 | falling tide
+tide.PM5 | ebb
+act.1 | Act I — The town
+act.2 | Act II — The traces
+act.3 | Act III — The cliff
+act.4 | Act IV — The Blue Hours
+act.5 | Epilogue
+act.card_1 | ACT I
+act.card_2 | ACT II
+act.card_3 | ACT III
+act.card_4 | ACT IV
+world.ask_filou | Ask Filou
+world.hold | hold
+world.hold_hint | You have to stay: hold your finger on the spot.
+world.lens_hint | The Surveyor's lens wakes up the erased marks: hidden details appear for a few seconds.
+world.need_item | I would need: {0}.
+world.npc_busy | Not now. You don't interrupt someone listening to the sea.
+world.wait_done | The tide has turned: {0}.
+world.pet_1 | filou pushes his head under my hand. his skull is warm.
+world.pet_2 | he closes his eyes. two seconds. it's a dog's gift.
+world.pet_3 | he sighs. dogs sigh from relief or from waiting. i think he does both.
+world.pet_4 | he looks at me as if i were the one who needed petting. he may be right.
+dlg.silent | (say nothing)
+carnet.tab_carte | Map
+carnet.tab_sacoche | Satchel
+carnet.tab_pages | Pages
+carnet.tab_echos | Echoes
+carnet.tab_gens | People
+carnet.tab_journal | Journal
+carnet.progress | Surveys
+carnet.carte_pct | Map surveyed: {0} %
+carnet.releves | Surveys: {0}
+carnet.bornes_n | Markers: {0} / {1}
+carnet.pages_n | Esteban's pages: {0} / {1}
+carnet.echos_n | Echoes: {0} / {1}
+carnet.secrets_n | Secrets: {0} / {1}
+carnet.murmures_n | Murmurs: {0} / {1}
+carnet.cloches_n | Bells rung: {0} / {1}
+carnet.act | {0}
+carnet.tide | Tide: {0}
+carnet.time | Play time: {0}
+carnet.open_map | Travel
+carnet.empty_bag | The satchel is empty. For now.
+carnet.examine | Examine
+carnet.hold_letter | Hold the letter
+carnet.letter_held | i hold it tight. the paper is warm. the shortest gesture of the day, and the longest.
+carnet.reread | Read again
+carnet.pages_intro | The pages torn from the midnight-blue notebook — {0} of 24. The birds in the margins are counting something.
+carnet.echos_intro | Memory-places, replayed as ink shadow theatre.
+carnet.echo_unknown | a memory the place has not given back yet
+carnet.puzzles_solved | Puzzles — {0} / {1}
+carnet.secrets_found | Secrets of the peninsula — {0} / {1}
+carnet.secret_unknown | …
+carnet.bornes_title | Markers surveyed — {0}
+carnet.murmures_title | Murmurs — {0}
+carnet.archives_title | Archives read — {0}
+carnet.bells_title | Bells rung — {0}
+carnet.my_answer | My answer
+carnet.borne | Marker
+carnet.label | A label from the wood of names
+secret.S03 | The bottle in the cove
+secret.S04 | The goat path
+secret.S05 | The treasure box
+secret.S07 | Lamp-eye
+secret.S09 | The little bell's whistle
+secret.S10 | The three maps
+secret.S11 | The wing companion
+secret.S12 | The little thumb
+map.title | The Low Tide peninsula
+map.help | Tap a known place to travel there. Places open as you follow the traces.
+map.locked_tide | The sea lies between us and the rest of the world. We come back at the next Blue Hour.
+page.head | Page {0} — {1}
+page.found | a page from the midnight-blue notebook — kept in the notebook
+letter.pli | fold {0} / {1}
+letter.pps | postscript to the postscript
+letter.turn | turn the fold
+letter.get_up | Stand up
+letter.stay | you don't stand up too quickly from a letter like this
+letter.ribbon | if you have the words, you untie.
+letter.ribbon_hint | touch the ribbon to untie it
+epi.title | The answer
+epi.intro | What Lohen leaves in the box. Gold-ink choices are final.
+epi.opt_letter | Write a letter — slip it into the throat of the wind
+epi.opt_pursuit | Leave nothing — follow his trail
+epi.opt_compass | Leave Esteban's compass — "you'll find me when you know where I am"
+epi.opt_map | Leave the whole map from the notebook, folded into a bird
+epi.write_title | Three inks, or your own
+epi.free | Write freely (keyboard)
+epi.free_prompt | Your answer to Esteban (it stays on this device, inside the save)
+epi.my_letter | LOHEN TO ESTEBAN — POINTE-AU-VENT, 23:52
+epi.deposit | Deposit
+epi.rewrite | Rewrite
+end.title | END OF CHAPTER 1
+end.subtitle | Low Tide
+end.fe_lettre | The answer — chapter 2 opens on Lohen waiting for the ferry, the answer tucked under her jacket.
+end.fe_poursuite | The pursuit — chapter 2 opens on the ferry quay, a net over her shoulder.
+end.fe_boussole | The two shores — chapter 2 opens on the workshop, the empty table, the blank sheet.
+end.fe_carte | The map of the end of the world — an opening of chapter 2 no one else will have.
+end.stats | map {0} % · pages {1}/24 · echoes {2}/12 · secrets {3}/12 · clarity {4}/100 · {5}
+end.free_memory | Free memory (revisit the chapter)
+end.free_memory_toast | The chapter is open again: nothing is lost, everything can be revisited.
+end.ng_plus | Read again (new game +)
+retent.title | What the world remembered of you
+puzzle.hints_title | Hints
+puzzle.hint_level | level {0}
+puzzle.ask_hint | Ask for a hint
+puzzle.more_hint | One more hint
+puzzle.hint_locked | the third level opens after two attempts
+puzzle.hint_offer | ysolde would say: "ask, little map. hints don't bite."
+time.min | {0} min
+time.h | {0} h {1}
+e01.day | day
+e01.phase | phase
+e01.tens | tens
+e01.units | units
+e01.pull | Pull the drawer
+e01.carnet | Leaf through the notebook
+e01.carnet_title | Ombeline's notebook — morning readings
+e01.locked | the drawer resists. the date is not the world's.
+e02.stand | stand here
+e02.glass | the waiting-room window
+e02.touch_reflection | Touch the reflection
+e02.blur | the reflection is blurred from here. the people who watched trains leave did not stand there.
+e02.clear | the reflection forms. the floor is polished under my feet: this is where people watched them leave.
+e03.low | short
+e03.high | too much
+e03.ok | right
+e03.raise | Raise the cabin
+e03.too_heavy | too heavy: like life. take some off, you'll see, it comes back up.
+e03.too_light | the beam tilts the wrong way. weight is missing.
+e04.sky | the window: full moon, low, orange
+e04.carnet | my notebook — moon readings
+e04.carnet_notes | prologue: round moon, high, white — ● 3 · orchard: full moon, low, orange — ● 7
+e04.lens | Lens on the margin
+e04.title | TIDE ALMANAC 1926-2026 — MOONS
+e04.twin | 00:52? … two twin lines bear symbol 7. the printer lied once a century. someone corrected it with a pen.
+e04.wrong_moon | that is not tonight's moon. the window shows a full, low moon.
+e05.track | track {0}
+e05.sea | the sea
+e05.conform | {0} / 5 in place
+e05.locked | lever L{0} is locked by its neighbours. order is everything.
+e05.rules | ENGRAVED TABLE — L1 locks L2 and L4. L3 frees L1 if L2 is up. L5 only moves if L4 is down. L4 only moves if L1 is down. Target: track 2 → track 1 (L1↓ L2↑ L3↑ L4↓ L5↑).
+e06.help | the map of the wood: three known ribbons. extend the spiral with your finger, then touch the tree.
+e06.void | the void
+e07.palier | stage {0}
+e07.p1 | the practice cord
+e07.p2 | a sentence of Ysolde's
+e07.p3 | Esteban's answer-knot (three knots torn off)
+e07.listen | Listen to the cord
+e07.listen_msg | each rank has a note. the wall is an instrument: it can be read by ear too.
+e07.next_palier | right. stage {0}: another cord.
+e07.wrong | the wall creaks softly. count again: each gap, a letter; each silence, a space.
+e08.beats | {0} beats
+e08.sheets | sheets: {0}
+e08.dev | developer
+e08.stop | stop bath
+e08.fix | fixer
+e08.dip | Dip
+e08.lift | Lift the sheet
+e08.agitate | Agitate
+e08.order | not that bath. develop, stop, fix: in order.
+e08.good | {0} beats. the image holds. next bath.
+e08.too_early | too early: the image is pale. new sheet.
+e08.too_late | too late: black that eats. new sheet.
+e08.new_pack | the pack is finished. anselme had another one in the drawer of useful things.
+e09.listen | Lend an ear
+e09.notation | wave — low — high — low
+e10.attard | dwell: {0}°
+e10.holding | the beam lingers on the point…
+e10.wind | Wind the weight
+e10.sleeps | she's asleep, the old girl. wind her heart back up.
+e11.crown | crown: {0} h {1}
+e11.pose | Set the hour
+e11.read_first | the shadow speaks first. read the slab before setting.
+e11.not_exact | almost. the plate corrects: exactness is a courtesy to the sun.
+e11.dalle_xi | the shadow touches XI — ante meridiem. eleven true hours. and the plate says +7.
+e11.dalle_other | the shadow does not touch this slab.
+e12.trident | mark 1 — the trident
+e12.sirene | mark 2 — the mermaid
+e12.ancre | mark 3 — the anchor
+e12.silence | the silence
+e12.table | the rock table
+e12.rule1 | "take east on the 3rd lap"
+e12.rule2 | "go down on the 5th"
+e12.rule3 | "straight on the 2nd, then silence"
+e12.count | laps: {0}
+e12.nord | north
+e12.est | east
+e12.descente | down
+e12.droit | straight on
+e12.good_turn | good turn. mark {0}.
+e12.wrong_dir | wrong passage: it loops back to the previous mark.
+e12.wrong_count | not on the right lap. the water always strikes the same beats.
+e12.silence_hint | the pool does not lap: it breathes. wait until nothing strikes, then walk.
+e12.walk | Walk into the silence
+e12.too_soon | one more beat. those who rush the beats, the sea keeps.
+e13.azimut | bearing {0}°
+e13.drag | drag to aim
+e13.shoot | Take bearing
+e13.grande | Great Sister
+e13.petite | Little Sister
+e13.to_map | Plot on the map
+e13.back_scope | Back to the scope
+e13.missing | i lack landmarks on the map: i have not surveyed enough of the peninsula to plot both lighthouses.
+e13.got_grande | Great Sister taken.
+e13.got_petite | Little Sister taken.
+e13.nothing | nothing in the reticle. the sisters are to the west and the south-east.
+e13.off | the lines do not cross on the point. one bearing is off by a few degrees.
+e13.pointe | Pointe-au-Vent
+e14.notice | ESTEBAN'S NOTE — exploded view: "the wind says where" (head) · "the voice says when" (body) · "the feather says why" (tail)
+e14.top | head
+e14.mid | body
+e14.bot | tail
+e14.assemble | Assemble
+e14.off_tune | it holds. it doesn't ring true. take it apart, put it back.
+e15.wind | wind: {0}° (west)
+e15.box_angle | box slot: {0}°
+e15.drag | drag to turn the box — align it with the wind, then hold
+e15.hold | hold…
+e16.sea | the sea: oceanic blurs
+e16.sky | the sky: stars
+e16.blur | nothing sharp. the ring has three engraved stops.
+e16.drag | drag the focus ring
+s01.poster | GRAND BALL OF THE BELFRY — 1959
+s01.hold | hold your finger: the steam lifts the poster like a peach skin
+s06.title | TIDE-WINDING MACHINE — till
+s06.crank | Turn the crank
+s06.wrong | soup. LW, HW1, HW2: in the order of the tide.
+s08.no_sheet | i would need the decoding sheet from anselme's office
+s08.sheet | A ·− B −··· C −·−· D −·· E · F ··−· G −−· H ···· I ·· J ·−−− K −·− L ·−·· M −− N −· O −−− P ·−−· Q −−·− R ·−· S ··· T − U ··− V ···− W ·−− X −··− Y −·−− Z −−··
+s08.wrong | the groups don't say that. start again at the next series of flashes.
+
+# Locuteurs sans fiche de personnage
+speaker.tom | Tom
+speaker.till | Till
+speaker.voix | A voice
+speaker.radio | The radio
+speaker.institutrice | The teacher
+speaker.note | The note
+speaker.plaque | The plate
+speaker.journal | Journal 163
+speaker.notice | The note
+speaker.pensee | Thought
+speaker.lentille | The lens

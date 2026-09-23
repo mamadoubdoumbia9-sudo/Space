@@ -1,0 +1,30 @@
+# [Z16] LE PASSAGE DE LA POINTE (Heures Bleues)
+zone z16
+name Le passage de la pointe
+subtitle 700 mètres d'estran, la mer à 40 centimètres
+act 4
+palette bleu
+music track_19
+ambience amb_passage
+open flag:passage_engage | letter_read
+map 0.90 0.80
+start t01
+
+tableau t01 "La chaussée découverte"
+image art/zones/z16_t01.jpg
+prop tide_view 1
+prop particles bluehour
+prop filou_x 0.08
+prop filou_y 0.90
+enter_thought z16.chaussee
+enter_scene hb06_filou_seuil [SI: !seen:hb06_filou_seuil & !letter_read]
+enter_scene pnr_passage [SI: seen:hb06_filou_seuil & !flag:passage_engage & !letter_read]
+hot EXAMINE piquets 0.50 0.60 "Les neuf piquets" think=z16.piquets sniff=piquets -> scene hb05_piquets
+hot EXAMINE eau_gauche 0.15 0.70 "La mer, à gauche" think=z16.eau_gauche
+hot EXAMINE eau_droite 0.85 0.70 "La mer, à droite" think=z16.eau_droite
+hot EXAMINE fil_plomb_use 0.30 0.85 "Le fil de plomb d'Anselme" think=z16.fil_plomb [SI: has:fil_de_plomb]
+hot LISTEN maree 0.50 0.30 "La marée" think=z16.maree sfx=maree_basse sniff=maree_montante
+hot BORNE B39 0.10 0.80 "Une borne noyée à mi-chemin" [SI: has:lentille_arpenteur]
+hot SECRET s11_z16 0.92 0.45 "Deux yeux au bout du dernier piquet" lens=1 -> flag s11_z16 ; thought secret.s11_seen ; sfx chat_miaule
+path z14 "Revenir vers la grotte" 0.06 0.60 back [SI: !flag:passage_engage | letter_read] strict
+path z17 "Avancer jusqu'à la pointe" 0.92 0.75 [SI: flag:passage_engage] locked=z16.pas_encore strict cin=CIN-05

@@ -1,0 +1,71 @@
+# [Z10] LE BOIS DES NOMS
+zone z10
+name Le bois des noms
+subtitle sur la falaise, vers le sud
+act 3
+palette bois
+music track_12
+ambience amb_bois
+open seq>=SQ-06
+map 0.74 0.44
+start t01
+
+tableau t01 "La lisière & les étiquettes"
+image art/zones/z10_t01.jpg
+prop particles snow
+prop filou_x 0.15
+prop filou_y 0.92
+enter_thought z10.lisiere
+hot PUZZLE E06 0.50 0.50 "Retrouver l'arbre d'Esteban" [SI: seq>=SQ-06] done=z10.arbre_trouve
+hot LABEL 13 0.22 0.42 "Une étiquette : LOHEN — PORT-CENDRE 2013"
+hot LABEL 9 0.34 0.55 "Une étiquette d'enfant : PAPA — 2009"
+hot LABEL 1 0.60 0.38 "MARIE-LA — TERRE-NEUVAS 1904"
+hot LABEL 7 0.72 0.60 "L'ÉQUIPAGE DU SAINT-EUMÈLE — 1707"
+hot LABEL 14 0.44 0.30 "ESTEBAN — PHARE 2020 — engagé."
+hot LABEL 16 0.82 0.45 "YSOLDE — 1998 —"
+hot LABEL 18 0.14 0.66 "À MOI-MÊME — 60 ANS"
+hot LABEL 20 0.66 0.78 "TOUTE LA CLASSE — 11 NOVEMBRE 2025"
+hot LABEL 59 0.88 0.30 "LA CLASSE 2018 — ON A LU LES NOMS"
+hot READ page15 0.28 0.80 "Une feuille au pied du premier mélèze d'Esteban" page=15 [SI: puzzle:E06]
+hot BORNE B08 0.08 0.80 "La borne de la lisière" [SI: has:lentille_arpenteur]
+hot EXAMINE etiquettes 0.50 0.20 "Quarante mille étiquettes" think=z10.etiquettes
+hot EXAMINE papier_fantome_bois 0.40 0.70 "Une étiquette qui luit" think=z10.papier_luit [SI: act>=4]
+hot SECRET s11_z10 0.94 0.20 "Un chat dans les branches" lens=1 -> flag s11_z10 ; thought secret.s11_seen ; sfx chat_miaule
+path z08 "Revenir vers la falaise" 0.06 0.80 back
+path z09 "Vers la maison d'Ysolde" 0.06 0.50 [SI: seq>=SQ-06]
+path t02 "Le mélèze 214, au bord du vide" 0.92 0.45 [SI: puzzle:E06 | flag:meleze_trouve] locked=z10.meleze_ou
+path t03 "Le sentier des coquillages blancs" 0.70 0.92
+
+tableau t02 "Le mélèze 214"
+image art/zones/z10_t02.jpg
+prop tide_view 1
+prop particles snow
+prop filou_x 0.20
+prop filou_y 0.92
+enter_thought z10.meleze
+enter_scene meleze_214 [SI: !seen:meleze_214]
+hot ACTION etiquettes_214 0.50 0.45 "Les deux étiquettes" scene=meleze_214 [SI: seen:meleze_214]
+hot ECHO E-07 0.42 0.62 "Rester immobile au pied du mélèze" [SI: !echo:E-07] hold=6
+hot READ page21 0.56 0.52 "Une feuille glissée dans l'écorce" page=21
+hot READ page24 0.60 0.70 "Une feuille dans l'anfractuosité" page=24 [SI: page:21]
+hot EXAMINE vide 0.85 0.55 "Le vide" think=z10.vide
+hot EXAMINE ecorce 0.48 0.30 "L'écorce gravée : « e. »" think=z10.ecorce
+hot USE ecrire_etiquette 0.54 0.42 "Écrire sur l'étiquette vierge" item=feutre_ysolde think=z10.etiquette_ecrite need=z10.etiquette_sans_feutre [SI: ng+ & !flag:etiquette_ecrite] -> flag etiquette_ecrite ; +COURAGE
+path t01 "Revenir à la lisière" 0.06 0.70 back
+
+tableau t03 "Le sentier des coquillages blancs"
+image art/zones/z10_t03.jpg
+prop particles snow
+prop filou_x 0.25
+prop filou_y 0.92
+enter_thought z10.sentier
+hot READ page16 0.30 0.75 "Une feuille sous un coquillage" page=16
+hot ACTION cailloux 0.55 0.85 "Remettre un caillou en place" [SI: count:s12<12] -> count s12 +1 ; thought secret.s12_step ; sfx pierre_glisse
+hot EXAMINE coquillages 0.45 0.60 "Les coquillages blancs" think=z10.coquillages
+hot LABEL 12 0.75 0.40 "FRÈRE — HÔTEL-DIEU 1946"
+hot LABEL 15 0.22 0.35 "MAMAN — SALINES DU SUD 2016"
+hot LABEL 58 0.85 0.65 "LOUISE — L'ORGUE 1912"
+hot LABEL 53 0.62 0.30 "PETIT JOJO — LA ROUGEOLE 1943"
+hot BORNE B09 0.10 0.60 "La borne de la corniche, mi-chemin" [SI: has:lentille_arpenteur]
+path t01 "Revenir à la lisière" 0.06 0.80 back
+path z11 "Descendre vers le sentier des pétrels" 0.92 0.60

@@ -46,7 +46,7 @@ hint2: YSOLDE | deux lignes jumelles dans un annuaire : c'est un vêtement repri
 hint3: auto | La lentille réveille l'encre de la correction en marge.
 success: lune sept. ligne sept. la plume corrige l'imprimeur : 23h52, pas 00h52. ce soir. soixante et onze minutes de bleu. après, la mer reprend, et elle reprend toujours.
 effects: flag heures_bleues_confirmees ; releve 2 ; CLARTE +2
-after: sq16_marek_girouette
+after: sq16_marek_girouette | sq16_marek_girouette_froid
 
 @ E05 | L'aiguillage | z06
 phrase: il fallait enclencher les cinq aiguilles dans le bon ordre, parce que les verrous de sécurité d'une gare ne se forcent pas : ils s'étagent.

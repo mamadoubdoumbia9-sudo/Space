@@ -1,0 +1,17 @@
+# id | nom | rôle | portrait | couleur | notice du carnet
+lohen | Lohen | apprentie cartographe, 21 ans | art/characters/lohen.png | #E8DCC4 | Apprentie du Cabinet Vasseur. Mesure le monde pour le retenir. Talons qui chantent en si bémol.
+esteban | Esteban | compteur de pétrels, 21 ans | art/characters/esteban.png | #C9A24B | Le frère de marées. Bec-de-lièvre. Il étiquette en spirale, dessine les oiseaux de dos et écrit penché.
+filou | Filou | chien, compagnon | art/characters/filou.png | #BFB198 | « FIL. — IL CONNAÎT LE CHEMIN. » Neuf jours au muret. Il sait toujours en premier et ne peut pas le dire.
+ombeline | Ombeline Vasseur | maîtresse cartographe | art/characters/ombeline.png | #B6403A | Le Cabinet, rue des Saleurs. Elle date tout. « Mesurer est une façon de retenir. »
+marta | Marta | patronne du café L'Écume | art/characters/marta.png | #D08A3A | Elle chante faux, elle respire juste. Onze chocolats sans supplément. La providence à tablier.
+rosa | Rosa | boulangère du marché | art/characters/rosa.png | #B0703A | Rosa est le four, probablement. Le pain du frère. Un sac de croquettes sous le banc.
+emeric | Émeric Loew | écrivain public | art/characters/emeric.png | #2E4A7A | Le carnet des dettes de cœur. Il refuse de peindre les trains des autres et écrit des lettres qui valent tous les pinceaux.
+tom_till | Tom & Till | jumeaux, 10 ans | art/characters/tom_till.png | #5F7B5A | La marelle des marées, les billes de politesse, un carnet où tout est noté. Ils ont volé le crayon de Marek pour le faire monter au village.
+anselme | Anselme | chef de gare de Perdu-Vent | art/characters/anselme.png | #4A4A52 | Quarante-sept ans de gare sans trains. Il cire sa lampe. Il a nourri un garçon quatre nuits sans demander.
+baz | Baz | pilote de la Decideuse | art/characters/baz.png | #3A5A6A | Homme de traversées fixes. On ne demande pas la destination, on demande le cap. Sandwichs immangeables et parfaits.
+sidonie | Sidonie | mécanicienne de la Crevette | art/characters/sidonie.png | #B6403A | Le funiculaire, les étoiles au plafond, le compteur à 99 997. Elle prépare toujours quelque chose.
+ysolde | Ysolde | tisseuse, aveugle | art/characters/ysolde.png | #8A4A6A | Le mur des nœuds, le ruban garance, le feutre pour ce qui n'a pas de nom. « Les yeux, ça ferme. Les mains, ça garde. »
+aristide | Aristide | l'Oublieux de l'épave | art/characters/aristide.png | #6A5A3A | Degré trois. Il a perdu les visages, il lui reste les chansons. La boîte à musique de sa fille, dont il ne sait plus le nom.
+marek | Marek Sorène | veilleur du phare des Trois-Sœurs | art/characters/marek.png | #203A73 | Le frère aîné. Deux tasses chaque matin : une habitude chaude. Il tient ce qui tient.
+adele | Adèle Brunoy | médecin du dispensaire | art/characters/adele.png | #5A7A8A | Elle dit les choses comme les pilotes disent la profondeur. Médecine des effacements : sur demande écrite du cœur.
+aurore | Aurore | mouton du verger | art/characters/aurore.png | #BFB198 | Indifférence souveraine. Les fraises ne sont pas dans son mandat.

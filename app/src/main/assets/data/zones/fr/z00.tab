@@ -1,0 +1,22 @@
+# [Z00] LE RÊVE DE VELUNE — prologue jouable (caché sur la carte)
+zone z00
+name Le rêve de velune
+subtitle l'eau plate, sous la lune
+act 1
+palette nuit
+music track_01
+ambience amb_reve
+hidden
+map 0.5 0.95
+start t01
+
+tableau t01 "L'eau plate"
+image art/cin/reve.jpg
+prop particles fireflies
+prop dark 1
+prop filou_x 0.70
+prop filou_y 0.90
+enter_scene prologue_reve
+hot EXAMINE lune_reve 0.50 0.18 "La lune" think=z00.lune
+hot EXAMINE muret_reve 0.62 0.62 "Le muret, sur l'eau" think=z00.muret
+hot ACTION reveil 0.5 0.85 "Se réveiller" [SI: seen:prologue_reve] -> travel z01 t01

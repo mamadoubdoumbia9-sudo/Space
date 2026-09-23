@@ -1,0 +1,75 @@
+# [Z08] LA FALAISE HAUTE & LE VERGER DES CARILLONS
+zone z08
+name La falaise haute
+subtitle le verger des carillons
+act 2
+palette verger
+music track_10
+ambience amb_verger
+open flag:crevette_prete | puzzle:E05
+map 0.60 0.24
+start t01
+
+tableau t01 "Le plan large"
+image art/zones/z08_t01.jpg
+prop tide_view 1
+prop particles petrels
+prop filou_x 0.20
+prop filou_y 0.92
+enter_thought z08.falaise
+hot EXAMINE presquile 0.50 0.40 "La presqu'île, vue d'en haut" think=z08.presquile
+hot EXAMINE pointe_lointaine 0.88 0.36 "La pointe, tout au bout" think=z08.pointe_lointaine
+hot BORNE B06 0.15 0.75 "La borne de la falaise haute" [SI: has:lentille_arpenteur]
+hot EXAMINE crevette_haut 0.10 0.55 "La gare supérieure de la Crevette" think=z08.gare_sup
+hot LISTEN vent_falaise 0.50 0.15 "Le vent" think=z08.vent sfx=vent_falaise
+hot SECRET s11_z08 0.08 0.40 "Un chat sur la barrière" lens=1 -> flag s11_z08 ; thought secret.s11_seen ; sfx chat_miaule
+path z07 "Redescendre par la Crevette" 0.06 0.82 back
+path t02 "Entrer dans le verger" 0.55 0.72
+path z10 "Le sentier du bois des noms" 0.92 0.60 [SI: seq>=SQ-06]
+path z09 "La maison d'Ysolde, à la lisière" 0.80 0.80 [SI: seq>=SQ-06]
+path z06 "Le raccourci vers les voies mortes" 0.30 0.85 [SI: puzzle:E05] strict
+
+tableau t02 "Le verger des carillons"
+image art/zones/z08_t02.jpg
+prop particles petrels
+prop filou_x 0.15
+prop filou_y 0.92
+enter_thought z08.verger
+hot PUZZLE E09 0.50 0.60 "Les douze cloches accordées" [SI: act>=2] done=z08.melodie_faite
+hot EXAMINE cloche88 0.30 0.40 "La cloche 88" think=z08.cloche88 sniff=cloche88 -> count cloche88 +1
+hot SECRET S09 0.30 0.34 "Quelque chose dans la gorge de la 88" [SI: examined:cloche88>=2 & !secret:S09] -> secret S09 ; page 9 ; thought secret.s09_done ; sfx sifflet_petrel
+hot ACTION cloche_sans_nom 0.72 0.22 "La cloche sans nom" scene=cloche_sans_nom
+hot BELL 1 0.12 0.45 "Marguerite, 1901"
+hot BELL 3 0.20 0.55 "Philomène, 1912"
+hot BELL 5 0.40 0.30 "Auguste, 1917"
+hot BELL 6 0.58 0.28 "Marie-La, 1904"
+hot BELL 9 0.66 0.48 "Céline, 1923"
+hot BELL 10 0.80 0.44 "La grande déportée, 1918"
+hot BELL 14 0.86 0.60 "Pierre, le père Sorène" [SI: act>=3]
+hot BELL 15 0.45 0.78 "Marlène, la femme de Baz" [SI: seen:baz_premiere]
+hot BELL 16 0.60 0.80 "Jeanne, la femme d'Anselme" [SI: seen:sq05_anselme]
+hot BELL 21 0.24 0.70 "Oncle Aurélien Vasseur, 1948"
+hot BELL 28 0.90 0.30 "Le fondeur de cloches, 1911"
+hot BELL 41 0.76 0.14 "La 41 : Esteban" [SI: decision:D-05=esteban]
+hot BELL 43 0.05 0.88 "La dernière, sans battant" lens=1
+hot EXAMINE fraises 0.70 0.90 "Un carré de fraises" think=z08.fraises -> give fraises
+hot EXAMINE aurore 0.92 0.80 "Aurore, le mouton" think=z08.aurore sniff=aurore
+hot BORNE B07 0.08 0.65 "Borne de l'allée centrale" [SI: has:lentille_arpenteur]
+path t01 "Revenir au plan large" 0.06 0.30 back
+path t03 "Le banc face à la mer" 0.92 0.72
+
+tableau t03 "Le banc face à la mer"
+image art/zones/z08_t03.jpg
+prop tide_view 1
+prop particles petrels
+prop filou_x 0.25
+prop filou_y 0.92
+enter_thought z08.banc
+hot ECHO E-05 0.45 0.60 "S'asseoir sur le banc face à la mer" [SI: puzzle:E09 & !echo:E-05] hold=4
+hot SIT banc_mer 0.45 0.66 "Attendre ici" think=z08.attente_banc hold=2.5 [SI: echo:E-05 | !puzzle:E09]
+hot READ page10 0.38 0.72 "Une feuille sous la latte du banc" page=10
+hot TAKE thermos 0.60 0.68 "Un thermos oublié" think=z08.thermos
+hot EXAMINE horizon 0.50 0.30 "L'horizon" think=z08.horizon
+hot EXAMINE nichoirs_lointains 0.85 0.45 "Les nichoirs de la corniche, au loin" think=z08.nichoirs_lointains
+path t02 "Revenir dans le verger" 0.06 0.60 back
+path z11 "Descendre vers le sentier des pétrels" 0.92 0.80 [SI: seq>=SQ-06]

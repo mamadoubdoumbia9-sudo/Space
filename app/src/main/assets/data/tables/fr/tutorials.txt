@@ -1,0 +1,40 @@
+# Tutoriels contextuels (première ligne = titre). Affichés une seule fois, jamais bloquants longtemps.
+@ lentille
+La lentille d'Arpenteur
+Le bouton « loupe », en haut à droite, réveille pendant quelques secondes les marques effacées du tableau : bornes, murmures, détails cachés.
+C'est un outil, pas une aide : son usage est illimité et diégétique.
+@ explore
+Explorer
+Touchez un point d'intérêt pour examiner, écouter, prendre ou parler. Touchez une flèche pour changer de tableau.
+Certains points demandent qu'on reste : maintenez le doigt pour attendre, écouter un écho ou laisser passer une marée.
+Une pensée de Lohen s'affiche en bas : touchez-la pour la refermer.
+@ carnet
+Le carnet
+Le bouton « carnet » ouvre le carnet double page : carte de la presqu'île, sacoche, pages d'Esteban, échos, personnages, journal des énigmes et des secrets.
+La carte du carnet permet aussi de voyager entre les zones connues.
+@ sacoche
+La sacoche
+Les objets vont dans la sacoche (onglet du carnet). Chaque objet porte trois pensées : au premier, au deuxième et au dixième examen.
+Il n'y a pas d'argent dans ce jeu : la monnaie, ce sont les faveurs.
+@ filou
+Questionner Filou
+Filou ne parle pas. Il réagit : Lohen traduit, avec sa marge d'erreur. Touchez « Questionner Filou » pour l'interroger sur ce qui vous entoure, ou touchez-le pour le caresser.
+Il sait toujours en premier et ne peut pas le dire.
+@ filou_join
+Filou vous accompagne
+Filou suit Lohen partout. Il s'arrêtera de lui-même là où il ne veut pas aller : ce sera une phrase muette, pas une erreur.
+@ gold
+Les choix à l'encre or
+Les options marquées d'une étoile dorée sont définitives : le monde s'en souviendra. Aucun choix n'est « faux » : chaque voie donne une couleur différente aux mêmes scènes.
+@ puzzle
+Les énigmes
+Tout ce qu'il faut pour résoudre une énigme est sur l'écran ou dans le carnet. Il n'y a ni échec ni timer : seulement des états de recherche.
+Le bouton « ? » propose des indices à trois niveaux, toujours à votre demande. Le bouton « ✕ » referme l'énigme : vous pourrez revenir.
+@ bornes
+Les bornes d'arpenteur
+Quarante bornes gravées jalonnent la presqu'île. Chaque borne relevée à la lentille ajoute un relevé au carnet et un point de Clarté.
+Trois mains les ont gravées : Aurélien Vasseur, Ombeline, et une main inconnue.
+@ epilogue
+La réponse
+Ce choix ferme le chapitre. Vous pouvez écrire une réponse libre au clavier : elle est conservée dans votre sauvegarde, sur cet appareil uniquement, et n'est envoyée nulle part.
+Après la fin, le chapitre reste ouvert en « souvenir libre » : rien n'est perdu.

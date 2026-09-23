@@ -1,0 +1,57 @@
+# [Z13] LE PHARE DES TROIS-SŒURS (intérieur)
+zone z13
+name Le phare des Trois-Sœurs
+subtitle la cuisine aux deux tasses, la lanterne
+act 3
+palette phare
+music track_15
+ambience amb_phare
+open flag:marek_porte_ouverte
+map 0.93 0.24
+start t01
+
+tableau t01 "La cuisine aux deux tasses"
+image art/zones/z13_t01.jpg
+prop interior 1
+prop overlay lamp
+prop particles dust
+prop filou_x 0.18
+prop filou_y 0.92
+enter_thought z13.cuisine
+enter_scene sq15_marek_maison [SI: !seen:sq15_marek_maison]
+npc marek 0.68 0.70 [SI: !letter_read]
+hot EXAMINE deux_tasses 0.40 0.62 "Les deux tasses" think=z13.deux_tasses sniff=deuxieme_tasse
+hot MURMURE M-06 0.43 0.60 "La tasse ébréchée, tournée à l'envers" lens=1
+hot ACTION lettres_table 0.30 0.66 "Trois lettres recommandées" scene=marek_lettres_table [SI: flag:lettres_marek_vues & !decision:D-03]
+hot EXAMINE lettres_table_ex 0.30 0.66 "Trois lettres recommandées" think=z13.lettres [SI: !flag:lettres_marek_vues | decision:D-03] -> flag lettres_marek_vues
+hot READ archive_office 0.28 0.72 "Relire les lettres de l'Office" archive=AR-04 [SI: decision:D-03=ouvertes]
+hot READ journal163 0.82 0.40 "Le journal 163" archive=AR-02 sniff=journal163 [SI: LIEN-MAREK>=4] -> flag journal163_lu
+hot EXAMINE journal163_ex 0.82 0.40 "Le journal 163" think=z13.journal163 [SI: LIEN-MAREK<4]
+hot MURMURE M-13 0.84 0.46 "La recette de la galette, page 141" lens=1 [SI: LIEN-MAREK>=4]
+hot PUZZLE E04 0.15 0.40 "L'annuaire des marées" [SI: flag:phare_ouvert & puzzle:E10] done=z13.annuaire_fait
+hot EXAMINE annuaire_ex 0.15 0.40 "L'annuaire des marées, sur la table à cartes" think=z13.annuaire sniff=annuaire [SI: !puzzle:E10]
+hot EXAMINE fenetre_large 0.55 0.25 "La fenêtre sur le large" think=z13.fenetre
+hot EXAMINE fourneau 0.90 0.70 "Le fourneau" think=z13.fourneau
+hot EXAMINE lentilles 0.92 0.80 "Une marmite de lentilles" think=z13.lentilles [SI: flag:marek_lentilles]
+hot SECRET s11_z13 0.05 0.25 "Un chat sur l'armoire" lens=1 -> flag s11_z13 ; thought secret.s11_seen ; sfx chat_miaule
+path z12 "Ressortir" 0.06 0.80 back kind=door
+path t02 "Monter les 131 marches" 0.94 0.30 kind=door [SI: flag:phare_ouvert] locked=z13.escalier_ferme
+path z18 "La terrasse" 0.50 0.90 [SI: flag:phare_ouvert] strict
+
+tableau t02 "La lanterne"
+image art/zones/z13_t02.jpg
+prop interior 1
+prop overlay beam
+prop particles dust
+prop filou_x 0.15
+prop filou_y 0.92
+enter_thought z13.lanterne
+hot PUZZLE E10 0.50 0.45 "La lentille de Fresnel" done=z13.lentille_faite
+hot EXAMINE fresnel 0.50 0.35 "La lentille à trois prismes" think=z13.fresnel sniff=fresnel
+hot EXAMINE poids 0.20 0.60 "Le poids d'horlogerie" think=z13.poids
+hot EXAMINE marche87 0.10 0.85 "La marche 87" think=z13.marche87 sniff=marches_phare
+hot EXAMINE lampe_tempete_13 0.80 0.60 "Une lampe-tempête près de la lanterne" think=z13.lampe_13 [SI: !has:lampe_tempete & !flag:faveur_lampe_faite]
+hot EXAMINE vue_pointe 0.85 0.30 "La pointe, par la vitre" think=z13.vue_pointe
+hot EXAMINE graduation 0.54 0.50 "La graduation usée du prisme central" think=z13.graduation lens=1
+path t01 "Redescendre à la cuisine" 0.06 0.80 back kind=door
+path z18 "Sortir sur la terrasse" 0.92 0.80 [SI: flag:phare_ouvert]

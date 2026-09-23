@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">The Cartography of the Absent</string>
+    <string name="app_subtitle">Chapter 1 — Low Tide</string>
+    <string name="text_input_ok">Deposit</string>
+    <string name="text_input_cancel">Cancel</string>
+</resources>

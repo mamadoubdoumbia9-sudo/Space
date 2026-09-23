@@ -1,0 +1,47 @@
+# [Z06] LES VOIES MORTES
+zone z06
+name Les voies mortes
+subtitle entre la gare et la falaise
+act 2
+palette gare
+music track_08
+ambience amb_voies
+open seq>=SQ-05
+map 0.62 0.36
+start t01
+
+tableau t01 "La plaque tournante"
+image art/zones/z06_t01.jpg
+prop particles dust
+prop filou_x 0.20
+prop filou_y 0.92
+enter_thought z06.plaque
+hot PUZZLE E05 0.62 0.62 "La table d'enclenchement" done=z06.aiguillage_fait
+hot EXAMINE plaque_tournante 0.35 0.70 "La plaque tournante à bras" think=z06.plaque_tournante
+hot EXAMINE table_gravee 0.66 0.56 "La table gravée du pupitre" think=z06.table_gravee
+hot READ page22 0.70 0.68 "Une feuille coincée sous le pupitre" page=22 [SI: puzzle:E05]
+hot EXAMINE ronciers 0.85 0.45 "Les ronciers de la voie 2" think=z06.ronciers
+hot BORNE B05 0.12 0.80 "Borne de la plaque tournante" [SI: has:lentille_arpenteur]
+hot EXAMINE aiguillages 0.50 0.85 "Les trois aiguillages" think=z06.aiguillages
+hot SECRET s11_z06 0.88 0.30 "Un chat sur le poste d'aiguillage" lens=1 -> flag s11_z06 ; thought secret.s11_seen ; sfx chat_miaule
+path z05 "Revenir à la gare" 0.06 0.75 back
+path t02 "Vers le wagon-grue" 0.92 0.70
+path z08 "Le raccourci du haut, par la voie 1" 0.75 0.25 [SI: puzzle:E05] locked=z06.raccourci_ferme
+
+tableau t02 "Le wagon-grue & la caravane"
+image art/zones/z06_t02.jpg
+prop particles dust
+prop filou_x 0.15
+prop filou_y 0.92
+enter_thought z06.wagon
+enter_scene sq06_jumeaux_coffre [SI: !seen:sq06_jumeaux_coffre]
+npc tom_till 0.30 0.78 [SI: act<=2 & !flag:coffre_ouvert | seen:sq06_jumeaux_coffre & act<=2]
+hot EXAMINE coffre 0.55 0.66 "Le coffre du wagon-grue" think=z06.coffre sniff=coffre
+hot ACTION ouvrir_coffre 0.55 0.58 "Ouvrir le coffre" scene=jumeaux_apres_coffre [SI: seen:sq06_jumeaux_coffre & !flag:coffre_ouvert]
+hot TAKE carnet_comptage 0.52 0.62 "Le carnet de comptage" think=z06.carnet_comptage [SI: flag:coffre_ouvert] -> page 6 ; page 20
+hot TAKE plume_esteban 0.60 0.62 "La plume-stylet" think=z06.plume [SI: flag:coffre_ouvert & has:carnet_comptage] -> page 7 ; flag plume_trouvee
+hot EXAMINE grue 0.65 0.25 "La grue du wagon" think=z06.grue
+hot EXAMINE caravane 0.85 0.60 "La caravane des jumeaux" think=z06.caravane sniff=caravane
+hot EXAMINE chaise_caravane 0.88 0.72 "Une chaise sur la caravane" think=z06.chaise
+hot LISTEN wagon_vent 0.40 0.30 "Le vent dans le wagon" think=z06.wagon_vent sfx=vent_tole
+path t01 "Revenir à la plaque tournante" 0.06 0.70 back

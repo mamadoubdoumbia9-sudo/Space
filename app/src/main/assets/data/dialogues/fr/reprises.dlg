@@ -1,0 +1,139 @@
+# Reprises et faveurs complémentaires (FA-06, FA-08, D-01c, retours après la lettre)
+
+# ── OMBELINE ──
+~ ombeline_reprise [SI: seen:sq02_ombeline & !letter_read]
+OMBELINE: [[act>=3|Le soir tombe. Tu n'as pas levé le plan de veille. Tu as levé autre chose, je le vois à tes talons.|Le plan de veille, ma fille. La corniche est. Les repères effacés avant la grande marée.]]
++ « Comment vérifie-t-on qu'un endroit existe ? » [SI: puzzle:E10] -> goto omb_verif
++ « Le tiroir des effacés… » [SI: !puzzle:E01] -> goto omb_tiroir
++ « Parlez-moi de la lentille. » -> goto omb_lentille
++ (repartir) -> goto omb_fin
+= omb_verif
+OMBELINE: Deux relèvements, une intersection, une certitude. C'est comme ça qu'on vérifie qu'un endroit existe. Certains endroits ont besoin qu'on les vérifie.
+-> flag ombeline_indice_e13
+> omb_fin
+= omb_tiroir
+OMBELINE: Qu'est-ce que je notais ce matin ? Le monde, ma fille. En chiffres de marée. Le tiroir lit la même langue.
+> omb_fin
+= omb_lentille
+OMBELINE: Double foyer. Elle rapproche et elle réveille. Les marques effacées remontent sous sa lumière. Ne la prête à personne. Les lentilles, ça garde la main de ceux qui les tiennent.
+= omb_fin
+end
+
+~ ombeline_e13 [SI: puzzle:E10 & !puzzle:E13 & seen:sq02_ombeline] once
+OMBELINE: Tu montes au phare, ces jours-ci. Marek t'a montré ses sœurs ?
+LOHEN: Les phares éteints. Je dois les relever.
+OMBELINE: Deux relèvements, une intersection, une certitude. Tout trajet se prouve deux fois : au cœur et à la règle.
+-> flag ombeline_indice_e13 ; LIEN-OMBELINE +1
+end
+
+~ ombeline_apres [SI: letter_read]
+* Elle ne lève pas les yeux de sa carte. Elle a vu les talons.
+OMBELINE: Do majeur.
+LOHEN: ... Vous aussi, vous écoutez les talons ?
+OMBELINE: J'écoute tout ce qui rentre. C'est mon métier de tenir un cabinet. Assieds-toi. Il y a du café. Il est mauvais. Il est chaud.
+* Un temps.
+OMBELINE: Tu dessineras la pointe tendre. Les cartes ne savent pas faire tendre. On est là pour corriger ça.
+LOHEN: Ysolde m'a dit la même phrase.
+OMBELINE: Elle me l'a volée. Ou l'inverse. À notre âge, on ne sait plus qui a volé quoi à qui. C'est ça, l'amitié : un vol mutuel prescrit.
+-> LIEN-OMBELINE +1
+end
+
+# ── ROSA ──
+~ rosa_apres [SI: letter_read & flag:rosa_rencontree]
+ROSA: Le pain du frère est sorti. Je te le garde chaud. Tu as la tête de quelqu'un qui a lu quelque chose de long.
+LOHEN: Onze plis.
+ROSA: Onze. Comme les chocolats de Marta. Cette île compte tout par onze, on dirait. Tiens. Mange. On lit mieux le ventre plein, et on relit mieux encore.
+-> give pain_de_rosa
+end
+
+# ── ÉMERIC ──
+~ emeric_reprise [SI: seen:sq04_emeric & !letter_read]
+EMERIC: Mademoiselle. Le carnet des dettes de cœur est ouvert, si vous voulez y lire les vôtres.
++ « Lisez-moi mes dettes. » -> goto em_dettes
++ « Vous écrivez pour qui, aujourd'hui ? » -> goto em_ecrit
++ (repartir) -> goto em_fin
+= em_dettes
+EMERIC: Voyons. [[flag:rosa_fournee_faite|Vous devez à Rosa une brassée, réglée.|Vous devez à Rosa trois brassées.]] [[flag:faveur_lampe_faite|Vous devez à Anselme une écoute, réglée en lampe.|Vous devez à Anselme une écoute.]] Vous devez à Filou tout le reste. C'est la ligne la plus longue du registre, et personne ne l'a jamais soldée.
+-> LIEN-EMERIC +1
+> em_fin
+= em_ecrit
+EMERIC: Pour une dame qui écrit à son fils tous les mardis depuis 1998. Il ne répond pas. Elle continue. J'ai appris d'elle que les lettres ne sont pas des questions. Ce sont des présences.
+= em_fin
+end
+
+~ emeric_lettre_anselme [SI: decision:D-01=c & !flag:emeric_lettre_ecrite] once
+EMERIC: Vous m'avez demandé de peindre les trains d'Anselme. Je ne peins pas les trains des autres, mademoiselle. Mais j'ai écrit.
+* Il tend une enveloppe, cachetée de cire grise.
+EMERIC: Ce n'est pas à moi de peindre son nom. C'est à lui de savoir qu'il le peut. La lettre dit ça, en quatre pages. Il repeindra. Les gens repeignent toujours quand on leur écrit qu'ils en ont le droit.
+-> flag emeric_lettre_ecrite ; flag nom_repeint ; LIEN-EMERIC +1 ; CLARTE +1
+LOHEN: Vous écrivez aux gens ce qu'ils savent déjà ?
+EMERIC: C'est la seule chose qu'on puisse écrire. Le reste, c'est de la littérature.
+end
+
+~ emeric_dictionnaire [SI: flag:velune & !flag:mot_au_dictionnaire] once
+EMERIC: Le dictionnaire des mots inventés du café est ouvert à la lettre V. Marta m'a dit que vous aviez un mot. Un mot à deux, je crois. Il en faut un par page.
++* Écrire « velune » dans le dictionnaire -> flag mot_au_dictionnaire ; +COURAGE ; LIEN-EMERIC +1 ; CLARTE +1 ; goto emd_ecrit
++ « Pas encore. » -> +DOUCEUR ; goto emd_fin
+= emd_ecrit
+! sfx quill_scratch_07
+* Lohen écrit. Sept lettres. Émeric ne lit pas par-dessus l'épaule : il regarde la fenêtre, par politesse d'écrivain.
+EMERIC: Définition ?
+LOHEN: La lumière sur l'eau quand elle ondule. Sous la lune.
+EMERIC: Tournez la page, Marta la tournera aussi. Voilà. Le mot est au dictionnaire. Il survivra à la nuit. C'est tout ce qu'un mot demande.
+PENSEE: le mot a une page, maintenant. il n'est plus à deux. il est à tout le monde. c'est comme ça qu'on garde les choses : en les lâchant dans un café.
+= emd_fin
+end
+
+~ emeric_apres [SI: letter_read & seen:sq04_emeric]
+EMERIC: Vous avez lu une lettre, mademoiselle. Ça se voit à la manière dont vous tenez vos mains : comme si elles portaient encore le papier.
+LOHEN: Onze plis.
+EMERIC: Onze plis, c'est un homme qui a beaucoup relu. On ne plie pas onze fois ce qu'on n'a pas relu. Vous répondrez ?
+LOHEN: J'ai répondu.
+* Il incline la tête, un tout petit peu.
+EMERIC: Alors la dernière ligne du registre est soldée. Je la raye ce soir. À l'encre. Pas au crayon. Certaines dettes méritent l'encre.
+-> LIEN-EMERIC +1
+end
+
+# ── TOM & TILL ──
+~ jumeaux_reprise [SI: flag:jumeaux_rencontres & !letter_read]
+TOM: La demoiselle ! Till, la demoiselle.
+TILL: Je vois.
+TOM: [[flag:crayon_marek_rendu|On a rendu le crayon. Enfin, toi tu l'as rendu. Enfin, nous on l'a pris. C'est une économie.|Le veilleur n'est pas descendu. On a un plan B. Le plan B, c'est un plan A avec une lettre de plus.]]
++ « Vous notez toujours tout, Till ? » -> goto jr_till
++ « Qui gagne, aux billes, en ce moment ? » -> +HUMEUR ; goto jr_billes
++ (repartir) -> goto jr_fin
+= jr_till
+TILL: Tout. Sinon ça se perd. « Pour pas perdre les gens. » Et pour pas qu'ils perdent nous.
+-> LIEN-JUMEAUX +1
+> jr_fin
+= jr_billes
+TOM: Moi. Toujours moi. Till perd exprès. Il dit que c'est de la politique.
+TILL: C'est de la diplomatie.
+= jr_fin
+end
+
+~ jumeaux_estran [SI: zone:z04 & flag:jumeaux_rencontres & act>=3] once
+* Les deux, en bottes, dans la vasière, autour de trois seaux.
+TOM: C'est la machine de Till. Elle remonte les marées. Enfin, elle remonte trois litres. C'est un prototype.
+TILL: BM, PM1, PM2. Dans l'ordre. Sinon c'est de la soupe.
+TOM: T'as vu le veilleur ? Il est monté au village ? Non ? Notre plan a un défaut. Le défaut, c'est le veilleur.
+-> LIEN-JUMEAUX +1
+end
+
+# ── ANSELME ──
+~ anselme_reprise_3 [SI: flag:anselme_rencontre]
+ANSELME: [[flag:nom_repeint|Le nom est repeint, mademoiselle. Au pinceau fin. Il brille un peu trop. Ça sèchera.|Mademoiselle. Le banc trois est libre. Il l'est toujours, maintenant.]]
++ « Les passeurs comptaient les coups d'eau, vous disiez ? » [SI: act>=3] -> goto ar3_passeurs
++ « Une galette ? » -> goto ar3_galette
++ (repartir) -> goto ar3_fin
+= ar3_passeurs
+ANSELME: Quatre secondes entre deux coups. Mon beau-père naviguait en comptant. Il disait : l'eau, c'est un chef d'orchestre patient. Et il me donnait ça, avant les grandes marées.
+* Il tend une corde à nœuds, usée à la main.
+ANSELME: Chaque nœud, dix minutes de marée. Le dernier est plus gros. Vous saurez lequel.
+-> give fil_de_plomb ; LIEN-ANSELME +1
+> ar3_fin
+= ar3_galette
+ANSELME: La recette de Jeanne. La moitié du nord-ouest dans une crêpe. Prenez-en deux, le chien a le sens des anciens.
+-> give galette_anselme 2
+= ar3_fin
+end

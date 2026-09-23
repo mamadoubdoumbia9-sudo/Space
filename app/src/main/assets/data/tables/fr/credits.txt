@@ -1,0 +1,39 @@
+# Générique : type | texte  (title, h, p, hand, gap)
+title | La Cartographie des Absents
+hand | Chapitre 1 — La Marée Basse
+gap |
+h | Conception, écriture, direction
+p | Atelier Marée Basse
+hand | d'après le document de conception « La Cartographie des Absents » — texte intégral des dialogues, des pages, des échos, des cloches, des bornes et de la lettre.
+gap |
+h | La lettre
+p | « Je t'ai aimée en minuscules dans mes carnets pendant sept ans, et je t'aime en capitales dans cette lettre, une fois, ce soir, pour toujours. »
+gap |
+h | Personnages
+p | Lohen · Esteban · Filou · Ombeline Vasseur · Marta · Rosa · Émeric Loew · Tom & Till · Anselme · Baz · Sidonie · Ysolde · Aristide · Marek Sorène · Adèle Brunoy · Aurore · monsieur Éraflé
+gap |
+h | Moteur
+p | Moteur maison en Kotlin, sans dépendance externe : tableaux illustrés, dialogues arborés, seize énigmes, sauvegarde binaire versionnée (LCDA v3), localisation FR/EN.
+gap |
+h | Images
+p | Tableaux aquarelle et encre de Chine générés puis retouchés pour le jeu (42 tableaux, cinématiques, portraits, objets).
+gap |
+h | Musique et sons
+p | Partitions et ambiances composées et synthétisées pour le jeu : vingt-quatre pistes, ambiances par zone, cloches, harpe, pétrels, plumes, papier.
+gap |
+h | Typographies (licence SIL Open Font 1.1)
+p | EB Garamond (Georg Duffner) · Caveat (Pablo Impallari) · Cinzel (Natanael Gama) · Courier Prime (Quote-Unquote Apps)
+gap |
+h | Remerciements
+p | Aux passeurs qui comptent les coups d'eau. Aux chefs de gare qui cirent leur lampe. À ceux qui étiquettent en revenants, pas en pleurant.
+gap |
+hand | Aucun chien n'a été attaché à un poteau de coupée pendant la fabrication de ce jeu. Filou a été nourri neuf fois par jour.
+gap |
+h | Doctrine
+hand | Il y a plusieurs fins, et elles dépendent des décisions du joueur. Aucun choix n'est « faux ». Aucune page n'est requise pour finir. L'émotion du final n'est jamais due à la collecte — seulement enrichie par elle.
+gap |
+p | Merci d'avoir mesuré la presqu'île.
+hand | Mesurer est une façon de retenir.
+gap |
+gap |
+hand | — fin du générique —

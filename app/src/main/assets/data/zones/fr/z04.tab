@@ -1,0 +1,52 @@
+# [Z04] LE QUAI DU BAC & L'ESTUAIRE
+zone z04
+name Le quai du bac
+subtitle l'estuaire, vers le sud
+act 1
+palette estuaire
+music track_06
+ambience amb_port
+open seq>=SQ-03
+map 0.32 0.78
+start t01
+
+tableau t01 "Le ponton de la Decideuse"
+image art/zones/z04_t01.jpg
+prop tide_view 1
+prop particles spray
+prop filou_x 0.30
+prop filou_y 0.90
+enter_thought z04.ponton
+npc baz 0.68 0.70 [SI: act<4 | letter_read]
+hot ACTION corde_sonnerie 0.20 0.28 "Tirer la corde de sonnerie" scene=baz_premiere [SI: !seen:baz_premiere] sfx=cloche_bac
+hot ACTION corde_sonnerie_2 0.20 0.28 "Tirer la corde de sonnerie" scene=baz_corde_pour_rien [SI: seen:baz_premiere] sfx=cloche_bac
+hot EXAMINE clous_neufs 0.40 0.86 "Trois clous neufs dans les planches" think=z04.clous -> murmure M-01
+hot EXAMINE herons 0.10 0.72 "Les hérons" think=z04.herons sniff=herons
+hot EXAMINE bac 0.70 0.62 "La Decideuse" think=z04.bac sniff=bac
+hot EXAMINE cordage 0.85 0.85 "Le cordage lové" think=z04.cordage
+hot EXAMINE maison_pilotis 0.82 0.32 "La maison sur pilotis" think=z04.maison_pilotis
+hot BORNE B02 0.55 0.92 "Une borne au pied du ponton" [SI: has:lentille_arpenteur]
+hot LISTEN balise 0.50 0.20 "La balise radio" think=z04.balise sfx=balise_clac
+hot PUZZLE S08 0.50 0.14 "Les éclats de la balise" [SI: !low_tide & act>=3 & examined:balise>=1 & !secret:S08]
+hot TAKE journal_vieux_quai 0.60 0.80 "Le journal de Vieux-Quai, sur le taquet" think=z04.journal [SI: seen:baz_premiere]
+hot SECRET s11_z04 0.92 0.60 "Un chat sur la maison sur pilotis" lens=1 -> flag s11_z04 ; thought secret.s11_seen ; sfx chat_miaule
+path z02 "Revenir vers le port" 0.06 0.55 back
+path t02 "Traverser vers la vasière" 0.92 0.78 [SI: seen:baz_premiere] locked=z04.baz_dabord
+
+tableau t02 "La vasière & l'estran"
+image art/zones/z04_t02.jpg
+prop tide_view 1
+prop particles petrels
+prop filou_x 0.18
+prop filou_y 0.92
+enter_thought z04.vasiere
+npc tom_till 0.85 0.78 [SI: act==3]
+hot EXAMINE barque_echouee 0.45 0.35 "La barque échouée" think=z04.barque
+hot EXAMINE salicornes 0.62 0.82 "Les salicornes" think=z04.salicornes sniff=salicornes -> give salicornes
+hot EXAMINE dunes 0.88 0.45 "Les dunes" think=z04.dunes
+hot PUZZLE S06 0.80 0.72 "L'atelier de l'estran : une machine à seaux" [SI: !secret:S06 & (act>=2)]
+hot EXAMINE sucre 0.30 0.70 "Le sucre sur les rochers" think=z04.sucre
+hot LISTEN mer_qui_mijote 0.20 0.45 "La mer qui mijote" think=z04.mijote sfx=eau_ride_2
+hot BORNE B01 0.12 0.62 "La borne du croisement des douaniers" [SI: has:lentille_arpenteur]
+path t01 "Revenir au ponton" 0.06 0.80 back
+path z15 "Le sentier des chèvres, au-dessus des dunes" 0.94 0.30 [SI: flag:sentier_chevres_ouvert | secret:S04] strict -> secret S04

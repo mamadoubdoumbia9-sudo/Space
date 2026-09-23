@@ -1,0 +1,146 @@
+# Pensées de Lohen — actes II et III
+
+# ── Z05 — la gare de Perdu-Vent
+z05.hall | le hall de la gare. quatre banquettes, une seule usée en creux : le banc trois. un tableau à palettes qui n'annonce plus rien. anselme cire sa lampe. il y a des gens qui entretiennent des choses pour ne pas les pleurer.
+z05.hall.act4 | la gare la nuit. la lampe d'anselme brûle au guichet. il veille. tout le monde veille.
+z05.tableau_departs | le tableau à palettes. des destinations supprimées, une ligne illisible : ZI.M 52 — SIRMIT — TNE LEV. et la ligne des habitués, à côté, avec un nom à moitié effacé.
+z05.tableau_departs.2 | les palettes sont à demi-caractères : le haut d'une lettre sur une lame, le bas sur l'autre. on peut écrire à l'envers avec ça, si on veut être lu par des gens qui regardent partir.
+z05.tableau_lu | 05h12 — TERMINUS — LE VENT. je l'ai lu dans la vitre. je ne le relirai pas. certaines lignes se lisent une fois.
+z05.banc3 | le banc trois. le bois est creusé à la forme d'un dos. quatre nuits. les gens s'assoient toujours où les absents s'asseyaient.
+z05.banc3.2 | il y a une feuille bleu nuit glissée entre les lattes. et sous le banc, l'empreinte d'un sac posé quatre matins de suite.
+z05.boussole | sa boussole. le verre a une étoile de choc au coin : la chute du funiculaire, 2019. il ne l'a jamais réparée. il réparait tout, sauf ce qui l'avait rendu heureux.
+z05.lampe | la lampe-tempête d'anselme. cirée quarante ans. elle a éclairé le départ de cinq heures douze : il ne le dit pas, mais la lampe le sait.
+z05.horloge | l'horloge de la gare. ronde, blanche, exacte. les horloges de gare sont les seules qu'on croit encore sans vérifier.
+z05.guichet | le guichet, fermé depuis 1979. le dernier billet vendu est encore dans la casquette d'anselme. il l'a gardé quarante-sept ans, « au cas où le train changerait d'avis ».
+z05.billet | le dernier billet vendu, 1979. anselme me le tend comme un adieu qu'il n'a pas fait à l'époque. « valable une seule fois. »
+z05.feuille_morse | le tiroir des choses inutiles : un lorgnon, une feuille de déchiffrage du morse, un régulateur de montre. le tiroir le plus plein de la gare. je prends la feuille.
+z05.annexe_fermee | l'annexe d'anselme. l'ancien local colis. il y a une lampe rouge derrière la porte. je n'ai pas encore de raison d'y entrer : il me faut quelque chose à développer.
+z05.quai | le quai 1 et l'effrontée, la 040-T qui ne partira plus. le vent traverse le quai comme un train qui ne s'arrête pas.
+z05.locomotive | la 040-T « l'effrontée ». immobile depuis 1979. cartographier un train immobile : la science des quais. quelqu'un voulait être le premier à le faire.
+z05.plaque | la plaque de la locomotive : 040-T — ATELIERS DE VIEUX-QUAI — 1928. elle brille : quelqu'un la frotte. anselme, ou l'inconnu des planches.
+z05.carre_poli | un carré de ciment poli par des générations de gens qui regardaient partir les trains. on se mettait toujours au même endroit. le sol le sait encore.
+z05.rails | les rails vers les voies mortes. les ronciers les reprennent. la voie 1 part vers la mer : sur une ligne morte, c'est la seule qui mente.
+z05.vent_quai | « terminus, le vent. » si je cartographiais les annonces intérieures, celle-ci mériterait un cadre.
+z05.voies_fermees | les voies mortes. anselme m'en parlera : la trace d'un garçon qui suivait les rails le soir. je n'ai pas encore cette trace.
+z05.chambre_noire | la chambre noire. la lampe inactinique, l'agrandisseur, trois bains, un métronome. il a installé ça ici, chez anselme. il savait ce qu'il faisait avec ses photos.
+z05.photo_faite | la photo est développée. la pointe, la boîte, le télescope, une silhouette de dos. je la garde contre le carnet.
+z05.agrandisseur | l'agrandisseur. le châssis contient encore une feuille. la mise au point est faite : il a laissé l'appareil prêt. exprès ou par malheur : les deux se ressemblent.
+z05.note_9015 | une note collée à l'agrandisseur : « 90-15-60. comme une vie : révéler, arrêter, fixer. » son écriture penchée. il savait.
+z05.metronome | le métronome d'anselme. soixante par minute. jeanne développait à ce rythme : « après quatre-vingt-dix, c'est du noir qui mange ».
+z05.lit_annexe | un lit de camp. un garçon a dormi ici aussi, une nuit où le banc trois était trop froid. anselme ne l'a jamais dit. le lit, si.
+z05.bains | révélateur, bain d'arrêt, fixateur. trois cuvettes, trois patiences. une image qui monte du noir se surveille comme une marée : ni trop tôt, ni trop tard.
+
+# ── Z06 — les voies mortes
+z06.plaque | la plaque tournante à bras et la table d'enclenchement. tourner un train à la force des bras : les ingénieurs d'avant avaient des idées d'avant. elles tenaient.
+z06.aiguillage_fait | voie 2 vers voie 1. le raccourci du haut est ouvert. le chemin du bout du monde commence par une décision d'aiguilleur.
+z06.plaque_tournante | la plaque tournante. un cercle de fer de douze mètres qu'on faisait tourner à deux hommes. il tourne encore d'un quart de tour si on pousse. personne ne pousse.
+z06.table_gravee | la table gravée du pupitre, à moitié effacée. la lentille réveille les lettres : « L1 verrouille L2 et L4… » la politesse des machines, gravée dans le fer.
+z06.ronciers | les ronciers ont repris la voie 2. le monde reprend toujours ses terres. il a le temps, le monde. c'est tout ce qu'il a.
+z06.aiguillages | trois aiguillages, deux verrouillés, un libre. la voie libre part vers la mer.
+z06.raccourci_ferme | le raccourci du haut passe par la voie 1. l'aiguille est contre. il faut enclencher la table : les verrous d'une gare ne se forcent pas, ils s'étagent.
+z06.wagon | le wagon-grue et la caravane des jumeaux. un coffre forcé, une chaise sur un toit, du vent dans la tôle. c'est un chantier d'enfants et une gare morte : les deux se ressemblent.
+z06.coffre | le coffre du wagon-grue. le cadenas a été forcé proprement, par quelqu'un de petit et de patient. il contient ce qu'on dépose dans les gares mortes : les choses qu'on veut qu'on trouve.
+z06.carnet_comptage | le carnet de comptage. onze carnets comme ça depuis 2019. celui-ci est le dernier. je le sais au poids.
+z06.plume | sa plume-stylet. la fente est usée d'un côté : il écrivait penché. il l'a laissée là où le monde ne passe plus. une pierre tombale ou un message : avec lui, c'était toujours les deux.
+z06.grue | la grue du wagon. la flèche est rouillée en position haute, comme un bras qui salue depuis 1979.
+z06.caravane | la caravane des jumeaux. une chaise sur le toit, des plans à la craie sur les flancs. till dessine la mer avec des engrenages.
+z06.chaise | une chaise sur le toit de la caravane. « pour voir venir le veilleur », dit tom. le veilleur ne vient pas. la chaise reste. c'est une œuvre.
+z06.wagon_vent | le vent dans la tôle du wagon. une note grave, tenue. le wagon chante ce qu'il ne transporte plus.
+
+# ── Z07 — la Crevette
+z07.base | la gare inférieure de la crevette. la machine de 1908, le compteur, le fanion, la cabine rouge au bout de son câble. le plus beau funiculaire du monde, probablement. je dis ça en cartographe : en menteuse officielle des reliefs.
+z07.base.act4 | la crevette dort. la cabine a sa lampe allumée. sidonie a laissé les étoiles du plafond allumées aussi : elle veille avec des constellations de poche.
+z07.contrepoids_fait | le contre-poids est juste. la crevette montera. la machine ne pardonne pas les approximations ; elle pardonne les relectures.
+z07.machine | la machine de 1908. des bielles, un tambour, une odeur d'huile chaude. sidonie lui parle ; elle répond en cliquetis. c'est une conversation qui dure depuis un siècle.
+z07.compteur | le compteur de voyages : 99 997. il va tomber rond. sidonie prépare quelque chose. sidonie prépare toujours quelque chose.
+z07.compteur.after | 99 997. sidonie a programmé le cent-millième pour quelqu'un. elle ne dira pas pour qui. je ne demanderai pas.
+z07.fanion | le fanion de 1994. la nuit où la crevette a descendu quarante personnes moteur coupé, au frein à main. les fanions de sauvetage ne se coupent pas.
+z07.fanion_replique | sidonie fait des répliques en tissu du fanion, pour ceux qui savent l'histoire. je la sais maintenant.
+z07.cabine | la cabine rouge. deux bancs, une fenêtre en losange, un plafond d'étoiles collées. elle monte vers un ciel vrai et garde le sien.
+z07.etoiles | les étoiles au plafond : cassiopée, la grande ourse, et une constellation que sidonie a inventée : « l'onglet ». quelqu'un lui a promis un classeur entier.
+z07.crevette_pas_prete | la crevette ne monte pas : le contre-poids est léger de soixante-dix kilos. sidonie a des sacs. il faut faire son addition debout.
+z07.atelier | l'atelier de sidonie. un établi, des classeurs d'astronomie, une girouette de poche, la photo de 1994. tout ce qu'elle répare et tout ce qu'elle regarde, dans la même pièce.
+z07.etabli | l'établi. des clés, un étau, une place nette au milieu : la place pour assembler quelque chose de petit et de précis.
+z07.girouette_jouet | une girouette de poche, un jouet de laiton. sidonie la fait tourner en réfléchissant. elle indique toujours l'ouest quand on la pose : c'est un jouet honnête.
+z07.classeurs | les classeurs d'astronomie : un onglet par ciel, une année par classeur. quelqu'un lui a promis un classeur entier. elle a l'air d'y croire encore.
+z07.photo_1994 | la photo de 1994 : la crevette au frein à main, quarante personnes dessous, une petite fille de deux ans dans les bras d'un mécanicien. sidonie y était : en dessous.
+z07.sacs | les sacs de lestage : 20, 35, 45, 60, 15, 60. deux sacs de soixante. « j'ai jamais compris pourquoi papa en avait commandé deux. »
+
+# ── Z08 — la falaise & le verger
+z08.falaise | la falaise haute. la presqu'île entière sous moi : le port, la gare, la corniche, la pointe au bout. c'est la carte de l'acte, vue d'en haut. je la dessinerai tendre.
+z08.falaise.act4 | la presqu'île de nuit. chaque fenêtre est une bougie. la carte s'allume là où les gens pensent à quelqu'un.
+z08.presquile | la presqu'île. de haut, on voit les chemins qu'on ne voit pas d'en bas : le sentier des chèvres, le raccourci de la voie 1, la chaussée du passage, sous l'eau. le monde a des passages qu'on ne voit qu'à certaines heures.
+z08.pointe_lointaine | la pointe, tout au bout. un point rouge : la boîte. sidonie m'en avait parlé. la boîte des gens qui partent.
+z08.gare_sup | la gare supérieure de la crevette. la cabine se repose contre son butoir. quatre-vingts mètres de câble, un cœur de 1908.
+z08.vent | le vent d'ouest. il porte les cloches, les pétrels, les noms. c'est le seul talent du vent, ici : porter loin.
+z08.verger | trois cents cloches. trois cents noms. le vent les lit à sa façon, il change les airs mais il ne rate jamais un nom. c'est l'archiviste le plus fidèle de la presqu'île.
+z08.verger.act4 | le verger la nuit. les cloches se taisent presque. une seule, en haut, bouge encore : la sans-nom. elle attend le vent ou autre chose.
+z08.melodie_faite | sol, si bémol, sol, ré. le verger a répondu d'une seule voix. la mélodie des pétrels est la seule chanson qu'il connaisse par cœur.
+z08.cloche88 | la cloche 88. elle sonne juste. la fausse d'avant a été remplacée : quelqu'un a permuté les cloches. c'est rien. c'est tout.
+z08.cloche88.2 | il y a quelque chose dans la gorge de la 88. quelque chose de métal, coincé exprès. filou s'est figé, oreilles en avant.
+secret.s09_done | un sifflet de rechange dans la gorge de la cloche. « le sifflet sonne juste, la cloche sonne juste. il restera quelqu'un ici pour sonner faux avec amour. » sa page était dessous.
+z08.fraises | un carré de fraises sous les cloches. le vent les sonne, elles mûrissent en musique. j'en prends trois.
+z08.aurore | aurore, le mouton du verger. indifférence souveraine. les fraises ne sont pas dans son mandat.
+z08.banc | le banc face à la mer. de là, on ne voit que l'horizon et les nichoirs de la corniche. c'est le banc des étoiles filantes : soixante-douze, une nuit d'août.
+z08.attente_banc | je me suis assise. le vent a changé de cloches. la marée a tourné en bas. les bancs sont faits pour ça : laisser le monde avancer sans nous.
+z08.thermos | un thermos oublié sur le banc. du chocolat. il y a encore de la buée dedans. il est à marek : il monte au verger le mardi. il ne l'a jamais dit.
+z08.horizon | l'horizon. une ligne qu'on ne peut pas mesurer et qu'on dessine quand même. c'est la seule ligne des cartes qui soit une promesse.
+z08.nichoirs_lointains | les nichoirs de la corniche, au loin. le neuf est le plus haut. le général y est revenu. sept ans de fidélité à une boîte.
+
+# ── Z09 — l'atelier d'Ysolde
+z09.maison | la maison-grotte d'ysolde. les métiers battent comme des cœurs de maison. le mur des nœuds, à gauche. le feu, à droite. ça sent la laine et le cèdre.
+z09.noeud_lu | ce que je n'ai pas pu dire. la phrase est réparée sur la corde. elle reste blessée ailleurs.
+z09.metiers | les métiers à tisser. trois, de tailles différentes. celui du fond est le plus vieux : la chaîne est tendue depuis avant ma naissance.
+z09.feu | le feu. la chaleur, c'est la seule politesse que le feu fait sans qu'on lui demande.
+z09.panier | le panier à boutons, trié par couleurs puis par tailles. la double exigence d'ysolde : esthétique et réparation. je voudrais être triée comme ça, un jour.
+z09.tresse | sa tresse-couronne : trois nœuds. le nom de sa mère, la couleur de sa première teinture, la pluie sur les toits de tôle. elle ne traduit pas. elle ne traduira jamais.
+z09.laines | les écheveaux teints : garance, indigo, genêt. les couleurs des rubans du bois. ysolde a teint toutes les années d'un garçon sans le savoir. ou en le sachant.
+z09.plage | la plage de séchage. les étoffes claquent au vent comme des pavillons de pays inconnus. ysolde tend ses couleurs à la mer pour voir si elles tiennent.
+z09.plage.act4 | ysolde est face à la mer. elle ne voit pas la mer. elle l'écoute. elle veille comme tout le monde : à sa façon.
+z09.etoffes | les étoffes qui sèchent. le garance ne bouge pas au soleil. « il tient la rosée et le sel sans jurer. » c'est la promesse de la couturière.
+z09.cuves | les cuves de teinture. l'eau garance est presque noire. on dirait de l'encre. on pourrait écrire avec ça. quelqu'un l'a fait, sur un ruban.
+z09.mer_plage | la mer en bas de la plage. plate. ysolde dit qu'elle prévient : elle laisse le sucre sur les rochers.
+z09.claquement | le claquement des étoffes au vent. un rythme irrégulier, comme des pages qu'on tourne trop vite. c'est la musique de la maison.
+z09.fil_garance | un fil garance accroché à la barrière. coupé net. quelqu'un a mesuré un poignet ici, il y a trois ans. « c'est noté, le poignet. »
+
+# ── Z10 — le bois des noms
+z10.lisiere | la lisière du bois des noms. quarante mille étiquettes claquent doucement. quarante mille petits pavillons de papier. la forêt hisse les couleurs des absents.
+z10.lisiere.act4 | les étiquettes luisent. papier fantôme. les noms des absents brillent la nuit, quand on ne les regarde pas.
+z10.arbre_trouve | garance, indigo, genêt : la spirale s'écarte comme les familles. le quatrième tour tombe au bord du vide. le mélèze 214.
+z10.etiquettes | quarante mille noms autour de moi. chaque étiquette est un mini-poème : jamais de tristesse nue, toujours une présence. les gens d'ici étiquettent en revenants, pas en pleurant.
+z10.papier_luit | une étiquette qui luit dans le noir : papier fantôme. ombeline en garde un tiroir. le bois entier en est fait.
+z10.meleze_ou | il y a deux mille mélèzes. le sien est quelque part au bord. il faut suivre la spirale de ses vieux rubans. un enfant qui grandit n'abandonne pas ses chemins : il les prolonge.
+z10.meleze | le mélèze 214, au bord du vide. deux étiquettes neuves : « SORÈNE (PAPA) — 2009 — MER DEHORS » et une autre, vierge. signée d'un « e » minuscule au crayon.
+z10.meleze.after | le mélèze 214. l'étiquette vierge. je sais ce qu'il n'a pas écrit. il voulait que ce soit moi.
+z10.vide | le vide. la mer, quatre-vingts mètres plus bas. le mélèze pousse penché vers lui depuis un siècle sans jamais tomber. c'est une leçon ou une menace. avec les arbres, c'est toujours les deux.
+z10.ecorce | l'écorce gravée au canif : « e. ». minuscule. le garçon qui signait en bas des papiers des autres. et plus haut, une phrase à demi effacée : « on apprend aux arbres ce qu'on n'ose pas dire aux gens. »
+z10.etiquette_ecrite | j'ai écrit. sept lettres au feutre d'ysolde sur l'étiquette vierge. ça a pris un an et une lettre. le bois fera le reste.
+z10.etiquette_sans_feutre | l'étiquette vierge attend un nom. je n'ai rien pour écrire sur le papier fantôme : il faut le feutre d'ysolde.
+z10.sentier | le sentier des coquillages blancs. la signalétique d'ici tient dans une poche de vareuse. j'admire. je note. je vole l'idée pour la ville.
+secret.s12_step | un caillou remis en place. le sentier est un peu plus droit. on ne sait jamais qui passera derrière nous.
+secret.s12_done | douze cailloux. le sentier est droit. on ne sait jamais qui passera derrière nous.
+z10.coquillages | les coquillages blancs qui balisent le sentier. des coquilles de saint-jacques, retournées : le blanc dessus pour la nuit. quelqu'un les remet en place après chaque pluie.
+
+# ── Z11 — le sentier des pétrels
+z11.crete | la crête des nichoirs. la corniche porte les nichoirs comme des fenêtres veilleuses. le sentier des pétrels est un couloir d'hôtel très venté avec vue sur l'infini.
+z11.crete.act4 | les pétrels rentrent. tous. le nichoir 9 a son locataire. la corniche veille avec des oiseaux.
+z11.nichoir9 | le nichoir 9. le général est revenu. sept ans de fidélité à une boîte. les pétrels reviennent, c'est leur métier. nous, on reste, c'est le nôtre.
+z11.nichoir9.2 | il y a une feuille bleu nuit pliée dans le nichoir, et une plume grise devant. « nichoir 9 — le général est revenu — »
+z11.plume_general | une plume du général. grise, bordée de blanc. une plume de dos. il les dessinait de dos.
+z11.nichoirs | les nichoirs de la corniche, numérotés à la peinture blanche. le compte de ce soir : 118 pétrels, 2 gravelots, 1 idée fixe. l'idée fixe ne niche pas.
+z11.petrels_chant | la phrase des pétrels : quatre notes, sol, si bémol, sol, ré. la même que le sifflet d'aristide. la même que le second couplet de marta. tout chante la même chose ici, avec des voix différentes.
+z11.epave_vue | l'épave du saint-eumèle, couchée comme une baleine en prière. le naufrage a des airs de sommeil. une échelle de fer descend jusqu'au carré. quelqu'un y habite.
+z11.echelle | l'échelle de fer et la coque du saint-eumèle. trois barreaux neufs. le même entretien fantôme que le ponton. mon inconnu des planches grimpe, aussi.
+z11.echelle_fer | l'échelle de fer. trente barreaux. au trentième, aristide reconnaît les talons de ceux qui montent. il les entend en tonalités.
+z11.barreaux | trois barreaux neufs, brasés proprement. quelqu'un entretient les chemins des gens qu'il aime. sans le dire.
+z11.barreaux.after | trois barreaux neufs. c'était lui aussi. mon inconnu des planches avait un nom.
+z11.coque | la coque du saint-eumèle, 1707. neuf sauvés, neuf piquets plantés sur le passage. le bois de l'épave a la couleur du thé fort. il tient depuis trois siècles par entêtement.
+z11.verres | des verres accordés sur la lisse, du grave au large. l'épave est un instrument. personne ne le dit. aristide le montre.
+z11.eau_coque | l'eau contre la coque. le même bruit qu'à la proue de la decideuse. la mer dit la même chose à tous les bateaux : je suis là.
+z11.carre | le carré de l'épave. une lampe, un couffin d'atelier, des verres, une boîte à musique désaccordée. aristide a fait une maison d'un naufrage. il attend quelqu'un. il ne sait plus qui.
+z11.boite_musique | la boîte à musique. une gravure « N » usée sur le flanc. elle boite sur la quatrième note. c'est une boîte qui a du chagrin au quatrième temps.
+z11.boite_musique.2 | le mécanisme : la plume de ressort a le diamètre exact qu'il faudrait pour le sifflet. ... je peux pas faire ça. ... je peux le faire.
+z11.couffin | le couffin d'atelier d'aristide : des tournevis d'horloger, du feutre, un ressort de rechange qui ne va à rien. tout le nécessaire pour réparer une chanson.
+z11.gravure_n | un « N » gravé au flanc de la boîte. la première lettre d'un prénom qu'il ne sait plus. noé. sa fille s'appelle noé. il ne le sait plus. la boîte le sait.
+z11.hublot | le hublot donne sur la mer à hauteur d'eau. quand la marée monte, on est sous la mer une heure par jour. aristide appelle ça « la sieste des poissons ».
+z11.cuillere | la petite cuillère, posée seule sur un verre. « attention, c'est un soliste. » elle sonne un la. un peu bas. comme après une longue conversation.
