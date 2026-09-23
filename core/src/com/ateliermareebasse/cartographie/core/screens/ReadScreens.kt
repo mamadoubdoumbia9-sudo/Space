@@ -270,8 +270,10 @@ class MapScreen(game: Game) : MenuScreen(game) {
             p.strokeCircle(px, py, 12 * s + (if (cur) sin(time * 4) * 2 * s else 0f), Colors.withAlpha(Colors.INK, 0.7f), 1.4f * s)
             val fs = ui.font(12f)
             val lw = p.measure(z.name, fs, Font.HAND) + 10 * s
-            p.fillRoundRect(px - lw / 2, py - 32 * s, lw, fs * 1.5f, 3 * s, Colors.withAlpha(Colors.PAPER, 0.85f))
-            p.text(z.name, px, py - 32 * s + fs * 1.1f, fs, Colors.INK, Font.HAND, Align.CENTER)
+            val lx = (px - lw / 2).coerceIn(mx + 4 * s, mx + mw - lw - 4 * s)   // l'étiquette reste dans la carte (zones du bord)
+            val ly = if (py - 32 * s < my + 4 * s) py + 16 * s else py - 32 * s
+            p.fillRoundRect(lx, ly, lw, fs * 1.5f, 3 * s, Colors.withAlpha(Colors.PAPER, 0.85f))
+            p.text(z.name, lx + lw / 2, ly + fs * 1.1f, fs, Colors.INK, Font.HAND, Align.CENTER)
         }
         p.text(game.str("map.help"), p.width / 2, p.height - 12 * s, ui.font(12f), Colors.withAlpha(Colors.PAPER, 0.6f), Font.HAND, Align.CENTER)
     }

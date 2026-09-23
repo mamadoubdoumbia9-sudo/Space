@@ -60,17 +60,23 @@ class CarnetScreen(game: Game, startTab: String?) : MenuScreen(game) {
         val s = ui.s
         val mapW = if (ui.portrait) w else w * 0.62f
         val mapH = if (ui.portrait) h * 0.55f else h
-        val ok = p.image("art/ui/map_world.jpg", x, y, mapW, mapH, 0.95f)
-        if (!ok) p.fillRoundRect(x, y, mapW, mapH, 6 * s, Colors.PAPER_SHADE)
+        // la carte dessinée est au format 16:10 : on l'inscrit sans déformation, les repères suivent le cadre réel
+        val fw = min(mapW, mapH * 1.6f); val fh = fw / 1.6f
+        val fx = x + (mapW - fw) / 2; val fy = y + (mapH - fh) / 2
+        val ok = p.image("art/ui/map_world.jpg", fx, fy, fw, fh, 0.95f)
+        if (!ok) p.fillRoundRect(fx, fy, fw, fh, 6 * s, Colors.PAPER_SHADE)
         for (z in game.content.zones.values) {
             if (z.hidden) continue
             val visited = z.id in st.zonesVisited
             val open = visited || game.conditions.eval(z.openCond)
             if (!open && !visited) continue
-            val px = x + z.mapX * mapW; val py = y + z.mapY * mapH
+            val px = fx + z.mapX * fw; val py = fy + z.mapY * fh
             if (visited) { p.fillCircle(px, py, 6 * s, Colors.INK); p.strokeCircle(px, py, 10 * s, Colors.withAlpha(Colors.INK, 0.6f), 1.2f * s) } else p.strokeCircle(px, py, 6 * s, Colors.withAlpha(Colors.INK, 0.6f), 1.2f * s)
             if (z.id == st.zone) p.strokeCircle(px, py, 14 * s + kotlin.math.sin(time * 4) * 2 * s, Colors.GARANCE, 1.6f * s)
-            p.text(z.name, px, py - 12 * s, ui.font(11f), Colors.withAlpha(Colors.INK, if (visited) 0.95f else 0.55f), Font.HAND, Align.CENTER)
+            val lfs = ui.font(11f); val lw = p.measure(z.name, lfs, Font.HAND)
+            val lx = (px - lw / 2).coerceIn(fx + 2 * s, fx + fw - lw - 2 * s)
+            val ly = if (py - 12 * s - lfs < fy) py + 22 * s else py - 12 * s
+            p.text(z.name, lx + lw / 2, ly, lfs, Colors.withAlpha(Colors.INK, if (visited) 0.95f else 0.55f), Font.HAND, Align.CENTER)
         }
         val ix = if (ui.portrait) x else x + mapW + 14 * s; val iy = if (ui.portrait) y + mapH + 10 * s else y
         val iw = if (ui.portrait) w else w - mapW - 14 * s
