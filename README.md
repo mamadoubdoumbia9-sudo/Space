@@ -70,6 +70,25 @@ orientation `fullUser` (portrait et paysage, interface adaptative), plein écran
 permission unique `VIBRATE`, aucune connexion réseau, sauvegardes dans le stockage privé (`files/saves/`, sauvegarde
 Android incluse). Voir `docs/CONFIG_ANDROID.md`.
 
+## Livrables (14 points du cahier des charges)
+
+| # | Livrable | Emplacement |
+|---|---|---|
+| 1 | Projet complet et compilable | racine (Gradle) + `tools/build_apk.py` (chaîne autonome) |
+| 2 | Assets (art, UI, polices) | `app/src/main/assets/art` (40 tableaux, carte du monde, 16 portraits, icônes), `fonts/`, `app/src/main/res` (icône, splash) |
+| 3 | Scripts (moteur, écrans, énigmes) | `core/src/com/ateliermareebasse/cartographie/core`, `app/src/main/kotlin`, `desktop/src` |
+| 4 | Scènes / niveaux | `app/src/main/assets/data/zones/fr/z00…z18.tab` (19 zones, 40 tableaux) |
+| 5 | Données de jeu | `data/{items,puzzles,pages,echoes,barks,thoughts,tables,strings}` — formats dans `docs/FORMATS.md` |
+| 6 | Musique | `app/src/main/assets/audio/music` (26 pistes ; générateur `tools/audio/compose.py`) |
+| 7 | Effets sonores et ambiances | `audio/sfx` (137), `audio/ambience` (21) ; `tools/audio/{sfx,ambience}.py` |
+| 8 | Cinématiques | `data/cinematics/fr/cinematics.cin` + `art/cin`, écran `CinematicScreen` |
+| 9 | Dialogues | `data/dialogues/fr/*.dlg` (90 scènes), `talk.tbl` |
+| 10 | Système de sauvegarde | `core/.../state/GameState.kt` (LCDA v3, 3 emplacements + auto + checkpoint), `SaveLoadScreen` |
+| 11 | Configuration Android | `app/src/main/AndroidManifest.xml`, `app/build.gradle.kts`, `docs/CONFIG_ANDROID.md` |
+| 12 | Rapport des erreurs corrigées | `docs/RAPPORT_ERREURS.md` |
+| 13 | Rapport de taille de build | `docs/RAPPORT_TAILLE.md` (généré par le build) |
+| 14 | Configuration de compilation finale + audit | `tools/build_apk.py`, `.github/workflows/android.yml`, `docs/RAPPORT_AUDIT.md` (`tools/audit.py`, 13 points) |
+
 ## Correspondance avec un projet « moteur classique »
 
 | Demande | Ici |
