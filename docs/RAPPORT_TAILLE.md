@@ -1,13 +1,13 @@
 # Rapport de taille — LaCartographieDesAbsents-ch1-release.apk
 
-Taille de l'APK : **109.9 Mo** (109933909 octets)
+Taille de l'APK : **113.9 Mo** (113885883 octets)
 
 | Catégorie | fichiers | dans l'APK | non compressé |
 |---|---:|---:|---:|
 | audio / musique | 26 | 54.3 Mo | 54.3 Mo |
 | audio / ambiances | 21 | 26.5 Mo | 26.5 Mo |
 | images / tableaux | 39 | 16.7 Mo | 16.7 Mo |
-| images / personnages & objets | 12 | 4.2 Mo | 4.2 Mo |
+| images / personnages & objets | 31 | 8.1 Mo | 8.1 Mo |
 | audio / effets | 137 | 3.9 Mo | 3.9 Mo |
 | code (dex) | 1 | 2.8 Mo | 2.8 Mo |
 | polices | 5 | 0.9 Mo | 0.9 Mo |

@@ -32,6 +32,7 @@
 | 28 | Coordonnées `map x y` des zones dessinées « à l'aveugle » avant la carte | carte générée après les données | coordonnées réalignées sur le dessin final (ville en bas à gauche, funiculaire, gare, bois, phare, anse, passage, pointe) |
 | 29 | Vérification de l'existence d'un portrait à chaque image (`assetExists` relit le fichier) | appel dans `render()` | mémo par écran (`portraitKnown`) |
 | 30 | Icônes des objets secondaires signalées comme manquantes à chaque test | pas de distinction données entre objets majeurs et secondaires | flag `glyph` dans `items.itm` (26 objets) : glyphe de catégorie assumé, les 12 objets majeurs du GDD 5.17 exigent une icône (erreur de test sinon) |
+| 31 | E14 (clé du vent) : les trois pièces libres se chevauchaient (pas de 24 px pour des cartes de 52 px) | disposition verticale héritée des libellés seuls | pièces en rangée sur vignettes de papier, zone de saisie alignée sur le dessin |
 
 Les tests (`tools/compile_desktop.sh --tests`) rejouent l'ensemble : 170 branches de scènes, 19 écrans d'énigmes,
 chaîne du final complète (lettre → épilogue → fin de chapitre → NG+), entrée dans les 40 tableaux et action sur chaque
