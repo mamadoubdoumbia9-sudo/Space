@@ -1,0 +1,31 @@
+# Sorties de build (APK, classes, rapports générés, sources d'images brutes)
+build/
+!build/build_apk.py
+!build/compile_desktop.sh
+!build/README.md
+app/build/
+core/build/
+desktop/build/
+.gradle/
+*.apk
+*.aab
+*.dex
+local.properties
+
+# Clés de signature (générées par tools/make_keystore.py)
+*.jks
+*.keystore
+*.p12
+*.pem
+release.properties
+
+# IDE / OS
+.idea/
+*.iml
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/
+
+# Le zip d'espace de travail n'est pas une source du jeu
+workspace-*.zip
