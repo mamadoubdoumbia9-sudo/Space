@@ -166,8 +166,14 @@ jobs:
           gradle-version: "8.11.1"
           cache-read-only: false
 
+      # Les journaux de compilation et de tests sont enregistrés dans le dépôt puis
+      # publiés en artefact en cas d'échec : ils restent lisibles même si l'interface
+      # de GitHub n'est pas accessible.
       - name: Tests unitaires (Validation, ScamScanner, contrats d'API)
-        run: gradle --no-daemon testDebugUnitTest
+        run: |
+          set -o pipefail
+          mkdir -p ci-logs
+          gradle --no-daemon --console=plain testDebugUnitTest 2>&1 | tee ci-logs/tests.log
 
       - name: Clé de signature (si fournie)
         # `secrets` n'est pas un contexte autorisé dans un `if` : GitHub rejette alors
@@ -189,10 +195,26 @@ jobs:
           } > keystore.properties
 
       - name: APK de débogage (toujours produit, installable)
-        run: gradle --no-daemon assembleDebug
+        run: |
+          set -o pipefail
+          mkdir -p ci-logs
+          gradle --no-daemon --console=plain assembleDebug 2>&1 | tee ci-logs/apk-debug.log
 
       - name: APK de version (signé si une clé est disponible)
-        run: gradle --no-daemon assembleRelease
+        run: |
+          set -o pipefail
+          mkdir -p ci-logs
+          gradle --no-daemon --console=plain assembleRelease 2>&1 | tee ci-logs/apk-release.log
+
+      - name: Extrait du journal en cas d'échec
+        if: failure()
+        run: |
+          {
+            echo "### Dernières lignes du journal Gradle"
+            echo '```'
+            tail -80 ci-logs/tests.log 2>/dev/null || echo "aucun journal de tests"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Taille réelle des APK (aucun remplissage artificiel)
         run: |
@@ -219,10 +241,12 @@ jobs:
             android/app/build/outputs/apk/release/*.apk
           if-no-files-found: error
 
-      - name: Publier les rapports de tests
+      - name: Publier les journaux de compilation et de tests
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: signalpro-test-reports
-          path: android/app/build/reports/tests/**
+          name: signalpro-journaux-ci
+          path: |
+            android/ci-logs/*.log
+            android/app/build/reports/tests/**
           if-no-files-found: ignore
