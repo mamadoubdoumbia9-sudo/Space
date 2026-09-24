@@ -1,6 +1,7 @@
 package com.signalpro.app.data.repo
 
 import com.signalpro.app.data.local.AppDatabase
+import com.signalpro.app.data.local.CachedAlert
 import com.signalpro.app.data.local.CachedBlacklistEntry
 import com.signalpro.app.data.local.CachedReport
 import com.signalpro.app.data.local.CachedSignature
@@ -321,26 +322,26 @@ class CommunityRepository(
 
     suspend fun stats() = apiClient.call { api.communityStats() }
 
-    suspend fun refreshAlerts(): ApiResult<Int> {
-        val result = apiClient.call { api.alerts() }
-        if (result is ApiResult.Success) {
-            val now = System.currentTimeMillis()
-            database.communityDao().upsertAlerts(
-                result.data.map {
-                    com.signalpro.app.data.local.CachedAlert(
-                        targetId = it.targetId,
-                        phoneMasked = it.phoneMasked,
-                        categoryLabel = it.categoryLabel,
-                        verifiedReports = it.verifiedReports,
-                        advice = it.advice,
-                        updatedAt = now,
-                    )
-                },
-            )
-            return ApiResult.Success(result.data.size)
+    suspend fun refreshAlerts(): ApiResult<Int> =
+        when (val result = apiClient.call { api.alerts() }) {
+            is ApiResult.Success -> {
+                val now = System.currentTimeMillis()
+                database.communityDao().upsertAlerts(
+                    result.data.map {
+                        CachedAlert(
+                            targetId = it.targetId,
+                            phoneMasked = it.phoneMasked,
+                            categoryLabel = it.categoryLabel,
+                            verifiedReports = it.verifiedReports,
+                            advice = it.advice,
+                            updatedAt = now,
+                        )
+                    },
+                )
+                ApiResult.Success(result.data.size)
+            }
+            is ApiResult.Failure -> result
         }
-        return result
-    }
 
     suspend fun scanAlerts() = apiClient.call { api.scanAlerts() }
 }
@@ -356,7 +357,7 @@ class DetectionRepository(
 
     /** Télécharge les signatures et les stocke pour l'analyse hors ligne. */
     suspend fun refreshSignatures(currentVersion: String): ApiResult<Int> {
-        val result = apiClient.call { api.signatures(sinceVersion = currentVersion.ifBlank { null }) }
+        val result = apiClient.call { api.signatures(since = currentVersion.ifBlank { null }) }
         return when (result) {
             is ApiResult.Success -> {
                 val payload = result.data
