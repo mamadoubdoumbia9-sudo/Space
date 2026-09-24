@@ -175,7 +175,7 @@ jobs:
           mkdir -p ci-logs
           gradle --no-daemon --console=plain testDebugUnitTest 2>&1 | tee ci-logs/tests.log
 
-      - name: Clé de signature (si fournie)
+      - name: Clé de signature (fournie par les secrets du dépôt)
         # `secrets` n'est pas un contexte autorisé dans un `if` : GitHub rejette alors
         # le fichier entier (« workflow file issue »). La valeur passe donc par `env`,
         # qui lui est autorisé.
@@ -193,6 +193,34 @@ jobs:
             echo "keyAlias=$SIGNING_KEY_ALIAS"
             echo "keyPassword=$SIGNING_KEY_PASSWORD"
           } > keystore.properties
+          echo "APK_KEY=fournie-par-le-depot" >> "$GITHUB_ENV"
+
+      # Sans clé dans les secrets, l'APK release resterait non signé, donc
+      # ininstallable. On génère ici une clé JETABLE pour que l'artefact livré soit
+      # réellement installable — elle ne convient pas à une publication Play Store
+      # (voir docs/TAILLE_APK.md et le README). La clé n'est jamais versionnée.
+      - name: Clé de signature éphémère (si aucun secret n'est configuré)
+        if: env.SIGNING_KEY_BASE64 == ''
+        run: |
+          set -eu
+          EPHEMERAL_STORE="$RUNNER_TEMP/signalpro-ci-ephemeral.jks"
+          EPHEMERAL_PASS="signalpro-ci-ephemeral"
+          keytool -genkeypair -v \
+            -keystore "$EPHEMERAL_STORE" \
+            -storetype JKS \
+            -storepass "$EPHEMERAL_PASS" \
+            -keypass "$EPHEMERAL_PASS" \
+            -alias signalpro-ci \
+            -keyalg RSA -keysize 2048 -validity 365 \
+            -dname "CN=SignalPro CI (cle jetable), OU=Verification, O=SignalPro, C=ML" > /dev/null
+          {
+            echo "storeFile=$EPHEMERAL_STORE"
+            echo "storePassword=$EPHEMERAL_PASS"
+            echo "keyAlias=signalpro-ci"
+            echo "keyPassword=$EPHEMERAL_PASS"
+          } > keystore.properties
+          echo "APK_KEY=jetable-generee-en-ci" >> "$GITHUB_ENV"
+          echo "::notice::Aucun secret de signature : une clé jetable a été générée pour produire un APK release installable (non publiable tel quel sur le Play Store)."
 
       - name: APK de débogage (toujours produit, installable)
         run: |
@@ -205,6 +233,37 @@ jobs:
           set -o pipefail
           mkdir -p ci-logs
           gradle --no-daemon --console=plain assembleRelease 2>&1 | tee ci-logs/apk-release.log
+
+      # Vérification du binaire livré : identité du paquet, contenu réel et
+      # signature. Les valeurs sont aussi publiées en annotations (lisibles via
+      # l'API) pour que la preuve ne dépende pas du téléchargement d'artefacts.
+      - name: Vérification des APK produits
+        if: success()
+        run: |
+          set -u
+          SDK="${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}"
+          AAPT2="$(find "$SDK/build-tools" -maxdepth 2 -type f -name aapt2 | sort | tail -1)"
+          APKSIGNER="$(find "$SDK/build-tools" -maxdepth 2 -type f -name apksigner | sort | tail -1)"
+          echo "### Contenu vérifié des APK" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          for apk in $(find app/build/outputs/apk -name "*.apk" | sort); do
+            name=$(basename "$apk")
+            dex=$(unzip -l "$apk" | grep -cE "classes[0-9]*\.dex")
+            pkg=$("$AAPT2" dump badging "$apk" 2>/dev/null | grep -m1 "^package:" | sed "s/package: //")
+            minsdk=$("$AAPT2" dump badging "$apk" 2>/dev/null | grep -m1 "^sdkVersion:" | cut -d: -f2)
+            targetsdk=$("$AAPT2" dump badging "$apk" 2>/dev/null | grep -m1 "^targetSdkVersion:" | cut -d: -f2)
+            perms=$("$AAPT2" dump badging "$apk" 2>/dev/null | grep -c "^uses-permission:")
+            if "$APKSIGNER" verify "$apk" > /dev/null 2>&1; then
+              sig="$("$APKSIGNER" verify --print-certs "$apk" | grep -m1 "Signer #1 certificate DN:" | sed "s/.*DN: //")"
+              sig_line="signature=valide (${sig})"
+            else
+              sig_line="signature=absente (APK non installable en l'état)"
+            fi
+            line="$name | dex=$dex | minSdk=$minsdk | targetSdk=$targetsdk | permissions=$perms | $pkg | $sig_line"
+            echo "$line" >> "$GITHUB_STEP_SUMMARY"
+            echo "::notice::$line"
+          done
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
 
       - name: Extrait du journal en cas d'échec
         if: failure()
