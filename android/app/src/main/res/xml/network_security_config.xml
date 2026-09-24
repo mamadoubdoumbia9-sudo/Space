@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Sécurité réseau : le trafic en clair est interdit par défaut. Trois exceptions
+  encadrées, exigées par l'architecture :
+   - 127.0.0.1 / localhost : la passerelle WhatsApp tourne sur l'appareil de
+     l'utilisateur ; la session ne quitte jamais son téléphone.
+   - 10.0.2.2 : accès à l'API depuis l'émulateur de développement.
+  L'API distante en production DOIT être en HTTPS.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">localhost</domain>
+        <domain includeSubdomains="false">10.0.2.2</domain>
+    </domain-config>
+</network-security-config>

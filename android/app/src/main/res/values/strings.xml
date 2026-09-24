@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SignalPro</string>
+
+    <!-- Avertissement de conformité : affiché sur l'accueil ET avant chaque envoi. -->
+    <string name="disclaimer_short">Tout faux signalement est passible de poursuites judiciaires et du bannissement de votre compte WhatsApp. Ce service ne garantit pas le bannissement des numéros signalés : seul Meta/WhatsApp examine les signalements et décide de suspendre ou non un compte.</string>
+    <string name="disclaimer_long">SignalPro vous aide à documenter une infraction, à transmettre un signalement par les canaux officiels et à suivre son traitement.\n\nSignalPro ne peut pas suspendre un compte et ne tentera jamais de le faire. Aucune limite fixée par WhatsApp n\'est contournée. Un signalement sans preuve valide n\'est jamais transmis, et un faux signalement confirmé entraîne le bannissement définitif de votre compte SignalPro.</string>
+    <string name="wa_web_risk_notice">Utiliser un appareil lié WhatsApp Web comporte un risque de restriction de votre compte, même en respectant les limites. Ce mode est optionnel, il exige votre consentement explicite, et vous pouvez révoquer l\'appareil lié à tout moment dans WhatsApp (Appareils connectés).</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Accueil</string>
+    <string name="nav_reports">Mes signalements</string>
+    <string name="nav_community">Liste communautaire</string>
+    <string name="nav_detect">Détection</string>
+    <string name="nav_settings">Réglages</string>
+    <string name="nav_moderation">Modération</string>
+
+    <!-- Authentification -->
+    <string name="login_title">Connexion</string>
+    <string name="login_email">Adresse email</string>
+    <string name="login_password">Mot de passe</string>
+    <string name="login_submit">Se connecter</string>
+    <string name="register_title">Créer un compte</string>
+    <string name="register_phone">Numéro de téléphone (format international)</string>
+    <string name="register_submit">Créer mon compte</string>
+    <string name="verify_title">Vérification obligatoire</string>
+    <string name="verify_code">Code à 6 chiffres</string>
+    <string name="verify_submit">Vérifier</string>
+    <string name="verify_help">La vérification par email ou SMS est obligatoire pour tous les comptes : elle empêche la création de comptes servant à de faux signalements.</string>
+
+    <!-- Liaison WhatsApp -->
+    <string name="link_title">Connecter mon WhatsApp</string>
+    <string name="link_explain">SignalPro vérifie qu\'un numéro vous a réellement contacté avant d\'accepter un signalement. Pour cela, l\'application a besoin d\'un appareil lié WhatsApp. La session reste sur votre appareil : le serveur ne la voit jamais.</string>
+    <string name="link_consent">J\'ai lu et j\'accepte le risque de restriction de compte lié à WhatsApp Web.</string>
+    <string name="link_start">Générer le QR code</string>
+    <string name="link_scan">Scanner le QR code dans WhatsApp puis Appareils connectés</string>
+    <string name="link_confirm">J\'ai scanné le code : vérifier la connexion</string>
+    <string name="link_gateway_missing">La passerelle locale n\'est pas joignable. Installez-la sur cet appareil ou sur un poste du même réseau, puis réessayez. Aucune liaison simulée n\'est proposée.</string>
+
+    <!-- Signalements -->
+    <string name="report_new">Nouveau signalement</string>
+    <string name="report_target">Numéro à signaler (format international)</string>
+    <string name="report_category">Catégorie d\'infraction</string>
+    <string name="report_date">Date et heure de réception du message</string>
+    <string name="report_description">Description courte des faits</string>
+    <string name="report_evidence">Preuve obligatoire (capture, export, identifiant de message)</string>
+    <string name="report_add_evidence">Ajouter une preuve</string>
+    <string name="report_submit">Enregistrer le signalement</string>
+    <string name="report_submit_wa">Envoyer à WhatsApp</string>
+    <string name="report_manual_done">J\'ai signalé dans WhatsApp</string>
+    <string name="report_status_pending_evidence">Preuve manquante</string>
+    <string name="report_status_pending_verification">En relecture</string>
+    <string name="report_status_verified">Vérifié</string>
+    <string name="report_status_submitted">Transmis à WhatsApp</string>
+    <string name="report_status_rejected">Rejeté</string>
+
+    <!-- Campagnes -->
+    <string name="campaign_title">Signaler avec plusieurs comptes</string>
+    <string name="campaign_count">Nombre de signalements demandés</string>
+    <string name="campaign_preview">Vérifier ce qui est réellement possible</string>
+    <string name="campaign_explain">Chaque signalement part d\'un compte différent qui a réellement reçu des messages de ce numéro. SignalPro ne fabrique jamais de signalements depuis des comptes qui n\'ont rien reçu.</string>
+
+    <!-- Communauté -->
+    <string name="community_title">Numéros malveillants confirmés</string>
+    <string name="community_note">Un numéro est listé après 3 signalements vérifiés provenant de personnes distinctes. Bloquer cette liste protège votre compte ; cela ne provoque aucune suspension.</string>
+    <string name="community_block_all">Bloquer tous ces numéros sur mon WhatsApp</string>
+    <string name="community_export">Exporter la liste</string>
+    <string name="community_appeal">Contester un signalement me concernant</string>
+
+    <!-- Détection -->
+    <string name="detect_title">Détection de spam et d\'arnaque</string>
+    <string name="detect_offline">Analyse hors ligne : les signatures sont stockées sur votre téléphone, aucune conversation n\'est envoyée.</string>
+    <string name="detect_scan">Analyser un extrait de conversation</string>
+
+    <!-- Réglages -->
+    <string name="settings_title">Réglages</string>
+    <string name="settings_devices">Appareils WhatsApp liés</string>
+    <string name="settings_notifications">Alertes de contact malveillant</string>
+    <string name="settings_export">Exporter mes données</string>
+    <string name="settings_delete">Supprimer mon compte et mes preuves</string>
+    <string name="settings_about">À propos et limites de l\'outil</string>
+
+    <!-- Erreurs -->
+    <string name="error_network">Réseau indisponible. Vos données locales restent intactes.</string>
+    <string name="error_auth">Session expirée : reconnectez-vous.</string>
+    <string name="error_generic">Une erreur est survenue. Aucune action n\'a été considérée comme réussie.</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_alerts">Alertes numéros malveillants</string>
+    <string name="notif_channel_sync">Synchronisation</string>
+    <string name="notif_channel_alerts_desc">Vous prévient quand un numéro confirmé malveillant a une conversation sur votre compte.</string>
+    <string name="notif_channel_sync_desc">Suivi de l\'état de vos signalements et des mises à jour de signatures.</string>
+</resources>

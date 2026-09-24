@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="signalpro_primary">#0F2A3D</color>
+    <color name="signalpro_accent">#0E7C66</color>
+    <color name="signalpro_danger">#B3261E</color>
+    <color name="signalpro_warning">#8A6D00</color>
+    <color name="ic_launcher_background">#0F2A3D</color>
+</resources>

@@ -1,0 +1,21 @@
+{
+  "name": "signalpro-gateway",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Passerelle locale SignalPro : relie le compte WhatsApp de l'utilisateur (protocole multi-appareils) au backend, sous son contrôle exclusif.",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "qrcode": "^1.5.4",
+    "whatsapp-web.js": "^1.26.0"
+  }
+}
