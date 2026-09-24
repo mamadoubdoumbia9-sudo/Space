@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit
  * Conteneur de dépendances explicite (pas de framework d'injection : le graphe
  * est petit et lisible, ce qui facilite l'audit de sécurité).
  */
-class AppContainer(context: Context) {
+class AppContainer(private val context: Context) {
 
     val secureStore = SecureStore(context)
     val settingsStore = SettingsStore(context)
@@ -45,12 +45,15 @@ class AppContainer(context: Context) {
 
     val scanner = ScamScanner(database.signatureDao())
 
-    val authRepository = AuthRepository(api, secureStore, database)
-    val deviceRepository = DeviceRepository(api, database, secureStore)
-    val reportRepository = ReportRepository(api, database, secureStore)
-    val communityRepository = CommunityRepository(api, database, secureStore)
-    val detectionRepository = DetectionRepository(api, database, scanner)
-    val campaignRepository = CampaignRepository(api)
+    // Les dépôts reçoivent le client (et non le service Retrofit nu) : c'est lui qui
+    // injecte le jeton, rafraîchit la session une fois sur 401 et convertit les codes
+    // d'erreur en messages exploitables.
+    val authRepository = AuthRepository(apiClient, secureStore, database)
+    val deviceRepository = DeviceRepository(apiClient, database, secureStore)
+    val reportRepository = ReportRepository(apiClient, database, secureStore)
+    val communityRepository = CommunityRepository(apiClient, database, secureStore)
+    val detectionRepository = DetectionRepository(apiClient, database, scanner)
+    val campaignRepository = CampaignRepository(apiClient)
 
     fun scheduleBackgroundSync() {
         val constraints = Constraints.Builder()

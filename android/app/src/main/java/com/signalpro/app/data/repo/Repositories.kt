@@ -185,14 +185,16 @@ class ReportRepository(
 
     fun observePendingCount(): Flow<Int> = database.pendingReportDao().countFlow()
 
-    suspend fun refresh(): ApiResult<Int> {
-        val result = apiClient.call { api.reports(limit = 100) }
-        if (result is ApiResult.Success) {
-            database.reportDao().upsertAll(result.data.items.map(ReportMapper::toCached))
-            return ApiResult.Success(result.data.items.size)
+    suspend fun refresh(): ApiResult<Int> =
+        when (val result = apiClient.call { api.reports(limit = 100) }) {
+            is ApiResult.Success -> {
+                database.reportDao().upsertAll(result.data.items.map(ReportMapper::toCached))
+                ApiResult.Success(result.data.items.size)
+            }
+            // `ApiResult.Failure` est un `ApiResult<Nothing>` : l'échec est donc
+            // réutilisable tel quel, sans inventer un succès.
+            is ApiResult.Failure -> result
         }
-        return result
-    }
 
     suspend fun detail(reportId: Int): ApiResult<ReportDto> {
         val result = apiClient.call { api.report(reportId) }
@@ -289,26 +291,26 @@ class CommunityRepository(
     fun observeCachedBlacklist() = database.communityDao().observeBlacklist()
     fun observeAlerts() = database.communityDao().observeAlerts()
 
-    suspend fun refreshBlacklist(): ApiResult<Int> {
-        val result = apiClient.call { api.blacklist(limit = 300) }
-        if (result is ApiResult.Success) {
-            val now = System.currentTimeMillis()
-            database.communityDao().upsertBlacklist(
-                result.data.items.map {
-                    CachedBlacklistEntry(
-                        phoneMasked = it.phoneMasked,
-                        categoryLabel = it.categoryLabel,
-                        verifiedReports = it.verifiedReports,
-                        distinctReporters = it.distinctReporters,
-                        suspensionStatus = it.suspensionStatus,
-                        updatedAt = now,
-                    )
-                },
-            )
-            return ApiResult.Success(result.data.items.size)
+    suspend fun refreshBlacklist(): ApiResult<Int> =
+        when (val result = apiClient.call { api.blacklist(limit = 300) }) {
+            is ApiResult.Success -> {
+                val now = System.currentTimeMillis()
+                database.communityDao().upsertBlacklist(
+                    result.data.items.map {
+                        CachedBlacklistEntry(
+                            phoneMasked = it.phoneMasked,
+                            categoryLabel = it.categoryLabel,
+                            verifiedReports = it.verifiedReports,
+                            distinctReporters = it.distinctReporters,
+                            suspensionStatus = it.suspensionStatus,
+                            updatedAt = now,
+                        )
+                    },
+                )
+                ApiResult.Success(result.data.items.size)
+            }
+            is ApiResult.Failure -> result
         }
-        return result
-    }
 
     suspend fun exportNumbers() = apiClient.call { api.blacklistExport() }
 
