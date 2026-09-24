@@ -209,23 +209,27 @@ jobs:
       - name: Extrait du journal en cas d'échec
         if: failure()
         run: |
-          {
-            echo "### Dernières lignes du journal Gradle"
-            echo '```'
-            tail -80 ci-logs/tests.log 2>/dev/null || echo "aucun journal de tests"
-            echo '```'
-          } >> "$GITHUB_STEP_SUMMARY"
+          for log in ci-logs/tests.log ci-logs/apk-debug.log ci-logs/apk-release.log; do
+            [ -f "$log" ] || continue
+            {
+              echo "### Dernières lignes — $log"
+              echo '```'
+              tail -80 "$log"
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+          done
           # Les erreurs de compilation sont publiées en annotations GitHub : elles
           # restent consultables via l'API même quand les journaux d'exécution ne sont
           # pas téléchargeables, ce qui permet de corriger le code sans deviner.
           # 1) erreurs de compilation et tâches en échec
-          grep -E "^(e: |> Task .* FAILED|.*error: |FAILURE: |Execution failed for task)" ci-logs/tests.log 2>/dev/null \
+          grep -hE "^(e: |> Task .* FAILED|.*error: |FAILURE: |Execution failed for task|> )" ci-logs/*.log 2>/dev/null \
+            | sort -u \
             | head -30 \
             | while IFS= read -r line; do
                 echo "::error::$line"
               done
           # 2) tests en échec, avec les trois lignes suivantes (assertion et pile d'appel)
-          awk '/FAILED$/{n=4} n>0{print; n--}' ci-logs/tests.log 2>/dev/null \
+          awk '/FAILED$/{n=4} n>0{print; n--}' ci-logs/*.log 2>/dev/null \
             | grep -vE "^\s*$" \
             | head -40 \
             | while IFS= read -r line; do
