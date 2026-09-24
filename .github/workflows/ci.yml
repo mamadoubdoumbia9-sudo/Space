@@ -240,13 +240,27 @@ jobs:
       - name: Taille réelle des APK (aucun remplissage artificiel)
         run: |
           echo "### Tailles d'APK réellement produites" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Fichier | Taille |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| --- | --- |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Fichier | Taille | SHA-256 (début) |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| --- | --- | --- |" >> "$GITHUB_STEP_SUMMARY"
           find app/build/outputs/apk -name "*.apk" -printf "%p\n" | sort | while read -r apk; do
             size=$(du -h "$apk" | cut -f1)
             bytes=$(stat -c%s "$apk")
-            echo "| $apk | $size ($bytes octets) |" >> "$GITHUB_STEP_SUMMARY"
+            digest=$(sha256sum "$apk" | cut -d' ' -f1)
+            echo "| $apk | $size ($bytes octets) | \`${digest:0:16}…\` |" >> "$GITHUB_STEP_SUMMARY"
+            # Les tailles et empreintes sont aussi publiées en annotations : elles
+            # restent lisibles depuis l'API même sans téléchargement d'artefact.
+            echo "::notice::$apk — $bytes octets — sha256=${digest:0:32}"
           done
+          # Composition réelle de l'APK de débogage : les cinq plus gros contenus.
+          debug_apk=$(find app/build/outputs/apk/debug -name "*.apk" | head -1)
+          if [ -n "$debug_apk" ]; then
+            {
+              echo "### Plus gros contenus embarqués (APK de débogage)"
+              echo '```'
+              unzip -l "$debug_apk" | sort -k1 -n -r | head -20
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
           cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
 
           Ce chiffre est la taille réelle : l'application n'embarque aucun fichier de
