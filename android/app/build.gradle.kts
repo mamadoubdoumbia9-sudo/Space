@@ -111,12 +111,12 @@ android {
         disable += setOf("GradleDependency", "OldTargetApi")
     }
 
-    // Le poids de l'APK vient des ressources réellement embarquées (signatures de
-    // détection hors ligne, ressources d'accessibilité, traductions). Aucune
-    // donnée de remplissage n'est ajoutée : voir docs/TAILLE_APK.md.
-    androidResources {
-        generateLocaleConfig = true
-    }
+    // L'application est publiée en français uniquement : aucune configuration de
+    // langues n'est générée (`generateLocaleConfig` exige des locales réellement
+    // déclarées et fait échouer la tâche `extractDebugSupportedLocales`). Le poids de
+    // l'APK vient des ressources réellement embarquées — signatures de détection hors
+    // ligne, icônes, ressources d'accessibilité — et d'aucune donnée de remplissage :
+    // voir docs/TAILLE_APK.md.
 }
 
 ksp {
