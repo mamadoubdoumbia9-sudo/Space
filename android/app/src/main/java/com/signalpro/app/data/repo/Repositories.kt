@@ -384,8 +384,8 @@ class DetectionRepository(
 
     /** Analyse hors ligne d'un extrait fourni volontairement par l'utilisateur. */
     suspend fun scanLocal(text: String): ScamScanner.ScanResult = withContext(Dispatchers.Default) {
-        val signatures = database.signatureDao().all().map { Validation.toSignature(it.kind, it.value, it.severity, it.category) }
-        scanner.scan(text, signatures)
+        // Le moteur lit lui-même les signatures en cache : rien ne sort du téléphone.
+        scanner.scan(text)
     }
 
     /** Analyse serveur (facultative) d'un extrait, si l'utilisateur le décide. */

@@ -2,6 +2,8 @@ package com.signalpro.app.data.remote
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.EncodeDefault
+import kotlinx.serialization.ExperimentalSerializationApi
 
 /**
  * Contrats d'API — miroir exact de `backend/app/schemas.py`.
@@ -132,6 +134,7 @@ data class DeviceDto(
     @SerialName("linked_at") val linkedAt: String? = null,
 )
 
+@OptIn(ExperimentalSerializationApi::class)
 @Serializable
 data class ReportCreateRequest(
     @SerialName("target_phone") val targetPhone: String,
@@ -140,6 +143,9 @@ data class ReportCreateRequest(
     val description: String,
     @SerialName("message_ids") val messageIds: List<String> = emptyList(),
     @SerialName("contact_proof_method") val contactProofMethod: String = "linked_device_scan",
+    // Toujours transmis, même à `false` : le serveur reçoit une déclaration
+    // explicite « aucun message stocké » au lieu d'une absence de champ.
+    @EncodeDefault(EncodeDefault.Mode.ALWAYS)
     @SerialName("store_messages") val storeMessages: Boolean = false,
     @SerialName("message_excerpt") val messageExcerpt: String? = null,
 )

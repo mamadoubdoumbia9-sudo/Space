@@ -20,7 +20,9 @@ import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
 
-    private var pendingSharedText: String? = null
+    // État observable : un partage reçu alors que l'application est déjà ouverte
+    // (onNewIntent) doit rafraîchir l'écran, pas rester dans un champ ignoré.
+    private var pendingSharedText by mutableStateOf<String?>(null)
 
     private val cameraPermission = registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
         cameraGranted = granted

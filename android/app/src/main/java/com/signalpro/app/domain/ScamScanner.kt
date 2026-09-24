@@ -34,11 +34,22 @@ class ScamScanner(private val signatureDao: SignatureDao) {
 
     private val compiledRegexes = mutableMapOf<String, Regex?>()
 
-    /** Analyse un extrait de conversation avec les signatures fournies. */
-    fun scan(text: String, signatures: List<Signature>): ScanResult {
+    /**
+     * Analyse un extrait de conversation.
+     *
+     * Les signatures de référence sont celles stockées par le serveur et mises en
+     * cache localement ; `extraSignatures` permet d'ajouter des règles ponctuelles
+     * (tests, signatures utilisateur) sans perdre les règles de base.
+     */
+    suspend fun scan(text: String, extraSignatures: List<Signature> = emptyList()): ScanResult {
         val normalized = normalize(text)
         val matches = mutableListOf<Match>()
         var score = 0.0
+
+        val signatures = (
+            signatureDao.all().map { Validation.toSignature(it.kind, it.value, it.severity, it.category) } +
+                extraSignatures
+            ).distinctBy { "${it.kind}\u0000${it.value}" }
 
         signatures.forEach { signature ->
             when (signature.kind) {
@@ -85,9 +96,6 @@ class ScamScanner(private val signatureDao: SignatureDao) {
         )
     }
 
-    /** Analyse hors ligne du carnet de conversations indexé (empreintes uniquement). */
-    suspend fun suspiciousPeerCount(): Int = signatureDao.count().let { if (it > 0) 0 else 0 }
-
     private fun buildAdvice(suspicious: Boolean): List<String> = if (suspicious) {
         listOf(
             "Ne cliquez sur aucun lien reçu dans ce message.",
@@ -126,7 +134,11 @@ class ScamScanner(private val signatureDao: SignatureDao) {
             ),
             StructuralRule(
                 "demande d'un code de vérification",
-                Regex("(code|mot de passe|pin|otp)[^\\n]{0,25}(envoy|communiqu|donn|transmet)", RegexOption.IGNORE_CASE),
+                Regex(
+                    "(code|mot de passe|pin|otp)[^\\n]{0,25}(envoy|communic|communiqu|donn|transmet|partage|revele)" +
+                        "|(envoie|envoi|donne|donnez|communique|communiquez|transmet|transmettez|partage|partagez|revele|revez)[^\\n]{0,25}(code|mot de passe|pin|otp)",
+                    RegexOption.IGNORE_CASE,
+                ),
                 3, "impersonation", 6.0,
             ),
             StructuralRule(
