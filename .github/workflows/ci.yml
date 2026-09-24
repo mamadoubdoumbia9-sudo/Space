@@ -218,7 +218,15 @@ jobs:
           # Les erreurs de compilation sont publiées en annotations GitHub : elles
           # restent consultables via l'API même quand les journaux d'exécution ne sont
           # pas téléchargeables, ce qui permet de corriger le code sans deviner.
-          grep -E "^(e: |w: .*error|> Task .* FAILED|.*error: |FAILURE: |Execution failed for task)" ci-logs/tests.log 2>/dev/null \
+          # 1) erreurs de compilation et tâches en échec
+          grep -E "^(e: |> Task .* FAILED|.*error: |FAILURE: |Execution failed for task)" ci-logs/tests.log 2>/dev/null \
+            | head -30 \
+            | while IFS= read -r line; do
+                echo "::error::$line"
+              done
+          # 2) tests en échec, avec les trois lignes suivantes (assertion et pile d'appel)
+          awk '/FAILED$/{n=4} n>0{print; n--}' ci-logs/tests.log 2>/dev/null \
+            | grep -vE "^\s*$" \
             | head -40 \
             | while IFS= read -r line; do
                 echo "::error::$line"
