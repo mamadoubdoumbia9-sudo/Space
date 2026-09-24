@@ -1,0 +1,200 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  backend:
+    name: Backend (pytest)
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Tests
+        env:
+          ENV: test
+        run: python -m pytest tests/ -q
+
+  gateway:
+    name: Passerelle WhatsApp (node --test)
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: gateway
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Tests
+        run: node --test test/*.test.js
+
+  web:
+    name: Interface web (contrats + parcours réel)
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Python 3.11 (API pour les contrôles de contrat)
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Dépendances du front
+        working-directory: web
+        run: npm ci
+
+      - name: Vérification des types
+        working-directory: web
+        run: npm run typecheck
+
+      - name: Build de production
+        working-directory: web
+        run: npm run build
+
+      - name: Dépendances du backend
+        working-directory: backend
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Jeu de démonstration
+        working-directory: backend
+        env:
+          ENV: dev
+          ALLOW_CONSOLE_VERIFICATION: "true"
+          DATABASE_URL: sqlite+pysqlite:///./ci-web.db
+        run: python scripts/seed_demo.py --reset
+
+      - name: Démarrage de l'API et de l'interface
+        env:
+          DATABASE_URL: sqlite+pysqlite:///./ci-web.db
+          ALLOW_CONSOLE_VERIFICATION: "true"
+          ENV: dev
+        run: |
+          (cd backend && nohup python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 > /tmp/api.log 2>&1 &)
+          for _ in $(seq 1 40); do curl -sf http://127.0.0.1:8000/health > /dev/null && break; sleep 1; done
+          curl -sf http://127.0.0.1:8000/health > /dev/null || { cat /tmp/api.log; exit 1; }
+          (cd web && API_PROXY_TARGET=http://127.0.0.1:8000 nohup npm run start > /tmp/web.log 2>&1 &)
+          for _ in $(seq 1 40); do curl -sf http://127.0.0.1:3000/ > /dev/null && break; sleep 1; done
+          curl -sf http://127.0.0.1:3000/ > /dev/null || { cat /tmp/web.log; exit 1; }
+
+      - name: Contrats front ↔ backend (catégories et routes)
+        working-directory: web
+        run: npm run check:contrats
+
+      - name: Parcours réel de bout en bout
+        working-directory: web
+        run: node scripts/parcours.mjs
+
+      - name: Journaux en cas d'échec
+        if: failure()
+        run: |
+          echo "--- API ---"; tail -60 /tmp/api.log || true
+          echo "--- WEB ---"; tail -60 /tmp/web.log || true
+
+  android:
+    name: Android (tests unitaires + APK)
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: android
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: SDK Android
+        uses: android-actions/setup-android@v3
+
+      # Le dépôt ne contient pas de wrapper Gradle binaire (aucun accès réseau
+      # fiable pour le télécharger depuis l'environnement de développement) :
+      # la CI installe une version de Gradle compatible avec AGP 8.7.3.
+      - name: Gradle 8.11.1
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.11.1"
+          cache-read-only: false
+
+      - name: Tests unitaires (Validation, ScamScanner, contrats d'API)
+        run: gradle --no-daemon testDebugUnitTest
+
+      - name: Clé de signature (si fournie)
+        if: ${{ secrets.SIGNING_KEY_BASE64 != '' }}
+        env:
+          SIGNING_KEY_BASE64: ${{ secrets.SIGNING_KEY_BASE64 }}
+          SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
+          SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
+          SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
+        run: |
+          echo "$SIGNING_KEY_BASE64" | base64 -d > release.keystore
+          {
+            echo "storeFile=release.keystore"
+            echo "storePassword=$SIGNING_STORE_PASSWORD"
+            echo "keyAlias=$SIGNING_KEY_ALIAS"
+            echo "keyPassword=$SIGNING_KEY_PASSWORD"
+          } > keystore.properties
+
+      - name: APK de débogage (toujours produit, installable)
+        run: gradle --no-daemon assembleDebug
+
+      - name: APK de version (signé si une clé est disponible)
+        run: gradle --no-daemon assembleRelease
+
+      - name: Taille réelle des APK (aucun remplissage artificiel)
+        run: |
+          echo "### Tailles d'APK réellement produites" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Fichier | Taille |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| --- | --- |" >> "$GITHUB_STEP_SUMMARY"
+          find app/build/outputs/apk -name "*.apk" -printf "%p\n" | sort | while read -r apk; do
+            size=$(du -h "$apk" | cut -f1)
+            bytes=$(stat -c%s "$apk")
+            echo "| $apk | $size ($bytes octets) |" >> "$GITHUB_STEP_SUMMARY"
+          done
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+
+          Ce chiffre est la taille réelle : l'application n'embarque aucun fichier de
+          remplissage. Voir docs/TAILLE_APK.md pour la politique et l'origine du poids.
+          EOF
+
+      - name: Publier les APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: signalpro-apk
+          path: |
+            android/app/build/outputs/apk/debug/*.apk
+            android/app/build/outputs/apk/release/*.apk
+          if-no-files-found: error
+
+      - name: Publier les rapports de tests
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: signalpro-test-reports
+          path: android/app/build/reports/tests/**
+          if-no-files-found: ignore

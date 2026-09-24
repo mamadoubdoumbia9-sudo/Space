@@ -1,0 +1,26 @@
+{
+  "name": "signalpro-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interface web SignalPro : signalements, import CSV/Excel, communaut\u00e9, console de mod\u00e9ration.",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0 -p 3000",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p 3000",
+    "typecheck": "tsc --noEmit",
+    "check:contrats": "node scripts/verifier_contrats.mjs",
+    "check:parcours": "node scripts/parcours.mjs",
+    "check": "npm run typecheck && npm run check:contrats"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "typescript": "5.5.4"
+  }
+}
