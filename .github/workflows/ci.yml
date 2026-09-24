@@ -246,20 +246,35 @@ jobs:
           APKSIGNER="$(find "$SDK/build-tools" -maxdepth 2 -type f -name apksigner | sort | tail -1)"
           echo "### Contenu vérifié des APK" >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
+          DEXDUMP="$(find "$SDK/build-tools" -maxdepth 2 -type f -name dexdump | sort | tail -1)"
           for apk in $(find app/build/outputs/apk -name "*.apk" | sort); do
             name=$(basename "$apk")
             dex=$(unzip -l "$apk" | grep -cE "classes[0-9]*\.dex")
-            pkg=$("$AAPT2" dump badging "$apk" 2>/dev/null | grep -m1 "^package:" | sed "s/package: //")
-            minsdk=$("$AAPT2" dump badging "$apk" 2>/dev/null | grep -m1 "^sdkVersion:" | cut -d: -f2)
-            targetsdk=$("$AAPT2" dump badging "$apk" 2>/dev/null | grep -m1 "^targetSdkVersion:" | cut -d: -f2)
-            perms=$("$AAPT2" dump badging "$apk" 2>/dev/null | grep -c "^uses-permission:")
+            badging=$("$AAPT2" dump badging "$apk" 2>/dev/null)
+            pkg=$(echo "$badging" | grep -m1 "^package:" | sed "s/package: //")
+            # aapt2 récent écrit « minSdkVersion », les versions antérieures « sdkVersion ».
+            minsdk=$(echo "$badging" | grep -m1E "^(min)?[sS]dkVersion:" | cut -d: -f2)
+            targetsdk=$(echo "$badging" | grep -m1 "^targetSdkVersion:" | cut -d: -f2)
+            perms=$(echo "$badging" | grep "^uses-permission:" | sed "s/uses-permission: name=//" | tr -d "'" | sort | tr '\n' ' ')
+            # Nombre de classes réellement conservées par R8 dans les DEX embarqués.
+            tmp=$(mktemp -d)
+            unzip -o -q "$apk" "classes*.dex" -d "$tmp" 2>/dev/null || true
+            classes=0
+            if [ -n "$DEXDUMP" ]; then
+              for dex_file in "$tmp"/classes*.dex; do
+                [ -f "$dex_file" ] || continue
+                n=$("$DEXDUMP" -f "$dex_file" 2>/dev/null | grep -m1 "class_defs_size" | grep -oE "[0-9]+")
+                classes=$((classes + ${n:-0}))
+              done
+            fi
+            rm -rf "$tmp"
             if "$APKSIGNER" verify "$apk" > /dev/null 2>&1; then
               sig="$("$APKSIGNER" verify --print-certs "$apk" | grep -m1 "Signer #1 certificate DN:" | sed "s/.*DN: //")"
-              sig_line="signature=valide (${sig})"
+              sig_line="signature=valide${sig:+ ($sig)}"
             else
               sig_line="signature=absente (APK non installable en l'état)"
             fi
-            line="$name | dex=$dex | minSdk=$minsdk | targetSdk=$targetsdk | permissions=$perms | $pkg | $sig_line"
+            line="$name | dex=$dex | classes=$classes | minSdk=$minsdk | targetSdk=$targetsdk | $pkg | $sig_line | permissions: $perms"
             echo "$line" >> "$GITHUB_STEP_SUMMARY"
             echo "::notice::$line"
           done
