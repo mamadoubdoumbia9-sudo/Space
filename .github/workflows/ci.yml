@@ -215,6 +215,15 @@ jobs:
             tail -80 ci-logs/tests.log 2>/dev/null || echo "aucun journal de tests"
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
+          # Les erreurs de compilation sont publiées en annotations GitHub : elles
+          # restent consultables via l'API même quand les journaux d'exécution ne sont
+          # pas téléchargeables, ce qui permet de corriger le code sans deviner.
+          grep -E "^(e: |w: .*error|> Task .* FAILED|.*error: |FAILURE: |Execution failed for task)" ci-logs/tests.log 2>/dev/null \
+            | head -40 \
+            | while IFS= read -r line; do
+                echo "::error::$line"
+              done
+          exit 0
 
       - name: Taille réelle des APK (aucun remplissage artificiel)
         run: |
