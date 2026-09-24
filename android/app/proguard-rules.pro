@@ -31,3 +31,22 @@
     public static *** v(...);
     public static *** i(...);
 }
+
+# --- Dépendances optionnelles (absentes du classpath Android) --------------
+# Ces classes ne sont jamais chargées sur Android : elles sont référencées par
+# des bibliothèques (OkHttp, Tink/security-crypto, Coil, ZXing) dans des chemins
+# de repli. Les déclarer absentes évite l'échec de la minification release,
+# sans masquer d'erreur réelle dans notre propre code.
+-dontwarn org.bouncycastle.**
+-dontwarn org.conscrypt.**
+-dontwarn org.openjsse.**
+-dontwarn org.slf4j.**
+-dontwarn com.google.errorprone.annotations.**
+-dontwarn javax.annotation.**
+-dontwarn kotlinx.coroutines.debug.**
+-dontwarn androidx.camera.**
+-dontwarn com.google.zxing.client.android.**
+
+# --- androidx.work / Room --------------------------------------------------
+-keep class * extends androidx.work.ListenableWorker { <init>(...); }
+-dontwarn androidx.work.**
