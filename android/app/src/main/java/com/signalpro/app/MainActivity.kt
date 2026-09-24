@@ -13,6 +13,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.lifecycleScope
+import com.signalpro.app.ui.AppNavHost
+import com.signalpro.app.ui.SignalProTheme
+import com.signalpro.app.ui.SplashScreen
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
