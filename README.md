@@ -32,7 +32,7 @@ confirmés malveillants, blocage en masse, contestation).
 | Contestation examinée par un **humain**, retrait si les preuves sont fausses | `backend/app/routers/moderation.py` (contestations), `ModerationPanel.tsx`, `ModerationScreen.kt` | parcours web — file, téléchargement de preuve, décision motivée |
 | Tableau de bord : mes numéros et leur état, compteur de suspensions, export de ma liste bloquée, alerte de contact malveillant | `backend/app/routers/dashboard.py`, `DashboardPanel.tsx`, `DashboardScreen.kt` | parcours web — exports CSV/PDF/XLSX et alertes |
 | Anti-abus **non désactivable** : vérification e-mail/téléphone, 20 signalements/jour, 5/heure, 10 actions/minute, rejet automatique sans preuve, 2 avertissements puis bannissement définitif | `backend/app/services/limits.py`, `services/escalation.py`, `routers/auth.py` | `python scripts/anti_abuse_check.py` — **9/9** et pytest |
-| Interdiction de signaler un numéro qui ne vous a jamais contacté (exception modérateurs de groupe) | `backend/app/services/reports.py` (vérification du contact via appareil lié ou déclaration) | pytest — signalement refusé sans preuve de contact |
+| Interdiction de signaler un numéro qui ne vous a jamais contacté (exception modérateurs de groupe) | `backend/app/services/reports.py` — `check_contact_proof` décide seul de la méthode ; la valeur envoyée par le client ne la remplace pas | pytest + parcours web : un compte neuf sans WhatsApp lié reçoit un refus explicite (« Liez d'abord votre WhatsApp »), y compris en déclarant une autre méthode |
 | Avertissement d'accueil **et** avant envoi : fausse déclaration poursuivable, aucune garantie de bannissement | `web/app/page.tsx` (rendu serveur), `ReportsPanel.tsx`, `ReportNewScreen.kt`, `DisclaimerBanner` | parcours web — présence vérifiée dans le HTML rendu côté serveur |
 | Suppression des données à la demande, aucune revente ni partage | `routers/auth.py` (`DELETE /me`), `services/audit.py` | pytest + parcours web |
 | Chiffrement des données sensibles, aucun secret dans l'APK, jamais de message stocké sans consentement | AES-256-GCM + index aveugles HMAC (`core/crypto`), `SecureStore`, `BuildConfig` sans clé | pytest + **permissions réelles de l'APK livré** (8, aucune de stockage, contacts, SMS ou journal d'appels) |
@@ -72,7 +72,7 @@ cd web
 npm ci
 API_PROXY_TARGET=http://127.0.0.1:8000 npm run dev   # http://localhost:3000
 npm run check:contrats                               # catégories et routes alignées sur le backend
-npm run check:parcours                               # parcours réel de bout en bout (54 contrôles)
+npm run check:parcours                               # parcours réel de bout en bout (jusqu'à 69 contrôles)
 
 # 3) Passerelle locale WhatsApp (sur la machine de l'utilisateur, pas sur le serveur)
 cd ../gateway
@@ -92,7 +92,7 @@ gradle testDebugUnitTest assembleDebug               # ou ./gradlew, si vous ajo
 | `cd backend && ENV=test python -m pytest tests/ -q` | règles métier, sécurité, preuves, modération, quotas |
 | `cd backend && ENV=test python scripts/anti_abuse_check.py` | les 9 protections anti-abus, sur une base temporaire (aucun serveur à lancer) |
 | `cd web && npm run check:contrats` | les catégories de l'interface correspondent à l'énumération du serveur et **chaque route appelée existe** (`openapi.json`) |
-| `cd web && npm run check:parcours` | parcours web complet : accueil + avertissements, signalement avec capture réelle, import CSV français, contestation, détection, liaison WhatsApp refusée sans consentement ou avec une version obsolète, modération (décision, preuve téléchargée, dossier PDF) |
+| `cd web && npm run check:parcours` | parcours web complet : accueil + avertissements, inscription et vérification par e-mail d'un compte neuf, refus de signaler sans WhatsApp lié, signalement avec capture réelle, import CSV français, contestation, détection, liaison WhatsApp refusée sans consentement ou avec une version obsolète, fonctions présentes dans le paquet JavaScript livré, modération (décision, preuve téléchargée, dossier PDF) |
 | `cd gateway && npm test` | signature HMAC, fenêtre temporelle, routes de la passerelle |
 | CI `.github/workflows/ci.yml` | backend, passerelle, web (build + contrats + parcours) et Android (tests + APK), puis vérification du binaire livré : paquet, `minSdk`/`targetSdk`, nombre de DEX, permissions exactes et validité de la signature |
 
@@ -114,7 +114,7 @@ gradle testDebugUnitTest assembleDebug               # ou ./gradlew, si vous ajo
 | Anti-abus (interface de test) | `cd backend && ENV=test python scripts/anti_abuse_check.py` | **9/9 contrôles** |
 | Passerelle | `cd gateway && node --test test/*.test.js` | **7 passés** |
 | Web (contrats) | `cd web && npm run check:contrats` | **contrats respectés** |
-| Web (parcours réel) | `cd web && npm run check:parcours` | **54/54 contrôles** |
+| Web (parcours réel) | `cd web && npm run check:parcours` | **69/69 contrôles** sur un jeu neuf (les étapes qui exigent une file de modération non vide sont signalées « ignorées » si la file a déjà été traitée) |
 | Android | `cd android && gradle testDebugUnitTest assembleDebug` | exécuté par la CI (aucun SDK local) : 3 suites unitaires passées |
 
 ## APK réellement produits

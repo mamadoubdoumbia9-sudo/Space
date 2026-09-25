@@ -41,9 +41,6 @@ export default function ReportsPanel() {
   const [messageIds, setMessageIds] = useState("");
   const [storeMessages, setStoreMessages] = useState(false);
   const [excerpt, setExcerpt] = useState("");
-  const [contactProof, setContactProof] = useState<"linked_device_scan" | "manual_declaration">(
-    "linked_device_scan",
-  );
   const [createdReport, setCreatedReport] = useState<Row | null>(null);
   const [evidenceKind, setEvidenceKind] = useState("screenshot");
   const [preview, setPreview] = useState<Row | null>(null);
@@ -85,7 +82,9 @@ export default function ReportsPanel() {
         category,
         occurred_at: new Date(occurredAt).toISOString(),
         description,
-        contact_proof_method: contactProof,
+        // Le serveur décide de la méthode effective ; on déclare la vérification par
+        // appareil lié, la seule admise hors comptes modérateurs.
+        contact_proof_method: "linked_device_scan",
         store_messages: storeMessages,
       };
       if (messageIds.trim()) {
@@ -191,13 +190,13 @@ export default function ReportsPanel() {
             Date et heure de réception
             <input type="datetime-local" value={occurredAt} onChange={(event) => setOccurredAt(event.target.value)} />
           </label>
-          <label>
-            Preuve de contact
-            <select value={contactProof} onChange={(event) => setContactProof(event.target.value as any)}>
-              <option value="linked_device_scan">Vérification via mon appareil lié (recommandé)</option>
-              <option value="manual_declaration">Déclaration manuelle (contrôlée par un modérateur)</option>
-            </select>
-          </label>
+          <div>
+            <p className="muted">
+              <strong>Preuve de contact (non désactivable)</strong> — le serveur vérifie lui-même que le numéro
+              figure dans les conversations de votre WhatsApp lié. Signaler un numéro qui ne vous a jamais écrit
+              est refusé ; il n&apos;existe aucune déclaration sur l&apos;honneur qui contourne ce contrôle.
+            </p>
+          </div>
         </div>
         <label>
           Description courte (10 caractères minimum, factuelle)

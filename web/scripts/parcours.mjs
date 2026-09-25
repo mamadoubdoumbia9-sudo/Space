@@ -201,6 +201,71 @@ async function main() {
     }
   }
 
+  // Vérification obligatoire du compte ET refus de signaler sans WhatsApp lié : un
+  // compte neuf est créé à chaque exécution (adresse unique), ce qui garantit un quota
+  // intact et prouve que le parcours d'inscription fonctionne réellement.
+  console.log("\n1 ter) Compte neuf : vérification obligatoire et refus sans WhatsApp lié");
+  {
+    const suffix = `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 7)}`;
+    const email = `controle-${suffix}@example.org`;
+    const phone = `+2239${Math.floor(1000000 + Math.random() * 8999999)}`;
+    const password = `Controle-${suffix}-Aa1`;
+    const registered = await call("inscription d'un compte neuf", "/api/v1/auth/register", {
+      method: "POST",
+      json: {
+        email,
+        phone,
+        password,
+        display_name: "Compte de contrôle",
+        channel: "email",
+        accept_terms: true,
+        accept_privacy: true,
+      },
+      allowed: [201],
+    });
+    const registration = jsonOf(registered);
+    record(
+      "la vérification par e-mail est exigée (code émis)",
+      typeof registration.dev_code === "string" && registration.dev_code.length >= 4,
+      `canal ${registration.verification_channel}`,
+    );
+    const verified = await call("validation du code reçu", "/api/v1/auth/verify", {
+      method: "POST",
+      json: { email, code: registration.dev_code },
+    });
+    const freshToken = jsonOf(verified).access_token;
+    record("le compte neuf reçoit un jeton utilisable", typeof freshToken === "string" && freshToken.length > 20);
+    if (freshToken) {
+      const limits = await call("quotas du compte neuf", "/api/v1/auth/limits", { token: freshToken });
+      const quota = jsonOf(limits);
+      record(
+        "les plafonds anti-abus sont appliqués dès la création du compte",
+        Number(quota.max_reports_per_day_user) === 20 &&
+          Number(quota.max_reports_per_hour_user) === 5 &&
+          Number(quota.max_actions_per_minute_user) === 10,
+        `${quota.max_actions_per_minute_user} actions/min · ${quota.max_reports_per_hour_user}/h · ${quota.max_reports_per_day_user}/j`,
+      );
+      const refused = await call("signalement refusé sans WhatsApp lié", "/api/v1/reports", {
+        method: "POST",
+        token: freshToken,
+        json: {
+          target_phone: "+22360000001",
+          category: "spam",
+          occurred_at: "2026-08-01T09:00:00Z",
+          description: "Contrôle automatique : aucun appareil lié sur ce compte.",
+          contact_proof_method: "manual_declaration",
+          store_messages: false,
+        },
+        allowed: [422],
+      });
+      record(
+        "le refus exige de lier son WhatsApp (aucun contournement par déclaration)",
+        /liez d'abord votre whatsapp/i.test(jsonOf(refused).detail ?? ""),
+        String(jsonOf(refused).detail ?? "").slice(0, 110),
+      );
+    }
+  }
+
   console.log("\n2) Parcours utilisateur (alice@example.org)");
   const alice = await login("alice@example.org", "AliceSignalPro123");
   await call("session et profil", "/api/v1/auth/me", { token: alice });

@@ -19,7 +19,6 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -237,7 +236,7 @@ fun ReportNewScreen(
             ReportForm(
                 targetPhone = sharedText?.let { extractPhone(it) } ?: "",
                 occurredAt = defaultDate,
-                proofMethod = "manual_declaration",
+                proofMethod = "linked_device_scan",
             ),
         )
     }
@@ -332,32 +331,21 @@ fun ReportNewScreen(
             modifier = Modifier.fillMaxWidth(),
         )
 
-        Text("Preuve de contact", fontWeight = FontWeight.SemiBold)
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            RadioButton(
-                selected = form.proofMethod == "linked_device_scan",
-                onClick = { form = form.copy(proofMethod = "linked_device_scan") },
-                enabled = state.hasConnectedDevice,
-            )
-            Text(
-                if (state.hasConnectedDevice) {
-                    "Via mon WhatsApp lié (vérification automatique que ce numéro m'a contacté)"
-                } else {
-                    "Via mon WhatsApp lié — indisponible : aucun appareil connecté"
-                },
-                style = MaterialTheme.typography.bodySmall,
-            )
-        }
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            RadioButton(
-                selected = form.proofMethod == "manual_declaration",
-                onClick = { form = form.copy(proofMethod = "manual_declaration") },
-            )
-            Text(
-                "Déclaration sur l'honneur + capture d'écran de la conversation (relue par un modérateur)",
-                style = MaterialTheme.typography.bodySmall,
-            )
-        }
+        Text("Preuve de contact (non désactivable)", fontWeight = FontWeight.SemiBold)
+        // Il n'y a PAS de choix : le serveur vérifie lui-même que le numéro figure bien
+        // dans les conversations de l'appareil lié. Une « déclaration sur l'honneur »
+        // n'existe pas comme contournement — l'afficher comme option serait mensonger.
+        Text(
+            if (state.hasConnectedDevice) {
+                "Vérification automatique via votre WhatsApp lié : le signalement n'est accepté que si ce " +
+                    "numéro vous a réellement écrit. Aucun signalement n'est jamais transmis sans preuve."
+            } else {
+                "Aucun appareil WhatsApp connecté : liez d'abord votre WhatsApp dans « Appareil ». C'est la " +
+                    "condition pour signaler — l'application n'accepte pas de signaler un numéro qui ne vous a " +
+                    "jamais contacté (règle anti-abus non désactivable)."
+            },
+            style = MaterialTheme.typography.bodySmall,
+        )
 
         Text("Pièces justificatives (au moins une obligatoire)", fontWeight = FontWeight.SemiBold)
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
