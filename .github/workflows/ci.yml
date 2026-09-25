@@ -175,6 +175,23 @@ jobs:
           mkdir -p ci-logs
           gradle --no-daemon --console=plain testDebugUnitTest 2>&1 | tee ci-logs/tests.log
 
+      # Preuve chiffrée et vérifiable : combien de tests unitaires ont réellement tourné,
+      # et combien ont échoué. Publié en annotation, donc lisible via l'API GitHub.
+      - name: Vérification des tests unitaires exécutés
+        if: always()
+        run: |
+          results=app/build/test-results/testDebugUnitTest
+          if ! compgen -G "$results/*.xml" > /dev/null 2>&1; then
+            echo "::warning::aucun résultat de test unitaire trouvé (les tests n'ont pas abouti)"
+            exit 0
+          fi
+          count() { grep -ho "$1=\"[0-9]*\"" $results/*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s+0}'; }
+          total=$(count tests); failed=$(count failures); errors=$(count errors); skipped=$(count skipped)
+          suites=$(ls $results/*.xml | wc -l)
+          line="Tests unitaires Android : $total exécutés sur $suites classes, $failed échec(s), $errors erreur(s), $skipped ignoré(s)"
+          echo "### $line" >> "$GITHUB_STEP_SUMMARY"
+          echo "::notice::$line"
+
       - name: Clé de signature (fournie par les secrets du dépôt)
         # `secrets` n'est pas un contexte autorisé dans un `if` : GitHub rejette alors
         # le fichier entier (« workflow file issue »). La valeur passe donc par `env`,

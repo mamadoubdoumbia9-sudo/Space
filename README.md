@@ -118,6 +118,12 @@ contactée et pourquoi elle a échoué, et permet de la changer.
    `https://votre-domaine/`. L'application signale explicitement une connexion non
    chiffrée.
 
+**Option la plus rapide pour un essai sur votre téléphone** : si une session Arena fait
+tourner l'API (`uvicorn … --port 8000`), l'aperçu en direct expose cette même API en
+HTTPS via un hôte public de la forme `https://8000-<identifiant>.e2b.app/`. Saisissez
+cette adresse dans l'application et appuyez sur *Tester la connexion*. Elle ne vit que
+le temps de la session : pour un usage durable, auto-hébergez l'API (points 1 à 4).
+
 Messages d'erreur désormais affichés, avec l'adresse réellement contactée :
 
 | Cause | Message |
@@ -161,7 +167,7 @@ Aucun de ces messages ne prétend qu'une action a réussi : dans tous les cas, *
 | Passerelle | `cd gateway && node --test test/*.test.js` | **7 passés** |
 | Web (contrats) | `cd web && npm run check:contrats` | **contrats respectés** |
 | Web (parcours réel) | `cd web && npm run check:parcours` | **69/69 contrôles** sur un jeu neuf (les étapes qui exigent une file de modération non vide sont signalées « ignorées » si la file a déjà été traitée) |
-| Android | `cd android && gradle testDebugUnitTest assembleDebug` | exécuté par la CI (aucun SDK local) : 3 suites unitaires passées |
+| Android | `cd android && gradle testDebugUnitTest assembleDebug` | exécuté par la CI (aucun SDK local) : **28 tests sur 5 classes** — `Validation`, `ScamScanner`, contrats d'API, `ServerUrlTest`, `NetworkErrorsTest`. Le nombre exact est publié en annotation à chaque exécution |
 
 ## APK réellement produits
 
@@ -173,7 +179,7 @@ vertes) :
 | APK | Taille | Détails vérifiés |
 | --- | --- | --- |
 | `app-release.apk` | **2 198 548 octets** (2,10 Mio) | `com.signalpro.app` 1.0.0, `minSdk 26`, `targetSdk 35`, 1 DEX, **4 565 classes** conservées par R8, **8 permissions** (aucune de stockage, contacts, SMS ni journal d'appels), **signature valide** |
-| `app-debug.apk` | **21 238 920 octets** (20,25 Mio) | `com.signalpro.app.debug` 1.0.0-debug, `targetSdk 35`, 12 DEX, 31 684 classes, 10 permissions (deux de stockage apportées par l'outillage de debug uniquement), signature valide |
+| `app-debug.apk` | **21 255 367 octets** (20,27 Mio) | `com.signalpro.app.debug` 1.0.0-debug, `targetSdk 35`, 12 DEX, 10 permissions (deux de stockage apportées par l'outillage de debug uniquement), signature valide |
 
 Aucune clé n'est versionnée : si le dépôt ne contient pas de secrets `SIGNING_*`, la CI
 génère une clé **jetable** pour que l'APK release soit installable. Cet APK jetable

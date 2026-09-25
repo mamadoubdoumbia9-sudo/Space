@@ -23,12 +23,12 @@ classes effectivement conservées par R8 (`dexdump`), liste exacte des permissio
 fusionnées dans le manifeste et validité de la signature (`apksigner`). Ces valeurs
 sont également publiées en annotations, donc lisibles même sans télécharger l'artefact.
 
-### Mesures réelles (exécution CI `36079705532`, quatre tâches vertes)
+### Mesures réelles (exécution CI `36090531990`, quatre tâches vertes)
 
 | APK | Taille | Empreinte SHA-256 (début) | Vérifications |
 | --- | --- | --- | --- |
-| `app/build/outputs/apk/release/app-release.apk` | **2 198 548 octets** (2,10 Mio) | `c2341ebb4b4fa3ae44baeffa940d2fec…` | `com.signalpro.app` 1.0.0, `minSdk 26`, `targetSdk 35`, 1 DEX, 4 565 classes, 8 permissions, signature valide (clé jetable de CI) |
-| `app/build/outputs/apk/debug/app-debug.apk` | **21 238 920 octets** (20,25 Mio) | `4108e88eb43e537c742e42c86aa16d6e…` | `com.signalpro.app.debug` 1.0.0-debug, `targetSdk 35`, 12 DEX, 31 684 classes, 10 permissions, signature valide (clé de debug) |
+| `app/build/outputs/apk/release/app-release.apk` | **2 198 552 octets** (2,10 Mio) | `8791b12a612bbefc23f165260aeea0d3…` | `com.signalpro.app` 1.0.0, `minSdk 26`, `targetSdk 35`, 1 DEX, 4 578 classes, 8 permissions, signature valide (clé jetable de CI) |
+| `app/build/outputs/apk/debug/app-debug.apk` | **21 255 367 octets** (20,27 Mio) | `f88db05c279763da6503cbb0bc5cb2b7…` | `com.signalpro.app.debug` 1.0.0-debug, `targetSdk 35`, 12 DEX, 10 permissions, signature valide (clé de debug) |
 
 Les deux chiffres sont **inférieurs aux 100 Mo demandés**. L'écart n'est pas un défaut
 de construction : l'APK de version ne pèse que 2,1 Mio parce que R8 supprime tout le
@@ -69,7 +69,7 @@ fichiers que l'utilisateur choisit explicitement (sélecteur de fichiers du syst
 aux conversations synchronisées par sa propre passerelle. C'est la conséquence directe
 de la règle « jamais de message stocké sans consentement explicite ».
 
-Le nombre de classes conservées par R8 (4 565 en release, contre 31 684 en debug) est
+Le nombre de classes conservées par R8 (4 578 en release, contre 31 684 en debug) est
 également relevé à chaque exécution : il prouve que l'APK de 2,1 Mio contient bien le
 code de l'application, et non un binaire vide.
 
@@ -77,7 +77,7 @@ code de l'application, et non un binaire vide.
 
 | Élément | Poids | Justification |
 | --- | --- | --- |
-| Code Kotlin compilé puis minifié par R8 | ≈ 1,5 Mo (1 seul DEX en release) | écrans Compose, dépôts, sécurité, base locale, détection hors ligne |
+| Code Kotlin compilé puis minifié par R8 | ≈ 1,5 Mo (1 seul DEX, 4 578 classes en release) | écrans Compose, dépôts, sécurité, base locale, détection hors ligne, choix du serveur |
 | Ressources réduites (`shrinkResources`) | ≈ 0,5 Mo | chaînes françaises, thèmes, icônes vectorielles — aucune image matricielle |
 | Dépendances AndroidX (Room, WorkManager, DataStore, security-crypto) | incluses ci-dessus après réduction | stockage local chiffré, synchronisation, jetons protégés |
 | OkHttp + Retrofit + kotlinx.serialization | idem | appels API et passerelle HMAC |
@@ -122,7 +122,7 @@ aucun cas un fichier de remplissage ne sera ajouté pour atteindre un chiffre.
 ## 6. À retenir
 
 - **Aucun remplissage.** L'APK contient exactement les ressources nécessaires :
-  2 198 548 octets pour la version release signée, 21 238 920 octets pour la version de
+  2 198 552 octets pour la version release signée, 21 255 367 octets pour la version de
   débogage (mesures CI du 25 septembre 2026).
 - La taille réelle est **publiée et vérifiée à chaque build** ; c'est la seule valeur
   de référence, accompagnée de l'empreinte SHA-256 du binaire.
