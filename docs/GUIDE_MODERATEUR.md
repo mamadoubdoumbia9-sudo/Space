@@ -42,8 +42,10 @@ Contrôles recommandés avant décision :
 1. **Preuve lisible** : capture montrant bien le numéro et le message, export
    cohérent, empreinte SHA-256 valide (l'application et l'API affichent le contrôle
    d'intégrité) ;
-2. **Preuve de contact** : la vérification par appareil lié est automatique, une
-   déclaration manuelle exige de vérifier la capture ;
+2. **Preuve de contact** : elle est automatique — le serveur vérifie que le numéro
+   figure dans les conversations synchronisées de l'appareil lié de l'auteur. Aucune
+   déclaration de l'utilisateur ne remplace ce contrôle (seuls les comptes modérateurs
+   en sont dispensés, et cette exemption est tracée dans le journal d'audit) ;
 3. **Cohérence** : catégorie ↔ contenu, date non future, description factuelle ;
 4. **Doublons** : même auteur / même cible / même horodatage est refusé par le
    serveur ; les preuves réutilisées mot pour mot sont traitées comme abusives.
