@@ -103,8 +103,8 @@ vertes) :
 
 | APK | Taille | Détails vérifiés |
 | --- | --- | --- |
-| `app-release.apk` | **2 198 548 octets** (2,10 Mio) | `com.signalpro.app` 1.0.0, `targetSdk 35`, 1 DEX, 8 permissions, **signature valide** |
-| `app-debug.apk` | **21 238 920 octets** (20,25 Mio) | `com.signalpro.app.debug` 1.0.0-debug, `targetSdk 35`, 12 DEX, 10 permissions, signature valide (clé de debug) |
+| `app-release.apk` | **2 198 548 octets** (2,10 Mio) | `com.signalpro.app` 1.0.0, `targetSdk 35`, 1 DEX, **4 566 classes** conservées par R8, **8 permissions** (aucune de stockage, contacts, SMS ni journal d'appels), **signature valide** |
+| `app-debug.apk` | **21 238 920 octets** (20,25 Mio) | `com.signalpro.app.debug` 1.0.0-debug, `targetSdk 35`, 12 DEX, 31 684 classes, 10 permissions (deux de stockage apportées par l'outillage de debug uniquement), signature valide |
 
 Aucune clé n'est versionnée : si le dépôt ne contient pas de secrets `SIGNING_*`, la CI
 génère une clé **jetable** pour que l'APK release soit installable. Cet APK jetable

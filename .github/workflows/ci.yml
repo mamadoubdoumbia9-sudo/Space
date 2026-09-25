@@ -252,8 +252,8 @@ jobs:
             dex=$(unzip -l "$apk" | grep -cE "classes[0-9]*\.dex")
             badging=$("$AAPT2" dump badging "$apk" 2>/dev/null)
             pkg=$(echo "$badging" | grep -m1 "^package:" | sed "s/package: //")
-            # aapt2 récent écrit « minSdkVersion », les versions antérieures « sdkVersion ».
-            minsdk=$(echo "$badging" | grep -m1E "^(min)?[sS]dkVersion:" | cut -d: -f2)
+            # aapt2 écrit « sdkVersion » (ou « minSdkVersion » selon la version d'outils).
+            minsdk=$(echo "$badging" | sed -n "s/^min\?[sS]dkVersion:'\?\([0-9]*\)'\?.*/\1/p" | head -1)
             targetsdk=$(echo "$badging" | grep -m1 "^targetSdkVersion:" | cut -d: -f2)
             perms=$(echo "$badging" | grep "^uses-permission:" | sed "s/uses-permission: name=//" | tr -d "'" | sort | tr '\n' ' ')
             # Nombre de classes réellement conservées par R8 dans les DEX embarqués.

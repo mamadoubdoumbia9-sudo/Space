@@ -46,6 +46,23 @@ Compose (`ui-tooling`), LeakCanary et douze DEX non minifiés.
 
 La valeur de référence pour la distribution est celle de l'APK `release` signé.
 
+### Permissions réellement embarquées (relevé automatique)
+
+| APK | Permissions fusionnées dans le manifeste |
+| --- | --- |
+| release | `INTERNET`, `ACCESS_NETWORK_STATE`, `CAMERA`, `POST_NOTIFICATIONS`, `FOREGROUND_SERVICE`, `RECEIVE_BOOT_COMPLETED`, `WAKE_LOCK`, `DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION` |
+| debug | les mêmes **plus** `READ_EXTERNAL_STORAGE` et `WRITE_EXTERNAL_STORAGE`, apportées par l'outillage de débogage (LeakCanary) — elles **ne sont pas** dans l'APK livré |
+
+Aucune permission de lecture des **SMS**, des **contacts**, du **journal d'appels** ou du
+**stockage** n'est demandée par la version distribuée : l'application n'accède qu'aux
+fichiers que l'utilisateur choisit explicitement (sélecteur de fichiers du système) et
+aux conversations synchronisées par sa propre passerelle. C'est la conséquence directe
+de la règle « jamais de message stocké sans consentement explicite ».
+
+Le nombre de classes conservées par R8 (4 566 en release, contre 31 684 en debug) est
+également relevé à chaque exécution : il prouve que l'APK de 2,1 Mio contient bien le
+code de l'application, et non un binaire vide.
+
 ## 3. Ce que contient réellement l'application
 
 | Élément | Poids | Justification |
