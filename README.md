@@ -37,6 +37,7 @@ confirmés malveillants, blocage en masse, contestation).
 | Suppression des données à la demande, aucune revente ni partage | `routers/auth.py` (`DELETE /me`), `services/audit.py` | pytest + parcours web |
 | Chiffrement des données sensibles, aucun secret dans l'APK, jamais de message stocké sans consentement | AES-256-GCM + index aveugles HMAC (`core/crypto`), `SecureStore`, `BuildConfig` sans clé | pytest + **permissions réelles de l'APK livré** (8, aucune de stockage, contacts, SMS ou journal d'appels) |
 | Journal d'audit complet pour réquisition judiciaire | `backend/app/services/audit.py`, `routers/moderation.py` | pytest + parcours web (journal d'audit) |
+| Adresse du serveur configurable dans l'application (aucune adresse imposée) | `core/net/ServerUrl.kt` (validation), `ui/ServerSettings.kt` (écran + test réel de `/health`), `apps/…/SecureStore` (adresse mémorisée) | tests unitaires `ServerUrlTest` + `NetworkErrorsTest` exécutés en CI |
 | APK de version livré | CI `.github/workflows/ci.yml` → artefact `signalpro-apk` | `app-release.apk` **2 198 548 octets**, 1 DEX, 4 566 classes, `minSdk 26`, `targetSdk 35`, signature valide |
 
 ## Architecture
@@ -84,6 +85,51 @@ npm start                                            # http://127.0.0.1:8787
 cd ../android
 gradle testDebugUnitTest assembleDebug               # ou ./gradlew, si vous ajoutez le wrapper
 ```
+
+## Brancher l'application Android sur VOTRE serveur (indispensable)
+
+L'application **n'a pas de serveur « par défaut »** : elle est auto-hébergeable. Un APK
+livré sans adresse configurée ne peut rien envoyer — c'est le défaut corrigé ici : au lieu
+d'un « réseau indisponible » trompeur, l'application dit maintenant quelle adresse elle a
+contactée et pourquoi elle a échoué, et permet de la changer.
+
+1. **Lancez l'API sur votre ordinateur**, en écoutant sur toutes les interfaces :
+   ```bash
+   cd backend
+   ENV=dev ALLOW_CONSOLE_VERIFICATION=true python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
+   ```
+2. **Trouvez l'adresse IP de l'ordinateur sur le réseau local** :
+   ```bash
+   ip addr | grep "inet 192"      # Linux
+   ipconfig                        # Windows : « Adresse IPv4 »
+   ```
+   Exemple : `192.168.1.20`. Le téléphone doit être sur le **même réseau Wi-Fi**.
+3. **Autorisez le port 8000** dans le pare-feu de l'ordinateur (sans quoi la connexion
+   sera refusée) :
+   ```bash
+   sudo ufw allow 8000/tcp         # Linux (ufw)
+   ```
+   Sous Windows : « Pare-feu Windows Defender » → Autoriser une application → port 8000.
+4. **Dans l'application**, soit sur l'écran de connexion, soit dans *Réglages → Serveur
+   SignalPro*, saisissez `http://192.168.1.20:8000/` puis **Tester la connexion** : le
+   résultat est un vrai appel à `/health` (« Serveur joignable (HTTP 200) » ou la cause
+   exacte de l'échec). Enregistrez ensuite l'adresse.
+5. Hors réseau local, exposez l'API en **HTTPS** (reverse proxy) et utilisez
+   `https://votre-domaine/`. L'application signale explicitement une connexion non
+   chiffrée.
+
+Messages d'erreur désormais affichés, avec l'adresse réellement contactée :
+
+| Cause | Message |
+| --- | --- |
+| Aucun serveur configuré / domaine inexistant | « Serveur introuvable : `api.signalpro.example:443` n'existe pas… Vérifiez l'adresse dans Réglages → Serveur » |
+| Serveur éteint ou port fermé | « Connexion refusée par `192.168.1.20:8000` : le serveur n'écoute pas sur ce port » |
+| Réseau différent / route absente | « Aucune route vers `192.168.1.20:8000` : le téléphone et le serveur ne sont pas sur le même réseau » |
+| Pare-feu silencieux | « Le serveur `192.168.1.20:8000` ne répond pas (délai dépassé) » |
+| Certificat HTTPS invalide | « Connexion chiffrée refusée par … (certificat invalide, expiré ou non reconnu) » |
+
+Aucun de ces messages ne prétend qu'une action a réussi : dans tous les cas, **rien n'a
+été transmis**.
 
 ## Vérifications réellement exécutables
 

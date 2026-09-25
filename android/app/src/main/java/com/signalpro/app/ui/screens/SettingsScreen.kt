@@ -39,6 +39,7 @@ import com.signalpro.app.data.evidence.EvidenceStager
 import com.signalpro.app.data.remote.ApiResult
 import com.signalpro.app.data.remote.UserDto
 import com.signalpro.app.ui.InfoCard
+import com.signalpro.app.ui.ServerUrlCard
 import com.signalpro.app.ui.ScreenColumn
 import com.signalpro.app.ui.collectAsStateSafe
 import com.signalpro.app.ui.containerViewModel
@@ -233,6 +234,8 @@ fun SettingsScreen(container: AppContainer, onLoggedOut: () -> Unit) {
                 }
             }
         }
+
+        ServerUrlCard(container)
 
         Text("Alertes et synchronisation", fontWeight = FontWeight.SemiBold)
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {

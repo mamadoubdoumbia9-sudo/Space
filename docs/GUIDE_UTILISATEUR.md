@@ -1,5 +1,30 @@
 # Guide utilisateur
 
+## 0. Indiquer l'adresse de votre serveur (à faire une fois)
+
+SignalPro n'est pas un service centralisé : **il n'y a aucun serveur SignalPro « par
+défaut »**. Tant qu'aucune adresse n'est renseignée, l'application ne peut rien envoyer et
+vous le dit clairement (« Serveur introuvable : … n'existe pas »).
+
+Où la renseigner :
+
+- sur l'écran de connexion ou d'inscription, encart **« Serveur SignalPro »** ;
+- ensuite, à tout moment : **Réglages → Serveur SignalPro**.
+
+Comment la connaître :
+
+1. le serveur tourne sur un ordinateur qui exécute l'API (`uvicorn … --host 0.0.0.0 --port 8000`) ;
+2. notez l'adresse IP de cet ordinateur sur votre réseau (ex. `192.168.1.20`) ;
+3. dans l'application, saisissez `http://192.168.1.20:8000/` et appuyez sur **Tester la
+   connexion** : un vrai appel est envoyé, la réponse s'affiche (« Serveur joignable
+   (HTTP 200) » ou la cause exacte de l'échec) ;
+4. appuyez sur **Enregistrer** : l'adresse est mémorisée (chiffrée) et utilisée
+   immédiatement, sans réinstaller l'application.
+
+Le téléphone doit être sur le même réseau Wi-Fi que le serveur, et le port 8000 ouvert
+dans le pare-feu de l'ordinateur. Si votre serveur est exposé sur Internet, utilisez
+`https://` : l'application vous prévient lorsque la connexion n'est pas chiffrée.
+
 ## 1. Créer un compte et être vérifié
 
 1. **Créer un compte** : email + numéro de téléphone au format international

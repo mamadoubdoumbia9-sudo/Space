@@ -1,6 +1,10 @@
 package com.signalpro.app.data.remote
 
+import com.signalpro.app.core.net.NetworkErrors
+import com.signalpro.app.core.net.ServerUrl
 import com.signalpro.app.data.prefs.SecureStore
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import okhttp3.Interceptor
 import okhttp3.MediaType.Companion.toMediaType
@@ -55,7 +59,18 @@ class ApiClient(
     private val onSessionExpired: () -> Unit,
     debug: Boolean = false,
 ) {
-    private val root: String = if (baseUrl.endsWith("/")) baseUrl else "$baseUrl/"
+    /**
+     * Adresse du serveur, modifiable à l'exécution : l'application est
+     * auto-hébergeable et l'utilisateur doit pouvoir indiquer où tourne SON serveur
+     * (voir Réglages → Serveur). Sans cela, un APK livré avec une adresse d'exemple
+     * échouait partout avec un message accusant à tort la connexion Internet.
+     */
+    @Volatile
+    private var currentBaseUrl: String = baseUrl
+
+    val baseUrl: String get() = currentBaseUrl
+
+    private fun root(of: String): String = if (of.endsWith("/")) of else "$of/"
 
     private val json = Json {
         ignoreUnknownKeys = true
@@ -93,12 +108,63 @@ class ApiClient(
         }
         .build()
 
-    val service: ApiService = Retrofit.Builder()
-        .baseUrl(root)
+    @Volatile
+    var service: ApiService = buildService(currentBaseUrl)
+        private set
+
+    private fun buildService(of: String): ApiService = Retrofit.Builder()
+        .baseUrl(root(of))
         .client(httpClient)
         .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
         .build()
         .create(ApiService::class.java)
+
+    /**
+     * Applique une nouvelle adresse de serveur.
+     * Les dépôts lisent `apiClient.service` à chaque appel : le changement est donc
+     * immédiat, sans redémarrer l'application.
+     */
+    fun updateBaseUrl(newBaseUrl: String) {
+        currentBaseUrl = newBaseUrl
+        service = buildService(newBaseUrl)
+    }
+
+    /**
+     * Test RÉEL de l'adresse fournie, avant de l'enregistrer : un GET sur /health.
+     * Le résultat est un message exact (code HTTP, ou cause de la panne réseau),
+     * jamais un « ok » de complaisance.
+     */
+    suspend fun testConnection(candidateUrl: String): ApiResult<String> = withContext(Dispatchers.IO) {
+        val parsed = when (val result = ServerUrl.parse(candidateUrl)) {
+            is ServerUrl.Result.Invalid -> return@withContext ApiResult.Failure(ApiException(0, result.reason))
+            is ServerUrl.Result.Valid -> result.parsed
+        }
+        val request = Request.Builder().url(parsed.url + "health").get().build()
+        try {
+            refreshClient.newCall(request).execute().use { response ->
+                if (!response.isSuccessful) {
+                    ApiResult.Failure(
+                        ApiException(
+                            response.code(),
+                            "Le serveur ${parsed.host}:${parsed.port} répond mais refuse l'appel de contrôle " +
+                                "(HTTP ${response.code()}). Vérifiez qu'il s'agit bien de l'API SignalPro.",
+                        ),
+                    )
+                } else {
+                    ApiResult.Success(
+                        "Serveur joignable (HTTP ${response.code()}) — " +
+                            if (parsed.cleartext) {
+                                "connexion NON chiffrée (http). Les jetons peuvent être interceptés sur un réseau non fiable."
+                            } else {
+                                "connexion chiffrée (https)."
+                            },
+                    )
+                }
+            }
+        } catch (io: IOException) {
+            ApiResult.Failure(ApiException(0, NetworkErrors.describe(io, parsed.url)))
+        }
+    }
 
     /** Exécute un appel et normalise le résultat. */
     suspend fun <T> call(block: suspend () -> RetrofitResponse<T>): ApiResult<T> = try {
@@ -124,13 +190,9 @@ class ApiClient(
             else -> ApiResult.Failure(readError(response))
         }
     } catch (io: IOException) {
-        ApiResult.Failure(
-            ApiException(
-                0,
-                "Réseau indisponible : l'action n'a pas été transmise. " +
-                    "Vérifiez votre connexion puis réessayez (rien n'est simulé en attendant).",
-            ),
-        )
+        // L'adresse réellement contactée est citée : c'est indispensable quand le
+        // serveur n'est pas encore configuré (cause la plus fréquente d'échec).
+        ApiResult.Failure(ApiException(0, NetworkErrors.describe(io, currentBaseUrl)))
     } catch (t: Throwable) {
         ApiResult.Failure(ApiException(500, t.message ?: "Erreur inattendue."))
     }
@@ -159,7 +221,7 @@ class ApiClient(
         val refresh = secureStore.refreshToken ?: return false
         val payload = """{"refresh_token":"$refresh"}"""
         val request = Request.Builder()
-            .url("${root}api/v1/auth/refresh")
+            .url("${root(currentBaseUrl)}api/v1/auth/refresh")
             .post(payload.toRequestBody("application/json".toMediaType()))
             .build()
         return try {

@@ -55,7 +55,9 @@ class AuthRepository(
     private val secureStore: SecureStore,
     private val database: AppDatabase,
 ) {
-    private val api = apiClient.service
+    // `get()` et non une valeur figée : une nouvelle adresse de serveur doit être
+    // prise en compte immédiatement par tous les dépôts.
+    private val api get() = apiClient.service
 
     suspend fun restoreSession(): SessionState {
         if (secureStore.accessToken == null) {
@@ -138,7 +140,9 @@ class DeviceRepository(
     private val database: AppDatabase,
     private val secureStore: SecureStore,
 ) {
-    private val api = apiClient.service
+    // `get()` et non une valeur figée : une nouvelle adresse de serveur doit être
+    // prise en compte immédiatement par tous les dépôts.
+    private val api get() = apiClient.service
 
     suspend fun gatewayStatus() = apiClient.call { api.gatewayStatus() }
 
@@ -180,7 +184,9 @@ class ReportRepository(
     private val database: AppDatabase,
     private val secureStore: SecureStore,
 ) {
-    private val api = apiClient.service
+    // `get()` et non une valeur figée : une nouvelle adresse de serveur doit être
+    // prise en compte immédiatement par tous les dépôts.
+    private val api get() = apiClient.service
 
     fun observeCachedReports(): Flow<List<CachedReport>> = database.reportDao().observeAll()
 
@@ -287,7 +293,9 @@ class CommunityRepository(
     private val database: AppDatabase,
     private val secureStore: SecureStore,
 ) {
-    private val api = apiClient.service
+    // `get()` et non une valeur figée : une nouvelle adresse de serveur doit être
+    // prise en compte immédiatement par tous les dépôts.
+    private val api get() = apiClient.service
 
     fun observeCachedBlacklist() = database.communityDao().observeBlacklist()
     fun observeAlerts() = database.communityDao().observeAlerts()
@@ -351,7 +359,9 @@ class DetectionRepository(
     private val database: AppDatabase,
     private val scanner: ScamScanner,
 ) {
-    private val api = apiClient.service
+    // `get()` et non une valeur figée : une nouvelle adresse de serveur doit être
+    // prise en compte immédiatement par tous les dépôts.
+    private val api get() = apiClient.service
 
     suspend fun signaturesCount(): Int = database.signatureDao().count()
 
@@ -400,7 +410,9 @@ class DetectionRepository(
 }
 
 class CampaignRepository(private val apiClient: ApiClient) {
-    private val api = apiClient.service
+    // `get()` et non une valeur figée : une nouvelle adresse de serveur doit être
+    // prise en compte immédiatement par tous les dépôts.
+    private val api get() = apiClient.service
 
     suspend fun preview(request: CampaignPreviewRequest): ApiResult<CampaignPreviewDto> =
         apiClient.call { api.campaignPreview(request) }

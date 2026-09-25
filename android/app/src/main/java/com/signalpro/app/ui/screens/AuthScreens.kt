@@ -40,6 +40,7 @@ import com.signalpro.app.domain.Validation
 import com.signalpro.app.ui.DisclaimerBanner
 import com.signalpro.app.ui.InfoCard
 import com.signalpro.app.ui.ScreenColumn
+import com.signalpro.app.ui.ServerUrlCard
 import com.signalpro.app.ui.collectAsStateSafe
 import com.signalpro.app.ui.containerViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -132,6 +133,11 @@ fun LoginScreen(
         OutlinedButton(onClick = onGoRegister, modifier = Modifier.fillMaxWidth()) {
             Text("Créer un compte")
         }
+        // Placé avant les identifiants : si l'utilisateur arrive avec une adresse de
+        // serveur absente ou erronée, c'est ici — et non après un échec obscur — qu'il
+        // doit pouvoir la corriger.
+        ServerUrlCard(container)
+
         InfoCard(
             "Vérification obligatoire",
             "Chaque compte doit être vérifié par email ou par SMS : c'est ce qui empêche la création de " +
@@ -267,6 +273,9 @@ fun RegisterScreen(
         }
 
         state.error?.let { ErrorText(it) }
+        // Rappel de l'adresse réellement contactée : le message d'erreur réseau cite
+        // l'hôte, cet encart permet de le corriger immédiatement.
+        if (state.error != null) ServerUrlCard(container, title = "Serveur contacté")
         state.deliveryMessage?.let { InfoCard("Code de vérification", it) }
 
         Button(

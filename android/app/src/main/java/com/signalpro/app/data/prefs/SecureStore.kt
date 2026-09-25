@@ -56,6 +56,16 @@ class SecureStore(context: Context) {
         get() = prefs.getString(KEY_DISPLAY_NAME, null)
         set(value) = prefs.edit().putString(KEY_DISPLAY_NAME, value).apply()
 
+    /**
+     * Adresse du serveur SignalPro choisie par l'utilisateur.
+     * Stockée avec les données protégées par le Keystore : une adresse de serveur
+     * révèle l'infrastructure utilisée, et sa modification par un tiers détournerait
+     * les jetons d'authentification vers un serveur hostile.
+     */
+    var apiBaseUrl: String?
+        get() = prefs.getString(KEY_API_URL, null)
+        set(value) = prefs.edit().putString(KEY_API_URL, value).apply()
+
     /** Numéro de la cible en cours de signalement, partagé depuis une autre app. */
     var pendingSharedText: String?
         get() = prefs.getString(KEY_SHARED, null)
@@ -76,6 +86,7 @@ class SecureStore(context: Context) {
         const val KEY_MODERATOR = "is_moderator"
         const val KEY_DISPLAY_NAME = "display_name"
         const val KEY_SHARED = "pending_shared_text"
+        const val KEY_API_URL = "api_base_url"
     }
 }
 
