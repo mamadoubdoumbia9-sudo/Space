@@ -167,7 +167,7 @@ Aucun de ces messages ne prétend qu'une action a réussi : dans tous les cas, *
 | Passerelle | `cd gateway && node --test test/*.test.js` | **7 passés** |
 | Web (contrats) | `cd web && npm run check:contrats` | **contrats respectés** |
 | Web (parcours réel) | `cd web && npm run check:parcours` | **69/69 contrôles** sur un jeu neuf (les étapes qui exigent une file de modération non vide sont signalées « ignorées » si la file a déjà été traitée) |
-| Android | `cd android && gradle testDebugUnitTest assembleDebug` | exécuté par la CI (aucun SDK local) : **28 tests sur 5 classes** — `Validation`, `ScamScanner`, contrats d'API, `ServerUrlTest`, `NetworkErrorsTest`. Le nombre exact est publié en annotation à chaque exécution |
+| Android | `cd android && gradle testDebugUnitTest assembleDebug` | exécuté par la CI (aucun SDK local) : **27 tests sur 5 classes, 0 échec** — `Validation`, `ScamScanner`, contrats d'API, `ServerUrlTest`, `NetworkErrorsTest`. Le nombre exact est publié en annotation à chaque exécution |
 
 ## APK réellement produits
 
