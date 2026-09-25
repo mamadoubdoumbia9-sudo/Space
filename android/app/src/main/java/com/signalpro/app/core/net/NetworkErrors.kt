@@ -22,10 +22,17 @@ object NetworkErrors {
         val detail = error.message.orEmpty()
 
         return when {
-            error is UnknownHostException || error.cause is UnknownHostException ->
-                "Serveur introuvable : « $target » n'existe pas ou n'est pas joignable sur ce réseau. " +
-                    "Vérifiez l'adresse du serveur dans Réglages → Serveur (ou avant l'inscription). " +
-                    "Aucune donnée n'a été transmise."
+            error is UnknownHostException || error.cause is UnknownHostException -> {
+                // Le nom d'hôte qui a échoué est l'information la plus utile : c'est lui
+                // que l'utilisateur doit corriger. L'adresse configurée est rappelée pour
+                // le cas où les deux diffèrent (redirection, proxy).
+                val offensive = ((error as? UnknownHostException)?.message ?: error.cause?.message)
+                    ?.takeIf { it.isNotBlank() }
+                    ?: target
+                "Serveur introuvable : « $offensive » n'existe pas ou n'est pas joignable sur ce réseau " +
+                    "(adresse configurée : $target). Vérifiez l'adresse du serveur dans Réglages → Serveur " +
+                    "(ou avant l'inscription). Aucune donnée n'a été transmise."
+            }
 
             detail.contains("CLEARTEXT", ignoreCase = true) ->
                 "Le serveur $target a été contacté en HTTP non chiffré et Android a bloqué la connexion. " +
