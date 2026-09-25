@@ -189,13 +189,26 @@ async function main() {
       ["manual_guided", "mode guidé WhatsApp (repli honnête) présent"],
       ["appeal", "contestation présente dans l'interface"],
     ];
-    const urls = [...new Set([...html.matchAll(/\/_next\/static\/chunks\/[^"']+\.js/g)].map((m) => m[0]))];
+    // Les fragments chargés à la demande (écrans secondaires) ne figurent pas dans le
+    // HTML initial : on suit donc les références trouvées DANS les fragments, sur deux
+    // niveaux, pour que le contrôle ne dépende pas de l'ordre de chargement.
+    const seen = new Set();
     let bundle = "";
-    for (const url of urls) {
-      const chunk = await fetch(`${BASE}${url}`);
-      if (chunk.ok) bundle += await chunk.text();
+    let frontier = [...new Set([...html.matchAll(/\/_next\/static\/chunks\/[^"']+\.js/g)].map((m) => m[0]))];
+    for (let depth = 0; depth < 3 && frontier.length > 0; depth += 1) {
+      const next = [];
+      for (const url of frontier) {
+        if (seen.has(url)) continue;
+        seen.add(url);
+        const chunk = await fetch(`${BASE}${url}`);
+        if (!chunk.ok) continue;
+        const code = await chunk.text();
+        bundle += code;
+        next.push(...[...code.matchAll(/\/_next\/static\/chunks\/[A-Za-z0-9_.\-]+\.js/g)].map((m) => m[0]));
+      }
+      frontier = [...new Set(next)].filter((url) => !seen.has(url));
     }
-    record("fragments JavaScript téléchargés", urls.length > 0, `${urls.length} fragment(s)`);
+    record("fragments JavaScript téléchargés", seen.size > 0, `${seen.size} fragment(s)`);
     for (const [marker, label] of markers) {
       record(label, bundle.includes(marker), `marqueur « ${marker} »`);
     }
