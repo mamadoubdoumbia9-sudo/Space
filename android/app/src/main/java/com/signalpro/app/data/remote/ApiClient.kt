@@ -145,14 +145,14 @@ class ApiClient(
                 if (!response.isSuccessful) {
                     ApiResult.Failure(
                         ApiException(
-                            response.code(),
+                            response.code,
                             "Le serveur ${parsed.host}:${parsed.port} répond mais refuse l'appel de contrôle " +
-                                "(HTTP ${response.code()}). Vérifiez qu'il s'agit bien de l'API SignalPro.",
+                                "(HTTP ${response.code}). Vérifiez qu'il s'agit bien de l'API SignalPro.",
                         ),
                     )
                 } else {
                     ApiResult.Success(
-                        "Serveur joignable (HTTP ${response.code()}) — " +
+                        "Serveur joignable (HTTP ${response.code}) — " +
                             if (parsed.cleartext) {
                                 "connexion NON chiffrée (http). Les jetons peuvent être interceptés sur un réseau non fiable."
                             } else {
