@@ -83,7 +83,15 @@ async function login(email, password) {
  *   image différente, comme deux vraies captures d'écran.
  */
 async function makeScreenshot() {
-  const variation = Buffer.from(String(Date.now())).reduce((acc, byte) => (acc * 31 + byte) % 251, 7);
+  // Sel cryptographique : deux exécutions rapprochées produisaient parfois des images
+  // dont l'empreinte différait trop peu, et le serveur refusait la seconde comme
+  // « preuve déjà déposée ». Un sel de 8 octets rend la collision impossible en pratique.
+  const { randomBytes } = await import("node:crypto");
+  const salt = randomBytes(8);
+  const variation = [...salt, ...Buffer.from(String(Date.now()))].reduce(
+    (acc, byte) => (acc * 31 + byte) % 251,
+    7,
+  );
   const { deflateSync } = await import("node:zlib");
   const width = 420;
   const height = 720;
@@ -123,11 +131,18 @@ async function makeScreenshot() {
     if (x < 390 && y < 600) rect(x, y, x + 16, y + 6, [40 + (i % 7) * 12, 48, 56]);
   }
   // Bandeau « horodatage » variable : rend chaque capture unique (le serveur refuse
-  // deux preuves identiques déposées dans deux signalements différents).
+  // deux preuves identiques déposées dans deux signalements différents). Chaque pixel
+  // dépend d'un octet distinct du sel, pas seulement d'un calcul sur la date.
   for (let i = 0; i < 40; i += 1) {
     const x = 20 + i * 9;
-    const tone = 60 + ((variation * (i + 3)) % 150);
-    rect(x, 620, x + 7, 632, [tone, (tone * 3) % 255, (tone * 7) % 255]);
+    const tone = 60 + ((variation * (i + 3) + salt[i % salt.length] * (i + 1)) % 190);
+    rect(x, 620, x + 7, 632, [tone, (tone * 3) % 255, (tone * 7 + salt[(i + 1) % salt.length]) % 255]);
+  }
+  // Marqueur de bas de page : 32 pixels dont la teinte vient directement du sel.
+  for (let i = 0; i < salt.length; i += 1) {
+    const x = 300 + i * 12;
+    const tone = salt[i];
+    rect(x, 700, x + 10, 710, [tone, (tone + 90) % 256, (tone + 180) % 256]);
   }
 
   const chunk = (type, data) => {
