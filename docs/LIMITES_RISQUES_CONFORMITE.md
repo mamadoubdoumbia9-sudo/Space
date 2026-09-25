@@ -40,7 +40,7 @@ ils ne doivent jamais être affaiblis.
 | Actions / minute / utilisateur | 10 | freine l'automatisation |
 | Preuve obligatoire | ≥ 1 | aucun signalement sans preuve n'est transmis |
 | Avertissements d'abus | 2 | 3ᵉ = bannissement définitif |
-| Preuve de contact | requise | impossible de signaler un numéro qui ne vous a jamais écrit (exception : modérateurs de groupe, déclaration vérifiée) |
+| Preuve de contact | requise | impossible de signaler un numéro qui ne vous a jamais écrit ; le serveur décide seul de la vérification (exception : comptes modérateurs, exemption tracée dans le journal d'audit) |
 | Doublons (même auteur/cible/date) | refusés | évite l'acharnement |
 | Preuves identiques réutilisées | refusées + abus | évite le copier-coller de « preuves » |
 

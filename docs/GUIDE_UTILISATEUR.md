@@ -25,7 +25,7 @@ ne doivent jamais transiter par un navigateur. Dans la version web, les onglets 
 guidé (étapes affichées pour signaler depuis WhatsApp) et le blocage en un clic
 renvoie une erreur explicite au lieu d'un faux succès.
 
-## 2. Connecter votre WhatsApp (facultatif, mais recommandé)
+## 2. Connecter votre WhatsApp (nécessaire pour signaler)
 
 Deux possibilités, présentées honnêtement dans l'application :
 
@@ -37,8 +37,12 @@ Deux possibilités, présentées honnêtement dans l'application :
 - **Compte professionnel** : l'entreprise connecte son compte WhatsApp Business
   Platform (API officielle). Voir `docs/DEPLOIEMENT_WHATSAPP.md`.
 
-Sans appareil lié, vous pouvez **quand même** signaler : vous joignez alors une
-capture d'écran de la conversation, contrôlée par un modérateur humain.
+**Sans appareil lié, aucun signalement n'est possible.** C'est volontaire : le serveur
+vérifie que le numéro visé figure réellement dans vos conversations avant d'accepter un
+signalement. Une capture d'écran ne remplace pas cette vérification — sinon n'importe qui
+pourrait signaler n'importe quel numéro. Le refus est explicite (« Liez d'abord votre
+WhatsApp ») et s'applique aussi si vous déclarez une autre méthode : le client ne choisit
+pas, c'est le serveur qui décide.
 
 Ce que la connexion ne permet jamais : lire ou stocker le contenu de vos messages,
 et « faire bannir » quelqu'un.
@@ -93,6 +97,28 @@ Selon l'état du signalement :
 Vous devez cocher la confirmation avant chaque transmission. **Aucun statut
 « envoyé » n'est affiché sans confirmation réelle** ; un échec est enregistré comme
 un échec.
+
+## 4 bis. Demande groupée : « signaler ce numéro N fois »
+
+L'écran *Demande groupée* (onglet dédié sur le web, écran « Campagne » sur Android)
+permet d'indiquer **le numéro cible** et **le nombre de signalements souhaité**. Avant
+toute création, le bouton *Vérifier ce qui est réellement possible* interroge le serveur
+et affiche :
+
+- le nombre demandé ;
+- le nombre de **comptes éligibles** — c'est-à-dire de personnes distinctes ayant
+  réellement reçu des messages de ce numéro, disposant d'un appareil connecté et
+  consentantes ;
+- le nombre **réellement exécutable**, qui ne peut jamais dépasser le nombre de comptes
+  éligibles ;
+- le plafond dur du serveur et, si aucun compte n'est éligible, la raison du blocage.
+
+Autrement dit : demander 100 signalements ne crée pas 100 signalements. Chaque
+signalement part d'un compte différent, avec sa propre preuve et ses propres quotas ;
+le système ne fabrique jamais de compte fictif et ne contourne jamais les limites. La
+création exige de cocher l'avertissement (faux signalement = poursuites, aucune
+suspension garantie). Une demande en cours peut être **arrêtée** : les transmissions
+encore en file sont retirées.
 
 ## 5. Suivre l'état de vos signalements
 
