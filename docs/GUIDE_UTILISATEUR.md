@@ -21,9 +21,11 @@ mêmes quotas, mêmes refus. Seule différence assumée : la **liaison WhatsApp 
 code** se fait depuis l'application Android, car les identifiants de session WhatsApp
 ne doivent jamais transiter par un navigateur. Dans la version web, les onglets sont
 *Tableau de bord*, *Signalements & import*, *Demande groupée*, *Communauté*, *Modération*
-(si votre compte est modérateur) et *Réglages*. Sans appareil lié, la transmission utilise le mode
-guidé (étapes affichées pour signaler depuis WhatsApp) et le blocage en un clic
-renvoie une erreur explicite au lieu d'un faux succès.
+(si votre compte est modérateur) et *Réglages*. Deux limites sont identiques dans les deux
+versions : sans appareil lié, **aucun signalement n'est accepté** (la preuve de contact est
+vérifiée par le serveur, voir §2) ; sans appareil connecté, le blocage en un clic renvoie une
+erreur explicite au lieu d'un faux succès, et la transmission utilise le mode guidé (étapes
+affichées pour signaler depuis WhatsApp).
 
 ## 2. Connecter votre WhatsApp (nécessaire pour signaler)
 
