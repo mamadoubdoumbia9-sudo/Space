@@ -91,8 +91,10 @@ permet pas de les contourner.
 
 ## 7. Limites techniques connues
 
-- Sans appareil lié ni compte professionnel, la vérification du contact repose sur
-  une déclaration + capture, contrôlée humainement : c'est plus lent.
+- Sans appareil lié, **aucun signalement n'est accepté** : la preuve de contact ne peut
+  pas être contournée par une déclaration. Concrètement, un utilisateur qui refuse la
+  liaison WhatsApp ne peut pas utiliser le service pour signaler — c'est une limite
+  d'usage assumée, préférée à un outil de signalement de masse (voir §3).
 - Le signalement natif via appareil lié dépend de la version de WhatsApp et reste
   désactivé par défaut ; le parcours guidé est le mode fiable.
 - Les suspensions ne sont connues que si Meta les notifie ou si un modérateur les
