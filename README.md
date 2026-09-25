@@ -16,6 +16,29 @@ confirmés malveillants, blocage en masse, contestation).
 - Il **ne contourne aucune limite** de WhatsApp : 10 actions/minute, 5 signalements/
   heure, 20 signalements/jour par compte, en plus des quotas du serveur.
 
+## Chaque exigence, son implémentation et sa preuve
+
+| Exigence | Implémentation | Preuve exécutable |
+| --- | --- | --- |
+| Connexion WhatsApp sécurisée, officielle pour une entreprise | `backend/app/services/cloud_api.py` (WhatsApp Business Platform), `docs/DEPLOIEMENT_WHATSAPP.md` | tests backend + documentation des prérequis et webhooks |
+| Connexion d'un particulier, avec consentement au risque et limitations strictes | passerelle locale `gateway/` (protocole multi-appareils), requêtes signées HMAC-SHA256 ± 300 s | `cd gateway && node --test test/*.test.js` — **7/7** |
+| Vérification que l'utilisateur utilise réellement WhatsApp avant l'accès complet | `LinkStartRequest{risk_consent, consent_version}` + scan de l'appareil lié (`routers/devices.py`) | parcours web — liaison **refusée** sans consentement explicite et avec une version de consentement obsolète (HTTP 400 motivé) |
+| Un signalement = numéro international + catégorie + date/heure + ≥ 1 preuve + description | `backend/app/schemas.py`, `backend/app/services/reports.py`, `services/evidence.py` | pytest — schemas, preuves obligatoires, preuve dupliquée refusée |
+| Import CSV/Excel rejetant toute ligne sans catégorie ou sans preuve | `backend/app/services/csv_import.py` (alias français NFKD, ≤ 5 Mo, ≤ 50 lignes, 422 si 0 ligne valide) | parcours web — aperçu puis rejet d'un fichier incomplet |
+| Détection automatique (mots-clés d'arnaque, liens de phishing, numéros déjà signalés) | `backend/app/services/spam.py` et moteur **hors ligne** `android/.../domain/ScamScanner.kt` | `ScamScannerTest` + tests backend de détection |
+| Regroupement des signalements d'un même numéro et envoi d'un dossier au-delà de 3 signalements valides | `backend/app/services/dossiers.py`, `routers/campaigns.py` | parcours web — aperçu de campagne, nombre réellement exécutable, dossier PDF |
+| Statut honnête : envoyé / reçu par Meta / suspendu / **non suspendu** | `backend/app/routers/webhooks.py`, champ `suspension_status` | parcours web — « suspension non confirmée (aucune invention) » |
+| Base communautaire des numéros confirmés (≥ 3 signalements vérifiés) + blocage en un clic | `backend/app/routers/community.py`, `web/components/CommunityPanel.tsx`, `CommunityScreen.kt` | parcours web — liste, export, blocage groupé via la passerelle |
+| Contestation examinée par un **humain**, retrait si les preuves sont fausses | `backend/app/routers/moderation.py` (contestations), `ModerationPanel.tsx`, `ModerationScreen.kt` | parcours web — file, téléchargement de preuve, décision motivée |
+| Tableau de bord : mes numéros et leur état, compteur de suspensions, export de ma liste bloquée, alerte de contact malveillant | `backend/app/routers/dashboard.py`, `DashboardPanel.tsx`, `DashboardScreen.kt` | parcours web — exports CSV/PDF/XLSX et alertes |
+| Anti-abus **non désactivable** : vérification e-mail/téléphone, 20 signalements/jour, 5/heure, 10 actions/minute, rejet automatique sans preuve, 2 avertissements puis bannissement définitif | `backend/app/services/limits.py`, `services/escalation.py`, `routers/auth.py` | `python scripts/anti_abuse_check.py` — **9/9** et pytest |
+| Interdiction de signaler un numéro qui ne vous a jamais contacté (exception modérateurs de groupe) | `backend/app/services/reports.py` (vérification du contact via appareil lié ou déclaration) | pytest — signalement refusé sans preuve de contact |
+| Avertissement d'accueil **et** avant envoi : fausse déclaration poursuivable, aucune garantie de bannissement | `web/app/page.tsx` (rendu serveur), `ReportsPanel.tsx`, `ReportNewScreen.kt`, `DisclaimerBanner` | parcours web — présence vérifiée dans le HTML rendu côté serveur |
+| Suppression des données à la demande, aucune revente ni partage | `routers/auth.py` (`DELETE /me`), `services/audit.py` | pytest + parcours web |
+| Chiffrement des données sensibles, aucun secret dans l'APK, jamais de message stocké sans consentement | AES-256-GCM + index aveugles HMAC (`core/crypto`), `SecureStore`, `BuildConfig` sans clé | pytest + **permissions réelles de l'APK livré** (8, aucune de stockage, contacts, SMS ou journal d'appels) |
+| Journal d'audit complet pour réquisition judiciaire | `backend/app/services/audit.py`, `routers/moderation.py` | pytest + parcours web (journal d'audit) |
+| APK de version livré | CI `.github/workflows/ci.yml` → artefact `signalpro-apk` | `app-release.apk` **2 198 548 octets**, 1 DEX, 4 566 classes, `minSdk 26`, `targetSdk 35`, signature valide |
+
 ## Architecture
 
 | Composant | Rôle | Techno |
@@ -49,7 +72,7 @@ cd web
 npm ci
 API_PROXY_TARGET=http://127.0.0.1:8000 npm run dev   # http://localhost:3000
 npm run check:contrats                               # catégories et routes alignées sur le backend
-npm run check:parcours                               # parcours réel de bout en bout (43 contrôles)
+npm run check:parcours                               # parcours réel de bout en bout (47 contrôles)
 
 # 3) Passerelle locale WhatsApp (sur la machine de l'utilisateur, pas sur le serveur)
 cd ../gateway
@@ -69,7 +92,7 @@ gradle testDebugUnitTest assembleDebug               # ou ./gradlew, si vous ajo
 | `cd backend && ENV=test python -m pytest tests/ -q` | règles métier, sécurité, preuves, modération, quotas |
 | `cd backend && ENV=test python scripts/anti_abuse_check.py` | les 9 protections anti-abus, sur une base temporaire (aucun serveur à lancer) |
 | `cd web && npm run check:contrats` | les catégories de l'interface correspondent à l'énumération du serveur et **chaque route appelée existe** (`openapi.json`) |
-| `cd web && npm run check:parcours` | parcours web complet : accueil + avertissements, signalement avec capture réelle, import CSV français, contestation, détection, modération (décision, preuve téléchargée, dossier PDF) |
+| `cd web && npm run check:parcours` | parcours web complet : accueil + avertissements, signalement avec capture réelle, import CSV français, contestation, détection, liaison WhatsApp refusée sans consentement ou avec une version obsolète, modération (décision, preuve téléchargée, dossier PDF) |
 | `cd gateway && npm test` | signature HMAC, fenêtre temporelle, routes de la passerelle |
 | CI `.github/workflows/ci.yml` | backend, passerelle, web (build + contrats + parcours) et Android (tests + APK), puis vérification du binaire livré : paquet, `minSdk`/`targetSdk`, nombre de DEX, permissions exactes et validité de la signature |
 
@@ -91,7 +114,7 @@ gradle testDebugUnitTest assembleDebug               # ou ./gradlew, si vous ajo
 | Anti-abus (interface de test) | `cd backend && ENV=test python scripts/anti_abuse_check.py` | **9/9 contrôles** |
 | Passerelle | `cd gateway && node --test test/*.test.js` | **7 passés** |
 | Web (contrats) | `cd web && npm run check:contrats` | **contrats respectés** |
-| Web (parcours réel) | `cd web && npm run check:parcours` | **43/43 contrôles** |
+| Web (parcours réel) | `cd web && npm run check:parcours` | **47/47 contrôles** |
 | Android | `cd android && gradle testDebugUnitTest assembleDebug` | exécuté par la CI (aucun SDK local) : 3 suites unitaires passées |
 
 ## APK réellement produits

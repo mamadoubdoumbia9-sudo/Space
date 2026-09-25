@@ -46,6 +46,16 @@ Compose (`ui-tooling`), LeakCanary et douze DEX non minifiés.
 
 La valeur de référence pour la distribution est celle de l'APK `release` signé.
 
+### Pourquoi l'empreinte SHA-256 change d'une exécution à l'autre
+
+La **taille** est stable (2 198 548 octets pour le release, 21 238 920 pour le debug à
+chaque exécution), mais l'**empreinte** ne l'est pas : sans secrets `SIGNING_*`, la CI
+signe avec une clé jetable différente à chaque exécution, et Gradle régénère également
+la clé de debug. L'empreinte publiée identifie donc *le fichier de cette exécution
+précise*, pas une version figée du logiciel. Dès que vous fournissez votre propre clé de
+signature, l'empreinte devient reproductible d'une exécution à l'autre (hors horodatage
+de signature), et c'est cette empreinte-là qui doit être diffusée avec le binaire.
+
 ### Permissions réellement embarquées (relevé automatique)
 
 | APK | Permissions fusionnées dans le manifeste |

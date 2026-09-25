@@ -21,6 +21,8 @@
  */
 
 const BASE = process.env.WEB_BASE_URL || "http://127.0.0.1:3000";
+// Version de consentement publiée par le serveur : le script ne la devine pas.
+let CONSENT_VERSION = "2026-09-1";
 const PROXY = `${BASE}/proxy`;
 
 const results = [];
@@ -176,7 +178,19 @@ async function main() {
   const alice = await login("alice@example.org", "AliceSignalPro123");
   await call("session et profil", "/api/v1/auth/me", { token: alice });
   await call("limites anti-abus", "/api/v1/auth/limits", { token: alice });
-  await call("consentements enregistrés", "/api/v1/auth/consents", { token: alice });
+  const consentRows = await call("consentements enregistrés", "/api/v1/auth/consents", { token: alice });
+  // La version de consentement en vigueur est LUE depuis le serveur (jamais devinée) :
+  // elle est utilisée plus bas pour vérifier que la liaison WhatsApp la contrôle.
+  try {
+    const rows = JSON.parse(consentRows.text);
+    const active = Array.isArray(rows) ? rows.find((row) => row.kind === "terms" && row.version) : null;
+    if (active) {
+      CONSENT_VERSION = active.version;
+      notice("version de consentement en vigueur lue sur le serveur", active.version);
+    }
+  } catch {
+    // L'absence de version lisible est signalée par le contrôle de la section 5 bis.
+  }
   await call("quota d'utilisation", "/api/v1/reports/usage", { token: alice });
   await call("mes signalements", "/api/v1/reports", { token: alice });
 
@@ -310,6 +324,32 @@ async function main() {
     },
   });
   await call("appareils liés", "/api/v1/devices", { token: alice });
+
+  // Le consentement au risque n'est pas décoratif : sans lui, aucune liaison
+  // WhatsApp n'est ouverte (deux refus réels, et aucune session créée).
+  console.log("\n5 bis) Liaison WhatsApp : le consentement au risque est exigé");
+  const withoutConsent = await call("liaison refusée sans consentement explicite", "/api/v1/devices/link/start", {
+    method: "POST",
+    token: alice,
+    json: { label: "Contrôle sans consentement", risk_consent: false, consent_version: CONSENT_VERSION },
+    allowed: [400],
+  });
+  record(
+    "le refus explique la raison (consentement)",
+    /consentement/i.test(withoutConsent.text),
+    withoutConsent.text.slice(0, 120),
+  );
+  const staleConsent = await call("liaison refusée avec une version de consentement obsolète", "/api/v1/devices/link/start", {
+    method: "POST",
+    token: alice,
+    json: { label: "Contrôle version obsolète", risk_consent: true, consent_version: "2000-01-1" },
+    allowed: [400],
+  });
+  record(
+    "le refus exige la version de consentement en vigueur",
+    /version de consentement/i.test(staleConsent.text),
+    staleConsent.text.slice(0, 120),
+  );
 
   console.log("\n6) Parcours modérateur");
   const moderator = await login("moderateur@signalpro-demo.com", "ModerateurPro123");
