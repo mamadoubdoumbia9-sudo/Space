@@ -26,7 +26,7 @@ confirmés malveillants, blocage en masse, contestation).
 | Un signalement = numéro international + catégorie + date/heure + ≥ 1 preuve + description | `backend/app/schemas.py`, `backend/app/services/reports.py`, `services/evidence.py` | pytest — schemas, preuves obligatoires, preuve dupliquée refusée |
 | Import CSV/Excel rejetant toute ligne sans catégorie ou sans preuve | `backend/app/services/csv_import.py` (alias français NFKD, ≤ 5 Mo, ≤ 50 lignes, 422 si 0 ligne valide) | parcours web — aperçu puis rejet d'un fichier incomplet |
 | Détection automatique (mots-clés d'arnaque, liens de phishing, numéros déjà signalés) | `backend/app/services/spam.py` et moteur **hors ligne** `android/.../domain/ScamScanner.kt` | `ScamScannerTest` + tests backend de détection |
-| Regroupement des signalements d'un même numéro et envoi d'un dossier au-delà de 3 signalements valides | `backend/app/services/dossiers.py`, `routers/campaigns.py` | parcours web — aperçu de campagne, nombre réellement exécutable, dossier PDF |
+| Regroupement des signalements d'un même numéro et envoi d'un dossier au-delà de 3 signalements valides | `backend/app/services/dossiers.py`, `routers/campaigns.py`, onglet *Demande groupée* (`web/components/CampaignPanel.tsx`), `CampaignScreen.kt` | parcours web — 100 signalements demandés sont ramenés au nombre de comptes réellement contactés, plafond dur publié par le serveur, création refusée sans confirmation de l'avertissement, dossier PDF |
 | Statut honnête : envoyé / reçu par Meta / suspendu / **non suspendu** | `backend/app/routers/webhooks.py`, champ `suspension_status` | parcours web — « suspension non confirmée (aucune invention) » |
 | Base communautaire des numéros confirmés (≥ 3 signalements vérifiés) + blocage en un clic | `backend/app/routers/community.py`, `web/components/CommunityPanel.tsx`, `CommunityScreen.kt` | parcours web — liste, export, blocage groupé via la passerelle |
 | Contestation examinée par un **humain**, retrait si les preuves sont fausses | `backend/app/routers/moderation.py` (contestations), `ModerationPanel.tsx`, `ModerationScreen.kt` | parcours web — file, téléchargement de preuve, décision motivée |
@@ -72,7 +72,7 @@ cd web
 npm ci
 API_PROXY_TARGET=http://127.0.0.1:8000 npm run dev   # http://localhost:3000
 npm run check:contrats                               # catégories et routes alignées sur le backend
-npm run check:parcours                               # parcours réel de bout en bout (47 contrôles)
+npm run check:parcours                               # parcours réel de bout en bout (54 contrôles)
 
 # 3) Passerelle locale WhatsApp (sur la machine de l'utilisateur, pas sur le serveur)
 cd ../gateway
@@ -114,7 +114,7 @@ gradle testDebugUnitTest assembleDebug               # ou ./gradlew, si vous ajo
 | Anti-abus (interface de test) | `cd backend && ENV=test python scripts/anti_abuse_check.py` | **9/9 contrôles** |
 | Passerelle | `cd gateway && node --test test/*.test.js` | **7 passés** |
 | Web (contrats) | `cd web && npm run check:contrats` | **contrats respectés** |
-| Web (parcours réel) | `cd web && npm run check:parcours` | **47/47 contrôles** |
+| Web (parcours réel) | `cd web && npm run check:parcours` | **54/54 contrôles** |
 | Android | `cd android && gradle testDebugUnitTest assembleDebug` | exécuté par la CI (aucun SDK local) : 3 suites unitaires passées |
 
 ## APK réellement produits

@@ -4,13 +4,14 @@ import { useCallback, useEffect, useState } from "react";
 import AuthPanel from "@/components/AuthPanel";
 import DashboardPanel from "@/components/DashboardPanel";
 import ReportsPanel from "@/components/ReportsPanel";
+import CampaignPanel from "@/components/CampaignPanel";
 import CommunityPanel from "@/components/CommunityPanel";
 import ModerationPanel from "@/components/ModerationPanel";
 import SettingsPanel from "@/components/SettingsPanel";
 import { api, clearTokens, getToken } from "@/lib/api";
 import { DISCLAIMER, NO_GUARANTEE_NOTE } from "@/lib/legal";
 
-type Tab = "dashboard" | "reports" | "community" | "moderation" | "settings";
+type Tab = "dashboard" | "reports" | "campaign" | "community" | "moderation" | "settings";
 
 export default function Home() {
   const [ready, setReady] = useState(false);
@@ -61,6 +62,9 @@ export default function Home() {
           <button className={tab === "reports" ? "active" : ""} onClick={() => setTab("reports")}>
             Signalements &amp; import
           </button>
+          <button className={tab === "campaign" ? "active" : ""} onClick={() => setTab("campaign")}>
+            Demande groupée
+          </button>
           <button className={tab === "community" ? "active" : ""} onClick={() => setTab("community")}>
             Communauté
           </button>
@@ -100,6 +104,7 @@ export default function Home() {
           <>
             {tab === "dashboard" && <DashboardPanel me={me} onRefreshProfile={loadProfile} />}
             {tab === "reports" && <ReportsPanel />}
+            {tab === "campaign" && <CampaignPanel />}
             {tab === "community" && <CommunityPanel />}
             {tab === "moderation" && isModerator && <ModerationPanel />}
             {tab === "settings" && <SettingsPanel me={me} onChanged={loadProfile} />}

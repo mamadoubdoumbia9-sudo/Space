@@ -174,6 +174,33 @@ async function main() {
     !/sk_live|access_token"|JWT_SECRET|FIELD_KEY/.test(html),
   );
 
+  // Vérification de l'interface RÉELLEMENT livrée : on télécharge les fragments
+  // JavaScript servis au navigateur et on y cherche les fonctions annoncées. Cela
+  // attrape une régression où l'API fonctionne mais où l'écran correspondant a
+  // disparu du paquet livré.
+  console.log("\n1 bis) Fonctions réellement embarquées dans le paquet web");
+  {
+    const markers = [
+      ["campaignPreview", "demande groupée : appel réel de vérification"],
+      ["campaignCancel", "demande groupée : arrêt possible d'une demande en cours"],
+      ["executable_count", "demande groupée : nombre réellement exécutable affiché"],
+      ["blocking_reason", "demande groupée : raison de blocage affichée"],
+      ["ne garantit", "absence de garantie de bannissement présente dans les écrans"],
+      ["manual_guided", "mode guidé WhatsApp (repli honnête) présent"],
+      ["appeal", "contestation présente dans l'interface"],
+    ];
+    const urls = [...new Set([...html.matchAll(/\/_next\/static\/chunks\/[^"']+\.js/g)].map((m) => m[0]))];
+    let bundle = "";
+    for (const url of urls) {
+      const chunk = await fetch(`${BASE}${url}`);
+      if (chunk.ok) bundle += await chunk.text();
+    }
+    record("fragments JavaScript téléchargés", urls.length > 0, `${urls.length} fragment(s)`);
+    for (const [marker, label] of markers) {
+      record(label, bundle.includes(marker), `marqueur « ${marker} »`);
+    }
+  }
+
   console.log("\n2) Parcours utilisateur (alice@example.org)");
   const alice = await login("alice@example.org", "AliceSignalPro123");
   await call("session et profil", "/api/v1/auth/me", { token: alice });
@@ -311,7 +338,7 @@ async function main() {
     jsonOf(scan).is_suspicious === true,
     `score ${jsonOf(scan).score}`,
   );
-  await call("campagne : simulation honnête", "/api/v1/campaigns/preview", {
+  const campaignPreview = await call("campagne : simulation honnête", "/api/v1/campaigns/preview", {
     method: "POST",
     token: alice,
     json: {
@@ -323,6 +350,56 @@ async function main() {
       consent_ack: true,
     },
   });
+  {
+    const preview = jsonOf(campaignPreview);
+    // Invariant d'honnêteté : demander un grand nombre ne crée jamais de signalements.
+    const ambitious = await call("campagne : 100 signalements demandés sont ramenés au réel", "/api/v1/campaigns/preview", {
+      method: "POST",
+      token: alice,
+      json: {
+        target_phone: "+22365551234",
+        requested_count: 100,
+        category: "financial_scam",
+        occurred_at: "2026-09-19T10:00:00Z",
+        description: "Contrôle automatique : nombre demandé volontairement déraisonnable.",
+        consent_ack: true,
+      },
+    });
+    const ambitiousBody = jsonOf(ambitious);
+    record(
+      "le nombre exécutable ne dépasse jamais les comptes réellement contactés",
+      ambitiousBody.executable_count <= ambitiousBody.eligible_accounts &&
+        ambitiousBody.requested_count === 100,
+      `demandés ${ambitiousBody.requested_count} · éligibles ${ambitiousBody.eligible_accounts} · exécutables ${ambitiousBody.executable_count}`,
+    );
+    record(
+      "le plafond dur de campagne est publié par le serveur (jamais deviné par l'interface)",
+      Number.isFinite(Number(preview.requested_hard_cap)) && Number(preview.requested_hard_cap) > 0,
+      `plafond ${preview.requested_hard_cap}`,
+    );
+    record(
+      "l'aperçu explique la limite au lieu de promettre un résultat",
+      typeof preview.explanation === "string" && /compte/i.test(preview.explanation),
+    );
+  }
+  const withoutAck = await call("campagne refusée sans confirmation de l'avertissement", "/api/v1/campaigns", {
+    method: "POST",
+    token: alice,
+    json: {
+      target_phone: "+22365551234",
+      requested_count: 3,
+      category: "financial_scam",
+      occurred_at: "2026-09-19T10:00:00Z",
+      description: "Contrôle automatique : consentement volontairement absent.",
+      consent_ack: false,
+    },
+    allowed: [422],
+  });
+  record(
+    "le refus rappelle que les faux signalements sont passibles de poursuites",
+    /poursuite|faux signalement/i.test(withoutAck.text),
+    withoutAck.text.slice(0, 120),
+  );
   await call("appareils liés", "/api/v1/devices", { token: alice });
 
   // Le consentement au risque n'est pas décoratif : sans lui, aucune liaison

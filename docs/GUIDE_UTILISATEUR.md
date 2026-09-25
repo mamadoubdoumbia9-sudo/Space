@@ -20,8 +20,8 @@ Tout ce qui suit existe aussi dans le navigateur (`web/`, `npm run dev`) : même
 mêmes quotas, mêmes refus. Seule différence assumée : la **liaison WhatsApp par QR
 code** se fait depuis l'application Android, car les identifiants de session WhatsApp
 ne doivent jamais transiter par un navigateur. Dans la version web, les onglets sont
-*Tableau de bord*, *Signalements & import*, *Communauté*, *Modération* (si votre compte
-est modérateur) et *Réglages*. Sans appareil lié, la transmission utilise le mode
+*Tableau de bord*, *Signalements & import*, *Demande groupée*, *Communauté*, *Modération*
+(si votre compte est modérateur) et *Réglages*. Sans appareil lié, la transmission utilise le mode
 guidé (étapes affichées pour signaler depuis WhatsApp) et le blocage en un clic
 renvoie une erreur explicite au lieu d'un faux succès.
 

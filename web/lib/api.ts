@@ -220,6 +220,8 @@ export const api = {
   campaignCreate: (body: Record<string, unknown>) =>
     apiFetch<any>("/api/v1/campaigns", { method: "POST", body: JSON.stringify(body) }),
   campaigns: () => apiFetch<any[]>("/api/v1/campaigns"),
+  campaignCancel: (id: number) =>
+    apiFetch<any>(`/api/v1/campaigns/${id}/cancel`, { method: "POST" }),
 
   // --- Modération ---------------------------------------------------------
   moderationQueue: (status = "pending_verification") =>

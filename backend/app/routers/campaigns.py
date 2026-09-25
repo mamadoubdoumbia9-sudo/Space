@@ -55,6 +55,8 @@ def preview_campaign(
     db: Session = Depends(get_db),
 ):
     """Dit ce qui est RÉELLEMENT exécutable avant toute création."""
+    from ..config import get_settings
+
     target = reports_svc.get_target(db, payload.target_phone, create=False)
     eligible = reports_svc.eligible_accounts_for_target(db, payload.target_phone)
     mine = db.execute(
@@ -63,6 +65,7 @@ def preview_campaign(
     return {
         "target_in_database": target is not None,
         "requested_count": payload.requested_count,
+        "requested_hard_cap": get_settings().campaign_hard_cap,
         "eligible_accounts": len(eligible),
         "executable_count": min(payload.requested_count, len(eligible)),
         "your_connected_devices": len(mine),
