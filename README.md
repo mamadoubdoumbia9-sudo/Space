@@ -71,7 +71,7 @@ gradle testDebugUnitTest assembleDebug               # ou ./gradlew, si vous ajo
 | `cd web && npm run check:contrats` | les catégories de l'interface correspondent à l'énumération du serveur et **chaque route appelée existe** (`openapi.json`) |
 | `cd web && npm run check:parcours` | parcours web complet : accueil + avertissements, signalement avec capture réelle, import CSV français, contestation, détection, modération (décision, preuve téléchargée, dossier PDF) |
 | `cd gateway && npm test` | signature HMAC, fenêtre temporelle, routes de la passerelle |
-| CI `.github/workflows/ci.yml` | backend, passerelle, web (build + contrats + parcours) et Android (tests + APK de taille réelle) |
+| CI `.github/workflows/ci.yml` | backend, passerelle, web (build + contrats + parcours) et Android (tests + APK), puis vérification du binaire livré : paquet, `minSdk`/`targetSdk`, nombre de DEX, permissions exactes et validité de la signature |
 
 ## Documentation
 
@@ -80,8 +80,8 @@ gradle testDebugUnitTest assembleDebug               # ou ./gradlew, si vous ajo
 - `docs/GUIDE_UTILISATEUR.md` — parcours complet côté utilisateur.
 - `docs/GUIDE_MODERATEUR.md` — relecture, contestations, dossiers, sanctions.
 - `docs/LIMITES_RISQUES_CONFORMITE.md` — risques, conformité, données personnelles.
-- `docs/TAILLE_APK.md` — taille réelle de l'APK et pourquoi elle ne peut pas être
-  « gonflée » artificiellement.
+- `docs/TAILLE_APK.md` — taille réelle de l'APK, mesure et vérification du binaire
+  livré, et pourquoi la taille ne peut pas être « gonflée » artificiellement.
 
 ## Tests
 
@@ -92,8 +92,26 @@ gradle testDebugUnitTest assembleDebug               # ou ./gradlew, si vous ajo
 | Passerelle | `cd gateway && node --test test/*.test.js` | **7 passés** |
 | Web (contrats) | `cd web && npm run check:contrats` | **contrats respectés** |
 | Web (parcours réel) | `cd web && npm run check:parcours` | **43/43 contrôles** |
-| Android | `cd android && gradle testDebugUnitTest assembleDebug` | exécuté par la CI (aucun SDK local) |
+| Android | `cd android && gradle testDebugUnitTest assembleDebug` | exécuté par la CI (aucun SDK local) : 3 suites unitaires passées |
+
+## APK réellement produits
+
+Les APK ne sont pas construits sur ce poste (aucun SDK Android disponible) : ils sont
+produits par la CI à chaque envoi, puis joints à l'exécution sous l'artefact
+`signalpro-apk`. Dernières mesures vérifiées (exécution `36031111770`, quatre tâches
+vertes) :
+
+| APK | Taille | Détails vérifiés |
+| --- | --- | --- |
+| `app-release.apk` | **2 198 548 octets** (2,10 Mio) | `com.signalpro.app` 1.0.0, `targetSdk 35`, 1 DEX, 8 permissions, **signature valide** |
+| `app-debug.apk` | **21 238 920 octets** (20,25 Mio) | `com.signalpro.app.debug` 1.0.0-debug, `targetSdk 35`, 12 DEX, 10 permissions, signature valide (clé de debug) |
+
+Aucune clé n'est versionnée : si le dépôt ne contient pas de secrets `SIGNING_*`, la CI
+génère une clé **jetable** pour que l'APK release soit installable. Cet APK jetable
+n'est pas publiable sur le Play Store en l'état — pour une vraie publication, fournissez
+vos propres `SIGNING_STORE_FILE`, `SIGNING_STORE_PASSWORD`, `SIGNING_KEY_ALIAS` et
+`SIGNING_KEY_PASSWORD` (voir `docs/TAILLE_APK.md`).
 
 L'intégralité des tests est rejouée par `.github/workflows/ci.yml` (quatre tâches :
-backend, passerelle, web, Android), qui produit aussi les APK (debug, et release
-signé si une clé est fournie) et publie leur taille réelle.
+backend, passerelle, web, Android), qui produit les APK (debug et release), vérifie le
+binaire obtenu puis publie sa taille, son empreinte SHA-256 et ses permissions.

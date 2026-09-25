@@ -14,8 +14,9 @@ plugins {
  * En production, les clés NE SONT PAS dans le dépôt : elles sont fournies par
  * `keystore.properties` (ignoré par git) ou par des variables d'environnement
  * de CI (SIGNING_KEY_BASE64, SIGNING_STORE_PASSWORD, SIGNING_KEY_ALIAS,
- * SIGNING_KEY_PASSWORD). Sans clé, l'APK release n'est pas signé et le build
- * échoue explicitement plutôt que de produire un binaire ininstallable.
+ * SIGNING_KEY_PASSWORD). Sans clé, Gradle produit `app-release-unsigned.apk`,
+ * qui n'est pas installable : la CI génère donc une clé jetable pour livrer un
+ * APK release réellement installable, et le signale dans son résumé.
  */
 val keystorePropertiesFile = rootProject.file("keystore.properties")
 val keystoreProperties = Properties().apply {
