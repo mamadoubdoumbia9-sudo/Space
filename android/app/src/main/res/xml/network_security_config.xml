@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Sécurité réseau.
+
+  L'application est AUTO-HÉBERGEABLE : le serveur SignalPro tourne chez l'utilisateur
+  (ordinateur du réseau local en HTTP, ou serveur public en HTTPS). Le trafic en clair
+  est donc autorisé, sinon une API locale sur http://192.168.x.y:8000 serait
+  inatteignable et l'application échouerait partout — c'est exactement le défaut
+  corrigé ici.
+
+  Contreparties, assumées et visibles dans l'application :
+   - l'écran « Serveur SignalPro » affiche l'adresse réellement utilisée et signale en
+     toutes lettres une connexion NON chiffrée ;
+   - le README et docs/LIMITES_RISQUES_CONFORMITE.md recommandent HTTPS dès qu'un
+     serveur est exposé au-delà du réseau local ;
+   - les jetons restent chiffrés au repos (Android Keystore) et ne sont jamais écrits
+     dans les journaux.
+
+   Les entrées ci-dessous restent listées explicitement pour la documentation : elles
+   correspondent à la passerelle WhatsApp locale (127.0.0.1) et à l'émulateur (10.0.2.2).
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">localhost</domain>
+        <domain includeSubdomains="false">10.0.2.2</domain>
+    </domain-config>
+</network-security-config>

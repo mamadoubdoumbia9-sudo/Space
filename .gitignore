@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets et données locales
+.env
+*.db
+*.db-wal
+*.db-shm
+*.sqlite3
+var/
+backend/var/
+secrets/
+
+# Node / web
+node_modules/
+web/dist/
+web/.vite/
+web/.next/
+web/out/
+web/.turbo/
+web/next-env.d.ts
+web/tsconfig.tsbuildinfo
+gateway/node_modules/
+gateway/sessions/
+gateway/.baileys_auth/
+npm-debug.log*
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+android/captures/
+*.apk
+*.aab
+*.jks
+*.keystore
+android/release/
+
+# Divers
+.DS_Store
+*.log

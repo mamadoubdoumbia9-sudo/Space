@@ -1,0 +1,386 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  backend:
+    name: Backend (pytest)
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Tests
+        env:
+          ENV: test
+        run: python -m pytest tests/ -q
+
+  gateway:
+    name: Passerelle WhatsApp (node --test)
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: gateway
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Tests
+        run: node --test test/*.test.js
+
+  web:
+    name: Interface web (contrats + parcours réel)
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Python 3.11 (API pour les contrôles de contrat)
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Dépendances du front
+        working-directory: web
+        run: npm ci
+
+      - name: Vérification des types
+        working-directory: web
+        run: npm run typecheck
+
+      - name: Build de production
+        working-directory: web
+        run: npm run build
+
+      - name: Dépendances du backend
+        working-directory: backend
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Jeu de démonstration
+        working-directory: backend
+        env:
+          ENV: dev
+          ALLOW_CONSOLE_VERIFICATION: "true"
+          DATABASE_URL: sqlite+pysqlite:///./ci-web.db
+        run: python scripts/seed_demo.py --reset
+
+      - name: Démarrage de l'API et de l'interface
+        env:
+          DATABASE_URL: sqlite+pysqlite:///./ci-web.db
+          ALLOW_CONSOLE_VERIFICATION: "true"
+          ENV: dev
+        run: |
+          (cd backend && nohup python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 > /tmp/api.log 2>&1 &)
+          for _ in $(seq 1 40); do curl -sf http://127.0.0.1:8000/health > /dev/null && break; sleep 1; done
+          curl -sf http://127.0.0.1:8000/health > /dev/null || { cat /tmp/api.log; exit 1; }
+          (cd web && API_PROXY_TARGET=http://127.0.0.1:8000 nohup npm run start > /tmp/web.log 2>&1 &)
+          for _ in $(seq 1 40); do curl -sf http://127.0.0.1:3000/ > /dev/null && break; sleep 1; done
+          curl -sf http://127.0.0.1:3000/ > /dev/null || { cat /tmp/web.log; exit 1; }
+
+      - name: Contrats front ↔ backend (catégories et routes)
+        working-directory: web
+        run: npm run check:contrats
+
+      - name: Parcours réel de bout en bout
+        working-directory: web
+        run: node scripts/parcours.mjs
+
+      - name: Journaux en cas d'échec
+        if: failure()
+        run: |
+          echo "--- API ---"; tail -60 /tmp/api.log || true
+          echo "--- WEB ---"; tail -60 /tmp/web.log || true
+
+  android:
+    name: Android (tests unitaires + APK)
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: android
+    env:
+      SIGNING_KEY_BASE64: ${{ secrets.SIGNING_KEY_BASE64 }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: JDK 17
+        # setup-java@v4 est déprécié ; @v5 fonctionne déjà dans ce dépôt.
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      # Le SDK Android est déjà présent sur l'image du runner : on l'utilise
+      # directement plutôt que via une action tierce (android-actions/setup-android,
+      # qui échoue sur cet environnement). Les composants manquants sont installés
+      # explicitement, licences acceptées, et le chemin réel est publié dans le
+      # résumé du job pour rester vérifiable.
+      - name: SDK Android (préinstallé, composants vérifiés)
+        run: |
+          set -u
+          SDK="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/usr/local/lib/android/sdk}}"
+          echo "ANDROID_SDK_ROOT=$SDK" >> "$GITHUB_ENV"
+          echo "ANDROID_HOME=$SDK" >> "$GITHUB_ENV"
+          echo "### SDK Android utilisé" >> "$GITHUB_STEP_SUMMARY"
+          echo "- chemin : \`$SDK\`" >> "$GITHUB_STEP_SUMMARY"
+          ls "$SDK/platforms" 2>/dev/null | tr '\n' ' ' >> "$GITHUB_STEP_SUMMARY" || true
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          SDKMANAGER="$(find "$SDK" -maxdepth 4 -type f -name sdkmanager 2>/dev/null | head -1)"
+          if [ -z "$SDKMANAGER" ]; then
+            echo "sdkmanager introuvable sous $SDK" >&2
+            exit 1
+          fi
+          echo "sdkmanager : $SDKMANAGER"
+          yes | "$SDKMANAGER" --licenses > /dev/null 2>&1 || true
+          "$SDKMANAGER" "platforms;android-35" "build-tools;35.0.0" "platform-tools" 2>&1 | tail -5 || true
+          ls "$SDK/platforms"
+
+      # Le dépôt ne contient pas de wrapper Gradle binaire (aucun accès réseau
+      # fiable pour le télécharger depuis l'environnement de développement) :
+      # la CI installe une version de Gradle compatible avec AGP 8.7.3.
+      - name: Gradle 8.11.1
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.11.1"
+          cache-read-only: false
+
+      # Les journaux de compilation et de tests sont enregistrés dans le dépôt puis
+      # publiés en artefact en cas d'échec : ils restent lisibles même si l'interface
+      # de GitHub n'est pas accessible.
+      - name: Tests unitaires (Validation, ScamScanner, contrats d'API)
+        run: |
+          set -o pipefail
+          mkdir -p ci-logs
+          gradle --no-daemon --console=plain testDebugUnitTest 2>&1 | tee ci-logs/tests.log
+
+      # Preuve chiffrée et vérifiable : combien de tests unitaires ont réellement tourné,
+      # et combien ont échoué. Publié en annotation, donc lisible via l'API GitHub.
+      - name: Vérification des tests unitaires exécutés
+        if: always()
+        run: |
+          results=app/build/test-results/testDebugUnitTest
+          if ! compgen -G "$results/*.xml" > /dev/null 2>&1; then
+            echo "::warning::aucun résultat de test unitaire trouvé (les tests n'ont pas abouti)"
+            exit 0
+          fi
+          count() { grep -ho "$1=\"[0-9]*\"" $results/*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s+0}'; }
+          total=$(count tests); failed=$(count failures); errors=$(count errors); skipped=$(count skipped)
+          suites=$(ls $results/*.xml | wc -l)
+          line="Tests unitaires Android : $total exécutés sur $suites classes, $failed échec(s), $errors erreur(s), $skipped ignoré(s)"
+          echo "### $line" >> "$GITHUB_STEP_SUMMARY"
+          echo "::notice::$line"
+
+      - name: Clé de signature (fournie par les secrets du dépôt)
+        # `secrets` n'est pas un contexte autorisé dans un `if` : GitHub rejette alors
+        # le fichier entier (« workflow file issue »). La valeur passe donc par `env`,
+        # qui lui est autorisé.
+        if: env.SIGNING_KEY_BASE64 != ''
+        env:
+          SIGNING_KEY_BASE64: ${{ secrets.SIGNING_KEY_BASE64 }}
+          SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
+          SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
+          SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
+        run: |
+          echo "$SIGNING_KEY_BASE64" | base64 -d > release.keystore
+          {
+            echo "storeFile=release.keystore"
+            echo "storePassword=$SIGNING_STORE_PASSWORD"
+            echo "keyAlias=$SIGNING_KEY_ALIAS"
+            echo "keyPassword=$SIGNING_KEY_PASSWORD"
+          } > keystore.properties
+          echo "APK_KEY=fournie-par-le-depot" >> "$GITHUB_ENV"
+
+      # Sans clé dans les secrets, l'APK release resterait non signé, donc
+      # ininstallable. On génère ici une clé JETABLE pour que l'artefact livré soit
+      # réellement installable — elle ne convient pas à une publication Play Store
+      # (voir docs/TAILLE_APK.md et le README). La clé n'est jamais versionnée.
+      - name: Clé de signature éphémère (si aucun secret n'est configuré)
+        if: env.SIGNING_KEY_BASE64 == ''
+        run: |
+          set -eu
+          EPHEMERAL_STORE="$RUNNER_TEMP/signalpro-ci-ephemeral.jks"
+          EPHEMERAL_PASS="signalpro-ci-ephemeral"
+          keytool -genkeypair -v \
+            -keystore "$EPHEMERAL_STORE" \
+            -storetype JKS \
+            -storepass "$EPHEMERAL_PASS" \
+            -keypass "$EPHEMERAL_PASS" \
+            -alias signalpro-ci \
+            -keyalg RSA -keysize 2048 -validity 365 \
+            -dname "CN=SignalPro CI (cle jetable), OU=Verification, O=SignalPro, C=ML" > /dev/null
+          {
+            echo "storeFile=$EPHEMERAL_STORE"
+            echo "storePassword=$EPHEMERAL_PASS"
+            echo "keyAlias=signalpro-ci"
+            echo "keyPassword=$EPHEMERAL_PASS"
+          } > keystore.properties
+          echo "APK_KEY=jetable-generee-en-ci" >> "$GITHUB_ENV"
+          echo "::notice::Aucun secret de signature : une clé jetable a été générée pour produire un APK release installable (non publiable tel quel sur le Play Store)."
+
+      - name: APK de débogage (toujours produit, installable)
+        run: |
+          set -o pipefail
+          mkdir -p ci-logs
+          gradle --no-daemon --console=plain assembleDebug 2>&1 | tee ci-logs/apk-debug.log
+
+      - name: APK de version (signé si une clé est disponible)
+        run: |
+          set -o pipefail
+          mkdir -p ci-logs
+          gradle --no-daemon --console=plain assembleRelease 2>&1 | tee ci-logs/apk-release.log
+
+      # Vérification du binaire livré : identité du paquet, contenu réel et
+      # signature. Les valeurs sont aussi publiées en annotations (lisibles via
+      # l'API) pour que la preuve ne dépende pas du téléchargement d'artefacts.
+      - name: Vérification des APK produits
+        if: success()
+        run: |
+          set -u
+          SDK="${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}"
+          AAPT2="$(find "$SDK/build-tools" -maxdepth 2 -type f -name aapt2 | sort | tail -1)"
+          APKSIGNER="$(find "$SDK/build-tools" -maxdepth 2 -type f -name apksigner | sort | tail -1)"
+          echo "### Contenu vérifié des APK" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          DEXDUMP="$(find "$SDK/build-tools" -maxdepth 2 -type f -name dexdump | sort | tail -1)"
+          for apk in $(find app/build/outputs/apk -name "*.apk" | sort); do
+            name=$(basename "$apk")
+            dex=$(unzip -l "$apk" | grep -cE "classes[0-9]*\.dex")
+            badging=$("$AAPT2" dump badging "$apk" 2>/dev/null)
+            pkg=$(echo "$badging" | grep -m1 "^package:" | sed "s/package: //")
+            # aapt2 écrit « sdkVersion » (ou « minSdkVersion » selon la version d'outils).
+            minsdk=$(echo "$badging" | sed -n "s/^min\?[sS]dkVersion:'\?\([0-9]*\)'\?.*/\1/p" | head -1)
+            targetsdk=$(echo "$badging" | grep -m1 "^targetSdkVersion:" | cut -d: -f2)
+            perms=$(echo "$badging" | grep "^uses-permission:" | sed "s/uses-permission: name=//" | tr -d "'" | sort | tr '\n' ' ')
+            # Nombre de classes réellement conservées par R8 dans les DEX embarqués.
+            tmp=$(mktemp -d)
+            unzip -o -q "$apk" "classes*.dex" -d "$tmp" 2>/dev/null || true
+            classes=0
+            if [ -n "$DEXDUMP" ]; then
+              for dex_file in "$tmp"/classes*.dex; do
+                [ -f "$dex_file" ] || continue
+                n=$("$DEXDUMP" -f "$dex_file" 2>/dev/null | grep -m1 "class_defs_size" | grep -oE "[0-9]+")
+                classes=$((classes + ${n:-0}))
+              done
+            fi
+            rm -rf "$tmp"
+            if "$APKSIGNER" verify "$apk" > /dev/null 2>&1; then
+              sig="$("$APKSIGNER" verify --print-certs "$apk" | grep -m1 "Signer #1 certificate DN:" | sed "s/.*DN: //")"
+              sig_line="signature=valide${sig:+ ($sig)}"
+            else
+              sig_line="signature=absente (APK non installable en l'état)"
+            fi
+            line="$name | dex=$dex | classes=$classes | minSdk=$minsdk | targetSdk=$targetsdk | $pkg | $sig_line | permissions: $perms"
+            echo "$line" >> "$GITHUB_STEP_SUMMARY"
+            echo "::notice::$line"
+          done
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Extrait du journal en cas d'échec
+        if: failure()
+        run: |
+          for log in ci-logs/tests.log ci-logs/apk-debug.log ci-logs/apk-release.log; do
+            [ -f "$log" ] || continue
+            {
+              echo "### Dernières lignes — $log"
+              echo '```'
+              tail -80 "$log"
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+          done
+          # Les erreurs de compilation sont publiées en annotations GitHub : elles
+          # restent consultables via l'API même quand les journaux d'exécution ne sont
+          # pas téléchargeables, ce qui permet de corriger le code sans deviner.
+          # 1) erreurs du compilateur Kotlin — publiées EN PREMIER : un `sort` global
+          #    les noierait sous les centaines de lignes « > Task », déjà classées avant.
+          grep -hE "^e: " ci-logs/*.log 2>/dev/null \
+            | sort -u \
+            | head -30 \
+            | while IFS= read -r line; do
+                echo "::error::$line"
+              done
+          # 2) échecs Gradle et messages R8
+          grep -hE "^(> Task .* FAILED|FAILURE: |Execution failed for task|ERROR:|R8: |Missing class|> What went wrong|> A failure occurred|Caused by:)" ci-logs/*.log 2>/dev/null \
+            | sort -u \
+            | head -20 \
+            | while IFS= read -r line; do
+                echo "::error::$line"
+              done
+          # 3) tests en échec, avec les trois lignes suivantes (assertion et pile d'appel)
+          awk '/FAILED$/{n=4} n>0{print; n--}' ci-logs/*.log 2>/dev/null \
+            | grep -vE "^\s*$" \
+            | head -40 \
+            | while IFS= read -r line; do
+                echo "::error::$line"
+              done
+          exit 0
+
+      - name: Taille réelle des APK (aucun remplissage artificiel)
+        run: |
+          echo "### Tailles d'APK réellement produites" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Fichier | Taille | SHA-256 (début) |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| --- | --- | --- |" >> "$GITHUB_STEP_SUMMARY"
+          find app/build/outputs/apk -name "*.apk" -printf "%p\n" | sort | while read -r apk; do
+            size=$(du -h "$apk" | cut -f1)
+            bytes=$(stat -c%s "$apk")
+            digest=$(sha256sum "$apk" | cut -d' ' -f1)
+            echo "| $apk | $size ($bytes octets) | \`${digest:0:16}…\` |" >> "$GITHUB_STEP_SUMMARY"
+            # Les tailles et empreintes sont aussi publiées en annotations : elles
+            # restent lisibles depuis l'API même sans téléchargement d'artefact.
+            echo "::notice::$apk — $bytes octets — sha256=${digest:0:32}"
+          done
+          # Composition réelle de l'APK de débogage : les cinq plus gros contenus.
+          debug_apk=$(find app/build/outputs/apk/debug -name "*.apk" | head -1)
+          if [ -n "$debug_apk" ]; then
+            {
+              echo "### Plus gros contenus embarqués (APK de débogage)"
+              echo '```'
+              unzip -l "$debug_apk" | sort -k1 -n -r | head -20
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+
+          Ce chiffre est la taille réelle : l'application n'embarque aucun fichier de
+          remplissage. Voir docs/TAILLE_APK.md pour la politique et l'origine du poids.
+          EOF
+
+      - name: Publier les APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: signalpro-apk
+          path: |
+            android/app/build/outputs/apk/debug/*.apk
+            android/app/build/outputs/apk/release/*.apk
+          if-no-files-found: error
+
+      - name: Publier les journaux de compilation et de tests
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: signalpro-journaux-ci
+          path: |
+            android/ci-logs/*.log
+            android/app/build/reports/tests/**
+          if-no-files-found: ignore

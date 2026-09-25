@@ -1,0 +1,27 @@
+# --- API ---
+fastapi==0.141.1
+uvicorn[standard]==0.53.0
+python-multipart==0.0.20
+# --- Validation / configuration ---
+pydantic==2.13.5
+pydantic-settings==2.7.1
+email-validator==2.2.0
+# --- Base de données ---
+SQLAlchemy==2.0.54
+# En production (PostgreSQL) : décommenter
+# psycopg[binary]==3.2.3
+# --- Sécurité ---
+bcrypt==5.0.0
+cryptography==50.0.1
+PyJWT==2.10.1
+# --- Réseau (Cloud API + passerelle WhatsApp) ---
+httpx==0.28.1
+# --- Preuves et dossiers ---
+pillow==12.3.0
+reportlab==4.2.5
+# --- Import Excel (optionnel mais réellement utilisé) ---
+openpyxl==3.1.5
+# --- Stockage objet S3/MinIO (si STORAGE_BACKEND=s3) ---
+boto3==1.35.90
+# --- Tests ---
+pytest==8.3.4
