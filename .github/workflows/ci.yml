@@ -295,14 +295,22 @@ jobs:
           # Les erreurs de compilation sont publiées en annotations GitHub : elles
           # restent consultables via l'API même quand les journaux d'exécution ne sont
           # pas téléchargeables, ce qui permet de corriger le code sans deviner.
-          # 1) erreurs de compilation et tâches en échec
-          grep -hE "^(e: |> Task .* FAILED|FAILURE: |Execution failed for task|ERROR|R8: |Missing class|Caused by:|> )|error: " ci-logs/*.log 2>/dev/null \
+          # 1) erreurs du compilateur Kotlin — publiées EN PREMIER : un `sort` global
+          #    les noierait sous les centaines de lignes « > Task », déjà classées avant.
+          grep -hE "^e: " ci-logs/*.log 2>/dev/null \
             | sort -u \
-            | head -40 \
+            | head -30 \
             | while IFS= read -r line; do
                 echo "::error::$line"
               done
-          # 2) tests en échec, avec les trois lignes suivantes (assertion et pile d'appel)
+          # 2) échecs Gradle et messages R8
+          grep -hE "^(> Task .* FAILED|FAILURE: |Execution failed for task|ERROR:|R8: |Missing class|> What went wrong|> A failure occurred|Caused by:)" ci-logs/*.log 2>/dev/null \
+            | sort -u \
+            | head -20 \
+            | while IFS= read -r line; do
+                echo "::error::$line"
+              done
+          # 3) tests en échec, avec les trois lignes suivantes (assertion et pile d'appel)
           awk '/FAILED$/{n=4} n>0{print; n--}' ci-logs/*.log 2>/dev/null \
             | grep -vE "^\s*$" \
             | head -40 \
